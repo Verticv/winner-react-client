@@ -1,23 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import Cards from './components/Cards';
+import Carousel from './components/Carousel';
+import Navbar from './components/Navbar';
+import Slots from './components/Slots';
+import SubNavbar from './components/SubNavbar';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="sticky top-0 z-50"><Navbar /></div>
+
+      <div className="flex flex-col items-center">
+        <div className="w-screen flex justify-center items-center">
+          <Carousel />
+        </div>
+
+        <div className="flex flex-col items-center w-full xl:w-5/6 2xl:w-2/3 px-2">
+          <Slots />
+          <SubNavbar />
+          <Cards />
+        </div>
+      </div>
+      
+      
+
     </div>
   );
 }
