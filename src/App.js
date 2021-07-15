@@ -1,6 +1,9 @@
 import './App.css';
 import Cards from './components/Cards';
 import Carousel from './components/Carousel';
+import Footer from './components/Footer';
+import Footer2 from './components/Footer2';
+import Menus from './components/Menus';
 import Navbar from './components/Navbar';
 import Slots from './components/Slots';
 import SubNavbar from './components/SubNavbar';
@@ -19,7 +22,12 @@ function App() {
           <Slots />
           <SubNavbar />
           <Cards />
+          <Menus />
         </div>
+
+        <Footer2 />
+        <Footer />
+
       </div>
       
       
