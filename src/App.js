@@ -5,13 +5,17 @@ import Footer from './components/Footer';
 import Footer2 from './components/Footer2';
 import Menus from './components/Menus';
 import Navbar from './components/Navbar';
+import NoticeBanner from './components/NoticeBanner';
 import Slots from './components/Slots';
 import SubNavbar from './components/SubNavbar';
 
 function App() {
   return (
     <div>
-      <div className="sticky top-0 z-50"><Navbar /></div>
+      <div className="sticky top-0 z-50">
+        <NoticeBanner />
+        <Navbar isLoggedIn={false} />
+      </div>
 
       <div className="flex flex-col items-center">
         <div className="w-screen flex justify-center items-center">
