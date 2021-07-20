@@ -20,7 +20,7 @@ const SubNavbar = () => {
 
     const [selectedTab, setSelectedTab] = useState()
 
-    const tabClass = "flex items-center justify-center space-x-4 h-full px-2 rounded-full text-gray-500 font-semibold cursor-pointer"
+    const tabClass = "flex items-center justify-center space-x-2 h-full px-4 rounded-full text-gray-500 font-semibold cursor-pointer"
     const selectedTabClass = "flex items-center justify-center space-x-2 h-full px-4 rounded-full text-white font-semibold bg-gradient-to-br from-blue-400 to-blue-700 cursor-pointer shadow-inner"
 
     const tabsArray = [
