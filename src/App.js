@@ -26,7 +26,7 @@ function App() {
           <Carousel />
         </div>
 
-        <div className="flex flex-col w-default">
+        <div className="flex flex-col w-777">
           <Slots />
           <SubNavbar />
           <Cards />

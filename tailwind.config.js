@@ -6,7 +6,7 @@ module.exports = {
       spacing: {
         112: '28rem',
         124: '32rem',
-        "default": '1250px'
+        777: '1250px'
        },
       boxShadow: {
         plain: '0 0px 10px 0 rgba(0, 0, 0, 0.3), 0 4px 4px 0 rgba(0, 0, 0, 0.06)'
