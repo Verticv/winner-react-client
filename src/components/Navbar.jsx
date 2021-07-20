@@ -3,12 +3,13 @@ import Logo from '../images/logo.png'
 import Koreaflag from '../images/korea_flag.png'
 import UKflag from '../images/uk_flag.png'
 import DropDownControls from './dropdowns/DropDownControls'
-import DropDownMenu from './dropdowns/DropDownMenu'
 import CountryDropDown from './dropdowns/CountryDropDown'
 import PopupControls from './popups/PopupControls'
 import LoginPopup from './popups/LoginPopup'
+import WalletDropDown from './dropdowns/WalletDropDown'
+import ProfileDropDown from './dropdowns/ProfileDropDown'
 
-const Navbar = ({ isLoggedIn }) => {
+const Navbar = ({ isAuthenticated, setAuth }) => {
 
     const [selectedTab, setSelectedTab] = useState()
     const [country, setCountry] = useState("KR")
@@ -46,22 +47,44 @@ const Navbar = ({ isLoggedIn }) => {
         ));
     }
     
-    const DropdownButton = ({color}) => (
+    const DropdownArrow = ({color}) => (
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill={color}>
             <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
         </svg>
     )
 
     const CountryButton = (
-        <button className="flex items-center p-1 h-12 bg-blue-500 rounded-full space-x-4">
+        <div className="flex items-center p-1 h-12 bg-blue-500 rounded-full space-x-4">
             <div className="h-10 w-10 bg-white rounded-full flex items-center justify-center">
                 <img className="h-auto w-10 bg-white rounded-full flex items-center justify-center" src={country === "KR" ? Koreaflag : UKflag} alt="flag"></img>
             </div>
             <label className="font-bold text-white cursor-pointer">{country}</label>
-            <DropdownButton color="white"/>
-        </button>
+            <DropdownArrow color="white"/>
+        </div>
+    )
+
+    const WalletButton = (
+        <div className="flex items-center space-x-2">
+            <div className="flex flex-col items-end -space-y-1">
+                <label className="text-blue-500 font-medium cursor-pointer">₩ 100,000 원</label>
+                <label className="text-yellow-500 font-medium cursor-pointer">12,500 P</label>
+            </div>
+            <DropdownArrow color="gray"/>
+        </div>
     )
     
+    const profileButton = (
+        <div className="flex items-center justify-center space-x-1">
+            <div className="relative flex items-center justify-center h-12 w-12 rounded-full bg-blue-500">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 z-20" viewBox="0 0 20 20" fill="#1e81e6">
+                    <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clipRule="evenodd" />
+                </svg>
+                <div className="absolute bg-white w-8 h-8 z-10 rounded-full"></div>
+            </div>
+            <DropdownArrow color="gray"/>
+        </div>  
+    )
+
     const LoginButton = (
         <button className="flex items-center justify-center text-white font-bold w-28 h-12 bg-blue-500 rounded-full space-x-4 bg-gradient-to-br from-blue-400 to-blue-700">로그인</button>
     )
@@ -73,26 +96,17 @@ const Navbar = ({ isLoggedIn }) => {
                 <TabsList items={tabsArray} />
             </div>
             
-            {isLoggedIn ? (
+            {isAuthenticated ? (
                 <div className="flex space-x-6 items-center flex-shrink-0">
+                    {/* BREAK */} 
+                    <DropDownControls buttonChild={profileButton}>
+                        <div className="mt-4"><ProfileDropDown setAuth={setAuth}/></div>
+                    </DropDownControls>
                     {/* BREAK */}
-                    <button className="flex items-center justify-center space-x-1">
-                        <div className="relative flex items-center justify-center h-12 w-12 rounded-full bg-blue-500">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 z-20" viewBox="0 0 20 20" fill="#1e81e6">
-                                <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clipRule="evenodd" />
-                            </svg>
-                            <div className="absolute bg-white w-8 h-8 z-10 rounded-full"></div>
-                        </div>
-                        <DropdownButton color="gray"/>
-                    </button>   
-                    {/* BREAK */}
-                    <button className="flex items-center space-x-2">
-                        <div className="flex flex-col items-end -space-y-1">
-                            <label className="text-blue-500 font-medium cursor-pointer">₩ 100,000 원</label>
-                            <label className="text-yellow-500 font-medium cursor-pointer">12,500 P</label>
-                        </div>
-                        <DropdownButton color="gray"/>
-                    </button>
+                    <DropDownControls buttonChild={WalletButton}>
+                        <div className="mt-4"><WalletDropDown /></div>
+                    </DropDownControls>
+
                     {/* BREAK */}
                     <button className="relative flex items-center justify-center text-white h-12 w-12 rounded-full bg-blue-500">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
@@ -104,17 +118,15 @@ const Navbar = ({ isLoggedIn }) => {
                         </div>
                     </button>
                     {/* BREAK */}
-                    <DropDownControls
-                        buttonChild={CountryButton}
-                    >
-                        <DropDownMenu children={CountryDropDown}/>
+                    <DropDownControls buttonChild={CountryButton}>
+                        <div className="mt-4"><CountryDropDown setCountry={setCountry} country={country} /></div>
                     </DropDownControls>
                 </div>
 
             ) : (
                 <div className="flex space-x-3 items-center flex-shrink-0">
                     <PopupControls buttonChild={LoginButton}>
-                        <LoginPopup />
+                        <LoginPopup setAuth={setAuth} />
                     </PopupControls>                    
                     <button className="flex items-center justify-center text-white font-bold w-28 h-12 bg-blue-500 rounded-full space-x-4 bg-blue-800">회원가입</button>
                     {/* BREAK */}

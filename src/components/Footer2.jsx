@@ -22,26 +22,26 @@ const Footer2 = () => {
 
     const logosArray = [
         { logo: AsiaLogo, id: 0 },
-        { logo: BigLogo, id: 0 },
-        { logo: DgLogo, id: 0 },
-        { logo: EvoLogo, id: 0 },
-        { logo: HabLogo, id: 0 },
-        { logo: MavLogo, id: 0 },
-        { logo: MicLogo, id: 0 },
-        { logo: NetLogo, id: 0 },
-        { logo: PlgLogo, id: 0 },
-        { logo: PltLogo, id: 0 },
-        { logo: PraLogo, id: 0 },
-        { logo: QusLogo, id: 0 },
-        { logo: SexyLogo, id: 0 },
-        { logo: SpaLogo, id: 0 },
-        { logo: TopLogo, id: 0 },
-        { logo: WmLogo, id: 0 }        
+        { logo: BigLogo, id: 1 },
+        { logo: DgLogo, id: 2 },
+        { logo: EvoLogo, id: 3 },
+        { logo: HabLogo, id: 4 },
+        { logo: MavLogo, id: 5 },
+        { logo: MicLogo, id: 6 },
+        { logo: NetLogo, id: 7 },
+        { logo: PlgLogo, id: 8 },
+        { logo: PltLogo, id: 9 },
+        { logo: PraLogo, id: 10 },
+        { logo: QusLogo, id: 11 },
+        { logo: SexyLogo, id: 12 },
+        { logo: SpaLogo, id: 13 },
+        { logo: TopLogo, id: 14 },
+        { logo: WmLogo, id: 15 }        
     ];
 
     function LogosList({ items }) {
         return items.map(item => (
-            <div className={itemsClass}><img src={item.logo} alt="logo" /></div>
+            <div className={itemsClass} key={item.id}><img src={item.logo} alt="logo" /></div>
         ));
     }
 

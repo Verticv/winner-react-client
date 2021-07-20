@@ -26,13 +26,13 @@ export default function PopupControls({
                 : "cursor-pointer text-copy-secondary hover:filter-brightness-8 transition-all duration-100"
             } flex items-center justify-center w-auto h-10 rounded-circle`}
         >
-            <button
+            <div
                 className="flex items-center justify-center"
                 onMouseDown={() => {
                     if (onClick) onClick();
                     setOpen(true);
                 }}
-            >{buttonChild}</button>
+            >{buttonChild}</div>
             {open && (
                 <div className="absolute flex items-center justify-center w-screen h-screen bg-black bg-opacity-10 z-50 left-0 top-0" >
                     <div ref={ref}>

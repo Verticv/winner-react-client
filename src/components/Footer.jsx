@@ -20,20 +20,20 @@ const Footer = () => {
 
     const logosArray = [
         { logo: Adult, id: 0 },
-        { logo: ClickBuy, id: 0 },
-        { logo: Click2Pay, id: 0 },
-        { logo: GameCare, id: 0 },
-        { logo: MasterCard, id: 0 },
-        { logo: Much, id: 0 },
-        { logo: Net, id: 0 },
-        { logo: PaySafe, id: 0 },
-        { logo: Skrill, id: 0 },
-        { logo: Visa, id: 0 }      
+        { logo: ClickBuy, id: 1 },
+        { logo: Click2Pay, id: 2 },
+        { logo: GameCare, id: 3 },
+        { logo: MasterCard, id: 4 },
+        { logo: Much, id: 5 },
+        { logo: Net, id: 6 },
+        { logo: PaySafe, id: 7 },
+        { logo: Skrill, id: 8 },
+        { logo: Visa, id: 9 }      
     ];
 
     function LogosList({ items }) {
         return items.map(item => (
-            <div className="flex items-center justify-center h-14 bg-gray-300 rounded p-4"><img className="object-contain h-full" src={item.logo} alt="logo" /></div>
+            <div key={item.id} className="flex items-center justify-center h-14 bg-gray-300 rounded p-4"><img className="object-contain h-full" src={item.logo} alt="logo" /></div>
         ));
     }
 

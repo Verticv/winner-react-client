@@ -32,7 +32,7 @@ const CountryDropDown = ({setCountry, country}) => {
     }
 
     return (
-        <div className="bg-white shadow-plain rounded-3xl bg-white w-40 p-2 space-y-1">
+        <div className="bg-white shadow-plain rounded-3xl bg-white w-40 p-1 space-y-1">
             <CountriesList items={countriesArray} />
         </div>
     )

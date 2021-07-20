@@ -41,7 +41,7 @@ const Cards = () => {
             >
                 <img className="object-cover w-full h-full rounded-lg border" src={item.background} alt="background" />
                 <img className="absolute top-0 ml-6 mt-6 w-1/4 " src={item.logo} alt="logo" />
-                <button className={`absolute bottom-0 ml-6 mb-6 rounded-full w-28 h-12 shadow-md font-semibold text-white ${item.color}`}>{item.button}</button>
+                <div className={`absolute bottom-0 ml-6 mb-6 rounded-full w-28 h-12 shadow-md font-semibold text-white flex items-center justify-center ${item.color}`}>{item.button}</div>
             </button>
         ));
     }
