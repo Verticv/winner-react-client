@@ -91,7 +91,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
 
     return (
         <header className="flex items-center justify-between border-b h-16 px-4 shadow-lg bg-white">
-            <div className="flex items-center">
+            <div className="flex items-center flex-shrink-0">
                 <img className="h-8 mr-4 mb-2 cursor-pointer" src={Logo} alt="logo" />
                 <TabsList items={tabsArray} />
             </div>
