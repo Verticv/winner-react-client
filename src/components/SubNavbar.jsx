@@ -15,10 +15,12 @@ import MinigameDefault from '../images/minigame_default.png'
 import AugmentedGameDefault from '../images/augmented_game_default.png'
 import FishingDefault from '../images/fishing_default.png'
 import LotteryDefault from '../images/lottery_default.png'
+import GameBanner from './GameBanner'
 
 const SubNavbar = () => {
 
     const [selectedTab, setSelectedTab] = useState()
+    const [isGameBanner, setGameBanner] = useState(true)
 
     const tabClass = "flex items-center justify-center space-x-2 h-full px-4 rounded-full text-gray-500 font-semibold cursor-pointer"
     const selectedTabClass = "flex items-center justify-center space-x-2 h-full px-4 rounded-full text-white font-semibold bg-gradient-to-br from-blue-400 to-blue-700 cursor-pointer shadow-inner"
@@ -48,8 +50,15 @@ const SubNavbar = () => {
     }
 
     return (
-        <div className="flex justify-around w-screen lg:w-full h-16 rounded-full shadow-plain bg-gradient-to-b from-blue-100 border-2 border-white">
-            <TabsList items={tabsArray}/>
+        <div className="relative w-full">
+            <div className="flex justify-around w-full rounded-full shadow-plain bg-gradient-to-b from-blue-100 border-2 border-white h-16">
+                <TabsList items={tabsArray}/>
+            </div>
+            {isGameBanner && (
+            <div className="absolute flex w-full h-full z-20 mt-4">
+              <GameBanner/>
+            </div>
+          )}
         </div>
     )
 }

@@ -21,12 +21,12 @@ function App() {
         <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
       </div>
 
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-start limit:items-center">
         <div className="w-screen flex justify-center items-center">
           <Carousel />
         </div>
 
-        <div className="flex flex-col items-center w-full xl:w-11/12 2xl:w-5/6 3xl:w-2/3 px-2">
+        <div className="flex flex-col w-default">
           <Slots />
           <SubNavbar />
           <Cards />
