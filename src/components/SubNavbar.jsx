@@ -20,7 +20,7 @@ const SubNavbar = () => {
 
     const [selectedTab, setSelectedTab] = useState()
 
-    const tabClass = "flex items-center justify-center space-x-2 h-full px-4 rounded-full text-gray-500 font-semibold cursor-pointer"
+    const tabClass = "flex items-center justify-center space-x-4 h-full px-2 rounded-full text-gray-500 font-semibold cursor-pointer"
     const selectedTabClass = "flex items-center justify-center space-x-2 h-full px-4 rounded-full text-white font-semibold bg-gradient-to-br from-blue-400 to-blue-700 cursor-pointer shadow-inner"
 
     const tabsArray = [
@@ -41,7 +41,7 @@ const SubNavbar = () => {
                 className={selectedTab === item.id ? selectedTabClass : tabClass} 
                 onClick={() => setSelectedTab(item.id)}
             >
-                <img className="xl:w-12 xl:h-12 2xl:w-14 2xl:h-14 object-contain" src={selectedTab === item.id ? item.icon : item.iconDefault} alt="icon" />
+                <img className="w-10 xl:w-12 xl:h-12 2xl:w-14 2xl:h-14 object-contain" src={selectedTab === item.id ? item.icon : item.iconDefault} alt="icon" />
                 <label className="cursor-pointer">{item.text}</label>
             </button>
         ));
