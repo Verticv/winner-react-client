@@ -6,14 +6,14 @@ module.exports = {
       spacing: {
         112: '28rem',
         124: '32rem',
-        777: '1250px'
+        'default': '1250px'
        },
       boxShadow: {
         plain: '0 0px 10px 0 rgba(0, 0, 0, 0.3), 0 4px 4px 0 rgba(0, 0, 0, 0.06)'
       },
-      // screens: {
-      //   "limit": '1250px',
-      // },
+      screens: {
+        'limit': '1250px',
+      },
     },
   },
   variants: {

@@ -41,7 +41,10 @@ const SubNavbar = () => {
             <button 
                 key={item.id} 
                 className={selectedTab === item.id ? selectedTabClass : tabClass} 
-                onClick={() => setSelectedTab(item.id)}
+                onClick={() => {
+                    setSelectedTab(item.id)
+                    setGameBanner(0)
+                }}
             >
                 <img className="w-10 xl:w-12 xl:h-12 2xl:w-14 2xl:h-14 object-contain" src={selectedTab === item.id ? item.icon : item.iconDefault} alt="icon" />
                 <label className="cursor-pointer">{item.text}</label>

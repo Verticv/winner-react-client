@@ -39,7 +39,7 @@ const Footer = () => {
 
     return (
         <div className="flex flex-col items-start limit:items-center justify-center bg-gray-200 w-screen">
-            <div className="flex w-777 px-2 py-12">
+            <div className="flex w-default px-2 py-12">
                 {/* BREAK */}
                 <div className="flex flex-col space-y-8 pr-12 flex-shrink-0 w-1/4 ">
                     <img className="w-1/2 object-contain" src={WinnerLogo} alt="winner logo" />
