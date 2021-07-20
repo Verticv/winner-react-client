@@ -22,7 +22,7 @@ function App() {
       </div>
 
       <div className="flex flex-col items-start limit:items-center">
-        <div className="w-screen flex justify-center items-center">
+        <div className="w-screen flex justify-start limit1920:justify-center items-center">
           <Carousel />
         </div>
 

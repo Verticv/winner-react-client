@@ -92,7 +92,7 @@ const Carousel = () => {
     );
 
     return (
-        <div className="flex justify-center w-screen items-center">
+        <div className="flex w-1920 flex-shrink-0">
             <div className="relative w-full">
                 <div className="carousel">
                     {sliderControl(true)}
