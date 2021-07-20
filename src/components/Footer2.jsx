@@ -46,8 +46,8 @@ const Footer2 = () => {
     }
 
     return (
-        <div className="flex items-center justify-center w-screen bg-gray-100 py-4">
-            <div className="grid grid-cols-8 w-full xl:w-5/6 2xl:w-2/3 px-2">
+        <div className="flex justify-start limit:justify-center w-screen bg-gray-100 py-4">
+            <div className="grid grid-cols-8 w-default flex-shrink-0 px-2">
                 <LogosList items={logosArray} />
             </div>
         </div>
