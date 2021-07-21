@@ -13,8 +13,10 @@ module.exports = {
         '20px': '20px',
         '34px': '34px',
         '40px': '40px',
+        '50px': '50px',
         '60px': '60px',
-        '100px': '100px'
+        '100px': '100px',
+        '300px': '300px'
        },
       boxShadow: {
         plain: '0 0px 10px 0 rgba(0, 0, 0, 0.3), 0 4px 4px 0 rgba(0, 0, 0, 0.06)'
@@ -31,7 +33,9 @@ module.exports = {
           darkGradLight: '#0a50a8',
           darkGradDark: '#00478f',
           highlight: '#1e66a0',
-          lightGradLight: '#d9edff'
+          lightGradLight: '#d9edff',
+          cardGradLight: '#cef6ff',
+          cardGradDark: '#379aff'
         },
         gray: {
           text: '#393e41',

@@ -4,7 +4,7 @@ import Slot from '../images/slot.png'
 import Sport from '../images/sport.png'
 import Esport from '../images/esport.png'
 import Minigame from '../images/minigame.png'
-import AugmentedGame from '../images/augmented_game.png'
+import AugmentedGame from '../images/subNavbar/augmented_game.png'
 import Fishing from '../images/fishing.png'
 import Lottery from '../images/lottery.png'
 import CardDefualt from '../images/card_default.png'
@@ -12,7 +12,7 @@ import SlotDefault from '../images/slot_default.png'
 import SportDefault from '../images/sport_default.png'
 import EsportDefault from '../images/esport_default.png'
 import MinigameDefault from '../images/minigame_default.png'
-import AugmentedGameDefault from '../images/augmented_game_default.png'
+import AugmentedGameDefault from '../images/subNavbar/augmented_game_default.png'
 import FishingDefault from '../images/fishing_default.png'
 import LotteryDefault from '../images/lottery_default.png'
 import GameBanner from './GameBanner'
@@ -58,7 +58,7 @@ const SubNavbar = () => {
                 <TabsList items={tabsArray}/>
             </div>
             {isGameBanner && (
-                <div className="absolute flex w-full z-20 mt-4">
+                <div className="absolute flex w-full z-20 mt-40px">
                     <GameBanner selection={GameBanner}/>
                 </div>
             )}

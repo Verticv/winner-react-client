@@ -32,7 +32,7 @@ import FaqIconHighlight from '../images/menu/faq_highlight.png'
 
 const Menus = () => {
     return (
-        <div className="flex justify-between w-full space-x-4 pb-24">
+        <div className="flex justify-between w-full space-x-4 pb-20px">
             <MenuCard 
                 mainIcon={Withdraw} 
                 menuTitle="충전/환전" 

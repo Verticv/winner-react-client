@@ -25,7 +25,7 @@ const Slots = () => {
     // )
 
     return (
-        <div className="grid grid-cols-4 w-full items-center justify-center py-14 space-x-4">
+        <div className="grid grid-cols-4 w-full items-center justify-center space-x-4">
             <div className={boxClass}><img className="object-contain w-full" src={image1} alt="1" /></div>
             <div className={boxClass}><img className="object-contain w-full" src={image2} alt="2" /></div>
             <div className={boxClass}><img className="object-contain w-full" src={image3} alt="3" /></div>
