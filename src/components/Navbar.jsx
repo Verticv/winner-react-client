@@ -8,16 +8,25 @@ import PopupControls from './popups/PopupControls'
 import LoginPopup from './popups/LoginPopup'
 import WalletDropDown from './dropdowns/WalletDropDown'
 import ProfileDropDown from './dropdowns/ProfileDropDown'
+import PersonIcon from '../images/person_icon.png'
+import ArrowUp from '../images/arrows/arrow_up.png'
+import ArrowUpWhite from '../images/arrows/arrow_up_white.png'
+import ArrowDown from '../images/arrows/arrow_down.png'
+import ArrowDownWhite from '../images/arrows/arrow_down_white.png'
+import InboxIcon from '../images/inbox_icon.png'
 
 const Navbar = ({ isAuthenticated, setAuth }) => {
 
     const [selectedTab, setSelectedTab] = useState()
     const [country, setCountry] = useState("KR")
+    const [isProfileOpen, setProfileOpen] = useState()
+    const [isWalletOpen, setWalletOpen] = useState()
+    const [isCountryOpen, setCountryOpen] = useState()
 
-    const tabClass = "text-gray-500 hover:text-blue-400 relative flex flex-col items-center justify-center h-16 w-24 font-bold cursor-pointer"
-    const selectedTabClass = "relative flex flex-col items-center justify-center h-16 w-24 font-bold cursor-pointer text-blue-400 cursor-pointer"
+    const tabClass = "text-gray-text hover:text-blue-highlight relative flex flex-col items-center justify-center h-16 px-10px font-bold cursor-pointer"
+    const selectedTabClass = "relative flex flex-col items-center justify-center h-16 px-10px font-bold cursor-pointer text-blue-highlight cursor-pointer"
     const lineClass = "absolute bottom-0 h-1 w-full bg-clear"
-    const selectedLineClass = "absolute bottom-0 h-1 w-full bg-blue-400"
+    const selectedLineClass = "absolute bottom-0 h-1 w-full bg-blue-highlight"
     
     const tabsArray = [
         { text: "라이브카지노", id: 0 },
@@ -47,78 +56,83 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
         ));
     }
     
-    const DropdownArrow = ({color}) => (
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill={color}>
-            <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-        </svg>
+    const DropdownArrow = ({isOpen, isWhite}) => (
+        <>
+        {isWhite ? (
+            <img src={isOpen ? ArrowUpWhite : ArrowDownWhite} alt="arrow" />
+        ) : (
+            <img src={isOpen ? ArrowUp : ArrowDown} alt="arrow" />
+        )}
+        </>
     )
 
     const CountryButton = (
-        <div className="flex items-center p-1 h-12 bg-blue-500 rounded-full space-x-4">
-            <div className="h-10 w-10 bg-white rounded-full flex items-center justify-center">
+        <div className="flex items-center w-100px h-40px bg-gradient-to-br from-blue-gradLight to-blue-gradDark rounded-full space-x-10px shadow-inner">
+            <div className="h-34px w-34px ml-4px bg-white rounded-full flex items-center justify-center">
                 <img className="h-auto w-10 bg-white rounded-full flex items-center justify-center" src={country === "KR" ? Koreaflag : UKflag} alt="flag"></img>
             </div>
-            <label className="font-bold text-white cursor-pointer">{country}</label>
-            <DropdownArrow color="white"/>
+            <label className="font-bold text-sm text-white cursor-pointer">{country}</label>
+            <DropdownArrow isWhite isOpen={isCountryOpen}/>
         </div>
     )
 
     const WalletButton = (
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center space-x-10px h-40px">
             <div className="flex flex-col items-end -space-y-1">
                 <label className="text-blue-500 font-medium cursor-pointer">₩ 100,000 원</label>
                 <label className="text-yellow-500 font-medium cursor-pointer">12,500 P</label>
             </div>
-            <DropdownArrow color="gray"/>
+            <DropdownArrow isOpen={isWalletOpen}/>
         </div>
     )
     
     const profileButton = (
-        <div className="flex items-center justify-center space-x-1">
-            <div className="relative flex items-center justify-center h-12 w-12 rounded-full bg-blue-500">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 z-20" viewBox="0 0 20 20" fill="#1e81e6">
-                    <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clipRule="evenodd" />
-                </svg>
-                <div className="absolute bg-white w-8 h-8 z-10 rounded-full"></div>
+        <div className="flex items-center justify-center space-x-10px">
+            <div className="relative flex items-center justify-center h-40px w-40px rounded-full bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-inner">
+                <img className="" src={PersonIcon} alt="person" />
             </div>
-            <DropdownArrow color="gray"/>
+            <DropdownArrow isOpen={isProfileOpen}/>
         </div>  
     )
 
     const LoginButton = (
-        <button className="flex items-center justify-center text-white font-bold w-28 h-12 bg-blue-500 rounded-full space-x-4 bg-gradient-to-br from-blue-400 to-blue-700">로그인</button>
+        <button className="flex items-center justify-center text-white font-bold w-100px h-40px rounded-full bg-gradient-to-br from-blue-gradLight to-blue-gradDark text-sm">로그인</button>
+    )
+
+    const SignupButton = (
+        <button className="flex items-center justify-center text-white font-bold w-100px h-40px rounded-full bg-gradient-to-br from-blue-darkGradLight to-blue-darkGradDark text-sm">회원가입</button>
+    )
+
+    const InboxButton = (
+        <button className="relative flex items-center justify-center text-white h-40px w-40px rounded-full bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-inner">
+            <img src={InboxIcon} alt="inbox_icon" />
+            <div className="absolute flex items-center justify-center w-20px h-20px bg-red-notification top-0 right-0 -mr-1 -mt-1 rounded-full shadow-2xl">
+                <label className="text-sm">1</label>
+            </div>
+        </button>
     )
 
     return (
-        <header className="flex items-center justify-between border-b h-16 px-4 shadow-lg bg-white">
+        <header className="flex items-center justify-between h-6-px px-10px shadow-plain bg-white">
             <div className="flex items-center flex-shrink-0">
-                <img className="h-8 mr-4 mb-2 cursor-pointer" src={Logo} alt="logo" />
+                <img className="h-8 mb-2 mr-10px cursor-pointer" src={Logo} alt="logo" />
                 <TabsList items={tabsArray} />
             </div>
             
             {isAuthenticated ? (
-                <div className="flex space-x-6 items-center flex-shrink-0">
+                <div className="flex space-x-20px items-center flex-shrink-0">
                     {/* BREAK */} 
-                    <DropDownControls buttonChild={profileButton}>
+                    <DropDownControls buttonChild={profileButton} onClick={() => setProfileOpen(!isProfileOpen)} onClose={() => setProfileOpen(false)}>
                         <div className="mt-4"><ProfileDropDown setAuth={setAuth}/></div>
                     </DropDownControls>
                     {/* BREAK */}
-                    <DropDownControls buttonChild={WalletButton}>
+                    <DropDownControls buttonChild={WalletButton} onClick={() => setWalletOpen(!isWalletOpen)} onClose={() => setWalletOpen(false)}>
                         <div className="mt-4"><WalletDropDown /></div>
                     </DropDownControls>
-
                     {/* BREAK */}
-                    <button className="relative flex items-center justify-center text-white h-12 w-12 rounded-full bg-blue-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
-                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                        </svg>
-                        <div className="absolute flex items-center justify-center w-5 h-5 bg-red-500 top-0 right-0 -mr-1 -mt-1 rounded-full shadow-2xl">
-                            <label>1</label>
-                        </div>
-                    </button>
+                    {InboxButton}
                     {/* BREAK */}
-                    <DropDownControls buttonChild={CountryButton}>
+                    <DropDownControls buttonChild={CountryButton} onClick={() => setCountryOpen(!isCountryOpen)} onClose={() => setCountryOpen(false)}>
                         <div className="mt-4"><CountryDropDown setCountry={setCountry} country={country} /></div>
                     </DropDownControls>
                 </div>
@@ -127,8 +141,9 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
                 <div className="flex space-x-3 items-center flex-shrink-0">
                     <PopupControls buttonChild={LoginButton}>
                         <LoginPopup setAuth={setAuth} />
-                    </PopupControls>                    
-                    <button className="flex items-center justify-center text-white font-bold w-28 h-12 bg-blue-500 rounded-full space-x-4 bg-blue-800">회원가입</button>
+                    </PopupControls>  
+                    {/* BREAK */}                  
+                    {SignupButton}
                     {/* BREAK */}
                     <DropDownControls buttonChild={CountryButton}>
                         <div className="mt-4"><CountryDropDown setCountry={setCountry} country={country} /></div>

@@ -22,8 +22,8 @@ const SubNavbar = () => {
     const [selectedTab, setSelectedTab] = useState()
     const [isGameBanner, setGameBanner] = useState(false)
 
-    const tabClass = "flex items-center justify-center space-x-2 h-full px-4 rounded-full text-gray-500 font-semibold cursor-pointer"
-    const selectedTabClass = "flex items-center justify-center space-x-2 h-full px-4 rounded-full text-white font-semibold bg-gradient-to-br from-blue-400 to-blue-700 cursor-pointer shadow-inner"
+    const tabClass = "flex items-center justify-center space-x-2 h-full px-4 rounded-full text-gray-subNavbar font-semibold cursor-pointer"
+    const selectedTabClass = "flex items-center justify-center space-x-2 h-full px-4 rounded-full text-white font-semibold bg-gradient-to-br from-blue-gradLight to-blue-gradDark cursor-pointer shadow-inner"
 
     const tabsArray = [
         { text: "라이브카지노", icon: Card, iconDefault: CardDefualt, id: 0 },
@@ -54,7 +54,7 @@ const SubNavbar = () => {
 
     return (
         <div className="relative w-full">
-            <div className="flex justify-around w-full rounded-full shadow-plain bg-gradient-to-b from-blue-100 border-2 border-white h-16">
+            <div className="flex justify-around w-full rounded-full shadow-plain bg-gradient-to-b from-blue-lightGradLight border-2 border-white h-16">
                 <TabsList items={tabsArray}/>
             </div>
             {isGameBanner && (
