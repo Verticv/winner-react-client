@@ -43,7 +43,7 @@ const SubNavbar = () => {
                 className={selectedTab === item.id ? selectedTabClass : tabClass} 
                 onClick={() => {
                     setSelectedTab(selectedTab === item.id ? -1 : item.id)
-                    setGameBanner(selectedTab === item.id ? false : true)
+                    setGameBanner(selectedTab === item.id ? false : item.id)
                 }}
             >
                 <img className="w-12 h-12 object-contain" src={selectedTab === item.id ? item.icon : item.iconDefault} alt="icon" />
@@ -59,7 +59,7 @@ const SubNavbar = () => {
             </div>
             {isGameBanner && (
                 <div className="absolute flex w-full z-20 mt-40px">
-                    <GameBanner selection={GameBanner}/>
+                    <GameBanner selection={isGameBanner}/>
                 </div>
             )}
         </div>
