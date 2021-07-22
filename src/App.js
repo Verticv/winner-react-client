@@ -14,14 +14,14 @@ function App() {
   const [isAuthenticated, setAuthenticated] = useState(false)
 
   return (
-    <div>
-      <div className="sticky top-0 z-50">
+    <div className="flex flex-col justify-center">
+      <div className="sticky top-0 z-50 flex flex-col items-start limit1920:items-center">
         <NoticeBanner />
         <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
       </div>
 
       <div className="flex flex-col items-start limit:items-center space-y-40px">
-        <div className="w-screen flex justify-start limit1920:justify-center items-center">
+        <div className="flex justify-start limit1920:justify-center items-center">
           <Carousel />
         </div>
 

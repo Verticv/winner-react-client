@@ -14,10 +14,12 @@ import ArrowUpWhite from '../images/arrows/arrow_up_white.png'
 import ArrowDown from '../images/arrows/arrow_down.png'
 import ArrowDownWhite from '../images/arrows/arrow_down_white.png'
 import InboxIcon from '../images/inbox_icon.png'
+import NavbarHover from './hovers/NavbarHover'
 
 const Navbar = ({ isAuthenticated, setAuth }) => {
 
     const [selectedTab, setSelectedTab] = useState()
+    const [hoveredTab, setHoveredTab] = useState()
     const [country, setCountry] = useState("KR")
     const [isProfileOpen, setProfileOpen] = useState()
     const [isWalletOpen, setWalletOpen] = useState()
@@ -49,6 +51,8 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
                 key={item.id} 
                 className={selectedTab === item.id ? selectedTabClass : tabClass} 
                 onClick={() => setSelectedTab(item.id)}
+                onMouseOver={() => setHoveredTab(item.id)}
+                // onMouseLeave={() =>setHoveredTab(false)}
             >
                 <label className="cursor-pointer">{item.text}</label>
                 <div className={selectedTab === item.id ? selectedLineClass : lineClass}></div>
@@ -113,45 +117,50 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
     )
 
     return (
-        <header className="flex items-center justify-between h-6-px px-10px shadow-plain bg-white">
-            <div className="flex items-center flex-shrink-0">
-                <img className="h-8 mb-2 mr-10px cursor-pointer" src={Logo} alt="logo" />
-                <TabsList items={tabsArray} />
-            </div>
-            
-            {isAuthenticated ? (
-                <div className="flex space-x-20px items-center flex-shrink-0">
-                    {/* BREAK */} 
-                    <DropDownControls buttonChild={profileButton} onClick={() => setProfileOpen(!isProfileOpen)} onClose={() => setProfileOpen(false)}>
-                        <div className="mt-4"><ProfileDropDown setAuth={setAuth}/></div>
-                    </DropDownControls>
-                    {/* BREAK */}
-                    <DropDownControls buttonChild={WalletButton} onClick={() => setWalletOpen(!isWalletOpen)} onClose={() => setWalletOpen(false)}>
-                        <div className="mt-4"><WalletDropDown /></div>
-                    </DropDownControls>
-                    {/* BREAK */}
-                    {InboxButton}
-                    {/* BREAK */}
-                    <DropDownControls buttonChild={CountryButton} onClick={() => setCountryOpen(!isCountryOpen)} onClose={() => setCountryOpen(false)}>
-                        <div className="mt-4"><CountryDropDown setCountry={setCountry} country={country} /></div>
-                    </DropDownControls>
+        <div className="w-1920">
+            <header className="flex items-center justify-between h-6-px px-10px shadow-plain bg-white">
+                <div className="flex items-center flex-shrink-0">
+                    <img className="h-8 mb-2 mr-10px cursor-pointer" src={Logo} alt="logo" />
+                    <TabsList items={tabsArray} />
                 </div>
+                
+                {isAuthenticated ? (
+                    <div className="flex space-x-20px items-center flex-shrink-0">
+                        {/* BREAK */} 
+                        <DropDownControls buttonChild={profileButton} onClick={() => setProfileOpen(!isProfileOpen)} onClose={() => setProfileOpen(false)}>
+                            <div className="mt-4"><ProfileDropDown setAuth={setAuth}/></div>
+                        </DropDownControls>
+                        {/* BREAK */}
+                        <DropDownControls buttonChild={WalletButton} onClick={() => setWalletOpen(!isWalletOpen)} onClose={() => setWalletOpen(false)}>
+                            <div className="mt-4"><WalletDropDown /></div>
+                        </DropDownControls>
+                        {/* BREAK */}
+                        {InboxButton}
+                        {/* BREAK */}
+                        <DropDownControls buttonChild={CountryButton} onClick={() => setCountryOpen(!isCountryOpen)} onClose={() => setCountryOpen(false)}>
+                            <div className="mt-4"><CountryDropDown setCountry={setCountry} country={country} /></div>
+                        </DropDownControls>
+                    </div>
 
-            ) : (
-                <div className="flex space-x-3 items-center flex-shrink-0">
-                    <PopupControls buttonChild={LoginButton}>
-                        <LoginPopup setAuth={setAuth} />
-                    </PopupControls>  
-                    {/* BREAK */}                  
-                    {SignupButton}
-                    {/* BREAK */}
-                    <DropDownControls buttonChild={CountryButton}>
-                        <div className="mt-4"><CountryDropDown setCountry={setCountry} country={country} /></div>
-                    </DropDownControls>
-                </div>
+                ) : (
+                    <div className="flex space-x-3 items-center flex-shrink-0">
+                        <PopupControls buttonChild={LoginButton}>
+                            <LoginPopup setAuth={setAuth} />
+                        </PopupControls>  
+                        {/* BREAK */}                  
+                        {SignupButton}
+                        {/* BREAK */}
+                        <DropDownControls buttonChild={CountryButton}>
+                            <div className="mt-4"><CountryDropDown setCountry={setCountry} country={country} /></div>
+                        </DropDownControls>
+                    </div>
+                )}
+
+            </header>
+            {hoveredTab === 0 && (
+                <NavbarHover selection={hoveredTab} setHoveredTab={setHoveredTab} />
             )}
-
-        </header>
+        </div>
     )
 }
 
