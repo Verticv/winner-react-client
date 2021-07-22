@@ -11,11 +11,14 @@ import MinigameBanner4 from '../images/gameBanner/minigame_banner_4.png'
 import VirtualBanner from '../images/gameBanner/virtual_game_banner.png'
 import FishingBanner from '../images/gameBanner/fishing_game_banner.png'
 import LotteryBanner from '../images/gameBanner/lottery_game_banner.png'
+import Cards from './Cards'
 
 const GameBanner = ({selection}) => {
     return (
         <>
-            {selection === 1 ? (
+            {selection === 0 ? (
+                <Cards />
+            ) : selection === 1 ? (
                 <div className="w-full h-auto bg-white shadow-plain border border-gray-300 rounded-lg flex items-start justify-center bg-gradient-to-br from-white via-white to-gray-300 cursor-pointer pt-1">
                     <img className="w-full h-auto pl-20" src={SlotGameBanner} alt="game_banner" />
                 </div>
@@ -49,7 +52,7 @@ const GameBanner = ({selection}) => {
                     <img className="w-full h-auto pl-20" src={FishingBanner} alt="game_banner" />
                 </div>
             ) : selection === 7 ? (
-                <div className="w-full h-auto bg-white shadow-plain border border-gray-300 rounded-lg flex items-start justify-center bg-gradient-to-br from-white via-white to-gray-300 cursor-pointer pt-1">
+                <div className="w-full h-auto bg-white shadow-plain border border-gray-300 rounded-lg flex items-start justify-center bg-gradient-to-br from-white via-white to-gray-300 cursor-pointer">
                     <img className="w-full h-auto pl-20" src={LotteryBanner} alt="game_banner" />
                 </div>
             ) : (

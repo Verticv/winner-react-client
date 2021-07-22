@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import './App.css';
-import Cards from './components/Cards';
 import Carousel from './components/Carousel';
 import Footer from './components/Footer';
 import Footer2 from './components/Footer2';
@@ -29,7 +28,6 @@ function App() {
         <div className="flex flex-col w-default space-y-40px">
           <Slots />
           <SubNavbar />
-          <Cards />
           <Menus />
         </div>
 

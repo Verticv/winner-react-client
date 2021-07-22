@@ -16,7 +16,8 @@ module.exports = {
         '50px': '50px',
         '60px': '60px',
         '100px': '100px',
-        '300px': '300px'
+        '300px': '300px',
+        '400px': '400px'
        },
       boxShadow: {
         plain: '0 0px 10px 0 rgba(0, 0, 0, 0.3), 0 4px 4px 0 rgba(0, 0, 0, 0.06)'

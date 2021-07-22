@@ -19,8 +19,8 @@ import GameBanner from './GameBanner'
 
 const SubNavbar = () => {
 
-    const [selectedTab, setSelectedTab] = useState()
-    const [isGameBanner, setGameBanner] = useState(false)
+    const [selectedTab, setSelectedTab] = useState(0)
+    const [isGameBanner, setGameBanner] = useState(0)
 
     const tabClass = "flex items-center justify-center space-x-2 h-full px-4 rounded-full text-gray-subNavbar font-semibold cursor-pointer"
     const selectedTabClass = "flex items-center justify-center space-x-2 h-full px-4 rounded-full text-white font-semibold bg-gradient-to-br from-blue-gradLight to-blue-gradDark cursor-pointer shadow-inner"
@@ -42,8 +42,8 @@ const SubNavbar = () => {
                 key={item.id} 
                 className={selectedTab === item.id ? selectedTabClass : tabClass} 
                 onClick={() => {
-                    setSelectedTab(selectedTab === item.id ? -1 : item.id)
-                    setGameBanner(selectedTab === item.id ? false : item.id)
+                    setSelectedTab(item.id)
+                    setGameBanner(item.id)
                 }}
             >
                 <img className="w-12 h-12 object-contain" src={selectedTab === item.id ? item.icon : item.iconDefault} alt="icon" />
@@ -57,11 +57,9 @@ const SubNavbar = () => {
             <div className="flex justify-around w-full rounded-full shadow-plain bg-gradient-to-b from-blue-lightGradLight border-2 border-white h-16">
                 <TabsList items={tabsArray}/>
             </div>
-            {isGameBanner && (
-                <div className="absolute flex w-full z-20 mt-40px">
-                    <GameBanner selection={isGameBanner}/>
-                </div>
-            )}
+            <div className="flex w-full h-400px mt-40px">
+                <GameBanner selection={isGameBanner}/>
+            </div>
         </div>
     )
 }
