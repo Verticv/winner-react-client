@@ -7,7 +7,7 @@ module.exports = {
         112: '28rem',
         124: '32rem',
         'default': '1250px',
-        1920: '1920px',
+        1920: '1905px',
         '4px': '4px',
         '10px': '10px',
         '20px': '20px',
@@ -26,7 +26,7 @@ module.exports = {
       },
       screens: {
         'limit': '1250px',
-        'limit1920': '1920px'
+        'limit1920': '1905px'
       },
       colors: {
         blue: {
