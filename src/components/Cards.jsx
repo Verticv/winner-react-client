@@ -30,7 +30,7 @@ const Cards = () => {
             <button 
                 key={item.id} 
                 className={selectedTab === item.id ? cardSelectedClass : cardClass} 
-                onClick={() => setSelectedTab(item.id)}
+                onClick={item.id !== 6 && item.id !== 7 ? () => setSelectedTab(item.id) : ""}
             >
                 <img className="object-fill w-full h-full rounded-lg border pl-5" src={item.background} alt="background" />
             </button>
