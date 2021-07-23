@@ -51,8 +51,10 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
                 key={item.id} 
                 className={selectedTab === item.id ? selectedTabClass : tabClass} 
                 onClick={() => setSelectedTab(item.id)}
-                onMouseOver={() => setHoveredTab(item.id)}
-                // onMouseLeave={() =>setHoveredTab(false)}
+                onMouseOver={() => {
+                    setHoveredTab(item.id)
+                    setSelectedTab(item.id)
+                }}
             >
                 <label className="cursor-pointer">{item.text}</label>
                 <div className={selectedTab === item.id ? selectedLineClass : lineClass}></div>
@@ -157,9 +159,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
                 )}
 
             </header>
-            {hoveredTab === 0 && (
-                <NavbarHover selection={hoveredTab} setHoveredTab={setHoveredTab} />
-            )}
+            <NavbarHover selection={hoveredTab} setHoveredTab={setHoveredTab} setSelectedTab={setSelectedTab}/>
         </div>
     )
 }
