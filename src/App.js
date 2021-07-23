@@ -14,7 +14,7 @@ function App() {
   const [isAuthenticated, setAuthenticated] = useState(false)
 
   return (
-    <div className="flex flex-col justify-center">
+    <div className="flex flex-col justify-center w-screen">
       <div className="sticky top-0 z-50 flex flex-col items-start limit1920:items-center">
         <NoticeBanner />
         <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
