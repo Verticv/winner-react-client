@@ -15,6 +15,7 @@ function App() {
 
   return (
     <div className="flex flex-col justify-center pr-15px">
+      
       <div className="sticky top-0 z-50 flex flex-col items-start limit1920:items-center">
         <NoticeBanner />
         <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
@@ -38,7 +39,7 @@ function App() {
         </div>
 
       </div>
-      
+        
     </div>
   );
 }

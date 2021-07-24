@@ -17,10 +17,15 @@ module.exports = {
         '50px': '50px',
         '60px': '60px',
         '100px': '100px',
+        '150px': '150px',
+        '170px': '170px',
         '250px': '250px',
         '300px': '300px',
         '350px': '350px',
-        '400px': '400px'
+        '400px': '400px',
+        '500px': '500px',
+        '650px': '650px',
+        '800px': '800px'
        },
       boxShadow: {
         plain: '0 0px 10px 0 rgba(0, 0, 0, 0.3), 0 4px 4px 0 rgba(0, 0, 0, 0.06)'

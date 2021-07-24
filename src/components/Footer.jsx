@@ -62,7 +62,6 @@ const Footer = () => {
                         <img src={TelegramLogo} alt="kakao-icon" />
                         <span className="font-semibold text-blue-400">test1234</span>
                     </div>
-
                 </div>
                 {/* BREAK */}
                 <div className="flex items-start w-full px-4">

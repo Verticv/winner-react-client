@@ -15,6 +15,7 @@ import ArrowDown from '../images/arrows/arrow_down.png'
 import ArrowDownWhite from '../images/arrows/arrow_down_white.png'
 import InboxIcon from '../images/inbox_icon.png'
 import NavbarHover from './hovers/NavbarHover'
+import SignupPopup from './popups/SignupPopup'
 
 const Navbar = ({ isAuthenticated, setAuth }) => {
 
@@ -149,8 +150,10 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
                         <PopupControls buttonChild={LoginButton}>
                             <LoginPopup setAuth={setAuth} />
                         </PopupControls>  
-                        {/* BREAK */}                  
-                        {SignupButton}
+                        {/* BREAK */}         
+                        <PopupControls buttonChild={SignupButton}>
+                            <SignupPopup setAuth={setAuth} />
+                        </PopupControls>           
                         {/* BREAK */}
                         <DropDownControls buttonChild={CountryButton}>
                             <div className="mt-4"><CountryDropDown setCountry={setCountry} country={country} /></div>
