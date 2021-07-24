@@ -8,6 +8,7 @@ module.exports = {
         124: '32rem',
         'default': '1250px',
         1920: '1905px',
+        '2px': '2px',
         '4px': '4px',
         '10px': '10px',
         '15px': '15px',

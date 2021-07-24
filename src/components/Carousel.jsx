@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './carousel.css'
 import visual from '../images/visual.png'
 import visual2 from '../images/visual2.png'
 
-const images = [visual,visual2]
+const images = [visual,visual2,visual]
 // images must be an array of urls , if using Next JS this could something like
 // const images = ['/img/img1.png', '/img/img2.png', '/img/img3.png']
 // images must be an array of urls , if using Next JS this could something like
@@ -13,7 +13,7 @@ const images = [visual,visual2]
 const Carousel = () => {
 
     // We will start by storing the index of the current image in the state.
-    const [currentImage, setCurrentImage] = React.useState(0);
+    const [currentImage, setCurrentImage] = useState(0);
 
     // We are using react ref to 'tag' each of the images. Below will create an array of
     // objects with numbered keys. We will use those numbers (i) later to access a ref of a
@@ -91,6 +91,18 @@ const Carousel = () => {
         </button>
     );
 
+    const positionIndicator = (
+        <div className="absolute text-white text-2xl z-10 h-12 w-full rounded-sm flex items-center justify-center bottom-0 space-x-2">
+            {images.map((_, i) => (
+                <button className="w-15px h-15px bg-gray-300 rounded-full p-2px" onClick={() => scrollToImage(i)}>
+                    {currentImage === i && (
+                        <div className="w-full h-full rounded-full bg-blue-gradDark" />
+                    )}
+                </button>
+            ))}
+        </div>
+    )
+
     return (
         <div className="flex w-1920 flex-shrink-0">
             <div className="relative w-full">
@@ -102,6 +114,7 @@ const Carousel = () => {
                         </div>
                     ))}
                     {sliderControl()}
+                    {positionIndicator}
                 </div>  
             </div>
         </div>
