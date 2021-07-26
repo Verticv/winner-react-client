@@ -57,7 +57,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
                     setSelectedTab(item.id)
                 }}
             >
-                <label className="cursor-pointer font-spoqa font-bold text-16px pt-1">{item.text}</label>
+                <label className="cursor-pointer font-spoqa font-bold text-16px">{item.text}</label>
                 <div className={selectedTab === item.id ? selectedLineClass : lineClass}></div>
             </button>
         ));
@@ -103,11 +103,11 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
     )
 
     const LoginButton = (
-        <button className="flex items-center justify-center text-white font-bold w-100px h-40px rounded-full bg-gradient-to-br from-blue-gradLight to-blue-gradDark text-16px font-spoqa font-bold pt-1">로그인</button>
+        <button className="flex items-center justify-center text-white font-bold w-100px h-40px rounded-full bg-gradient-to-br from-blue-gradLight to-blue-gradDark text-16px font-spoqa font-bold">로그인</button>
     )
 
     const SignupButton = (
-        <button className="flex items-center justify-center text-white font-bold w-100px h-40px rounded-full bg-gradient-to-br from-blue-darkGradLight to-blue-darkGradDark text-16px font-spoqa font-bold pt-1">회원가입</button>
+        <button className="flex items-center justify-center text-white font-bold w-100px h-40px rounded-full bg-gradient-to-br from-blue-darkGradLight to-blue-darkGradDark text-16px font-spoqa font-bold">회원가입</button>
     )
 
     const InboxButton = (
