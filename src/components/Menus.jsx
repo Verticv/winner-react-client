@@ -29,7 +29,6 @@ import AnnouncementIconHighlight from '../images/menu/announcement_highlight.png
 import FaqIcon from '../images/menu/faq.png'
 import FaqIconHighlight from '../images/menu/faq_highlight.png'
 
-
 const Menus = () => {
     return (
         <div className="flex justify-between w-full space-x-4 pb-20px">

@@ -30,6 +30,9 @@ function App() {
         <div className="flex flex-col w-default space-y-20px">
           <Slots />
           <SubNavbar />
+        </div>
+        
+        <div className="flex flex-col w-default">
           <Menus />
         </div>
 

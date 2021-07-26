@@ -9,8 +9,8 @@ import WinnerBg from '../images/cardBg/winner_bg.png'
 
 const Cards = () => {
 
-    const cardClass = "rounded-xl shadow-lg hover:shadow-plain transition bg-gradient-to-br from-white via-white to-gray-500 cursor-pointer"
-    const cardSelectedClass = "rounded-xl shadow-lg transition bg-gradient-to-r from-blue-cardGradLight to-blue-cardGradDark cursor-pointer"
+    const cardClass = "w-300px h-185px border border-gray-afafaf rounded-lg shadow-plain1 hover:shadow-md transition bg-gradient-to-br from-white via-white to-gray-500 cursor-pointer border border-gray-afafaf"
+    const cardSelectedClass = "w-300px h-185px border border-gray-afafaf rounded-lg shadow-lg transition bg-gradient-to-r from-blue-cardGradLight to-blue-cardGradDark cursor-pointer"
 
     const [selectedTab, setSelectedTab] = useState()
 
@@ -32,7 +32,7 @@ const Cards = () => {
                 className={selectedTab === item.id ? cardSelectedClass : cardClass} 
                 onClick={item.id !== 6 && item.id !== 7 ? () => setSelectedTab(item.id) : () => console.log("clicked")}
             >
-                <img className="object-fill w-full h-full rounded-lg border pl-5" src={item.background} alt="background" />
+                <img className="object-fill w-full h-full rounded-lg pl-5" src={item.background} alt="background" />
             </button>
         ));
     }

@@ -74,8 +74,8 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
     )
 
     const CountryButton = (
-        <div className="flex items-center w-100px h-40px bg-gradient-to-br from-blue-gradLight to-blue-gradDark rounded-full space-x-10px shadow-inner">
-            <div className="h-34px w-34px ml-4px bg-white rounded-full flex items-center justify-center">
+        <div className="flex items-center w-104px h-40px bg-gradient-to-br from-blue-gradLight to-blue-gradDark rounded-full space-x-10px shadow-inner p-4px">
+            <div className="h-34px w-34px bg-white rounded-full flex items-center justify-center">
                 <img className="h-auto w-10 bg-white rounded-full flex items-center justify-center" src={country === "KR" ? Koreaflag : UKflag} alt="flag"></img>
             </div>
             <label className="font-spoqa font-bold text-white cursor-pointer">{country}</label>
@@ -86,8 +86,8 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
     const WalletButton = (
         <div className="flex items-center space-x-10px h-40px">
             <div className="flex flex-col items-end -space-y-1">
-                <label className="text-blue-500 font-semibold cursor-pointer font-roboto">₩ 100,000 원</label>
-                <label className="text-yellow-500 font-medium cursor-pointer">12,500 P</label>
+                <label className="text-blue-r2087f0 font-medium cursor-pointer font-roboto">₩ 100,000 원</label>
+                <label className="text-orange-ff7e00 font-medium cursor-pointer font-roboto">12,500 P</label>
             </div>
             <DropdownArrow isOpen={isWalletOpen}/>
         </div>
@@ -103,11 +103,11 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
     )
 
     const LoginButton = (
-        <button className="flex items-center justify-center text-white font-bold w-100px h-40px rounded-full bg-gradient-to-br from-blue-gradLight to-blue-gradDark text-16px font-spoqa font-bold">로그인</button>
+        <button className="flex items-center justify-center text-white font-bold w-104px h-40px rounded-full bg-gradient-to-br from-blue-gradLight to-blue-gradDark text-16px font-spoqa font-bold">로그인</button>
     )
 
     const SignupButton = (
-        <button className="flex items-center justify-center text-white font-bold w-100px h-40px rounded-full bg-gradient-to-br from-blue-darkGradLight to-blue-darkGradDark text-16px font-spoqa font-bold">회원가입</button>
+        <button className="flex items-center justify-center text-white font-bold w-104px h-40px rounded-full bg-gradient-to-br from-blue-darkGradLight to-blue-darkGradDark text-16px font-spoqa font-bold">회원가입</button>
     )
 
     const InboxButton = (
