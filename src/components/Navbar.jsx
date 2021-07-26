@@ -78,7 +78,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
             <div className="h-34px w-34px ml-4px bg-white rounded-full flex items-center justify-center">
                 <img className="h-auto w-10 bg-white rounded-full flex items-center justify-center" src={country === "KR" ? Koreaflag : UKflag} alt="flag"></img>
             </div>
-            <label className="font-spoqa font-bold pt-1 text-white cursor-pointer">{country}</label>
+            <label className="font-spoqa font-bold text-white cursor-pointer">{country}</label>
             <DropdownArrow isWhite isOpen={isCountryOpen}/>
         </div>
     )

@@ -62,8 +62,8 @@ module.exports = {
         }
       },
       fontFamily: {
-        spoqa: ['spoqa_han_sans_neo'],
-        roboto: ['roboto']
+        spoqa: ['Spoqa Han Sans Neo'],
+        roboto: ['Roboto']
       },
       fontSize: {
         '14px': '14px',
