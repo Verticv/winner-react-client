@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import './carousel.css'
+import React, { createRef, useState } from 'react'
+import './Carousel.css'
 import visual from '../images/visual.png'
 import visual2 from '../images/visual2.png'
 
@@ -19,7 +19,7 @@ const Carousel = () => {
     // objects with numbered keys. We will use those numbers (i) later to access a ref of a
     // specific image in this array.
     const refs = images.reduce((acc, val, i) => {
-        acc[i] = React.createRef();
+        acc[i] = createRef();
         return acc;
     }, {});
 
