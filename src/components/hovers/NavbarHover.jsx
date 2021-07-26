@@ -100,17 +100,17 @@ const NavbarHover = ({selection, setHoveredTab, setSelectedTab}) => {
                 </div>
             ) : selection === 3 ? (
                 <div className="absolute w-1920 h-250px bg-white bg-opacity-80 shadow-inner border-b-2 border-gray-300 cursor-pointer items-center justify-center flex" onMouseLeave={() => setHoveredTab(false)}>
-                    <img src={esportsHover === 0 ? LolBannerHighlight : LolBanner} alt="game_image" onMouseEnter={() => setEsportsHover(0)} onMouseLeave={() => setEsportsHover()}/>
-                    <img src={esportsHover === 1 ? SuddenAttackBannerHighlight : SuddenAttackBanner} alt="game_image" onMouseEnter={() => setEsportsHover(1)} onMouseLeave={() => setEsportsHover()}/>
-                    <img src={esportsHover === 2 ? OverwatchBannerHighlight : OverwatchBanner} alt="game_image" onMouseEnter={() => setEsportsHover(2)} onMouseLeave={() => setEsportsHover()}/>
-                    <img src={esportsHover === 3 ? PubgBannerHighlight : PubgBanner} alt="game_image" onMouseEnter={() => setEsportsHover(3)} onMouseLeave={() => setEsportsHover()}/>
+                    <img className="w-300px h-240px" src={esportsHover === 0 ? LolBannerHighlight : LolBanner} alt="game_image" onMouseEnter={() => setEsportsHover(0)} onMouseLeave={() => setEsportsHover()}/>
+                    <img className="w-300px h-240px" src={esportsHover === 1 ? SuddenAttackBannerHighlight : SuddenAttackBanner} alt="game_image" onMouseEnter={() => setEsportsHover(1)} onMouseLeave={() => setEsportsHover()}/>
+                    <img className="w-300px h-240px" src={esportsHover === 2 ? OverwatchBannerHighlight : OverwatchBanner} alt="game_image" onMouseEnter={() => setEsportsHover(2)} onMouseLeave={() => setEsportsHover()}/>
+                    <img className="w-300px h-240px" src={esportsHover === 3 ? PubgBannerHighlight : PubgBanner} alt="game_image" onMouseEnter={() => setEsportsHover(3)} onMouseLeave={() => setEsportsHover()}/>
                 </div>            
             ) : selection === 4 ? (
                 <div className="absolute w-1920 h-250px bg-white bg-opacity-80 shadow-inner border-b-2 border-gray-300 cursor-pointer items-center justify-center flex" onMouseLeave={() => setHoveredTab(false)}>
-                    <img src={minigameHover === 0 ? PowerballHighlight : Powerball} alt="game_image" onMouseEnter={() => setMinigameHover(0)} onMouseLeave={() => setMinigameHover()}/>
-                    <img src={minigameHover === 1 ? PowerLadderHighlight : PowerLadder} alt="game_image" onMouseEnter={() => setMinigameHover(1)} onMouseLeave={() => setMinigameHover()}/>
-                    <img src={minigameHover === 2 ? SpeedkinoHighlight : Speedkino} alt="game_image" onMouseEnter={() => setMinigameHover(2)} onMouseLeave={() => setMinigameHover()}/>
-                    <img src={minigameHover === 3 ? KinoLadderHighlight : KinoLadder} alt="game_image" onMouseEnter={() => setMinigameHover(3)} onMouseLeave={() => setMinigameHover()}/>
+                    <img className="w-300px h-240px" src={minigameHover === 0 ? PowerballHighlight : Powerball} alt="game_image" onMouseEnter={() => setMinigameHover(0)} onMouseLeave={() => setMinigameHover()}/>
+                    <img className="w-300px h-240px" src={minigameHover === 1 ? PowerLadderHighlight : PowerLadder} alt="game_image" onMouseEnter={() => setMinigameHover(1)} onMouseLeave={() => setMinigameHover()}/>
+                    <img className="w-300px h-240px" src={minigameHover === 2 ? SpeedkinoHighlight : Speedkino} alt="game_image" onMouseEnter={() => setMinigameHover(2)} onMouseLeave={() => setMinigameHover()}/>
+                    <img className="w-300px h-240px" src={minigameHover === 3 ? KinoLadderHighlight : KinoLadder} alt="game_image" onMouseEnter={() => setMinigameHover(3)} onMouseLeave={() => setMinigameHover()}/>
                 </div> 
             ) : selection === 5 ? (
                 <div className="absolute w-1920 h-250px bg-white bg-opacity-80 shadow-inner border-b-2 border-gray-300 cursor-pointer items-center justify-center flex" onMouseLeave={() => setHoveredTab(false)}>

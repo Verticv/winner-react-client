@@ -3,7 +3,7 @@ import './carousel.css'
 import visual from '../images/visual.png'
 import visual2 from '../images/visual2.png'
 
-const images = [visual,visual2,visual]
+const images = [visual,visual2]
 // images must be an array of urls , if using Next JS this could something like
 // const images = ['/img/img1.png', '/img/img2.png', '/img/img3.png']
 // images must be an array of urls , if using Next JS this could something like
@@ -47,17 +47,17 @@ const Carousel = () => {
     // or another way round - first to last in previousImage method.
     const nextImage = () => {
         if (currentImage >= totalImages - 1) {
-            scrollToImage(0);
+            setCurrentImage(0);
         } else {
-            scrollToImage(currentImage + 1);
+            setCurrentImage(currentImage + 1);
         }
     };
 
     const previousImage = () => {
         if (currentImage === 0) {
-            scrollToImage(totalImages - 1);
+            setCurrentImage(totalImages - 1);
         } else {
-            scrollToImage(currentImage - 1);
+            setCurrentImage(currentImage - 1);
         }
     };
 
@@ -108,11 +108,12 @@ const Carousel = () => {
             <div className="relative w-full">
                 <div className="carousel">
                     {sliderControl(true)}
-                    {images.map((img, i) => (
+                    {/* {images.map((img, i) => (
                         <div className="w-full flex-shrink-0" key={img} ref={refs[i]}>
                             <img src={img} className="w-full object-contain" alt={img} />
                         </div>
-                    ))}
+                    ))} */}
+                    <img src={images[currentImage]} className="w-full object-contain" alt={"banner_images"} />
                     {sliderControl()}
                     {positionIndicator}
                 </div>  

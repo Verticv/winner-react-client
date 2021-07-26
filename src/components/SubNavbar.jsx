@@ -16,14 +16,15 @@ import AugmentedGameDefault from '../images/subNavbar/augmented_game_default.png
 import FishingDefault from '../images/subNavbar/fishing_default.png'
 import LotteryDefault from '../images/subNavbar/lottery_default.png'
 import GameBanner from './GameBanner'
+import './SubNavbar.css'
 
 const SubNavbar = () => {
 
     const [selectedTab, setSelectedTab] = useState(0)
     const [isGameBanner, setGameBanner] = useState(0)
 
-    const tabClass = "flex items-center justify-center space-x-2 h-full px-4 rounded-full text-gray-subNavbar font-semibold cursor-pointer"
-    const selectedTabClass = "flex items-center justify-center space-x-2 h-full px-4 rounded-full text-white font-semibold bg-gradient-to-br from-blue-gradLight to-blue-gradDark cursor-pointer shadow-inner"
+    const tabClass = "flex items-center justify-center space-x-1 w-156px h-60px rounded-full text-gray-subNavbar font-semibold cursor-pointer z-20 transition duration-300 ease-in-out focus:text-white"
+    const selectedTabClass = "flex items-center justify-center space-x-1 w-156px h-60px rounded-full text-white font-semibold cursor-pointer z-20 py-4 transition duration-150 ease-in-out"
 
     const tabsArray = [
         { text: "라이브카지노", icon: Card, iconDefault: CardDefualt, id: 0 },
@@ -36,6 +37,12 @@ const SubNavbar = () => {
         { text: "로터리게임", icon: Lottery, iconDefault: LotteryDefault, id: 7 }
     ];
 
+    function onClickHandle(id) {
+        var circle = document.getElementsByClassName("highlight")[0]
+        circle.style.transform = "translate3d(" + (id * 156) + "px, 0px, 0)"
+    }
+
+
     function TabsList({ items }) {
         return items.map(item => (
             <button 
@@ -44,6 +51,7 @@ const SubNavbar = () => {
                 onClick={() => {
                     setSelectedTab(item.id)
                     setGameBanner(item.id)
+                    onClickHandle(item.id)
                 }}
             >
                 <img className="w-12 h-12 object-contain" src={selectedTab === item.id ? item.icon : item.iconDefault} alt="icon" />
@@ -52,9 +60,14 @@ const SubNavbar = () => {
         ));
     }
 
+    
+
     return (
-        <div className="relative w-full">
+        <div id="container" className="relative w-full">
             <div className="flex justify-around w-full rounded-full shadow-plain bg-gradient-to-b from-blue-lightGradLight border-2 border-white h-16">
+                {/* <div id="container"> */}
+                    <div class="highlight"></div>
+                {/* </div> */}
                 <TabsList items={tabsArray}/>
             </div>
             <div className="flex w-full h-400px mt-40px">
