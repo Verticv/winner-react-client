@@ -1,5 +1,5 @@
 import React, { createRef, useState } from 'react'
-import './Carousel.css'
+import './carousel.css'
 import visual from '../images/visual.png'
 import visual2 from '../images/visual2.png'
 
