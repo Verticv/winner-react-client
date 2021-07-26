@@ -57,7 +57,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
                     setSelectedTab(item.id)
                 }}
             >
-                <label className="cursor-pointer">{item.text}</label>
+                <label className="cursor-pointer font-spoqa font-bold text-16px pt-1">{item.text}</label>
                 <div className={selectedTab === item.id ? selectedLineClass : lineClass}></div>
             </button>
         ));
@@ -78,7 +78,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
             <div className="h-34px w-34px ml-4px bg-white rounded-full flex items-center justify-center">
                 <img className="h-auto w-10 bg-white rounded-full flex items-center justify-center" src={country === "KR" ? Koreaflag : UKflag} alt="flag"></img>
             </div>
-            <label className="font-bold text-sm text-white cursor-pointer">{country}</label>
+            <label className="font-spoqa font-bold pt-1 text-white cursor-pointer">{country}</label>
             <DropdownArrow isWhite isOpen={isCountryOpen}/>
         </div>
     )
@@ -86,7 +86,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
     const WalletButton = (
         <div className="flex items-center space-x-10px h-40px">
             <div className="flex flex-col items-end -space-y-1">
-                <label className="text-blue-500 font-medium cursor-pointer">₩ 100,000 원</label>
+                <label className="text-blue-500 font-semibold cursor-pointer font-roboto">₩ 100,000 원</label>
                 <label className="text-yellow-500 font-medium cursor-pointer">12,500 P</label>
             </div>
             <DropdownArrow isOpen={isWalletOpen}/>
@@ -96,18 +96,18 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
     const profileButton = (
         <div className="flex items-center justify-center space-x-10px">
             <div className="relative flex items-center justify-center h-40px w-40px rounded-full bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-inner">
-                <img className="" src={PersonIcon} alt="person" />
+                <img src={PersonIcon} alt="person" />
             </div>
             <DropdownArrow isOpen={isProfileOpen}/>
         </div>  
     )
 
     const LoginButton = (
-        <button className="flex items-center justify-center text-white font-bold w-100px h-40px rounded-full bg-gradient-to-br from-blue-gradLight to-blue-gradDark text-sm">로그인</button>
+        <button className="flex items-center justify-center text-white font-bold w-100px h-40px rounded-full bg-gradient-to-br from-blue-gradLight to-blue-gradDark text-16px font-spoqa font-bold pt-1">로그인</button>
     )
 
     const SignupButton = (
-        <button className="flex items-center justify-center text-white font-bold w-100px h-40px rounded-full bg-gradient-to-br from-blue-darkGradLight to-blue-darkGradDark text-sm">회원가입</button>
+        <button className="flex items-center justify-center text-white font-bold w-100px h-40px rounded-full bg-gradient-to-br from-blue-darkGradLight to-blue-darkGradDark text-16px font-spoqa font-bold pt-1">회원가입</button>
     )
 
     const InboxButton = (
@@ -121,9 +121,9 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
 
     return (
         <div className="w-1920">
-            <header className="flex items-center justify-between h-6-px px-10px shadow-plain bg-white">
+            <header className="flex items-center justify-between h-60px px-10px shadow-plain bg-white">
                 <div className="flex items-center flex-shrink-0">
-                    <img className="h-8 mb-2 mr-10px cursor-pointer" src={Logo} alt="logo" />
+                    <img className="w-130px object-contain mb-2 mr-10px cursor-pointer" src={Logo} alt="logo" />
                     <TabsList items={tabsArray} />
                 </div>
                 

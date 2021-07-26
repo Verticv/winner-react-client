@@ -8,7 +8,7 @@ const NoticeBanner = () => {
             <div className="bg-blue-banner h-8 flex items-center justify-center w-10 z-20"><img src={SpeakerIcon} alt="speakerIcon"/></div>
             
             <div className="ml-12">
-                <span id="banner" className="text-sm text-white z-10">※ 필수!! 입금하시기전 계좌문의 후 입금해 주시기 바랍니다.</span>
+                <span id="banner" className="font-spoqa font-normal text-14px text-white z-10">※ 필수!! 입금하시기전 계좌문의 후 입금해 주시기 바랍니다.</span>
             </div>
         </div>
     )

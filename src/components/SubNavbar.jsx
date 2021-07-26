@@ -54,23 +54,21 @@ const SubNavbar = () => {
                     onClickHandle(item.id)
                 }}
             >
-                <img className="w-12 h-12 object-contain" src={selectedTab === item.id ? item.icon : item.iconDefault} alt="icon" />
+                <img className={selectedTab === item.id ? "w-12 h-10 object-contain" : "w-12 h-12 object-contain"} src={selectedTab === item.id ? item.icon : item.iconDefault} alt="icon" />
                 <label className="cursor-pointer flex-shrink-0">{item.text}</label>
             </button>
         ));
     }
 
-    
-
     return (
         <div id="container" className="relative w-full">
             <div className="flex justify-around w-full rounded-full shadow-plain bg-gradient-to-b from-blue-lightGradLight border-2 border-white h-16">
                 {/* <div id="container"> */}
-                    <div class="highlight"></div>
+                    <div className="highlight" />
                 {/* </div> */}
                 <TabsList items={tabsArray}/>
             </div>
-            <div className="flex w-full h-400px mt-40px">
+            <div className="flex w-full h-400px mt-20px">
                 <GameBanner selection={isGameBanner}/>
             </div>
         </div>

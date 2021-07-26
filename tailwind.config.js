@@ -7,17 +7,21 @@ module.exports = {
         112: '28rem',
         124: '32rem',
         'default': '1250px',
-        1920: '1905px',
+        1920: '1920px',
         '2px': '2px',
         '4px': '4px',
         '10px': '10px',
         '15px': '15px',
         '20px': '20px',
+        '24px': '24px',
+        '30px': '30px',
         '34px': '34px',
         '40px': '40px',
         '50px': '50px',
         '60px': '60px',
+        '64px': '64px',
         '100px': '100px',
+        '130px': '130px',
         '150px': '150px',
         '156px': '156px',
         '170px': '170px',
@@ -35,7 +39,7 @@ module.exports = {
       },
       screens: {
         'limit': '1250px',
-        'limit1920': '1905px'
+        'limit1920': '1920px'
       },
       colors: {
         blue: {
@@ -56,7 +60,15 @@ module.exports = {
         red: {
           notification: '#ed2f59'
         }
-      }
+      },
+      fontFamily: {
+        spoqa: ['spoqa_han_sans_neo'],
+        roboto: ['roboto']
+      },
+      fontSize: {
+        '14px': '14px',
+        '16px': '16px',
+       }
     },
   },
   variants: {

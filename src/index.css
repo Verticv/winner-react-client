@@ -1,3 +1,52 @@
+@font-face {
+    font-family: 'spoqa_han_sans_neo';
+    src: url('fonts/SpoqaHanSansNeo-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'spoqa_han_sans_neo';
+    src: url('fonts/SpoqaHanSansNeo-Light.ttf') format('ttf');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'spoqa_han_sans_neo';
+    src: url('fonts/SpoqaHanSansNeo-Thin.ttf') format('ttf');
+    font-weight: thin;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'spoqa_han_sans_neo';
+    src: url('fonts/SpoqaHanSansNeo-Medium.ttf') format('ttf');
+    font-weight: medium;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'spoqa_han_sans_neo';
+    src: url('fonts/SpoqaHanSansNeo-Bold.ttf') format('ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'roboto';
+    src: url('fonts/Roboto-Medium.ttf') format('ttf');
+    font-weight: medium;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'roboto';
+    src: url('fonts/Roboto-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* ./src/index.css */
 @tailwind base;
 @tailwind components;
