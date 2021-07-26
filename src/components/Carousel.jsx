@@ -93,8 +93,8 @@ const Carousel = () => {
 
     const positionIndicator = (
         <div className="absolute text-white text-2xl z-10 h-12 w-full rounded-sm flex items-center justify-center bottom-0 space-x-2">
-            {images.map((_, i) => (
-                <button className="w-15px h-15px bg-gray-300 rounded-full p-2px" onClick={() => scrollToImage(i)}>
+            {images.map((img, i) => (
+                <button key={i} className="w-15px h-15px bg-gray-300 rounded-full p-2px" onClick={() => scrollToImage(i)}>
                     {currentImage === i && (
                         <div className="w-full h-full rounded-full bg-blue-gradDark" />
                     )}
