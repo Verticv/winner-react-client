@@ -31,7 +31,7 @@ import eightHighlight from '../../images/navbarHover/8_highlight.png'
 const LiveCasinoHover = ({setHoveredTab}) => {
 
     const [selectedGame, setSelectedGame] = useState()
-    const [selectedItem, setSelectedItem] = useState()
+    // const [selectedItem, setSelectedItem] = useState()
 
     const gamesArray = [
         { id: 0, background: EvoBanner, highlight: EvoBannerHighlight, color: "bg-teal-r4eb2ba text-white shadow-plain4", btnText: "게임시작", class: "bg-opacity-25" },
@@ -42,6 +42,17 @@ const LiveCasinoHover = ({setHoveredTab}) => {
         { id: 5, background: BigBanner, highlight: BigBannerHighlight, color: "bg-yellow-e3ba3c text-white shadow-plain4", btnText: "게임시작", class: "bg-opacity-25" }
     ];
 
+    const itemsArray = [
+        { id: 0, background: one, highlight: oneHighlight, color: "bg-teal-r4eb2ba text-white shadow-plain4", btnText: "일인칭 바카라" },
+        { id: 1, background: two, highlight: twoHighlight, color: "bg-blue-r3384ca text-white shadow-plain4", btnText: "일인칭 메가볼" },
+        { id: 2, background: three, highlight: threeHighlight, color: "bg-purple-d03ab7 text-white shadow-plain4", btnText: "RNG 블랙잭" },
+        { id: 3, background: four, highlight: fourHighlight, color: "bg-orange-e39e90 text-white shadow-plain4", btnText: "RNG 룰렛" },
+        { id: 4, background: five, highlight: fiveHighlight, color: "bg-red-db4a4a text-white shadow-plain4", btnText: "일인칭 드림캐쳐" },
+        { id: 5, background: six, highlight: sixHighlight, color: "bg-yellow-e3ba3c text-white shadow-plain4", btnText: "일인칭 라이트닝 룰렛" },
+        { id: 6, background: seven, highlight: sevenHighlight, color: "bg-yellow-e3ba3c text-white shadow-plain4", btnText: "일인칭 용호" },
+        { id: 7, background: eight, highlight: eightHighlight, color: "bg-yellow-e3ba3c text-white shadow-plain4", btnText: "일인칭 탑카드" }
+    ];
+
     function GamesList({ items }) {
         return items.map(item => (
             <button 
@@ -50,29 +61,36 @@ const LiveCasinoHover = ({setHoveredTab}) => {
                 onMouseEnter={() => setSelectedGame(item.id)} 
                 onMouseLeave={() => setSelectedGame(false)}
             >
-                <img className={`opacity-100 hover:opacity-0`} src={item.background} alt="game_image" />
-                <img className={`opacity-0 hover:opacity-100 absolute top-0 transition transition-opacity transform duration-300`} src={item.highlight} alt="game_image" />
+                <img className={`opacity-100 hover:opacity-0 w-305px h-206px object-cover object-left`} src={item.background} alt="game_image" />
+                <img className={`opacity-0 hover:opacity-100 absolute top-0 transition transition-opacity transform duration-200 w-305px h-206px object-cover object-left `} src={item.highlight} alt="game_image" />
                 <div className={`absolute bottom-0 font-spoqa text-12px font-bold  w-80px h-25px ml-80px -mb-17px flex items-center justify-center rounded-full ${selectedGame === item.id ? item.color : "bg-white text-gray-r888889"}`}>게임시작</div>
             </button>
         ));
     }
 
+    function ItemsList({ items }) {
+        return items.map(item => (
+            <button 
+                key={item.id} 
+                className="relative w-254px h-56px" 
+                // onMouseEnter={() => setSelectedItem(item.id)} 
+                // onMouseLeave={() => setSelectedItem(false)}
+            >
+                <img className={`opacity-100 hover:opacity-0`} src={item.background} alt="game_image" />
+                <img className={`opacity-0 hover:opacity-100 absolute top-0 transition transition-opacity transform duration-200`} src={item.highlight} alt="game_image" />
+            </button>
+        ));
+    }
+
     return (
-        <div className="absolute w-1920 h-350px bg-white bg-opacity-80 shadow-inner border-b-2 border-gray-300 space-y-10" onMouseLeave={() => setHoveredTab(false)}>
-                    <div className="flex">
-                        <GamesList items={gamesArray} />
-                    </div>
-                    <div className="flex justify-center -space-x-8">
-                        <img src={selectedItem === 0 ? oneHighlight : one} alt="game_image" onMouseEnter={() => setSelectedItem(0)} onMouseLeave={() => setSelectedItem()}/>
-                        <img src={selectedItem === 1 ? twoHighlight : two} alt="game_image" onMouseEnter={() => setSelectedItem(1)} onMouseLeave={() => setSelectedItem()}/>
-                        <img src={selectedItem === 2 ? threeHighlight : three} alt="game_image" onMouseEnter={() => setSelectedItem(2)} onMouseLeave={() => setSelectedItem()}/>
-                        <img src={selectedItem === 3 ? fourHighlight : four} alt="game_image" onMouseEnter={() => setSelectedItem(3)} onMouseLeave={() => setSelectedItem()}/>
-                        <img src={selectedItem === 4 ? fiveHighlight : five} alt="game_image" onMouseEnter={() => setSelectedItem(4)} onMouseLeave={() => setSelectedItem()}/>
-                        <img src={selectedItem === 5 ? sixHighlight : six} alt="game_image" onMouseEnter={() => setSelectedItem(5)} onMouseLeave={() => setSelectedItem()}/>
-                        <img src={selectedItem === 6 ? sevenHighlight : seven} alt="game_image" onMouseEnter={() => setSelectedItem(6)} onMouseLeave={() => setSelectedItem()}/>
-                        <img src={selectedItem === 7 ? eightHighlight : eight} alt="game_image" onMouseEnter={() => setSelectedItem(7)} onMouseLeave={() => setSelectedItem()}/>
-                    </div>
-                </div>
+        <div className="absolute w-1920 h-340px bg-white bg-opacity-80 shadow-inner border-b-2 border-gray-300 space-y-50px" onMouseLeave={() => setHoveredTab(false)}>
+            <div className="flex ml-80px -space-x-2 pt-6px">
+                <GamesList items={gamesArray} />
+            </div>
+            <div className="ml-60px -space-x-8">
+                <ItemsList items={itemsArray} />
+            </div>
+        </div>
     )
 }
 
