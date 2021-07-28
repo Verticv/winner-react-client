@@ -15,7 +15,7 @@ import MinigameDefault from '../images/subNavbar/minigame_default.png'
 import AugmentedGameDefault from '../images/subNavbar/augmented_game_default.png'
 import FishingDefault from '../images/subNavbar/fishing_default.png'
 import LotteryDefault from '../images/subNavbar/lottery_default.png'
-import GameBanner from './GameBanner'
+import GameBanner from './gameBanners/GameBanner'
 import './SubNavbar.css'
 
 const SubNavbar = () => {
