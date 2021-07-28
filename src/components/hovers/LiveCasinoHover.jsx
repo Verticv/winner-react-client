@@ -50,7 +50,8 @@ const LiveCasinoHover = ({setHoveredTab}) => {
                 onMouseEnter={() => setSelectedGame(item.id)} 
                 onMouseLeave={() => setSelectedGame(false)}
             >
-                <img src={selectedGame === item.id ? item.highlight : item.background} alt="game_image" />
+                <img className={`opacity-100 hover:opacity-0`} src={item.background} alt="game_image" />
+                <img className={`opacity-0 hover:opacity-100 absolute top-0 transition transition-opacity transform duration-300`} src={item.highlight} alt="game_image" />
                 <div className={`absolute bottom-0 font-spoqa text-12px font-bold  w-80px h-25px ml-80px -mb-17px flex items-center justify-center rounded-full ${selectedGame === item.id ? item.color : "bg-white text-gray-r888889"}`}>게임시작</div>
             </button>
         ));
@@ -60,7 +61,6 @@ const LiveCasinoHover = ({setHoveredTab}) => {
         <div className="absolute w-1920 h-350px bg-white bg-opacity-80 shadow-inner border-b-2 border-gray-300 space-y-10" onMouseLeave={() => setHoveredTab(false)}>
                     <div className="flex">
                         <GamesList items={gamesArray} />
-                        
                     </div>
                     <div className="flex justify-center -space-x-8">
                         <img src={selectedItem === 0 ? oneHighlight : one} alt="game_image" onMouseEnter={() => setSelectedItem(0)} onMouseLeave={() => setSelectedItem()}/>
