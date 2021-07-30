@@ -7,8 +7,9 @@ import Speedkino from '../../images/navbarHover/speedkino_banner.png'
 import SpeedkinoHighlight from '../../images/navbarHover/speedkino_banner_highlight.png'
 import KinoLadder from '../../images/navbarHover/kinoladder_banner.png'
 import KinoLadderHighlight from '../../images/navbarHover/kinoladder_banner_highlight.png'
+import Expand from 'react-expand-animated'
 
-const MinigamesHover = ({setHoveredTab}) => {
+const MinigamesHover = ({setHoveredTab, selection}) => {
 
     const [selectedGame, setSelectedGame] = useState()
 
@@ -35,11 +36,17 @@ const MinigamesHover = ({setHoveredTab}) => {
     }
 
     return (
-        <div className="absolute w-1920 h-244px bg-white bg-opacity-80 shadow-inner border-b-2 border-gray-300 space-y-50px" onMouseLeave={() => setHoveredTab(false)}>
-            <div className="flex justify-center pt-6px">
-                <GamesList items={gamesArray} />
+        <Expand
+            open={selection === 4} 
+            duration={200} 
+            className="absolute w-1920 h-244px bg-white bg-opacity-80 shadow-inner border-b-2 border-gray-300 space-y-50px"
+        >
+            <div style={{ width: '1920px', height: '244px'}} onMouseLeave={() => setHoveredTab(false)}>
+                <div className="flex justify-center pt-6px">
+                    <GamesList items={gamesArray} />
+                </div>
             </div>
-        </div>
+        </Expand>
     )
 }
 

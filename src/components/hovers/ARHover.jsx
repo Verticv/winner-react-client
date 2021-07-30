@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
+import Expand from 'react-expand-animated'
 import AugBanner from '../../images/navbarHover/aug_banner.png'
 import AugBannerHighlight from '../../images/navbarHover/aug_banner_highlight.png'
 
-const ARHover = ({setHoveredTab}) => {
+const ARHover = ({setHoveredTab, selection}) => {
 
     const [selectedGame, setSelectedGame] = useState()
 
@@ -26,11 +27,17 @@ const ARHover = ({setHoveredTab}) => {
     }
 
     return (
-        <div className="absolute w-1920 h-244px bg-white bg-opacity-80 shadow-inner border-b-2 border-gray-300 space-y-50px" onMouseLeave={() => setHoveredTab(false)}>
-            <div className="flex justify-center pt-6px">
-                <GamesList items={gamesArray} />
+        <Expand
+            open={selection === 5} 
+            duration={200} 
+            className="absolute w-1920 h-244px bg-white bg-opacity-80 shadow-inner border-b-2 border-gray-300 space-y-50px"
+        >
+            <div style={{ width: '1920px', height: '244px'}} onMouseLeave={() => setHoveredTab(false)}>
+                <div className="flex justify-center pt-6px">
+                    <GamesList items={gamesArray} />
+                </div>
             </div>
-        </div>
+        </Expand>
     )
 }
 

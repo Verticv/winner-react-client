@@ -7,8 +7,9 @@ import OverwatchBanner from '../../images/navbarHover/overwatch_banner.png'
 import OverwatchBannerHighlight from '../../images/navbarHover/overwatch_banner_highlight.png'
 import PubgBanner from '../../images/navbarHover/pubg_banner.png'
 import PubgBannerHighlight from '../../images/navbarHover/pubg_banner_highlight.png'
+import Expand from 'react-expand-animated'
 
-const EsportsHover = ({setHoveredTab}) => {
+const EsportsHover = ({setHoveredTab, selection}) => {
     
     const [selectedGame, setSelectedGame] = useState()
 
@@ -35,11 +36,17 @@ const EsportsHover = ({setHoveredTab}) => {
     }
 
     return (
-        <div className="absolute w-1920 h-244px bg-white bg-opacity-80 shadow-inner border-b-2 border-gray-300 space-y-50px" onMouseLeave={() => setHoveredTab(false)}>
-            <div className="flex justify-center pt-6px">
-                <GamesList items={gamesArray} />
+        <Expand
+            open={selection === 3} 
+            duration={200} 
+            className="absolute w-1920 h-244px bg-white bg-opacity-80 shadow-inner border-b-2 border-gray-300 space-y-50px"
+        >
+            <div style={{ width: '1920px', height: '244px'}} onMouseLeave={() => setHoveredTab(false)}>
+                <div className="flex justify-center pt-6px">
+                    <GamesList items={gamesArray} />
+                </div>
             </div>
-        </div>
+        </Expand>
     )
 }
 

@@ -10,21 +10,12 @@ const NavbarHover = ({selection, setHoveredTab, setSelectedTab}) => {
 
     return (
         <div onMouseLeave={() => setSelectedTab()}>
-            {selection === 0 ? (
-                <LiveCasinoHover setHoveredTab={setHoveredTab} />
-            ) : selection === 1 ? (
-                <SlotGameHover setHoveredTab={setHoveredTab} />
-            ) : selection === 2 ? (
-                <SportsHover setHoveredTab={setHoveredTab} />
-            ) : selection === 3 ? (
-                <EsportsHover setHoveredTab={setHoveredTab} />
-            ) : selection === 4 ? (
-                <MinigamesHover setHoveredTab={setHoveredTab} />
-            ) : selection === 5 ? (
-                <ARHover setHoveredTab={setHoveredTab} />
-            ) : (
-                <></>
-            )}
+            <LiveCasinoHover setHoveredTab={setHoveredTab} selection={selection}/>
+            <SlotGameHover setHoveredTab={setHoveredTab} selection={selection}/>
+            <SportsHover setHoveredTab={setHoveredTab} selection={selection}/>
+            <EsportsHover setHoveredTab={setHoveredTab} selection={selection}/>
+            <MinigamesHover setHoveredTab={setHoveredTab} selection={selection}/>
+            <ARHover setHoveredTab={setHoveredTab} selection={selection}/>
         </div>
     )
 }

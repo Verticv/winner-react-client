@@ -27,8 +27,9 @@ import seven from '../../images/navbarHover/7.png'
 import sevenHighlight from '../../images/navbarHover/7_highlight.png'
 import eight from '../../images/navbarHover/8.png'
 import eightHighlight from '../../images/navbarHover/8_highlight.png'
+import Expand from 'react-expand-animated'
 
-const LiveCasinoHover = ({setHoveredTab}) => {
+const LiveCasinoHover = ({setHoveredTab, selection}) => {
 
     const [selectedGame, setSelectedGame] = useState()
     // const [selectedItem, setSelectedItem] = useState()
@@ -83,14 +84,21 @@ const LiveCasinoHover = ({setHoveredTab}) => {
     }
 
     return (
-        <div className="absolute w-1920 h-340px bg-white bg-opacity-80 shadow-inner border-b-2 border-gray-300 space-y-50px" onMouseLeave={() => setHoveredTab(false)}>
-            <div className="flex ml-80px -space-x-2 pt-6px">
-                <GamesList items={gamesArray} />
+        <Expand 
+            open={selection === 0} 
+            duration={200} 
+            className="absolute w-1920 h-340px bg-white bg-opacity-80 shadow-inner border-b-2 border-gray-300 space-y-50px" 
+        >
+            <div style={{ width: '1920px', height: '340px'}} className="space-y-50px" onMouseLeave={() => setHoveredTab(false)}>
+                <div className="flex ml-80px -space-x-2 pt-6px">
+                    <GamesList items={gamesArray} />
+                </div>
+                <div className="ml-60px -space-x-8">
+                    <ItemsList items={itemsArray} />
+                </div>
             </div>
-            <div className="ml-60px -space-x-8">
-                <ItemsList items={itemsArray} />
-            </div>
-        </div>
+        </Expand>
+       
     )
 }
 
