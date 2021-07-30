@@ -21,22 +21,22 @@ const Footer2 = () => {
     const itemsClass = "flex items-center justify-center w-24 h-14"
 
     const logosArray = [
-        { logo: AsiaLogo, id: 0 },
-        { logo: BigLogo, id: 1 },
-        { logo: DgLogo, id: 2 },
-        { logo: EvoLogo, id: 3 },
-        { logo: HabLogo, id: 4 },
-        { logo: MavLogo, id: 5 },
-        { logo: MicLogo, id: 6 },
-        { logo: NetLogo, id: 7 },
-        { logo: PlgLogo, id: 8 },
-        { logo: PltLogo, id: 9 },
-        { logo: PraLogo, id: 10 },
-        { logo: QusLogo, id: 11 },
-        { logo: SexyLogo, id: 12 },
-        { logo: SpaLogo, id: 13 },
-        { logo: TopLogo, id: 14 },
-        { logo: WmLogo, id: 15 }        
+        { logo: EvoLogo, id: 0 },
+        { logo: MicLogo, id: 1 },
+        { logo: BigLogo, id: 2 },
+        { logo: AsiaLogo, id: 3 },
+        { logo: SexyLogo, id: 4 },
+        { logo: DgLogo, id: 5 },
+        { logo: PltLogo, id: 6 },
+        { logo: PraLogo, id: 7 },
+        { logo: SpaLogo, id: 8 },
+        { logo: TopLogo, id: 9 },
+        { logo: HabLogo, id: 10 },
+        { logo: WmLogo, id: 11 },        
+        { logo: NetLogo, id: 12 },
+        { logo: MavLogo, id: 13 },
+        { logo: QusLogo, id: 14 },
+        { logo: PlgLogo, id: 15 },
     ];
 
     function LogosList({ items }) {

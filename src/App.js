@@ -14,7 +14,7 @@ function App() {
   const [isAuthenticated, setAuthenticated] = useState(false)
 
   return (
-    <div className="flex flex-col justify-center limit1920:overflow-x-hidden">
+    <div className="flex flex-col justify-center limit:overflow-x-hidden">
 
       <div className="sticky top-0 z-50 flex flex-col items-start limit1920:items-center">
         <NoticeBanner />
