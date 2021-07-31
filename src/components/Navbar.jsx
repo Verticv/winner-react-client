@@ -120,7 +120,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
     )
 
     return (
-        <div className="w-full">
+        <div className="w-1920">
             <header className="flex items-center justify-between h-60px px-10px shadow-plain bg-white">
                 <div className="flex items-center flex-shrink-0">
                     <img className="w-130px object-contain mb-2 mr-10px cursor-pointer" src={Logo} alt="logo" />

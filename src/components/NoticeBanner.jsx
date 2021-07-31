@@ -4,7 +4,7 @@ import './NoticeBanner.css'
 
 const NoticeBanner = () => {
     return (
-        <div className="flex items-center h-8 w-full bg-blue-banner pr-10px space-x-4">
+        <div className="flex items-center h-8 w-1920 bg-blue-banner pr-10px space-x-4">
             <div className="bg-blue-banner h-8 flex items-center justify-center w-10 z-20"><img className='h-16px' src={SpeakerIcon} alt="speakerIcon"/></div>
             
             <div className="ml-12">
