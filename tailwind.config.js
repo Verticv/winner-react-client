@@ -7,7 +7,7 @@ module.exports = {
         112: '28rem',
         124: '32rem',
         'default': '1250px',
-        1920: '1920px',
+        1920: '1905px',
         '2px': '2px',
         '4px': '4px',
         '6px': '6px',
@@ -33,6 +33,7 @@ module.exports = {
         '60px': '60px',
         '64px': '64px',
         '74px': '74px',
+        '79px': '79px',
         '80px': '80px',
         '85px': '85px',
         '100px': '100px',
@@ -43,6 +44,7 @@ module.exports = {
         '146px': '146px',
         '150px': '150px',
         '156px': '156px',
+        '158px': '158px',
         '170px': '170px',
         '184px': '184px',
         '185px': '185px',
@@ -61,8 +63,11 @@ module.exports = {
         '386px': '386px',
         '400px': '400px',
         '406px': '406px',
+        '480px': '480px',
         '500px': '500px',
+        '513px': '513px',
         '620px': '620px',
+        '630px': '630px',
         '650px': '650px',
         '800px': '800px'
        },
@@ -76,7 +81,7 @@ module.exports = {
       },
       screens: {
         'limit': '1250px',
-        'limit1920': '1920px'
+        'limit1920': '1904px'
       },
       colors: {
         blue: {
@@ -92,7 +97,8 @@ module.exports = {
           r2087f0: '#2087f0',
           r009edf: '#009edf',
           r3384ca: '#3384ca',
-          r77a4e0: '#77a4e0'
+          r77a4e0: '#77a4e0',
+          r1ca7ec: '#1ca7ec'
         },
         gray: {
           text: '#393e41',
@@ -108,7 +114,8 @@ module.exports = {
           r667177: '#667177',
           afafaf: '#afafaf',
           b2b2b2: '#b2b2b2',
-          r888889: '#888889'
+          r888889: '#888889',
+          bebebe: '#bebebe'
         },
         red: {
           notification: '#ed2f59',
@@ -141,6 +148,8 @@ module.exports = {
         '14px': '14px',
         '16px': '16px',
         '18px': '18px',
+        '20px': '20px',
+        '25px': '25px',
         '30px': '30px',
        }
     },
