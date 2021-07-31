@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import LoginIcon from '../../images/login_icon.png'
-import SignedUpPopup from './SignedUpPopup'
+import SignupPopup from './SignupPopup'
 
 const LoginPopup = ({setAuth}) => {
     
@@ -10,7 +10,7 @@ const LoginPopup = ({setAuth}) => {
     return (
         <>
             {toSignup ? (
-                <SignedUpPopup />
+                <SignupPopup />
             ) : (
                 <div className="w-630px h-513px bg-white rounded-xl">
                     <div className="absolute w-630px -mt-79px flex justify-center">
