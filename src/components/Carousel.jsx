@@ -90,7 +90,7 @@ const Carousel = () => {
     )
 
     return (
-        <div className="flex w-1920 flex-shrink-0">
+        <div className="flex w-full flex-shrink-0">
             <div className="relative w-full h-500px">
                 {sliderControl(true)}
                 {/* <img src={images[currentImage]} className={`${currentImage} w-full object-contain`} alt={"banner_images"} /> */}

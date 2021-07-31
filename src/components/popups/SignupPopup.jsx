@@ -25,7 +25,7 @@ const SignupPopup = ({setAuth}) => {
             ) : isSignedUp ? (
                 <SignedUpPopup setToLogin={setToLogin} />
             ) : (
-                <div className="w-800px h-800px bg-white rounded-xl shadow-xl">
+                <div className="w-840px h-820px bg-white rounded-xl shadow-xl">
                     <div className="absolute w-800px -mt-16 flex justify-center">
                         <div className="relative flex items-center justify-center h-32 w-32 rounded-full bg-blue-400">
                             <img src={SignupIcon} alt="signup_icon"/>
