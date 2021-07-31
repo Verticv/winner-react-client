@@ -21,7 +21,7 @@ function App() {
         <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
       </div>
 
-      <div className="flex justify-start limit1920:justify-center items-center pb-40px">
+      <div className="flex justify-center limit1920:justify-center items-center pb-40px">
         <Carousel />
       </div>
 
