@@ -27,7 +27,7 @@ function App() {
 
       <div className="flex flex-col items-start limit:items-center space-y-40px">
 
-        <div className="flex flex-col w-default space-y-20px">
+        <div className="flex flex-col w-default space-y-30px">
           <Slots />
           <SubNavbar />
         </div>

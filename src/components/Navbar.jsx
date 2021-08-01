@@ -57,7 +57,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
                     setSelectedTab(item.id)
                 }}
             >
-                <label className="cursor-pointer font-spoqa font-bold text-16px">{item.text}</label>
+                <label className="cursor-pointer font-spoqa text-16px">{item.text}</label>
                 <div className={selectedTab === item.id ? selectedLineClass : lineClass}></div>
             </button>
         ));
@@ -78,7 +78,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
             <div className="h-34px w-34px bg-white rounded-full flex items-center justify-center">
                 <img className="h-auto w-10 bg-white rounded-full flex items-center justify-center" src={country === "KR" ? Koreaflag : UKflag} alt="flag"></img>
             </div>
-            <label className="font-spoqa font-bold text-white cursor-pointer">{country}</label>
+            <label className="font-spoqa text-white cursor-pointer">{country}</label>
             <DropdownArrow isWhite isOpen={isCountryOpen}/>
         </div>
     )
@@ -103,11 +103,11 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
     )
 
     const LoginButton = (
-        <button className="flex items-center justify-center text-white font-bold w-104px h-40px rounded-full bg-gradient-to-br from-blue-gradLight to-blue-gradDark text-16px font-spoqa font-bold">로그인</button>
+        <button className="flex items-center justify-center text-white w-104px h-40px rounded-full bg-gradient-to-br from-blue-gradLight to-blue-gradDark text-16px font-spoqa">로그인</button>
     )
 
     const SignupButton = (
-        <button className="flex items-center justify-center text-white font-bold w-104px h-40px rounded-full bg-gradient-to-br from-blue-darkGradLight to-blue-darkGradDark text-16px font-spoqa font-bold">회원가입</button>
+        <button className="flex items-center justify-center text-white w-104px h-40px rounded-full bg-gradient-to-br from-blue-darkGradLight to-blue-darkGradDark text-16px font-spoqa">회원가입</button>
     )
 
     const InboxButton = (

@@ -23,7 +23,7 @@ const SubNavbar = () => {
     const [selectedTab, setSelectedTab] = useState(0)
     const [isGameBanner, setGameBanner] = useState(0)
 
-    const tabClass = "flex items-center justify-center space-x-2px w-156px h-60px rounded-full text-gray-subNavbar cursor-pointer z-20 transition duration-300 ease-in-out"
+    const tabClass = "flex items-center pl-10px space-x-2px w-156px h-60px rounded-full text-gray-subNavbar cursor-pointer z-20 transition duration-300 ease-in-out"
     const selectedTabClass = "flex items-center justify-center w-156px h-60px rounded-full text-white cursor-pointer z-20 py-4 transition duration-150 ease-in-out"
 
     const tabsArray = [
