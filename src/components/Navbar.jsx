@@ -28,8 +28,8 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
 
     const tabClass = "text-gray-text hover:text-blue-highlight relative flex flex-col items-center justify-center h-16 px-10px font-bold cursor-pointer"
     const selectedTabClass = "relative flex flex-col items-center justify-center h-16 px-10px font-bold cursor-pointer text-blue-highlight cursor-pointer"
-    const lineClass = "absolute bottom-0 h-1 w-full bg-clear"
-    const selectedLineClass = "absolute bottom-0 h-1 w-full bg-blue-highlight"
+    const lineClass = "absolute bottom-0 h-2px mb-2px w-full bg-clear"
+    const selectedLineClass = "absolute bottom-0 h-2px mb-2px w-full bg-blue-highlight"
     
     const tabsArray = [
         { text: "라이브카지노", id: 0 },
