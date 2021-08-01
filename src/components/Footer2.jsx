@@ -18,9 +18,9 @@ import WmLogo from '../images/gray/wm_gray_logo.png'
 
 const Footer2 = () => {
 
-    const itemsClass = "flex items-center justify-center w-24 h-14"
+    const itemsClass = "flex items-center justify-center w-135px h-32px"
 
-    const logosArray = [
+    const logosArray1 = [
         { logo: EvoLogo, id: 0 },
         { logo: MicLogo, id: 1 },
         { logo: BigLogo, id: 2 },
@@ -29,6 +29,9 @@ const Footer2 = () => {
         { logo: DgLogo, id: 5 },
         { logo: PltLogo, id: 6 },
         { logo: PraLogo, id: 7 },
+    ];
+
+    const logosArray2 = [
         { logo: SpaLogo, id: 8 },
         { logo: TopLogo, id: 9 },
         { logo: HabLogo, id: 10 },
@@ -46,9 +49,10 @@ const Footer2 = () => {
     }
 
     return (
-        <div className="flex justify-start limit:justify-center w-screen bg-gray-f9f9f9 py-4">
-            <div className="grid grid-cols-8 w-default flex-shrink-0 px-2">
-                <LogosList items={logosArray} />
+        <div className="flex justify-start limit:justify-center w-screen bg-gray-f9f9f9 h-114px">
+            <div className="flex flex-col w-default flex-shrink-0 items-center justify-center space-y-10px">
+                <div className="flex justify-between w-default"><LogosList items={logosArray1} /></div>
+                <div className="flex justify-between w-default"><LogosList items={logosArray2} /></div>
             </div>
         </div>
     )

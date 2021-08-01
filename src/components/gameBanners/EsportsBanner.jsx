@@ -10,7 +10,7 @@ const EsportsBanner = () => {
 
 
     return (
-        <button className={isSelected ? cardSelectedClass : cardClass} onClick={() => setSelected(true)}>
+        <button className={isSelected ? cardSelectedClass : cardClass} onMouseEnter={() => setSelected(true)} onMouseLeave={() => setSelected(false)} >
             <img className="object-contain h-384px" src={EsportsBannerImage} alt="game_banner" />
             <div className={`absolute left-0 bottom-0 ml-80px mb-36px w-242px h-74px rounded-full flex items-center justify-center text-white font-spoqa text-30px font-bold bg-purple-a898ee ${isSelected ? "shadow-plain3" : "bg-opacity-25" }`}>게임시작</div>
         </button>
