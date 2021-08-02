@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Shadow from '../images/shadow.png'
+import WhiteArrow from '../images/arrows/right_arrow_white.png'
+import GrayArrow from '../images/arrows/right_arrow_gray.png'
 
 const MenuCard = ({ 
     mainIcon, 
@@ -17,8 +19,8 @@ const MenuCard = ({
 
     const [selectedTab, setSelectedTab] = useState()
 
-    const tabClass = "w-full border-b-1 border-gray-d5d5d5 h-58px p-6px"
-    const selectedTabClass = "w-full h-58px bg-blue-r009edf shadow-plain2 p-6px"
+    const tabClass = "relative w-full border-b-1 border-gray-d5d5d5 h-58px p-6px"
+    const selectedTabClass = "relative w-full h-58px bg-blue-r009edf shadow-plain2 p-6px"
 
     const menuArray = [
         { text: optionTitle1, id: 0, icon: optionIcon1, iconHighlight: optionIconHighlight1, selectedCss: "border-b rounded-t bg-gray-f6f6f6" },
@@ -33,6 +35,7 @@ const MenuCard = ({
                 className={`${item.selectedCss} ${selectedTab === item.id ? selectedTabClass : tabClass}`}
                 onClick={() => setSelectedTab(item.id)}
             >
+                {item.id !== 0 && (<div className="absolute top-0 left-0 h-px w-full bg-white"></div>)} 
                 <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-10px">
                         <div className={selectedTab === item.id ? "rounded-full shadow-plain" : "rounded-full"}>
@@ -40,9 +43,7 @@ const MenuCard = ({
                         </div>
                         <label className={`cursor-pointer text-16px font-spoqa font-medium ${selectedTab === item.id ? "text-white" : "text-gray-text"}`}>{item.text}</label>
                     </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-6" fill="none" viewBox="0 0 24 24" stroke={selectedTab === item.id ? "white" : "#b3b3b3"}>
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
+                    <img className="h-15px object-contain mr-4px" src={selectedTab === item.id ? WhiteArrow : GrayArrow} alt="arrow" />
                 </div>
             </button>
         ));
