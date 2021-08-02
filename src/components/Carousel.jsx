@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import visual from '../images/visual.png'
 import visual2 from '../images/visual2.png'
 import LeftArrow from '../images/arrows/left_arrow.png'
@@ -88,6 +88,23 @@ const Carousel = () => {
             ))}
         </>
     )
+
+    useEffect(
+        () => {
+            let timer1 = setTimeout(() => {
+                if (currentImage === 0) {
+                    setCurrentImage(1)
+                } else {
+                    setCurrentImage(0)
+                }
+                console.log(currentImage + " _+ __ + _" + images.length)
+            }, 5000);
+            return () => {
+                clearTimeout(timer1);
+            };
+        },
+        [currentImage]
+    );
 
     return (
         <div className="flex w-1920 flex-shrink-0">
