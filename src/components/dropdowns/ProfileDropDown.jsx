@@ -30,34 +30,39 @@ const ProfileDropDown = ({setAuth}) => {
         return items.map(item => (
             <button 
                 key={item.id} 
-                className={`${selectedTab === item.id ? "bg-blue-500 shadow-inner" : "bg-white"} flex w-full items-center p-1 h-12 rounded-full`} 
+                className={`${selectedTab === item.id ? "bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2" : "bg-white"} flex w-full items-center p-4px h-40px rounded-full`} 
                 onClick={() => 
                     {                 
                         setSelectedTab(item.id)       
                         if (item.id === 5) setAuth(false)
                     }}
             >
-                <div className="h-10 w-10 bg-white rounded-full flex items-center justify-center flex-shrink-0 border">
+                <div className={`${selectedTab === item.id && "shadow-plain3"} h-32px w-32px bg-white rounded-full flex items-center justify-center flex-shrink-0`} >
                     <img className="h-auto w-10 bg-white rounded-full flex items-center justify-center" src={selectedTab === item.id ? item.iconHighlight : item.icon} alt="icon"></img>
                 </div>
                 <div className="w-full flex justify-center mr-3">                
-                    <label className={`${selectedTab === item.id ? "text-white" : "text-gray-500"} font-bold cursor-pointer`}>{item.text}</label>
+                    <label className={`${selectedTab === item.id ? "text-white" : "text-gray-subNavbar"} font-spoqa font-bold text-14px cursor-pointer`}>{item.text}</label>
                 </div>
             </button>
         ));
     }
 
     return (
-        <div className="bg-white shadow-plain rounded-3xl bg-white w-64 p-1 space-y-1">
-            <div className="w-full h-36 bg-blue-100 rounded-3xl mb-2 flex items-center justify-center flex-col">
-                <img src={LevelOne} alt="level_one"/>
-                <span className="text-gray-700 font-bold text-xs">LEVEL 1</span>
-                <div className="mt-1">
-                    <span className="text-blue-400 font-bold">마이마이프로틴화이팅</span>
-                    <span className="text-gray-700 font-bold ml-1">님</span>
+        <div className="relative flex flex-col items-center bg-white shadow-plain rounded-3xl w-224px h-388px p-2px -mt-5px -mr-72px">
+            <div class="absolute top-0 -mt-2 ml-2 w-4 overflow-hidden inline-block">
+                <div class="h-2 w-2 bg-white rotate-45 transform origin-bottom-left shadow"></div>
+            </div>
+            <div className="w-full h-128px bg-blue-e8f3fd rounded-3xl flex items-center flex-col pt-24px mb-6px">
+                <img className="w-34px object-contain" src={LevelOne} alt="level_one"/>
+                <span className="text-gray-r393e41 font-bold text-12px font-roboto">LEVEL 1</span>
+                <div className="mt-4px">
+                    <span className="text-blue-r1ca7ec font-bold font-spoqa text-16px">마이마이프로틴화이팅</span>
+                    <span className="text-gray-a4b1b4 font-bold font-spoqa text-16px">님</span>
                 </div>
             </div>
-            <MenuList items={menuArray} />
+            <div className="w-full space-y-2px">
+                <MenuList items={menuArray} />
+            </div>
         </div>
     )
 }

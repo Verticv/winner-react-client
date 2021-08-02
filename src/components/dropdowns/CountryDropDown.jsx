@@ -15,24 +15,27 @@ const CountryDropDown = ({setCountry, country}) => {
         return items.map(item => (
             <button 
                 key={item.id} 
-                className={`${selectedTab === item.id ? "bg-blue-500" : "bg-white"} flex w-full items-center p-1 h-12 rounded-full`} 
+                className={`${selectedTab === item.id ? "bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2" : "bg-white"} flex w-full items-center p-1 h-40px rounded-full`} 
                 onClick={
                     () => {setSelectedTab(item.id)
                     setCountry(item.text)}
                 }
             >
-                <div className="h-10 w-10 bg-white rounded-full flex items-center justify-center flex-shrink-0 border">
-                    <img className="h-auto w-10 bg-white rounded-full flex items-center justify-center" src={item.icon} alt="flag"></img>
+                <div className={`${selectedTab === item.id && "shadow-plain3"} h-32px w-32px bg-white rounded-full flex items-center justify-center flex-shrink-0`} >
+                    <img src={item.icon} alt="flag"></img>
                 </div>
                 <div className="w-full flex justify-center mr-3">                
-                    <label className={`${selectedTab === item.id ? "text-white" : "text-gray-500"} font-bold cursor-pointer`}>{item.text}</label>
+                    <label className={`${selectedTab === item.id ? "text-white" : "text-gray-subNavbar"} font-spoqa text-14px font-bold cursor-pointer`}>{item.text}</label>
                 </div>
             </button>
         ));
     }
 
     return (
-        <div className="bg-white shadow-plain rounded-3xl bg-white w-40 p-1 space-y-1">
+        <div className="relative flex flex-col items-center bg-white shadow-plain rounded-20px bg-white w-108px h-85px p-2px -mt-5px -mr-3px">
+            <div class="absolute top-0 -mt-2 ml-2 w-4 overflow-hidden inline-block">
+                <div class="h-2 w-2 bg-white rotate-45 transform origin-bottom-left shadow"></div>
+            </div>
             <CountriesList items={countriesArray} />
         </div>
     )

@@ -75,8 +75,8 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
 
     const CountryButton = (
         <div className="flex items-center w-104px h-40px bg-gradient-to-br from-blue-gradLight to-blue-gradDark rounded-full space-x-10px shadow-inner p-4px">
-            <div className="h-34px w-34px bg-white rounded-full flex items-center justify-center">
-                <img className="h-auto w-10 bg-white rounded-full flex items-center justify-center" src={country === "KR" ? Koreaflag : UKflag} alt="flag"></img>
+            <div className="h-32px w-32px bg-white rounded-full flex items-center justify-center">
+                <img className="" src={country === "KR" ? Koreaflag : UKflag} alt="flag"></img>
             </div>
             <label className="font-spoqa text-white cursor-pointer">{country}</label>
             <DropdownArrow isWhite isOpen={isCountryOpen}/>
@@ -155,7 +155,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
                             <SignupPopup setAuth={setAuth} />
                         </PopupControls>           
                         {/* BREAK */}
-                        <DropDownControls buttonChild={CountryButton}>
+                        <DropDownControls buttonChild={CountryButton} onClick={() => setCountryOpen(!isCountryOpen)} onClose={() => setCountryOpen(false)} >
                             <div className="mt-4"><CountryDropDown setCountry={setCountry} country={country} /></div>
                         </DropDownControls>
                     </div>

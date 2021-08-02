@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Shadow from '../images/shadow.png'
 
 const MenuCard = ({ 
@@ -47,6 +47,15 @@ const MenuCard = ({
             </button>
         ));
     }
+    useEffect(
+        () => {
+            let timer1 = setTimeout(() => setSelectedTab(false), 100);
+            return () => {
+                clearTimeout(timer1);
+            };
+        },
+        [selectedTab]
+    );
 
     return (
         <div className="relative flex flex-col items-center w-300px h-308px border border-gray-ececec shadow-glow rounded-md px-10px bg-gradient-to-b from-white to-gray-f6f6f6 ">

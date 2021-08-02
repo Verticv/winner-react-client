@@ -9,7 +9,9 @@ module.exports = {
         'default': '1250px',
         1920: '1905px',
         '2px': '2px',
+        '3px': '3px',
         '4px': '4px',
+        '5px': '5px',
         '6px': '6px',
         '8px': '8px',
         '10px': '10px',
@@ -20,6 +22,7 @@ module.exports = {
         '20px': '20px',
         '24px': '24px',
         '25px': '25px',
+        '28px': '28px',
         '30px': '30px',
         '32px': '32px',
         '34px': '34px',
@@ -34,6 +37,7 @@ module.exports = {
         '60px': '60px',
         '64px': '64px',
         '65px': '65px',
+        '72px': '72px',
         '74px': '74px',
         '75px': '75px',
         '79px': '79px',
@@ -42,10 +46,13 @@ module.exports = {
         '90px': '90px',
         '100px': '100px',
         '104px': '104px',
+        '108px': '108px',
         '112px': '112px',
         '114px': '114px',
         '115px': '115px',
         '124px': '124px',
+        '126px': '126px',
+        '128px': '128px',
         '130px': '130px',
         '135px': '135px',
         '138px': '138px',
@@ -59,6 +66,7 @@ module.exports = {
         '185px': '185px',
         '190px': '190px',
         '206px': '206px',
+        '224px': '224px',
         '240px': '240px',
         '242px': '242px',
         '244px': '244px',
@@ -72,6 +80,7 @@ module.exports = {
         '350px': '350px',
         '384px': '384px',
         '386px': '386px',
+        '388px': '388px',
         '400px': '400px',
         '406px': '406px',
         '480px': '480px',
@@ -113,7 +122,8 @@ module.exports = {
           r3384ca: '#3384ca',
           r77a4e0: '#77a4e0',
           r1ca7ec: '#1ca7ec',
-          r2aa1d5: '#2aa1d5'
+          r2aa1d5: '#2aa1d5',
+          e8f3fd: '#e8f3fd'
         },
         gray: {
           text: '#393e41',
@@ -131,7 +141,8 @@ module.exports = {
           b2b2b2: '#b2b2b2',
           r888889: '#888889',
           bebebe: '#bebebe',
-          r393e41: '#393e41'
+          r393e41: '#393e41',
+          a4b1b4: '#a4b1b4'
         },
         red: {
           notification: '#ed2f59',
@@ -172,7 +183,10 @@ module.exports = {
         '25px': '25px',
         '27px': '27px',
         '30px': '30px',
-       }
+      },
+      borderRadius: {
+        '20px': '20px'
+      }
     },
   },
   variants: {
