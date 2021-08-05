@@ -8,8 +8,6 @@ import image4 from '../images/4.png'
 
 const Slots = () => {
 
-    const boxClass = "flex items-center justify-center cursor-pointer"
-
     // const Slot = () => (
     //     <div className="relative flex items-center justify-center">
     //         <img className="z-10 object-fill" src={slotBackground} alt="background" />
@@ -26,10 +24,10 @@ const Slots = () => {
 
     return (
         <div className="flex w-full items-center justify-between space-x-10px">
-            <div className={boxClass}><img className="object-contain w-308px" src={image1} alt="1" /></div>
-            <div className={boxClass}><img className="object-contain w-308px" src={image2} alt="2" /></div>
-            <div className={boxClass}><img className="object-contain w-308px" src={image3} alt="3" /></div>
-            <div className={boxClass}><img className="object-contain w-308px" src={image4} alt="4" /></div>
+            <img className="object-contain w-308px" src={image1} alt="1" />
+            <img className="object-contain w-308px" src={image2} alt="2" />
+            <img className="object-contain w-308px" src={image3} alt="3" />
+            <img className="object-contain w-308px" src={image4} alt="4" />
         </div>
     )
 }

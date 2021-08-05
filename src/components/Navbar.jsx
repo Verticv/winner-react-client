@@ -26,10 +26,10 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
     const [isWalletOpen, setWalletOpen] = useState()
     const [isCountryOpen, setCountryOpen] = useState()
 
-    const tabClass = "text-gray-text hover:text-blue-highlight relative flex flex-col items-center justify-center h-16 px-10px font-bold cursor-pointer"
-    const selectedTabClass = "relative flex flex-col items-center justify-center h-16 px-10px font-bold cursor-pointer text-blue-highlight cursor-pointer"
-    const lineClass = "absolute bottom-0 h-2px mb-2px w-full bg-clear"
-    const selectedLineClass = "absolute bottom-0 h-2px mb-2px w-full bg-blue-highlight"
+    const tabClass = "text-gray-text hover:text-blue-highlight relative flex flex-col items-center justify-center h-60px px-10px cursor-pointer"
+    const selectedTabClass = "relative flex flex-col items-center justify-center px-10px cursor-pointer h-60px text-blue-highlight cursor-pointer"
+    const lineClass = "absolute bottom-0 h-2px w-full bg-clear"
+    const selectedLineClass = "absolute bottom-0 h-2px w-full bg-blue-highlight"
     
     const tabsArray = [
         { text: "라이브카지노", id: 0 },
@@ -57,7 +57,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
                     setSelectedTab(item.id)
                 }}
             >
-                <label className="cursor-pointer font-spoqa text-16px">{item.text}</label>
+                <span className="cursor-pointer font-spoqa text-16px tracking-tight font-bold">{item.text}</span>
                 <div className={selectedTab === item.id ? selectedLineClass : lineClass}></div>
             </button>
         ));
@@ -74,7 +74,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
     )
 
     const CountryButton = (
-        <div className="flex items-center w-104px h-40px bg-gradient-to-br from-blue-gradLight to-blue-gradDark rounded-full space-x-10px shadow-inner p-4px">
+        <div className="flex items-center w-104px h-40px bg-gradient-to-br from-blue-gradLight to-blue-gradDark rounded-full space-x-10px shadow-inner p-4px shadow-plain2">
             <div className="h-32px w-32px bg-white rounded-full flex items-center justify-center">
                 <img className="" src={country === "KR" ? Koreaflag : UKflag} alt="flag"></img>
             </div>
@@ -95,7 +95,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
     
     const profileButton = (
         <div className="flex items-center justify-center space-x-10px">
-            <div className="relative flex items-center justify-center h-40px w-40px rounded-full bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-inner">
+            <div className="relative flex items-center justify-center h-40px w-40px rounded-full bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2">
                 <img src={PersonIcon} alt="person" />
             </div>
             <DropdownArrow isOpen={isProfileOpen}/>
@@ -103,15 +103,15 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
     )
 
     const LoginButton = (
-        <button className="flex items-center justify-center text-white w-104px h-40px rounded-full bg-gradient-to-br from-blue-gradLight to-blue-gradDark text-16px font-spoqa">로그인</button>
+        <button className="flex items-center justify-center text-white w-104px h-40px rounded-full bg-gradient-to-br from-blue-gradLight to-blue-gradDark text-16px font-spoqa shadow-plain2">로그인</button>
     )
 
     const SignupButton = (
-        <button className="flex items-center justify-center text-white w-104px h-40px rounded-full bg-gradient-to-br from-blue-darkGradLight to-blue-darkGradDark text-16px font-spoqa">회원가입</button>
+        <button className="flex items-center justify-center text-white w-104px h-40px rounded-full bg-gradient-to-br from-blue-darkGradLight to-blue-darkGradDark text-16px font-spoqa shadow-plain2">회원가입</button>
     )
 
     const InboxButton = (
-        <button className="relative flex items-center justify-center text-white h-40px w-40px rounded-full bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-inner">
+        <button className="relative flex items-center justify-center text-white h-40px w-40px rounded-full bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2">
             <img src={InboxIcon} alt="inbox_icon" />
             <div className="absolute flex items-center justify-center w-20px h-20px bg-red-notification top-0 right-0 -mr-1 -mt-1 rounded-full shadow-2xl">
                 <label className="text-sm">1</label>

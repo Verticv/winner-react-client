@@ -57,17 +57,17 @@ const Carousel = () => {
         <button
             type="button"
             onClick={isLeft ? previousImage : nextImage}
-            className={`${arrowStyle} ${isLeft ? 'left-2' : 'right-2'}`}
-            style={{ top: '43%' }}
+            className={`${arrowStyle} ${isLeft ? 'left-10px' : 'right-10px'}`}
+            style={{ top: '218px' }}
         >
             {isLeft ? leftArrow : rightArrow}
         </button>
     );
 
     const positionIndicator = (
-        <div className="absolute text-white text-2xl z-10 h-12 w-full rounded-sm flex items-center justify-center bottom-0 space-x-2">
+        <div className="absolute text-white text-2xl z-10 w-full rounded-sm flex items-center justify-center bottom-0 space-x-2 mb-10px">
             {images.map((img, i) => (
-                <button key={i} className="w-15px h-15px bg-gray-300 rounded-full p-2px" onClick={() => setCurrentImage(i)}>
+                <button key={i} className="w-15px h-15px bg-gray-cccccc rounded-full p-3px" onClick={() => setCurrentImage(i)}>
                     {currentImage === i && (
                         <div className="w-full h-full rounded-full bg-blue-gradDark" />
                     )}

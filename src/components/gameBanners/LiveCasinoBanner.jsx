@@ -15,12 +15,12 @@ const LiveCasinoBanner = () => {
     const [selectedTab, setSelectedTab] = useState()
 
     const gamesArray = [
-        { id: 0, background: EvolutionBg, color: "bg-teal-r4eb2ba", btnText: "게임시작", class: "bg-opacity-25" },
-        { id: 1, background: AsiaBg, color: "bg-blue-r3384ca", btnText: "게임시작", class: "bg-opacity-25" },
-        { id: 2, background: PragmaticBg, color: "bg-purple-d03ab7", btnText: "게임시작", class: "bg-opacity-25" },
-        { id: 3, background: DgBg, color: "bg-orange-e39e90", btnText: "게임시작", class: "bg-opacity-25" },
-        { id: 4, background: SexyBg, color: "bg-red-db4a4a", btnText: "게임시작", class: "bg-opacity-25" },
-        { id: 5, background: BigBg, color: "bg-yellow-e3ba3c", btnText: "게임시작", class: "bg-opacity-25" },
+        { id: 0, background: EvolutionBg, color: "bg-teal-r4eb2ba", btnText: "게임시작", class: "" },
+        { id: 1, background: AsiaBg, color: "bg-blue-r3384ca", btnText: "게임시작", class: "" },
+        { id: 2, background: PragmaticBg, color: "bg-purple-d03ab7", btnText: "게임시작", class: "" },
+        { id: 3, background: DgBg, color: "bg-orange-e39e90", btnText: "게임시작", class: "" },
+        { id: 4, background: SexyBg, color: "bg-red-db4a4a", btnText: "게임시작", class: "" },
+        { id: 5, background: BigBg, color: "bg-yellow-e3ba3c", btnText: "게임시작", class: "" },
         { id: 6, background: WinnerBg, color: "bg-gray-b2b2b2", btnText: "준비중", class: "" },
         { id: 7, background: WinnerBg, color: "bg-gray-b2b2b2", btnText: "준비중", class: "" },
     ];
@@ -40,7 +40,7 @@ const LiveCasinoBanner = () => {
     }
 
     return (
-        <div className="grid grid-cols-4 w-full gap-3">
+        <div className="grid grid-cols-4 w-full gap-x-20px gap-y-17px">
             <CardList items={gamesArray} />
         </div>
     )

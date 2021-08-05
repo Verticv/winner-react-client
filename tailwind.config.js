@@ -6,7 +6,7 @@ module.exports = {
       spacing: {
         112: '28rem',
         124: '32rem',
-        'default': '1250px',
+        'default': '1261px',
         1920: '1905px',
         '2px': '2px',
         '3px': '3px',
@@ -15,6 +15,7 @@ module.exports = {
         '6px': '6px',
         '8px': '8px',
         '10px': '10px',
+        '11px': '11px',
         '13px': '13px',
         '15px': '15px',
         '16px': '16px',
@@ -62,6 +63,7 @@ module.exports = {
         '156px': '156px',
         '158px': '158px',
         '170px': '170px',
+        '183px': '183px',
         '184px': '184px',
         '185px': '185px',
         '190px': '190px',
@@ -95,16 +97,16 @@ module.exports = {
         '840px': '840px'
        },
       boxShadow: {
-        plain: '0 0px 10px 0 rgba(0, 0, 0, 0.3), 0 4px 4px 0 rgba(0, 0, 0, 0.06)',
+        plain: '0 0px 5px 0 rgba(0, 0, 0, 0.2), 0 4px 4px 0 rgba(0, 0, 0, 0.06)',
         plain1: '0 4px 3.5px 0px rgba(0, 0, 0, 0.25)',
-        plain2: 'inset 0 2px 2px 0px rgba(0, 0, 0, 0.2)',
+        plain2: 'inset 0 1px 1px 0px rgba(0, 0, 0, 0.2)',
         plain3: '1px 1px 2px 0px rgba(0, 0, 0, 0.3)',
         plain4: '1px 2px 2px 0px rgba(0, 0, 0, 0.25)',
         glow: '0 0 3px 2px rgba(0, 0, 0, 0.1)',
       },
       screens: {
-        'limit': '1250px',
-        'limit1920': '1904px'
+        'limit': '1261px',
+        'limit1920': '1905px'
       },
       colors: {
         blue: {
@@ -142,7 +144,8 @@ module.exports = {
           r888889: '#888889',
           bebebe: '#bebebe',
           r393e41: '#393e41',
-          a4b1b4: '#a4b1b4'
+          a4b1b4: '#a4b1b4',
+          cccccc: '#cccccc'
         },
         red: {
           notification: '#ed2f59',
@@ -186,7 +189,7 @@ module.exports = {
       },
       borderRadius: {
         '20px': '20px'
-      }
+      },
     },
   },
   variants: {
