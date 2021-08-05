@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Shadow from '../images/shadow.png'
 import WhiteArrow from '../images/arrows/right_arrow_white.png'
 import GrayArrow from '../images/arrows/right_arrow_gray.png'
@@ -33,9 +33,10 @@ const MenuCard = ({
             <button 
                 key={item.id} 
                 className={`${item.selectedCss} ${selectedTab === item.id ? selectedTabClass : tabClass}`}
-                onClick={() => setSelectedTab(item.id)}
+                onMouseDown={() => setSelectedTab(item.id)}
+                onMouseUp={() => setSelectedTab(false)}
             >
-                {item.id !== 0 && (<div className="absolute top-0 left-0 h-px w-full bg-white"></div>)} 
+                {selectedTab !== item.id && item.id !== 0 && (<div className="absolute top-0 left-0 h-px w-full bg-white"></div>)} 
                 <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-10px">
                         <div className={selectedTab === item.id ? "rounded-full shadow-plain" : "rounded-full"}>
@@ -48,15 +49,6 @@ const MenuCard = ({
             </button>
         ));
     }
-    useEffect(
-        () => {
-            let timer1 = setTimeout(() => setSelectedTab(false), 100);
-            return () => {
-                clearTimeout(timer1);
-            };
-        },
-        [selectedTab]
-    );
 
     return (
         <div className="relative flex flex-col items-center w-300px h-308px border border-gray-ececec shadow-glow rounded-md px-10px bg-gradient-to-b from-white to-gray-f6f6f6 ">
