@@ -8,22 +8,22 @@ import WeeklyTop from '../images/slots/weekly_top.png'
 const Slots = () => {
 
     const tabsArray = [
-        { text: "슬롯잭팟", icon: SevenIcon, amount: "10,111,111", currency: "￦", id: 0 },
-        { text: "슬롯랭킹TOP", icon: TopRankIcon, amount: "22,222,222", currency: "￦", id: 1 },
-        { text: "오늘의출금TOP", icon: DailyTop, amount: "33,333,333", currency: "￦", id: 2 },
-        { text: "금주의출금TOP", icon: WeeklyTop, amount: "44,444,444", currency: "￦", id: 3 }
+        { text: "슬롯잭팟", icon: SevenIcon, amount: "10,111,111", currency: "￦", iconClass: "object-none h-32px mt-29px ml-90px", textClass: "mt-30px ml-8px", id: 0 },
+        { text: "슬롯랭킹TOP", icon: TopRankIcon, amount: "22,222,222", currency: "￦", iconClass: "object-none h-40px mt-25px ml-71px", textClass: "mt-30px ml-11px", id: 1 },
+        { text: "오늘의출금TOP", icon: DailyTop, amount: "33,333,333", currency: "￦", iconClass: "object-none h-36px mt-27px ml-63px", textClass: "mt-28px ml-11px", id: 2 },
+        { text: "금주의출금TOP", icon: WeeklyTop, amount: "44,444,444", currency: "￦", iconClass: "object-none h-40px mt-25px ml-63px", textClass: "mt-28px ml-8px", id: 3 }
     ];
 
     function SlotList({ items }) {
         return items.map(item => (
-            <div className="relative w-308px h-183px select-none cursor-pointer">
-                <div className="absolute w-308px h-46px flex items-center justify-center space-x-8px mt-21px">
-                    <img className="" src={item.icon} alt="icon" />
-                    <span className="font-spoqa text-20px font-medium text-gray-r536073 tracking-tight">{item.text}</span>
+            <div className="relative w-308px h-182px select-none cursor-pointer">
+                <div className="absolute w-308px h-81px flex">
+                    <img className={item.iconClass} src={item.icon} alt="icon" />
+                    <span className={`font-spoqa text-20px font-medium text-gray-r536073 tracking-tight ${item.textClass}`}>{item.text}</span>
                 </div>
-                <span className="absolute z-30 text-28px text-white bottom-0 left-0 mb-46px ml-22px font-spoqa drop-shadow-xl text-shadow">{item.currency}</span>
-                <span className="absolute z-30 text-42px text-white bottom-0 right-0 mb-34px mr-21px tracking-wider font-digital text-shadow">{item.amount}</span>
-                <img className="object-contain w-full h-full z-10" src={SlotBackground} alt="background" />
+                <span className="absolute z-30 text-28px text-white bottom-0 left-0 mb-45px ml-22px font-spoqa drop-shadow-xl text-shadow">{item.currency}</span>
+                <span className="absolute z-30 text-42px text-white bottom-0 right-0 mb-33px mr-21px tracking-wider font-digital text-shadow">{item.amount}</span>
+                <img className="object-none w-full h-full z-10" src={SlotBackground} alt="background" />
             </div>
         ));
     }

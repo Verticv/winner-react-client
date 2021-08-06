@@ -9,8 +9,8 @@ import WinnerBg from '../../images/cardBg/winner_bg.png'
 
 const LiveCasinoBanner = () => {
 
-    const cardClass = "relative flex justify-end w-300px h-185px border border-gray-afafaf rounded-lg shadow-plain1 hover:shadow-md transition bg-gradient-to-br from-white via-white to-gray-500 cursor-pointer border border-gray-afafaf"
-    const cardSelectedClass = "relative flex justify-end items-start w-300px h-185px border border-gray-afafaf rounded-lg shadow-lg transition bg-gradient-to-r from-blue-cardGradLight to-blue-cardGradDark cursor-pointer"
+    const cardClass = "relative flex justify-end w-300px h-185px border border-gray-afafaf rounded-lg shadow-plain1 transition bg-gradient-to-br from-white via-white to-gray-500 cursor-pointer border border-gray-afafaf"
+    const cardSelectedClass = "relative flex justify-end items-start w-300px h-185px border border-gray-afafaf rounded-lg shadow-plain1 transition bg-gradient-to-r from-blue-cardGradLight to-blue-cardGradDark cursor-pointer"
 
     const [selectedTab, setSelectedTab] = useState()
 
@@ -34,7 +34,7 @@ const LiveCasinoBanner = () => {
                 onMouseLeave={() => setSelectedTab(false)}
             >
                 <img src={item.background} alt="background" />
-                <div className={`absolute left-0 bottom-0 ml-20px mb-20px w-85px h-34px rounded-full flex items-center justify-center text-white font-spoqa text-14px font-bold ${item.color} ${selectedTab === item.id ? "shadow-plain3" : item.class}`}>{item.btnText}</div>
+                <div className={`absolute left-0 bottom-0 ml-20px mb-19px w-85px h-34px rounded-full flex items-center justify-center text-white font-spoqa text-14px font-medium ${item.color} ${selectedTab === item.id ? "shadow-plain3" : item.class}`}>{item.btnText}</div>
             </button>
         ));
     }

@@ -55,7 +55,7 @@ const SubNavbar = () => {
                 }}
             >
                 <img className={selectedTab === item.id ? item.class : item.classDefault} src={selectedTab === item.id ? item.icon : item.iconDefault} alt="icon" />
-                <label className={selectedTab !== 7 && item.id === 7 ? "cursor-pointer flex-shrink-0 font-spoqa font-regular text-16px pr-10px " : "cursor-pointer flex-shrink-0 font-spoqa font-regular text-16px" }>{item.text}</label>
+                <label className={selectedTab !== 7 && item.id === 7 ? "cursor-pointer flex-shrink-0 font-spoqa font-medium text-16px pr-10px " : "cursor-pointer flex-shrink-0 font-spoqa font-medium text-16px" }>{item.text}</label>
             </button>
         ));
     }
@@ -66,7 +66,7 @@ const SubNavbar = () => {
                 <div className="highlight" />
                 <TabsList items={tabsArray}/>
             </div>
-            <div className="flex w-full h-400px mt-16px">
+            <div className="flex w-full h-387px mt-16px">
                 <GameBanner selection={isGameBanner}/>
             </div>
         </div>

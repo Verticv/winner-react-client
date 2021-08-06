@@ -7,13 +7,13 @@ const SportsBanner = () => {
 
     const [selectedTab, setSelectedTab] = useState()
 
-    const cardClass = "relative flex w-406px h-386px object-contain border border-gray-afafaf justify-end rounded-lg shadow-plain1 hover:shadow-md transition bg-gradient-to-br from-white via-white to-gray-500 cursor-pointer border border-gray-afafaf"
-    const cardSelectedClass = "relative flex w-406px border border-gray-afafaf justify-end rounded-lg shadow-lg transition bg-gradient-to-r from-blue-cardGradLight to-blue-cardGradDark cursor-pointer"
+    const cardClass = "relative flex w-406px h-386px object-contain border border-gray-afafaf justify-end rounded-lg shadow-plain1 transition bg-gradient-to-br from-white via-white to-gray-500 cursor-pointer border border-gray-afafaf"
+    const cardSelectedClass = "relative flex w-406px border border-gray-afafaf justify-end rounded-lg shadow-plain1 transition bg-gradient-to-r from-blue-cardGradLight to-blue-cardGradDark cursor-pointer"
 
     const gamesArray = [
-        { id: 0, background: SportsBanner1, color: "bg-yellow-e3ba3c", btnText: "게임시작", class: "bg-opacity-25" },
-        { id: 1, background: SportsBanner2, color: "bg-blue-r3384ca", btnText: "게임시작", class: "bg-opacity-25" },
-        { id: 2, background: SportsBanner3, color: "bg-orange-e39e90", btnText: "게임시작", class: "bg-opacity-25" },
+        { id: 0, background: SportsBanner1, color: "bg-yellow-e3ba3c", btnText: "게임시작", class: "" },
+        { id: 1, background: SportsBanner2, color: "bg-blue-r3384ca", btnText: "게임시작", class: "" },
+        { id: 2, background: SportsBanner3, color: "bg-orange-e39e90", btnText: "게임시작", class: "" },
     ];
 
     function BannerList({ items }) {
