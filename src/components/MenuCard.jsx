@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Shadow from '../images/shadow.png'
+import Shadow from '../images/menu/shadow.png'
 import WhiteArrow from '../images/arrows/right_arrow_white.png'
 import GrayArrow from '../images/arrows/right_arrow_gray.png'
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import visual from '../images/visual.png'
-import visual2 from '../images/visual2.png'
+import visual from '../images/carousel/visual.png'
+import visual2 from '../images/carousel/visual2.png'
 import LeftArrow from '../images/arrows/left_arrow.png'
 import RightArrow from '../images/arrows/right_arrow.png'
 

@@ -21,6 +21,8 @@ module.exports = {
         '16px': '16px',
         '17px': '17px',
         '20px': '20px',
+        '21px': '21px',
+        '22px': '22px',
         '24px': '24px',
         '25px': '25px',
         '28px': '28px',
@@ -78,6 +80,7 @@ module.exports = {
         '300px': '300px',
         '305px': '305px',
         '308px': '308px',
+        '310px': '310px',
         '340px': '340px',
         '350px': '350px',
         '384px': '384px',
@@ -145,7 +148,9 @@ module.exports = {
           bebebe: '#bebebe',
           r393e41: '#393e41',
           a4b1b4: '#a4b1b4',
-          cccccc: '#cccccc'
+          cccccc: '#cccccc',
+          r424a55: '#424a55',
+          r536073: '#536073'
         },
         red: {
           notification: '#ed2f59',
@@ -174,7 +179,8 @@ module.exports = {
       },
       fontFamily: {
         spoqa: ['Spoqa Han Sans Neo'],
-        roboto: ['Roboto']
+        roboto: ['Roboto'],
+        digital: ['Digital-7']
       },
       fontSize: {
         '12px': '12px',
@@ -185,11 +191,16 @@ module.exports = {
         '24px': '24px',
         '25px': '25px',
         '27px': '27px',
+        '28px': '28px',
         '30px': '30px',
+        '42px': '42px',
       },
       borderRadius: {
         '20px': '20px'
       },
+      letterSpacing: {
+        digital: '.04em',
+       }
     },
   },
   variants: {
