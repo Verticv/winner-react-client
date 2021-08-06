@@ -44,6 +44,7 @@ const Menus = () => {
                 optionIconHighlight1={ChargeMoneyIconHighlight}
                 optionIconHighlight2={ExchangeIconHighlight}
                 optionIconHighlight3={PointExchangeIconHighlight}
+                extraIconCss="w-49px h-47px mb-2px"
             />
             <MenuCard 
                 mainIcon={MenuIcon} 
@@ -57,6 +58,7 @@ const Menus = () => {
                 optionIconHighlight1={BetHistoryIconHighlight}
                 optionIconHighlight2={TransactionHistoryIconHighlight}
                 optionIconHighlight3={PointHistoryIconHighlight}
+                extraIconCss="w-41px h-50px mr-6px mb-px"
             />
             <MenuCard 
                 mainIcon={MyMenuIcon} 
@@ -70,6 +72,7 @@ const Menus = () => {
                 optionIconHighlight1={AttendanceIconHighlight}
                 optionIconHighlight2={ManageInboxIconHighlight}
                 optionIconHighlight3={ManageProfileIconHighlight}
+                extraIconCss="w-43px h-52px mr-6px -mb-px"
             />
             <MenuCard 
                 mainIcon={Customer} 
@@ -83,6 +86,7 @@ const Menus = () => {
                 optionIconHighlight1={ContactIconHighlight}
                 optionIconHighlight2={AnnouncementIconHighlight}
                 optionIconHighlight3={FaqIconHighlight}
+                extraIconCss="w-48px h-49px mb-2px"
             />
         </div>
     )
