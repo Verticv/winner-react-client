@@ -21,7 +21,7 @@ const Footer2 = () => {
     const itemsClass = "flex items-center justify-center w-135px h-32px"
 
     const logosArray1 = [
-        { logo: EvoLogo, id: 0 },
+        { logo: EvoLogo,  id: 0 },
         { logo: MicLogo, id: 1 },
         { logo: BigLogo, id: 2 },
         { logo: AsiaLogo, id: 3 },
@@ -44,7 +44,7 @@ const Footer2 = () => {
 
     function LogosList({ items }) {
         return items.map(item => (
-            <div className={itemsClass} key={item.id}><img src={item.logo} alt="logo" /></div>
+            <div className={`${itemsClass} ${item.id === 7 && "-mt-8px"}`} key={item.id}><img src={item.logo} alt="logo" /></div>
         ));
     }
 
