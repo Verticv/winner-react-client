@@ -16,7 +16,7 @@ import Visa from '../images/footer/visa.png'
 
 const Footer = () => {
 
-    const buttonClass = "text-gray-r8f8f8f hover:text-gray-700 text-left text-14px font-spoqa"
+    const buttonClass = "text-gray-r8f8f8f hover:text-gray-700 text-left text-14px font-spoqa tracking-tight"
 
     const logosArray = [
         { logo: Adult, id: 0 },
@@ -38,10 +38,10 @@ const Footer = () => {
     }
 
     return (
-        <div className="flex flex-col items-start limit:items-center bg-gray-ececec w-screen h-190px pt-30px">
-            <div className="flex w-default h-90px">
+        <div className="flex flex-col items-start limit:items-center bg-gray-ececec w-screen h-190px">
+            <div className="flex w-default h-138px mt-29px">
                 {/* BREAK */}
-                <div className="flex flex-col space-y-20px pr-24px flex-shrink-0">
+                <div className="flex flex-col space-y-20px w-297px pr-24px flex-shrink-0">
                     <img className="w-130px h-32px object-contain" src={WinnerLogo} alt="winner logo" />
                     <div className="grid grid-cols-3 w-265px">
                         <button className={buttonClass}>문의하기</button>
@@ -53,18 +53,18 @@ const Footer = () => {
                     </div>
                 </div>
                 {/* BREAK */}
-                <div className="flex flex-col items-center justify-start border-r border-l border-gray-300 flex-shrink-0 pl-20px pr-30px">
-                    <div className="flex items-center space-x-2 ">
-                        <img className="object-contain h-50px" src={KakaoLogo} alt="kakao-icon" />
-                        <span className="font-bold text-red-900 font-roboto text-12px">test1234</span>
+                <div className="flex flex-col items-center justify-start border-r border-l border-gray-d8d8d8 flex-shrink-0 pl-20px pr-30px h-91px w-163px">
+                    <div className="flex items-center space-x-2px">
+                        <img className="object-none w-59px h-53px" src={KakaoLogo} alt="kakao-icon" />
+                        <span className="font-medium text-brown-r381d1e font-roboto text-12px tracking-wide">test1234</span>
                     </div>
-                    <div className="flex items-center space-x-2">
-                        <img className="object-contain h-50px" src={TelegramLogo} alt="kakao-icon" />
-                        <span className="font-bold text-blue-400 font-roboto text-12px">test1234</span>
+                    <div className="flex items-center space-x-2px">
+                        <img className="object-none w-59px h-53px" src={TelegramLogo} alt="kakao-icon" />
+                        <span className="font-medium text-blue-r2aa1d5 font-roboto text-12px tracking-wide">test1234</span>
                     </div>
                 </div>
                 {/* BREAK */}
-                <div className="flex items-center justify-end w-full pl-4">
+                <div className="flex justify-end w-801px h-90px">
                     <div className="grid grid-cols-5 gap-10px">
                         <LogosList items={logosArray} />
                     </div>
@@ -72,8 +72,8 @@ const Footer = () => {
                 {/* BREAK */}
                 
             </div>
-            <div className="w-screen flex items-center justify-center mt-30px">
-                <span className="font-medium font-roboto text-12px text-gray-a7a7a7">Copyright © WINNER. All rights reserved. </span>
+            <div className="w-screen flex justify-center mt-10px h-52px">
+                <span className="font-medium font-roboto tracking-wide text-12px text-gray-a7a7a7">Copyright © WINNER. All rights reserved. </span>
             </div>
         </div>
     )

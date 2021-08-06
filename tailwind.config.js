@@ -39,9 +39,12 @@ module.exports = {
         '45px': '45px',
         '46px': '46px',
         '50px': '50px',
+        '52px': '52px',
+        '53px': '53px',
         '55px': '55px',
         '56px': '56px',
         '58px': '58px',
+        '59px': '59px',
         '60px': '60px',
         '63px': '63px',
         '64px': '64px',
@@ -55,6 +58,7 @@ module.exports = {
         '81px': '81px',
         '85px': '85px',
         '90px': '90px',
+        '91px': '91px',
         '100px': '100px',
         '104px': '104px',
         '108px': '108px',
@@ -72,6 +76,7 @@ module.exports = {
         '150px': '150px',
         '156px': '156px',
         '158px': '158px',
+        '163px': '163px',
         '170px': '170px',
         '183px': '183px',
         '184px': '184px',
@@ -85,6 +90,7 @@ module.exports = {
         '250px': '250px',
         '254px': '254px',
         '265px': '265px',
+        '297px': '297px',
         '300px': '300px',
         '305px': '305px',
         '308px': '308px',
@@ -106,6 +112,7 @@ module.exports = {
         '650px': '650px',
         '680px': '680px',
         '800px': '800px',
+        '801px': '801px',
         '820px': '820px',
         '840px': '840px'
        },
@@ -160,7 +167,8 @@ module.exports = {
           a4b1b4: '#a4b1b4',
           cccccc: '#cccccc',
           r424a55: '#424a55',
-          r536073: '#536073'
+          r536073: '#536073',
+          d8d8d8: '#d8d8d8'
         },
         red: {
           notification: '#ed2f59',
@@ -184,7 +192,8 @@ module.exports = {
           r7bd26a: '#7bd26a'
         },
         brown: {
-          r351a1e: '#351a1e'
+          r351a1e: '#351a1e',
+          r381d1e: '#381d1e'
         }
       },
       fontFamily: {
