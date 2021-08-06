@@ -8,7 +8,7 @@ import WeeklyTop from '../images/slots/weekly_top.png'
 const Slots = () => {
 
     const tabsArray = [
-        { text: "슬롯잭팟", icon: SevenIcon, amount: "11,111,111", currency: "￦", id: 0 },
+        { text: "슬롯잭팟", icon: SevenIcon, amount: "10,111,111", currency: "￦", id: 0 },
         { text: "슬롯랭킹TOP", icon: TopRankIcon, amount: "22,222,222", currency: "￦", id: 1 },
         { text: "오늘의출금TOP", icon: DailyTop, amount: "33,333,333", currency: "￦", id: 2 },
         { text: "금주의출금TOP", icon: WeeklyTop, amount: "44,444,444", currency: "￦", id: 3 }
