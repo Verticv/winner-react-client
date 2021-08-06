@@ -19,21 +19,21 @@ const Footer = () => {
     const buttonClass = "text-gray-r8f8f8f hover:text-gray-700 text-left text-14px font-spoqa tracking-tight"
 
     const logosArray = [
-        { logo: Adult, id: 0 },
-        { logo: Much, id: 1 },
-        { logo: ClickBuy, id: 2 },
-        { logo: Click2Pay, id: 3 },
-        { logo: GameCare, id: 4 },
-        { logo: Visa, id: 5 },
-        { logo: MasterCard, id: 6 },
-        { logo: PaySafe, id: 7 },
-        { logo: Skrill, id: 8 },
-        { logo: Net, id: 9 },
+        { logo: Adult, size: "w-26px h-26px", id: 0 },
+        { logo: Much, size: "", id: 1 },
+        { logo: ClickBuy, size: "", id: 2 },
+        { logo: Click2Pay, size: "", id: 3 },
+        { logo: GameCare, size: "", id: 4 },
+        { logo: Visa, size: "", id: 5 },
+        { logo: MasterCard, size: "", id: 6 },
+        { logo: PaySafe, size: "", id: 7 },
+        { logo: Skrill, size: "", id: 8 },
+        { logo: Net, size: "", id: 9 },
     ];
 
     function LogosList({ items }) {
         return items.map(item => (
-            <div key={item.id} className={`flex items-center justify-center w-146px h-40px bg-gray-d2d2d2 rounded ${item.id === 0 ? "py-2" : "px-3 py-3"}`}><img className="object-contain h-full" src={item.logo} alt="logo" /></div>
+            <div key={item.id} className={`flex items-center justify-center w-146px h-40px bg-gray-d2d2d2 rounded`}><img className="object-none w-full h-full" src={item.logo} alt="logo" /></div>
         ));
     }
 
@@ -41,9 +41,9 @@ const Footer = () => {
         <div className="flex flex-col items-start limit:items-center bg-gray-ececec w-screen h-190px">
             <div className="flex w-default h-138px mt-29px">
                 {/* BREAK */}
-                <div className="flex flex-col space-y-20px w-297px pr-24px flex-shrink-0">
-                    <img className="w-130px h-32px object-contain" src={WinnerLogo} alt="winner logo" />
-                    <div className="grid grid-cols-3 w-265px">
+                <div className="flex flex-col space-y-18px w-297px pr-24px flex-shrink-0">
+                    <img className="w-130px h-32px object-none" src={WinnerLogo} alt="winner logo" />
+                    <div className="grid grid-cols-3 w-265px gap-x-4px gap-y-2px">
                         <button className={buttonClass}>문의하기</button>
                         <button className={buttonClass}>공지사항</button>
                         <button className={buttonClass}>자주하는질문</button>
@@ -56,11 +56,11 @@ const Footer = () => {
                 <div className="flex flex-col items-center justify-start border-r border-l border-gray-d8d8d8 flex-shrink-0 pl-20px pr-30px h-91px w-163px">
                     <div className="flex items-center space-x-2px">
                         <img className="object-none w-59px h-53px" src={KakaoLogo} alt="kakao-icon" />
-                        <span className="font-medium text-brown-r381d1e font-roboto text-12px tracking-wide">test1234</span>
+                        <span className="font-medium text-brown-r381d1e font-roboto text-12px tracking-wide mb-2px">test1234</span>
                     </div>
                     <div className="flex items-center space-x-2px">
                         <img className="object-none w-59px h-53px" src={TelegramLogo} alt="kakao-icon" />
-                        <span className="font-medium text-blue-r2aa1d5 font-roboto text-12px tracking-wide">test1234</span>
+                        <span className="font-medium text-blue-r2aa1d5 font-roboto text-12px tracking-wide mb-6px">test1234</span>
                     </div>
                 </div>
                 {/* BREAK */}
