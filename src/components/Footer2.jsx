@@ -50,7 +50,7 @@ const Footer2 = () => {
 
     return (
         <div className="flex justify-start limit:justify-center w-screen bg-gray-f9f9f9 h-114px">
-            <div className="flex flex-col w-default flex-shrink-0 items-center justify-center space-y-10px">
+            <div className="flex flex-col w-default flex-shrink-0 items-center justify-center space-y-10px pl-10px">
                 <div className="flex justify-between w-default"><LogosList items={logosArray1} /></div>
                 <div className="flex justify-between w-default"><LogosList items={logosArray2} /></div>
             </div>
