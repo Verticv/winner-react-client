@@ -20,7 +20,7 @@ const MinigameBanner = () => {
 
     function CardList({ items }) {
         return items.map(item => (
-            <button 
+            <div 
                 key={item.id} 
                 className={selectedTab === item.id ? cardSelectedClass : cardClass} 
                 onMouseEnter={() => setSelectedTab(item.id)}
@@ -28,7 +28,7 @@ const MinigameBanner = () => {
             >
                 <img src={item.background} alt="background" />
                 <div className={`absolute left-0 bottom-0 ml-20px mb-20px w-115px h-34px rounded-full flex items-center justify-center text-white font-spoqaBold text-14px ${item.color} ${selectedTab === item.id ? "shadow-plain3" : item.class}`}>{item.btnText}</div>
-            </button>
+            </div>
         ));
     }
 

@@ -16,7 +16,7 @@ const Slots = () => {
 
     function SlotList({ items }) {
         return items.map(item => (
-            <div className="relative w-308px h-182px select-none cursor-pointer">
+            <div className="relative w-308px h-182px select-none cursor-pointer" key={item.id}>
                 <div className="absolute w-308px h-81px flex">
                     <img className={item.iconClass} src={item.icon} alt="icon" />
                     <span className={`font-spoqaBold text-20px text-gray-r536073 tracking-tight ${item.textClass}`}>{item.text}</span>

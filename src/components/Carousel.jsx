@@ -97,7 +97,6 @@ const Carousel = () => {
                 } else {
                     setCurrentImage(0)
                 }
-                console.log(currentImage + " _+ __ + _" + images.length)
             }, 5000);
             return () => {
                 clearTimeout(timer1);

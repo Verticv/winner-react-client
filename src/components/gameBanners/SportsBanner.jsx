@@ -18,7 +18,7 @@ const SportsBanner = () => {
 
     function BannerList({ items }) {
         return items.map(item => (
-            <button 
+            <div 
                 key={item.id} 
                 className={selectedTab === item.id ? cardSelectedClass : cardClass} 
                 onMouseEnter={() => setSelectedTab(item.id)}
@@ -26,7 +26,7 @@ const SportsBanner = () => {
             >
                 <img src={item.background} alt="background" />
                 <div className={`absolute left-0 bottom-0 ml-30px mb-34px w-124px h-44px rounded-full flex items-center justify-center text-white font-spoqaBold text-18px ${item.color} ${selectedTab === item.id ? "shadow-plain3" : item.class}`}>{item.btnText}</div>
-            </button>
+            </div>
         ));
     }
 
