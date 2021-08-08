@@ -25,7 +25,7 @@ const CountryDropDown = ({setCountry, country}) => {
                     <img src={item.icon} alt="flag"></img>
                 </div>
                 <div className="w-full flex justify-center mr-3">                
-                    <label className={`${selectedTab === item.id ? "text-white" : "text-gray-subNavbar"} font-spoqa text-14px font-bold cursor-pointer`}>{item.text}</label>
+                    <label className={`${selectedTab === item.id ? "text-white" : "text-gray-subNavbar"} font-spoqaBold text-14px cursor-pointer`}>{item.text}</label>
                 </div>
             </button>
         ));

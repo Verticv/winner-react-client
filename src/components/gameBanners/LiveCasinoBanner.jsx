@@ -34,7 +34,7 @@ const LiveCasinoBanner = () => {
                 onMouseLeave={() => setSelectedTab(false)}
             >
                 <img src={item.background} alt="background" />
-                <div className={`absolute left-0 bottom-0 ml-20px mb-19px w-85px h-34px rounded-full flex items-center justify-center text-white font-spoqa text-14px font-medium ${item.color} ${selectedTab === item.id ? "shadow-plain3" : item.class}`}>{item.btnText}</div>
+                <div className={`absolute left-0 bottom-0 ml-20px mb-19px w-85px h-34px rounded-full flex items-center justify-center text-white font-spoqaBold text-14px ${item.color} ${selectedTab === item.id ? "shadow-plain3" : item.class}`}>{item.btnText}</div>
             </button>
         ));
     }

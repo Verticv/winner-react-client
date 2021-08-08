@@ -1,16 +1,51 @@
 /* ./src/index.css */
-@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @font-face {
     font-family: 'Digital-7';
-    src:url('digital-7.mono.woff') format('woff');
+    src:url('./fonts/digital-7.mono.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+  font-family: 'SpoqaHanSansNeo';
+  src:url('./fonts/SpoqaHanSansNeo-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SpoqaHanSansNeoBold';
+  src:url('./fonts/SpoqaHanSansNeo-Bold.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SpoqaHanSansNeoMedium';
+  src:url('./fonts/SpoqaHanSansNeo-Medium.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'RobotoMedium';
+  src:url('./fonts/Roboto-Medium.ttf');
+  font-weight: medium;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RobotoBold';
+  src:url('./fonts/Roboto-Bold.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 @layer utilities {
     @variants responsive {

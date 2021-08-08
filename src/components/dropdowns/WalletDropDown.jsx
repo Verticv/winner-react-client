@@ -27,7 +27,7 @@ const WalletDropDown = () => {
                     <img src={selectedTab === item.id ? item.iconHighlight : item.icon} alt="icon"></img>
                 </div>
                 <div className="w-full flex justify-center mr-3">                
-                    <label className={`${selectedTab === item.id ? "text-white" : "text-gray-subNavbar"} font-spoqa font-bold text-14px cursor-pointer`}>{item.text}</label>
+                    <label className={`${selectedTab === item.id ? "text-white" : "text-gray-subNavbar"} font-spoqaBold text-14px cursor-pointer`}>{item.text}</label>
                 </div>
             </button>
         ));

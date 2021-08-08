@@ -19,9 +19,9 @@ const Slots = () => {
             <div className="relative w-308px h-182px select-none cursor-pointer">
                 <div className="absolute w-308px h-81px flex">
                     <img className={item.iconClass} src={item.icon} alt="icon" />
-                    <span className={`font-spoqa text-20px font-medium text-gray-r536073 tracking-tight ${item.textClass}`}>{item.text}</span>
+                    <span className={`font-spoqaBold text-20px text-gray-r536073 tracking-tight ${item.textClass}`}>{item.text}</span>
                 </div>
-                <span className="absolute z-30 text-28px text-white bottom-0 left-0 mb-45px ml-22px font-spoqa drop-shadow-xl text-shadow">{item.currency}</span>
+                <span className="absolute z-30 text-28px text-white bottom-0 left-0 mb-44px ml-22px font-spoqaMedium drop-shadow-xl text-shadow">{item.currency}</span>
                 <span className="absolute z-30 text-42px text-white bottom-0 right-0 mb-33px mr-21px tracking-wider font-digital text-shadow">{item.amount}</span>
                 <img className="object-none w-full h-full z-10" src={SlotBackground} alt="background" />
             </div>

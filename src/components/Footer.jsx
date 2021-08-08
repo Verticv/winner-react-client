@@ -16,7 +16,7 @@ import Visa from '../images/footer/visa.png'
 
 const Footer = () => {
 
-    const buttonClass = "text-gray-r8f8f8f hover:text-gray-700 text-left text-14px font-spoqa tracking-tight"
+    const buttonClass = "text-gray-r8f8f8f hover:text-gray-600 text-left text-14px font-spoqaMedium tracking-tight"
 
     const logosArray = [
         { logo: Adult, size: "w-26px h-26px", id: 0 },
@@ -56,11 +56,11 @@ const Footer = () => {
                 <div className="flex flex-col items-center justify-start border-r border-l border-gray-d8d8d8 flex-shrink-0 pl-20px pr-30px h-91px w-163px">
                     <div className="flex items-center space-x-2px">
                         <img className="object-none w-59px h-53px" src={KakaoLogo} alt="kakao-icon" />
-                        <span className="font-medium text-brown-r381d1e font-roboto text-12px tracking-wide mb-2px">test1234</span>
+                        <span className="text-brown-r381d1e font-roboto text-12px tracking-wide mb-2px">test1234</span>
                     </div>
                     <div className="flex items-center space-x-2px">
                         <img className="object-none w-59px h-53px" src={TelegramLogo} alt="kakao-icon" />
-                        <span className="font-medium text-blue-r2aa1d5 font-roboto text-12px tracking-wide mb-6px">test1234</span>
+                        <span className="text-blue-r2aa1d5 font-roboto text-12px tracking-wide mb-6px">test1234</span>
                     </div>
                 </div>
                 {/* BREAK */}
@@ -73,7 +73,7 @@ const Footer = () => {
                 
             </div>
             <div className="w-screen flex justify-center mt-10px h-52px">
-                <span className="font-medium font-roboto tracking-wide text-12px text-gray-a7a7a7">Copyright © WINNER. All rights reserved. </span>
+                <span className="font-roboto tracking-wide text-12px text-gray-a7a7a7">Copyright © WINNER. All rights reserved. </span>
             </div>
         </div>
     )

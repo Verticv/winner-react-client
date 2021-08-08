@@ -41,7 +41,7 @@ const ProfileDropDown = ({setAuth}) => {
                     <img className="h-auto w-10 bg-white rounded-full flex items-center justify-center" src={selectedTab === item.id ? item.iconHighlight : item.icon} alt="icon"></img>
                 </div>
                 <div className="w-full flex justify-center mr-3">                
-                    <label className={`${selectedTab === item.id ? "text-white" : "text-gray-subNavbar"} font-spoqa font-bold text-14px cursor-pointer`}>{item.text}</label>
+                    <label className={`${selectedTab === item.id ? "text-white" : "text-gray-subNavbar"} font-spoqaBold text-14px cursor-pointer`}>{item.text}</label>
                 </div>
             </button>
         ));
@@ -54,10 +54,10 @@ const ProfileDropDown = ({setAuth}) => {
             </div>
             <div className="w-full h-128px bg-blue-e8f3fd rounded-3xl flex items-center flex-col pt-24px mb-6px">
                 <img className="w-34px object-contain" src={LevelOne} alt="level_one"/>
-                <span className="text-gray-r393e41 font-bold text-12px font-roboto">LEVEL 1</span>
+                <span className="text-gray-r393e41 text-12px font-robotoBold">LEVEL 1</span>
                 <div className="mt-4px">
-                    <span className="text-blue-r1ca7ec font-bold font-spoqa text-16px">마이마이프로틴화이팅</span>
-                    <span className="text-gray-a4b1b4 font-bold font-spoqa text-16px">님</span>
+                    <span className="text-blue-r1ca7ec font-spoqaBold text-16px">마이마이프로틴화이팅</span>
+                    <span className="text-gray-a4b1b4 font-spoqaBold text-16px">님</span>
                 </div>
             </div>
             <div className="w-full space-y-2px">

@@ -43,7 +43,7 @@ const MenuCard = ({
                         <div className={selectedTab === item.id ? "rounded-full shadow-plain" : "rounded-full"}>
                             <img className="w-full h-full" src={selectedTab === item.id ? item.iconHighlight : item.icon} alt="meunIcon" />
                         </div>
-                        <label className={`cursor-pointer text-16px font-spoqa font-medium tracking-tight ${selectedTab === item.id ? "text-white" : "text-gray-text"}`}>{item.text}</label>
+                        <label className={`cursor-pointer text-16px font-spoqaMedium tracking-tight ${selectedTab === item.id ? "text-white" : "text-gray-text"}`}>{item.text}</label>
                     </div>
                     <img className="h-15px object-contain mr-4px" src={selectedTab === item.id ? WhiteArrow : GrayArrow} alt="arrow" />
                 </div>
@@ -56,7 +56,7 @@ const MenuCard = ({
             <div className="flex flex-col h-308px justify-between pt-19px pb-10px">
                 <div className="flex flex-col space-y-4px items-center justify-center">
                     <img className={`object-none ${extraIconCss}`} src={mainIcon} alt="icon" />
-                    <span className="text-18px text-gray-r667177 font-spoqa font-medium pt-2px tracking-tight">{menuTitle}</span>
+                    <span className="text-18px text-gray-r667177 font-spoqaMedium pt-2px tracking-tight">{menuTitle}</span>
                 </div>
                 
                 <div className="w-full h-178px border border-gray-d5d5d5 rounded-md shadow-plain1">

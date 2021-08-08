@@ -27,14 +27,14 @@ const SubNavbar = () => {
     const selectedTabClass = "flex items-center justify-center w-156px h-60px rounded-full text-white cursor-pointer z-20 py-4 transition duration-150 ease-in-out tracking-tight"
 
     const tabsArray = [
-        { text: "라이브카지노", icon: Card, iconDefault: CardDefualt, id: 0, class: "pt-1 h-40px -ml-2px mr-2px", classDefault: "pt-6px -mr-3px" },
+        { text: "라이브카지노", icon: Card, iconDefault: CardDefualt, id: 0, class: "pt-1 mr-4px", classDefault: "pt-6px -mr-3px" },
         { text: "슬롯게임", icon: Slot, iconDefault: SlotDefault, id: 1, class: "pt-1 mr-2px", classDefault: "pt-6px" },
         { text: "스포츠", icon: Sport, iconDefault: SportDefault, id: 2, class: "pt-1 mr-8px", classDefault: "pt-6px" },
         { text: "e-스포츠", icon: Esport, iconDefault: EsportDefault, id: 3, class: "pt-1 mr-6px", classDefault: "pt-6px" },
         { text: "미니게임", icon: Minigame, iconDefault: MinigameDefault, id: 4, class: "pt-1 mr-6px", classDefault: "pt-6px" },
         { text: "가상게임", icon: AugmentedGame, iconDefault: AugmentedGameDefault, id: 5, class: "pt-1 mr-6px", classDefault: "pt-6px" },
-        { text: "피싱게임", icon: Fishing, iconDefault: FishingDefault, id: 6, class: "pt-1 mr-2px w-50px", classDefault: "pt-6px" },
-        { text: "로터리게임", icon: Lottery, iconDefault: LotteryDefault, id: 7, class: "pt-1 w-34px mr-6px", classDefault: "pt-6px" }
+        { text: "피싱게임", icon: Fishing, iconDefault: FishingDefault, id: 6, class: "pt-1 mr-2px", classDefault: "pt-6px" },
+        { text: "로터리게임", icon: Lottery, iconDefault: LotteryDefault, id: 7, class: "pt-1 mr-6px", classDefault: "pt-6px" }
     ];
 
     function onClickHandle(id) {
@@ -54,8 +54,8 @@ const SubNavbar = () => {
                     onClickHandle(item.id)
                 }}
             >
-                <img className={selectedTab === item.id ? item.class : item.classDefault} src={selectedTab === item.id ? item.icon : item.iconDefault} alt="icon" />
-                <label className={selectedTab !== 7 && item.id === 7 ? "cursor-pointer flex-shrink-0 font-spoqa font-medium text-16px pr-10px " : "cursor-pointer flex-shrink-0 font-spoqa font-medium text-16px" }>{item.text}</label>
+                <img className={`object-none ${selectedTab === item.id ? item.class : item.classDefault}`} src={selectedTab === item.id ? item.icon : item.iconDefault} alt="icon" />
+                <label className={"cursor-pointer flex-shrink-0 font-spoqaMedium text-16px" }>{item.text}</label>
             </button>
         ));
     }

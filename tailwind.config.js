@@ -38,6 +38,7 @@ module.exports = {
         '34px': '34px',
         '36px': '36px',
         '40px': '40px',
+        '42px': '42px',
         '44px': '44px',
         '45px': '45px',
         '46px': '46px',
@@ -206,8 +207,11 @@ module.exports = {
         }
       },
       fontFamily: {
-        spoqa: ['Spoqa Han Sans Neo'],
-        roboto: ['Roboto'],
+        spoqa: ['SpoqaHanSansNeo'],
+        spoqaMedium: ['SpoqaHanSansNeoMedium'],
+        spoqaBold: ['SpoqaHanSansNeoBold'],
+        roboto: ['RobotoMedium'],
+        robotoBold: ['RobotoBold'],
         digital: ['Digital-7']
       },
       fontSize: {
