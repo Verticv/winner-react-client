@@ -55,7 +55,7 @@ const SubNavbar = () => {
                 }}
             >
                 <img className={`object-none ${selectedTab === item.id ? item.class : item.classDefault}`} src={selectedTab === item.id ? item.icon : item.iconDefault} alt="icon" />
-                <label className={"cursor-pointer flex-shrink-0 font-spoqaMedium text-16px" }>{item.text}</label>
+                <label className={"cursor-pointer flex-shrink-0 font-spoqaMedium text-16px pt-px" }>{item.text}</label>
             </button>
         ));
     }
