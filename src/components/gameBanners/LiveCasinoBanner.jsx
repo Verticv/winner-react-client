@@ -10,7 +10,6 @@ import WinnerBg from '../../images/cardBg/winner_bg.png'
 const LiveCasinoBanner = () => {
 
     const cardClass = "relative flex justify-end w-300px h-185px border border-gray-afafaf rounded-lg shadow-plain1 transition bg-gradient-to-br from-white via-white to-gray-500 cursor-pointer border border-gray-afafaf"
-    const cardSelectedClass = "relative flex justify-end items-start w-300px h-185px border border-gray-afafaf rounded-lg shadow-plain1 transition bg-gradient-to-r from-blue-cardGradLight to-blue-cardGradDark cursor-pointer"
 
     const [selectedTab, setSelectedTab] = useState()
 
@@ -29,12 +28,12 @@ const LiveCasinoBanner = () => {
         return items.map(item => (
             <div 
                 key={item.id} 
-                className={selectedTab === item.id ? cardSelectedClass : cardClass} 
-                onMouseEnter={item.id !== 6 && item.id !== 7 ? () => setSelectedTab(item.id) : () => console.log("clicked")}
+                className={`${cardClass} ${item.id !== 6 && item.id !== 7 && "hover:from-blue-cardGradLight hover:to-blue-cardGradDark"}`} 
+                onMouseEnter={() => setSelectedTab(item.id)}
                 onMouseLeave={() => setSelectedTab(false)}
             >
                 <img src={item.background} alt="background" />
-                <div className={`absolute left-0 bottom-0 ml-20px mb-19px w-85px h-34px rounded-full flex items-center justify-center text-white font-spoqaBold text-14px pt-px ${item.color} ${selectedTab === item.id ? "shadow-plain3" : item.class}`}>{item.btnText}</div>
+                <div className={`absolute left-0 bottom-0 ml-20px mb-19px w-85px h-34px rounded-full flex items-center justify-center text-white font-spoqaBold text-14px pt-px ${item.color} ${selectedTab === item.id && item.id !== 6 && item.id !== 7 ? "shadow-plain3" : item.class}`}>{item.btnText}</div>
             </div>
         ));
     }
