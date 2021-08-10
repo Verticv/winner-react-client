@@ -31,11 +31,11 @@ const ProfileDropDown = ({setAuth}) => {
             <button 
                 key={item.id} 
                 className={`${selectedTab === item.id ? "bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2" : "bg-white"} flex w-full items-center p-4px h-40px rounded-full`} 
-                onClick={() => 
-                    {                 
-                        setSelectedTab(item.id)       
-                        if (item.id === 5) setAuth(false)
-                    }}
+                onPointerDown={(e) => setSelectedTab(item.id)}
+                onPointerUp={() => {
+                    setSelectedTab(false)
+                    if (item.id === 5) setAuth(false)
+                }}
             >
                 <div className={`${selectedTab === item.id && "shadow-plain3"} h-32px w-32px bg-white rounded-full flex items-center justify-center flex-shrink-0`} >
                     <img className="h-auto w-10 bg-white rounded-full flex items-center justify-center" src={selectedTab === item.id ? item.iconHighlight : item.icon} alt="icon"></img>
@@ -52,15 +52,15 @@ const ProfileDropDown = ({setAuth}) => {
             <div class="absolute top-0 -mt-2 ml-2 w-4 overflow-hidden inline-block">
                 <div class="h-2 w-2 bg-white rotate-45 transform origin-bottom-left shadow"></div>
             </div>
-            <div className="w-full h-128px bg-blue-e8f3fd rounded-3xl flex items-center flex-col pt-24px mb-6px">
-                <img className="w-34px object-contain" src={LevelOne} alt="level_one"/>
-                <span className="text-gray-r393e41 text-12px font-robotoBold">LEVEL 1</span>
-                <div className="mt-4px">
+            <div className="w-full h-128px bg-blue-e8f3fd rounded-3xl flex items-center flex-col pt-24px">
+                <img className="h-46px object-none ml-6px" src={LevelOne} alt="level_one"/>
+                <span className="text-gray-r393e41 text-12px font-robotoBold">LEVEL1</span>
+                <div className="">
                     <span className="text-blue-r1ca7ec font-spoqaBold text-16px">마이마이프로틴화이팅</span>
                     <span className="text-gray-a4b1b4 font-spoqaBold text-16px">님</span>
                 </div>
             </div>
-            <div className="w-full space-y-2px">
+            <div className="w-full space-y-px mt-10px">
                 <MenuList items={menuArray} />
             </div>
         </div>

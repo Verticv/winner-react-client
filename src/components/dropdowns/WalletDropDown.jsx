@@ -21,7 +21,8 @@ const WalletDropDown = () => {
             <button 
                 key={item.id} 
                 className={`${selectedTab === item.id ? "bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2" : "bg-white"} flex w-full items-center p-4px h-40px rounded-full`} 
-                onClick={() => setSelectedTab(item.id)}
+                onPointerDown={() => setSelectedTab(item.id)}
+                onPointerUp={() => setSelectedTab(false)}
             >
                 <div className={`${selectedTab === item.id && "shadow-plain3"} h-32px w-32px bg-white rounded-full flex items-center justify-center flex-shrink-0`} >
                     <img src={selectedTab === item.id ? item.iconHighlight : item.icon} alt="icon"></img>
