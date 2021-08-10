@@ -33,7 +33,7 @@ const Footer = () => {
 
     function LogosList({ items }) {
         return items.map(item => (
-            <div key={item.id} className={`flex items-center justify-center w-146px h-40px bg-gray-d2d2d2 rounded`}><img className="object-none w-full h-full" src={item.logo} alt="logo" /></div>
+            <div key={item.id} className={`flex items-center justify-center w-146px h-40px bg-gray-d2d2d2 rounded`}><img className={`${item.id === 6 && "-mb-px"} object-none w-full h-full`} src={item.logo} alt="logo" /></div>
         ));
     }
 
@@ -43,7 +43,7 @@ const Footer = () => {
                 {/* BREAK */}
                 <div className="flex flex-col space-y-18px w-297px pr-24px flex-shrink-0">
                     <img className="w-130px h-32px object-none" src={WinnerLogo} alt="winner logo" />
-                    <div className="grid grid-cols-3 w-265px gap-x-4px gap-y-2px">
+                    <div className="grid grid-cols-3 w-265px gap-x-7px gap-y-2px">
                         <button className={buttonClass}>문의하기</button>
                         <button className={buttonClass}>공지사항</button>
                         <button className={buttonClass}>자주하는질문</button>
@@ -54,13 +54,13 @@ const Footer = () => {
                 </div>
                 {/* BREAK */}
                 <div className="flex flex-col items-center justify-start border-r border-l border-gray-d8d8d8 flex-shrink-0 pl-20px pr-30px h-91px w-163px">
-                    <div className="flex items-center space-x-2px">
+                    <div className="flex items-center space-x-2px -mt-3px">
                         <img className="object-none w-59px h-53px" src={KakaoLogo} alt="kakao-icon" />
                         <span className="text-brown-r381d1e font-roboto text-12px tracking-wide mb-2px">test1234</span>
                     </div>
                     <div className="flex items-center space-x-2px">
                         <img className="object-none w-59px h-53px" src={TelegramLogo} alt="kakao-icon" />
-                        <span className="text-blue-r2aa1d5 font-roboto text-12px tracking-wide mb-6px">test1234</span>
+                        <span className="text-blue-r2aa1d5 font-roboto text-12px tracking-wide mb-5px">test1234</span>
                     </div>
                 </div>
                 {/* BREAK */}
