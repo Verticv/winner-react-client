@@ -102,6 +102,7 @@ module.exports = {
         '297px': '297px',
         '300px': '300px',
         '305px': '305px',
+        '306px': '306px',
         '307px': '307px',
         '308px': '308px',
         '309px': '309px',
@@ -132,6 +133,7 @@ module.exports = {
         plain2: 'inset 0 1px 1px 0px rgba(0, 0, 0, 0.2)',
         plain3: '1px 1px 2px 0px rgba(0, 0, 0, 0.3)',
         plain4: '1px 2px 2px 0px rgba(0, 0, 0, 0.25)',
+        plain5: '0 4px 4px 0px rgba(0, 0, 0, 0.25)',
         glow: '0 0 3px 2px rgba(0, 0, 0, 0.1)',
       },
       screens: {

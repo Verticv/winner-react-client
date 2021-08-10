@@ -20,8 +20,8 @@ const MenuCard = ({
 
     const [selectedTab, setSelectedTab] = useState()
 
-    const tabClass = "relative w-full border-b-1 border-gray-d5d5d5 h-59px p-6px"
-    const selectedTabClass = "relative w-full h-59px bg-blue-r009edf shadow-plain2 p-6px"
+    const tabClass = "relative w-full border-b-1 border-gray-d5d5d5 h-59px p-6px z-20"
+    const selectedTabClass = "relative w-full h-59px bg-blue-r009edf shadow-plain2 p-6px z-20"
 
     const menuArray = [
         { text: optionTitle1, id: 0, icon: optionIcon1, iconHighlight: optionIconHighlight1, selectedCss: "border-b rounded-t bg-gray-f6f6f6" },
@@ -43,7 +43,7 @@ const MenuCard = ({
                         <div className={selectedTab === item.id ? "rounded-full shadow-plain" : "rounded-full"}>
                             <img className="w-full h-full" src={selectedTab === item.id ? item.iconHighlight : item.icon} alt="meunIcon" />
                         </div>
-                        <label className={`cursor-pointer text-16px font-spoqaMedium tracking-tight ${selectedTab === item.id ? "text-white" : "text-gray-text"}`}>{item.text}</label>
+                        <label className={`cursor-pointer text-16px font-spoqaMedium tracking-tight pt-px ${selectedTab === item.id ? "text-white" : "text-gray-text"}`}>{item.text}</label>
                     </div>
                     <img className="h-15px object-contain mr-4px" src={selectedTab === item.id ? WhiteArrow : GrayArrow} alt="arrow" />
                 </div>
@@ -52,24 +52,24 @@ const MenuCard = ({
     }
 
     return (
-        <div className="relative flex flex-col items-center w-300px h-307px border border-gray-ececec shadow-glow rounded-md px-8px bg-gradient-to-b from-white to-gray-f6f6f6 ">
+        <div className="relative flex flex-col items-center w-300px h-307px border border-gray-ececec shadow-glow rounded-md bg-gradient-to-b from-white to-gray-f6f6f6 px-8px">
             <div className="flex flex-col h-308px justify-between pt-19px pb-10px">
                 <div className="flex flex-col space-y-4px items-center justify-center">
                     <img className={`object-none ${extraIconCss}`} src={mainIcon} alt="icon" />
                     <span className="text-18px text-gray-r667177 font-spoqaMedium pt-2px tracking-tight">{menuTitle}</span>
                 </div>
-                
-                <div className="w-full h-178px border border-gray-d5d5d5 rounded-md shadow-plain1">
+                <div className="relative w-full border border-gray-d5d5d5 rounded-md">
                     <MenuList items={menuArray} />
+                    <div className="w-full h-10px rounded-lg absolute bottom-0 z-10 shadow-plain1"/>
                 </div>
             </div>
             
-            <div className="absolute top-0 mt-308px">
+            <div className="absolute top-0 mt-306px">
                 <img  src={Shadow} alt="shadow" />
             </div>
 
         </div>
     )
 }
-
+// "w-full h-178px border border-gray-d5d5d5 rounded-md shadow-plain5"
 export default MenuCard
