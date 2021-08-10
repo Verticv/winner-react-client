@@ -34,7 +34,7 @@ export default function PopupControls({
                 }}
             >{buttonChild}</div>
             {open && (
-                <div className="absolute flex items-center justify-center w-screen h-screen bg-black bg-opacity-40 z-50 left-0 top-0" >
+                <div className="absolute flex items-center justify-center w-screen h-screen bg-black bg-opacity-60 z-50 left-0 top-0" >
                     <div ref={ref}>
                         {children}
                     </div>

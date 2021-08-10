@@ -44,7 +44,11 @@ const SignupPopup = ({setAuth}) => {
                             <div className="flex space-x-10px w-full">
                                 <Title text="아이디" />
                                 <div className="w-full space-y-2">
-                                    <input className="w-full text-gray-r393e41 font-spoqaMedium text-16px outline-none" onClick={() => setSelectedInput(0)}/>
+                                    <input 
+                                        className="w-full text-gray-r393e41 font-spoqaMedium text-16px outline-none" 
+                                        onFocus={(e) => setSelectedInput(0)}
+                                        onBlur={(e) => setSelectedInput(false)}
+                                    />
                                     <div className={`${selectedInput === 0 ? "border-blue-r1ca7ec" : "border-gray-bebebe"} border-b w-full`} />
                                 </div>
                             </div>
@@ -55,7 +59,11 @@ const SignupPopup = ({setAuth}) => {
                             <div className="flex space-x-10px w-full">
                                 <Title text="비밀번호" />
                                 <div className="w-full space-y-2">
-                                    <input className="w-full text-gray-r393e41 font-spoqaMedium text-16px outline-none" onClick={() => setSelectedInput(1)}/>
+                                    <input 
+                                        className="w-full text-gray-r393e41 font-spoqaMedium text-16px outline-none" 
+                                        onFocus={(e) => setSelectedInput(1)}
+                                        onBlur={(e) => setSelectedInput(false)}
+                                    />
                                     <div className={`${selectedInput === 1 ? "border-blue-r1ca7ec" : "border-gray-bebebe"} border-b w-full`} />
                                 </div>
                             </div>
@@ -66,7 +74,11 @@ const SignupPopup = ({setAuth}) => {
                             <div className="flex space-x-10px w-full">
                                 <Title text="환전 비밀번호" />
                                 <div className="w-full space-y-2">
-                                    <input className="w-full text-gray-r393e41 font-spoqaMedium text-16px outline-none" onClick={() => setSelectedInput(2)}/>
+                                    <input 
+                                        className="w-full text-gray-r393e41 font-spoqaMedium text-16px outline-none" 
+                                        onFocus={(e) => setSelectedInput(2)}
+                                        onBlur={(e) => setSelectedInput(false)}
+                                    />
                                     <div className={`${selectedInput === 2 ? "border-blue-r1ca7ec" : "border-gray-bebebe"} border-b w-full`} />
                                 </div>
                             </div>
@@ -77,7 +89,11 @@ const SignupPopup = ({setAuth}) => {
                             <div className="flex space-x-10px w-full">
                                 <Title text="닉네임" />
                                 <div className="w-full space-y-2">
-                                    <input className="w-full text-gray-r393e41 font-spoqaMedium text-16px outline-none" onClick={() => setSelectedInput(3)}/>
+                                    <input 
+                                        className="w-full text-gray-r393e41 font-spoqaMedium text-16px outline-none" 
+                                        onFocus={(e) => setSelectedInput(3)}
+                                        onBlur={(e) => setSelectedInput(false)}
+                                    />
                                     <div className={`${selectedInput === 3 ? "border-blue-r1ca7ec" : "border-gray-bebebe"} border-b w-full`} />
                                 </div>
                             </div>
@@ -88,11 +104,26 @@ const SignupPopup = ({setAuth}) => {
                             <div className="flex space-x-10px w-full">
                                 <Title text="휴대폰번호" />
                                 <div className="w-170px flex-shrink-0 space-y-2">
-                                    <input className="w-full text-gray-r393e41 font-spoqaMedium text-16px outline-none" onClick={() => setSelectedInput(4)}/>
+                                    <input 
+                                        className="w-full text-gray-r393e41 font-spoqaMedium text-16px outline-none" 
+                                        onFocus={() => setSelectedInput(4)}
+                                        onBlur={(e) => setSelectedInput(false)}    
+                                    />
                                     <div className={`${selectedInput === 4 ? "border-blue-r1ca7ec" : "border-gray-bebebe"} border-b w-full`} />
                                 </div>
                                 <div className="w-full space-y-2">
-                                    <input className="w-full text-gray-r393e41 font-spoqaMedium text-16px outline-none placeholder-gray-bebebe" onClick={() => setSelectedInput(5)} placeholder="휴대폰번호(숫자만 입력)"/>
+                                    <input 
+                                        className="w-full text-gray-r393e41 font-spoqaMedium text-16px outline-none placeholder-gray-bebebe"
+                                        placeholder="휴대폰번호(숫자만 입력)"
+                                        onFocus={(e) => {
+                                            e.target.placeholder = ""
+                                            setSelectedInput(5)
+                                        }} 
+                                        onBlur={(e) => {
+                                            e.target.placeholder = "휴대폰번호(숫자만 입력)"
+                                            setSelectedInput(false)
+                                        }}
+                                    />
                                     <div className={`${selectedInput === 5 ? "border-blue-r1ca7ec" : "border-gray-bebebe"} border-b w-full`} />
                                 </div>
                             </div>
@@ -102,7 +133,18 @@ const SignupPopup = ({setAuth}) => {
                             <div className="flex space-x-10px w-full">
                                 <Title text="추천인 아이디" />
                                 <div className="w-full space-y-2">
-                                    <input className="w-full text-gray-r393e41 font-spoqaMedium text-16px outline-none placeholder-gray-bebebe" onClick={() => setSelectedInput(6)} placeholder="가입코드"/>
+                                    <input 
+                                        className="w-full text-gray-r393e41 font-spoqaMedium text-16px outline-none placeholder-gray-bebebe" 
+                                        placeholder="가입코드"
+                                        onFocus={(e) => {
+                                            e.target.placeholder = ""
+                                            setSelectedInput(6)
+                                        }} 
+                                        onBlur={(e) => {
+                                            e.target.placeholder = "가입코드"
+                                            setSelectedInput(false)
+                                        }}
+                                    />
                                     <div className={`${selectedInput === 6 ? "border-blue-r1ca7ec" : "border-gray-bebebe"} border-b w-full`} />
                                 </div>
                             </div>
@@ -113,16 +155,42 @@ const SignupPopup = ({setAuth}) => {
                                 <div className="flex space-x-10px w-full">
                                     <Title text="계좌번호" />
                                     <div className="w-170px flex-shrink-0 space-y-2">
-                                        <input className="w-full text-gray-r393e41 font-spoqaMedium text-16px outline-none" onClick={() => setSelectedInput(7)}/>
+                                        <input 
+                                            className="w-full text-gray-r393e41 font-spoqaMedium text-16px outline-none" 
+                                            onFocus={() => setSelectedInput(7)}
+                                            onBlur={(e) => setSelectedInput(false)}
+                                        />
                                         <div className={`${selectedInput === 7 ? "border-blue-r1ca7ec" : "border-gray-bebebe"} border-b w-full`} />
                                     </div>
                                     <div className="w-full space-y-2">
-                                        <input className="w-full text-gray-r393e41 font-spoqaMedium text-16px outline-none placeholder-gray-bebebe" onClick={() => setSelectedInput(8)} placeholder="예금주"/>
+                                        <input 
+                                            className="w-full text-gray-r393e41 font-spoqaMedium text-16px outline-none placeholder-gray-bebebe" 
+                                            placeholder="예금주"
+                                            onFocus={(e) => {
+                                                e.target.placeholder = ""
+                                                setSelectedInput(8)
+                                            }} 
+                                            onBlur={(e) => {
+                                                e.target.placeholder = "예금주"
+                                                setSelectedInput(false)
+                                            }}
+                                        />
                                         <div className={`${selectedInput === 8 ? "border-blue-r1ca7ec" : "border-gray-bebebe"} border-b w-full`} />
                                     </div>
                                 </div>
                                 <div className="w-full space-y-2 pl-150px pt-1">
-                                    <input className="w-full text-gray-r393e41 font-spoqaMedium text-16px outline-none placeholder-gray-bebebe" onClick={() => setSelectedInput(9)} placeholder="계좌번호 (숫자만 입력)"/>
+                                    <input 
+                                        className="w-full text-gray-r393e41 font-spoqaMedium text-16px outline-none placeholder-gray-bebebe" 
+                                        placeholder="계좌번호 (숫자만 입력)"
+                                        onFocus={(e) => {
+                                            e.target.placeholder = ""
+                                            setSelectedInput(9)
+                                        }} 
+                                        onBlur={(e) => {
+                                            e.target.placeholder = "계좌번호 (숫자만 입력)"
+                                            setSelectedInput(false)
+                                        }}
+                                    />
                                     <div className={`${selectedInput === 9 ? "border-blue-r1ca7ec" : "border-gray-bebebe"} border-b w-full`} />
                                 </div>
                             </div>

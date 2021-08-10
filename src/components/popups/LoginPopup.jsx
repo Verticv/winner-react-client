@@ -21,11 +21,33 @@ const LoginPopup = ({setAuth}) => {
                     {/* BREAK */}
                     <div className="w-full h-full flex flex-col items-center justify-center space-y-40px">
                         <div className="w-480px">
-                            <input className="w-full h-12 text-25px text-black text-center outline-none font-spoqaMedium tracking-tight placeholder-gray-bebebe" placeholder={"아이디"} onClick={() => setSelectedInput(0)}/>
+                            <input 
+                                className="w-full h-12 text-25px text-black text-center outline-none font-spoqaMedium tracking-tight placeholder-gray-bebebe" 
+                                placeholder={"아이디"} 
+                                onFocus={(e) => {
+                                    e.target.placeholder = ""
+                                    setSelectedInput(0)
+                                }} 
+                                onBlur={(e) => {
+                                    e.target.placeholder = "아이디"
+                                    setSelectedInput(false)
+                                }}
+                            />
                             <div className={`${selectedInput === 0 ? "border-blue-r1ca7ec" : "border-gray-bebebe"} border-b w-full`} />
                         </div>
                         <div className="w-480px">
-                            <input className="w-full h-12 text-25px text-black text-center outline-none font-spoqaMedium tracking-tight placeholder-gray-bebebe" placeholder={"비밀번호"} onClick={() => setSelectedInput(1)}/>
+                            <input 
+                                className="w-full h-12 text-25px text-black text-center outline-none font-spoqaMedium tracking-tight placeholder-gray-bebebe" 
+                                placeholder={"비밀번호"} 
+                                onFocus={(e) => {
+                                    e.target.placeholder = ""
+                                    setSelectedInput(1)
+                                }} 
+                                onBlur={(e) => {
+                                    e.target.placeholder = "비밀번호"
+                                    setSelectedInput(false)
+                                }}
+                            />
                             <div className={`${selectedInput === 1 ? "border-blue-r1ca7ec" : "border-gray-bebebe"} border-b w-full`} />
                         </div>
                         <div className="w-480px">
