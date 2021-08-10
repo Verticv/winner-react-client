@@ -132,7 +132,7 @@ module.exports = {
       boxShadow: {
         plain: '0 0px 5px 0 rgba(0, 0, 0, 0.2), 0 4px 4px 0 rgba(0, 0, 0, 0.06)',
         plain1: '0 4px 3.5px 0px rgba(0, 0, 0, 0.25)',
-        plain2: 'inset 0 1px 1px 0px rgba(0, 0, 0, 0.2)',
+        plain2: 'inset 1px 1px 1px 0px rgba(0, 0, 0, 0.2)',
         plain3: '1px 1px 2px 0px rgba(0, 0, 0, 0.3)',
         plain4: '1px 2px 2px 0px rgba(0, 0, 0, 0.25)',
         plain5: '0 4px 4px 0px rgba(0, 0, 0, 0.25)',

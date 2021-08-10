@@ -74,7 +74,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
     )
 
     const CountryButton = (
-        <div className="flex items-center w-104px h-40px bg-gradient-to-br from-blue-gradLight to-blue-gradDark rounded-full space-x-10px shadow-inner p-4px shadow-plain2">
+        <div className="-ml-4px flex items-center w-104px h-40px bg-gradient-to-br from-blue-gradLight to-blue-gradDark rounded-full space-x-10px shadow-inner p-4px shadow-plain2">
             <div className="h-32px w-32px bg-white rounded-full flex items-center justify-center">
                 <img className="" src={country === "KR" ? Koreaflag : UKflag} alt="flag"></img>
             </div>
@@ -86,7 +86,10 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
     const WalletButton = (
         <div className="flex items-center space-x-10px h-40px">
             <div className="flex flex-col items-end -space-y-1">
-                <label className="text-blue-r2087f0 cursor-pointer font-roboto">₩ 100,000 원</label>
+                <div className="space-x-2px">
+                    <label className="text-blue-r2087f0 cursor-pointer font-spoqaMedium">₩</label>
+                    <label className="text-blue-r2087f0 cursor-pointer font-roboto">100,000 원</label>
+                </div>
                 <label className="text-orange-ff7e00 cursor-pointer font-roboto">12,500 P</label>
             </div>
             <DropdownArrow isOpen={isWalletOpen}/>

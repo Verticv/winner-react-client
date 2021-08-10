@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import ChargeMoneyIcon from '../../images/wallet/charge_money_gradient.png'
-import ChargeMoneyIconHighlight from '../../images/menu/charge_money_highlight.png'
+import ChargeMoneyIconHighlight from '../../images/wallet/charge_money_highlight.png'
 import ExchangeIcon from '../../images/wallet/exchange_icon_gradient.png'
-import ExchangeIconHighlight from '../../images/menu/exchange_icon_highlight.png'
+import ExchangeIconHighlight from '../../images/wallet/exchange_icon_highlight.png'
 import PointExchangeIcon from '../../images/wallet/point_exchange_gradient.png'
-import PointExchangeIconHighlight from '../../images/menu/point_exchange_highlight.png'
+import PointExchangeIconHighlight from '../../images/wallet/point_exchange_highlight.png'
 
 const WalletDropDown = () => {
 
@@ -24,8 +24,8 @@ const WalletDropDown = () => {
                 onPointerDown={() => setSelectedTab(item.id)}
                 onPointerUp={() => setSelectedTab(false)}
             >
-                <div className={`${selectedTab === item.id && "shadow-plain3"} h-32px w-32px bg-white rounded-full flex items-center justify-center flex-shrink-0`} >
-                    <img src={selectedTab === item.id ? item.iconHighlight : item.icon} alt="icon"></img>
+                <div className={`${selectedTab === item.id && "shadow-plain3"} bg-white rounded-full flex items-center justify-center flex-shrink-0`} >
+                    <img className="object-none" src={selectedTab === item.id ? item.iconHighlight : item.icon} alt="icon"></img>
                 </div>
                 <div className="w-full flex justify-center mr-3">                
                     <label className={`${selectedTab === item.id ? "text-white" : "text-gray-subNavbar"} font-spoqaBold text-14px cursor-pointer`}>{item.text}</label>
