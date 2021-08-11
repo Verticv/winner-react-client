@@ -72,7 +72,7 @@ const Footer = () => {
                 {/* BREAK */}
                 
             </div>
-            <div className="w-screen flex justify-center mt-10px h-52px">
+            <div className="w-default flex justify-center mt-10px h-52px">
                 <span className="font-roboto tracking-wide text-12px text-gray-a7a7a7">Copyright © WINNER. All rights reserved. </span>
             </div>
         </div>
