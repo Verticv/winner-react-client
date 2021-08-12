@@ -29,7 +29,7 @@ import eight from '../../images/navbarHover/8.png'
 import eightHighlight from '../../images/navbarHover/8_highlight.png'
 import Expand from 'react-expand-animated'
 
-const LiveCasinoHover = ({setHoveredTab, selection}) => {
+const LiveCasinoHover = ({selection}) => {
 
     const [selectedGame, setSelectedGame] = useState()
     // const [selectedItem, setSelectedItem] = useState()
@@ -56,16 +56,16 @@ const LiveCasinoHover = ({setHoveredTab, selection}) => {
 
     function GamesList({ items }) {
         return items.map(item => (
-            <button 
+            <div 
                 key={item.id} 
-                className="relative w-305px h-206px" 
+                className="relative w-305px h-206px cursor-pointer" 
                 onMouseEnter={() => setSelectedGame(item.id)} 
                 onMouseLeave={() => setSelectedGame(false)}
             >
                 <img className={`opacity-100 hover:opacity-0 w-305px h-206px object-cover object-left`} src={item.background} alt="game_image" />
                 <img className={`opacity-0 hover:opacity-100 absolute top-0 transition transition-opacity transform duration-200 w-305px h-206px object-cover object-left `} src={item.highlight} alt="game_image" />
                 <div className={`absolute bottom-0 font-spoqaBold text-12px w-80px h-25px ml-80px -mb-17px flex items-center justify-center rounded-full ${selectedGame === item.id ? item.color : "bg-white text-gray-r888889"}`}>게임시작</div>
-            </button>
+            </div>
         ));
     }
 
@@ -89,7 +89,7 @@ const LiveCasinoHover = ({setHoveredTab, selection}) => {
             duration={200} 
             className="absolute w-1920 h-340px bg-white bg-opacity-80 shadow-inner border-b-2 border-gray-300 space-y-50px" 
         >
-            <div style={{ width: '1920px', height: '340px'}} className="space-y-50px" onMouseLeave={() => setHoveredTab(false)}>
+            <div style={{ width: '1920px', height: '340px'}} className="space-y-50px">
                 <div className="flex ml-80px -space-x-2 pt-6px">
                     <GamesList items={gamesArray} />
                 </div>

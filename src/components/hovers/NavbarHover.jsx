@@ -6,10 +6,10 @@ import EsportsHover from './EsportsHover'
 import MinigamesHover from './MinigamesHover'
 import ARHover from './ARHover'
 
-const NavbarHover = ({selection, setHoveredTab, setSelectedTab}) => {
+const NavbarHover = ({selection, setHoveredTab}) => {
 
     return (
-        <div onMouseLeave={() => setSelectedTab()}>
+        <div className={`w-full ${selection === 0 ? "h-340px" : "h-244px"}`} onMouseLeave={() => setHoveredTab(false)}>
             <LiveCasinoHover setHoveredTab={setHoveredTab} selection={selection}/>
             <SlotGameHover setHoveredTab={setHoveredTab} selection={selection}/>
             <SportsHover setHoveredTab={setHoveredTab} selection={selection}/>

@@ -13,7 +13,7 @@ const SignupPopup = ({setAuth, setPopupOpen}) => {
     const [selectedInput, setSelectedInput] = useState()
     const [isSignedUp, setSignedUp] = useState()
     const [toLogin, setToLogin] = useState()
-    const [selectedCarrier, setSelectedCarrier] = useState("SKT")
+    const [selectedCarrier, setSelectedCarrier] = useState("통신사선택")
     const [selectedBank, setSelectedBank] = useState("은행선택")
 
     const dropDownCellClass = "flex w-170px h-40px py-4px bg-white items-center hover:bg-blue-lightGradLight px-10px"
