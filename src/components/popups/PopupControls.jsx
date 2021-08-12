@@ -1,11 +1,13 @@
-import React, { useState, useRef, useCallback } from "react";
+import React, { useState, useRef, useCallback, useEffect } from "react";
 import { useOnClickOutside } from "../../helpers/functions";
 
 export default function PopupControls({
     children,
     onClose,
     onClick,
-    buttonChild
+    buttonChild,
+    isPopupOpen,
+    setPopupOpen
 }) {
     const [open, setOpen] = useState(false);
     const ref = useRef();
@@ -14,18 +16,22 @@ export default function PopupControls({
             setOpen(false)
             if (onClose) { onClose() }
         }
-    }, [onClose, open]);
 
+        if (open && !isPopupOpen) {
+            setOpen(false)
+        }
+    }, [isPopupOpen, onClose, open]);
+
+    useEffect(() => {
+        if (open && !isPopupOpen) {
+            setOpen(false)
+            setPopupOpen(true)
+        }
+    }, [isPopupOpen, open, setPopupOpen])
     useOnClickOutside(ref, handler);
 
     return (
-        <div
-            className={`${
-                open === true
-                ? "text-white"
-                : "cursor-pointer text-copy-secondary hover:filter-brightness-8 transition-all duration-100"
-            } flex items-center justify-center w-auto h-10 rounded-circle`}
-        >
+        <div>
             <div
                 className="flex items-center justify-center"
                 onMouseDown={() => {

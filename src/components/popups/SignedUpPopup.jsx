@@ -31,7 +31,7 @@ const SignedUpPopup = ({setToLogin}) => {
                     <img className="h-138px object-contain" src={SignedUpContent} alt="content"/>
                 </div>
                 {/* BREAK */}
-                <button className="w-480px h-74px rounded-md bg-gradient-to-r from-blue-gradLight to-blue-gradDark text-27px font-spoqaMedium" onClick={() => setToLogin(true)}>로그인</button>
+                <button className="w-480px h-74px rounded-md bg-gradient-to-r from-blue-gradLight to-blue-gradDark text-27px font-spoqaMedium text-white" onClick={() => setToLogin(true)}>로그인</button>
             </div>
         </div>
     )

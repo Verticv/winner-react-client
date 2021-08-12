@@ -19,13 +19,7 @@ export default function DropDownControls({
     useOnClickOutside(ref, handler);
 
     return (
-        <div
-            className={`${
-                open === true
-                ? "text-white"
-                : "cursor-pointer text-copy-secondary hover:filter-brightness-8 transition-all duration-100"
-            } sm:relative flex items-center justify-center w-auto h-10 rounded-circle`}
-        >
+        <div className="relative">
             <button
                 className="flex relative items-center justify-center"
                 onMouseDown={() => {

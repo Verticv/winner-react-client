@@ -25,6 +25,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
     const [isProfileOpen, setProfileOpen] = useState()
     const [isWalletOpen, setWalletOpen] = useState()
     const [isCountryOpen, setCountryOpen] = useState()
+    const [isPopupOpen, setPopupOpen] = useState(true)
 
     const tabClass = "text-gray-text hover:text-blue-highlight relative flex flex-col items-center justify-center h-60px px-10px cursor-pointer"
     const selectedTabClass = "relative flex flex-col items-center justify-center px-10px cursor-pointer h-60px text-blue-highlight cursor-pointer"
@@ -150,12 +151,12 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
 
                 ) : (
                     <div className="flex space-x-3 items-center flex-shrink-0">
-                        <PopupControls buttonChild={LoginButton}>
-                            <LoginPopup setAuth={setAuth} />
+                        <PopupControls buttonChild={LoginButton} isPopupOpen={isPopupOpen} setPopupOpen={setPopupOpen}>
+                            <LoginPopup setAuth={setAuth} setPopupOpen={setPopupOpen}/>
                         </PopupControls>  
                         {/* BREAK */}         
-                        <PopupControls buttonChild={SignupButton}>
-                            <SignupPopup setAuth={setAuth} />
+                        <PopupControls buttonChild={SignupButton} isPopupOpen={isPopupOpen} setPopupOpen={setPopupOpen}>
+                            <SignupPopup setAuth={setAuth} setPopupOpen={setPopupOpen}/>
                         </PopupControls>           
                         {/* BREAK */}
                         <DropDownControls buttonChild={CountryButton} onClick={() => setCountryOpen(!isCountryOpen)} onClose={() => setCountryOpen(false)} >
