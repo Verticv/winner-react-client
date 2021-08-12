@@ -7,7 +7,7 @@ import MinigameBanner4 from '../../images/gameBanner/minigame_banner_4.png'
 const MinigameBanner = () => {
 
     const cardClass = "relative flex justify-end w-620px h-184px border border-gray-afafaf rounded-lg shadow-plain1 transition bg-gradient-to-br from-white via-white to-gray-500 cursor-pointer border border-gray-afafaf"
-    const cardSelectedClass = "relative flex justify-end items-start w-620px h-184px border border-gray-afafaf rounded-lg shadow-plain1 transition bg-gradient-to-r from-blue-cardGradLight to-blue-cardGradDark cursor-pointer"
+    const cardSelectedClass = "relative flex justify-end w-620px h-184px border border-gray-afafaf rounded-lg shadow-plain1 transition bg-gradient-to-r from-blue-cardGradLight to-blue-cardGradDark cursor-pointer"
 
     const [selectedTab, setSelectedTab] = useState()
 
@@ -27,7 +27,7 @@ const MinigameBanner = () => {
                 onMouseLeave={() => setSelectedTab(false)}
             >
                 <img src={item.background} alt="background" />
-                <div className={`absolute left-0 bottom-0 ml-20px mb-20px w-115px h-34px rounded-full flex items-center justify-center text-white font-spoqaBold text-14px ${item.color} ${selectedTab === item.id ? "shadow-plain3" : item.class}`}>{item.btnText}</div>
+                <div className={`absolute left-0 bottom-0 ml-20px mb-20px w-115px h-34px rounded-full flex items-center justify-center text-white font-spoqaBold text-14px ${item.color} ${selectedTab === item.id && "shadow-plain3"}`}>{item.btnText}</div>
             </div>
         ));
     }
