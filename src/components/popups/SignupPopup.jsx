@@ -130,7 +130,7 @@ const SignupPopup = ({setAuth, setPopupOpen}) => {
             ) : isSignedUp ? (
                 <SignedUpPopup setToLogin={setToLogin} />
             ) : (
-                <div className="relative w-840px h-820px bg-white rounded-xl shadow-xl mt-79px">
+                <div className="relative w-840px h-820px bg-white rounded-xl shadow-xl mt-79px shadow-popup">
                     <button className="w-29 h-29 absolute top-0 right-0 mt-20px mr-19px cursor-pointer z-20" onClick={()=> setPopupOpen(false)}>
                         <img src={CloseIcon} alt="close_icon" />
                     </button>

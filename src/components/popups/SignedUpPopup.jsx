@@ -4,7 +4,7 @@ import SignedUpContent from '../../images/signed_up_content.png'
 
 const SignedUpPopup = ({setToLogin}) => {
     return (
-        <div className="relative w-840px h-680px bg-white rounded-xl shadow-xl">
+        <div className="relative w-840px h-680px bg-white rounded-xl shadow-xl shadow-popup">
             <div className="absolute w-840px -mt-79px flex justify-center">
                 <div className="flex items-center justify-center h-158px w-158px rounded-full">
                     <img src={SignedUpIcon} alt="login_icon"/>
