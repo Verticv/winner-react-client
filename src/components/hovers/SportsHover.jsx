@@ -6,6 +6,7 @@ import TennisBannerHighlight from '../../images/navbarHover/tennis_banner_highli
 import MessiBanner from '../../images/navbarHover/messi_banner.png'
 import MessiBannerHighlight from '../../images/navbarHover/messi_banner_highlight.png'
 import Expand from 'react-expand-animated'
+import { useHistory } from 'react-router-dom'
 
 const SportsHover = ({selection}) => {
 
@@ -18,6 +19,7 @@ const SportsHover = ({selection}) => {
     ];
 
     function GamesList({ items }) {
+        const history = useHistory();
         return items.map(item => (
             <div 
                 key={item.id} 
@@ -27,7 +29,7 @@ const SportsHover = ({selection}) => {
             >
                 <img className={`opacity-100 hover:opacity-0 w-305px h-206px object-cover object-left`} src={item.background} alt="game_image" />
                 <img className={`opacity-0 hover:opacity-100 absolute top-0 transition transition-opacity transform duration-200 w-305px h-206px object-cover object-left `} src={item.highlight} alt="game_image" />
-                <div className={`absolute bottom-0 font-spoqaBold text-12px w-80px h-25px ml-80px -mb-17px flex items-center justify-center rounded-full ${selectedGame === item.id ? item.color : "bg-white text-gray-r888889"}`}>게임시작</div>
+                <button onClick={ () => history.push('/bet')} className={`absolute bottom-0 font-spoqaBold text-12px w-80px h-25px ml-80px -mb-17px flex items-center justify-center rounded-full ${selectedGame === item.id ? item.color : "bg-white text-gray-r888889"}`}>게임시작</button>
             </div>
         ));
     }
