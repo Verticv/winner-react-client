@@ -11,9 +11,9 @@ const WalletDropDown = () => {
     const [selectedTab, setSelectedTab] = useState()
 
     const menuArray = [
-        { icon: ChargeMoneyIcon, iconHighlight: ChargeMoneyIconHighlight, text: "보유머니충전", id: 0 },
-        { icon: ExchangeIcon, iconHighlight: ExchangeIconHighlight, text: "보유머니환전", id: 1 },
-        { icon: PointExchangeIcon, iconHighlight: PointExchangeIconHighlight, text: "포인트전환", id: 2 }
+        { icon: ChargeMoneyIcon, iconHighlight: ChargeMoneyIconHighlight, text: "보유머니 충전", id: 0 },
+        { icon: ExchangeIcon, iconHighlight: ExchangeIconHighlight, text: "보유머니 환전", id: 1 },
+        { icon: PointExchangeIcon, iconHighlight: PointExchangeIconHighlight, text: "포인트 전환", id: 2 }
     ];
 
     function MenuList({ items }) {
@@ -28,7 +28,7 @@ const WalletDropDown = () => {
                     <img className="object-none" src={selectedTab === item.id ? item.iconHighlight : item.icon} alt="icon"></img>
                 </div>
                 <div className="w-full flex justify-center mr-3">                
-                    <label className={`${selectedTab === item.id ? "text-white" : "text-gray-subNavbar"} font-spoqaBold text-14px cursor-pointer`}>{item.text}</label>
+                    <label className={`${selectedTab === item.id ? "text-white" : "text-gray-subNavbar"} font-spoqaBold text-14px cursor-pointer tracking-tight`}>{item.text}</label>
                 </div>
             </button>
         ));
@@ -36,10 +36,12 @@ const WalletDropDown = () => {
 
     return (
         <div className="relative bg-white shadow-plain rounded-20px bg-white w-184px h-126px p-2px flex flex-col items-center -mt-5px -mr-28px">
-            <div class="absolute top-0 -mt-2 ml-2 w-4 overflow-hidden inline-block">
-                <div class="h-2 w-2 bg-white rotate-45 transform origin-bottom-left shadow"></div>
+            <div className="absolute top-0 -mt-2 ml-2 w-4 overflow-hidden inline-block">
+                <div className="h-2 w-2 bg-white rotate-45 transform origin-bottom-left shadow"></div>
             </div>
-            <MenuList items={menuArray} />
+            <div className="w-full space-y-px">
+                <MenuList items={menuArray} />
+            </div>
         </div>
     )
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import EvolutionBg from '../../images/cardBg/evo_bg.png'
 import AsiaBg from '../../images/cardBg/asia_bg.png'
 import PragmaticBg from '../../images/cardBg/prag_bg.png'
@@ -6,34 +6,34 @@ import DgBg from '../../images/cardBg/dg_bg.png'
 import SexyBg from '../../images/cardBg/sexy_bg.png'
 import BigBg from '../../images/cardBg/big_bg.png'
 import WinnerBg from '../../images/cardBg/winner_bg.png'
+import CardBg from '../../images/cardBg/card_bg.png'
+import CardBgHighlight from '../../images/cardBg/card_bg_highlight.png'
 
 const LiveCasinoBanner = () => {
 
-    const cardClass = "relative flex justify-end w-300px h-185px border border-gray-afafaf rounded-lg shadow-plain1 transition bg-gradient-to-br from-white via-white to-gray-500 cursor-pointer border border-gray-afafaf"
-
-    const [selectedTab, setSelectedTab] = useState()
+    const cardClass = "group relative flex justify-end w-300px h-185px border border-gray-afafaf rounded-lg shadow-plain1 transition cursor-pointer border border-gray-afafaf"
 
     const gamesArray = [
-        { id: 0, background: EvolutionBg, color: "bg-teal-r4eb2ba", btnText: "게임시작", class: "" },
-        { id: 1, background: AsiaBg, color: "bg-blue-r3384ca", btnText: "게임시작", class: "" },
-        { id: 2, background: PragmaticBg, color: "bg-purple-d03ab7", btnText: "게임시작", class: "" },
-        { id: 3, background: DgBg, color: "bg-orange-e39e90", btnText: "게임시작", class: "" },
-        { id: 4, background: SexyBg, color: "bg-red-db4a4a", btnText: "게임시작", class: "" },
-        { id: 5, background: BigBg, color: "bg-yellow-e3ba3c", btnText: "게임시작", class: "" },
-        { id: 6, background: WinnerBg, color: "bg-gray-b2b2b2", btnText: "준비중", class: "" },
-        { id: 7, background: WinnerBg, color: "bg-gray-b2b2b2", btnText: "준비중", class: "" },
+        { id: 0, img: EvolutionBg, color: "bg-teal-r4eb2ba", btnText: "게임시작", class: "" },
+        { id: 1, img: AsiaBg, color: "bg-blue-r3384ca", btnText: "게임시작", class: "" },
+        { id: 2, img: PragmaticBg, color: "bg-purple-d03ab7", btnText: "게임시작", class: "" },
+        { id: 3, img: DgBg, color: "bg-orange-e39e90", btnText: "게임시작", class: "" },
+        { id: 4, img: SexyBg, color: "bg-red-db4a4a", btnText: "게임시작", class: "" },
+        { id: 5, img: BigBg, color: "bg-yellow-e3ba3c", btnText: "게임시작", class: "" },
+        { id: 6, img: WinnerBg, color: "bg-gray-b2b2b2", btnText: "준비중", class: "" },
+        { id: 7, img: WinnerBg, color: "bg-gray-b2b2b2", btnText: "준비중", class: "" },
     ];
 
     function CardList({ items }) {
         return items.map(item => (
             <div 
                 key={item.id} 
-                className={`${cardClass} ${item.id !== 6 && item.id !== 7 && "hover:from-blue-cardGradLight hover:to-blue-cardGradDark"}`} 
-                onMouseEnter={() => setSelectedTab(item.id)}
-                onMouseLeave={() => setSelectedTab(false)}
+                className={`${cardClass}`} 
             >
-                <img src={item.background} alt="background" />
-                <div className={`absolute left-0 bottom-0 ml-20px mb-19px w-85px h-34px rounded-full flex items-center justify-center text-white font-spoqaBold text-14px pt-px ${item.color} ${selectedTab === item.id && item.id !== 6 && item.id !== 7 ? "shadow-plain3" : item.class}`}>{item.btnText}</div>
+                <img className="z-20 -mb-px" src={item.img} alt="background" />
+                <div className="absolute group-hover:opacity-0"><img src={CardBg} alt="background" /></div>
+                <div className={`absolute opacity-0 ${item.id !== 6 && item.id !== 7 && "group-hover:opacity-100"}`}><img src={CardBgHighlight} alt="background" /></div>
+                <div className={`${item.id !== 6 && item.id !== 7 && "group-hover:shadow-plain3 "} absolute z-20 left-0 bottom-0 ml-19px mb-19px w-85px h-34px rounded-full flex items-center justify-center text-white font-spoqaBold text-14px pt-px ${item.color}`}>{item.btnText}</div>
             </div>
         ));
     }

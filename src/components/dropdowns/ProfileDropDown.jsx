@@ -41,7 +41,7 @@ const ProfileDropDown = ({setAuth}) => {
                     <img className="h-auto w-10 bg-white rounded-full flex items-center justify-center" src={selectedTab === item.id ? item.iconHighlight : item.icon} alt="icon"></img>
                 </div>
                 <div className="w-full flex justify-center mr-3">                
-                    <label className={`${selectedTab === item.id ? "text-white" : "text-gray-subNavbar"} font-spoqaBold text-14px cursor-pointer`}>{item.text}</label>
+                    <label className={`${selectedTab === item.id ? "text-white" : "text-gray-subNavbar"} font-spoqaBold text-14px cursor-pointer tracking-tight`}>{item.text}</label>
                 </div>
             </button>
         ));
@@ -49,13 +49,13 @@ const ProfileDropDown = ({setAuth}) => {
 
     return (
         <div className="relative flex flex-col items-center bg-white shadow-plain rounded-3xl w-224px h-388px p-2px -mt-5px -mr-72px">
-            <div class="absolute top-0 -mt-2 ml-2 w-4 overflow-hidden inline-block">
-                <div class="h-2 w-2 bg-white rotate-45 transform origin-bottom-left shadow"></div>
+            <div className="absolute top-0 -mt-2 ml-2 w-4 overflow-hidden inline-block">
+                <div className="h-2 w-2 bg-white rotate-45 transform origin-bottom-left shadow"></div>
             </div>
             <div className="w-full h-128px bg-blue-e8f3fd rounded-3xl flex items-center flex-col pt-24px">
                 <img className="h-46px object-none ml-6px" src={LevelOne} alt="level_one"/>
-                <span className="text-gray-r393e41 text-12px font-robotoBold">LEVEL1</span>
-                <div className="">
+                <span className="text-gray-r393e41 text-12px font-roboto font-bold">LEVEL1</span>
+                <div className="tracking-tight">
                     <span className="text-blue-r1ca7ec font-spoqaBold text-16px">마이마이프로틴화이팅</span>
                     <span className="text-gray-a4b1b4 font-spoqaBold text-16px">님</span>
                 </div>

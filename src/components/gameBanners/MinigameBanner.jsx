@@ -1,15 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 import MinigameBanner1 from '../../images/gameBanner/minigame_banner_1.png'
 import MinigameBanner2 from '../../images/gameBanner/minigame_banner_2.png'
 import MinigameBanner3 from '../../images/gameBanner/minigame_banner_3.png'
 import MinigameBanner4 from '../../images/gameBanner/minigame_banner_4.png'
+import CardBg from '../../images/cardBg/card_bg_long.png'
+import CardBgHighlight from '../../images/cardBg/card_bg_long_highlight.png'
 
 const MinigameBanner = () => {
-
-    const cardClass = "relative flex justify-end w-620px h-184px border border-gray-afafaf rounded-lg shadow-plain1 transition bg-gradient-to-br from-white via-white to-gray-500 cursor-pointer border border-gray-afafaf"
-    const cardSelectedClass = "relative flex justify-end w-620px h-184px border border-gray-afafaf rounded-lg shadow-plain1 transition bg-gradient-to-r from-blue-cardGradLight to-blue-cardGradDark cursor-pointer"
-
-    const [selectedTab, setSelectedTab] = useState()
 
     const gamesArray = [
         { id: 0, background: MinigameBanner1, color: "bg-purple-d03ab7", btnText: "게임시작", class: "" },
@@ -22,12 +19,12 @@ const MinigameBanner = () => {
         return items.map(item => (
             <div 
                 key={item.id} 
-                className={selectedTab === item.id ? cardSelectedClass : cardClass} 
-                onMouseEnter={() => setSelectedTab(item.id)}
-                onMouseLeave={() => setSelectedTab(false)}
+                className="relative group flex justify-end w-620px h-185px border border-gray-afafaf rounded-lg shadow-plain1 transition cursor-pointer"
             >
-                <img src={item.background} alt="background" />
-                <div className={`absolute left-0 bottom-0 ml-20px mb-20px w-115px h-34px rounded-full flex items-center justify-center text-white font-spoqaBold text-14px ${item.color} ${selectedTab === item.id && "shadow-plain3"}`}>{item.btnText}</div>
+                <img className="z-20" src={item.background} alt="background" />
+                <div className="absolute group-hover:opacity-0 rounded-lg"><img src={CardBg} alt="background" /></div>
+                <div className="absolute opacity-0 group-hover:opacity-100 rounded-lg"><img src={CardBgHighlight} alt="background" /></div>
+                <div className={`absolute left-0 bottom-0 ml-20px mb-20px w-115px h-34px rounded-full flex items-center justify-center text-white font-spoqaBold text-14px group-hover:shadow-plain3 ${item.color}`}>{item.btnText}</div>
             </div>
         ));
     }

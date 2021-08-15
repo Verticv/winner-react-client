@@ -62,6 +62,7 @@ module.exports = {
         '66px': '66px',
         '71px': '71px',
         '72px': '72px',
+        '73px': '73px',
         '74px': '74px',
         '75px': '75px',
         '79px': '79px',
@@ -108,6 +109,7 @@ module.exports = {
         '250px': '250px',
         '254px': '254px',
         '265px': '265px',
+        '275px': '275px',
         '297px': '297px',
         '300px': '300px',
         '305px': '305px',
@@ -124,6 +126,7 @@ module.exports = {
         '388px': '388px',
         '400px': '400px',
         '406px': '406px',
+        '407px': '407px',
         '466px': '466px',
         '480px': '480px',
         '500px': '500px',
@@ -138,7 +141,7 @@ module.exports = {
         '840px': '840px'
        },
       boxShadow: {
-        plain: '0 0px 5px 0 rgba(0, 0, 0, 0.2), 0 4px 4px 0 rgba(0, 0, 0, 0.06)',
+        plain: '0 0px 5px 0 rgba(0, 0, 0, 0.5), 0 4px 4px 0 rgba(0, 0, 0, 0.06)',
         plain1: '0 4px 3.5px 0px rgba(0, 0, 0, 0.25)',
         plain2: 'inset 1px 1px 1px 0px rgba(0, 0, 0, 0.2)',
         plain3: '1px 1px 2px 0px rgba(0, 0, 0, 0.3)',
@@ -191,7 +194,8 @@ module.exports = {
           cccccc: '#cccccc',
           r424a55: '#424a55',
           r536073: '#536073',
-          d8d8d8: '#d8d8d8'
+          d8d8d8: '#d8d8d8',
+          r909090: '#909090'
         },
         red: {
           notification: '#ed2f59',

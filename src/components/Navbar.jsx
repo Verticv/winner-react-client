@@ -58,7 +58,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
                     setSelectedTab(item.id)
                 }}
             >
-                <span className="cursor-pointer font-spoqaBold text-16px tracking-tight">{item.text}</span>
+                <span className="cursor-pointer font-spoqaBold text-16px tracking-tight mt-px">{item.text}</span>
                 <div className={selectedTab === item.id ? selectedLineClass : lineClass}></div>
             </button>
         ));
@@ -86,10 +86,11 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
 
     const WalletButton = (
         <div className="flex items-center space-x-10px h-40px">
-            <div className="flex flex-col items-end -space-y-1">
-                <div className="space-x-2px">
-                    <label className="text-blue-r2087f0 cursor-pointer font-spoqaMedium">₩</label>
-                    <label className="text-blue-r2087f0 cursor-pointer font-roboto">100,000 원</label>
+            <div className="flex flex-col items-end -space-y-6px">
+                <div className="">
+                    <label className="text-blue-r2087f0 cursor-pointer font-spoqaMedium mr-3px">₩</label>
+                    <label className="text-blue-r2087f0 cursor-pointer font-roboto">100,000</label>
+                    <label className="text-blue-r2087f0 cursor-pointer font-spoqaMedium">원</label>
                 </div>
                 <label className="text-orange-ff7e00 cursor-pointer font-roboto">12,500 P</label>
             </div>
@@ -117,8 +118,8 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
     const InboxButton = (
         <button className="relative flex items-center justify-center text-white h-40px w-40px rounded-full bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2">
             <img src={InboxIcon} alt="inbox_icon" />
-            <div className="absolute flex items-center justify-center w-20px h-20px bg-red-notification top-0 right-0 -mr-1 -mt-1 rounded-full shadow-2xl">
-                <label className="text-sm">1</label>
+            <div className="absolute flex items-center justify-center w-22px h-22px bg-red-notification top-0 right-0 -mr-1 -mt-1 rounded-full shadow-plain5">
+                <label className="text-12px font-roboto mt-2px ml-px">1</label>
             </div>
         </button>
     )

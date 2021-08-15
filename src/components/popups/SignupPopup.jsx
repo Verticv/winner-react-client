@@ -33,7 +33,7 @@ const SignupPopup = ({setAuth, setPopupOpen}) => {
                 onBlur={(e) => setSelectedInput(false)}
                 className="flex w-full text-gray-r393e41 font-spoqaMedium text-16px outline-none h-full justify-between items-center tracking-minus05" 
             >
-                <label>{selectedCarrier}</label>
+                <label className="ml-10px">{selectedCarrier}</label>
                 <img className="w-16px h-10px object-none mr-20px" src={DownArrowIcon} alt="arrow" /> 
             </div>
         </div>
@@ -47,79 +47,112 @@ const SignupPopup = ({setAuth, setPopupOpen}) => {
                 onBlur={(e) => setSelectedInput(false)}
                 className="flex w-full text-gray-r393e41 font-spoqaMedium text-16px outline-none h-full justify-between items-center tracking-minus05" 
             >
-                <label>{selectedBank}</label>
+                <label className="ml-10px">{selectedBank}</label>
                 <img className="w-16px h-10px object-none mr-20px" src={DownArrowIcon} alt="arrow" /> 
             </div>
         </div>
     )
 
     const carrierDropdown = (
-        <div className="flex flex-col items-center justify-center w-170px py-10px bg-white rounded-lg shadow-plain text-gray-r393e41 font-spoqaMedium text-16px">
+        <div className="flex flex-col items-center justify-center w-170px py-10px bg-white rounded-lg shadow-plain5 text-gray-r393e41 font-spoqaMedium text-16px">
             <button className={dropDownCellClass} onClick={() => setSelectedCarrier("SKT")}>
                 SKT
             </button>
             <button className={dropDownCellClass} onClick={() => setSelectedCarrier("KT")}>
                 KT
             </button>
-            <button className={dropDownCellClass} onClick={() => setSelectedCarrier("LGU")}>
-                LGU
+            <button className={dropDownCellClass} onClick={() => setSelectedCarrier("LGU+")}>
+                LGU+
             </button>
         </div>
     )
 
     const bankDropdown = (
-        <div className="flex flex-col w-170px h-170px py-10px bg-white rounded-lg shadow-plain text-gray-r393e41 font-spoqaMedium text-16px overflow-y-scroll overflow-x-hidden">
-            <button className={dropDownCellClass} onClick={() => setSelectedBank("국민은행")}>
-                KB 국민은행
+        <div className="flex flex-col w-170px h-170px py-10px bg-white rounded-lg shadow-plain5 text-gray-r393e41 font-spoqaMedium text-16px overflow-y-scroll overflow-x-hidden">
+            <button className={dropDownCellClass} onClick={() => setSelectedBank("KEB하나은행")}>
+                KEB하나은행
+            </button>
+            <button className={dropDownCellClass} onClick={() => setSelectedBank("제주은행")}>
+                제주은행
+            </button>
+            <button className={dropDownCellClass} onClick={() => setSelectedBank("전북은행")}>
+                전북은행
+            </button>
+            <button className={dropDownCellClass} onClick={() => setSelectedBank("우체국")}>
+                우체국
             </button>
             <button className={dropDownCellClass} onClick={() => setSelectedBank("우리은행")}>
                 우리은행
             </button>
+            <button className={dropDownCellClass} onClick={() => setSelectedBank("외환은행")}>
+                외환은행
+            </button>
+            <button className={dropDownCellClass} onClick={() => setSelectedBank("아메리카")}>
+                아메리카
+            </button>
+            <button className={dropDownCellClass} onClick={() => setSelectedBank("씨티은행")}>
+                씨티은행
+            </button>
+            <button className={dropDownCellClass} onClick={() => setSelectedBank("신협")}>
+                신협
+            </button>
             <button className={dropDownCellClass} onClick={() => setSelectedBank("신한은행")}>
                 신한은행
             </button> 
-            <button className={dropDownCellClass} onClick={() => setSelectedBank("하나은행")}>
-                KEB 하나은행
+            <button className={dropDownCellClass} onClick={() => setSelectedBank("수협")}>
+                수협
+            </button> 
+            <button className={dropDownCellClass} onClick={() => setSelectedBank("새마을금고")}>
+                새마을금고
             </button>
-            <button className={dropDownCellClass} onClick={() => setSelectedBank("제일은행")}>
-                SC 제일은행
+            <button className={dropDownCellClass} onClick={() => setSelectedBank("상호저축은행")}>
+                상호저축은행
             </button>
-            <button className={dropDownCellClass} onClick={() => setSelectedBank("씨티뱅크")}>
-                CITI 씨티뱅크
-            </button>
-            <button className={dropDownCellClass} onClick={() => setSelectedBank("외환은행")}>
-                KEB 외환은행
-            </button>
-            <button className={dropDownCellClass} onClick={() => setSelectedBank("대구은행")}>
-                DGB 대구은행
+            <button className={dropDownCellClass} onClick={() => setSelectedBank("산업은행")}>
+                산업은행
             </button>
             <button className={dropDownCellClass} onClick={() => setSelectedBank("부산은행")}>
-                BNK 부산은행
+                부산은행
+            </button>
+            <button className={dropDownCellClass} onClick={() => setSelectedBank("미즈호")}>
+                미즈호
+            </button>
+            <button className={dropDownCellClass} onClick={() => setSelectedBank("미쓰비시")}>
+                미쓰비시
+            </button>
+            <button className={dropDownCellClass} onClick={() => setSelectedBank("도이치")}>
+                도이치
+            </button>
+            <button className={dropDownCellClass} onClick={() => setSelectedBank("대구은행")}>
+                대구은행
+            </button>
+            <button className={dropDownCellClass} onClick={() => setSelectedBank("농협")}>
+                농협
+            </button>
+            <button className={dropDownCellClass} onClick={() => setSelectedBank("기업은행")}>
+                기업은행
+            </button>
+            <button className={dropDownCellClass} onClick={() => setSelectedBank("국민은행")}>
+                국민은행
             </button>
             <button className={dropDownCellClass} onClick={() => setSelectedBank("광주은행")}>
                 광주은행
             </button>
             <button className={dropDownCellClass} onClick={() => setSelectedBank("경남은행")}>
-                BNK 경남은행
+                경남은행
             </button>
-            <button className={dropDownCellClass} onClick={() => setSelectedBank("농협은행")}>
-                NH 농협은행
+            <button className={dropDownCellClass} onClick={() => setSelectedBank("SC제일은행")}>
+                SC제일은행
             </button>
-            <button className={dropDownCellClass} onClick={() => setSelectedBank("수협은행")}>
-                SH 수협은행
+            <button className={dropDownCellClass} onClick={() => setSelectedBank("JP모간")}>
+                JP모간
             </button>
-            <button className={dropDownCellClass} onClick={() => setSelectedBank("기업은행")}>
-                IBK 기업은행
+            <button className={dropDownCellClass} onClick={() => setSelectedBank("HSBC")}>
+                HSBC
             </button>
-            <button className={dropDownCellClass} onClick={() => setSelectedBank("신협")}>
-                신협
-            </button>
-            <button className={dropDownCellClass} onClick={() => setSelectedBank("EVER RICH")}>
-                EVER RICH
-            </button>
-            <button className={dropDownCellClass} onClick={() => setSelectedBank("새마을금고")}>
-                MG 새마을금고
-            </button>
+            <button className={dropDownCellClass} onClick={() => setSelectedBank("ABN암로")}>
+                ABN암로
+            </button>      
         </div>
     )
 
@@ -171,6 +204,7 @@ const SignupPopup = ({setAuth, setPopupOpen}) => {
                                         className="w-full text-gray-r393e41 font-spoqaMedium text-16px outline-none" 
                                         onFocus={(e) => setSelectedInput(1)}
                                         onBlur={(e) => setSelectedInput(false)}
+                                        type="password"
                                     />
                                     <div className={`${selectedInput === 1 ? "border-blue-r1ca7ec" : "border-gray-bebebe"} border-b w-full`} />
                                 </div>
@@ -186,6 +220,7 @@ const SignupPopup = ({setAuth, setPopupOpen}) => {
                                         className="w-full text-gray-r393e41 font-spoqaMedium text-16px outline-none" 
                                         onFocus={(e) => setSelectedInput(2)}
                                         onBlur={(e) => setSelectedInput(false)}
+                                        type="password"
                                     />
                                     <div className={`${selectedInput === 2 ? "border-blue-r1ca7ec" : "border-gray-bebebe"} border-b w-full`} />
                                 </div>
@@ -218,7 +253,7 @@ const SignupPopup = ({setAuth, setPopupOpen}) => {
                             </div>
                             <div className="w-full space-y-2">
                                 <input 
-                                    className="w-full text-gray-r393e41 font-spoqaMedium text-16px outline-none placeholder-gray-bebebe"
+                                    className="w-full text-gray-r393e41 font-spoqaMedium text-16px outline-none placeholder-gray-bebebe ml-10px"
                                     placeholder="휴대폰번호(숫자만 입력)"
                                     onFocus={(e) => {
                                         e.target.placeholder = ""
@@ -237,7 +272,7 @@ const SignupPopup = ({setAuth, setPopupOpen}) => {
                             <Title text="추천인 아이디" />
                             <div className="w-full space-y-2">
                                 <input 
-                                    className="w-full text-gray-r393e41 font-spoqaMedium text-16px outline-none placeholder-gray-bebebe" 
+                                    className="w-full text-gray-r393e41 font-spoqaMedium text-16px outline-none placeholder-gray-bebebe ml-10px" 
                                     placeholder="가입코드"
                                     onFocus={(e) => {
                                         e.target.placeholder = ""
@@ -264,7 +299,7 @@ const SignupPopup = ({setAuth, setPopupOpen}) => {
                                     </div>
                                     <div className="w-full space-y-2">
                                         <input 
-                                            className="w-full text-gray-r393e41 font-spoqaMedium text-16px outline-none placeholder-gray-bebebe" 
+                                            className="w-full text-gray-r393e41 font-spoqaMedium text-16px outline-none placeholder-gray-bebebe ml-10px" 
                                             placeholder="예금주"
                                             onFocus={(e) => {
                                                 e.target.placeholder = ""
@@ -280,7 +315,7 @@ const SignupPopup = ({setAuth, setPopupOpen}) => {
                                 </div>
                                 <div className="w-full space-y-2 pl-150px pt-1">
                                     <input 
-                                        className="w-full text-gray-r393e41 font-spoqaMedium text-16px outline-none placeholder-gray-bebebe" 
+                                        className="w-full text-gray-r393e41 font-spoqaMedium text-16px outline-none placeholder-gray-bebebe ml-10px" 
                                         placeholder="계좌번호 (숫자만 입력)"
                                         onFocus={(e) => {
                                             e.target.placeholder = ""
@@ -299,7 +334,7 @@ const SignupPopup = ({setAuth, setPopupOpen}) => {
                     {/* BREAK */}
                     <div className="w-full px-75px flex flex-col items-center">
                         <div className="h-84px flex items-center">
-                            <button className="w-250px h-64px rounded-xl bg-gradient-to-r from-blue-gradLight to-blue-gradDark text-20px font-spoqaMedium text-white" onClick={() => setSignedUp(true)}>회원가입</button>
+                            <button className="w-275px h-64px rounded-xl bg-gradient-to-r from-blue-gradLight to-blue-gradDark text-20px font-spoqa pt-px text-white" onClick={() => setSignedUp(true)}>회원가입</button>
                         </div>
                         <div className="border-b w-full border-gray-bebebe" />
                         <div className="flex h-80px justify-center items-center">

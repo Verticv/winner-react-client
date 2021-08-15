@@ -9,9 +9,9 @@ const Slots = () => {
 
     const tabsArray = [
         { text: "슬롯잭팟", icon: SevenIcon, amount: "10,111,111", currency: "￦", iconClass: "object-none h-32px mt-29px ml-90px", textClass: "mt-30px ml-8px", id: 0 },
-        { text: "슬롯랭킹TOP", icon: TopRankIcon, amount: "22,222,222", currency: "￦", iconClass: "object-none h-40px mt-25px ml-71px", textClass: "mt-30px ml-11px", id: 1 },
+        { text: "슬롯랭킹TOP", icon: TopRankIcon, amount: "22,222,222", currency: "￦", iconClass: "object-none h-40px mt-25px ml-73px", textClass: "mt-29px ml-10px", id: 1 },
         { text: "오늘의출금TOP", icon: DailyTop, amount: "33,333,333", currency: "￦", iconClass: "object-none h-36px mt-27px ml-63px", textClass: "mt-28px ml-11px", id: 2 },
-        { text: "금주의출금TOP", icon: WeeklyTop, amount: "44,444,444", currency: "￦", iconClass: "object-none h-40px mt-25px ml-63px", textClass: "mt-28px ml-8px", id: 3 }
+        { text: "금주의출금TOP", icon: WeeklyTop, amount: "44,444,444", currency: "￦", iconClass: "object-none h-40px mt-25px ml-64px", textClass: "mt-28px ml-9px", id: 3 }
     ];
 
     function SlotList({ items }) {

@@ -14,7 +14,7 @@ const LoginPopup = ({setAuth, setPopupOpen}) => {
                 <SignupPopup />
             ) : (
                 <div className="relative w-630px h-513px bg-white rounded-xl shadow-popup">
-                    <button className="w-29 h-29 absolute top-0 right-0 mt-20px mr-19px cursor-pointer z-20" onClick={()=> setPopupOpen(false)}>
+                    <button className="w-29 h-29 absolute top-0 right-0 mt-21px mr-21px cursor-pointer z-20" onClick={()=> setPopupOpen(false)}>
                         <img src={CloseIcon} alt="close_icon" />
                     </button>
                     <div className="absolute w-630px -mt-79px flex justify-center">
@@ -37,12 +37,13 @@ const LoginPopup = ({setAuth, setPopupOpen}) => {
                                     setSelectedInput(false)
                                 }}
                             />
-                            <div className={`${selectedInput === 0 ? "border-blue-r1ca7ec" : "border-gray-bebebe"} border-b w-full`} />
+                            <div className={`${selectedInput === 0 ? "bg-blue-r1ca7ec h-2px -mb-px" : "bg-gray-bebebe h-px"} w-full`} />
                         </div>
                         <div className="w-480px">
                             <input 
                                 className="w-full h-12 text-25px text-center outline-none font-spoqaMedium tracking-tight placeholder-gray-bebebe pb-10px tracking-mimus05" 
                                 placeholder={"비밀번호"} 
+                                type="password"
                                 onFocus={(e) => {
                                     e.target.placeholder = ""
                                     setSelectedInput(1)
@@ -52,7 +53,7 @@ const LoginPopup = ({setAuth, setPopupOpen}) => {
                                     setSelectedInput(false)
                                 }}
                             />
-                            <div className={`${selectedInput === 1 ? "border-blue-r1ca7ec" : "border-gray-bebebe"} border-b w-full`} />
+                            <div className={`${selectedInput === 1 ? "bg-blue-r1ca7ec h-2px -mb-px" : "bg-gray-bebebe h-px"} w-full`} />
                         </div>
                         <div className="w-480px">
                             <button 

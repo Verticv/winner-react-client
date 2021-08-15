@@ -26,7 +26,7 @@ const MainPage = () => {
 
             <div className="flex flex-col items-start limit:items-center space-y-40px">
                 
-                <div className="flex flex-col w-default space-y-24px">
+                <div className="flex flex-col w-default space-y-26px">
                     <Slots />
                     <SubNavbar />
                 </div>
