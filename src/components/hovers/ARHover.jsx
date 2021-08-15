@@ -8,19 +8,19 @@ const ARHover = ({selection}) => {
     const [selectedGame, setSelectedGame] = useState()
 
     const gamesArray = [
-        { id: 0, background: AugBanner, highlight: AugBannerHighlight, color: "bg-blue-r3384ca text-white shadow-plain4", btnText: "게임시작", class: "bg-opacity-25" }
+        { id: 0, background: AugBanner, highlight: AugBannerHighlight, color: "bg-green-r7bd26a text-white shadow-plain4", btnText: "게임시작", class: "bg-opacity-25" }
     ];
 
     function GamesList({ items }) {
         return items.map(item => (
             <div 
                 key={item.id} 
-                className="relative w-305px h-206px" 
+                className="relative group w-362px h-206px cursor-pointer flex justify-center" 
                 onMouseEnter={() => setSelectedGame(item.id)} 
                 onMouseLeave={() => setSelectedGame(false)}
             >
-                <img className={`opacity-100 hover:opacity-0 w-305px h-206px object-cover object-left`} src={item.background} alt="game_image" />
-                <img className={`opacity-0 hover:opacity-100 absolute top-0 transition transition-opacity transform duration-200 w-305px h-206px object-cover object-left `} src={item.highlight} alt="game_image" />
+                <img className={`opacity-100 group-hover:opacity-0 w-362px h-206px object-none object-left transition transition-opacity transform duration-200`} src={item.background} alt="game_image" />
+                <img className={`opacity-0 group-hover:opacity-100 absolute w-362px h-206px top-0 transition transition-opacity transform duration-100  object-none object-left `} src={item.highlight} alt="game_image" />
                 <div className={`absolute bottom-0 font-spoqaBold text-12px w-80px h-25px ml-80px -mb-17px flex items-center justify-center rounded-full ${selectedGame === item.id ? item.color : "bg-white text-gray-r888889"}`}>게임시작</div>
             </div>
         ));

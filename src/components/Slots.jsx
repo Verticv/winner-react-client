@@ -1,17 +1,17 @@
 import React from 'react'
 import SlotBackground from '../images/slots/slot_background.png'
-import SevenIcon from '../images/slots/seven.png'
-import TopRankIcon from '../images/slots/top_rank.png'
-import DailyTop from '../images/slots/daily_top.png'
-import WeeklyTop from '../images/slots/weekly_top.png'
+import RankIcon1 from '../images/slots/rankicon_1.png'
+import RankIcon2 from '../images/slots/rankicon_2.png'
+import RankIcon3 from '../images/slots/rankicon_3.png'
+import RankIcon4 from '../images/slots/rankicon_4.png'
 
 const Slots = () => {
 
     const tabsArray = [
-        { text: "슬롯잭팟", icon: SevenIcon, amount: "10,111,111", currency: "￦", iconClass: "object-none h-32px mt-29px ml-90px", textClass: "mt-30px ml-8px", id: 0 },
-        { text: "슬롯랭킹TOP", icon: TopRankIcon, amount: "22,222,222", currency: "￦", iconClass: "object-none h-40px mt-25px ml-73px", textClass: "mt-29px ml-10px", id: 1 },
-        { text: "오늘의출금TOP", icon: DailyTop, amount: "33,333,333", currency: "￦", iconClass: "object-none h-36px mt-27px ml-63px", textClass: "mt-28px ml-11px", id: 2 },
-        { text: "금주의출금TOP", icon: WeeklyTop, amount: "44,444,444", currency: "￦", iconClass: "object-none h-40px mt-25px ml-64px", textClass: "mt-28px ml-9px", id: 3 }
+        { text: "슬롯잭팟", icon: RankIcon1, amount: "10,111,111", currency: "￦", iconClass: "object-none h-32px mt-29px ml-90px", textClass: "mt-30px ml-8px", id: 0 },
+        { text: "슬롯랭킹TOP", icon: RankIcon2, amount: "22,222,222", currency: "￦", iconClass: "object-none h-40px mt-25px ml-73px", textClass: "mt-29px ml-10px", id: 1 },
+        { text: "오늘의출금TOP", icon: RankIcon3, amount: "33,333,333", currency: "￦", iconClass: "object-none h-36px mt-27px ml-63px", textClass: "mt-28px ml-11px", id: 2 },
+        { text: "금주의출금TOP", icon: RankIcon4, amount: "44,444,444", currency: "￦", iconClass: "object-none h-40px mt-25px ml-64px", textClass: "mt-28px ml-9px", id: 3 }
     ];
 
     function SlotList({ items }) {
