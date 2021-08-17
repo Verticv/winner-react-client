@@ -1,7 +1,7 @@
 import React from "react";
 import jss from "jss";
-import background from "../images/bet/nav-item-bg.png";
-import backgroundSelected from "../images/bet/nav-item-bg-selected.png";
+const selectedBg = require("../imagesHold/bg_114.png").default;
+const bg = require("../imagesHold/bg_110.png").default
 
 export default function BetNavListItem({
     icon,
@@ -18,7 +18,11 @@ export default function BetNavListItem({
         position: absolute;
         top: 0;
         width: 125px;
-        background: url(${active ? backgroundSelected : background}) no-repeat;
+        background: url(${
+            active
+                ? selectedBg
+                : bg
+        }) no-repeat;
         margin-left: ${marginLeft};
     `,
         group: `
@@ -39,7 +43,7 @@ export default function BetNavListItem({
         max-width: 19px;
         min-height: 14px;
         width: 19px;
-        background: url(images/bg_111.png) no-repeat;
+        background: url(../imagesHold/bg_111.png) no-repeat;
         font-size: 12px; /* 12px / 16px = 0.75rem */
         letter-spacing: 0;
         line-height: 14px;
@@ -51,7 +55,6 @@ export default function BetNavListItem({
         display: block;
         margin: 0 auto;
         height: 23px;
-        width: 18px;
     `,
     };
     const { classes } = jss.createStyleSheet(styles).attach();

@@ -1,3 +1,4 @@
+import BetNav from "components/BetNav";
 import React from "react";
 
 // import football from "../imagesDump/bet/icon-ufc.png").default};
@@ -15,96 +16,7 @@ export default function BetPage() {
         <div className="group-2">
           <div className="col-24">
             <div className="wrapper-28">
-              <div className="bg-holder">
-                <div className="group-3">
-                  <img className="ico" src={require("../imagesHold/ico_7.png").default} alt="" width="22" height="21"/>
-                  <p className="text">즐겨찾기</p>
-                  <div className="group-4">
-                    <p className="text-2">80</p>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-holder-2">
-                <div className="group-5">
-                  <img className="ico-2" src={require("../imagesHold/ico_8.png").default} alt="" width="23" height="23"/>
-                  <p className="text-3">전체</p>
-                  <div className="group-6">
-                    <p className="text-4">80</p>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-holder-3">
-                <div className="group-7">
-                  <img className="ico-3" src={require("../imagesHold/ico_9.png").default} alt="" width="23" height="23"/>
-                  <p className="text-5">축구</p>
-                  <div className="group-8">
-                    <p className="text-6">80</p>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-holder-4">
-                <div className="group-9">
-                  <img className="ico-4" src={require("../imagesHold/ico_10.png").default} alt="" width="22" height="22"/>
-                  <p className="text-7">야구</p>
-                  <div className="group-10">
-                    <p className="text-8">80</p>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-holder-5">
-                <div className="group-11">
-                  <img className="ico-5" src={require("../imagesHold/ico_11.png").default} alt="" width="22" height="22"/>
-                  <p className="text-9">농구</p>
-                  <div className="group-12">
-                    <p className="text-10">80</p>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-holder-6">
-                <div className="group-13">
-                  <img className="ico-6" src={require("../imagesHold/ico_12.png").default} alt="" width="22" height="22"/>
-                  <p className="text-11">배구</p>
-                  <div className="group-14">
-                    <p className="text-12">80</p>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-holder-7">
-                <div className="group-15">
-                  <img className="ico-7" src={require("../imagesHold/ico_13.png").default} alt="" width="26" height="23"/>
-                  <p className="text-13">아이스하키</p>
-                  <div className="group-16">
-                    <p className="text-14">80</p>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-holder-8">
-                <div className="group-17">
-                  <img className="layer" src={require("../imagesHold/image_27.png").default} alt="" width="22" height="22"/>
-                  <p className="text-15">테니스</p>
-                  <div className="group-18">
-                    <p className="text-16">80</p>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-holder-9">
-                <div className="group-19">
-                  <img className="ico-8" src={require("../imagesHold/ico_14.png").default} alt="" width="23" height="23"/>
-                  <p className="text-17">핸드볼</p>
-                  <div className="group-20">
-                    <p className="text-18">80</p>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-holder-10">
-                <div className="ufc">
-                  <img className="ico-9" src={require("../imagesHold/ico_15.png").default} alt="" width="18" height="23"/>
-                  <p className="ufc-2">UFC</p>
-                  <div className="group-21">
-                    <p className="text-19">80</p>
-                  </div>
-                </div>
-              </div>
+            <BetNav />
             </div>
             <div className="group-22">
               <div className="ico-10"></div>
