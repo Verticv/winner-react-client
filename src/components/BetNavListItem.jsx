@@ -18,11 +18,7 @@ export default function BetNavListItem({
         position: absolute;
         top: 0;
         width: 125px;
-        background: url(${
-            active
-                ? selectedBg
-                : bg
-        }) no-repeat;
+        background: url(${active ? selectedBg : bg}) no-repeat;
         margin-left: ${marginLeft};
     `,
         group: `
@@ -34,7 +30,7 @@ export default function BetNavListItem({
         text: `
         display: block;
         margin: 7px 0 0;
-        color: #bebebe;
+        ${active ? "color: #000000;" : "color: #bebebe;"}
         font-weight: 900;
         font-size: 12px;
     `,
@@ -48,13 +44,14 @@ export default function BetNavListItem({
         letter-spacing: 0;
         line-height: 14px;
         text-align: center;
-        color: #bebebe;
+        ${active ? "color: #000000;" : "color: #bebebe;"}
         font-weight: 900;
     `,
         icon: `
         display: block;
         margin: 0 auto;
         height: 23px;
+        ${active ? "filter: invert(1);" : ""}
     `,
     };
     const { classes } = jss.createStyleSheet(styles).attach();
