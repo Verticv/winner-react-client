@@ -1,4 +1,5 @@
 import BetNav from "components/BetNav";
+import SelectLayoutButtons from "components/SelectLayoutButtons";
 import React from "react";
 
 // import football from "../imagesDump/bet/icon-ufc.png").default};
@@ -18,28 +19,10 @@ export default function BetPage() {
             <div className="wrapper-28">
             <BetNav />
             </div>
-            <div className="group-22">
-              <div className="ico-10"></div>
-              <p className="football">축구</p>
-              <div className="group-23">
-                <p className="text-20">80</p>
-              </div>
-            </div>
           </div>
           <div className="btn">
             <div className="row-28">
-              <div className="bg-holder-11">
-                <div className="group-24">
-                  <img className="bg" src={require("../imagesHold/bg_136.png").default} alt="" width="16" height="16"/>
-                  <p className="text-21">싱글뷰</p>
-                </div>
-              </div>
-              <div className="bg-holder-12">
-                <div className="group-25">
-                  <img className="ico-11" src={require("../imagesHold/ico_19.png").default} alt="" width="16" height="16"/>
-                  <p className="text-22">멀티뷰</p>
-                </div>
-              </div>
+                <SelectLayoutButtons />
             </div>
             <div className="row-32">
               <div className="bg-holder-13">
@@ -138,7 +121,7 @@ export default function BetPage() {
               <div className="line-4"></div>
               <p className="text-37">+</p>
               <p className="text-38">23</p>
-              <img className="gra" src={require("../imagesHold/gra.png").default} alt="" width="31" height="145"/>
+              {/* <img className="gra" src={require("../imagesHold/gra.png").default} alt="" width="31" height="145"/> */}
             </div>
             <div className="group-29">
               <div className="bg-holder-19">
@@ -238,7 +221,7 @@ export default function BetPage() {
                   <img className="line-10" src={require("../imagesHold/line_32.png").default} alt="" width="11" height="32"/>
                 </div>
               </div>
-              <img className="gra-2" src={require("../imagesHold/gra.png").default} alt="" width="31" height="145"/>
+              {/* <img className="gra-2" src={require("../imagesHold/gra.png").default} alt="" width="31" height="145"/> */}
             </div>
             <div className="group-33">
               <div className="col-21">
@@ -312,7 +295,7 @@ export default function BetPage() {
                 </div>
               </div>
               <div className="line-13"></div>
-              <img className="gra-3" src={require("../imagesHold/gra.png").default} alt="" width="31" height="145"/>
+              {/* <img className="gra-3" src={require("../imagesHold/gra.png").default} alt="" width="31" height="145"/> */}
             </div>
             <div className="group-35">
               <div className="col-20">
@@ -386,7 +369,7 @@ export default function BetPage() {
               <div className="line-17"></div>
               <p className="text-78">+</p>
               <p className="text-79">23</p>
-              <img className="gra-4" src={require("../imagesHold/gra.png").default} alt="" width="31" height="145"/>
+              {/* <img className="gra-4" src={require("../imagesHold/gra.png").default} alt="" width="31" height="145"/> */}
             </div>
             <div className="group-37">
               <div className="bg-holder-30">
