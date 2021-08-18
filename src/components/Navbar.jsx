@@ -118,7 +118,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
     const InboxButton = (
         <button className="relative flex items-center justify-center text-white h-40px w-40px rounded-full bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2">
             <img src={InboxIcon} alt="inbox_icon" />
-            <div className="absolute flex items-center justify-center w-22px h-22px bg-red-notification top-0 right-0 -mr-1 -mt-1 rounded-full shadow-plain5">
+            <div className="absolute flex items-center justify-center w-20px h-20px bg-red-notification top-0 right-0 -mr-6px -mt-3px rounded-full shadow-plain6">
                 <label className="text-12px font-roboto mt-2px ml-px">1</label>
             </div>
         </button>

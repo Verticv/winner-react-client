@@ -156,6 +156,7 @@ module.exports = {
         plain3: '1px 1px 2px 0px rgba(0, 0, 0, 0.3)',
         plain4: '1px 2px 2px 0px rgba(0, 0, 0, 0.25)',
         plain5: '0 4px 4px 0px rgba(0, 0, 0, 0.25)',
+        plain6: '2px 2px 2px 0px rgba(0, 0, 0, 0.4)',
         popup: '0 6px 10px 4px rgba(0, 0, 0, 0.3)',
         glow: '0 0 3px 2px rgba(0, 0, 0, 0.1)',
       },
