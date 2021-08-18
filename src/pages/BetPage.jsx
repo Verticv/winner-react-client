@@ -1,4 +1,5 @@
 import BetNav from "components/BetNav";
+import LiveMatchCards from "components/LiveMatchCards";
 import SelectLayoutButtons from "components/SelectLayoutButtons";
 import React from "react";
 
@@ -297,80 +298,7 @@ export default function BetPage() {
               <div className="line-13"></div>
               {/* <img className="gra-3" src={require("../imagesHold/gra.png").default} alt="" width="31" height="145"/> */}
             </div>
-            <div className="group-35">
-              <div className="col-20">
-                <div className="row-38">
-                  <div className="col-37">
-                    <div className="team-7">
-                      <div className="group-36">
-                        <img className="layer-19" src={require("../imagesHold/image_67.png").default} alt="" width="15" height="10"/>
-                      </div>
-                      <div className="bg-holder-28">
-                        <p className="h-4">h</p>
-                      </div>
-                      <p className="text-67">fc바로셀로나</p>
-                    </div>
-                    <img className="layer-20" src={require("../imagesHold/image_73.png").default} alt="" width="18" height="16"/>
-                    <div className="team-8">
-                      <img className="layer-21" src={require("../imagesHold/image_64.png").default} alt="" width="13" height="15"/>
-                      <div className="bg-holder-29">
-                        <img className="a-4" src={require("../imagesHold/a.png").default} alt="a" width="8" height="9" title="a"/>
-                      </div>
-                      <p className="text-68">레알마드리드</p>
-                    </div>
-                  </div>
-                  <div className="col-39">
-                    <div className="wrapper-51">
-                      <div className="text-69">
-                        <p>후반전 <span className="text-style">35</span></p>
-                      </div>
-                    </div>
-                    <img className="ico-21" src={require("../imagesHold/ico_31.jpg").default} alt="" width="33" height="33"/>
-                  </div>
-                  <div className="col-26">
-                    <p className="text-70">5000<span className="colore9ca4e">2</span></p>
-                    <p className="text-71">5000<span className="colore9ca4e">0</span></p>
-                  </div>
-                </div>
-                <div className="btn-5">
-                  <div className="row-12">
-                    <p className="text-72">fc바로셀로나</p>
-                    <p className="text-73">5.01</p>
-                  </div>
-                  <div className="wrapper-20">
-                    <div className="row-13">
-                      <img className="line-14" src={require("../imagesHold/line_31.png").default} alt="" width="11" height="32"/>
-                      <p className="text-74">4.05</p>
-                    </div>
-                    <div className="row-14">
-                      <p className="text-75">3.75</p>
-                      <p className="text-76">레알마드리드</p>
-                    </div>
-                    <img className="line-15" src={require("../imagesHold/line_32.png").default} alt="" width="11" height="32"/>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-5"></div>
-              <div className="f-4">
-                <div className="s-4">
-                  <img className="layer-22" src={require("../imagesHold/image_70.png").default} alt="" width="18" height="18"/>
-                  <img className="layer-23" src={require("../imagesHold/image_61.png").default} alt="" width="29" height="18"/>
-                  <p className="text-77">라리가</p>
-                </div>
-                <div className="e-4">
-                  <img className="c-4" src={require("../imagesHold/c.png").default} alt="" width="18" height="18"/>
-                  <div className="y-4"></div>
-                  <div className="r-4"></div>
-                  <img className="p-4" src={require("../imagesHold/p.png").default} alt="" width="14" height="17"/>
-                  <img className="g-3" src={require("../imagesHold/g.png").default} alt="" width="18" height="18"/>
-                </div>
-              </div>
-              <div className="line-16"></div>
-              <div className="line-17"></div>
-              <p className="text-78">+</p>
-              <p className="text-79">23</p>
-              {/* <img className="gra-4" src={require("../imagesHold/gra.png").default} alt="" width="31" height="145"/> */}
-            </div>
+            <LiveMatchCards />
             <div className="group-37">
               <div className="bg-holder-30">
                 <div className="group-38">
