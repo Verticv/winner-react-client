@@ -43,7 +43,7 @@ const Footer = () => {
                 {/* BREAK */}
                 <div className="flex flex-col space-y-18px w-297px pr-24px flex-shrink-0">
                     <img className="w-130px h-32px object-none" src={WinnerLogo} alt="winner logo" />
-                    <div className="grid grid-cols-3 w-265px gap-x-10px gap-y-2px">
+                    <div className="grid grid-cols-3 w-265px gap-x-13px gap-y-2px">
                         <button className={buttonClass}>문의하기</button>
                         <button className={buttonClass}>공지사항</button>
                         <button className={buttonClass}>자주하는질문</button>
