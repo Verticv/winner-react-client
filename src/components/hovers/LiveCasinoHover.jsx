@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import EvoBanner from '../../images/navbarHover/evo_banner.png'
 import EvoBannerHighlight from '../../images/navbarHover/evo_banner_highlight.png'
 import AsiaBanner from '../../images/navbarHover/asia_banner.png'
@@ -39,40 +39,33 @@ import Expand from 'react-expand-animated'
 
 const LiveCasinoHover = ({selection}) => {
 
-    const [selectedGame, setSelectedGame] = useState()
-    // const [selectedItem, setSelectedItem] = useState()
-
     const gamesArray = [
-        { id: 0, background: EvoBanner, highlight: EvoBannerHighlight, color: "bg-teal-r4eb2ba text-white shadow-plain4", btnText: "게임시작", class: "bg-opacity-25" },
-        { id: 1, background: AsiaBanner, highlight: AsiaBannerHighlight, color: "bg-blue-r3384ca text-white shadow-plain4", btnText: "게임시작", class: "bg-opacity-25" },
-        { id: 2, background: PragBanner, highlight: PragBannerHighlight, color: "bg-purple-d03ab7 text-white shadow-plain4", btnText: "게임시작", class: "bg-opacity-25" },
-        { id: 3, background: DgBanner, highlight: DgBannerHighlight, color: "bg-orange-e39e90 text-white shadow-plain4", btnText: "게임시작", class: "bg-opacity-25" },
-        { id: 4, background: SexyBanner, highlight: SexyBannerHighlight, color: "bg-red-db4a4a text-white shadow-plain4", btnText: "게임시작", class: "bg-opacity-25" },
-        { id: 5, background: BigBanner, highlight: BigBannerHighlight, color: "bg-yellow-e3ba3c text-white shadow-plain4", btnText: "게임시작", class: "bg-opacity-25" }
+        { id: 0, background: EvoBanner, highlight: EvoBannerHighlight, color: "group-hover:bg-teal-r4eb2ba", imgText: "에볼루션", btnText: "게임시작", class: "bg-opacity-25" },
+        { id: 1, background: AsiaBanner, highlight: AsiaBannerHighlight, color: "group-hover:bg-blue-r3384ca", imgText: "아시아게이밍", btnText: "게임시작", class: "bg-opacity-25" },
+        { id: 2, background: PragBanner, highlight: PragBannerHighlight, color: "group-hover:bg-purple-d03ab7", imgText: "프레그메틱플레이", btnText: "게임시작", class: "bg-opacity-25" },
+        { id: 3, background: DgBanner, highlight: DgBannerHighlight, color: "group-hover:bg-orange-e39e90", imgText: "드림게이밍", btnText: "게임시작", class: "bg-opacity-25" },
+        { id: 4, background: SexyBanner, highlight: SexyBannerHighlight, color: "group-hover:bg-red-db4a4a", imgText: "섹시게이밍", btnText: "게임시작", class: "bg-opacity-25" },
+        { id: 5, background: BigBanner, highlight: BigBannerHighlight, color: "group-hover:bg-yellow-e3ba3c", imgText: "빅게이밍", btnText: "게임시작", class: "bg-opacity-25" }
     ];
 
     const itemsArray = [
-        { id: 0, background: one, highlight: oneHighlight, icon: Subicon1, color: "text-submenu-r8b5f5a", btnText: "일인칭 바카라", },
-        { id: 1, background: two, highlight: twoHighlight, icon: Subicon2, color: "text-submenu-r4a6940", btnText: "일인칭 메가볼" },
-        { id: 2, background: three, highlight: threeHighlight, icon: Subicon3, color: "text-submenu-r72485c", btnText: "RNG 블랙잭" },
-        { id: 3, background: four, highlight: fourHighlight, icon: Subicon4, color: "text-submenu-r58508e", btnText: "RNG 룰렛" },
-        { id: 4, background: five, highlight: fiveHighlight, icon: Subicon5, color: "text-submenu-r5a6340", btnText: "일인칭 드림캐쳐" },
-        { id: 5, background: six, highlight: sixHighlight, icon: Subicon6, color: "text-submenu-r5a608b", btnText: "일인칭 라이트닝 룰렛" },
-        { id: 6, background: seven, highlight: sevenHighlight, icon: Subicon7, color: "text-submenu-r87409b", btnText: "일인칭 용호" },
-        { id: 7, background: eight, highlight: eightHighlight, icon: Subicon8, color: "text-submenu-r9e5959", btnText: "일인칭 탑카드" }
+        { id: 0, background: one, highlight: oneHighlight, icon: Subicon1, color: "text-submenu-r8b5f5a", btnText: "일인칭 바카라", customCss: "ml-42px mb-px" },
+        { id: 1, background: two, highlight: twoHighlight, icon: Subicon2, color: "text-submenu-r4a6940", btnText: "일인칭 메가볼", customCss: "ml-43px" },
+        { id: 2, background: three, highlight: threeHighlight, icon: Subicon3, color: "text-submenu-r72485c", btnText: "RNG 블랙잭", customCss: "ml-42px" },
+        { id: 3, background: four, highlight: fourHighlight, icon: Subicon4, color: "text-submenu-r58508e", btnText: "RNG 룰렛", customCss: "ml-43px" },
+        { id: 4, background: five, highlight: fiveHighlight, icon: Subicon5, color: "text-submenu-r5a6340", btnText: "일인칭 드림캐쳐", customCss: "ml-42px mb-px" },
+        { id: 5, background: six, highlight: sixHighlight, icon: Subicon6, color: "text-submenu-r5a608b", btnText: "일인칭 라이트닝 룰렛", customCss: "ml-43px" },
+        { id: 6, background: seven, highlight: sevenHighlight, icon: Subicon7, color: "text-submenu-r87409b", btnText: "일인칭 용호", customCss: "ml-42px" },
+        { id: 7, background: eight, highlight: eightHighlight, icon: Subicon8, color: "text-submenu-r9e5959", btnText: "일인칭 탑카드", customCss: "ml-42px" }
     ];
 
     function GamesList({ items }) {
         return items.map(item => (
-            <div 
-                key={item.id} 
-                className="group relative w-305px h-206px cursor-pointer" 
-                onMouseEnter={() => setSelectedGame(item.id)} 
-                onMouseLeave={() => setSelectedGame(false)}
-            >
-                <img className={`opacity-100 group-hover:opacity-0 w-305px h-206px object-none object-left transition transition-opacity transform duration-200`} src={item.background} alt="game_image" />
-                <img className={`opacity-0 group-hover:opacity-100 absolute top-0 w-305px h-206px object-none object-left transition transition-opacity transform duration-100`} src={item.highlight} alt="game_image" />
-                <div className={`absolute bottom-0 font-spoqaBold text-12px w-80px h-25px ml-80px -mb-17px flex items-center justify-center rounded-full ${selectedGame === item.id ? item.color : "bg-white text-gray-r888889"}`}>게임시작</div>
+            <div key={item.id} className="group relative w-305px h-206px cursor-pointer" >
+                <img className={`opacity-100 group-hover:opacity-0 w-305px h-206px object-none object-left`} src={item.background} alt="game_image" />
+                <img className={`opacity-0 group-hover:opacity-100 absolute top-0 w-305px h-206px object-none object-left`} src={item.highlight} alt="game_image" />
+                <div className="absolute bottom-0 h-20px w-156px right-0 flex items-center justify-center -mb-2px"><span className="ml-10px group-hover:text-black font-spoqaBold tracking-tight text-12px text-gray-r616161">{item.imgText}</span></div>
+                <div className={`absolute bottom-0 font-spoqaBold text-12px w-80px h-25px ml-80px -mb-17px flex items-center justify-center rounded-full bg-white text-gray-r888889 group-hover:text-white group-hover:shadow-plain4 ${item.color}`}>게임시작</div>
             </div>
         ));
     }
@@ -81,11 +74,11 @@ const LiveCasinoHover = ({selection}) => {
         return items.map(item => (
             <button key={item.id} className="relative group w-254px h-57px">
                 <div className="z-20 absolute h-57px flex items-center">
-                    <img className="ml-46px" src={item.icon} alt="icon" />
-                    <span className={`font-spoqaMedium ml-10px text-14px tracking-tight ${item.color}`}>{item.btnText}</span>
+                    <img className={item.customCss} src={item.icon} alt="icon" />
+                    <span className={`font-spoqaMedium ml-4px mt-px text-14px tracking-tight ${item.color}`}>{item.btnText}</span>
                 </div>
-                <img className={`z-10 group-hover:opacity-0 transition transition-opacity transform duration-200`} src={item.background} alt="game_image" />
-                <img className={`z-10 opacity-0 group-hover:opacity-100 absolute top-0 transition transition-opacity transform duration-100`} src={item.highlight} alt="game_image" />
+                <img className={`z-10 group-hover:opacity-0`} src={item.background} alt="game_image" />
+                <img className={`z-10 opacity-0 group-hover:opacity-100 absolute top-0`} src={item.highlight} alt="game_image" />
             </button>
         ));
     }

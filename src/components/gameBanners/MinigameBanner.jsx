@@ -11,7 +11,7 @@ const MinigameBanner = () => {
         { id: 0, background: MinigameBanner1, color: "bg-purple-d03ab7", btnText: "게임시작", class: "" },
         { id: 1, background: MinigameBanner2, color: "bg-blue-r77a4e0", btnText: "게임시작", class: "" },
         { id: 2, background: MinigameBanner3, color: "bg-orange-e39e90", btnText: "게임시작", class: "" },
-        { id: 3, background: MinigameBanner4, color: "bg-green-r7bd26a", btnText: "게임시작", class: "" }
+        { id: 3, background: MinigameBanner4, color: "bg-green-e3ba3c", btnText: "게임시작", class: "" }
     ];
 
     function CardList({ items }) {

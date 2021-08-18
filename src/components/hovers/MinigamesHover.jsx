@@ -14,10 +14,10 @@ const MinigamesHover = ({selection}) => {
     const [selectedGame, setSelectedGame] = useState()
 
     const gamesArray = [
-        { id: 0, background: Powerball, highlight: PowerballHighlight, color: "bg-purple-d03ab7 text-white shadow-plain4", btnText: "게임시작", class: "bg-opacity-25" },
-        { id: 1, background: PowerLadder, highlight: PowerLadderHighlight, color: "bg-blue-r3384ca text-white shadow-plain4", btnText: "게임시작", class: "bg-opacity-25" },
-        { id: 2, background: Speedkino, highlight: SpeedkinoHighlight, color: "bg-red-db4a4a text-white shadow-plain4", btnText: "게임시작", class: "bg-opacity-25" },
-        { id: 3, background: KinoLadder, highlight: KinoLadderHighlight, color: "bg-green-r7bd26a text-white shadow-plain4", btnText: "게임시작", class: "bg-opacity-25" }
+        { id: 0, background: Powerball, highlight: PowerballHighlight, imgText: "파워볼", color: "bg-purple-d03ab7 text-white shadow-plain4", btnText: "게임시작", class: "bg-opacity-25" },
+        { id: 1, background: PowerLadder, highlight: PowerLadderHighlight, imgText: "파워사다리", color: "bg-blue-r3384ca text-white shadow-plain4", btnText: "게임시작", class: "bg-opacity-25" },
+        { id: 2, background: Speedkino, highlight: SpeedkinoHighlight, imgText: "스피드키노", color: "bg-red-db4a4a text-white shadow-plain4", btnText: "게임시작", class: "bg-opacity-25" },
+        { id: 3, background: KinoLadder, highlight: KinoLadderHighlight, imgText: "키노사다리", color: "bg-green-e3ba3c text-white shadow-plain4", btnText: "게임시작", class: "bg-opacity-25" }
     ];
 
     function GamesList({ items }) {
@@ -30,6 +30,7 @@ const MinigamesHover = ({selection}) => {
             >
                 <img className={`opacity-100 group-hover:opacity-0 w-305px h-206px object-none object-left transition transition-opacity transform duration-200`} src={item.background} alt="game_image" />
                 <img className={`opacity-0 group-hover:opacity-100 absolute top-0 transition transition-opacity transform duration-100 w-305px h-206px object-none object-left `} src={item.highlight} alt="game_image" />
+                <div className="absolute bottom-0 h-20px w-170px right-0 flex items-center justify-center -mb-2px"><span className="group-hover:text-black font-spoqaBold tracking-tight text-12px text-gray-r616161">{item.imgText}</span></div>
                 <div className={`absolute bottom-0 font-spoqaBold text-12px w-80px h-25px ml-80px -mb-17px flex items-center justify-center rounded-full ${selectedGame === item.id ? item.color : "bg-white text-gray-r888889"}`}>게임시작</div>
             </div>
         ));

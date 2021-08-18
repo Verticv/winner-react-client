@@ -1,11 +1,13 @@
-import React, { useState, useRef, useCallback } from "react";
+import React, { useState, useRef, useCallback, useEffect } from "react";
 import { useOnClickOutside } from "../../helpers/functions";
 
 export default function DropDownControls({
     children,
     onClose,
     onClick,
-    buttonChild
+    buttonChild,
+    isDropdownOpen,
+    setDropdownOpen
 }) {
     const [open, setOpen] = useState(false);
     const ref = useRef();
@@ -16,6 +18,15 @@ export default function DropDownControls({
         }
     }, [onClose, open]);
 
+    useOnClickOutside(ref, handler);
+
+    useEffect(() => {
+        if (open && !isDropdownOpen && setDropdownOpen) {
+            setOpen(false)
+            setDropdownOpen(true)
+        }
+    }, [isDropdownOpen, open, setDropdownOpen])
+    
     useOnClickOutside(ref, handler);
 
     return (

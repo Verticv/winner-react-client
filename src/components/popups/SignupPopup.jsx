@@ -15,6 +15,8 @@ const SignupPopup = ({setAuth, setPopupOpen}) => {
     const [toLogin, setToLogin] = useState()
     const [selectedCarrier, setSelectedCarrier] = useState("통신사선택")
     const [selectedBank, setSelectedBank] = useState("은행선택")
+    const [isDropdownOpen, setDropdownOpen] = useState()
+
 
     const dropDownCellClass = "flex w-170px h-40px py-4px bg-white items-center hover:bg-blue-lightGradLight px-10px"
 
@@ -55,13 +57,22 @@ const SignupPopup = ({setAuth, setPopupOpen}) => {
 
     const carrierDropdown = (
         <div className="flex flex-col items-center justify-center w-170px py-10px bg-white rounded-lg shadow-plain5 text-gray-r393e41 font-spoqaMedium text-16px">
-            <button className={dropDownCellClass} onClick={() => setSelectedCarrier("SKT")}>
+            <button className={dropDownCellClass} onClick={() => {
+                setSelectedCarrier("SKT")
+                setDropdownOpen(false)
+            }}>
                 SKT
             </button>
-            <button className={dropDownCellClass} onClick={() => setSelectedCarrier("KT")}>
+            <button className={dropDownCellClass} onClick={() => {
+                setSelectedCarrier("KT")
+                setDropdownOpen(false)
+            }}>
                 KT
             </button>
-            <button className={dropDownCellClass} onClick={() => setSelectedCarrier("LGU+")}>
+            <button className={dropDownCellClass} onClick={() => {
+                setSelectedCarrier("LGU+")
+                setDropdownOpen(false)
+            }}>
                 LGU+
             </button>
         </div>
@@ -69,88 +80,172 @@ const SignupPopup = ({setAuth, setPopupOpen}) => {
 
     const bankDropdown = (
         <div className="flex flex-col w-170px h-170px py-10px bg-white rounded-lg shadow-plain5 text-gray-r393e41 font-spoqaMedium text-16px overflow-y-scroll overflow-x-hidden">
-            <button className={dropDownCellClass} onClick={() => setSelectedBank("KEB하나은행")}>
+            <button className={dropDownCellClass} onClick={() => {
+                setSelectedBank("KEB하나은행")
+                setDropdownOpen(false)
+            }}>
                 KEB하나은행
             </button>
-            <button className={dropDownCellClass} onClick={() => setSelectedBank("제주은행")}>
+            <button className={dropDownCellClass} onClick={() => {
+                setSelectedBank("제주은행")
+                setDropdownOpen(false)
+            }}>
                 제주은행
             </button>
-            <button className={dropDownCellClass} onClick={() => setSelectedBank("전북은행")}>
+            <button className={dropDownCellClass} onClick={() => {
+                setSelectedBank("전북은행")
+                setDropdownOpen(false)
+            }}>
                 전북은행
             </button>
-            <button className={dropDownCellClass} onClick={() => setSelectedBank("우체국")}>
+            <button className={dropDownCellClass} onClick={() => {
+                setSelectedBank("우체국")
+                setDropdownOpen(false)
+            }}>
                 우체국
             </button>
-            <button className={dropDownCellClass} onClick={() => setSelectedBank("우리은행")}>
+            <button className={dropDownCellClass} onClick={() => {
+                setSelectedBank("우리은행");
+                setDropdownOpen(false)
+            }}>
                 우리은행
             </button>
-            <button className={dropDownCellClass} onClick={() => setSelectedBank("외환은행")}>
+            <button className={dropDownCellClass} onClick={() => {
+                setSelectedBank("외환은행")
+                setDropdownOpen(false)
+            }}>
                 외환은행
             </button>
-            <button className={dropDownCellClass} onClick={() => setSelectedBank("아메리카")}>
+            <button className={dropDownCellClass} onClick={() => {
+                setSelectedBank("아메리카")
+                setDropdownOpen(false)
+            }}>
                 아메리카
             </button>
-            <button className={dropDownCellClass} onClick={() => setSelectedBank("씨티은행")}>
+            <button className={dropDownCellClass} onClick={() => {
+                setSelectedBank("씨티은행")
+                setDropdownOpen(false)
+            }}>
                 씨티은행
             </button>
-            <button className={dropDownCellClass} onClick={() => setSelectedBank("신협")}>
+            <button className={dropDownCellClass} onClick={() => {
+                setSelectedBank("신협")
+                setDropdownOpen(false)
+            }}>
                 신협
             </button>
-            <button className={dropDownCellClass} onClick={() => setSelectedBank("신한은행")}>
+            <button className={dropDownCellClass} onClick={() => {
+                setSelectedBank("신한은행")
+                setDropdownOpen(false)
+            }}>
                 신한은행
             </button> 
-            <button className={dropDownCellClass} onClick={() => setSelectedBank("수협")}>
+            <button className={dropDownCellClass} onClick={() => {
+                setSelectedBank("수협")
+                setDropdownOpen(false)
+            }}>
                 수협
             </button> 
-            <button className={dropDownCellClass} onClick={() => setSelectedBank("새마을금고")}>
+            <button className={dropDownCellClass} onClick={() => {
+                setSelectedBank("새마을금고")
+                setDropdownOpen(false)
+            }}>
                 새마을금고
             </button>
-            <button className={dropDownCellClass} onClick={() => setSelectedBank("상호저축은행")}>
+            <button className={dropDownCellClass} onClick={() => {
+                setSelectedBank("상호저축은행")
+                setDropdownOpen(false)
+            }}>
                 상호저축은행
             </button>
-            <button className={dropDownCellClass} onClick={() => setSelectedBank("산업은행")}>
+            <button className={dropDownCellClass} onClick={() => {
+                setSelectedBank("산업은행")
+                setDropdownOpen(false)
+            }}>
                 산업은행
             </button>
-            <button className={dropDownCellClass} onClick={() => setSelectedBank("부산은행")}>
+            <button className={dropDownCellClass} onClick={() => {
+                setSelectedBank("부산은행")
+                setDropdownOpen(false)
+            }}>
                 부산은행
             </button>
-            <button className={dropDownCellClass} onClick={() => setSelectedBank("미즈호")}>
+            <button className={dropDownCellClass} onClick={() => {
+                setSelectedBank("미즈호")
+                setDropdownOpen(false)
+            }}>
                 미즈호
             </button>
-            <button className={dropDownCellClass} onClick={() => setSelectedBank("미쓰비시")}>
+            <button className={dropDownCellClass} onClick={() => {
+                setSelectedBank("미쓰비시")
+                setDropdownOpen(false)
+            }}>
                 미쓰비시
             </button>
-            <button className={dropDownCellClass} onClick={() => setSelectedBank("도이치")}>
+            <button className={dropDownCellClass} onClick={() => {
+                setSelectedBank("도이치")
+                setDropdownOpen(false)
+            }}>
                 도이치
             </button>
-            <button className={dropDownCellClass} onClick={() => setSelectedBank("대구은행")}>
+            <button className={dropDownCellClass} onClick={() => {
+                setSelectedBank("대구은행")
+                setDropdownOpen(false)
+            }}>
                 대구은행
             </button>
-            <button className={dropDownCellClass} onClick={() => setSelectedBank("농협")}>
+            <button className={dropDownCellClass} onClick={() => {
+                setSelectedBank("농협")
+                setDropdownOpen(false)
+            }}>
                 농협
             </button>
-            <button className={dropDownCellClass} onClick={() => setSelectedBank("기업은행")}>
+            <button className={dropDownCellClass} onClick={() => {
+                setSelectedBank("기업은행")
+                setDropdownOpen(false)
+            }}>
                 기업은행
             </button>
-            <button className={dropDownCellClass} onClick={() => setSelectedBank("국민은행")}>
+            <button className={dropDownCellClass} onClick={() => {
+                setSelectedBank("국민은행")
+                setDropdownOpen(false)
+            }}>
                 국민은행
             </button>
-            <button className={dropDownCellClass} onClick={() => setSelectedBank("광주은행")}>
+            <button className={dropDownCellClass} onClick={() => {
+                setSelectedBank("광주은행")
+                setDropdownOpen(false)
+            }}>
                 광주은행
             </button>
-            <button className={dropDownCellClass} onClick={() => setSelectedBank("경남은행")}>
+            <button className={dropDownCellClass} onClick={() => {
+                setSelectedBank("경남은행")
+                setDropdownOpen(false)
+            }}>
                 경남은행
             </button>
-            <button className={dropDownCellClass} onClick={() => setSelectedBank("SC제일은행")}>
+            <button className={dropDownCellClass} onClick={() => {
+                setSelectedBank("SC제일은행")
+                setDropdownOpen(false)
+            }}>
                 SC제일은행
             </button>
-            <button className={dropDownCellClass} onClick={() => setSelectedBank("JP모간")}>
+            <button className={dropDownCellClass} onClick={() => {
+                setSelectedBank("JP모간")
+                setDropdownOpen(false)
+            }}>
                 JP모간
             </button>
-            <button className={dropDownCellClass} onClick={() => setSelectedBank("HSBC")}>
+            <button className={dropDownCellClass} onClick={() => {
+                setSelectedBank("HSBC")
+                setDropdownOpen(false)
+            }}>
                 HSBC
             </button>
-            <button className={dropDownCellClass} onClick={() => setSelectedBank("ABN암로")}>
+            <button className={dropDownCellClass} onClick={() => {
+                setSelectedBank("ABN암로")
+                setDropdownOpen(false)
+            }}>
                 ABN암로
             </button>      
         </div>
@@ -159,7 +254,7 @@ const SignupPopup = ({setAuth, setPopupOpen}) => {
     return (
         <>
             {toLogin ? (
-                <LoginPopup setAuth={setAuth}/>
+                <LoginPopup setAuth={setAuth} setPopupOpen={setPopupOpen}/>
             ) : isSignedUp ? (
                 <SignedUpPopup setToLogin={setToLogin} />
             ) : (
@@ -184,13 +279,13 @@ const SignupPopup = ({setAuth, setPopupOpen}) => {
                         <div className="w-full flex flex-col space-y-8px">
                             <div className="flex space-x-10px w-full">
                                 <Title text="아이디" />
-                                <div className="w-full space-y-2">
+                                <div className={`${selectedInput === 0 ? "space-y-7px" : "space-y-8px"} w-full `}>
                                     <input 
                                         className="w-full text-gray-r393e41 font-spoqaMedium text-16px outline-none" 
                                         onFocus={(e) => setSelectedInput(0)}
                                         onBlur={(e) => setSelectedInput(false)}
                                     />
-                                    <div className={`${selectedInput === 0 ? "border-blue-r1ca7ec" : "border-gray-bebebe"} border-b w-full`} />
+                                    <div className={`${selectedInput === 0 ? "bg-blue-r1ca7ec h-2px" : "bg-gray-bebebe h-px"} w-full`} />
                                 </div>
                             </div>
                             <span className="text-14px font-spoqaMedium text-gray-bebebe ml-150px tracking-minus05">영문, 숫자만 입력가능하며 최소 4자이상 입력하세요.</span>
@@ -199,14 +294,14 @@ const SignupPopup = ({setAuth, setPopupOpen}) => {
                         <div className="w-full flex flex-col space-y-8px mt-2px">
                             <div className="flex space-x-10px w-full">
                                 <Title text="비밀번호" />
-                                <div className="w-full space-y-2">
+                                <div className={`${selectedInput === 1 ? "space-y-7px" : "space-y-8px"} w-full `}>
                                     <input 
                                         className="w-full text-gray-r393e41 font-spoqaMedium text-16px outline-none" 
                                         onFocus={(e) => setSelectedInput(1)}
                                         onBlur={(e) => setSelectedInput(false)}
                                         type="password"
                                     />
-                                    <div className={`${selectedInput === 1 ? "border-blue-r1ca7ec" : "border-gray-bebebe"} border-b w-full`} />
+                                    <div className={`${selectedInput === 1 ? "bg-blue-r1ca7ec h-2px" : "bg-gray-bebebe h-px"} w-full`} />
                                 </div>
                             </div>
                             <span className="text-14px font-spoqaMedium text-gray-bebebe ml-150px tracking-minus05">영문 및 숫자를 1자 이상 반드시 포함하여 6~16자 내외로 입력해주세요. (특수문자 사용불가)</span>
@@ -215,14 +310,14 @@ const SignupPopup = ({setAuth, setPopupOpen}) => {
                         <div className="w-full flex flex-col space-y-8px mt-2px">
                             <div className="flex space-x-10px w-full">
                                 <Title text="환전 비밀번호" />
-                                <div className="w-full space-y-2">
+                                <div className={`${selectedInput === 2 ? "space-y-7px" : "space-y-8px"} w-full `}>
                                     <input 
                                         className="w-full text-gray-r393e41 font-spoqaMedium text-16px outline-none" 
                                         onFocus={(e) => setSelectedInput(2)}
                                         onBlur={(e) => setSelectedInput(false)}
                                         type="password"
                                     />
-                                    <div className={`${selectedInput === 2 ? "border-blue-r1ca7ec" : "border-gray-bebebe"} border-b w-full`} />
+                                    <div className={`${selectedInput === 2 ? "bg-blue-r1ca7ec h-2px" : "bg-gray-bebebe h-px"} w-full`} />
                                 </div>
                             </div>
                             <span className="text-14px font-spoqaMedium text-gray-bebebe ml-150px tracking-minus05">영문 및 숫자를 1자 이상 반드시 포함하여 4~8자 내외로 입력해주세요. (특수문자 사용불가)</span>
@@ -231,13 +326,13 @@ const SignupPopup = ({setAuth, setPopupOpen}) => {
                         <div className="w-full flex flex-col space-y-8px mt-2px">
                             <div className="flex space-x-10px w-full">
                                 <Title text="닉네임" />
-                                <div className="w-full space-y-2">
+                                <div className={`${selectedInput === 3 ? "space-y-7px" : "space-y-8px"} w-full `}>
                                     <input 
                                         className="w-full text-gray-r393e41 font-spoqaMedium text-16px outline-none" 
                                         onFocus={(e) => setSelectedInput(3)}
                                         onBlur={(e) => setSelectedInput(false)}
                                     />
-                                    <div className={`${selectedInput === 3 ? "border-blue-r1ca7ec" : "border-gray-bebebe"} border-b w-full`} />
+                                    <div className={`${selectedInput === 3 ? "bg-blue-r1ca7ec h-2px" : "bg-gray-bebebe h-px"} w-full`} />
                                 </div>
                             </div>
                             <span className="text-14px font-spoqaMedium text-gray-bebebe ml-150px tracking-minus05">한글, 영문, 숫자를 포함한 4~16자로 입력해주세요.</span>
@@ -246,12 +341,12 @@ const SignupPopup = ({setAuth, setPopupOpen}) => {
                         <div className="flex space-x-10px w-full mt-6px">
                             <Title text="휴대폰번호" />
                             <div className="w-170px flex-shrink-0 space-y-9px">
-                                <DropDownControls buttonChild={carrierButton} >
+                                <DropDownControls buttonChild={carrierButton} isDropdownOpen={isDropdownOpen} setDropdownOpen={setDropdownOpen}>
                                     {carrierDropdown}
                                 </DropDownControls>
-                                <div className={`${selectedInput === 4 ? "border-blue-r1ca7ec" : "border-gray-bebebe"} border-b w-full`} />
+                                <div className={`${selectedInput === 4 ? "bg-blue-r1ca7ec h-2px" : "bg-gray-bebebe h-px"} w-full`} />
                             </div>
-                            <div className="w-full space-y-2">
+                            <div className={`${selectedInput === 5 ? "space-y-7px" : "space-y-8px"} w-full `}>
                                 <input 
                                     className="w-full text-gray-r393e41 font-spoqaMedium text-16px outline-none placeholder-gray-bebebe ml-10px"
                                     placeholder="휴대폰번호(숫자만 입력)"
@@ -264,13 +359,13 @@ const SignupPopup = ({setAuth, setPopupOpen}) => {
                                         setSelectedInput(false)
                                     }}
                                 />
-                                <div className={`${selectedInput === 5 ? "border-blue-r1ca7ec" : "border-gray-bebebe"} border-b w-full`} />
+                                <div className={`${selectedInput === 5 ?"bg-blue-r1ca7ec h-2px" : "bg-gray-bebebe h-px"} w-full`} />
                             </div>
                         </div>
                         {/* BREAK */}
                         <div className="flex space-x-10px w-full mt-22px">
                             <Title text="추천인 아이디" />
-                            <div className="w-full space-y-2">
+                            <div className={`${selectedInput === 6 ? "space-y-7px" : "space-y-8px"} w-full `}>
                                 <input 
                                     className="w-full text-gray-r393e41 font-spoqaMedium text-16px outline-none placeholder-gray-bebebe ml-10px" 
                                     placeholder="가입코드"
@@ -283,7 +378,7 @@ const SignupPopup = ({setAuth, setPopupOpen}) => {
                                         setSelectedInput(false)
                                     }}
                                 />
-                                <div className={`${selectedInput === 6 ? "border-blue-r1ca7ec" : "border-gray-bebebe"} border-b w-full`} />
+                                <div className={`${selectedInput === 6 ? "bg-blue-r1ca7ec h-2px" : "bg-gray-bebebe h-px"} w-full`} />
                             </div>
                         </div>
                         {/* BREAK */}
@@ -292,12 +387,12 @@ const SignupPopup = ({setAuth, setPopupOpen}) => {
                                 <div className="flex space-x-10px w-full">
                                     <Title text="계좌번호" />
                                     <div className="w-170px flex-shrink-0 space-y-9px">
-                                        <DropDownControls buttonChild={bankButton} >
+                                        <DropDownControls buttonChild={bankButton} isDropdownOpen={isDropdownOpen} setDropdownOpen={setDropdownOpen} >
                                             {bankDropdown}
                                         </DropDownControls>
-                                        <div className={`${selectedInput === 7 ? "border-blue-r1ca7ec" : "border-gray-bebebe"} border-b w-full`} />
+                                        <div className={`${selectedInput === 7 ? "bg-blue-r1ca7ec h-2px" : "bg-gray-bebebe h-px"} w-full`} />
                                     </div>
-                                    <div className="w-full space-y-2">
+                                    <div className={`${selectedInput === 8 ? "space-y-7px" : "space-y-8px"} w-full `}>
                                         <input 
                                             className="w-full text-gray-r393e41 font-spoqaMedium text-16px outline-none placeholder-gray-bebebe ml-10px" 
                                             placeholder="예금주"
@@ -310,7 +405,7 @@ const SignupPopup = ({setAuth, setPopupOpen}) => {
                                                 setSelectedInput(false)
                                             }}
                                         />
-                                        <div className={`${selectedInput === 8 ? "border-blue-r1ca7ec" : "border-gray-bebebe"} border-b w-full`} />
+                                        <div className={`${selectedInput === 8 ? "bg-blue-r1ca7ec h-2px" : "bg-gray-bebebe h-px"} w-full`} />
                                     </div>
                                 </div>
                                 <div className="w-full space-y-2 pl-150px pt-1">
@@ -326,7 +421,7 @@ const SignupPopup = ({setAuth, setPopupOpen}) => {
                                             setSelectedInput(false)
                                         }}
                                     />
-                                    <div className={`${selectedInput === 9 ? "border-blue-r1ca7ec" : "border-gray-bebebe"} border-b w-full`} />
+                                    <div className={`${selectedInput === 9 ? "bg-blue-r1ca7ec h-2px" : "bg-gray-bebebe h-px"} w-full`} />
                                 </div>
                             </div>
                         </div>

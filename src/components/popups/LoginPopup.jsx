@@ -11,7 +11,7 @@ const LoginPopup = ({setAuth, setPopupOpen}) => {
     return (
         <>
             {toSignup ? (
-                <SignupPopup />
+                <SignupPopup setAuth={setAuth} setPopupOpen={setPopupOpen}/>
             ) : (
                 <div className="relative w-630px h-513px bg-white rounded-xl shadow-popup">
                     <button className="w-29 h-29 absolute top-0 right-0 mt-21px mr-21px cursor-pointer z-20" onClick={()=> setPopupOpen(false)}>
