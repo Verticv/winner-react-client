@@ -1,6 +1,8 @@
 import React from 'react'
-import SignedUpIcon from '../../images/signed_up_icon.png'
-import SignedUpContent from '../../images/signed_up_content.png'
+import SignedUpIcon from '../../images/signedUp/signed_up_icon.png'
+import img1 from '../../images/signedUp/signed_up_1.png'
+import img2 from '../../images/signedUp/signed_up_2.png'
+import img3 from '../../images/signedUp/signed_up_3.png'
 
 const SignedUpPopup = ({setToLogin}) => {
     return (
@@ -27,8 +29,31 @@ const SignedUpPopup = ({setToLogin}) => {
                     <span className="-mt-6px">깨끗하고 안전한 운영을 자랑합니다. </span>
                 </div>
                 {/* BREAK */}
-                <div className="py-55px mb-4px">
-                    <img className="h-138px object-contain" src={SignedUpContent} alt="content"/>
+                <div className="relative flex h-138px w-614px mt-55px mb-59px">
+                    <div className="w-194px h-138px flex-shrink-0">
+                        <img className="mt-9px ml-52px" src={img1} alt=""/>
+                        <div className="w-156px text-center mt-23px -space-y-3px -ml-4px">
+                            <div className="text-gray-r667177 font-spoqaMedium text-16px tracking-tight">회원님의 모든 데이터는</div>
+                            <div className="text-gray-r667177 font-spoqaMedium text-16px tracking-tight leading-tight ml-3px">암호화되어 안전하게 </div>
+                            <div className="text-gray-r667177 font-spoqaMedium text-16px tracking-tight leading-tight pt-2px ml-3px">보관됩니다.</div>
+                        </div>
+                    </div>
+                    <div className="flex flex-col items-center w-240px h-138px flex-shrink-0 border-r border-l border-gray-ececec">
+                        <img className="mt-10px ml-px" src={img2} alt=""/>
+                        <div className="w-156px text-center mt-23px -space-y-3px -ml-4px">
+                            <div className="text-gray-r667177 font-spoqaMedium text-16px tracking-tight ml-2px">아이디/비밀번호를</div>
+                            <div className="text-gray-r667177 font-spoqaMedium text-16px tracking-tight leading-tight ml-3px">분실되지 않도록 보안에 </div>
+                            <div className="text-gray-r667177 font-spoqaMedium text-16px tracking-tight leading-tight pt-2px ml-3px">신경 써 주세요.</div>
+                        </div>
+                    </div>
+                    <div className="flex flex-col items-end w-194px h-138px">
+                        <img className="mt-7px mr-40px" src={img3} alt=""/>
+                        <div className="w-130px text-center mt-23px -space-y-3px -mr-4px">
+                            <div className="text-gray-r667177 font-spoqaMedium text-16px tracking-tight ml-2px">회원 탈퇴 후</div>
+                            <div className="text-gray-r667177 font-spoqaMedium text-16px tracking-tight leading-tight ml-3px">회원님의 정보는 </div>
+                            <div className="text-gray-r667177 font-spoqaMedium text-16px tracking-tight leading-tight pt-2px ml-3px">완전히 삭제됩니다.</div>
+                        </div>
+                    </div>
                 </div>
                 {/* BREAK */}
                 <button className="w-480px h-74px rounded-md bg-gradient-to-r from-blue-gradLight to-blue-gradDark text-27px font-spoqaMedium text-white" onClick={() => setToLogin(true)}>로그인</button>
