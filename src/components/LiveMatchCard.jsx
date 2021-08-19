@@ -1,8 +1,44 @@
-import React from 'react'
+import jss from "jss";
+import React from "react";
 
-export default function LiveMatchCard() {
+export default function LiveMatchCard({ matchCard }) {
+    const {
+        id,
+        league,
+        team1,
+        team2,
+        currentTime,
+        tieKof,
+        team1WinKof,
+        team2WinKof,
+        team1stats,
+        team2stats,
+        team1Goals,
+        team2Goals,
+        isFavorite,
+        topOffset
+    } = matchCard;
+      const styles = {
+          container: `
+            height: 145px;
+            left: 0;
+            position: absolute;
+            top: 465px;
+            width: 681px;
+            background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iNTAlIiB4Mj0iMTAwJSIgeTI9IjUwJSI+CjxzdG9wIG9mZnNldD0iLTUuMzY1NTQ1JSIgc3RvcC1jb2xvcj0iIzI2MjMzMCIgc3RvcC1vcGFjaXR5PSIxIiAvPgo8c3RvcCBvZmZzZXQ9Ijk0LjYzNDQ1JSIgc3RvcC1jb2xvcj0iIzRkMWUyMiIgc3RvcC1vcGFjaXR5PSIxIiAvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2JnKSIgLz48L3N2Zz4=);
+            background: -moz-linear-gradient(0deg, #262330 -5.365545%, #4d1e22 94.63445%);
+            background: -o-linear-gradient(0deg, #262330 -5.365545%, #4d1e22 94.63445%);
+            background: -webkit-linear-gradient(0deg, #262330 -5.365545%, #4d1e22 94.63445%);
+            background: -webkit-gradient(linear, left top, right top, color-stop(-5.365545%, #262330), color-stop(94.63445%, #4d1e22));
+            background: -webkit-linear-gradient(left, #262330 -5.365545%, #4d1e22 94.63445%);
+            background: -moz-linear-gradient(left, #262330 -5.365545%, #4d1e22 94.63445%);
+            background: -o-linear-gradient(left, #262330 -5.365545%, #4d1e22 94.63445%);
+            background: linear-gradient(90deg, #262330 -5.365545%, #4d1e22 94.63445%);
+    `,
+      };
+      const { classes } = jss.createStyleSheet(styles).attach();
     return (
-        <div className="group-35">
+        <div key={id + "live-match-card"} className={classes.container}>
             <div className="col-21">
                 <div className="row-39">
                     <div className="col-36">
@@ -22,11 +58,14 @@ export default function LiveMatchCard() {
                             <div className="bg-holder-26">
                                 <p className="h-3">h</p>
                             </div>
-                            <p className="text-54">fc바로셀로나</p>
+                            <p className="text-54">{team1}</p>
                         </div>
+                        {
+                            // Star/Favorite Icon
+                        }
                         <img
                             className="layer-15"
-                            src={require("../imagesHold/image_73.png").default}
+                            src={isFavorite ? require("../imagesHold/image_63.png").default : require("../imagesHold/image_73.png").default}
                             alt=""
                             width="18"
                             height="16"
@@ -52,15 +91,14 @@ export default function LiveMatchCard() {
                                     title="a"
                                 />
                             </div>
-                            <p className="text-55">레알마드리드</p>
+                            <p className="text-55">{team2}</p>
                         </div>
                     </div>
                     <div className="col-40">
                         <div className="wrapper-52">
                             <div className="text-56">
                                 <p>
-                                    후반전{" "}
-                                    <span className="text-style">35</span>
+                                    {currentTime}
                                 </p>
                             </div>
                         </div>
@@ -74,17 +112,17 @@ export default function LiveMatchCard() {
                     </div>
                     <div className="col-27">
                         <p className="text-57">
-                            5000<span className="colore9ca4e">2</span>
+                            {team1stats}<span className="colore9ca4e">{team1Goals}</span>
                         </p>
                         <p className="text-58">
-                            5000<span className="colore9ca4e">0</span>
+                            {team2stats}<span className="colore9ca4e">{team2Goals}</span>
                         </p>
                     </div>
                 </div>
                 <div className="btn-4">
                     <div className="row-17">
-                        <p className="text-59">fc바로셀로나</p>
-                        <p className="text-60">5.01</p>
+                        <p className="text-59">{team1}</p>
+                        <p className="text-60">{team1WinKof}</p>
                     </div>
                     <div className="wrapper-21">
                         <div className="row-18">
@@ -97,11 +135,11 @@ export default function LiveMatchCard() {
                                 width="11"
                                 height="32"
                             />
-                            <p className="text-61">4.05</p>
+                            <p className="text-61">{tieKof}</p>
                         </div>
                         <div className="row-19">
-                            <p className="text-62">3.75</p>
-                            <p className="text-63">레알마드리드</p>
+                            <p className="text-62">{team2WinKof}</p>
+                            <p className="text-63">{team2}</p>
                         </div>
                         <img
                             className="line-12"
@@ -130,7 +168,7 @@ export default function LiveMatchCard() {
                         width="29"
                         height="18"
                     />
-                    <p className="text-77">라리가</p>
+                    <p className="text-77">{league}</p>
                 </div>
                 <div className="e-4">
                     <img
