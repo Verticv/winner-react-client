@@ -93,7 +93,7 @@ const LiveCasinoHover = ({selection}) => {
                 <div className="flex ml-80px -space-x-2 pt-6px">
                     <GamesList items={gamesArray} />
                 </div>
-                <div className="ml-60px -space-x-8">
+                <div className="ml-60px -space-x-33px">
                     <ItemsList items={itemsArray} />
                 </div>
             </div>

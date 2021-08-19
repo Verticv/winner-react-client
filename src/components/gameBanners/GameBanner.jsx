@@ -18,13 +18,13 @@ const GameBanner = ({selection}) => {
             <div className={`w-full h-387px absolute ${selection === 4 ? "opacity-100" : "opacity-0"}`}><MinigameBanner /></div>
             <div className={`w-full h-387px absolute ${selection === 5 ? "opacity-100" : "opacity-0"}`}><ARgameBanner /></div>
             <div className={`w-full h-387px absolute ${selection === 6 ? "opacity-100" : "opacity-0"}`}>
-                <div className="relative flex w-full h-387px border border-gray-afafaf justify-end rounded-lg shadow-plain1 transition bg-gradient-to-br from-white via-white to-gray-300 cursor-pointer">
+                <div className="relative flex w-full h-387px border border-gray-afafaf justify-end rounded-lg shadow-plain1 transition bg-gradient-to-br from-white via-white to-gray-300 cursor-pointer overflow-hidden">
                     <img className="w-full h-auto pl-20" src={FishingBanner} alt="game_banner" />
                     <div className={`absolute left-0 bottom-0 ml-80px mb-36px w-242px h-74px rounded-full flex items-center justify-center text-white font-spoqaBold text-30px bg-gray-b2b2b2`}>준비중</div>
                 </div>    
             </div>
             <div className={`w-full h-387px absolute ${selection === 7 ? "opacity-100" : "opacity-0"}`}>
-                <div className="relative flex w-full h-387px border border-gray-afafaf justify-end rounded-lg shadow-plain1 transition bg-gradient-to-br from-white via-white to-gray-300 cursor-pointer">
+                <div className="relative flex w-full h-387px border border-gray-afafaf justify-end rounded-lg shadow-plain1 transition bg-gradient-to-br from-white via-white to-gray-300 cursor-pointer overflow-hidden">
                     <img className="w-full h-auto pl-20" src={LotteryBanner} alt="game_banner" />
                     <div className={`absolute left-0 bottom-0 ml-80px mb-36px w-242px h-74px rounded-full flex items-center justify-center text-white font-spoqaBold text-30px bg-gray-b2b2b2`}>준비중</div>
                 </div>    

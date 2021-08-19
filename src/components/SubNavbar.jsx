@@ -62,7 +62,7 @@ const SubNavbar = () => {
 
     return (
         <div id="container" className="relative w-full">
-            <div className="flex justify-around w-full rounded-full shadow-plain bg-gradient-to-b from-blue-lightGradLight border-2 border-white">
+            <div className="flex justify-around w-full rounded-full shadow-subNavbar bg-gradient-to-b from-blue-lightGradLight border-2 border-white">
                 <div className="highlight" />
                 <TabsList items={tabsArray}/>
             </div>

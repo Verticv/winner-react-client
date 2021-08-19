@@ -27,7 +27,7 @@ const MinigameBanner = () => {
     }
 
     return (
-        <div className="h-384px grid gap-0 grid-cols-2 gap-x-22px gap-y-17px">
+        <div className="h-384px grid gap-0 grid-cols-2 gap-x-21px gap-y-17px">
             <CardList items={gamesArray} />
         </div>
     )

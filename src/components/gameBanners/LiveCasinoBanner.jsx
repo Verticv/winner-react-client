@@ -10,7 +10,7 @@ import './GameBanners.css'
 
 const LiveCasinoBanner = () => {
 
-    const cardClass = "group relative flex justify-end w-300px h-183px border border-gray-afafaf rounded-lg shadow-plain1 transition cursor-pointer border border-gray-afafaf overflow-hidden"
+    const cardClass = "group relative flex justify-end w-300px h-185px border border-gray-afafaf rounded-lg shadow-plain1 transition cursor-pointer border border-gray-afafaf overflow-hidden"
 
     const gamesArray = [
         { id: 0, img: EvolutionBg, color: "bg-teal-r4eb2ba", btnText: "게임시작", class: "" },

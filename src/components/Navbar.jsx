@@ -101,7 +101,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
     const profileButton = (
         <div className="flex items-center justify-center space-x-10px">
             <div className="relative flex items-center justify-center h-40px w-40px rounded-full bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2">
-                <img src={PersonIcon} alt="person" />
+                <img className="mt-2px ml-2px" src={PersonIcon} alt="person" />
             </div>
             <DropdownArrow isOpen={isProfileOpen}/>
         </div>  
@@ -117,7 +117,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
 
     const InboxButton = (
         <button className="relative flex items-center justify-center text-white h-40px w-40px rounded-full bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2">
-            <img src={InboxIcon} alt="inbox_icon" />
+            <img className="ml-2px mt-2px" src={InboxIcon} alt="inbox_icon" />
             <div className="absolute flex items-center justify-center w-20px h-20px bg-red-notification top-0 right-0 -mr-6px -mt-3px rounded-full shadow-plain6">
                 <label className="text-12px font-roboto mt-2px ml-px">1</label>
             </div>
