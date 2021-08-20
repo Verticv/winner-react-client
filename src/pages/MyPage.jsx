@@ -37,7 +37,7 @@ const MyPage = ({isAuthenticated, setAuthenticated}) => {
             <div className="flex mt-20px w-default h-full">
                 <LeftMenu />
 
-                <div className="ml-20px w-1040px h-840px">
+                <div className="ml-20px w-1040px">
                     <Route path="/mypage/bet-history">
                         <BetHistory />
                     </Route>

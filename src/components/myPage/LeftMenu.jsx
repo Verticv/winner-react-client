@@ -70,7 +70,7 @@ const LeftMenu = () => {
     }
 
     return (
-        <div className="w-200px h-440px bg-white shadow-subNavbar rounded-26px p-4px space-y-px">
+        <div className="w-200px h-440px bg-white shadow-subNavbar rounded-26px p-4px space-y-px mb-60px">
             <MenuList items={tabsArray} />
         </div>
     )
