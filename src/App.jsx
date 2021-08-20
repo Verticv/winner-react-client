@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import MainPage from "./pages/MainPage";
 import { Switch, Route } from "react-router-dom";
+import MyPage from "pages/MyPage";
 
 function App() {
+
+    const [isAuthenticated, setAuthenticated] = useState(false)
+
     return (
         <>
             <Switch>
@@ -16,8 +20,11 @@ function App() {
                 <Route path="/bet">
                     <h1>Hello world</h1>
                 </Route>
+                <Route path="/mypage">
+                    <MyPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
+                </Route>
                 <Route path="*">
-                    <MainPage />
+                    <MainPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
                 </Route>
             </Switch>
         </>

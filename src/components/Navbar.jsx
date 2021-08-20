@@ -16,8 +16,11 @@ import ArrowDownWhite from '../images/arrows/arrow_down_white.png'
 import InboxIcon from '../images/inbox_icon.png'
 import NavbarHover from './hovers/NavbarHover'
 import SignupPopup from './popups/SignupPopup'
+import { useHistory } from 'react-router-dom'
 
 const Navbar = ({ isAuthenticated, setAuth }) => {
+
+    const history = useHistory();
 
     const [selectedTab, setSelectedTab] = useState()
     const [hoveredTab, setHoveredTab] = useState()
@@ -128,7 +131,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
         <div className="limit:w-full w-1920 z-20">
             <header className="flex items-center justify-between h-60px px-10px shadow-plain bg-white">
                 <div className="flex items-center flex-shrink-0">
-                    <img className="w-130px object-contain mb-2 mr-10px cursor-pointer" src={Logo} alt="logo" />
+                    <img className="w-130px object-contain mb-2 mr-10px cursor-pointer" src={Logo} alt="logo" onClick={() => history.push('/')} />
                     <TabsList items={tabsArray} />
                 </div>
                 

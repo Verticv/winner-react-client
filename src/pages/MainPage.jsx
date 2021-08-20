@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Carousel from '../components/Carousel'
 import Footer from '../components/Footer'
 import Footer2 from '../components/Footer2'
@@ -8,9 +8,7 @@ import NoticeBanner from '../components/NoticeBanner'
 import Slots from '../components/Slots'
 import SubNavbar from '../components/SubNavbar'
 
-const MainPage = () => {
-
-    const [isAuthenticated, setAuthenticated] = useState(false)
+const MainPage = ({isAuthenticated, setAuthenticated}) => {
 
     return (
         <div className="relative flex flex-col justify-center limit:overflow-x-hidden">

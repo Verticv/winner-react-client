@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useHistory } from 'react-router-dom';
 import LevelOne from '../../images/profile/level_one.png'
 import MyPageIcon from '../../images/profile/my_page_gradient.png'
 import LinkIcon from '../../images/profile/link_gradient.png'
@@ -14,6 +15,8 @@ import PolicyIconHighlight from '../../images/profile/policy_highlight.png'
 import LogoutIconHighlight from '../../images/profile/logout_highlight.png'
 
 const ProfileDropDown = ({setAuth}) => {
+    
+    const history = useHistory();
 
     const [selectedTab, setSelectedTab] = useState()
 
@@ -35,6 +38,7 @@ const ProfileDropDown = ({setAuth}) => {
                 onPointerUp={() => {
                     setSelectedTab(false)
                     if (item.id === 5) setAuth(false)
+                    history.push('/mypage/bet-history')
                 }}
             >
                 <div className={`${selectedTab === item.id && "shadow-plain3"} h-32px w-32px bg-white rounded-full flex items-center justify-center flex-shrink-0`} >
