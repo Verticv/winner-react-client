@@ -16,7 +16,7 @@ export default function LiveMatchCard({ matchCard }) {
         team1Goals,
         team2Goals,
         isFavorite,
-        topOffset
+        // topOffset
     } = matchCard;
       const styles = {
           container: `
