@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import MainPage from "./pages/MainPage";
 import { Switch, Route } from "react-router-dom";
+import BetPage from "pages/BetPage";
 
 function App() {
     return (
@@ -14,7 +15,7 @@ function App() {
                 </Router> 
               */}
                 <Route path="/bet">
-                    <h1>Hello world</h1>
+                    <BetPage/>
                 </Route>
                 <Route path="*">
                     <MainPage />
