@@ -24,6 +24,7 @@ export default function LiveMatchCards() {
             team2Goals: Math.floor(Math.random() * 3),
             isFavorite: Math.random() > 0.5,
             topOffset: "0",
+            selected: false,
         },
         {
             id: 1,
@@ -40,6 +41,7 @@ export default function LiveMatchCards() {
             team2Goals: Math.floor(Math.random() * 3),
             isFavorite: Math.random() > 0.5,
             topOffset: "155px",
+            selected: false,
         },
         {
             id: 2,
@@ -56,6 +58,7 @@ export default function LiveMatchCards() {
             team2Goals: Math.floor(Math.random() * 3),
             isFavorite: Math.random() > 0.5,
             topOffset: "310px",
+            selected: false,
         },
         {
             id: 3,
@@ -72,6 +75,7 @@ export default function LiveMatchCards() {
             team2Goals: Math.floor(Math.random() * 3),
             isFavorite: Math.random() > 0.5,
             topOffset: "465px",
+            selected: false,
         },
     ];
     return (
