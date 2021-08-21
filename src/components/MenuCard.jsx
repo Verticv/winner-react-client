@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Shadow from '../images/menu/shadow.png'
 import WhiteArrow from '../images/arrows/right_arrow_white.png'
 import GrayArrow from '../images/arrows/right_arrow_gray.png'
+import { useHistory } from 'react-router-dom'
 
 const MenuCard = ({ 
     mainIcon, 
@@ -15,8 +16,12 @@ const MenuCard = ({
     optionIconHighlight2,
     optionIcon3,
     optionIconHighlight3,
-    extraIconCss
+    extraIconCss,
+    path1,
+    path2,
+    path3
 }) => {
+    const history = useHistory();
 
     const [selectedTab, setSelectedTab] = useState()
 
@@ -24,9 +29,9 @@ const MenuCard = ({
     const selectedTabClass = "relative w-full h-59px bg-blue-r009edf shadow-plain2 p-6px z-20"
 
     const menuArray = [
-        { text: optionTitle1, id: 0, icon: optionIcon1, iconHighlight: optionIconHighlight1, selectedCss: "border-b rounded-t bg-gray-f6f6f6" },
-        { text: optionTitle2, id: 1, icon: optionIcon2, iconHighlight: optionIconHighlight2, selectedCss: "border-b bg-gray-fbfbfb" },
-        { text: optionTitle3, id: 2, icon: optionIcon3, iconHighlight: optionIconHighlight3, selectedCss: "rounded-b bg-gray-f6f6f6" },
+        { text: optionTitle1, id: 0, icon: optionIcon1, iconHighlight: optionIconHighlight1, selectedCss: "border-b rounded-t bg-gray-f6f6f6", path: path1 },
+        { text: optionTitle2, id: 1, icon: optionIcon2, iconHighlight: optionIconHighlight2, selectedCss: "border-b bg-gray-fbfbfb", path: path2 },
+        { text: optionTitle3, id: 2, icon: optionIcon3, iconHighlight: optionIconHighlight3, selectedCss: "rounded-b bg-gray-f6f6f6", path: path3 },
     ];
 
     function MenuList({ items }) {
@@ -35,7 +40,10 @@ const MenuCard = ({
                 key={item.id} 
                 className={`${item.selectedCss} ${selectedTab === item.id ? selectedTabClass : tabClass}`}
                 onMouseDown={() => setSelectedTab(item.id)}
-                onMouseUp={() => setSelectedTab(false)}
+                onMouseUp={() => {
+                    setSelectedTab(false)
+                    history.push(item.path)
+                }}
             >
                 {selectedTab !== item.id && item.id !== 0 && (<div className="absolute top-0 left-0 h-px w-full bg-white"></div>)} 
                 <div className="flex items-center justify-between">

@@ -45,6 +45,9 @@ const Menus = () => {
                 optionIconHighlight2={ExchangeIconHighlight}
                 optionIconHighlight3={PointExchangeIconHighlight}
                 extraIconCss="w-49px h-47px mb-2px"
+                path1=""
+                path2=""
+                path3=""
             />
             <MenuCard 
                 mainIcon={MenuIcon} 
@@ -59,6 +62,9 @@ const Menus = () => {
                 optionIconHighlight2={TransactionHistoryIconHighlight}
                 optionIconHighlight3={PointHistoryIconHighlight}
                 extraIconCss="w-41px h-50px mr-6px mb-px"
+                path1="/mypage/bet-history"
+                path2=""
+                path3=""
             />
             <MenuCard 
                 mainIcon={MyMenuIcon} 
@@ -73,6 +79,9 @@ const Menus = () => {
                 optionIconHighlight2={ManageInboxIconHighlight}
                 optionIconHighlight3={ManageProfileIconHighlight}
                 extraIconCss="w-43px h-52px mr-6px -mb-px"
+                path1=""
+                path2=""
+                path3=""
             />
             <MenuCard 
                 mainIcon={Customer} 
@@ -87,6 +96,9 @@ const Menus = () => {
                 optionIconHighlight2={AnnouncementIconHighlight}
                 optionIconHighlight3={FaqIconHighlight}
                 extraIconCss="w-48px h-49px mb-2px"
+                path1=""
+                path2=""
+                path3=""
             />
         </div>
     )

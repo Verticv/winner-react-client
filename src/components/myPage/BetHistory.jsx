@@ -22,12 +22,9 @@ import "react-datepicker/dist/react-datepicker.css";
 import { registerLocale } from  "react-datepicker";
 import ko from 'date-fns/locale/ko';
 import CalendarIcon from '../../images/myPage/betHistory/calendar.png'
-import ReactPaginate from 'react-paginate';
-import './Pagination.css'
-import LeftIcon from '../../images/myPage/betHistory/left.png'
-import RightIcon from '../../images/myPage/betHistory/right.png'
-import DoubleLeftIcon from '../../images/myPage/betHistory/double_left.png'
-import DoubleRightIcon from '../../images/myPage/betHistory/double_right.png'
+import BetHistoryTable from './BetHistoryTable'
+import SportsBetHistory from './SportsBetHistory'
+import Pagination from './Pagination'
 
 registerLocale('ko', ko)
 
@@ -36,7 +33,7 @@ const BetHistory = () => {
     const [selectedTab, setSelectedTab] = useState(0)
     const [selectedSubTab, setSelectedSubTab] = useState(0)
     const [startDate, setStartDate] = useState(new Date())
-    const [page, setPage] = useState()
+    const [page, setPage] = useState(0)
 
     const tabsArray = [
         { text: "전체", icon: Icon1, id: 0 },
@@ -60,12 +57,7 @@ const BetHistory = () => {
         { text: "빅게이밍", icon: BigIcon, id: 6 },
     ];
 
-    const LeftArrow = () => (
-        <img src={LeftIcon} alt="arrow" />
-    )
-    const RightArrow = () => (
-        <img src={RightIcon} alt="arrow" />
-    )
+    
 
     return (
         <div className="flex flex-col items-center">
@@ -76,21 +68,33 @@ const BetHistory = () => {
             
             <div className="relative w-full mt-20px">
                 <HorizontalMenu itemsArray={tabsArray} isState={selectedTab} setState={setSelectedTab} />
-                {selectedTab !== 0 && (
+                {(selectedTab !== 0 && selectedTab !== 3) && (
                     <div className={`ml-${selectedTab * 116 + 50}px absolute bottom-0 w-20px -mb-10px overflow-hidden inline-block `}>
                         <div className="h-10px w-10px bg-gradient-to-br from-gray-d2dfea via-gray-eff3f6 to-gray-eff3f6 rotate-45 transform origin-bottom-left shadow"></div>
                     </div>
                 )}
-                
             </div>
             
-            {selectedTab !== 0 && (
+            {(selectedTab !== 0 && selectedTab !== 3) && (
                 <div className="mt-10px h-88px w-full bg-gray-eff3f6 rounded-xl p-4px">
                     <SubHorizontalMenu itemsArray={subTabsArray} isState={selectedSubTab} setState={setSelectedSubTab} />
                 </div>
             )}
 
             <div className="h-63px w-full bg-gray-f9f9f9 mt-20px rounded-2xl border border-gray-dddddd flex items-center justify-center space-x-10px">
+                
+                {selectedTab === 3 && (
+                    <div className="space-x-5px">
+                        <input 
+                            placeholder="리그선택"
+                            className="flex-shrink-0 outline-none w-138px h-42px rounded-md border border-gray-dddddd px-10px font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c" 
+                        />
+                        <input
+                            placeholder="팀명검색" 
+                            className="flex-shrink-0 outline-none w-138px h-42px rounded-md border border-gray-dddddd px-10px font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c" />
+                    </div>
+                )}
+
                 <div className="flex space-x-10px items-center w-304px h-full">
                     <div className="relative">
                         <DatePicker 
@@ -147,77 +151,42 @@ const BetHistory = () => {
                 </div>
 
             </div>
-            {page === 0 && (
-                <div className="w-full h-full mt-20px">
-                    <table className="shadow-subNavbar rounded-3xl overflow-hidden">
-                        <thead className="bg-gray-fafafa rounded-3xl font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px">
-                            <tr>
-                                <th className="w-235px">베팅시간</th>
-                                <th className="w-170px">게임종류</th>
-                                <th className="w-170px">티켓번호</th>
-                                <th className="w-170px">베팅금액</th>
-                                <th className="w-170px">적중/손실금액</th>
-                                <th className="w-126px">상태</th>
-                            </tr>
-                        </thead>
-                        <tbody className="w-full text-585858 text-14px tracking-tight font-spoqaMedium">
-                            <tr className="bg-gray-fefefe rounded-3xl font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px w-full">
-                                <td className="w-235px font-roboto h-56px text-center">2021-06-29 15:46:13</td>
-                                <td className="w-170px h-56px text-center">에볼루션</td>
-                                <td className="w-170px h-56px text-center">7193915</td>
-                                <td className="w-170px h-56px text-right">12,000</td>
-                                <td className="w-170px h-56px text-right">-12,000</td>
-                                <td className="w-126px h-56px text-center">패</td>
-                            </tr>
-                            <tr className="bg-gray-f7f9fc rounded-3xl font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px">
-                                <td className="w-235px font-roboto h-56px text-center">2021-06-29 15:45:42</td>
-                                <td className="w-170px h-56px text-center">에볼루션</td>
-                                <td className="w-170px h-56px text-center">7193914</td>
-                                <td className="w-170px h-56px text-right">900,000,000</td>
-                                <td className="w-170px h-56px text-right text-red-600">+900,000,000</td>
-                                <td className="w-126px h-56px text-center text-red-600">승</td>
-                            </tr>
-                            <tr className="bg-gray-fefefe rounded-3xl font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px w-full">
-                                <td className="w-235px font-roboto h-56px text-center">2021-06-29 15:46:13</td>
-                                <td className="w-170px h-56px text-center">프레그메틱플레이</td>
-                                <td className="w-170px h-56px text-center">7193913</td>
-                                <td className="w-170px h-56px text-right">800,000</td>
-                                <td className="w-170px h-56px text-right">-800,000</td>
-                                <td className="w-126px h-56px text-center">패</td>
-                            </tr>
-                        </tbody>
-                    </table>            
+            {selectedTab !== 3 && (
+                <div className="w-full h-full mt-20px mb-60px">
+                    <BetHistoryTable />   
                 </div>
             )}
-              
+            
+            {selectedTab === 3 && (
+                <div className="w-full h-full mt-20px">
+                    <div className="space-y-15px">
+                        <SportsBetHistory />
+                        <SportsBetHistory />
+                    </div>
+                    <div className="mt-40px h-36px w-full flex items-center justify-between">
+                        <div className="flex space-x-2px">
+                            <button className="flex items-center justify-center w-90px h-36px rounded-md bg-gray-r171a1d">
+                                <div className="flex items-center justify-center h-34px w-88px rounded-4px border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r585b5e to-gray-r303337 cursor-pointer">
+                                    <span className="font-spoqaMedium tracking-tight text-14px text-white">전체선택</span>
+                                </div>
+                            </button>
+                            <button className="flex items-center justify-center w-90px h-36px rounded-md bg-red-cb4343">
+                                <div className="flex items-center justify-center h-34px w-88px rounded-4px border border-red-f36576 bg-gradient-to-b from-red-f03a50 via-red-f03a50 to-red-cf254d cursor-pointer">
+                                    <span className="font-spoqaMedium tracking-tight text-14px text-white">선택삭제</span>
+                                </div>
+                            </button>
+                        </div>
+                        <button className="flex items-center justify-center w-159px h-36px rounded-md bg-blue-r0070d9">
+                            <div className="flex items-center justify-center h-34px w-157px rounded-4px border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r1491fc to-blue-r0675db cursor-pointer">
+                                <span className="font-spoqaMedium tracking-tight text-14px text-white">게시판에 내역올리기</span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            )}
 
-            <div className="relative flex w-297px h-32px my-60px items-center justify-center">
-                <img className="absolute left-0 cursor-pointer h-32px object-none" src={DoubleLeftIcon} alt="" onClick={() => setPage(0)} />
-                <ReactPaginate
-                    activeClassName={'item active font-roboto w-32px h-32px'}
-                    breakClassName={'item'}
-                    breakLabel={'...'}
-                    containerClassName={'pagination'}
-                    disabledClassName={'disabled-page'}
-                    marginPagesDisplayed={5}
-                    nextClassName={"item next "}
-                    nextLabel={<RightArrow />}
-                    onPageChange={(selected) => {
-                        var s = JSON.stringify(selected.selected);
-                        var d = JSON.parse(s);
-                        setPage(d); 
-                    }}
-                    pageCount={5}
-                    pageClassName={'item pagination-page font-roboto'}
-                    pageRangeDisplayed={5}
-                    previousClassName={"previous"}
-                    previousLabel={<LeftArrow />}
-                    initialPage={0}
-                    forcePage={page}
-                    pageLinkClassName="p-10px"
-                />
-                <img className="absolute right-0 cursor-pointer h-32px object-none" src={DoubleRightIcon} alt="" onClick={() => setPage(4)} />
-            </div>
+            <Pagination page={page} setPage={setPage}/>   
+
         </div>
     )
 }
