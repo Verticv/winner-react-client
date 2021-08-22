@@ -19,8 +19,13 @@ export default function LiveMatchCard({ matchCard }) {
         isFavorite,
         topOffset,
     } = matchCard;
-    const { selectedCardId, changeSelectedCardId } = useStore();
-    const selected = selectedCardId === matchCard.id
+    const {
+        selectedCardId,
+        changeSelectedCardId,
+        playingMatchId,
+        changePlayingMatchId,
+    } = useStore();
+    const selected = selectedCardId === matchCard.id;
     const styles = {
         container: `
             height: 145px;
@@ -73,9 +78,9 @@ export default function LiveMatchCard({ matchCard }) {
         console.log("plus button clicked for " + id);
     };
     const handleContainerClick = () => {
-        console.log("container clicked for " + id);
         changeSelectedCardId(id);
     };
+
     return (
         <div
             role="button"
@@ -150,13 +155,25 @@ export default function LiveMatchCard({ matchCard }) {
                                 <p>{currentTime}</p>
                             </div>
                         </div>
-                        <img
-                            className="ico-19"
-                            src={require("../imagesHold/ico_32.jpg").default}
-                            alt=""
-                            width="33"
-                            height="33"
-                        />
+                        <button
+                            onClick={() => {
+                                changePlayingMatchId(id);
+                            }}
+                        >
+                            <img
+                                className="ico-19"
+                                src={
+                                    playingMatchId === id
+                                        ? require("../imagesHold/play_button_selected.png")
+                                              .default
+                                        : require("../imagesHold/play_button.png")
+                                              .default
+                                }
+                                alt=""
+                                width="33"
+                                height="33"
+                            />
+                        </button>
                     </div>
                     <div className="col-27">
                         <p className="text-57">
