@@ -2688,6 +2688,7 @@ body {
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box; /*Will not allow bg color to leak outside borders*/
+  z-index: 1;
 }
 .f-4 {
   height: 18px;
@@ -2799,9 +2800,6 @@ body {
   background: linear-gradient(90deg, rgba(77, 30, 34, 0.5) -0.219746%, rgba(255, 172, 168, 0.5) 50.17088%, rgba(255, 172, 168, 0.5) 99.78025%);
 }
 .text-78 {
-  left: 650px;
-  position: absolute;
-  top: 41px;
   font-family: Roboto, sans-serif;
   font-size: 36px;
   letter-spacing: 0;
@@ -2809,9 +2807,6 @@ body {
   text-align: center;
 }
 .text-79 {
-  left: 650px;
-  position: absolute;
-  top: 78px;
   font-family: Roboto, sans-serif;
   font-size: 18px;
   letter-spacing: 0;

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import LiveMatchCard from './LiveMatchCard';
 
 export default function LiveMatchCards() {
@@ -78,10 +78,24 @@ export default function LiveMatchCards() {
             selected: false,
         },
     ];
+    const [navListItems, setNavListItems] = useState(matchCards);
+    const handleSetNavElementActive = (id) => {
+        const navCopy = [...navListItems];
+        const itemToSetActive = navCopy.find((a) => a.id === id);
+        navCopy.forEach((navListItem) => (navListItem.selected = false));
+        itemToSetActive.selected = true;
+        setNavListItems(navCopy);
+    };
     return (
         <>
-            {matchCards.map(matchCard => {
-                return <LiveMatchCard matchCard={matchCard} />; 
+            {navListItems.map((matchCard) => {
+                return (
+                    <LiveMatchCard
+                        key={matchCard.id}
+                        matchCard={matchCard}
+                        handleSetNavElementActive={handleSetNavElementActive}
+                    />
+                );
             })}
         </>
     );

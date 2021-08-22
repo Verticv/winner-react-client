@@ -1,7 +1,7 @@
 import jss from "jss";
 import React from "react";
 
-export default function LiveMatchCard({ matchCard }) {
+export default function LiveMatchCard({ matchCard, handleSetNavElementActive }) {
     const {
         id,
         league,
@@ -17,14 +17,14 @@ export default function LiveMatchCard({ matchCard }) {
         team2Goals,
         isFavorite,
         topOffset,
-        selected
+        selected,
     } = matchCard;
-      const styles = {
-          container: `
+    const styles = {
+        container: `
             height: 145px;
             left: 0;
             position: absolute;
-            top: 465px;
+            top: ${topOffset};
             width: 681px;
             background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iNTAlIiB4Mj0iMTAwJSIgeTI9IjUwJSI+CjxzdG9wIG9mZnNldD0iLTUuMzY1NTQ1JSIgc3RvcC1jb2xvcj0iIzI2MjMzMCIgc3RvcC1vcGFjaXR5PSIxIiAvPgo8c3RvcCBvZmZzZXQ9Ijk0LjYzNDQ1JSIgc3RvcC1jb2xvcj0iIzRkMWUyMiIgc3RvcC1vcGFjaXR5PSIxIiAvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2JnKSIgLz48L3N2Zz4=);
             background: -moz-linear-gradient(0deg, #262330 -5.365545%, #4d1e22 94.63445%);
@@ -36,11 +36,11 @@ export default function LiveMatchCard({ matchCard }) {
             background: -o-linear-gradient(left, #262330 -5.365545%, #4d1e22 94.63445%);
             background: linear-gradient(90deg, #262330 -5.365545%, #4d1e22 94.63445%);
     `,
-          containerSelected: `
+        containerSelected: `
             height: 145px;
             left: 0;
             position: absolute;
-            top: 465px;
+            top: ${topOffset};
             width: 681px;
             background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iNTAlIiB4Mj0iMTAwJSIgeTI9IjUwJSI+CjxzdG9wIG9mZnNldD0iLTUuMzY1NTQ1JSIgc3RvcC1jb2xvcj0iIzI2MjMzMCIgc3RvcC1vcGFjaXR5PSIxIiAvPgo8c3RvcCBvZmZzZXQ9Ijk0LjYzNDQ1JSIgc3RvcC1jb2xvcj0iIzRkMWUyMiIgc3RvcC1vcGFjaXR5PSIxIiAvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2JnKSIgLz48L3N2Zz4=);
             background: -moz-linear-gradient(0deg, #262330 -5.365545%, #4d1e22 94.63445%);
@@ -50,22 +50,37 @@ export default function LiveMatchCard({ matchCard }) {
             background: -webkit-linear-gradient(left, #262330 -5.365545%, #4d1e22 94.63445%);
             background: -moz-linear-gradient(left, #262330 -5.365545%, #4d1e22 94.63445%);
             background: -o-linear-gradient(left, #262330 -5.365545%, #4d1e22 94.63445%);
-            background: linear-gradient(90deg, #262330 -5.365545%, #4d1e22 94.63445%);
+            background: linear-gradient(270deg, #5f262d 0, #9b2f30 100%)
           `,
-          inlay: `
+        inlay: `
                 height: 105px;
                 left: 0;
                 position: absolute;
                 top: 40px;
                 width: 681px;
-                background: url(${selected ? require("../imagesHold/bg_220.jpg").default :
-                    require("../imagesHold/bg_201.jpg").default
+                background: url(${
+                    selected
+                        ? require("../imagesHold/bg_220.jpg").default
+                        : require("../imagesHold/bg_201.jpg").default
                 }) no-repeat;
           `,
-      };
-      const { classes } = jss.createStyleSheet(styles).attach();
+    };
+    const { classes } = jss.createStyleSheet(styles).attach();
+    const handlePlusButton = (event) => {
+        event.stopPropagation();
+        console.log("plus button clicked for " + id);
+    };
+    const handleContainerClick = () => {
+        console.log("container clicked for " + id);
+        handleSetNavElementActive(id);
+    };
     return (
-        <div key={id + "live-match-card"} className={selected ? classes.containerSelected : classes.container }>
+        <div
+            role="button"
+            onClick={handleContainerClick}
+            key={id + "live-match-card"}
+            className={selected ? classes.containerSelected : classes.container}
+        >
             <div className={classes.inlay}>
                 <div className="row-39">
                     <div className="col-36">
@@ -184,7 +199,10 @@ export default function LiveMatchCard({ matchCard }) {
                     </div>
                 </div>
             </div>
-            <div className="bg-5"></div>
+            <button onClick={handlePlusButton} className="bg-5">
+                <p className="text-78">+</p>
+                <p className="text-79">23</p>
+            </button>
             <div className="f-4">
                 <div className="s-4">
                     <img
@@ -231,8 +249,6 @@ export default function LiveMatchCard({ matchCard }) {
             </div>
             <div className="line-16"></div>
             <div className="line-17"></div>
-            <p className="text-78">+</p>
-            <p className="text-79">23</p>
             {/* <img className="gra-4" src={require("../imagesHold/gra.png").default} alt="" width="31" height="145"/> */}
         </div>
     );
