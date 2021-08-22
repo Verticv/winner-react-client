@@ -1,9 +1,13 @@
 import getRandomNumberInInterval from "helpers/getRandomNumberInInterval";
 import React from "react";
+import useStore from "store/useStore";
 import MatchDetail from "./MatchBet";
 import MatchBetsTabs from "./MatchBetsTabs";
 
 export default function MatchDetails() {
+    // This is here just so the component refreshes and generates new random values, to illustrate that
+    // match details would change upon live card selection.
+    const { selectedCardId } = useStore();
     const matchBets = [
         {
             id: 0,
