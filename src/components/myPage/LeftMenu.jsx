@@ -15,62 +15,115 @@ import IconHighlight5 from '../../images/myPage/leftMenu/icon_5_highlight.png'
 import IconHighlight6 from '../../images/myPage/leftMenu/icon_6_highlight.png'
 import IconHighlight7 from '../../images/myPage/leftMenu/icon_7_highlight.png'
 import IconHighlight8 from '../../images/myPage/leftMenu/icon_8_highlight.png'
-import { useHistory } from 'react-router-dom'
+import ArrowDown from '../../images/myPage/leftMenu/arr_down.png'
+import ArrowUp from '../../images/myPage/leftMenu/arr_up.png'
+import { useHistory, useLocation } from 'react-router-dom'
 
 const LeftMenu = () => {
 
     const history = useHistory();
-
-    const [selectedTab, setSelectedTab] = useState(0)
+    const location = useLocation();
+    const [selectedTab, setSelectedTab] = useState(location.pathname)
+    const [selectedSubTab, setSelectedSubTab] = useState(location.pathname)
 
     const tabsArray = [
         { text: "베팅내역", icon: Icon1, iconHighlight: IconHighlight1, id: 0, path: "/mypage/bet-history" },
-        { text: "충/환전내역", icon: Icon2, iconHighlight: IconHighlight2, id: 1, path: "/mypage/charge-history" },
-        { text: "총판페이지", icon: Icon3, iconHighlight: IconHighlight3, id: 2, path: "/mypage/charge-history" },
-        { text: "원루즈정산", icon: Icon4, iconHighlight: IconHighlight4, id: 3, path: "/mypage/charge-history" },
-        { text: "쿠폰관리", icon: Icon5, iconHighlight: IconHighlight5, id: 4, path: "/mypage/charge-history" },
-        { text: "포인트", icon: Icon6, iconHighlight: IconHighlight6, id: 5, path: "/mypage/charge-history" },
-        { text: "쪽지관리", icon: Icon7, iconHighlight: IconHighlight7, id: 6, path: "/mypage/charge-history" },
-        { text: "회원정보수정", icon: Icon8, iconHighlight: IconHighlight8, id: 7, path: "/mypage/charge-history" }
+        { 
+            text: "충/환전내역", 
+            icon: Icon2, 
+            iconHighlight: IconHighlight2, 
+            id: 1, 
+            path: "/mypage/charge-history", 
+            sub1: "충전내역", 
+            sub2: "환전내역",
+            path2: "/mypage/exchange-history"
+        },
+        { text: "총판페이지", icon: Icon3, iconHighlight: IconHighlight3, id: 2, path: "/mypage/admin-page" },
+        { text: "원루즈정산", icon: Icon4, iconHighlight: IconHighlight4, id: 3, path: "/mypage/a" },
+        { text: "쿠폰관리", icon: Icon5, iconHighlight: IconHighlight5, id: 4, path: "/mypage/b" },
+        { text: "포인트", icon: Icon6, iconHighlight: IconHighlight6, id: 5, path: "/mypage/v" },
+        { text: "쪽지관리", icon: Icon7, iconHighlight: IconHighlight7, id: 6, path: "/mypage/d" },
+        { text: "회원정보수정", icon: Icon8, iconHighlight: IconHighlight8, id: 7, path: "/mypage/e" }
     ];
 
     function MenuList({ items }) {
+        
+
         return items.map(item => (
+            <div key={item.id}>
             <button 
-                key={item.id} 
                 className={`${
-                    selectedTab === item.id 
+                    selectedTab === item.path || selectedTab === item.path2
                     ? "bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2" 
                     : "bg-white"
                 } flex w-full items-center p-5px h-53px rounded-full`} 
                 onClick={(e) => {
-                    setSelectedTab(item.id)
+                    setSelectedTab(item.path)
+                    setSelectedSubTab(item.path)
                     history.push(item.path)
                 }}
             >
                 <div 
                     className={`${
-                        selectedTab === item.id && "shadow-plain3"
-                    } h-42px w-42px bg-white rounded-full flex items-center justify-center flex-shrink-0`} >
+                        (selectedTab === item.path || selectedTab === item.path2) && "shadow-plain3"
+                    } h-42px w-42px bg-white rounded-full flex items-center justify-center flex-shrink-0`} 
+                >
                     <img 
-                    className="h-42px w-42px bg-white rounded-full flex items-center justify-center" 
-                    src={selectedTab === item.id ? item.iconHighlight : item.icon} 
-                    alt="icon" />
+                        className="h-42px w-42px bg-white rounded-full flex items-center justify-center" 
+                        src={(selectedTab === item.path || selectedTab === item.path2) ? item.iconHighlight : item.icon} 
+                        alt="icon" />
                 </div>
-                <div className="w-full flex ml-14px">                
+                <div className="w-full flex mx-14px justify-between items-center">                
                     <label
                         className={`${
-                            selectedTab === item.id 
+                            (selectedTab === item.path || selectedTab === item.path2)
                             ? "text-white" 
                             : "text-gray-r8c8c8c"
-                        } font-spoqaBold text-14px cursor-pointer tracking-tight`}>{item.text}</label>
+                        } font-spoqaBold text-16px cursor-pointer tracking-tight`}>{item.text}</label>
+                        {item.sub1 && (
+                            <img src={(selectedTab === item.path || selectedTab === item.path2) ? ArrowUp : ArrowDown} alt="" />
+                        )}
                 </div>
             </button>
+            {(selectedTab === item.path || selectedTab === item.path2) &&(
+                <div className="font-spoqaMedium text-16px cursor-pointer tracking-tight mt-px">
+                    {item.sub1 && (
+                            <button 
+                                onClick={() => {
+                                    setSelectedSubTab(item.path)
+                                    history.push(item.path)
+                                }}
+                                className={`${
+                                    selectedSubTab === item.path
+                                    ? "bg-blue-d0e8ff text-gray-r454545" 
+                                    : "bg-gray-f9f9f9 text-gray-r8c8c8c"
+                                } flex items-center h-45px w-full  pl-60px`}>
+                                    {item.sub1}
+                            </button>
+                    )}
+                    {item.sub2 && (
+                        <button 
+                            onClick={() => {
+                                setSelectedSubTab(item.path2)
+                                setSelectedTab(item.path2)
+                                history.push(item.path2)
+                            }}
+                            className={`${
+                                selectedSubTab === item.path2
+                                ? "bg-blue-d0e8ff text-gray-r454545" 
+                                : "bg-gray-f9f9f9 text-gray-r8c8c8c"
+                            } flex items-center h-45px w-full bg-gray-f9f9f9 pl-60px`}>
+                                {item.sub2}
+                        </button>
+                    )}
+                </div>
+            )}
+            </div>
         ));
     }
 
     return (
-        <div className="w-200px h-440px bg-white shadow-subNavbar rounded-26px p-4px space-y-px mb-60px">
+        <div className="w-200px bg-white shadow-subNavbar rounded-26px p-4px space-y-px mb-60px">
             <MenuList items={tabsArray} />
         </div>
     )

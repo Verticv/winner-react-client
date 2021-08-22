@@ -17,22 +17,16 @@ import PragIcon from '../../images/myPage/betHistory/pragmatic.png'
 import DgIcon from '../../images/myPage/betHistory/dg.png'
 import SexyIcon from '../../images/myPage/betHistory/sexy.png'
 import BigIcon from '../../images/myPage/betHistory/big.png'
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
-import { registerLocale } from  "react-datepicker";
-import ko from 'date-fns/locale/ko';
-import CalendarIcon from '../../images/myPage/betHistory/calendar.png'
-import BetHistoryTable from './BetHistoryTable'
+import BetHistoryTable from './tables/BetHistoryTable'
 import SportsBetHistory from './SportsBetHistory'
 import Pagination from './Pagination'
-
-registerLocale('ko', ko)
+import DateSearchBar from './DateSearchBar'
+import MyPageTitle from './MyPageTitle'
 
 const BetHistory = () => {
 
     const [selectedTab, setSelectedTab] = useState(0)
     const [selectedSubTab, setSelectedSubTab] = useState(0)
-    const [startDate, setStartDate] = useState(new Date())
     const [page, setPage] = useState(0)
 
     const tabsArray = [
@@ -61,10 +55,8 @@ const BetHistory = () => {
 
     return (
         <div className="flex flex-col items-center">
-            <div className="flex h-21px w-full">
-                <div className="w-8px h-20px bg-gradient-to-b from-blue-gradLight to-blue-gradDark rounded-sm mt-px"/>
-                <label className="font-spoqaMedium text-22px text-gray-r585858 ml-4px -mt-5px" >베팅내역</label>
-            </div>
+            
+            <MyPageTitle title="베팅내역" />
             
             <div className="relative w-full mt-20px">
                 <HorizontalMenu itemsArray={tabsArray} isState={selectedTab} setState={setSelectedTab} />
@@ -81,76 +73,12 @@ const BetHistory = () => {
                 </div>
             )}
 
-            <div className="h-63px w-full bg-gray-f9f9f9 mt-20px rounded-2xl border border-gray-dddddd flex items-center justify-center space-x-10px">
-                
-                {selectedTab === 3 && (
-                    <div className="space-x-5px">
-                        <input 
-                            placeholder="리그선택"
-                            className="flex-shrink-0 outline-none w-138px h-42px rounded-md border border-gray-dddddd px-10px font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c" 
-                        />
-                        <input
-                            placeholder="팀명검색" 
-                            className="flex-shrink-0 outline-none w-138px h-42px rounded-md border border-gray-dddddd px-10px font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c" />
-                    </div>
-                )}
+            {selectedTab === 3 ? (
+                <DateSearchBar isLeagueSearch={true} />
+            ) : (
+                <DateSearchBar isLeagueSearch={false} />
+            )}
 
-                <div className="flex space-x-10px items-center w-304px h-full">
-                    <div className="relative">
-                        <DatePicker 
-                            className="flex-shrink-0 outline-none w-138px h-42px rounded-md border border-gray-dddddd px-10px font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c focus:ml-10px"
-                            locale="ko" 
-                            selected={startDate} 
-                            onChange={(date) => setStartDate(date)}
-                            dateFormat="yyyy-MM-dd"
-                        />
-                        <img src={CalendarIcon} alt="" className="absolute top-0 right-0 mt-11px mr-10px" />
-                    </div>
-                    <span className="font-spoqaMedium text-14px text-gray-r454545">~</span>
-                    <div className="relative">
-                        <DatePicker 
-                            className="flex-shrink-0 outline-none w-138px h-42px rounded-md border border-gray-dddddd px-10px font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c" 
-                            locale="ko"
-                            selected={startDate} 
-                            onChange={(date) => setStartDate(date)}
-                            dateFormat="yyyy-MM-dd"
-                        />
-                        <img src={CalendarIcon} alt="" className="absolute top-0 right-0 mt-11px mr-10px" />
-                    </div>
-                </div>
-                <div className="flex h-full space-x-6px items-center">
-                    <div className="flex items-center justify-center h-42px w-75px rounded-4px bg-blue-r004b8a">
-                        <div className="flex items-center justify-center h-40px w-73px bg-black rounded-4px border border-blue-r2a699c bg-gradient-to-b from-blue-r004b8a via-blue-r004b8a to-blue-r012d53 cursor-pointer">
-                            <span className="font-spoqaMedium tracking-tight text-14px text-white">오늘</span>
-                        </div>
-                    </div>
-
-                    <div className="flex items-center justify-center h-42px w-75px rounded-4px bg-blue-r2068b2">
-                        <div className="flex items-center justify-center h-40px w-73px bg-black rounded-4px border border-blue-r3975ae bg-gradient-to-b from-blue-r125a9e via-blue-r125a9e to-blue-r0b447a cursor-pointer">
-                            <span className="font-spoqaMedium tracking-tight text-14px text-white">1주일</span>
-                        </div>
-                    </div>
-
-                    <div className="flex items-center justify-center h-42px w-75px rounded-4px bg-blue-r286fce">
-                        <div className="flex items-center justify-center h-40px w-73px bg-black rounded-4px border border-blue-r538dcf bg-gradient-to-b from-blue-r3176c5 via-blue-r3176c5 to-blue-r1c5ca5 cursor-pointer">
-                            <span className="font-spoqaMedium tracking-tight text-14px text-white">15일</span>
-                        </div>
-                    </div>
-
-                    <div className="flex items-center justify-center h-42px w-75px rounded-4px bg-blue-r286fce">
-                        <div className="flex items-center justify-center h-40px w-73px bg-black rounded-4px border border-blue-r70a8f5 bg-gradient-to-b from-blue-r5497f4 via-blue-r5497f4 to-blue-r3d71b8 cursor-pointer">
-                            <span className="font-spoqaMedium tracking-tight text-14px text-white">1개월</span>
-                        </div>
-                    </div>
-
-                    <div className="flex items-center justify-center h-42px w-75px rounded-4px bg-gray-r171a1d">
-                        <div className="flex items-center justify-center h-40px w-73px bg-black rounded-4px border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r585b5e to-gray-r303337 cursor-pointer">
-                            <span className="font-spoqaMedium tracking-tight text-14px text-white">검색</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
             {selectedTab !== 3 && (
                 <div className="w-full h-full mt-20px mb-60px">
                     <BetHistoryTable />   

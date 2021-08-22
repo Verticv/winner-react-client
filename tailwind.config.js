@@ -64,6 +64,7 @@ module.exports = {
         '64px': '64px',
         '65px': '65px',
         '66px': '66px',
+        '70px': '70px',
         '71px': '71px',
         '72px': '72px',
         '73px': '73px',
@@ -99,6 +100,7 @@ module.exports = {
         '128px': '128px',
         '130px': '130px',
         '131px': '131px',
+        '132px': '132px',
         '135px': '135px',
         '138px': '138px',
         '140px': '140px',
@@ -113,6 +115,7 @@ module.exports = {
         '165px': '165px',
         '166px': '166px',
         '170px': '170px',
+        '172px': '172px',
         '175px': '175px',
         '178px': '178px',
         '180px': '180px',
@@ -121,11 +124,14 @@ module.exports = {
         '183px': '183px',
         '184px': '184px',
         '185px': '185px',
+        '186px': '186px',
+        '188px': '188px',
         '190px': '190px',
         '194px': '194px',
         '200px': '200px',
         '205px': '205px',
         '206px': '206px',
+        '220px': '220px',
         '224px': '224px',
         '225px': '225px',
         '235px': '235px',
@@ -135,6 +141,7 @@ module.exports = {
         '250px': '250px',
         '254px': '254px',
         '265px': '265px',
+        '268px': '268px',
         '274px': '274px',
         '275px': '275px',
         '282px': '282px',
@@ -244,7 +251,8 @@ module.exports = {
           r3ba3fc: '#3ba3fc',
           r1491fc: '#1491fc',
           r0675db: '#0675db',
-          r0056a6: '#0056a6'
+          r0056a6: '#0056a6',
+          d0e8ff: '#d0e8ff'
         },
         gray: {
           text: '#393e41',
@@ -284,7 +292,8 @@ module.exports = {
           fefefe: '#fefefe',
           f7f9fc: '#f7f9fc',
           efefef: '#efefef',
-          ebebeb: '#ebebeb'
+          ebebeb: '#ebebeb',
+          r7c7c7c: '#7c7c7c'
         },
         red: {
           notification: '#ed2f59',
