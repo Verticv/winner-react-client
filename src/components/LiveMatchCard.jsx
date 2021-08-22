@@ -156,7 +156,8 @@ export default function LiveMatchCard({ matchCard }) {
                             </div>
                         </div>
                         <button
-                            onClick={() => {
+                            onClick={(event) => {
+                                event.stopPropagation();
                                 changePlayingMatchId(id);
                             }}
                         >
