@@ -1,7 +1,8 @@
 import jss from "jss";
 import React from "react";
+import useStore from "store/useStore";
 
-export default function LiveMatchCard({ matchCard, handleSetNavElementActive }) {
+export default function LiveMatchCard({ matchCard }) {
     const {
         id,
         league,
@@ -17,8 +18,9 @@ export default function LiveMatchCard({ matchCard, handleSetNavElementActive }) 
         team2Goals,
         isFavorite,
         topOffset,
-        selected,
     } = matchCard;
+    const { selectedCardId, changeSelectedCardId } = useStore();
+    const selected = selectedCardId === matchCard.id
     const styles = {
         container: `
             height: 145px;
@@ -72,7 +74,7 @@ export default function LiveMatchCard({ matchCard, handleSetNavElementActive }) 
     };
     const handleContainerClick = () => {
         console.log("container clicked for " + id);
-        handleSetNavElementActive(id);
+        changeSelectedCardId(id);
     };
     return (
         <div

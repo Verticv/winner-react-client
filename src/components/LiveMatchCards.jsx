@@ -1,5 +1,5 @@
 import getRandomNumberInInterval from 'helpers/getRandomNumberInInterval';
-import React, { useState } from 'react'
+import React from 'react'
 import LiveMatchCard from './LiveMatchCard';
 
 export default function LiveMatchCards() {
@@ -23,7 +23,6 @@ export default function LiveMatchCards() {
             team2Goals: Math.floor(Math.random() * 3),
             isFavorite: Math.random() > 0.5,
             topOffset: "0",
-            selected: false,
         },
         {
             id: 1,
@@ -40,7 +39,6 @@ export default function LiveMatchCards() {
             team2Goals: Math.floor(Math.random() * 3),
             isFavorite: Math.random() > 0.5,
             topOffset: "155px",
-            selected: false,
         },
         {
             id: 2,
@@ -57,7 +55,6 @@ export default function LiveMatchCards() {
             team2Goals: Math.floor(Math.random() * 3),
             isFavorite: Math.random() > 0.5,
             topOffset: "310px",
-            selected: false,
         },
         {
             id: 3,
@@ -74,26 +71,13 @@ export default function LiveMatchCards() {
             team2Goals: Math.floor(Math.random() * 3),
             isFavorite: Math.random() > 0.5,
             topOffset: "465px",
-            selected: false,
         },
     ];
-    const [navListItems, setNavListItems] = useState(matchCards);
-    const handleSetNavElementActive = (id) => {
-        const navCopy = [...navListItems];
-        const itemToSetActive = navCopy.find((a) => a.id === id);
-        navCopy.forEach((navListItem) => (navListItem.selected = false));
-        itemToSetActive.selected = true;
-        setNavListItems(navCopy);
-    };
     return (
         <>
-            {navListItems.map((matchCard) => {
+            {matchCards.map((matchCard) => {
                 return (
-                    <LiveMatchCard
-                        key={matchCard.id}
-                        matchCard={matchCard}
-                        handleSetNavElementActive={handleSetNavElementActive}
-                    />
+                    <LiveMatchCard key={matchCard.id} matchCard={matchCard} />
                 );
             })}
         </>
