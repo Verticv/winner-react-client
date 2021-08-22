@@ -9,14 +9,14 @@ export default function SelectLayoutButtons() {
             image: require("../imagesHold/bg_136.png").default,
             text: "싱글뷰",
             offset: "0px",
-            active: false,
+            active: true,
         },
         {
             id: 1,
             image: require("../imagesHold/ico_19.png").default,
             text: "멀티뷰",
             offset: "72px",
-            active: true,
+            active: false,
         },
     ];
 

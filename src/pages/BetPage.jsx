@@ -178,26 +178,6 @@ export default function BetPage() {
             <div className="group-47">
               <img className="layer-36" src={require("../imagesHold/image_37.png").default} alt="" width="16" height="8"/>
             </div>
-            <div className="group-48">
-              <div className="bg-holder-37">
-                <p className="text-99">전체</p>
-              </div>
-              <div className="wrapper-6">
-                <div className="bg-holder-38">
-                  <p className="text-100">팀골</p>
-                </div>
-                <div className="bg-holder-39">
-                  <p className="text-101">핸디캡</p>
-                </div>
-                <div className="bg-holder-40">
-                  <p className="text-102">오버언더</p>
-                </div>
-                <div className="bg-holder-41">
-                  <p className="text-103">승무패핸디캡</p>
-                </div>
-                <div className="line-24"></div>
-              </div>
-            </div>
               <MatchBets />
             </div>
         </div>

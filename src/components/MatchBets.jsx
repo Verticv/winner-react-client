@@ -1,6 +1,7 @@
 import getRandomNumberInInterval from "helpers/getRandomNumberInInterval";
 import React from "react";
 import MatchDetail from "./MatchBet";
+import MatchBetsTabs from "./MatchBetsTabs";
 
 export default function MatchDetails() {
     const matchBets = [
@@ -33,39 +34,42 @@ export default function MatchDetails() {
         },
     ];
     return (
-        <div className="group-49">
-            <div className="bg-holder-42">
-                <div className="bg-holder-43">
-                    <div className="bg-holder-44">
-                        <img
-                            className="bg-7"
-                            src={require("../imagesHold/bg_143.png").default}
-                            alt=""
-                            width="729"
-                            height="386"
-                        />
+        <>
+            <MatchBetsTabs/>
+            <div className="group-49">
+                <div className="bg-holder-42">
+                    <div className="bg-holder-43">
+                        <div className="bg-holder-44">
+                            <img
+                                className="bg-7"
+                                src={require("../imagesHold/bg_143.png").default}
+                                alt=""
+                                width="729"
+                                height="386"
+                            />
+                        </div>
                     </div>
                 </div>
+                <img
+                    className="line-25"
+                    src={require("../imagesHold/line_7.png").default}
+                    alt=""
+                    width="282"
+                    height="349"
+                />
+                <img
+                    className="line-26"
+                    src={require("../imagesHold/line_8.png").default}
+                    alt=""
+                    width="282"
+                    height="349"
+                />
+                <div className="col-12">
+                    {matchBets.map((matchBet) => {
+                        return <MatchDetail key={matchBet.id} bet={matchBet} />;
+                    })}
+                </div>
             </div>
-            <img
-                className="line-25"
-                src={require("../imagesHold/line_7.png").default}
-                alt=""
-                width="282"
-                height="349"
-            />
-            <img
-                className="line-26"
-                src={require("../imagesHold/line_8.png").default}
-                alt=""
-                width="282"
-                height="349"
-            />
-            <div className="col-12">
-                {matchBets.map((matchBet) => {
-                    return <MatchDetail key={matchBet.id} bet={matchBet} />;
-                })}
-            </div>
-        </div>
+        </>
     );
 }
