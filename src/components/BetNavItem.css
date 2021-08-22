@@ -4289,7 +4289,9 @@ body {
   position: absolute;
   top: 0;
   width: 28px;
-  border: 1px solid #ffffff; /*stroke*/
+  border-width: 1px;
+  border-style: solid;
+  border-image: linear-gradient(to top, rgb(145, 140, 140), transparent) 1;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;

@@ -25,7 +25,7 @@ export default function BetNav() {
             icon: require("../imagesHold/ico_9.png").default,
             text: "축구",
             number,
-            active: false,
+            active: true,
             marginLeft: "-335px",
         },
         {
