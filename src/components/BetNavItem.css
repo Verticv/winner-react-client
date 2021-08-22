@@ -4389,6 +4389,7 @@ body {
   position: absolute;
   top: 8px;
   width: 342px;
+  padding-right: 8px;
   /* background: url(../imagesHold/bg_157.png) no-repeat; */
 }
 .text-119 {
@@ -4400,6 +4401,7 @@ body {
   text-transform: uppercase;
 }
 .text-120 {
+  white-space: nowrap;
   left: 308px;
   position: absolute;
   top: 2px;
@@ -4522,6 +4524,7 @@ body {
   text-transform: uppercase;
 }
 .text-125 {
+  white-space: nowrap;
   left: 308px;
   position: absolute;
   top: 2px;

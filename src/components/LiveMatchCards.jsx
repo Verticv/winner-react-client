@@ -1,3 +1,4 @@
+import getRandomNumberInInterval from 'helpers/getRandomNumberInInterval';
 import React, { useState } from 'react'
 import LiveMatchCard from './LiveMatchCard';
 
@@ -5,9 +6,7 @@ export default function LiveMatchCards() {
     /**
      * Returns a random number between min (inclusive) and max (exclusive)
      */
-    function getRandomArbitrary(min, max) {
-        return Math.random() * (max - min) + min;
-    }
+
     const matchCards = [
         {
             id: 0,
@@ -18,8 +17,8 @@ export default function LiveMatchCards() {
             tieKof: (Math.random() * 5).toFixed(2),
             team1WinKof: (Math.random() * 5).toFixed(2),
             team2WinKof: (Math.random() * 5).toFixed(2),
-            team1stats: Math.floor(getRandomArbitrary(1000, 5000)),
-            team2stats: Math.floor(getRandomArbitrary(1000, 5000)),
+            team1stats: Math.floor(getRandomNumberInInterval(1000, 5000)),
+            team2stats: Math.floor(getRandomNumberInInterval(1000, 5000)),
             team1Goals: Math.floor(Math.random() * 5),
             team2Goals: Math.floor(Math.random() * 3),
             isFavorite: Math.random() > 0.5,
@@ -35,8 +34,8 @@ export default function LiveMatchCards() {
             tieKof: (Math.random() * 5).toFixed(2),
             team1WinKof: (Math.random() * 5).toFixed(2),
             team2WinKof: (Math.random() * 5).toFixed(2),
-            team1stats: Math.floor(getRandomArbitrary(1000, 5000)),
-            team2stats: Math.floor(getRandomArbitrary(1000, 5000)),
+            team1stats: Math.floor(getRandomNumberInInterval(1000, 5000)),
+            team2stats: Math.floor(getRandomNumberInInterval(1000, 5000)),
             team1Goals: Math.floor(Math.random() * 5),
             team2Goals: Math.floor(Math.random() * 3),
             isFavorite: Math.random() > 0.5,
@@ -52,8 +51,8 @@ export default function LiveMatchCards() {
             tieKof: (Math.random() * 5).toFixed(2),
             team1WinKof: (Math.random() * 5).toFixed(2),
             team2WinKof: (Math.random() * 5).toFixed(2),
-            team1stats: Math.floor(getRandomArbitrary(1000, 5000)),
-            team2stats: Math.floor(getRandomArbitrary(1000, 5000)),
+            team1stats: Math.floor(getRandomNumberInInterval(1000, 5000)),
+            team2stats: Math.floor(getRandomNumberInInterval(1000, 5000)),
             team1Goals: Math.floor(Math.random() * 5),
             team2Goals: Math.floor(Math.random() * 3),
             isFavorite: Math.random() > 0.5,
@@ -69,8 +68,8 @@ export default function LiveMatchCards() {
             tieKof: (Math.random() * 5).toFixed(2),
             team1WinKof: (Math.random() * 5).toFixed(2),
             team2WinKof: (Math.random() * 5).toFixed(2),
-            team1stats: Math.floor(getRandomArbitrary(1000, 5000)),
-            team2stats: Math.floor(getRandomArbitrary(1000, 5000)),
+            team1stats: Math.floor(getRandomNumberInInterval(1000, 5000)),
+            team2stats: Math.floor(getRandomNumberInInterval(1000, 5000)),
             team1Goals: Math.floor(Math.random() * 5),
             team2Goals: Math.floor(Math.random() * 3),
             isFavorite: Math.random() > 0.5,

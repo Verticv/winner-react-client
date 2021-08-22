@@ -1,6 +1,6 @@
 import BetNav from "components/BetNav";
 import LiveMatchCards from "components/LiveMatchCards";
-import MatchDetails from "components/MatchDetails";
+import MatchBets from "components/MatchBets";
 import SelectLayoutButtons from "components/SelectLayoutButtons";
 import React from "react";
 
@@ -198,7 +198,7 @@ export default function BetPage() {
                 <div className="line-24"></div>
               </div>
             </div>
-              <MatchDetails />
+              <MatchBets />
             </div>
         </div>
       </div>
