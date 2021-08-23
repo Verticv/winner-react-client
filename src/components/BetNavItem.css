@@ -2,7 +2,7 @@
 /**
 * Eric Meyer's Reset CSS v2.0
 */
-html, body, div, span, applet, object, iframe,
+/* html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
@@ -21,92 +21,28 @@ time, mark, audio, video, input, textarea {
   font: inherit;
   font-size: 100%;
   vertical-align: baseline;
-}
+} */
 
-/* HTML5 display-role reset for older browsers */
+/* HTML5 display-role reset for older browsers
 article, aside, details, figcaption, figure,
 footer, header, menu, nav, section, time {
   display: block;
-}
+} */
 
-body {
+.global_container_ {
   line-height: 1;
-  color: black;
-  background: white;
-}
-
-a {
-  color: inherit;
+    color: inherit;
+  text-decoration: none;
+  overflow-x: hidden;
+    color: #ffffff;
+  font-family: NotoSansCJKkr, serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0.05em;
   text-decoration: none;
 }
 
-ol, ul {
-  list-style: none;
-}
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* meyerweb css reset end */
-
-textarea:focus, input:focus {
-  outline: 0;
-}
-
-input {
-  border-width: 0;
-}
-
-em {
-  font-style: italic;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: bold;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.group:before,
-.group:after {
-  content: " ";
-  display: table;
-}
-
-.group:after {
-  clear: both;
-}
-
-.group {
-  zoom: 1; /* ie 6/7 */
-}
-
-embed,
-img,
-object,
-video {
-  max-width: 100%;
-}
-sup {
-  font-size: 58.3%;
-  vertical-align: text-top;
-}
-sub {
-  font-size: 58.3%;
-  vertical-align: text-bottom;
-}
 .no-space-between-inline-blocks {
   *letter-spacing: normal; /*reset IE < 8*/
   letter-spacing: -0.31em; /*webkit*/
@@ -136,15 +72,9 @@ html {
 html {
   font-size: 16px;
 }
-body {
-  color: #ffffff;
-  font-family: NotoSansCJKkr, serif;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: normal;
-  letter-spacing: 0.05em;
-  text-decoration: none;
-}
+/* body {
+
+} */
 .global_container_ {
   float: none;
   height: 1080px;

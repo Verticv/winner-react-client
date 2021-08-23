@@ -75,7 +75,6 @@ export default function LiveMatchCard({ matchCard }) {
     const { classes } = jss.createStyleSheet(styles).attach();
     const handlePlusButton = (event) => {
         event.stopPropagation();
-        console.log("plus button clicked for " + id);
     };
     const handleContainerClick = () => {
         changeSelectedCardId(id);
