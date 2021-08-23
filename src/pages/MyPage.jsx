@@ -10,6 +10,7 @@ import BetHistory from 'components/myPage/BetHistory'
 import DirectoryComponent from 'components/myPage/DirectoryComponent'
 import ChargeHistory from 'components/myPage/ChargeHistory'
 import ExchangeHistory from 'components/myPage/ExchangeHistory'
+import WinLoseSettlement from 'components/myPage/WinLoseSettlement'
 
 const MyPage = ({isAuthenticated, setAuthenticated}) => {
 
@@ -33,6 +34,33 @@ const MyPage = ({isAuthenticated, setAuthenticated}) => {
                 <Route path="/mypage/exchange-history">
                     <DirectoryComponent branch2="충/환전내역" branch3="환전내역" />
                 </Route>
+                <Route path="/mypage/win-lose-settlement">
+                    <DirectoryComponent branch2="윈루즈정산" />
+                </Route>
+                <Route path="/mypage/coupon-usage">
+                    <DirectoryComponent branch2="쿠폰관리" branch3="쿠폰사용" />
+                </Route>
+                <Route path="/mypage/coupon-gift">
+                    <DirectoryComponent branch2="쿠폰관리" branch3="쿠폰선물" />
+                </Route>
+                <Route path="/mypage/coupon-history">
+                    <DirectoryComponent branch2="쿠폰관리" branch3="쿠폰내역" />
+                </Route>
+                <Route path="/mypage/points-apply">
+                    <DirectoryComponent branch2="포인트" branch3="포인트전환신청" />
+                </Route>
+                <Route path="/mypage/points-accumulate-history">
+                    <DirectoryComponent branch2="포인트" branch3="포인트적립신청" />
+                </Route>
+                <Route path="/mypage/points-transaction-history">
+                    <DirectoryComponent branch2="포인트" branch3="포인트전환내역" />
+                </Route>
+                <Route path="/mypage/inbox">
+                    <DirectoryComponent branch2="쪽지관리" />
+                </Route>
+                <Route path="/mypage/edit-info">
+                    <DirectoryComponent branch2="회원정보수정" />
+                </Route>
 
                 <div className="relative w-default h-225px">
                     <label className="text-36px font-spoqaMedium text-blue-r325685 absolute right-0 bottom-0 z-20 mb-86px mr-50px">마이페이지</label>
@@ -51,6 +79,9 @@ const MyPage = ({isAuthenticated, setAuthenticated}) => {
                         </Route>
                         <Route path="/mypage/exchange-history">
                             <ExchangeHistory />
+                        </Route>
+                        <Route path="/mypage/win-lose-settlement">
+                            <WinLoseSettlement />
                         </Route>
                         <Route path="*">
                         </Route>

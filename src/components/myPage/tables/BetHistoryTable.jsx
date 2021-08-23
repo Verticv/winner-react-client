@@ -3,7 +3,7 @@ import React from 'react'
 const BetHistoryTable = () => {
     return (
         <table className="shadow-subNavbar rounded-3xl overflow-hidden">
-            <thead className="bg-gray-fafafa rounded-3xl font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px">
+            <thead className="bg-gray-fafafa rounded-3xl font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd">
                 <tr>
                     <th className="w-235px">베팅시간</th>
                     <th className="w-170px">게임종류</th>
@@ -14,7 +14,7 @@ const BetHistoryTable = () => {
                 </tr>
             </thead>
             <tbody className="w-full text-585858 text-14px tracking-tight font-spoqaMedium">
-                <tr className="bg-gray-fefefe rounded-3xl font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px w-full">
+                <tr className="bg-gray-fefefe rounded-3xl font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px w-full border-b border-gray-dddddd">
                     <td className="w-235px font-roboto h-56px text-center">2021-06-29 15:46:13</td>
                     <td className="w-170px h-56px text-center">에볼루션</td>
                     <td className="w-170px h-56px text-center">7193915</td>
@@ -22,7 +22,7 @@ const BetHistoryTable = () => {
                     <td className="w-170px h-56px text-right">-12,000</td>
                     <td className="w-126px h-56px text-center">패</td>
                 </tr>
-                <tr className="bg-gray-f7f9fc rounded-3xl font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px">
+                <tr className="bg-gray-f7f9fc rounded-3xl font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd">
                     <td className="w-235px font-roboto h-56px text-center">2021-06-29 15:45:42</td>
                     <td className="w-170px h-56px text-center">에볼루션</td>
                     <td className="w-170px h-56px text-center">7193914</td>

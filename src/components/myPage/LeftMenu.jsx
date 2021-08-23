@@ -39,53 +39,86 @@ const LeftMenu = () => {
             path2: "/mypage/exchange-history"
         },
         { text: "총판페이지", icon: Icon3, iconHighlight: IconHighlight3, id: 2, path: "/mypage/admin-page" },
-        { text: "원루즈정산", icon: Icon4, iconHighlight: IconHighlight4, id: 3, path: "/mypage/a" },
-        { text: "쿠폰관리", icon: Icon5, iconHighlight: IconHighlight5, id: 4, path: "/mypage/b" },
-        { text: "포인트", icon: Icon6, iconHighlight: IconHighlight6, id: 5, path: "/mypage/v" },
-        { text: "쪽지관리", icon: Icon7, iconHighlight: IconHighlight7, id: 6, path: "/mypage/d" },
-        { text: "회원정보수정", icon: Icon8, iconHighlight: IconHighlight8, id: 7, path: "/mypage/e" }
+        { text: "원루즈정산", icon: Icon4, iconHighlight: IconHighlight4, id: 3, path: "/mypage/win-lose-settlement" },
+        { 
+            text: "쿠폰관리",
+            icon: Icon5, 
+            iconHighlight: IconHighlight5, 
+            id: 4, 
+            path: "/mypage/coupon-usage", 
+            sub1: "쿠폰사용",
+            sub2: "쿠폰선물",
+            sub3: "쿠폰내역",
+            path2: "/mypage/coupon-gift", 
+            path3: "/mypage/coupon-history"
+        },
+        { 
+            text: "포인트", 
+            icon: Icon6, 
+            iconHighlight: IconHighlight6, 
+            id: 5, 
+            path: "/mypage/points-apply", 
+            sub1: "포인트전환신청",
+            sub2: "포인트적립내역",
+            sub3: "포인트전환내역",
+            path2: "/mypage/points-accumulate-history", 
+            path3: "/mypage/points-transaction-history"
+        },
+        { text: "쪽지관리", icon: Icon7, iconHighlight: IconHighlight7, id: 6, path: "/mypage/inbox" },
+        { text: "회원정보수정", icon: Icon8, iconHighlight: IconHighlight8, id: 7, path: "/mypage/edit-info" }
     ];
+
+    function openTab() {
+        window.open('/총판페이지');
+      }
+    
+    function buttonPressed(path) {
+        history.push(path)
+        setSelectedTab(path)
+        setSelectedSubTab(path)
+    }
 
     function MenuList({ items }) {
         
-
         return items.map(item => (
-            <div key={item.id}>
+            <div key={item.id} >
             <button 
                 className={`${
-                    selectedTab === item.path || selectedTab === item.path2
+                    selectedTab === item.path || selectedTab === item.path2 || selectedTab === item.path3
                     ? "bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2" 
                     : "bg-white"
                 } flex w-full items-center p-5px h-53px rounded-full`} 
                 onClick={(e) => {
-                    setSelectedTab(item.path)
-                    setSelectedSubTab(item.path)
-                    history.push(item.path)
+                    item.id !== 2 ? (
+                        buttonPressed(item.path)
+                     ) : (
+                        openTab()
+                     )
                 }}
             >
                 <div 
                     className={`${
-                        (selectedTab === item.path || selectedTab === item.path2) && "shadow-plain3"
+                        (selectedTab === item.path || selectedTab === item.path2 || selectedTab === item.path3) && "shadow-plain3"
                     } h-42px w-42px bg-white rounded-full flex items-center justify-center flex-shrink-0`} 
                 >
                     <img 
                         className="h-42px w-42px bg-white rounded-full flex items-center justify-center" 
-                        src={(selectedTab === item.path || selectedTab === item.path2) ? item.iconHighlight : item.icon} 
+                        src={(selectedTab === item.path || selectedTab === item.path2 || selectedTab === item.path3) ? item.iconHighlight : item.icon} 
                         alt="icon" />
                 </div>
                 <div className="w-full flex mx-14px justify-between items-center">                
                     <label
                         className={`${
-                            (selectedTab === item.path || selectedTab === item.path2)
+                            (selectedTab === item.path || selectedTab === item.path2 || selectedTab === item.path3)
                             ? "text-white" 
                             : "text-gray-r8c8c8c"
                         } font-spoqaBold text-16px cursor-pointer tracking-tight`}>{item.text}</label>
                         {item.sub1 && (
-                            <img src={(selectedTab === item.path || selectedTab === item.path2) ? ArrowUp : ArrowDown} alt="" />
+                            <img src={(selectedTab === item.path || selectedTab === item.path2 || selectedTab === item.path3) ? ArrowUp : ArrowDown} alt="" />
                         )}
                 </div>
             </button>
-            {(selectedTab === item.path || selectedTab === item.path2) &&(
+            {(selectedTab === item.path || selectedTab === item.path2 || selectedTab === item.path3) &&(
                 <div className="font-spoqaMedium text-16px cursor-pointer tracking-tight mt-px">
                     {item.sub1 && (
                             <button 
@@ -110,6 +143,21 @@ const LeftMenu = () => {
                             }}
                             className={`${
                                 selectedSubTab === item.path2
+                                ? "bg-blue-d0e8ff text-gray-r454545" 
+                                : "bg-gray-f9f9f9 text-gray-r8c8c8c"
+                            } flex items-center h-45px w-full bg-gray-f9f9f9 pl-60px`}>
+                                {item.sub2}
+                        </button>
+                    )}
+                    {item.sub3 && (
+                        <button 
+                            onClick={() => {
+                                setSelectedSubTab(item.path3)
+                                setSelectedTab(item.path3)
+                                history.push(item.path3)
+                            }}
+                            className={`${
+                                selectedSubTab === item.path3
                                 ? "bg-blue-d0e8ff text-gray-r454545" 
                                 : "bg-gray-f9f9f9 text-gray-r8c8c8c"
                             } flex items-center h-45px w-full bg-gray-f9f9f9 pl-60px`}>
