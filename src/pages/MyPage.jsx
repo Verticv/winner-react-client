@@ -11,6 +11,9 @@ import DirectoryComponent from 'components/myPage/DirectoryComponent'
 import ChargeHistory from 'components/myPage/ChargeHistory'
 import ExchangeHistory from 'components/myPage/ExchangeHistory'
 import WinLoseSettlement from 'components/myPage/WinLoseSettlement'
+import CouponUsage from 'components/myPage/CouponUsage'
+import CouponGift from 'components/myPage/CouponGift'
+import CouponHistory from 'components/myPage/CouponHistory'
 
 const MyPage = ({isAuthenticated, setAuthenticated}) => {
 
@@ -82,6 +85,15 @@ const MyPage = ({isAuthenticated, setAuthenticated}) => {
                         </Route>
                         <Route path="/mypage/win-lose-settlement">
                             <WinLoseSettlement />
+                        </Route>
+                        <Route path="/mypage/coupon-usage">
+                            <CouponUsage />
+                        </Route>
+                        <Route path="/mypage/coupon-gift">
+                            <CouponGift />
+                        </Route>
+                        <Route path="/mypage/coupon-history">
+                            <CouponHistory />
                         </Route>
                         <Route path="*">
                         </Route>
