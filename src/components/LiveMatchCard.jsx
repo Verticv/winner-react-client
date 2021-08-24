@@ -1,6 +1,7 @@
 import jss from "jss";
 import React from "react";
 import useStore from "store/useStore";
+import LiveMatchCoefficient from "./LiveMatchCoefficient";
 
 export default function LiveMatchCard({ matchCard }) {
     const {
@@ -186,37 +187,13 @@ export default function LiveMatchCard({ matchCard }) {
                         </p>
                     </div>
                 </div>
-                <div className="btn-4">
-                    <div className="row-17">
-                        <p className="text-59">{team1}</p>
-                        <p className="text-60">{team1WinKof}</p>
-                    </div>
-                    <div className="wrapper-21">
-                        <div className="row-18">
-                            <img
-                                className="line-11"
-                                src={
-                                    require("../imagesHold/line_31.png").default
-                                }
-                                alt=""
-                                width="11"
-                                height="32"
-                            />
-                            <p className="text-61">{tieKof}</p>
-                        </div>
-                        <div className="row-19">
-                            <p className="text-62">{team2WinKof}</p>
-                            <p className="text-63">{team2}</p>
-                        </div>
-                        <img
-                            className="line-12"
-                            src={require("../imagesHold/line_32.png").default}
-                            alt=""
-                            width="11"
-                            height="32"
-                        />
-                    </div>
-                </div>
+                <LiveMatchCoefficient
+                    team1={team1}
+                    team2={team2}
+                    team1WinKof={team1WinKof}
+                    team2WinKof={team2WinKof}
+                    tieKof={tieKof}
+                />
             </div>
             <button onClick={handlePlusButton} className="bg-5">
                 <p className="text-78">+</p>
