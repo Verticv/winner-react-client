@@ -2,6 +2,7 @@ import BetNav from "components/BetNav";
 import LiveMatchCards from "components/LiveMatchCards";
 import MatchBets from "components/MatchBets";
 import SelectLayoutButtons from "components/SelectLayoutButtons";
+import UpcomingMatches from "components/UpcomingMatches";
 import React from "react";
 
 // import football from "../imagesDump/bet/icon-ufc.png").default};
@@ -67,109 +68,8 @@ export default function BetPage() {
                 </div>
               </div>
             </div>
-            <div className="group-40">
-              <div className="f-5">
-                <img className="layer-24" src={require("../imagesHold/image_80.png").default} alt="" width="18" height="18"/>
-                <img className="layer-25" src={require("../imagesHold/image_105.png").default} alt="" width="30" height="19"/>
-                <p className="text-84">라리가</p>
-              </div>
-              <div className="row-29">
-                <div className="col-33">
-                  <div className="row-43">
-                    <img className="layer-26" src={require("../imagesHold/image_73.png").default} alt="" width="18" height="16"/>
-                    <div className="team-9">
-                      <img className="layer-27" src={require("../imagesHold/image_66.png").default} alt="" width="13" height="15"/>
-                      <div className="bg-holder-33">
-                        <p className="h-5">h</p>
-                      </div>
-                      <p className="text-85">fc바로셀로나</p>
-                    </div>
-                  </div>
-                  <div className="team-10">
-                    <div className="group-41">
-                      <img className="layer-28" src={require("../imagesHold/image_110.png").default} alt="" width="12" height="14"/>
-                    </div>
-                    <div className="bg-holder-34">
-                      <img className="a-5" src={require("../imagesHold/a.png").default} alt="a" width="8" height="9" title="a"/>
-                    </div>
-                    <p className="text-86">레알마드리드</p>
-                  </div>
-                </div>
-                <div className="col-28">
-                  <div className="wrapper-39">
-                    <div className="text-87">
-                      <p>경기시간</p>
-                    </div>
-                  </div>
-                  <p className="text-88">02-06 21:00</p>
-                </div>
-              </div>
-              <div className="line-18"></div>
-              <div className="btn-holder">
-                <div className="line-19"></div>
-                <img className="btn-6" src={require("../imagesHold/btn_2.png").default} alt="" width="43" height="110"/>
-              </div>
-              <p className="text-89">정보</p>
-              <img className="gra-5" src={require("../imagesHold/gra_5.jpg").default} alt="" width="31" height="110"/>
+              <UpcomingMatches />
             </div>
-            <div className="group-42">
-              <div className="row-30">
-                <img className="layer-29" src={require("../imagesHold/image_73.png").default} alt="" width="18" height="16"/>
-                <div className="col-29">
-                  <div className="team-11">
-                    <div className="group-43">
-                      <img className="layer-30" src={require("../imagesHold/image_67.png").default} alt="" width="15" height="10"/>
-                    </div>
-                    <div className="bg-holder-35">
-                      <p className="h-6">h</p>
-                    </div>
-                    <p className="text-90">맨체스터유나이티드</p>
-                  </div>
-                  <div className="team-12">
-                    <div className="group-44">
-                      <img className="layer-31" src={require("../imagesHold/image_110.png").default} alt="" width="12" height="14"/>
-                    </div>
-                    <div className="bg-holder-36">
-                      <img className="a-6" src={require("../imagesHold/a.png").default} alt="a" width="8" height="9" title="a"/>
-                    </div>
-                    <p className="text-91">리버풀</p>
-                  </div>
-                </div>
-                <div className="col-30">
-                  <div className="wrapper-40">
-                    <div className="text-92">
-                      <p>경기시간</p>
-                    </div>
-                  </div>
-                  <p className="text-93">02-06 21:00</p>
-                </div>
-              </div>
-              <div className="line-20"></div>
-              <div className="col-15">
-                <div className="line-21"></div>
-                <p className="text-94">정보</p>
-              </div>
-              <div className="f-6">
-                <img className="layer-32" src={require("../imagesHold/image_80.png").default} alt="" width="18" height="18"/>
-                <img className="layer-33" src={require("../imagesHold/image_122.png").default} alt="" width="30" height="19"/>
-                <p className="text-95">프리미어리그</p>
-              </div>
-              <img className="gra-6" src={require("../imagesHold/gra_5.jpg").default} alt="" width="31" height="110"/>
-            </div>
-            <div className="group-45">
-              <img className="bg-6" src={require("../imagesHold/bg_249.png").default} alt="" width="681" height="4"/>
-              <div className="line-22"></div>
-              <div className="btn-holder-2">
-                <div className="line-23"></div>
-              </div>
-              <div className="f-7">
-                <img className="layer-34" src={require("../imagesHold/image_80.png").default} alt="" width="18" height="18"/>
-                <img className="layer-35" src={require("../imagesHold/image_122.png").default} alt="" width="30" height="19"/>
-                <p className="text-96">프리미어리그</p>
-              </div>
-              <img className="gra-7" src={require("../imagesHold/gra_7.png").default} alt="" width="31" height="44"/>
-            </div>
-          </div>
           <div className="group-46">
             <div className="row">
               <p className="text-97">2</p>
