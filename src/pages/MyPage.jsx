@@ -27,7 +27,6 @@ const MyPage = ({isAuthenticated, setAuthenticated}) => {
 
 
             <div className="flex flex-col items-start limit:items-center mt-92px w-full h-full">
-
                 <Route path="/mypage/bet-history">
                     <DirectoryComponent branch2="베팅내역" />
                 </Route>

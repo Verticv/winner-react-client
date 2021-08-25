@@ -38,7 +38,7 @@ const LeftMenu = () => {
             sub2: "환전내역",
             path2: "/mypage/exchange-history"
         },
-        { text: "총판페이지", icon: Icon3, iconHighlight: IconHighlight3, id: 2, path: "/mypage/admin-page" },
+        { text: "총판페이지", icon: Icon3, iconHighlight: IconHighlight3, id: 2, path: "/distributor-page" },
         { text: "원루즈정산", icon: Icon4, iconHighlight: IconHighlight4, id: 3, path: "/mypage/win-lose-settlement" },
         { 
             text: "쿠폰관리",
@@ -69,7 +69,7 @@ const LeftMenu = () => {
     ];
 
     function openTab() {
-        window.open('/총판페이지');
+        window.open('/distributor-page');
       }
     
     function buttonPressed(path) {

@@ -137,6 +137,7 @@ module.exports = {
         '220px': '220px',
         '224px': '224px',
         '225px': '225px',
+        '227px': '227px',
         '235px': '235px',
         '240px': '240px',
         '242px': '242px',
@@ -186,6 +187,7 @@ module.exports = {
         '630px': '630px',
         '650px': '650px',
         '680px': '680px',
+        '734px': '734px',
         '746px': '746px',
         '800px': '800px',
         '801px': '801px',
@@ -193,7 +195,8 @@ module.exports = {
         '840px': '840px',
         '862px': '862px',
         '978px': '978px',
-        '1040px': '1040px'
+        '1040px': '1040px',
+        '1836px': '1836px'
       },
       boxShadow: {
         plain: '0 0px 5px 0 rgba(0, 0, 0, 0.5), 0 4px 4px 0 rgba(0, 0, 0, 0.06)',
@@ -204,6 +207,7 @@ module.exports = {
         plain5: '0 4px 4px 0px rgba(0, 0, 0, 0.25)',
         plain6: '2px 2px 2px 0px rgba(0, 0, 0, 0.4)',
         plain7: '0px 2px 2px 0px rgba(0, 0, 0, 0.2)',
+        plain8: '0 4px 3.5px 0px rgba(0, 0, 0, 0.15)',
         subNavbar: '0 0px 6px 0 rgba(0, 0, 0, 0.2)',
         popup: '0 6px 10px 4px rgba(0, 0, 0, 0.3)',
         glow: '0 0 3px 2px rgba(0, 0, 0, 0.1)',
@@ -301,7 +305,10 @@ module.exports = {
           r7c7c7c: '#7c7c7c',
           b4b4b4: '#b4b4b4',
           r5a6067: '#5a6067',
-          dee6ef: '#dee6ef'
+          dee6ef: '#dee6ef',
+          r868686: '#868686',
+          r7b7b7b: '#7b7b7b',
+          f8f8fa: '#f8f8fa'
         },
         red: {
           notification: '#ed2f59',
@@ -367,6 +374,7 @@ module.exports = {
         '22px': '22px',
         '24px': '24px',
         '25px': '25px',
+        '26px': '26px',
         '27px': '27px',
         '28px': '28px',
         '30px': '30px',

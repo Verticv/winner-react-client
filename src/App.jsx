@@ -3,6 +3,7 @@ import "./App.css";
 import MainPage from "./pages/MainPage";
 import { Switch, Route } from "react-router-dom";
 import MyPage from "pages/MyPage";
+import DistributorPage from "pages/DistributorPage";
 
 function App() {
 
@@ -22,6 +23,9 @@ function App() {
                 </Route>
                 <Route path="/mypage">
                     <MyPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
+                </Route>
+                <Route path="/distributor-page">
+                    <DistributorPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
                 </Route>
                 <Route path="*">
                     <MainPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
