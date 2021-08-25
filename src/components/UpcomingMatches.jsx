@@ -109,7 +109,7 @@ export default function UpcomingMatches() {
             }}
         >
             {upcomingMatchCards.map(upcomingMatchCard => {
-                return <UpcomingMatchCard upcomingMatchCard={upcomingMatchCard} />;
+                return <UpcomingMatchCard key={upcomingMatchCard.id + "-upcoming-matches"} upcomingMatchCard={upcomingMatchCard} />;
             })}
         </div>
     );
