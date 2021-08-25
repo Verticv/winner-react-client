@@ -1,6 +1,8 @@
 import React from 'react'
+import useStore from 'store/useStore';
 
-export default function UpcomingMatchCard() {
+export default function UpcomingMatchCard({ upcomingMatchCard }) {
+    const { changeSelectedCardId } = useStore((state) => state);
     return (
         <div className="group-40">
             <div className="f-5">
@@ -83,7 +85,7 @@ export default function UpcomingMatchCard() {
                 </div>
             </div>
             <div className="line-18"></div>
-            <div className="btn-holder">
+            <button onClick={() => changeSelectedCardId(upcomingMatchCard.id)} className="btn-holder">
                 <div className="line-19"></div>
                 <img
                     className="btn-6"
@@ -92,8 +94,8 @@ export default function UpcomingMatchCard() {
                     width="43"
                     height="110"
                 />
-            </div>
-            <p className="text-89">정보</p>
+            </button>
+            <p style={{pointerEvents: "none"}} className="text-89">정보</p>
             <img
                 className="gra-5"
                 src={require("../imagesHold/gra_5.jpg").default}
