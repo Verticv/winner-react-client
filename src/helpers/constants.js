@@ -1,0 +1,1 @@
+export const betTypes = {teamGoal: 'teamGoal', handicap: "handicap", overUnder: "overUnder", winLoseHandicap: 'winLoseHandicap'}
