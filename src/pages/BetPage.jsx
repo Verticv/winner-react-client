@@ -2,6 +2,7 @@ import BetNav from "components/BetNav";
 import BetSlipBet from "components/BetSlipBet";
 import LiveMatchCards from "components/LiveMatchCards";
 import MatchBets from "components/MatchBets";
+import LeagueSelectPopup from "components/popups/LeagueSelectPopup";
 import SelectLayoutButtons from "components/SelectLayoutButtons";
 import UpcomingMatches from "components/UpcomingMatches";
 import ViewSelectButtons from "components/ViewSelectButtons";
@@ -18,6 +19,7 @@ import "../components/BetNavItem.css";
 export default function BetPage() {
     return (
         <div className="global_container_">
+            <LeagueSelectPopup />
             <div className="col-32">
                 <div className="group-2">
                     <div className="col-24">
