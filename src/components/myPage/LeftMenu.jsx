@@ -161,7 +161,7 @@ const LeftMenu = () => {
                                 ? "bg-blue-d0e8ff text-gray-r454545" 
                                 : "bg-gray-f9f9f9 text-gray-r8c8c8c"
                             } flex items-center h-45px w-full bg-gray-f9f9f9 pl-60px`}>
-                                {item.sub2}
+                                {item.sub3}
                         </button>
                     )}
                 </div>

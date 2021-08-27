@@ -24,7 +24,7 @@ const CouponUsageTable = () => {
             <tbody className="w-full text-585858 text-14px tracking-tight font-spoqaMedium">
                 <tr className="bg-gray-fefefe rounded-3xl font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px w-full border-b border-gray-dddddd">
                     <td className="w-313px text-center">테스트쿠폰</td>
-                    <td className="w-172px text-center text-red-e9441d">10,000</td>
+                    <td className="w-172px text-right text-red-e9441d pr-20px">10,000</td>
                     <td className="w-111px text-center">eric123</td>
                     <td className="w-108px text-center text-blue-r0056a6">사용가능</td>
                     <td className="w-122px text-center">2021-06-29</td>
@@ -33,7 +33,7 @@ const CouponUsageTable = () => {
                 </tr>
                 <tr className="bg-gray-f7f9fc rounded-3xl font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd">
                     <td className="w-313px text-center">테스트쿠폰</td>
-                    <td className="w-172px text-center text-red-e9441d">10,000</td>
+                    <td className="w-172px text-right text-red-e9441d pr-20px">10,000</td>
                     <td className="w-111px text-center">eric123</td>
                     <td className="w-108px text-center text-blue-r0056a6">사용가능</td>
                     <td className="w-122px text-center">2021-06-29</td>
@@ -42,7 +42,7 @@ const CouponUsageTable = () => {
                 </tr>
                 <tr className="bg-gray-fefefe rounded-3xl font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px w-full">
                     <td className="w-313px text-center">테스트쿠폰</td>
-                    <td className="w-172px text-center text-red-e9441d">10,000</td>
+                    <td className="w-172px text-right text-red-e9441d pr-20px">10,000</td>
                     <td className="w-111px text-center">eric123</td>
                     <td className="w-108px text-center text-blue-r0056a6">사용가능</td>
                     <td className="w-122px text-center">2021-06-29</td>

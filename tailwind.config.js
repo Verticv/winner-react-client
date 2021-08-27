@@ -84,6 +84,7 @@ module.exports = {
         '90px': '90px',
         '91px': '91px',
         '92px': '92px',
+        '94px': '94px',
         '98px': '98px',
         '99px': '99px',
         '100px': '100px',
@@ -96,6 +97,7 @@ module.exports = {
         '114px': '114px',
         '115px': '115px',
         '116px': '116px',
+        '119px': '119px',
         '122px': '122px',
         '124px': '124px',
         '126px': '126px',
@@ -106,8 +108,11 @@ module.exports = {
         '132px': '132px',
         '135px': '135px',
         '136px': '136px',
+        '137px': '137px',
         '138px': '138px',
         '140px': '140px',
+        '141px': '141px',
+        '143px': '143px',
         '146px': '146px',
         '150px': '150px',
         '156px': '156px',
@@ -155,6 +160,7 @@ module.exports = {
         '283px': '283px',
         '284px': '284px',
         '285px': '285px',
+        '292px': '292px',
         '297px': '297px',
         '298px': '298px',
         '300px': '300px',
@@ -330,7 +336,8 @@ module.exports = {
           ff535f: '#ff535f',
           ee4e5a: '#ee4e5a',
           f47d7d: '#f47d7d',
-          e9441d: '#e9441d'
+          e9441d: '#e9441d',
+          ff1237: '#ff1237'
         },
         orange: {
           ff7e00: '#ff7e00',
@@ -349,7 +356,8 @@ module.exports = {
         },
         green: {
           r7bd26a: '#7bd26a',
-          e3ba3c: '#e3ba3c'
+          e3ba3c: '#e3ba3c',
+          r279140: '#279140'
         },
         brown: {
           r351a1e: '#351a1e',
