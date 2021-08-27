@@ -87,6 +87,7 @@ module.exports = {
         '98px': '98px',
         '99px': '99px',
         '100px': '100px',
+        '103px': '103px',
         '104px': '104px',
         '108px': '108px',
         '109px': '109px',
@@ -164,6 +165,7 @@ module.exports = {
         '308px': '308px',
         '309px': '309px',
         '310px': '310px',
+        '313px': '313px',
         '333px': '333px',
         '340px': '340px',
         '350px': '350px',
@@ -327,7 +329,8 @@ module.exports = {
           ff7982: '#ff7982',
           ff535f: '#ff535f',
           ee4e5a: '#ee4e5a',
-          f47d7d: '#f47d7d'
+          f47d7d: '#f47d7d',
+          e9441d: '#e9441d'
         },
         orange: {
           ff7e00: '#ff7e00',
