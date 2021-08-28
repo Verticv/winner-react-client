@@ -99,22 +99,36 @@ export default function LeagueSelectPopup(props) {
                                 </p>
                             </div>
                             <div className="main-live-league-group-5">
-                                <div style={{display: "flex", justifyContent: 'space-between', flexDirection:'column'}} className="main-live-league-col-2">
+                                <div
+                                    style={{
+                                        display: "flex",
+                                        justifyContent: "space-between",
+                                        flexDirection: "column",
+                                    }}
+                                    className="main-live-league-col-2"
+                                >
                                     {leagues
-                                        .slice(
-                                            0,
-                                            Math.ceil(leagues.length / 2)
-                                        )
+                                        .slice(0, Math.ceil(leagues.length / 2))
                                         .map((league) => {
                                             return (
                                                 <SelectableLeague
-                                                    key={league.id + 'league-select'}
+                                                    key={
+                                                        league.id +
+                                                        "league-select"
+                                                    }
                                                     league={league}
                                                 />
                                             );
                                         })}
                                 </div>
-                                <div style={{display: "flex", justifyContent: 'space-between', flexDirection:'column'}} className="main-live-league-col-3">
+                                <div
+                                    style={{
+                                        display: "flex",
+                                        justifyContent: "space-between",
+                                        flexDirection: "column",
+                                    }}
+                                    className="main-live-league-col-3"
+                                >
                                     {leagues
                                         .slice(
                                             Math.floor(leagues.length / 2),
@@ -142,22 +156,35 @@ export default function LeagueSelectPopup(props) {
                                     <div className="main-live-league-bg-holder-6">
                                         <div className="main-live-league-bg"></div>
                                     </div>
-                                    <div className="main-live-league-bg-holder-7">
-                                        <p className="main-live-league-text-11">
+                                    <button
+                                        onClick={() =>
+                                            changeView(viewTypes.chronological)
+                                        }
+                                        className="main-live-league-bg-holder-7"
+                                    >
+                                        <p
+                                            style={{ pointerEvents: "none" }}
+                                            className="main-live-league-text-11"
+                                        >
                                             취소
                                         </p>
-                                    </div>
+                                    </button>
                                 </div>
                                 <div className="main-live-league-wrapper-4">
                                     <div className="main-live-league-bg-holder-8">
                                         <div className="main-live-league-bg-2"></div>
                                     </div>
                                     <div className="main-live-league-bg-holder-9">
-                                        <div className="main-live-league-bg-holder-10">
-                                            <p className="main-live-league-text-12">
+                                        <button className="main-live-league-bg-holder-10">
+                                            <p
+                                                style={{
+                                                    pointerEvents: "none",
+                                                }}
+                                                className="main-live-league-text-12"
+                                            >
                                                 확인
                                             </p>
-                                        </div>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
