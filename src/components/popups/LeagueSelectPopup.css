@@ -123,7 +123,9 @@
   position: absolute;
   top: 0;
   width: 494px;
-  border: 1px solid #ffffff; /*stroke*/
+  /* border: 1px solid #ffffff; */
+  border-top: 1px solid #000000;
+  box-shadow: inset 1px -1px 5px 0px rgba(255,255,255,0.1);
 }
 .main-live-league-group-4 {
   height: 16px;
@@ -458,7 +460,7 @@
   position: absolute;
   top: 0;
   width: 494px;
-  border: 1px solid #ffffff; /*stroke*/
+  border-top: 1px solid #000000; /*stroke*/
 }
 .main-live-league-group-6 {
   height: 48px;
@@ -494,7 +496,6 @@
   position: absolute;
   top: 0;
   width: 239px;
-  border: 1px solid #ffffff; /*stroke*/
   -webkit-border-radius: 4.23px/3.56px;
   -moz-border-radius: 4.23px/3.56px;
   border-radius: 4.23px/3.56px;
@@ -521,7 +522,6 @@
 .main-live-league-text-11 {
   left: 103px;
   position: absolute;
-  top: 15px;
   color: #909090;
   font-size: 18px;
   letter-spacing: 0;
@@ -542,7 +542,6 @@
   position: absolute;
   top: 0;
   width: 239px;
-  border: 1px solid #615038; /*stroke*/
   -webkit-border-radius: 4.23px/3.56px;
   -moz-border-radius: 4.23px/3.56px;
   border-radius: 4.23px/3.56px;
@@ -587,7 +586,6 @@
   position: absolute;
   top: 0;
   width: 239px;
-  border: 1px solid #ffffff; /*stroke*/
   -webkit-border-radius: 4.23px/3.56px;
   -moz-border-radius: 4.23px/3.56px;
   border-radius: 4.23px/3.56px;
@@ -614,7 +612,7 @@
 .main-live-league-text-12 {
   left: 104px;
   position: absolute;
-  top: 14px;
+  top: 3px;
   color: #000000;
   font-size: 18px;
   letter-spacing: 0;
