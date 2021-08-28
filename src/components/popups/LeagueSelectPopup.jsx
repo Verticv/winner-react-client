@@ -1,6 +1,6 @@
 import SelectableLeague from "components/SelectableLeague";
 import { viewTypes } from "helpers/constants";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import useStore from "store/useStore";
 import { useOnClickOutside } from "../../helpers/functions";
 import "./LeagueSelectPopup.css";
@@ -48,9 +48,21 @@ export default function LeagueSelectPopup(props) {
             flag: require("../../imagesHold/image_149.png").default,
         },
     ];
-    const { selectedView, changeView, selectedLeague, changeLeague } = useStore((state) => state);
+    const { selectedView, changeView, selectedLeagues, changeLeagues } =
+        useStore((state) => state);
+    const [leaguesToAdd, setLeaguesToAdd] = useState(selectedLeagues);
+    const handleLeaguesToAdd = (leaguesToAdd) => {
+        setLeaguesToAdd(leaguesToAdd);
+    };
     const ref = useRef();
     useOnClickOutside(ref, () => changeView(viewTypes.chronological));
+    function allLeaguesSelected() {
+        let allLeaguesSelected = true;
+        leagues.forEach(league => {
+            if(!leaguesToAdd.includes(league.id)) allLeaguesSelected = false;
+        })
+        return allLeaguesSelected;
+    }
     return (
         selectedView === viewTypes.selectLeague && (
             <div
@@ -90,7 +102,18 @@ export default function LeagueSelectPopup(props) {
                     <div className="main-live-league-bg-holder-3">
                         <div className="main-live-league-col">
                             <div className="main-live-league-group-4">
-                                <div className="main-live-league-chck"></div>
+                                <div className="main-live-league-chck">
+                                    {
+                                        allLeaguesSelected() && (
+                    <img
+                        className="main-live-league-chx-ck"
+                        src={require("../../imagesHold/chx_ck.png").default}
+                        alt=""
+                        width="16"
+                        height="12"
+                    ></img>)
+                                    }
+                                </div>
                                 <p
                                     style={{ whiteSpace: "nowrap" }}
                                     className="main-live-league-text-2"
@@ -117,6 +140,10 @@ export default function LeagueSelectPopup(props) {
                                                         "league-select"
                                                     }
                                                     league={league}
+                                                    handleLeaguesToAdd={
+                                                        handleLeaguesToAdd
+                                                    }
+                                                    leaguesToAdd={leaguesToAdd}
                                                 />
                                             );
                                         })}
@@ -142,6 +169,10 @@ export default function LeagueSelectPopup(props) {
                                                         "league-select"
                                                     }
                                                     league={league}
+                                                    handleLeaguesToAdd={
+                                                        handleLeaguesToAdd
+                                                    }
+                                                    leaguesToAdd={leaguesToAdd}
                                                 />
                                             );
                                         })}
@@ -157,9 +188,10 @@ export default function LeagueSelectPopup(props) {
                                         <div className="main-live-league-bg"></div>
                                     </div>
                                     <button
-                                        onClick={() =>
-                                            changeView(viewTypes.chronological)
-                                        }
+                                        onClick={() => {
+                                            changeView(viewTypes.chronological);
+                                            handleLeaguesToAdd(selectedLeagues);
+                                        }}
                                         className="main-live-league-bg-holder-7"
                                     >
                                         <p
@@ -175,7 +207,15 @@ export default function LeagueSelectPopup(props) {
                                         <div className="main-live-league-bg-2"></div>
                                     </div>
                                     <div className="main-live-league-bg-holder-9">
-                                        <button className="main-live-league-bg-holder-10">
+                                        <button
+                                            onClick={() => {
+                                                changeLeagues(leaguesToAdd);
+                                                changeView(
+                                                    viewTypes.chronological
+                                                );
+                                            }}
+                                            className="main-live-league-bg-holder-10"
+                                        >
                                             <p
                                                 style={{
                                                     pointerEvents: "none",
@@ -195,3 +235,5 @@ export default function LeagueSelectPopup(props) {
         )
     );
 }
+
+
