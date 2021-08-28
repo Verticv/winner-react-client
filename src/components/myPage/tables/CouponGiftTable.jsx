@@ -36,7 +36,7 @@ const CouponGiftTable = () => {
                     <td className="w-132px text-center">2021-06-29</td>
                     <td className="w-119px text-center">2021-07-29</td>
                 </tr> 
-                <tr className="bg-gray-fefefe rounded-3xl font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px w-full border-b border-gray-dddddd">
+                <tr className="bg-gray-f7f9fc rounded-3xl font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px w-full border-b border-gray-dddddd">
                     <td className="w-79px text-center">{RadioButton}</td>
                     <td className="w-340px text-center">테스트쿠폰</td>
                     <td className="w-143px text-right text-red-e9441d pr-20px">10,000</td>

@@ -63,8 +63,8 @@ const Menus = () => {
                 optionIconHighlight3={PointHistoryIconHighlight}
                 extraIconCss="w-41px h-50px mr-6px mb-px"
                 path1="/mypage/bet-history"
-                path2=""
-                path3=""
+                path2="/mypage/charge-history"
+                path3="/mypage/points-apply"
             />
             <MenuCard 
                 mainIcon={MyMenuIcon} 

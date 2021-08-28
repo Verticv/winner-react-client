@@ -24,7 +24,7 @@ const CouponHistoryTable = () => {
                     <td className="w-88px text-center">2021-06-29</td>
                     <td className="w-124px text-center">2021-07-29</td>
                 </tr>
-                <tr className="bg-gray-fefefe rounded-3xl font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px w-full border-b border-gray-dddddd">
+                <tr className="bg-gray-f7f9fc rounded-3xl font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px w-full border-b border-gray-dddddd">
                     <td className="w-292px text-center">테스트쿠폰</td>
                     <td className="w-119px text-center text-red-e9441d">10,000</td>
                     <td className="w-140px text-center">eric123</td>

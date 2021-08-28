@@ -21,8 +21,8 @@ const ProfileDropDown = ({setAuth}) => {
     const [selectedTab, setSelectedTab] = useState()
 
     const menuArray = [
-        { icon: MyPageIcon, iconHighlight: MyPageIconHighlight, text: "마이페이지", id: 0 },
-        { icon: LinkIcon, iconHighlight: LinkIconHighlight, text: "총판페이지", id: 1 },
+        { icon: MyPageIcon, iconHighlight: MyPageIconHighlight, text: "마이페이지", id: 0, path: "/mypage/bet-history" },
+        { icon: LinkIcon, iconHighlight: LinkIconHighlight, text: "총판페이지", id: 1, path: "/distributor-page" },
         { icon: AttendanceIcon, iconHighlight: AttendanceIconHighlight, text: "출석부", id: 2 },
         { icon: ContactIcon, iconHighlight: ContactIconHighlight, text: "문의하기", id: 3 },
         { icon: PolicyIcon, iconHighlight: PolicyIconHighlight, text: "베팅규정", id: 4 },
@@ -38,7 +38,7 @@ const ProfileDropDown = ({setAuth}) => {
                 onPointerUp={() => {
                     setSelectedTab(false)
                     if (item.id === 5) setAuth(false)
-                    history.push('/mypage/bet-history')
+                    history.push(item.path)
                 }}
             >
                 <div className={`${selectedTab === item.id && "shadow-plain3"} h-32px w-32px bg-white rounded-full flex items-center justify-center flex-shrink-0`} >
