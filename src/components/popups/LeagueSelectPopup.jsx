@@ -1,3 +1,4 @@
+import SelectableLeague from "components/SelectableLeague";
 import { viewTypes } from "helpers/constants";
 import React, { useRef } from "react";
 import useStore from "store/useStore";
@@ -5,12 +6,65 @@ import { useOnClickOutside } from "../../helpers/functions";
 import "./LeagueSelectPopup.css";
 
 export default function LeagueSelectPopup(props) {
-    const { selectedView, changeView } = useStore((state) => state);
+    const leagues = [
+        {
+            id: 0,
+            name: "라리가",
+            flag: require("../../imagesHold/image_141.png").default,
+        },
+        {
+            id: 1,
+            name: "분데스리가",
+            flag: require("../../imagesHold/image_145.png").default,
+        },
+        {
+            id: 2,
+            name: "프리미어리그",
+            flag: require("../../imagesHold/image_149.png").default,
+        },
+        {
+            id: 3,
+            name: "라리가",
+            flag: require("../../imagesHold/image_153.png").default,
+        },
+        {
+            id: 4,
+            name: "프리미어리그",
+            flag: require("../../imagesHold/image_143.png").default,
+        },
+        {
+            id: 5,
+            name: "라리가",
+            flag: require("../../imagesHold/image_147.png").default,
+        },
+        {
+            id: 6,
+            name: "분데스리가",
+            flag: require("../../imagesHold/image_145.png").default,
+        },
+        {
+            id: 7,
+            name: "프리미어리그",
+            flag: require("../../imagesHold/image_149.png").default,
+        },
+    ];
+    const { selectedView, changeView, selectedLeague, changeLeague } = useStore((state) => state);
     const ref = useRef();
     useOnClickOutside(ref, () => changeView(viewTypes.chronological));
     return (
         selectedView === viewTypes.selectLeague && (
-            <div style={{position: 'absolute', top: 0, left: 0, zIndex: 5, width: '100%', height: '100%', backgroundColor: 'rgba(0,0,0,0.6)', overflow:'hidden'}}>
+            <div
+                style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    zIndex: 5,
+                    width: "100%",
+                    height: "100%",
+                    backgroundColor: "rgba(0,0,0,0.6)",
+                    overflow: "hidden",
+                }}
+            >
                 <div
                     style={{ zIndex: 10 }}
                     className="main-live-league-group-3"
@@ -24,7 +78,9 @@ export default function LeagueSelectPopup(props) {
                             <p className="main-live-league-text">리그선택</p>
                             <img
                                 className="main-live-league-x"
-                                src={require("../../imagesHold/x_3.png").default}
+                                src={
+                                    require("../../imagesHold/x_3.png").default
+                                }
                                 alt=""
                                 width="14"
                                 height="14"
@@ -35,171 +91,46 @@ export default function LeagueSelectPopup(props) {
                         <div className="main-live-league-col">
                             <div className="main-live-league-group-4">
                                 <div className="main-live-league-chck"></div>
-                                <p className="main-live-league-text-2">
+                                <p
+                                    style={{ whiteSpace: "nowrap" }}
+                                    className="main-live-league-text-2"
+                                >
                                     모든 리그 선택
                                 </p>
                             </div>
                             <div className="main-live-league-group-5">
-                                <div className="main-live-league-col-2">
-                                    <div className="main-live-league-row">
-                                        <div className="main-live-league-col-4">
-                                            <div className="main-live-league-chck-2"></div>
-                                            <div className="main-live-league-chck-3"></div>
-                                        </div>
-                                        <div className="main-live-league-col-8">
-                                            <div className="main-live-league-row-6">
-                                                <img
-                                                    className="main-live-league-layer"
-                                                    src={
-                                                        require("../../imagesHold/image_141.png")
-                                                            .default
-                                                    }
-                                                    alt=""
-                                                    width="30"
-                                                    height="18"
+                                <div style={{display: "flex", justifyContent: 'space-between', flexDirection:'column'}} className="main-live-league-col-2">
+                                    {leagues
+                                        .slice(
+                                            0,
+                                            Math.ceil(leagues.length / 2)
+                                        )
+                                        .map((league) => {
+                                            return (
+                                                <SelectableLeague
+                                                    key={league.id + 'league-select'}
+                                                    league={league}
                                                 />
-                                                <p className="main-live-league-text-3">
-                                                    라리가
-                                                </p>
-                                            </div>
-                                            <div className="main-live-league-row-7">
-                                                <img
-                                                    className="main-live-league-layer-2"
-                                                    src={
-                                                        require("../../imagesHold/image_145.png")
-                                                            .default
-                                                    }
-                                                    alt=""
-                                                    width="30"
-                                                    height="18"
-                                                />
-                                                <p className="main-live-league-text-4">
-                                                    분데스리가
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="main-live-league-row-3">
-                                        <div className="main-live-league-col-6">
-                                            <div className="main-live-league-chc-holder">
-                                                <img
-                                                    className="main-live-league-chx-ck"
-                                                    src={
-                                                        require("../../imagesHold/chx_ck.png")
-                                                            .default
-                                                    }
-                                                    alt=""
-                                                    width="16"
-                                                    height="12"
-                                                />
-                                            </div>
-                                            <div className="main-live-league-chck-4"></div>
-                                        </div>
-                                        <div className="main-live-league-col-10">
-                                            <div className="main-live-league-row-10">
-                                                <img
-                                                    className="main-live-league-layer-3"
-                                                    src={
-                                                        require("../../imagesHold/image_149.png")
-                                                            .default
-                                                    }
-                                                    alt=""
-                                                    width="30"
-                                                    height="18"
-                                                />
-                                                <p className="main-live-league-text-5">
-                                                    프리미어리그
-                                                </p>
-                                            </div>
-                                            <div className="main-live-league-row-11">
-                                                <img
-                                                    className="main-live-league-layer-4"
-                                                    src={
-                                                        require("../../imagesHold/image_153.png")
-                                                            .default
-                                                    }
-                                                    alt=""
-                                                    width="30"
-                                                    height="18"
-                                                />
-                                                <p className="main-live-league-text-6">
-                                                    라리가
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
+                                            );
+                                        })}
                                 </div>
-                                <div className="main-live-league-col-3">
-                                    <div className="main-live-league-row-2">
-                                        <div className="main-live-league-col-5">
-                                            <div className="main-live-league-chck-5"></div>
-                                            <div className="main-live-league-chck-6"></div>
-                                        </div>
-                                        <div className="main-live-league-col-9">
-                                            <div className="main-live-league-row-8">
-                                                <img
-                                                    className="main-live-league-layer-5"
-                                                    src={
-                                                        require("../../imagesHold/image_143.png")
-                                                            .default
+                                <div style={{display: "flex", justifyContent: 'space-between', flexDirection:'column'}} className="main-live-league-col-3">
+                                    {leagues
+                                        .slice(
+                                            Math.floor(leagues.length / 2),
+                                            leagues.length
+                                        )
+                                        .map((league) => {
+                                            return (
+                                                <SelectableLeague
+                                                    key={
+                                                        league.id +
+                                                        "league-select"
                                                     }
-                                                    alt=""
-                                                    width="29"
-                                                    height="18"
+                                                    league={league}
                                                 />
-                                                <p className="main-live-league-text-7">
-                                                    프리미어리그
-                                                </p>
-                                            </div>
-                                            <div className="main-live-league-row-9">
-                                                <img
-                                                    className="main-live-league-layer-6"
-                                                    src={
-                                                        require("../../imagesHold/image_147.png")
-                                                            .default
-                                                    }
-                                                    alt=""
-                                                    width="29"
-                                                    height="18"
-                                                />
-                                                <p className="main-live-league-text-8">
-                                                    라리가
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="main-live-league-row-4">
-                                        <div className="main-live-league-chck-7"></div>
-                                        <img
-                                            className="main-live-league-layer-7"
-                                            src={
-                                                require("../../imagesHold/image_145.png")
-                                                    .default
-                                            }
-                                            alt=""
-                                            width="30"
-                                            height="18"
-                                        />
-                                        <p className="main-live-league-text-9">
-                                            분데스리가
-                                        </p>
-                                    </div>
-                                    <div className="main-live-league-row-5">
-                                        <div className="main-live-league-chck-8"></div>
-                                        <img
-                                            className="main-live-league-layer-8"
-                                            src={
-                                                require("../../imagesHold/image_149.png")
-                                                    .default
-                                            }
-                                            alt=""
-                                            width="30"
-                                            height="18"
-                                        />
-                                        <p className="main-live-league-text-10">
-                                            프리미어리그
-                                        </p>
-                                    </div>
+                                            );
+                                        })}
                                 </div>
                             </div>
                         </div>
@@ -233,6 +164,7 @@ export default function LeagueSelectPopup(props) {
                         </div>
                     </div>
                 </div>
-            </div> )
+            </div>
+        )
     );
 }
