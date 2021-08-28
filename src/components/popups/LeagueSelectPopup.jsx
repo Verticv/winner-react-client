@@ -58,10 +58,14 @@ export default function LeagueSelectPopup(props) {
     useOnClickOutside(ref, () => changeView(viewTypes.chronological));
     function allLeaguesSelected() {
         let allLeaguesSelected = true;
-        leagues.forEach(league => {
-            if(!leaguesToAdd.includes(league.id)) allLeaguesSelected = false;
-        })
+        leagues.forEach((league) => {
+            if (!leaguesToAdd.includes(league.id)) allLeaguesSelected = false;
+        });
         return allLeaguesSelected;
+    }
+    function toggleAllLeagues(toggleOn) {
+        if (toggleOn) handleLeaguesToAdd(leagues.map(league => league.id))
+        else handleLeaguesToAdd([])
     }
     return (
         selectedView === viewTypes.selectLeague && (
@@ -102,18 +106,23 @@ export default function LeagueSelectPopup(props) {
                     <div className="main-live-league-bg-holder-3">
                         <div className="main-live-league-col">
                             <div className="main-live-league-group-4">
-                                <div className="main-live-league-chck">
-                                    {
-                                        allLeaguesSelected() && (
-                    <img
-                        className="main-live-league-chx-ck"
-                        src={require("../../imagesHold/chx_ck.png").default}
-                        alt=""
-                        width="16"
-                        height="12"
-                    ></img>)
-                                    }
-                                </div>
+                                <button
+                                    onClick={() => toggleAllLeagues(!allLeaguesSelected())}
+                                    className="main-live-league-chck"
+                                >
+                                    {allLeaguesSelected() && (
+                                        <img
+                                            className="main-live-league-chx-ck"
+                                            src={
+                                                require("../../imagesHold/chx_ck.png")
+                                                    .default
+                                            }
+                                            alt=""
+                                            width="16"
+                                            height="12"
+                                        ></img>
+                                    )}
+                                </button>
                                 <p
                                     style={{ whiteSpace: "nowrap" }}
                                     className="main-live-league-text-2"
@@ -235,5 +244,3 @@ export default function LeagueSelectPopup(props) {
         )
     );
 }
-
-
