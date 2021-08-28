@@ -120,11 +120,11 @@ export default function MatchDetail({ bet }) {
     const { classes } = jss.createStyleSheet(styles).attach();
     const { betType, option1, option2, kof1, kof2, tieKof } = bet;
     const selections = { team1: 3, team2: 1, draw: 2, none: 0 };
-    const [selectedOutcome, setSelectedOutcome] = useState(selections.team1);
+    const [selectedOutcome, setSelectedOutcome] = useState(selections.none);
     function handleSetSelectedOutcome(outcome) {
         setSelectedOutcome(outcome);
     }
-    const [selectedOutcome2, setSelectedOutcome2] = useState(selections.team1);
+    const [selectedOutcome2, setSelectedOutcome2] = useState(selections.none);
     function handleSetSelectedOutcome2(outcome) {
         setSelectedOutcome2(outcome);
     }
