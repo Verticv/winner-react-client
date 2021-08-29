@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function LiveMatchCardExpandedMultiView() {
+export default function LiveMatchCardExpandedPlaceholder() {
     return (
         <div
             className="main-multi-bg-holder-35"
@@ -16,15 +16,16 @@ export default function LiveMatchCardExpandedMultiView() {
                     justifyContent: "center",
                     alignItems: "center",
                     flexDirection: "column",
+                    width: "100%",
+                    height: "100%",
                 }}
             >
                 <img
-                    className="main-multi-ico-26"
                     src={require("../imagesHold/multi/ico_54.png").default}
                     alt=""
                     width="62"
                     height="62"
-                    style={{marginBottom: "12px"}}
+                    style={{ marginBottom: "12px" }}
                 />
                 <p
                     className="main-multi-text-86"
