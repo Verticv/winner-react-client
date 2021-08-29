@@ -1,12 +1,13 @@
 import BetNav from "components/BetNav";
 import BetSlipBet from "components/BetSlipBet";
-import LiveMatchCards from "components/LiveMatchCards";
-import MatchBets from "components/MatchBets";
+import MultiView from "components/MultiView";
 import LeagueSelectPopup from "components/popups/LeagueSelectPopup";
 import SelectLayoutButtons from "components/SelectLayoutButtons";
-import UpcomingMatches from "components/UpcomingMatches";
+import SingleView from "components/SingleView";
 import ViewSelectButtons from "components/ViewSelectButtons";
+import { singleOrMultiOptions } from "helpers/constants";
 import React from "react";
+import useStore from "store/useStore";
 
 // import football from "../imagesDump/bet/icon-ufc.png").default};
 // import favorites from "../imagesDump/bet/icon-ufc.png").default};
@@ -17,6 +18,11 @@ import React from "react";
 import "../components/BetNavItem.css";
 
 export default function BetPage() {
+    const { singleOrMulti, changesingleOrMulti } = useStore(
+        (state) => state
+    );
+    const isSingleView = singleOrMulti === singleOrMultiOptions.single;
+    const isMultiView = singleOrMulti === singleOrMultiOptions.multi;
     return (
         <div className="global_container_">
             <LeagueSelectPopup />
@@ -34,50 +40,8 @@ export default function BetPage() {
                         <ViewSelectButtons />
                     </div>
                 </div>
-                <div className="row-42">
-                    <div className="group-26">
-                        <LiveMatchCards />
-                        <div className="group-37">
-                            <div className="bg-holder-30">
-                                <div className="group-38">
-                                    <p className="text-80">진행중인 경기</p>
-                                    <div className="bg-holder-31">
-                                        <p className="text-81">4</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="row-9">
-                                <div className="layer-1078"></div>
-                                <div className="group-39">
-                                    <div className="bg-holder-32">
-                                        <p className="text-82">20</p>
-                                    </div>
-                                    <p className="text-83">예정 경기</p>
-                                </div>
-                            </div>
-                        </div>
-                        <UpcomingMatches />
-                    </div>
-                    <div className="group-46">
-                        <div className="row">
-                            <p className="text-97">2</p>
-                            <p className="text-98">0</p>
-                        </div>
-                        <div className="group-47">
-                            <img
-                                className="layer-36"
-                                src={
-                                    require("../imagesHold/image_37.png")
-                                        .default
-                                }
-                                alt=""
-                                width="16"
-                                height="8"
-                            />
-                        </div>
-                        <MatchBets />
-                    </div>
-                </div>
+                {isSingleView && <SingleView />}
+                {isMultiView && <MultiView />}
             </div>
             <div className="col-16">
                 <div className="group-62">
@@ -119,7 +83,7 @@ export default function BetPage() {
                         </div>
                     </div>
                     <div className="group-65">
-                        <BetSlipBet/>
+                        <BetSlipBet />
                         <div className="bg-holder-82">
                             <div className="bg-holder-83">
                                 <img
