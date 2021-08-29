@@ -301,7 +301,7 @@ export default function MatchDetail({ bet }) {
                                           display: "flex",
                                           justifyContent: "space-between",
                                           alignItems: "center",
-                                          paddingLeft: "12px",
+                                          paddingLeft: "10px",
                                       }
                                     : {
                                           background: `url(${
@@ -311,7 +311,7 @@ export default function MatchDetail({ bet }) {
                                           display: "flex",
                                           justifyContent: "space-between",
                                           alignItems: "center",
-                                          paddingLeft: "12px",
+                                          paddingLeft: "10px",
                                       }
                             }
                         >
