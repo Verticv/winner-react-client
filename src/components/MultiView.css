@@ -8,6 +8,7 @@
   background: #000000;
 }
 .main-multi-group-2 {
+
   height: 954px;
   left: 0;
   position: absolute;
@@ -21,8 +22,21 @@
   top: 0;
   width: 1541px;
 }
+
+.main-multi-row-27::-webkit-scrollbar-thumb {
+  background-color: #6E6E73FF;
+  border-radius: 20px;       /* roundness of the scroll thumb */
+}
+
+.main-multi-row-27::-webkit-scrollbar {
+  background-color: #282828FF;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  width: 6px;
+  height: 6px;
+}
+
 .main-multi-row-27 {
-  height: 111px;
+  height: 122px;
   left: 0;
   position: absolute;
   top: 0;
