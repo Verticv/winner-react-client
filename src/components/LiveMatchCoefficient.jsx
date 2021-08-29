@@ -100,15 +100,19 @@ export default function LiveMatchCoefficient({
                 }}
                 className="row-17"
             >
-                <div className="up">
-                    <div
-                        className={
-                            selectedOutcome === selections.team1
-                                ? classes.redNeonBorder
-                                : ""
-                        }
-                    ></div>
-                </div>
+                {selectedOutcome === selections.team1 && (
+                    <div className="up">
+                        <div className={classes.redNeonBorder}>
+                            <img
+                                style={{position: "absolute", top: "-8px", left: "5px"}}
+                                src={
+                                    require("../imagesHold/up_arrow.png").default
+                                }
+                                alt=""
+                            />
+                        </div>
+                    </div>
+                )}
                 <p className="text-59">{team1}</p>
                 <p className="text-60">{team1WinKof}</p>
             </button>
