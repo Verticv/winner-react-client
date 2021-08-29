@@ -1,6 +1,5 @@
 import React from "react";
 import LiveMatchCardExpandedContainer from "./LiveMatchCardExpandedContainer";
-import LiveMatchCardExpandedMultiView from "./LiveMatchCardExpandedContainer";
 import LiveMatchCardsMultiView from "./LiveMatchCardsMultiView";
 import "./MultiView.css";
 
@@ -9,7 +8,7 @@ export default function MultiView() {
         <div>
             <div className="main-multi-group-2">
                 <div className="main-multi-col-28">
-                    <LiveMatchCardsMultiView/>
+                    <LiveMatchCardsMultiView />
                     <div className="main-multi-group-12">
                         <div className="main-multi-col-5">
                             <div className="main-multi-bg-holder-9">
@@ -681,7 +680,7 @@ export default function MultiView() {
                             </div>
                         </div>
                         <div className="main-multi-col-6">
-                                      <LiveMatchCardExpandedContainer/>
+                            <LiveMatchCardExpandedContainer />
                             <div className="main-multi-bg-holder-67">
                                 <div className="main-multi-group-46">
                                     <img
@@ -703,7 +702,7 @@ export default function MultiView() {
                             </div>
                         </div>
                         <div className="main-multi-col-27">
-<div className="main-multi-bg-holder-98">
+                            <div className="main-multi-bg-holder-98">
                                 <div className="main-multi-group-63">
                                     <img
                                         className="main-multi-ico-39"
