@@ -14,6 +14,7 @@ import WinLoseSettlement from 'components/myPage/WinLoseSettlement'
 import CouponUsage from 'components/myPage/CouponUsage'
 import CouponGift from 'components/myPage/CouponGift'
 import CouponHistory from 'components/myPage/CouponHistory'
+import PointsApply from 'components/myPage/PointsApply'
 
 const MyPage = ({isAuthenticated, setAuthenticated}) => {
 
@@ -93,6 +94,9 @@ const MyPage = ({isAuthenticated, setAuthenticated}) => {
                         </Route>
                         <Route path="/mypage/coupon-history">
                             <CouponHistory />
+                        </Route>
+                        <Route path="/mypage/points-apply">
+                            <PointsApply />
                         </Route>
                         <Route path="*">
                         </Route>
