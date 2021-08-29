@@ -1,14 +1,51 @@
 import clsx from "clsx";
+import getRandomNumberInInterval from "helpers/getRandomNumberInInterval";
 import jss from "jss";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 export default function CoefficientWithUpdate(props) {
+    function getDisplayValue(prev, current) {
+        if (current > prev) return displayOptions.up;
+        else if (current < prev) return displayOptions.down;
+        else return displayOptions.middle;
+    }
+    const newCoefficient = () => getRandomNumberInInterval(1.5, 5).toFixed(2);
+    const initialCoefficient = newCoefficient();
+    const [coefficient, setCoefficient] = useState({
+        current: initialCoefficient,
+        previous: initialCoefficient,
+    });
+
+    useEffect(() => {
+        function getNewData() {
+            const chanceToGetNewCof = 0.2;
+            if (Math.random() < chanceToGetNewCof) {
+                setCoefficient((prev) => {
+                    return {
+                        current: newCoefficient(),
+                        previous: prev.current,
+                    };
+                });
+            } else {
+                setCoefficient((prev) => {
+                    return {
+                        current: prev.current,
+                        previous: prev.current,
+                    };
+                });
+            }
+        }
+        const updateInterval = 5000;
+        const interval = setInterval(getNewData, updateInterval);
+        return () => clearInterval(interval);
+    }, []);
+
     const displayOptions = {
         up: "up",
         down: "down",
         middle: "middle",
     };
-    const display = 'middle';
+    const display = getDisplayValue(coefficient.previous, coefficient.current);
     const styles = {
         redNeonBorder: `
             border: 1px solid #ffbc93; /*stroke*/
@@ -24,45 +61,13 @@ export default function CoefficientWithUpdate(props) {
                 background-clip: padding-box; /*Will not allow bg color to leak outside borders*/
                 box-shadow: 0 0 10.92px 1.08px #236bff; /*outer glow*/
          `,
-        blueNeonBorderContainer: `
-         height: 32px;
-         left: 11px;
-         position: absolute;
-         top: 0;
-         width: 45px;
-         `,
-        greenNeonBorderContainer: `
-         height: 32px;
-         left: 23px;
-         position: absolute;
-         top: 0;
-         width: 45px;
-         `,
-        greenNeonBorder: `
-                height: 32px;
-                left: 0;
-                position: absolute;
-                top: 0;
-                width: 45px;
-                border: 1px solid #4ef11a; /*stroke*/
-                -webkit-border-radius: 3.88px/3.81px;
-                -moz-border-radius: 3.88px/3.81px;
-                border-radius: 3.88px/3.81px;
-                background: #246210;
-                -moz-background-clip: padding;
-                -webkit-background-clip: padding-box;
-                background-clip: padding-box; /*Will not allow bg color to leak outside borders*/
-                -webkit-box-shadow: 0 0 10.92px 1.08px #48cb1e;
-                -moz-box-shadow: 0 0 10.92px 1.08px #48cb1e;
-                box-shadow: 0 0 10.92px 1.08px #48cb1e; /*outer glow*/
-         `,
     };
     const { classes } = jss.createStyleSheet(styles).attach();
     return (
         <div
             className={clsx(
                 display === displayOptions.up && classes.redNeonBorder,
-                display === displayOptions.down && classes.blueNeonBorder,
+                display === displayOptions.down && classes.blueNeonBorder
             )}
             style={{
                 display: "flex",
@@ -72,7 +77,7 @@ export default function CoefficientWithUpdate(props) {
                 width: "45px",
             }}
         >
-            <p>1.23</p>
+            <p>{coefficient.current}</p>
             {display === displayOptions.up && (
                 <img
                     style={{

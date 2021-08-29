@@ -100,13 +100,15 @@ export default function LiveMatchCoefficient({
                               zIndex: 0,
                               display: "flex",
                               justifyContent: "space-between",
-                              alignItems: "center"
+                              alignItems: "center",
+                              paddingRight: "12px",
                           }
                         : {
                               zIndex: 2,
                               display: "flex",
                               justifyContent: "space-between",
-                              alignItems: "center"
+                              alignItems: "center",
+                              paddingRight: "12px",
                           }
                 }
                 onClick={(event) => {
@@ -127,8 +129,16 @@ export default function LiveMatchCoefficient({
                                   background:
                                       "radial-gradient(circle, rgba(91,30,30,1) 0%, rgba(155,47,48,1) 94%)",
                                   zIndex: 0,
+                                  display: "flex",
+                                  justifyContent: "center",
+                                  alignItems: "center",
                               }
-                            : { zIndex: 1 }
+                            : {
+                                  zIndex: 1,
+                                  display: "flex",
+                                  justifyContent: "center",
+                                  alignItems: "center",
+                              }
                     }
                     onClick={(event) => {
                         event.stopPropagation();
@@ -143,24 +153,16 @@ export default function LiveMatchCoefficient({
                         width="11"
                         height="32"
                     />
-                    <div className={classes.greenNeonBorderContainer}>
-                        <div
-                            className={
-                                selectedOutcome === selections.draw
-                                    ? classes.greenNeonBorder
-                                    : ""
-                            }
-                        ></div>
-                    </div>
-                    <p className="text-61">{tieKof}</p>
+                    <CoefficientWithUpdate />
                 </button>
                 <button
                     style={
                         selectedOutcome === selections.team2
                             ? {
-                                  background: `linear-gradient(90deg, rgb(91 30 30) 0px, rgb(155, 47, 48) 40%)`,
+                                background: `linear-gradient(90deg, rgb(91 30 30) 0px, rgb(155, 47, 48) 40%)`,
+                                paddingLeft: "12px",
                               }
-                            : {}
+                            : {paddingLeft: "12px",}
                     }
                     onClick={(event) => {
                         event.stopPropagation();
@@ -168,25 +170,7 @@ export default function LiveMatchCoefficient({
                     }}
                     className="row-19"
                 >
-                    {selectedOutcome === selections.team2 && (
-                        <div className={classes.blueNeonBorderContainer}>
-                            <div className={classes.blueNeonBorder}>
-                                <img
-                                    style={{
-                                        position: "absolute",
-                                        top: "22px",
-                                        left: "6px",
-                                    }}
-                                    src={
-                                        require("../imagesHold/down_arrow.png")
-                                            .default
-                                    }
-                                    alt=""
-                                />
-                            </div>
-                        </div>
-                    )}
-                    <p className="text-62">{team2WinKof}</p>
+                    <CoefficientWithUpdate />
                     <p className="text-63">{team2}</p>
                 </button>
                 <img

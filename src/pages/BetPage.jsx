@@ -18,7 +18,7 @@ import useStore from "store/useStore";
 import "../components/BetNavItem.css";
 
 export default function BetPage() {
-    const { singleOrMulti, changesingleOrMulti } = useStore(
+    const { singleOrMulti } = useStore(
         (state) => state
     );
     const isSingleView = singleOrMulti === singleOrMultiOptions.single;

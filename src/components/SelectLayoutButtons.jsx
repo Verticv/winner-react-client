@@ -1,5 +1,5 @@
 import { singleOrMultiOptions } from "helpers/constants";
-import React, { useState } from "react";
+import React from "react";
 import useStore from "store/useStore";
 import SelectLayoutButton from "./SelectLayoutButton";
 
