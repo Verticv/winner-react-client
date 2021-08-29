@@ -161,8 +161,10 @@ export default function LiveMatchCoefficient({
                             ? {
                                 background: `linear-gradient(90deg, rgb(91 30 30) 0px, rgb(155, 47, 48) 40%)`,
                                 paddingLeft: "12px",
+                                display: "flex", justifyContent: "space-between", alignItems: "center", paddingRight: "12px"
                               }
-                            : {paddingLeft: "12px",}
+                            : {paddingLeft: "12px",
+                        display: "flex", justifyContent: "space-between", alignItems: "center", paddingRight: "12px"}
                     }
                     onClick={(event) => {
                         event.stopPropagation();
