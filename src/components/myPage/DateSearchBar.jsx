@@ -7,7 +7,7 @@ import CalendarIcon from '../../images/myPage/betHistory/calendar.png'
 registerLocale('ko', ko)
 
 const DateSearchBar = ({
-    isLeagueSearch, 
+    isLeagueSearch = null, 
     hasIdSearch = false
 }) => {
 

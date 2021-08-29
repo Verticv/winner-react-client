@@ -15,6 +15,8 @@ import CouponUsage from 'components/myPage/CouponUsage'
 import CouponGift from 'components/myPage/CouponGift'
 import CouponHistory from 'components/myPage/CouponHistory'
 import PointsApply from 'components/myPage/PointsApply'
+import PointsAccumulate from 'components/myPage/PointsAccumulate'
+import PointsTransaction from 'components/myPage/PointsTransaction'
 
 const MyPage = ({isAuthenticated, setAuthenticated}) => {
 
@@ -97,6 +99,12 @@ const MyPage = ({isAuthenticated, setAuthenticated}) => {
                         </Route>
                         <Route path="/mypage/points-apply">
                             <PointsApply />
+                        </Route>
+                        <Route path="/mypage/points-accumulate-history">
+                            <PointsAccumulate />
+                        </Route>
+                        <Route path="/mypage/points-transaction-history">
+                            <PointsTransaction />
                         </Route>
                         <Route path="*">
                         </Route>
