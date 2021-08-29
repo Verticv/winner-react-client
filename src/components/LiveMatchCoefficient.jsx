@@ -1,5 +1,6 @@
 import jss from "jss";
 import React, { useState } from "react";
+import CoefficientWithUpdate from "./CoefficientWithUpdate";
 
 export default function LiveMatchCoefficient({
     team1,
@@ -76,6 +77,12 @@ export default function LiveMatchCoefficient({
                 -moz-box-shadow: 0 0 10.92px 1.08px #48cb1e;
                 box-shadow: 0 0 10.92px 1.08px #48cb1e; /*outer glow*/
          `,
+        textLeft: `
+            color: #d1cecf;
+            letter-spacing: 0;
+            text-transform: uppercase;
+            margin-left: 12px;
+        `,
     };
     const { classes } = jss.createStyleSheet(styles).attach();
     const selections = { team1: 3, team2: 1, draw: 2, none: 0 };
@@ -91,8 +98,16 @@ export default function LiveMatchCoefficient({
                         ? {
                               background: `linear-gradient(270deg, rgb(91 30 30) 0px, rgb(155, 47, 48) 40%)`,
                               zIndex: 0,
+                              display: "flex",
+                              justifyContent: "space-between",
+                              alignItems: "center"
                           }
-                        : { zIndex: 2 }
+                        : {
+                              zIndex: 2,
+                              display: "flex",
+                              justifyContent: "space-between",
+                              alignItems: "center"
+                          }
                 }
                 onClick={(event) => {
                     event.stopPropagation();
@@ -100,21 +115,8 @@ export default function LiveMatchCoefficient({
                 }}
                 className="row-17"
             >
-                {selectedOutcome === selections.team1 && (
-                    <div className="up">
-                        <div className={classes.redNeonBorder}>
-                            <img
-                                style={{position: "absolute", top: "-8px", left: "5px"}}
-                                src={
-                                    require("../imagesHold/up_arrow.png").default
-                                }
-                                alt=""
-                            />
-                        </div>
-                    </div>
-                )}
-                <p className="text-59">{team1}</p>
-                <p className="text-60">{team1WinKof}</p>
+                <p className={classes.textLeft}>{team1}</p>
+                <CoefficientWithUpdate />
             </button>
             <div className="wrapper-21">
                 <button
