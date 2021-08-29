@@ -52,7 +52,7 @@ export default function MatchDetail({ bet }) {
         setIsShowing((prev) => !prev);
     };
     const { classes } = jss.createStyleSheet(styles).attach();
-    const { betType, option1, option2, kof1, kof2, tieKof } = bet;
+    const { betType, option1, option2 } = bet;
     const selections = { team1: 3, team2: 1, draw: 2, none: 0 };
     const [selectedOutcome, setSelectedOutcome] = useState(selections.none);
     function handleSetSelectedOutcome(outcome) {

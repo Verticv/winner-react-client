@@ -4,6 +4,7 @@ import jss from "jss";
 import React, { useEffect, useState } from "react";
 
 export default function CoefficientWithUpdate(props) {
+    const enabled = false;
     function getDisplayValue(prev, current) {
         if (current > prev) return displayOptions.up;
         else if (current < prev) return displayOptions.down;
@@ -35,10 +36,12 @@ export default function CoefficientWithUpdate(props) {
                 });
             }
         }
-        const updateInterval = 5000;
-        const interval = setInterval(getNewData, updateInterval);
-        return () => clearInterval(interval);
-    }, []);
+        if (enabled) {
+            const updateInterval = 5000;
+            const interval = setInterval(getNewData, updateInterval);
+            return () => clearInterval(interval);
+        }
+    }, [enabled]);
 
     const displayOptions = {
         up: "up",
