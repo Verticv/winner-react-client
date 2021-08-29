@@ -1,4 +1,5 @@
 import React from "react";
+import LiveMatchCardExpandedMultiView from "./LiveMatchCardExpandedMultiView";
 import LiveMatchCardsMultiView from "./LiveMatchCardsMultiView";
 import "./MultiView.css";
 
@@ -679,8 +680,7 @@ export default function MultiView() {
                             </div>
                         </div>
                         <div className="main-multi-col-6">
-                            <div className="main-multi-bg-holder-35">
-                            </div>
+                                      <LiveMatchCardExpandedMultiView/>
                             <div className="main-multi-bg-holder-67">
                                 <div className="main-multi-group-46">
                                     <img
