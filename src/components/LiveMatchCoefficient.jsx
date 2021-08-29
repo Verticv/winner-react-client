@@ -8,8 +8,8 @@ export default function LiveMatchCoefficient({
     team2,
     team2WinKof,
 }) {
-     const styles = {
-         redNeonBorder: `
+    const styles = {
+        redNeonBorder: `
             height: 32px;
             left: 2px;
             position: absolute;
@@ -26,7 +26,7 @@ export default function LiveMatchCoefficient({
             -moz-box-shadow: 0 0 10.92px 1.08px #ff4c23;
             box-shadow: 0 0 10.92px 1.08px #ff4c23; /*outer glow*/
     `,
-         blueNeonBorder: `
+        blueNeonBorder: `
                 height: 32px;
                 left: 0;
                 position: absolute;
@@ -44,21 +44,21 @@ export default function LiveMatchCoefficient({
                 -moz-box-shadow: 0 0 10.92px 1.08px #236bff;
                 box-shadow: 0 0 10.92px 1.08px #236bff; /*outer glow*/
          `,
-         blueNeonBorderContainer: `
+        blueNeonBorderContainer: `
          height: 32px;
          left: 11px;
          position: absolute;
          top: 0;
          width: 45px;
          `,
-         greenNeonBorderContainer: `
+        greenNeonBorderContainer: `
          height: 32px;
          left: 23px;
          position: absolute;
          top: 0;
          width: 45px;
          `,
-         greenNeonBorder: `
+        greenNeonBorder: `
                 height: 32px;
                 left: 0;
                 position: absolute;
@@ -76,7 +76,7 @@ export default function LiveMatchCoefficient({
                 -moz-box-shadow: 0 0 10.92px 1.08px #48cb1e;
                 box-shadow: 0 0 10.92px 1.08px #48cb1e; /*outer glow*/
          `,
-     };
+    };
     const { classes } = jss.createStyleSheet(styles).attach();
     const selections = { team1: 3, team2: 1, draw: 2, none: 0 };
     const [selectedOutcome, setSelectedOutcome] = useState(selections.none);
@@ -162,15 +162,24 @@ export default function LiveMatchCoefficient({
                     }}
                     className="row-19"
                 >
-                    <div className={classes.blueNeonBorderContainer}>
-                        <div
-                            className={
-                                selectedOutcome === selections.team2
-                                    ? classes.blueNeonBorder
-                                    : ""
-                            }
-                        ></div>
-                    </div>
+                    {selectedOutcome === selections.team2 && (
+                        <div className={classes.blueNeonBorderContainer}>
+                            <div className={classes.blueNeonBorder}>
+                                <img
+                                    style={{
+                                        position: "absolute",
+                                        top: "22px",
+                                        left: "6px",
+                                    }}
+                                    src={
+                                        require("../imagesHold/down_arrow.png")
+                                            .default
+                                    }
+                                    alt=""
+                                />
+                            </div>
+                        </div>
+                    )}
                     <p className="text-62">{team2WinKof}</p>
                     <p className="text-63">{team2}</p>
                 </button>
