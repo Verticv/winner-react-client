@@ -4,7 +4,7 @@ import KakaoLogo from '../../images/footer/kakao.png'
 import TelegramLogo from '../../images/footer/telegram.png'
 import SignedUpPopup from './SignedUpPopup'
 import LoginPopup from './LoginPopup'
-import CloseIcon from '../../images/close_icon.png'
+import CloseIcon from '../../images/popups/close_icon.png'
 import DropDownControls from '../dropdowns/DropDownControls'
 import DownArrowIcon from '../../images/down_arrow_icon.png'
 

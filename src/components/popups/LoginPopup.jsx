@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import LoginIcon from '../../images/login_icon.png'
+import LoginIcon from '../../images/popups/login_icon.png'
 import SignupPopup from './SignupPopup'
-import CloseIcon from '../../images/close_icon.png'
+import CloseIcon from '../../images/popups/close_icon.png'
 
 const LoginPopup = ({setAuth, setPopupOpen}) => {
     

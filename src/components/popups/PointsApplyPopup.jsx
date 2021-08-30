@@ -47,7 +47,7 @@ const PointsApplyPopup = ({setPopupOpen}) => {
                     </button>
                     <button className="flex items-center justify-center h-52px w-268px rounded-4px bg-blue-r004b8a">
                         <div className="flex items-center justify-center h-50px w-266px bg-black rounded-4px border border-blue-r2a699c bg-gradient-to-b from-blue-r004b8a via-blue-r004b8a to-blue-r012d53 cursor-pointer">
-                            <span className="font-spoqaMedium tracking-tight text-14px text-white">상세내역</span>
+                            <span className="font-spoqaMedium tracking-tight text-16px text-white">상세내역</span>
                         </div>
                     </button>
                 </div>
