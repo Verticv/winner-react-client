@@ -31,8 +31,6 @@ export default function BetNavListItem({
         display: block;
         margin: 7px 0 0;
         ${active ? "color: #000000;" : "color: #bebebe;"}
-        font-weight: 900;
-        font-size: 12px;
     `,
         numberGroup: `
         margin: 5px auto 0;
@@ -44,8 +42,8 @@ export default function BetNavListItem({
         letter-spacing: 0;
         line-height: 14px;
         text-align: center;
+        font-family: roboto;
         ${active ? "color: #000000;" : "color: #bebebe;"}
-        font-weight: 900;
     `,
         icon: `
         display: block;
