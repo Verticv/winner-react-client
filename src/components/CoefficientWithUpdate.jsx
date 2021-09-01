@@ -4,7 +4,7 @@ import jss from "jss";
 import React, { useEffect, useState } from "react";
 
 export default function CoefficientWithUpdate(props) {
-    const enabled = false;
+    const enabled = process.env.NODE_ENV !== 'development';
     function getDisplayValue(prev, current) {
         if (current > prev) return displayOptions.up;
         else if (current < prev) return displayOptions.down;

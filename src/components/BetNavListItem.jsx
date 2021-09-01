@@ -1,5 +1,6 @@
 import React from "react";
 import jss from "jss";
+import clsx from "clsx";
 const selectedBg = require("../imagesHold/bg_114.png").default;
 const bg = require("../imagesHold/bg_110.png").default
 
@@ -13,19 +14,19 @@ export default function BetNavListItem({
 }) {
     const styles = {
         holder: `
-        left: 50%;
-        padding: 11px 0 7px;
-        position: absolute;
-        top: 0;
-        width: 125px;
-        background: url(${active ? selectedBg : bg}) no-repeat;
-        margin-left: ${marginLeft};
-    `,
+            left: 50%;
+            padding: 11px 0 7px;
+            position: absolute;
+            top: 0;
+            width: 125px;
+            background: url(${active ? selectedBg : bg}) no-repeat;
+            margin-left: ${marginLeft};
+        `,
         group: `
         display: table;
         margin: 0 auto;
         position: relative;
-        opacity: 0.45;
+        ${active ? "opacity: 0.85;" : "opacity: 0.45;"}
     `,
         text: `
         display: block;
@@ -51,14 +52,31 @@ export default function BetNavListItem({
         height: 23px;
         ${active ? "filter: invert(1);" : ""}
     `,
+        hoverBackground: {
+            "&:hover": {
+                background: `url(${selectedBg}) no-repeat`,
+            },
+            "&:hover $group": {
+                opacity: 0.85,
+            },
+            "&:hover $icon": {
+                filter: "invert(1)",
+            },
+            "&:hover $numberGroup, &:hover $text": {
+                color: "#000000",
+            },
+        },
     };
     const { classes } = jss.createStyleSheet(styles).attach();
     return (
-        <button onClick={handleSetNavElementActive} className={classes.holder}>
-            <div className={classes.group}>
-                <img className={classes.icon} src={icon} alt="" />
-                <p className={classes.text}>{text}</p>
-                <div className={classes.numberGroup}>{number}</div>
+        <button
+            onClick={handleSetNavElementActive}
+            className={clsx(classes.holder, classes.hoverBackground)}
+            >
+            <div className={clsx(classes.group, classes.hoverGroup)}>
+            <img className={clsx(classes.icon, classes.hoverIcon)} src={icon} alt="" />
+                <p className={clsx(classes.text, classes.hoverText)}>{text}</p>
+                <div className={clsx(classes.numberGroup, classes.hoverText)}>{number}</div>
             </div>
         </button>
     );
