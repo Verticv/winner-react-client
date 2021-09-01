@@ -73,10 +73,10 @@ export default function BetNavListItem({
             onClick={handleSetNavElementActive}
             className={clsx(classes.holder, classes.hoverBackground)}
             >
-            <div className={clsx(classes.group, classes.hoverGroup)}>
-            <img className={clsx(classes.icon, classes.hoverIcon)} src={icon} alt="" />
-                <p className={clsx(classes.text, classes.hoverText)}>{text}</p>
-                <div className={clsx(classes.numberGroup, classes.hoverText)}>{number}</div>
+            <div className={classes.group}>
+            <img className={classes.icon} src={icon} alt="" />
+                <p className={classes.text}>{text}</p>
+                <div className={classes.numberGroup}>{number}</div>
             </div>
         </button>
     );
