@@ -1,5 +1,6 @@
 import jss from "jss";
 import React, { useState } from "react";
+import CoefficientWithUpdate from "./CoefficientWithUpdate";
 
 export default function MatchDetail({ bet }) {
     const styles = {
@@ -32,10 +33,6 @@ export default function MatchDetail({ bet }) {
                 position: absolute;
                 top: 0;
                 width: 342px;
-                background: url(${
-                    require("../imagesHold/bg_156.png").default
-                }) no-repeat;
-
                 display: flex;
                 justify-content: space-between;
                 padding-right: 8px;
@@ -48,14 +45,23 @@ export default function MatchDetail({ bet }) {
             `,
         rotate180: `
                 transform: rotate(180deg);
-        `
+        `,
     };
-    const [isShowing, setIsShowing] = useState(true)
+    const [isShowing, setIsShowing] = useState(true);
     const handleToggleIsShowing = () => {
-        setIsShowing(prev => !prev)
-    }
+        setIsShowing((prev) => !prev);
+    };
     const { classes } = jss.createStyleSheet(styles).attach();
-    const { betType, option1, option2, kof1, kof2, tieKof } = bet;
+    const { betType, option1, option2 } = bet;
+    const selections = { team1: 3, team2: 1, draw: 2, none: 0 };
+    const [selectedOutcome, setSelectedOutcome] = useState(selections.none);
+    function handleSetSelectedOutcome(outcome) {
+        setSelectedOutcome(outcome);
+    }
+    const [selectedOutcome2, setSelectedOutcome2] = useState(selections.none);
+    function handleSetSelectedOutcome2(outcome) {
+        setSelectedOutcome2(outcome);
+    }
     return (
         <div>
             <div className={classes.betTitle}>
@@ -84,16 +90,70 @@ export default function MatchDetail({ bet }) {
             {isShowing ? (
                 <div className={classes.betOptions}>
                     <div className="group-56">
-                        <div className="bg-holder-57">
-                            <div className="row-5">
-                                <p className="text-116">{option1}</p>
-                                <p className="text-117">{kof1}</p>
-                            </div>
-                        </div>
-                        <div className="bg-holder-58">
-                            <div className="bg-holder-59">
-                                <p className="text-118">{tieKof}</p>
-                            </div>
+                        <button
+                            onClick={() =>
+                                handleSetSelectedOutcome(selections.team1)
+                            }
+                            className="bg-holder-57"
+                            style={
+                                selectedOutcome === selections.team1
+                                    ? {
+                                          background: `url(${
+                                              require("../imagesHold/left_select_bet.png")
+                                                  .default
+                                          })`,
+                                          backgroundRepeat: "no-repeat",
+                                          backgroundSize: "cover",
+                                          display: "flex",
+                                          justifyContent: "space-between",
+                                          alignItems: "center",
+                                          padding: '0 10px'
+                                      }
+                                    : {
+                                          background: `url(${
+                                              require("../imagesHold/bg_160.png")
+                                                  .default
+                                          })`,
+                                          display: "flex",
+                                          justifyContent: "space-between",
+                                          alignItems: "center",
+                                          padding: '0 10px'
+                                      }
+                            }
+                        >
+                            <p className="text-116">{option1}</p>
+                            <CoefficientWithUpdate />
+                        </button>
+                        <button
+                            onClick={() =>
+                                handleSetSelectedOutcome(selections.draw)
+                            }
+                            className="bg-holder-58"
+                            style={
+                                selectedOutcome === selections.draw
+                                    ? {
+                                          background: `url(${
+                                              require("../imagesHold/center_selected_trapezoid.png")
+                                                  .default
+                                          })`,
+                                          backgroundRepeat: "no-repeat",
+                                          backgroundSize: "cover",
+                                          display: "flex",
+                                          justifyContent: "center",
+                                          alignItems: "center",
+                                      }
+                                    : {
+                                          background: `url(${
+                                              require("../imagesHold/bg_154.png")
+                                                  .default
+                                          })`,
+                                          display: "flex",
+                                          justifyContent: "center",
+                                          alignItems: "center",
+                                      }
+                            }
+                        >
+                            <CoefficientWithUpdate />
                             <img
                                 className="line-33"
                                 src={
@@ -103,12 +163,40 @@ export default function MatchDetail({ bet }) {
                                 width="11"
                                 height="35"
                             />
-                        </div>
-                        <div className={classes.team2}>
-                            <div className="row-6">
-                                <p className="text-119">{kof2}</p>
-                                <p className={classes.option2Name}>{option2}</p>
-                            </div>
+                        </button>
+                        <button
+                            onClick={() =>
+                                handleSetSelectedOutcome(selections.team2)
+                            }
+                            className={classes.team2}
+                            style={
+                                selectedOutcome === selections.team2
+                                    ? {
+                                          background: `url(${
+                                              require("../imagesHold/right_select_bet.png")
+                                                  .default
+                                          })`,
+                                          backgroundRepeat: "no-repeat",
+                                          backgroundSize: "cover",
+                                          display: "flex",
+                                          justifyContent: "space-between",
+                                          alignItems: "center",
+                                          paddingLeft: "10px",
+                                      }
+                                    : {
+                                          background: `url(${
+                                              require("../imagesHold/bg_156.png")
+                                                  .default
+                                          })`,
+                                          display: "flex",
+                                          justifyContent: "space-between",
+                                          alignItems: "center",
+                                          paddingLeft: "10px",
+                                      }
+                            }
+                        >
+                            <CoefficientWithUpdate />
+                            <p className={classes.option2Name}>{option2}</p>
                             <img
                                 className="line-34"
                                 src={
@@ -118,20 +206,74 @@ export default function MatchDetail({ bet }) {
                                 width="11"
                                 height="35"
                             />
-                        </div>
+                        </button>
                         <div className="line-35"></div>
                     </div>
                     <div className="group-57">
-                        <div className="bg-holder-61">
-                            <div className="row-6">
-                                <p className="text-121">{option1}</p>
-                                <p className="text-122">{kof1}</p>
-                            </div>
-                        </div>
-                        <div className="bg-holder-62">
-                            <div className="bg-holder-63">
-                                <p className="text-123">{tieKof}</p>
-                            </div>
+                        <button
+                            onClick={() =>
+                                handleSetSelectedOutcome2(selections.team1)
+                            }
+                            style={
+                                selectedOutcome2 === selections.team1
+                                    ? {
+                                          background: `url(${
+                                              require("../imagesHold/left_select_bet.png")
+                                                  .default
+                                          })`,
+                                          backgroundRepeat: "no-repeat",
+                                          backgroundSize: "cover",
+                                          display: "flex",
+                                          justifyContent: "space-between",
+                                          alignItems: "center",
+                                          padding: "0 10px",
+                                      }
+                                    : {
+                                          background: `url(${
+                                              require("../imagesHold/bg_160.png")
+                                                  .default
+                                          })`,
+                                          display: "flex",
+                                          justifyContent: "space-between",
+                                          alignItems: "center",
+                                          padding: "0 10px",
+                                      }
+                            }
+                            className="bg-holder-61"
+                        >
+                            <p className="text-121">{option1}</p>
+                            <CoefficientWithUpdate />
+                        </button>
+                        <button
+                            onClick={() =>
+                                handleSetSelectedOutcome2(selections.draw)
+                            }
+                            style={
+                                selectedOutcome2 === selections.draw
+                                    ? {
+                                          background: `url(${
+                                              require("../imagesHold/center_selected_trapezoid.png")
+                                                  .default
+                                          })`,
+                                          backgroundRepeat: "no-repeat",
+                                          backgroundSize: "cover",
+                                          display: "flex",
+                                          justifyContent: "center",
+                                          alignItems: "center",
+                                      }
+                                    : {
+                                          background: `url(${
+                                              require("../imagesHold/bg_154.png")
+                                                  .default
+                                          })`,
+                                          display: "flex",
+                                          justifyContent: "center",
+                                          alignItems: "center",
+                                      }
+                            }
+                            className="bg-holder-62"
+                        >
+                            <CoefficientWithUpdate />
                             <img
                                 className="line-36"
                                 src={
@@ -141,12 +283,40 @@ export default function MatchDetail({ bet }) {
                                 width="11"
                                 height="35"
                             />
-                        </div>
-                        <div className={classes.team2}>
-                            <div className="row-6">
-                                <p className="text-124">{kof2}</p>
-                                <p className={classes.option2Name}>{option2}</p>
-                            </div>
+                        </button>
+                        <button
+                            onClick={() =>
+                                handleSetSelectedOutcome2(selections.team2)
+                            }
+                            className={classes.team2}
+                            style={
+                                selectedOutcome2 === selections.team2
+                                    ? {
+                                          background: `url(${
+                                              require("../imagesHold/right_select_bet.png")
+                                                  .default
+                                          })`,
+                                          backgroundRepeat: "no-repeat",
+                                          backgroundSize: "cover",
+                                          display: "flex",
+                                          justifyContent: "space-between",
+                                          alignItems: "center",
+                                          paddingLeft: "10px",
+                                      }
+                                    : {
+                                          background: `url(${
+                                              require("../imagesHold/bg_156.png")
+                                                  .default
+                                          })`,
+                                          display: "flex",
+                                          justifyContent: "space-between",
+                                          alignItems: "center",
+                                          paddingLeft: "10px",
+                                      }
+                            }
+                        >
+                            <CoefficientWithUpdate />
+                            <p className={classes.option2Name}>{option2}</p>
                             <img
                                 className="line-37"
                                 src={
@@ -156,7 +326,7 @@ export default function MatchDetail({ bet }) {
                                 width="11"
                                 height="35"
                             />
-                        </div>
+                        </button>
                         <div className="line-38"></div>
                     </div>
                 </div>

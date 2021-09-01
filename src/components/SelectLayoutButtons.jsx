@@ -1,7 +1,10 @@
-import React, { useState } from 'react'
-import SelectLayoutButton from './SelectLayoutButton';
+import { singleOrMultiOptions } from "helpers/constants";
+import React from "react";
+import useStore from "store/useStore";
+import SelectLayoutButton from "./SelectLayoutButton";
 
 export default function SelectLayoutButtons() {
+    const { singleOrMulti, changeSingleOrMulti } = useStore((state) => state);
 
     const layoutButtons = [
         {
@@ -9,30 +12,26 @@ export default function SelectLayoutButtons() {
             image: require("../imagesHold/bg_136.png").default,
             text: "싱글뷰",
             offset: "0px",
-            active: true,
+            active: singleOrMulti === singleOrMultiOptions.single,
+            type: singleOrMultiOptions.single,
         },
         {
             id: 1,
             image: require("../imagesHold/ico_19.png").default,
             text: "멀티뷰",
             offset: "72px",
-            active: false,
+            active: singleOrMulti === singleOrMultiOptions.multi,
+            type: singleOrMultiOptions.multi,
         },
     ];
 
-    const [layoutItems, setLayoutItems] = useState(layoutButtons);
-
-    const handleSetLayoutActive = (id) => {
-        const navCopy = [...layoutItems];
-        const itemToSetActive = navCopy.find((a) => a.id === id);
-        navCopy.forEach((navListItem) => (navListItem.active = false));
-        itemToSetActive.active = true;
-        setLayoutItems(navCopy);
+    const handleSetLayoutActive = (som) => {
+        changeSingleOrMulti(som)
     };
 
     return (
         <>
-            {layoutItems.map((layoutButton) => {
+            {layoutButtons.map((layoutButton) => {
                 const { image, text, offset, active, id } = layoutButton;
                 return (
                     <SelectLayoutButton
@@ -42,7 +41,7 @@ export default function SelectLayoutButtons() {
                         text={text}
                         offset={offset}
                         handleSetLayoutActive={() =>
-                            handleSetLayoutActive(layoutButton.id)
+                            handleSetLayoutActive(layoutButton.type)
                         }
                     />
                 );
@@ -50,4 +49,3 @@ export default function SelectLayoutButtons() {
         </>
     );
 }
-

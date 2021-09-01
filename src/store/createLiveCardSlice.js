@@ -6,7 +6,6 @@ export const createLiveCardSlice = (set, get) => ({
     playingMatchId: null,
     changePlayingMatchId: (id) => {
         const { playingMatchId } = get();
-        console.log(id, playingMatchId);
         if (playingMatchId === id) {
             set((state) => (state.playingMatchId = null));
         } else {
