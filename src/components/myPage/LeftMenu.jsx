@@ -67,7 +67,7 @@ const LeftMenu = () => {
             path2: "/mypage/points-accumulate-history", 
             path3: "/mypage/points-transaction-history"
         },
-        { text: "쪽지관리", icon: Icon7, iconHighlight: IconHighlight7, id: 6, path: "/mypage/inbox" },
+        { text: "쪽지관리", icon: Icon7, iconHighlight: IconHighlight7, id: 6, path: "/mypage/inbox", inboxCount: "2" },
         { text: "회원정보수정", icon: Icon8, iconHighlight: IconHighlight8, id: 7, path: "/mypage/edit-info" }
     ];
 
@@ -161,13 +161,23 @@ const LeftMenu = () => {
                                     src={(selectedTab === item.path || selectedTab === item.path2 || selectedTab === item.path3) ? item.iconHighlight : item.icon} 
                                     alt="icon" />
                             </div>
-                            <div className="w-full flex mx-14px justify-between items-center">                
-                                <label
-                                    className={`${
-                                        (selectedTab === item.path || selectedTab === item.path2 || selectedTab === item.path3)
-                                        ? "text-white" 
-                                        : "text-gray-r8c8c8c"
-                                    } font-spoqaBold text-16px cursor-pointer tracking-tight`}>{item.text}</label>
+                            <div className="w-full flex mx-14px justify-between items-center">
+                                <div className="flex items-center">
+                                    <label
+                                        className={`${
+                                            (selectedTab === item.path || selectedTab === item.path2 || selectedTab === item.path3)
+                                            ? "text-white" 
+                                            : "text-gray-r8c8c8c"
+                                        } font-spoqaBold text-16px cursor-pointer tracking-tight`}
+                                    >
+                                        {item.text}
+                                    </label>
+                                    {item.inboxCount && (
+                                        <div className="ml-10px h-17px px-6px rounded-full bg-red-notification text-white flex items-center justify-center text-12px font-roboto">
+                                            {item.inboxCount}
+                                        </div>
+                                    )}
+                                    </div>
                                     {item.sub1 && (
                                         <img src={(selectedTab === item.path || selectedTab === item.path2 || selectedTab === item.path3) ? ArrowUp : ArrowDown} alt="" />
                                     )}

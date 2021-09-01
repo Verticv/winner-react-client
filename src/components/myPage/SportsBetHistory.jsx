@@ -147,7 +147,7 @@ const SportsBetHistory = () => {
                         <div className="w-45px h-full flex items-center justify-center">
                             <input 
                                 className="radio" 
-                                type="radio" 
+                                type="checkbox" 
                                 name="radio" 
                                 checked={isChecked}
                                 onClick={() => setChecked(!isChecked)}

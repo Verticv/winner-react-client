@@ -18,6 +18,7 @@ import PointsApply from 'components/myPage/PointsApply'
 import PointsAccumulate from 'components/myPage/PointsAccumulate'
 import PointsTransaction from 'components/myPage/PointsTransaction'
 import EditInfo from 'components/myPage/EditInfo'
+import Inbox from 'components/myPage/Inbox'
 
 const MyPage = ({isAuthenticated, setAuthenticated}) => {
 
@@ -106,6 +107,9 @@ const MyPage = ({isAuthenticated, setAuthenticated}) => {
                         </Route>
                         <Route path="/mypage/points-transaction-history">
                             <PointsTransaction />
+                        </Route>
+                        <Route path="/mypage/inbox">
+                            <Inbox />
                         </Route>
                         <Route path="/mypage/edit-info">
                             <EditInfo />

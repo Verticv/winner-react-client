@@ -5,7 +5,7 @@ const WinLoseTable = () => {
     const RadioButton = (
         <input 
             className="radio" 
-            type="radio" 
+            type="checkbox" 
             name="radio" 
             // checked={isChecked === row}
             // onClick={() => setChecked(row)}
