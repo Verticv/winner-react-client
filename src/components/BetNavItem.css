@@ -29,17 +29,24 @@ footer, header, menu, nav, section, time {
   display: block;
 } */
 
+@font-face {
+  font-family: 'NotoSansCJKkr-Regular';
+  src: local('NotoSansCJKkr-Regular'), url(../fonts/NotoSansCJKkr-Regular.otf) format('opentype');
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
 .hide-scrollbar-bet-page::-webkit-scrollbar {
 display: none;
 }
 
 .global_container_ {
   line-height: 1;
-    color: inherit;
+  color: inherit;
   text-decoration: none;
   overflow-x: hidden;
-    color: #ffffff;
-  font-family: NotoSansCJKkr, serif;
+  color: #ffffff;
+  font-family: NotoSansCJKkr-Regular, sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: normal;

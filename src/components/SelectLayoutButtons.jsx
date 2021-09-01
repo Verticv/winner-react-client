@@ -9,7 +9,7 @@ export default function SelectLayoutButtons() {
     const layoutButtons = [
         {
             id: 0,
-            image: require("../imagesHold/bg_136.png").default,
+            image: require("../imagesHold/single_layout_icon.png").default,
             text: "싱글뷰",
             offset: "0px",
             active: singleOrMulti === singleOrMultiOptions.single,
@@ -17,7 +17,7 @@ export default function SelectLayoutButtons() {
         },
         {
             id: 1,
-            image: require("../imagesHold/ico_19.png").default,
+            image: require("../imagesHold/multi_layout_icon.png").default,
             text: "멀티뷰",
             offset: "72px",
             active: singleOrMulti === singleOrMultiOptions.multi,
