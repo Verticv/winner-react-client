@@ -2,7 +2,7 @@ import React from "react";
 import jss from "jss";
 import clsx from "clsx";
 const selectedBg = require("../imagesHold/bg_114.png").default;
-const bg = require("../imagesHold/bg_110.png").default
+const bg = require("../imagesHold/NavItemBackground.png").default;
 
 export default function BetNavListItem({
     icon,
