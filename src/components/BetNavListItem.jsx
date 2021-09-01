@@ -44,7 +44,11 @@ export default function BetNavListItem({
         line-height: 14px;
         text-align: center;
         font-family: roboto;
-        ${active ? "color: #000000;" : "color: #bebebe;"}
+        ${
+            active
+                ? "background-color: #000000; border-radius: 4px; color: #BAA375FF"
+                : "color: #bebebe;"
+        }
     `,
         icon: `
         display: block;
@@ -62,8 +66,13 @@ export default function BetNavListItem({
             "&:hover $icon": {
                 filter: "invert(1)",
             },
-            "&:hover $numberGroup, &:hover $text": {
+            "&:hover $text": {
                 color: "#000000",
+            },
+            "&:hover $numberGroup": {
+                backgroundColor: "#000000",
+                borderRadius: "4px",
+                color: "#BAA375FF",
             },
         },
     };
