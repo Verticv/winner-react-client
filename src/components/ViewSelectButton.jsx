@@ -2,7 +2,7 @@ import jss from "jss";
 import React from "react";
 import useStore from "store/useStore";
 
-export default function ViewSelectButton({ viewName, viewType }) {
+export default function ViewSelectButton({ viewName, viewType, icon }) {
     const { selectedView } = useStore((state) => state);
     const isSelected = viewType === selectedView;
     const styles = {
@@ -72,15 +72,17 @@ export default function ViewSelectButton({ viewName, viewType }) {
         <button
             onClick={() => changeView(viewType)}
             className={classes.buttonBackground}
+            style={{ display: "flex", justifyContent: "center", alignItems: "center"}}
         >
-            <img
-                className="ico-12"
-                src={require("../imagesHold/ico_16.png").default}
-                alt=""
-                width="17"
-                height="21"
-            />
-            <p className="text-23">{viewName}</p>
+            <img style={{ marginRight: "12px", marginLeft: "4px"}} src={icon} alt="" />
+            <p
+                style={{
+                    fontSize: "16px",
+                    textTransform: "uppercase",
+                }}
+            >
+                {viewName}
+            </p>
         </button>
     );
 }
