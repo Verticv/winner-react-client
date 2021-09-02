@@ -6,7 +6,8 @@ import RightArrow from '../../images/myPage/right_arrow.png'
 const DirectoryComponent = ({
     branch1 = "마이페이지",
     branch2, 
-    branch3 = null
+    branch3 = null,
+    branch4 = null
 }) => {
 
     const history = useHistory();
@@ -32,7 +33,12 @@ const DirectoryComponent = ({
                     <span className="font-spoqaBold text-13px text-gray-393e41 tracking-tight">{branch3}</span>
                 </>
             )}
-            
+            {branch4 && (
+                <>
+                    <img className="object-none" src={RightArrow} alt="" />
+                    <span className="font-spoqaBold text-13px text-gray-393e41 tracking-tight">{branch4}</span>
+                </>
+            )}    
         </div>
     )
 }

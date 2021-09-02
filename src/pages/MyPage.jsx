@@ -19,6 +19,7 @@ import PointsAccumulate from 'components/myPage/PointsAccumulate'
 import PointsTransaction from 'components/myPage/PointsTransaction'
 import EditInfo from 'components/myPage/EditInfo'
 import Inbox from 'components/myPage/Inbox'
+import InboxView from 'components/myPage/InboxView'
 
 const MyPage = ({isAuthenticated, setAuthenticated}) => {
 
@@ -62,8 +63,11 @@ const MyPage = ({isAuthenticated, setAuthenticated}) => {
                 <Route path="/mypage/points-transaction-history">
                     <DirectoryComponent branch2="포인트" branch3="포인트전환내역" />
                 </Route>
-                <Route path="/mypage/inbox">
+                <Route exact path="/mypage/inbox">
                     <DirectoryComponent branch2="쪽지관리" />
+                </Route>
+                <Route path="/mypage/inbox/*">
+                    <DirectoryComponent branch2="쪽지관리" branch3="뷰" />
                 </Route>
                 <Route path="/mypage/edit-info">
                     <DirectoryComponent branch2="회원정보수정" />
@@ -108,8 +112,11 @@ const MyPage = ({isAuthenticated, setAuthenticated}) => {
                         <Route path="/mypage/points-transaction-history">
                             <PointsTransaction />
                         </Route>
-                        <Route path="/mypage/inbox">
+                        <Route exact path="/mypage/inbox">
                             <Inbox />
+                        </Route>
+                        <Route path="/mypage/inbox/*">
+                            <InboxView />
                         </Route>
                         <Route path="/mypage/edit-info">
                             <EditInfo />

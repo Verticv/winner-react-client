@@ -15,70 +15,80 @@ const Inbox = () => {
             isRead: false,
             time: "2021.06.29 07:35",
             type: "안내",
-            isClicked: true
+            isClicked: true,
+            path: '/mypage/inbox/1'
         },
         { 
             id: 1,
             text: "정기 점검 안내", 
             isRead: true,
             time: "2021.06.29 07:35",
-            type: "일반"
+            type: "일반",
+            path: '/mypage/inbox/2'
         },
         { 
             id: 2,
             text: "바이너리 서비스 종료 안내", 
             isRead: true,
             time: "2021.06.29 07:35",
-            type: "일반"
+            type: "일반",
+            path: '/mypage/inbox/3'
         },
         { 
             id: 3,
             text: "미니게임 파워볼 동행복권 시스템 정기 점검", 
             isRead: true,
             time: "2021.06.29 07:35",
-            type: "안내"
+            type: "안내",
+            path: '/mypage/inbox/4'
         },
         { 
             id: 4,
             text: "스포츠 & 미니게임 충전 보너스 (21.04.24 변경)", 
             isRead: true,
             time: "2021.06.29 07:35",
-            type: "이벤트"
+            type: "이벤트",
+            path: '/mypage/inbox/5'
         },
         { 
             id: 5,
             text: "일시: 2021.4.27 화요일 14:00 부터 서버안정화를 위한 정기점검이 진행됩니다.", 
             isRead: true,
             time: "2021.06.29 07:35",
-            type: "일반"
+            type: "일반",
+            path: '/mypage/inbox/6'
         },
         { 
             id: 6,
             text: "입금계좌변경안내", 
             isRead: false,
             time: "2021.06.29 07:35",
-            type: "안내"
+            type: "안내",
+            path: '/mypage/inbox/7'
         },
         { 
             id: 7,
             text: "입금계좌변경안내", 
             isRead: true,
             time: "2021.06.29 07:35",
-            type: "안내"
+            type: "안내",
+            path: '/mypage/inbox/8'
         },
         { 
             id: 8,
             text: "입금계좌변경안내", 
             isRead: true,
             time: "2021.06.29 07:35",
-            type: "안내"
+            type: "안내",
+            path: '/mypage/inbox/9'
         },
         { 
             id: 9,
             text: "입금계좌변경안내", 
             isRead: false,
             time: "2021.06.29 07:35",
-            type: "안내"
+            type: "안내",
+            path: '/mypage/inbox/10'
         },
         
     ];

@@ -67,7 +67,7 @@ const LeftMenu = () => {
             path2: "/mypage/points-accumulate-history", 
             path3: "/mypage/points-transaction-history"
         },
-        { text: "쪽지관리", icon: Icon7, iconHighlight: IconHighlight7, id: 6, path: "/mypage/inbox", inboxCount: "2" },
+        { text: "쪽지관리", icon: Icon7, iconHighlight: IconHighlight7, id: 6, path: "/mypage/inbox", inboxCount: "3" },
         { text: "회원정보수정", icon: Icon8, iconHighlight: IconHighlight8, id: 7, path: "/mypage/edit-info" }
     ];
 

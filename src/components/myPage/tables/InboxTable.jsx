@@ -1,4 +1,5 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom';
 import MailIcon from '../../../images/myPage/mail.png'
 import MailOpenedIcon from '../../../images/myPage/mail_opened.png'
 
@@ -7,6 +8,8 @@ const InboxTable = ({
     checkedState,
     setCheckedState
 }) => {
+
+    const history = useHistory();
 
     const handleOnChange = (position) => {
         const updatedCheckedState = checkedState.map((item, index) =>
@@ -23,6 +26,7 @@ const InboxTable = ({
                     checkedState[item.id] === true ? "bg-gray-e8eff6" :
                     item.id % 2 === 0 ? "bg-gray-fdfdfd" : "bg-gray-f8f9fb"
                 } font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px w-full border-b border-gray-dddddd`}
+                onClick={() => history.push(item.path)}
             >
                 <div className="flex items-center font-spoqaBold text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd px-54px">        
                     
