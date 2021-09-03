@@ -68,6 +68,8 @@ module.exports = {
         '64px': '64px',
         '65px': '65px',
         '66px': '66px',
+        '67px': '67px',
+        '69px': '69px',
         '70px': '70px',
         '71px': '71px',
         '72px': '72px',
@@ -310,7 +312,8 @@ module.exports = {
           r5d799c: '#5d799c',
           r01a0ea: '#01a0ea',
           r0779de: '#0779de',
-          r00a1e9: '#00a1e9'
+          r00a1e9: '#00a1e9',
+          r3975ad: '#3975ad'
         },
         gray: {
           text: '#393e41',
