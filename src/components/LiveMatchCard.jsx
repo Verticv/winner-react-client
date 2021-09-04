@@ -40,7 +40,8 @@ export default function LiveMatchCard({ matchCard }) {
                         : require("../imagesHold/bg_201.jpg").default
                 }) no-repeat;
           `,
-        leftContainerHover: {},
+        leftContainerHover: {
+        },
         centerContainerHover: {},
         rightContainerHover: {},
         container: {
@@ -200,6 +201,7 @@ export default function LiveMatchCard({ matchCard }) {
                     team2WinKof={team2WinKof}
                     tieKof={tieKof}
                     parentClasses={classes}
+                    parentSelected={selected}
                 />
             </div>
             <button onClick={handlePlusButton} className="bg-5">

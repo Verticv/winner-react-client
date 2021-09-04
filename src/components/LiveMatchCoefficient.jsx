@@ -10,6 +10,7 @@ export default function LiveMatchCoefficient({
     team2,
     team2WinKof,
     parentClasses,
+    parentSelected
 }) {
     const selections = { team1: 3, team2: 1, draw: 2, none: 0 };
     const [selectedOutcome, setSelectedOutcome] = useState(selections.none);
@@ -80,6 +81,8 @@ export default function LiveMatchCoefficient({
                     ? `url(${
                           require("../imagesHold/right_select_bet.png").default
                       }) no-repeat`
+                    : parentSelected
+                    ? `url(${require("../imagesHold/bg_250.png").default})`
                     : `url(${
                           require("../imagesHold/bg_208.png").default
                       }) no-repeat`,
@@ -98,6 +101,8 @@ export default function LiveMatchCoefficient({
             background:
                 selectedOutcome === selections.team1
                     ? `linear-gradient(270deg, rgb(91 30 30) 0px, rgb(155, 47, 48) 40%)`
+                    : parentSelected
+                    ? `url(${require("../imagesHold/bg_227.png").default})`
                     : `url(${
                           require("../imagesHold/bg_214.png").default
                       }) no-repeat`,
@@ -119,6 +124,10 @@ export default function LiveMatchCoefficient({
             background:
                 selectedOutcome === selections.draw
                     ? "radial-gradient(circle, rgba(91,30,30,1) 0%, rgba(155,47,48,1) 94%)"
+                    : parentSelected
+                    ? `url(${
+                          require("../imagesHold/bg_228.png").default
+                      }) no-repeat center`
                     : `url(${
                           require("../imagesHold/bg_207.png").default
                       }) no-repeat`,
