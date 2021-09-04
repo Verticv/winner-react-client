@@ -37,12 +37,11 @@ export default function LiveMatchCard({ matchCard }) {
                 width: 681px;
                 background: url(${
                     selected
-                        ? require("../imagesHold/bg_220.jpg").default
+                        ? require("../imagesHold/selected_inlay.png").default
                         : require("../imagesHold/bg_201.jpg").default
                 }) no-repeat;
           `,
-        leftContainerHover: {
-        },
+        leftContainerHover: {},
         centerContainerHover: {},
         rightContainerHover: {},
         container: {
@@ -59,7 +58,7 @@ export default function LiveMatchCard({ matchCard }) {
             },
             "&:hover $inlay": {
                 background: `url(${
-                    require("../imagesHold/bg_220.jpg").default
+                    require("../imagesHold/selected_inlay.png").default
                 })`,
             },
             "&:hover $leftContainerHover": {
