@@ -36,6 +36,13 @@ footer, header, menu, nav, section, time {
                             'embedded-opentype', and 'svg' */
 }
 
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: local('Roboto-Regular'), url(../fonts/Roboto-Regular.ttf) format('truetype');
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
 .hide-scrollbar-bet-page::-webkit-scrollbar {
 display: none;
 }

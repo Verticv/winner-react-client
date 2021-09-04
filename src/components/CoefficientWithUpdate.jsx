@@ -80,7 +80,15 @@ export default function CoefficientWithUpdate(props) {
                 width: "45px",
             }}
         >
-            <p>{coefficient.current}</p>
+            <p
+                style={{
+                    fontFamily: "Roboto-Regular",
+                    fontSize: "14px",
+                    color: props.selected ? "#FFF" : "#d1cecf",
+                }}
+            >
+                {coefficient.current}
+            </p>
             {display === displayOptions.up && (
                 <img
                     style={{

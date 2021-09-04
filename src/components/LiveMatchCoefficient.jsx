@@ -172,7 +172,9 @@ export default function LiveMatchCoefficient({
                 )}
             >
                 <p className={classes.textLeft}>{team1}</p>
-                <CoefficientWithUpdate />
+                <CoefficientWithUpdate
+                    selected={selectedOutcome === selections.team1}
+                />
             </button>
             <div className="wrapper-21">
                 <button
@@ -193,7 +195,9 @@ export default function LiveMatchCoefficient({
                         width="11"
                         height="32"
                     />
-                    <CoefficientWithUpdate />
+                    <CoefficientWithUpdate
+                        selected={selectedOutcome === selections.draw}
+                    />
                 </button>
                 <button
                     className={clsx(
@@ -206,7 +210,9 @@ export default function LiveMatchCoefficient({
                         handleSetSelectedOutcome(selections.team2);
                     }}
                 >
-                    <CoefficientWithUpdate />
+                    <CoefficientWithUpdate
+                        selected={selectedOutcome === selections.team2}
+                    />
                     <p className="text-63">{team2}</p>
                 </button>
                 <img
