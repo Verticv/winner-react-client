@@ -46,7 +46,6 @@ export default function ViewSelectButton({ viewName, viewType, icon }) {
                     -webkit-border-radius: 6px;
                     -moz-border-radius: 6px;
                     border-radius: 6px;
-                    margin-right: 8px;
                     background: -moz-linear-gradient(90deg, #2a2a2a 0, #0e0e0e 100%);
                     background: -o-linear-gradient(90deg, #2a2a2a 0, #0e0e0e 100%);
                     background: -webkit-linear-gradient(90deg, #2a2a2a 0, #0e0e0e 100%);
