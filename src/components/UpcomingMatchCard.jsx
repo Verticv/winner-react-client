@@ -1,10 +1,33 @@
-import React from 'react'
-import useStore from 'store/useStore';
+import jss from "jss";
+import React from "react";
+import useStore from "store/useStore";
 
 export default function UpcomingMatchCard({ upcomingMatchCard }) {
-    const { changeSelectedCardId } = useStore((state) => state);
+    const changeSelectedCardId = useStore(
+        (state) => state.changeSelectedCardId
+    );
+    const selectedCardId = useStore(
+        (state) => state.selectedCardId
+    );
+    const selected = upcomingMatchCard.id === selectedCardId;
+    const styles = {
+        container: {
+            height: "110px",
+            flexShrink: "0",
+            marginBottom: "8px",
+            position: "relative",
+            width: "681px",
+            background: selected
+                ? `url(${require("../imagesHold/upcoming_card_selected.png").default})`
+                : `url(${require("../imagesHold/upcoming_card.png").default})`,
+            "&:hover": {
+                background: `url(${require("../imagesHold/upcoming_card_selected.png").default})`,
+            },
+        },
+    };
+    const { classes } = jss.createStyleSheet(styles).attach();
     return (
-        <div className="group-40">
+        <div className={classes.container}>
             <div className="f-5">
                 <img
                     className="layer-24"
@@ -85,7 +108,11 @@ export default function UpcomingMatchCard({ upcomingMatchCard }) {
                 </div>
             </div>
             <div className="line-18"></div>
-            <button onClick={() => changeSelectedCardId(upcomingMatchCard.id)} className="btn-holder">
+            <button
+                onClick={() => changeSelectedCardId(upcomingMatchCard.id)}
+                className="btn-holder"
+                style={{ boxShadow: "-5px 1px 16px 0px rgb(8 8 8 / 74%)" }}
+            >
                 <div className="line-19"></div>
                 <img
                     className="btn-6"
@@ -95,14 +122,9 @@ export default function UpcomingMatchCard({ upcomingMatchCard }) {
                     height="110"
                 />
             </button>
-            <p style={{pointerEvents: "none"}} className="text-89">정보</p>
-            <img
-                className="gra-5"
-                src={require("../imagesHold/gra_5.jpg").default}
-                alt=""
-                width="31"
-                height="110"
-            />
+            <p style={{ pointerEvents: "none" }} className="text-89">
+                정보
+            </p>
         </div>
     );
 }
