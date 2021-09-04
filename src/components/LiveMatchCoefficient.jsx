@@ -91,6 +91,11 @@ export default function LiveMatchCoefficient({
             justifyContent: "space-between",
             alignItems: "center",
             paddingRight: "12px",
+            "&:hover": {
+                background: `url(${
+                    require("../imagesHold/right_select_bet.png").default
+                }) no-repeat !important`,
+            },
         },
         leftContainer: {
             height: "32px",
@@ -100,7 +105,7 @@ export default function LiveMatchCoefficient({
             width: "283px",
             background:
                 selectedOutcome === selections.team1
-                    ? `linear-gradient(270deg, rgb(91 30 30) 0px, rgb(155, 47, 48) 40%)`
+                    ? `url(${require("../imagesHold/bg_205.png").default})`
                     : parentSelected
                     ? `url(${require("../imagesHold/bg_227.png").default})`
                     : `url(${
@@ -111,6 +116,11 @@ export default function LiveMatchCoefficient({
             justifyContent: "space-between",
             alignItems: "center",
             paddingRight: "12px",
+            "&:hover": {
+                background: `url(${
+                    require("../imagesHold/bg_205.png").default
+                }) !important`,
+            },
         },
         centerContainer: {
             height: "32px",
@@ -123,7 +133,10 @@ export default function LiveMatchCoefficient({
             alignItems: "center",
             background:
                 selectedOutcome === selections.draw
-                    ? "radial-gradient(circle, rgba(91,30,30,1) 0%, rgba(155,47,48,1) 94%)"
+                    ? `url(${
+                          require("../imagesHold/center_selected_trapezoid.png")
+                              .default
+                      })`
                     : parentSelected
                     ? `url(${
                           require("../imagesHold/bg_228.png").default
@@ -132,6 +145,13 @@ export default function LiveMatchCoefficient({
                           require("../imagesHold/bg_207.png").default
                       }) no-repeat`,
             zIndex: selectedOutcome === selections.draw ? 0 : 1,
+            "&:hover": {
+                background: `url(${
+                    require("../imagesHold/center_selected_trapezoid.png")
+                        .default
+                }) !important`,
+                zIndex: 0,
+            },
         },
     };
     const { classes } = jss.createStyleSheet(styles).attach();
