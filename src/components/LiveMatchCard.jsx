@@ -1,6 +1,7 @@
 import jss from "jss";
 import React from "react";
 import useStore from "store/useStore";
+import LiveMatchCardButton from "./LiveMatchCardButton";
 import LiveMatchCoefficient from "./LiveMatchCoefficient";
 
 export default function LiveMatchCard({ matchCard }) {
@@ -81,9 +82,6 @@ export default function LiveMatchCard({ matchCard }) {
         },
     };
     const { classes } = jss.createStyleSheet(styles).attach();
-    const handlePlusButton = (event) => {
-        event.stopPropagation();
-    };
     const handleContainerClick = () => {
         changeSelectedCardId(id);
     };
@@ -204,10 +202,7 @@ export default function LiveMatchCard({ matchCard }) {
                     parentSelected={selected}
                 />
             </div>
-            <button onClick={handlePlusButton} className="bg-5">
-                <p className="text-78">+</p>
-                <p className="text-79">23</p>
-            </button>
+            <LiveMatchCardButton />
             <div className="f-4">
                 <div className="s-4">
                     <img
