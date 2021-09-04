@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import jss from "jss";
 import React, { useState } from "react";
 import CoefficientWithUpdate from "./CoefficientWithUpdate";
@@ -8,7 +9,10 @@ export default function LiveMatchCoefficient({
     tieKof,
     team2,
     team2WinKof,
+    parentClasses,
 }) {
+    const selections = { team1: 3, team2: 1, draw: 2, none: 0 };
+    const [selectedOutcome, setSelectedOutcome] = useState(selections.none);
     const styles = {
         redNeonBorder: `
             height: 32px;
@@ -59,92 +63,99 @@ export default function LiveMatchCoefficient({
          top: 0;
          width: 45px;
          `,
-        greenNeonBorder: `
-                height: 32px;
-                left: 0;
-                position: absolute;
-                top: 0;
-                width: 45px;
-                border: 1px solid #4ef11a; /*stroke*/
-                -webkit-border-radius: 3.88px/3.81px;
-                -moz-border-radius: 3.88px/3.81px;
-                border-radius: 3.88px/3.81px;
-                background: #246210;
-                -moz-background-clip: padding;
-                -webkit-background-clip: padding-box;
-                background-clip: padding-box; /*Will not allow bg color to leak outside borders*/
-                -webkit-box-shadow: 0 0 10.92px 1.08px #48cb1e;
-                -moz-box-shadow: 0 0 10.92px 1.08px #48cb1e;
-                box-shadow: 0 0 10.92px 1.08px #48cb1e; /*outer glow*/
-         `,
         textLeft: `
             color: #d1cecf;
             letter-spacing: 0;
             text-transform: uppercase;
             margin-left: 12px;
         `,
+        rightContainer: {
+            height: "32px",
+            left: "82px",
+            position: "absolute",
+            top: "0",
+            width: "283px",
+            background:
+                selectedOutcome === selections.team2
+                    ? `url(${
+                          require("../imagesHold/right_select_bet.png").default
+                      }) no-repeat`
+                    : `url(${
+                          require("../imagesHold/bg_208.png").default
+                      }) no-repeat`,
+            paddingLeft: "12px",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            paddingRight: "12px",
+        },
+        leftContainer: {
+            height: "32px",
+            left: "0",
+            position: "absolute",
+            top: "0",
+            width: "283px",
+            background:
+                selectedOutcome === selections.team1
+                    ? `linear-gradient(270deg, rgb(91 30 30) 0px, rgb(155, 47, 48) 40%)`
+                    : `url(${
+                          require("../imagesHold/bg_214.png").default
+                      }) no-repeat`,
+            zIndex: selectedOutcome === selections.team1 ? 1 : 2,
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            paddingRight: "12px",
+        },
+        centerContainer: {
+            height: "32px",
+            left: "0",
+            position: "absolute",
+            top: "0",
+            width: "92px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            background:
+                selectedOutcome === selections.draw
+                    ? "radial-gradient(circle, rgba(91,30,30,1) 0%, rgba(155,47,48,1) 94%)"
+                    : `url(${
+                          require("../imagesHold/bg_207.png").default
+                      }) no-repeat`,
+            zIndex: selectedOutcome === selections.draw ? 0 : 1,
+        },
     };
     const { classes } = jss.createStyleSheet(styles).attach();
-    const selections = { team1: 3, team2: 1, draw: 2, none: 0 };
-    const [selectedOutcome, setSelectedOutcome] = useState(selections.none);
     function handleSetSelectedOutcome(outcome) {
         setSelectedOutcome(outcome);
     }
     return (
         <div className="btn-4">
             <button
-                style={
-                    selectedOutcome === selections.team1
-                        ? {
-                              background: `linear-gradient(270deg, rgb(91 30 30) 0px, rgb(155, 47, 48) 40%)`,
-                              zIndex: 0,
-                              display: "flex",
-                              justifyContent: "space-between",
-                              alignItems: "center",
-                              paddingRight: "12px",
-                          }
-                        : {
-                              zIndex: 2,
-                              display: "flex",
-                              justifyContent: "space-between",
-                              alignItems: "center",
-                              paddingRight: "12px",
-                          }
-                }
                 onClick={(event) => {
                     event.stopPropagation();
                     handleSetSelectedOutcome(selections.team1);
                 }}
-                className="row-17"
+                className={clsx(
+                    classes.leftContainer,
+                    !(selectedOutcome === selections.team1) &&
+                        parentClasses.leftContainerHover
+                )}
             >
                 <p className={classes.textLeft}>{team1}</p>
                 <CoefficientWithUpdate />
             </button>
             <div className="wrapper-21">
                 <button
-                    style={
-                        selectedOutcome === selections.draw
-                            ? {
-                                  //   background: "rgb(91,30,30)",
-                                  background:
-                                      "radial-gradient(circle, rgba(91,30,30,1) 0%, rgba(155,47,48,1) 94%)",
-                                  zIndex: 0,
-                                  display: "flex",
-                                  justifyContent: "center",
-                                  alignItems: "center",
-                              }
-                            : {
-                                  zIndex: 1,
-                                  display: "flex",
-                                  justifyContent: "center",
-                                  alignItems: "center",
-                              }
-                    }
+                    className={clsx(
+                        classes.centerContainer,
+                        !(selectedOutcome === selections.draw) &&
+                            parentClasses.centerContainerHover
+                    )}
                     onClick={(event) => {
                         event.stopPropagation();
                         handleSetSelectedOutcome(selections.draw);
                     }}
-                    className="row-18"
                 >
                     <img
                         className="line-11"
@@ -156,21 +167,15 @@ export default function LiveMatchCoefficient({
                     <CoefficientWithUpdate />
                 </button>
                 <button
-                    style={
-                        selectedOutcome === selections.team2
-                            ? {
-                                background: `linear-gradient(90deg, rgb(91 30 30) 0px, rgb(155, 47, 48) 40%)`,
-                                paddingLeft: "12px",
-                                display: "flex", justifyContent: "space-between", alignItems: "center", paddingRight: "12px"
-                              }
-                            : {paddingLeft: "12px",
-                        display: "flex", justifyContent: "space-between", alignItems: "center", paddingRight: "12px"}
-                    }
+                    className={clsx(
+                        classes.rightContainer,
+                        !(selectedOutcome === selections.team2) &&
+                            parentClasses.rightContainerHover
+                    )}
                     onClick={(event) => {
                         event.stopPropagation();
                         handleSetSelectedOutcome(selections.team2);
                     }}
-                    className="row-19"
                 >
                     <CoefficientWithUpdate />
                     <p className="text-63">{team2}</p>

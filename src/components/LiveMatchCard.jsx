@@ -40,6 +40,9 @@ export default function LiveMatchCard({ matchCard }) {
                         : require("../imagesHold/bg_201.jpg").default
                 }) no-repeat;
           `,
+        leftContainerHover: {},
+        centerContainerHover: {},
+        rightContainerHover: {},
         container: {
             height: "145px",
             left: "0",
@@ -53,7 +56,26 @@ export default function LiveMatchCard({ matchCard }) {
                 background: "linear-gradient(270deg, #5f262d 0, #9b2f30 100%)",
             },
             "&:hover $inlay": {
-                background: `url(${require("../imagesHold/bg_220.jpg").default})`,
+                background: `url(${
+                    require("../imagesHold/bg_220.jpg").default
+                })`,
+            },
+            "&:hover $leftContainerHover": {
+                background: `url(${
+                    require("../imagesHold/bg_227.png").default
+                })`,
+                zIndex: 1,
+            },
+            "&:hover $rightContainerHover": {
+                background: `url(${
+                    require("../imagesHold/bg_250.png").default
+                })`,
+                zIndex: 1,
+            },
+            "&:hover $centerContainerHover": {
+                background: `url(${
+                    require("../imagesHold/bg_228.png").default
+                }) no-repeat center`,
             },
         },
     };
@@ -177,6 +199,7 @@ export default function LiveMatchCard({ matchCard }) {
                     team1WinKof={team1WinKof}
                     team2WinKof={team2WinKof}
                     tieKof={tieKof}
+                    parentClasses={classes}
                 />
             </div>
             <button onClick={handlePlusButton} className="bg-5">

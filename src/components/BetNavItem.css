@@ -2198,6 +2198,7 @@ html {
   text-transform: uppercase;
 }
 .line-12 {
+  z-index: 5;
   left: 81px;
   position: absolute;
   top: 0;
