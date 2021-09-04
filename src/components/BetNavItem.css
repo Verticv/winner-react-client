@@ -631,9 +631,6 @@ html {
 }
 .group-23 {
   height: 21px;
-  left: 42px;
-  position: absolute;
-  top: 0;
   width: 31px;
   -webkit-border-radius: 4.89px/4.85px;
   -moz-border-radius: 4.89px/4.85px;
@@ -641,10 +638,7 @@ html {
   background: #414141;
 }
 .text-20 {
-  left: 8px;
-  position: absolute;
-  top: 2px;
-  font-family: Roboto, sans-serif;
+  white-space: nowrap;
   letter-spacing: 0;
   line-height: 21px;
   text-align: center;

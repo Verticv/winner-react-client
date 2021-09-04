@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import BetNavListItem from "./BetNavListItem";
+import NumberOfLiveMatches from "./NumberOfLiveMatches";
 
 export default function BetNav() {
     const number = 80;
@@ -110,6 +111,7 @@ export default function BetNav() {
                     />
                 );
             })}
+            <NumberOfLiveMatches/>
         </>
     );
 }
