@@ -235,8 +235,6 @@ export default function LiveMatchCard({ matchCard }) {
                         className="p-3"
                         src={require("../imagesHold/p.png").default}
                         alt=""
-                        width="14"
-                        height="17"
                     />
                     <img
                         className="ico-20"
