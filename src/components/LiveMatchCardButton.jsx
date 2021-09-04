@@ -17,10 +17,13 @@ export default function LiveMatchCardButton() {
             backgroundClip: "padding-box",
             zIndex: "1",
             boxShadow: "-5px 1px 16px 0px rgb(8 8 8 / 74%)",
-        },
-        container: {
-            "&:hover": {},
-            "&:hover $inlay": {},
+            "&:hover": {
+                textShadow:
+                    "0.4px 0.4px 9.6px rgb(255 237 154 / 90%), -0.4px -0.4px 9.6px rgb(255 237 154 / 90%), 0.4px -0.4px 9.6px rgb(255 237 154 / 90%), -0.4px 0.4px 9.6px rgb(255 237 154 / 90%)",
+                background: `url(${
+                    require("../imagesHold/bg_222.png").default
+                })`,
+            },
         },
     };
     const { classes } = jss.createStyleSheet(styles).attach();
