@@ -28,38 +28,6 @@ export default function LiveMatchCard({ matchCard }) {
     } = useStore();
     const selected = selectedCardId === matchCard.id;
     const styles = {
-        container: `
-            height: 145px;
-            left: 0;
-            position: absolute;
-            top: ${topOffset};
-            width: 681px;
-            background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iNTAlIiB4Mj0iMTAwJSIgeTI9IjUwJSI+CjxzdG9wIG9mZnNldD0iLTUuMzY1NTQ1JSIgc3RvcC1jb2xvcj0iIzI2MjMzMCIgc3RvcC1vcGFjaXR5PSIxIiAvPgo8c3RvcCBvZmZzZXQ9Ijk0LjYzNDQ1JSIgc3RvcC1jb2xvcj0iIzRkMWUyMiIgc3RvcC1vcGFjaXR5PSIxIiAvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2JnKSIgLz48L3N2Zz4=);
-            background: -moz-linear-gradient(0deg, #262330 -5.365545%, #4d1e22 94.63445%);
-            background: -o-linear-gradient(0deg, #262330 -5.365545%, #4d1e22 94.63445%);
-            background: -webkit-linear-gradient(0deg, #262330 -5.365545%, #4d1e22 94.63445%);
-            background: -webkit-gradient(linear, left top, right top, color-stop(-5.365545%, #262330), color-stop(94.63445%, #4d1e22));
-            background: -webkit-linear-gradient(left, #262330 -5.365545%, #4d1e22 94.63445%);
-            background: -moz-linear-gradient(left, #262330 -5.365545%, #4d1e22 94.63445%);
-            background: -o-linear-gradient(left, #262330 -5.365545%, #4d1e22 94.63445%);
-            background: linear-gradient(90deg, #262330 -5.365545%, #4d1e22 94.63445%);
-    `,
-        containerSelected: `
-            height: 145px;
-            left: 0;
-            position: absolute;
-            top: ${topOffset};
-            width: 681px;
-            background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iNTAlIiB4Mj0iMTAwJSIgeTI9IjUwJSI+CjxzdG9wIG9mZnNldD0iLTUuMzY1NTQ1JSIgc3RvcC1jb2xvcj0iIzI2MjMzMCIgc3RvcC1vcGFjaXR5PSIxIiAvPgo8c3RvcCBvZmZzZXQ9Ijk0LjYzNDQ1JSIgc3RvcC1jb2xvcj0iIzRkMWUyMiIgc3RvcC1vcGFjaXR5PSIxIiAvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2JnKSIgLz48L3N2Zz4=);
-            background: -moz-linear-gradient(0deg, #262330 -5.365545%, #4d1e22 94.63445%);
-            background: -o-linear-gradient(0deg, #262330 -5.365545%, #4d1e22 94.63445%);
-            background: -webkit-linear-gradient(0deg, #262330 -5.365545%, #4d1e22 94.63445%);
-            background: -webkit-gradient(linear, left top, right top, color-stop(-5.365545%, #262330), color-stop(94.63445%, #4d1e22));
-            background: -webkit-linear-gradient(left, #262330 -5.365545%, #4d1e22 94.63445%);
-            background: -moz-linear-gradient(left, #262330 -5.365545%, #4d1e22 94.63445%);
-            background: -o-linear-gradient(left, #262330 -5.365545%, #4d1e22 94.63445%);
-            background: linear-gradient(270deg, #5f262d 0, #9b2f30 100%)
-          `,
         inlay: `
                 height: 105px;
                 left: 0;
@@ -72,6 +40,22 @@ export default function LiveMatchCard({ matchCard }) {
                         : require("../imagesHold/bg_201.jpg").default
                 }) no-repeat;
           `,
+        container: {
+            height: "145px",
+            left: "0",
+            position: "absolute",
+            top: topOffset,
+            width: "681px",
+            background: selected
+                ? "linear-gradient(270deg, #5f262d 0, #9b2f30 100%)"
+                : "linear-gradient(90deg, #262330 -5.365545%, #4d1e22 94.63445%)",
+            "&:hover": {
+                background: "linear-gradient(270deg, #5f262d 0, #9b2f30 100%)",
+            },
+            "&:hover $inlay": {
+                background: `url(${require("../imagesHold/bg_220.jpg").default})`,
+            },
+        },
     };
     const { classes } = jss.createStyleSheet(styles).attach();
     const handlePlusButton = (event) => {
@@ -86,7 +70,7 @@ export default function LiveMatchCard({ matchCard }) {
             role="button"
             onClick={handleContainerClick}
             key={id + "live-match-card"}
-            className={selected ? classes.containerSelected : classes.container}
+            className={classes.container}
         >
             <div className={classes.inlay}>
                 <div className="row-39">
