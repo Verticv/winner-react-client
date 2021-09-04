@@ -2782,9 +2782,6 @@ html {
   width: 104px;
 }
 .text-80 {
-  left: 1px;
-  position: absolute;
-  top: 1px;
   color: #afb3be;
   font-size: 13px;
   letter-spacing: 0;
@@ -2804,7 +2801,6 @@ html {
 .text-81 {
   left: 5px;
   position: absolute;
-  top: 1px;
   font-family: Roboto, sans-serif;
   letter-spacing: 0;
   line-height: 18px;
@@ -2846,9 +2842,6 @@ html {
   background: #225f8b;
 }
 .text-82 {
-  left: 2px;
-  position: absolute;
-  top: 1px;
   font-family: Roboto, sans-serif;
   letter-spacing: 0;
   line-height: 18px;
