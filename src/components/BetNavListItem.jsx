@@ -1,17 +1,20 @@
 import React from "react";
 import jss from "jss";
 import clsx from "clsx";
+import useStore from "store/useStore";
 const selectedBg = require("../imagesHold/bg_114.png").default;
 const bg = require("../imagesHold/NavItemBackground.png").default;
 
 export default function BetNavListItem({
+    id,
     icon,
     text,
     number,
-    active,
     marginLeft,
     handleSetNavElementActive,
 }) {
+    const selectedNav = useStore(state => state.selectedNav)
+    const active = selectedNav === id;
     const styles = {
         holder: `
             left: 50%;
