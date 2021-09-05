@@ -15,20 +15,21 @@ export const createLiveCardSlice = (set, get) => ({
         }
     },
     favoriteMatches: [],
-    addMatchToFavorties: (match) => {
-        set((state) => {
-            return produce(() => {
-                state.favoriteMatches.push(match);
-            });
-        });
+    addMatchToFavorites: (match) => {
+        set(
+            produce((draft) => {
+                draft.favoriteMatches.push(match);
+            })
+        );
     },
-    removeMatchFromFavorites: (matchToRemove) => {
-        set((state) => {
-            return produce(() => {
-                state.favoriteMatches.filter(
-                    (match) => match.id === matchToRemove.id
+    removeMatchFromFavorites: (matchId) => {
+        set(
+            produce((draft) => {
+                const matchIndex = draft.favoriteMatches.findIndex(
+                    (el) => el.id === matchId
                 );
-            });
-        });
+                draft.favoriteMatches.splice(matchIndex, 1);
+            })
+        );
     },
 });

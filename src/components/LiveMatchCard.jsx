@@ -18,8 +18,12 @@ export default function LiveMatchCard({ matchCard }) {
         team2stats,
         team1Goals,
         team2Goals,
-        isFavorite,
     } = matchCard;
+    const favoriteMatches = useStore((state) => state.favoriteMatches);
+    const addMatchToFavorites = useStore((state) => state.addMatchToFavorites);
+    const removeMatchFromFavorites = useStore(
+        (state) => state.removeMatchFromFavorites
+    );
     const selectedCardId = useStore((state) => state.selectedCardId);
     const changeSelectedCardId = useStore(
         (state) => state.changeSelectedCardId
@@ -28,6 +32,9 @@ export default function LiveMatchCard({ matchCard }) {
     const changePlayingMatchId = useStore(
         (state) => state.changePlayingMatchId
     );
+    const isFavorite =
+        favoriteMatches.filter((favoriteMatch) => favoriteMatch.id === id)
+            .length > 0;
     const selected = selectedCardId === matchCard.id;
     const styles = {
         inlay: `
@@ -49,7 +56,7 @@ export default function LiveMatchCard({ matchCard }) {
             height: "145px",
             position: "relative",
             width: "681px",
-            marginBottom: '9px',
+            marginBottom: "9px",
             background: selected
                 ? "linear-gradient(270deg, #5f262d 0, #9b2f30 100%)"
                 : "linear-gradient(90deg, #262330 -5.365545%, #4d1e22 94.63445%)",
@@ -116,19 +123,28 @@ export default function LiveMatchCard({ matchCard }) {
                         {
                             // Star/Favorite Icon
                         }
-                        <img
-                            className="layer-15"
-                            src={
-                                isFavorite
-                                    ? require("../imagesHold/image_63.png")
-                                          .default
-                                    : require("../imagesHold/image_73.png")
-                                          .default
-                            }
-                            alt=""
-                            width="18"
-                            height="16"
-                        />
+                        <button
+                            onClick={(event) => {
+                                event.preventDefault();
+                                event.stopPropagation();
+                                if (isFavorite) removeMatchFromFavorites(id);
+                                else addMatchToFavorites(matchCard);
+                            }}
+                        >
+                            <img
+                                className="layer-15"
+                                src={
+                                    isFavorite
+                                        ? require("../imagesHold/image_63.png")
+                                              .default
+                                        : require("../imagesHold/image_73.png")
+                                              .default
+                                }
+                                alt=""
+                                width="18"
+                                height="16"
+                            />
+                        </button>
                         <div className="team-6">
                             <img
                                 className="layer-16"

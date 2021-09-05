@@ -24,7 +24,6 @@ export default function LiveMatchCards() {
             team2stats: Math.floor(getRandomNumberInInterval(1000, 5000)),
             team1Goals: Math.floor(Math.random() * 5),
             team2Goals: Math.floor(Math.random() * 3),
-            isFavorite: Math.random() > 0.5,
         },
         {
             id: 1,
@@ -39,7 +38,6 @@ export default function LiveMatchCards() {
             team2stats: Math.floor(getRandomNumberInInterval(1000, 5000)),
             team1Goals: Math.floor(Math.random() * 5),
             team2Goals: Math.floor(Math.random() * 3),
-            isFavorite: Math.random() > 0.5,
         },
         {
             id: 2,
@@ -54,7 +52,6 @@ export default function LiveMatchCards() {
             team2stats: Math.floor(getRandomNumberInInterval(1000, 5000)),
             team1Goals: Math.floor(Math.random() * 5),
             team2Goals: Math.floor(Math.random() * 3),
-            isFavorite: Math.random() > 0.5,
         },
         {
             id: 3,
@@ -69,7 +66,6 @@ export default function LiveMatchCards() {
             team2stats: Math.floor(getRandomNumberInInterval(1000, 5000)),
             team1Goals: Math.floor(Math.random() * 5),
             team2Goals: Math.floor(Math.random() * 3),
-            isFavorite: Math.random() > 0.5,
         },
         {
             id: 4,
@@ -84,7 +80,6 @@ export default function LiveMatchCards() {
             team2stats: Math.floor(getRandomNumberInInterval(1000, 5000)),
             team1Goals: Math.floor(Math.random() * 5),
             team2Goals: Math.floor(Math.random() * 3),
-            isFavorite: Math.random() > 0.5,
         },
     ];
     return (
