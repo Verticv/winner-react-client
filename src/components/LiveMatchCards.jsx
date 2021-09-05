@@ -1,12 +1,15 @@
+import { navOptions } from "helpers/constants";
 import getRandomNumberInInterval from "helpers/getRandomNumberInInterval";
 import React from "react";
+import useStore from "store/useStore";
 import LiveMatchCard from "./LiveMatchCard";
 
 export default function LiveMatchCards() {
     /**
      * Returns a random number between min (inclusive) and max (exclusive)
      */
-
+    const favoriteMatches = useStore((state) => state.favoriteMatches);
+    const selectedNav = useStore((state) => state.selectedNav);
     const matchCards = [
         {
             id: 0,
@@ -86,11 +89,23 @@ export default function LiveMatchCards() {
     ];
     return (
         <>
-            {matchCards.map((matchCard) => {
-                return (
-                    <LiveMatchCard key={matchCard.id} matchCard={matchCard} />
-                );
-            })}
+            {selectedNav === navOptions.favorites
+                ? favoriteMatches.map((matchCard) => {
+                      return (
+                          <LiveMatchCard
+                              key={matchCard.id}
+                              matchCard={matchCard}
+                          />
+                      );
+                  })
+                : matchCards.map((matchCard) => {
+                      return (
+                          <LiveMatchCard
+                              key={matchCard.id}
+                              matchCard={matchCard}
+                          />
+                      );
+                  })}
         </>
     );
 }
