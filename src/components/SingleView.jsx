@@ -20,7 +20,7 @@ export default function SingleView() {
             >
                 <LiveMatchCards />
                 <LiveUpcomingMatchesCount />
-                {/* <UpcomingMatches /> */}
+                <UpcomingMatches />
             </div>
             <div className="group-46">
                 <div className="row">

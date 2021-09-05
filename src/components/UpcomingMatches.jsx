@@ -96,21 +96,11 @@ export default function UpcomingMatches() {
             },
         ];
     return (
-        <div
-            className={'hide-scrollbar-bet-page'}
-            style={{
-                display: "flex",
-                position: "absolute",
-                height: "285px",
-                overflowY: 'scroll',
-                bottom: 0,
-                left: 0,
-                flexDirection: "column",
-            }}
+        <
         >
             {upcomingMatchCards.map(upcomingMatchCard => {
                 return <UpcomingMatchCard key={upcomingMatchCard.id + "-upcoming-matches"} upcomingMatchCard={upcomingMatchCard} />;
             })}
-        </div>
+        </>
     );
 }
