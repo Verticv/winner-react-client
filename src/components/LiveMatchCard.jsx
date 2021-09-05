@@ -21,12 +21,14 @@ export default function LiveMatchCard({ matchCard }) {
         isFavorite,
         topOffset,
     } = matchCard;
-    const {
-        selectedCardId,
-        changeSelectedCardId,
-        playingMatchId,
-        changePlayingMatchId,
-    } = useStore();
+    const selectedCardId = useStore((state) => state.selectedCardId);
+    const changeSelectedCardId = useStore(
+        (state) => state.changeSelectedCardId
+    );
+    const playingMatchId = useStore((state) => state.playingMatchId);
+    const changePlayingMatchId = useStore(
+        (state) => state.changePlayingMatchId
+    );
     const selected = selectedCardId === matchCard.id;
     const styles = {
         inlay: `
