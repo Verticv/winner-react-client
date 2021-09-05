@@ -2785,6 +2785,7 @@ html {
   position: absolute;
   top: 10px;
   width: 104px;
+  line-height: 16px;
 }
 .text-80 {
   color: #afb3be;
@@ -2834,6 +2835,7 @@ html {
   position: absolute;
   top: 10px;
   width: 88px;
+  line-height: 16px;
 }
 .bg-holder-32 {
   height: 18px;
