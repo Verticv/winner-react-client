@@ -6,7 +6,18 @@ import UpcomingMatches from "./UpcomingMatches";
 
 export default function SingleView() {
     return (
-        <div className="row-42">
+        <div
+            className="hide-scrollbar-bet-page"
+            style={{
+                height: "954px",
+                left: "0",
+                position: "absolute",
+                top: "126px",
+                width: "1550px",
+                overflowY: "scroll",
+                overflowX: "hidden",
+            }}
+        >
             <div
                 style={{
                     display: "flex",

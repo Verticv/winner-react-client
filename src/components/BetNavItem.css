@@ -43,8 +43,13 @@ footer, header, menu, nav, section, time {
                             'embedded-opentype', and 'svg' */
 }
 
+/* Chrome */
 .hide-scrollbar-bet-page::-webkit-scrollbar {
 display: none;
+}
+/* Firebox */
+.hide-scrollbar-bet-page {
+  scrollbar-width: none;
 }
 
 .global_container_ {
