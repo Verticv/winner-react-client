@@ -8,7 +8,6 @@ export default function SingleView() {
     return (
         <div className="row-42">
             <div
-                className="group-26"
                 style={{
                     display: "flex",
                     flexDirection: "column",
@@ -20,8 +19,8 @@ export default function SingleView() {
                 }}
             >
                 <LiveMatchCards />
-                {/* <LiveUpcomingMatchesCount/>
-                <UpcomingMatches /> */}
+                <LiveUpcomingMatchesCount />
+                {/* <UpcomingMatches /> */}
             </div>
             <div className="group-46">
                 <div className="row">

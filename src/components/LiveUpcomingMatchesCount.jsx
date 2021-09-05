@@ -2,7 +2,13 @@ import React from 'react'
 
 export default function LiveUpcomingMatchesCount() {
     return (
-        <div className="group-37">
+        <div
+            style={{
+                height: "40px",
+                width: "681px",
+                position: "relative",
+            }}
+        >
             <div className="bg-holder-30">
                 <div className="group-38">
                     <p className="text-80">진행중인 경기</p>
