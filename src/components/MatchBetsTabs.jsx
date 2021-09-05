@@ -19,16 +19,10 @@ export default function MatchBetsTabs({ handleChangeSelectedTab }) {
     const tabs = [
         { id: 0, name: "전체", selected: true, betIdentifier: "all" },
         {
-            id: 1,
-            name: "팀골",
+            id: 4,
+            name: "승무패핸디캡",
             selected: false,
-            betIdentifier: betTypes.teamGoal,
-        },
-        {
-            id: 2,
-            name: "핸디캡",
-            selected: false,
-            betIdentifier: betTypes.handicap,
+            betIdentifier: betTypes.winLoseHandicap,
         },
         {
             id: 3,
@@ -37,10 +31,16 @@ export default function MatchBetsTabs({ handleChangeSelectedTab }) {
             betIdentifier: betTypes.overUnder,
         },
         {
-            id: 4,
-            name: "승무패핸디캡",
+            id: 2,
+            name: "핸디캡",
             selected: false,
-            betIdentifier: betTypes.winLoseHandicap,
+            betIdentifier: betTypes.handicap,
+        },
+        {
+            id: 1,
+            name: "팀골",
+            selected: false,
+            betIdentifier: betTypes.teamGoal,
         },
     ];
 
