@@ -1,8 +1,12 @@
+import { navOptions } from "helpers/constants";
 import getRandomNumberInInterval from "helpers/getRandomNumberInInterval";
 import React from "react";
+import useStore from "store/useStore";
 import UpcomingMatchCard from "./UpcomingMatchCard";
 
 export default function UpcomingMatches() {
+        const favoriteMatches = useStore((state) => state.favoriteMatches);
+        const selectedNav = useStore((state) => state.selectedNav);
         const upcomingMatchCards = [
             {
                 id: 10,
@@ -96,11 +100,24 @@ export default function UpcomingMatches() {
             },
         ];
     return (
-        <
-        >
-            {upcomingMatchCards.map(upcomingMatchCard => {
-                return <UpcomingMatchCard key={upcomingMatchCard.id + "-upcoming-matches"} upcomingMatchCard={upcomingMatchCard} />;
-            })}
+        <>
+            {selectedNav === navOptions.favorites
+                ? favoriteMatches.map((upcomingMatchCard) => {
+                      return (
+                          <UpcomingMatchCard
+                              key={upcomingMatchCard.id + "-upcoming-matches"}
+                              upcomingMatchCard={upcomingMatchCard}
+                          />
+                      );
+                  })
+                : upcomingMatchCards.map((upcomingMatchCard) => {
+                      return (
+                          <UpcomingMatchCard
+                              key={upcomingMatchCard.id + "-upcoming-matches"}
+                              upcomingMatchCard={upcomingMatchCard}
+                          />
+                      );
+                  })}
         </>
     );
 }
