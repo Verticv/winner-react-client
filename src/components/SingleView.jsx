@@ -1,16 +1,27 @@
-import React from 'react'
-import LiveMatchCards from './LiveMatchCards';
-import LiveUpcomingMatchesCount from './LiveUpcomingMatchesCount';
-import MatchBets from './MatchBets';
-import UpcomingMatches from './UpcomingMatches';
+import React from "react";
+import LiveMatchCards from "./LiveMatchCards";
+import LiveUpcomingMatchesCount from "./LiveUpcomingMatchesCount";
+import MatchBets from "./MatchBets";
+import UpcomingMatches from "./UpcomingMatches";
 
 export default function SingleView() {
     return (
         <div className="row-42">
-            <div className="group-26">
+            <div
+                className="group-26"
+                style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "flex-start",
+                    left: "0",
+                    position: "absolute",
+                    top: "0",
+                    width: "681px",
+                }}
+            >
                 <LiveMatchCards />
-                <LiveUpcomingMatchesCount/>
-                <UpcomingMatches />
+                {/* <LiveUpcomingMatchesCount/>
+                <UpcomingMatches /> */}
             </div>
             <div className="group-46">
                 <div className="row">

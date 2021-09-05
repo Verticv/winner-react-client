@@ -48,10 +48,9 @@ export default function LiveMatchCard({ matchCard }) {
         rightContainerHover: {},
         container: {
             height: "145px",
-            left: "0",
-            position: "absolute",
-            top: topOffset,
+            position: "relative",
             width: "681px",
+            marginBottom: '9px',
             background: selected
                 ? "linear-gradient(270deg, #5f262d 0, #9b2f30 100%)"
                 : "linear-gradient(90deg, #262330 -5.365545%, #4d1e22 94.63445%)",
