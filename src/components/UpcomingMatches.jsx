@@ -1,8 +1,12 @@
+import { matchTypes, navOptions } from "helpers/constants";
 import getRandomNumberInInterval from "helpers/getRandomNumberInInterval";
 import React from "react";
+import useStore from "store/useStore";
 import UpcomingMatchCard from "./UpcomingMatchCard";
 
 export default function UpcomingMatches() {
+        const favoriteMatches = useStore((state) => state.favoriteMatches);
+        const selectedNav = useStore((state) => state.selectedNav);
         const upcomingMatchCards = [
             {
                 id: 10,
@@ -17,7 +21,7 @@ export default function UpcomingMatches() {
                 team2stats: Math.floor(getRandomNumberInInterval(1000, 5000)),
                 team1Goals: Math.floor(Math.random() * 5),
                 team2Goals: Math.floor(Math.random() * 3),
-                isFavorite: Math.random() > 0.5,
+                type: matchTypes.upcoming
             },
             {
                 id: 11,
@@ -32,7 +36,7 @@ export default function UpcomingMatches() {
                 team2stats: Math.floor(getRandomNumberInInterval(1000, 5000)),
                 team1Goals: Math.floor(Math.random() * 5),
                 team2Goals: Math.floor(Math.random() * 3),
-                isFavorite: Math.random() > 0.5,
+                type: matchTypes.upcoming
             },
             {
                 id: 12,
@@ -47,7 +51,7 @@ export default function UpcomingMatches() {
                 team2stats: Math.floor(getRandomNumberInInterval(1000, 5000)),
                 team1Goals: Math.floor(Math.random() * 5),
                 team2Goals: Math.floor(Math.random() * 3),
-                isFavorite: Math.random() > 0.5,
+                type: matchTypes.upcoming
             },
             {
                 id: 13,
@@ -62,7 +66,7 @@ export default function UpcomingMatches() {
                 team2stats: Math.floor(getRandomNumberInInterval(1000, 5000)),
                 team1Goals: Math.floor(Math.random() * 5),
                 team2Goals: Math.floor(Math.random() * 3),
-                isFavorite: Math.random() > 0.5,
+                type: matchTypes.upcoming
             },
             {
                 id: 14,
@@ -77,7 +81,7 @@ export default function UpcomingMatches() {
                 team2stats: Math.floor(getRandomNumberInInterval(1000, 5000)),
                 team1Goals: Math.floor(Math.random() * 5),
                 team2Goals: Math.floor(Math.random() * 3),
-                isFavorite: Math.random() > 0.5,
+                type: matchTypes.upcoming
             },
             {
                 id: 15,
@@ -92,25 +96,28 @@ export default function UpcomingMatches() {
                 team2stats: Math.floor(getRandomNumberInInterval(1000, 5000)),
                 team1Goals: Math.floor(Math.random() * 5),
                 team2Goals: Math.floor(Math.random() * 3),
-                isFavorite: Math.random() > 0.5,
+                type: matchTypes.upcoming
             },
         ];
     return (
-        <div
-            className={'hide-scrollbar-bet-page'}
-            style={{
-                display: "flex",
-                position: "absolute",
-                height: "285px",
-                overflowY: 'scroll',
-                bottom: 0,
-                left: 0,
-                flexDirection: "column",
-            }}
-        >
-            {upcomingMatchCards.map(upcomingMatchCard => {
-                return <UpcomingMatchCard key={upcomingMatchCard.id + "-upcoming-matches"} upcomingMatchCard={upcomingMatchCard} />;
-            })}
-        </div>
+        <>
+            {selectedNav === navOptions.favorites
+                ? favoriteMatches.filter(favoriteMatch => favoriteMatch.type === matchTypes.upcoming).map((upcomingMatchCard) => {
+                      return (
+                          <UpcomingMatchCard
+                              key={upcomingMatchCard.id + "-upcoming-matches"}
+                              upcomingMatchCard={upcomingMatchCard}
+                          />
+                      );
+                  })
+                : upcomingMatchCards.map((upcomingMatchCard) => {
+                      return (
+                          <UpcomingMatchCard
+                              key={upcomingMatchCard.id + "-upcoming-matches"}
+                              upcomingMatchCard={upcomingMatchCard}
+                          />
+                      );
+                  })}
+        </>
     );
 }

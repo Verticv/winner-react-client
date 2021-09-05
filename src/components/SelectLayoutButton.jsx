@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import jss from "jss";
 import React from "react";
 const bg = require("../imagesHold/layout_button_background.png").default;
@@ -23,11 +24,42 @@ export default function SelectLayoutButton({
                 -webkit-box-shadow: 0 3px 0 0 #351a27;
                 -moz-box-shadow: 0 3px 0 0 #351a27;
                 box-shadow: 0 3px 0 0 #351a27; /*drop shadow*/
-           `,
+        `,
+        text: {
+            left: "4px",
+            position: "absolute",
+            top: "23px",
+            opacity: active ? "1" : "0.4",
+            color: active ? "#000000" : "#fefefe",
+            textAlign: "center",
+            textTransform: "uppercase",
+        },
+        icon: {
+            position: "absolute",
+            right: "16px",
+            top: "0",
+            filter: active ? "brightness(0%)" : "none",
+        },
+        hoverBackground: {
+            "&:hover": {
+                background: `url(${activeBg}) no-repeat`,
+            },
+            "&:hover $icon": {
+                filter: "brightness(0%)",
+            },
+            "&:hover $text": {
+                borderRadius: "4px",
+                color: "#000000",
+                opacity: "1"
+            },
+        },
     };
     const { classes } = jss.createStyleSheet(styles).attach();
     return (
-        <button className={classes.background} onClick={handleSetLayoutActive}>
+        <button
+            className={clsx(classes.background, classes.hoverBackground)}
+            onClick={handleSetLayoutActive}
+        >
             <div
                 style={{
                     height: "38px",
@@ -38,30 +70,13 @@ export default function SelectLayoutButton({
                 }}
             >
                 <img
-                    style={{
-                        position: "absolute",
-                        right: "16px",
-                        top: "0",
-                        filter: active ? "brightness(0%)" : "none",
-                    }}
+                    className={classes.icon}
                     src={image}
                     alt=""
                     width="16"
                     height="16"
                 />
-                <p
-                    style={{
-                        left: "4px",
-                        position: "absolute",
-                        top: "23px",
-                        opacity: active ? "1" : "0.4",
-                        color: active ? "#000000" : "#fefefe",
-                        textAlign: "center",
-                        textTransform: "uppercase",
-                    }}
-                >
-                    {text}
-                </p>
+                <p className={classes.text}>{text}</p>
             </div>
         </button>
     );
