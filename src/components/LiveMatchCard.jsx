@@ -19,7 +19,6 @@ export default function LiveMatchCard({ matchCard }) {
         team1Goals,
         team2Goals,
         isFavorite,
-        topOffset,
     } = matchCard;
     const selectedCardId = useStore((state) => state.selectedCardId);
     const changeSelectedCardId = useStore(

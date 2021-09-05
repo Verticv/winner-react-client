@@ -1,6 +1,6 @@
-import getRandomNumberInInterval from 'helpers/getRandomNumberInInterval';
-import React from 'react'
-import LiveMatchCard from './LiveMatchCard';
+import getRandomNumberInInterval from "helpers/getRandomNumberInInterval";
+import React from "react";
+import LiveMatchCard from "./LiveMatchCard";
 
 export default function LiveMatchCards() {
     /**
@@ -22,7 +22,6 @@ export default function LiveMatchCards() {
             team1Goals: Math.floor(Math.random() * 5),
             team2Goals: Math.floor(Math.random() * 3),
             isFavorite: Math.random() > 0.5,
-            topOffset: "0",
         },
         {
             id: 1,
@@ -38,7 +37,6 @@ export default function LiveMatchCards() {
             team1Goals: Math.floor(Math.random() * 5),
             team2Goals: Math.floor(Math.random() * 3),
             isFavorite: Math.random() > 0.5,
-            topOffset: "155px",
         },
         {
             id: 2,
@@ -54,7 +52,6 @@ export default function LiveMatchCards() {
             team1Goals: Math.floor(Math.random() * 5),
             team2Goals: Math.floor(Math.random() * 3),
             isFavorite: Math.random() > 0.5,
-            topOffset: "310px",
         },
         {
             id: 3,
@@ -70,7 +67,6 @@ export default function LiveMatchCards() {
             team1Goals: Math.floor(Math.random() * 5),
             team2Goals: Math.floor(Math.random() * 3),
             isFavorite: Math.random() > 0.5,
-            topOffset: "465px",
         },
         {
             id: 4,
@@ -86,87 +82,6 @@ export default function LiveMatchCards() {
             team1Goals: Math.floor(Math.random() * 5),
             team2Goals: Math.floor(Math.random() * 3),
             isFavorite: Math.random() > 0.5,
-            topOffset: "465px",
-        },
-        {
-            id: 6,
-            league: "라리가",
-            team1: "FC바로셀로나",
-            team2: "레알마드리드",
-            currentTime: "후반전 35",
-            tieKof: (Math.random() * 5).toFixed(2),
-            team1WinKof: (Math.random() * 5).toFixed(2),
-            team2WinKof: (Math.random() * 5).toFixed(2),
-            team1stats: Math.floor(getRandomNumberInInterval(1000, 5000)),
-            team2stats: Math.floor(getRandomNumberInInterval(1000, 5000)),
-            team1Goals: Math.floor(Math.random() * 5),
-            team2Goals: Math.floor(Math.random() * 3),
-            isFavorite: Math.random() > 0.5,
-            topOffset: "465px",
-        },
-        {
-            id: 6,
-            league: "라리가",
-            team1: "FC바로셀로나",
-            team2: "레알마드리드",
-            currentTime: "후반전 35",
-            tieKof: (Math.random() * 5).toFixed(2),
-            team1WinKof: (Math.random() * 5).toFixed(2),
-            team2WinKof: (Math.random() * 5).toFixed(2),
-            team1stats: Math.floor(getRandomNumberInInterval(1000, 5000)),
-            team2stats: Math.floor(getRandomNumberInInterval(1000, 5000)),
-            team1Goals: Math.floor(Math.random() * 5),
-            team2Goals: Math.floor(Math.random() * 3),
-            isFavorite: Math.random() > 0.5,
-            topOffset: "465px",
-        },
-        {
-            id: 6,
-            league: "라리가",
-            team1: "FC바로셀로나",
-            team2: "레알마드리드",
-            currentTime: "후반전 35",
-            tieKof: (Math.random() * 5).toFixed(2),
-            team1WinKof: (Math.random() * 5).toFixed(2),
-            team2WinKof: (Math.random() * 5).toFixed(2),
-            team1stats: Math.floor(getRandomNumberInInterval(1000, 5000)),
-            team2stats: Math.floor(getRandomNumberInInterval(1000, 5000)),
-            team1Goals: Math.floor(Math.random() * 5),
-            team2Goals: Math.floor(Math.random() * 3),
-            isFavorite: Math.random() > 0.5,
-            topOffset: "465px",
-        },
-        {
-            id: 6,
-            league: "라리가",
-            team1: "FC바로셀로나",
-            team2: "레알마드리드",
-            currentTime: "후반전 35",
-            tieKof: (Math.random() * 5).toFixed(2),
-            team1WinKof: (Math.random() * 5).toFixed(2),
-            team2WinKof: (Math.random() * 5).toFixed(2),
-            team1stats: Math.floor(getRandomNumberInInterval(1000, 5000)),
-            team2stats: Math.floor(getRandomNumberInInterval(1000, 5000)),
-            team1Goals: Math.floor(Math.random() * 5),
-            team2Goals: Math.floor(Math.random() * 3),
-            isFavorite: Math.random() > 0.5,
-            topOffset: "465px",
-        },
-        {
-            id: 6,
-            league: "라리가",
-            team1: "FC바로셀로나",
-            team2: "레알마드리드",
-            currentTime: "후반전 35",
-            tieKof: (Math.random() * 5).toFixed(2),
-            team1WinKof: (Math.random() * 5).toFixed(2),
-            team2WinKof: (Math.random() * 5).toFixed(2),
-            team1stats: Math.floor(getRandomNumberInInterval(1000, 5000)),
-            team2stats: Math.floor(getRandomNumberInInterval(1000, 5000)),
-            team1Goals: Math.floor(Math.random() * 5),
-            team2Goals: Math.floor(Math.random() * 3),
-            isFavorite: Math.random() > 0.5,
-            topOffset: "465px",
         },
     ];
     return (
