@@ -1,4 +1,4 @@
-import { navOptions } from "helpers/constants";
+import { matchTypes, navOptions } from "helpers/constants";
 import getRandomNumberInInterval from "helpers/getRandomNumberInInterval";
 import React from "react";
 import useStore from "store/useStore";
@@ -21,7 +21,7 @@ export default function UpcomingMatches() {
                 team2stats: Math.floor(getRandomNumberInInterval(1000, 5000)),
                 team1Goals: Math.floor(Math.random() * 5),
                 team2Goals: Math.floor(Math.random() * 3),
-                isFavorite: Math.random() > 0.5,
+                type: matchTypes.upcoming
             },
             {
                 id: 11,
@@ -36,7 +36,7 @@ export default function UpcomingMatches() {
                 team2stats: Math.floor(getRandomNumberInInterval(1000, 5000)),
                 team1Goals: Math.floor(Math.random() * 5),
                 team2Goals: Math.floor(Math.random() * 3),
-                isFavorite: Math.random() > 0.5,
+                type: matchTypes.upcoming
             },
             {
                 id: 12,
@@ -51,7 +51,7 @@ export default function UpcomingMatches() {
                 team2stats: Math.floor(getRandomNumberInInterval(1000, 5000)),
                 team1Goals: Math.floor(Math.random() * 5),
                 team2Goals: Math.floor(Math.random() * 3),
-                isFavorite: Math.random() > 0.5,
+                type: matchTypes.upcoming
             },
             {
                 id: 13,
@@ -66,7 +66,7 @@ export default function UpcomingMatches() {
                 team2stats: Math.floor(getRandomNumberInInterval(1000, 5000)),
                 team1Goals: Math.floor(Math.random() * 5),
                 team2Goals: Math.floor(Math.random() * 3),
-                isFavorite: Math.random() > 0.5,
+                type: matchTypes.upcoming
             },
             {
                 id: 14,
@@ -81,7 +81,7 @@ export default function UpcomingMatches() {
                 team2stats: Math.floor(getRandomNumberInInterval(1000, 5000)),
                 team1Goals: Math.floor(Math.random() * 5),
                 team2Goals: Math.floor(Math.random() * 3),
-                isFavorite: Math.random() > 0.5,
+                type: matchTypes.upcoming
             },
             {
                 id: 15,
@@ -96,13 +96,13 @@ export default function UpcomingMatches() {
                 team2stats: Math.floor(getRandomNumberInInterval(1000, 5000)),
                 team1Goals: Math.floor(Math.random() * 5),
                 team2Goals: Math.floor(Math.random() * 3),
-                isFavorite: Math.random() > 0.5,
+                type: matchTypes.upcoming
             },
         ];
     return (
         <>
             {selectedNav === navOptions.favorites
-                ? favoriteMatches.map((upcomingMatchCard) => {
+                ? favoriteMatches.filter(favoriteMatch => favoriteMatch.type === matchTypes.upcoming).map((upcomingMatchCard) => {
                       return (
                           <UpcomingMatchCard
                               key={upcomingMatchCard.id + "-upcoming-matches"}

@@ -1,6 +1,7 @@
 import jss from "jss";
 import React from "react";
 import useStore from "store/useStore";
+import MatchFavoriteButton from "./MatchFavoriteButton";
 
 export default function UpcomingMatchCard({ upcomingMatchCard }) {
     const changeSelectedCardId = useStore(
@@ -48,13 +49,7 @@ export default function UpcomingMatchCard({ upcomingMatchCard }) {
             <div className="row-29">
                 <div className="col-33">
                     <div className="row-43">
-                        <img
-                            className="layer-26"
-                            src={require("../imagesHold/image_73.png").default}
-                            alt=""
-                            width="18"
-                            height="16"
-                        />
+                        <MatchFavoriteButton matchCard={upcomingMatchCard} />
                         <div className="team-9">
                             <img
                                 className="layer-27"

@@ -25,3 +25,5 @@ export const navOptions = {
     handball: 8,
     ufc: 9,
 };
+
+export const matchTypes = {live: 'live', upcoming:'upcoming'}
