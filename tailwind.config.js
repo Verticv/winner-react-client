@@ -321,7 +321,8 @@ module.exports = {
           r003d70: '#003d70',
           r0e508d: '#0e508d',
           r286bb7: '#286bb7',
-          r4985d8: '#4985d8'
+          r4985d8: '#4985d8',
+          r0e84ed: '#0e84ed'
         },
         gray: {
           text: '#393e41',
@@ -401,7 +402,10 @@ module.exports = {
           e8c2b3: '#e8c2b3',
           ffe9de: '#ffe9de',
           ee3c62: '#ee3c62',
-          ac6d6d: '#ac6d6d'
+          ac6d6d: '#ac6d6d',
+          df304f: '#df304f',
+          f8515d: '#f8515d',
+          e2314f: '#e2314f'
         },
         orange: {
           ff7e00: '#ff7e00',

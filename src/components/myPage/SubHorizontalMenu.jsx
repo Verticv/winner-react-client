@@ -21,7 +21,7 @@ const SubHorizontalMenu = ({
                     className={`${
                         isState === item.id 
                         ? "bg-gradient-to-b from-blue-b9dcff to-blue-d2f6ff"
-                        : "bg-gradient-to-b from-blue-c4d6e6 via-white "
+                        : "bg-gradient-to-b from-blue-c4d6e6 via-gray-f5feff to-white "
                     } mt-px h-79px w-full rounded-b-md rounded-t-lg flex flex-col items-center justify-end border-b border-l border-r border-blue-d6dfe8`}
                 >
                     <img className="mt-8px ml-2px object-none h-40px" src={item.icon} alt="" />
