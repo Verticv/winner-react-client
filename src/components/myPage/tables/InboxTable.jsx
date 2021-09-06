@@ -16,7 +16,7 @@ const InboxTable = ({
           index === position ? !item : item
         );
         setCheckedState(updatedCheckedState);
-      }; 
+    }; 
 
     function InboxList({ items }) {
         return items.map(item => (

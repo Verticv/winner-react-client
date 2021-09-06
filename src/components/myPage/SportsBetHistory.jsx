@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './RadioButton.css'
 import FootballIcon from '../../images/myPage/betHistory/football.png'
 import USFlagIcon from '../../images/myPage/betHistory/us_flag.png'
@@ -13,10 +13,17 @@ const SportsBetHistory = ({
     ratio = "4.34",
     predictedPrice = "21,715원",
     winAmount = "0",
-    ticketNumber = "1891241599"
+    ticketNumber = "1891241599",
+    checkedState,
+    setCheckedState
 }) => {
 
-    const [isChecked, setChecked] = useState(false)
+    const handleOnChange = (position) => {
+        const updatedCheckedState = checkedState.map((item, index) =>
+          index === position ? !item : item
+        );
+        setCheckedState(updatedCheckedState);
+    }; 
 
     const CardContent = ({
         bet, 
@@ -266,8 +273,8 @@ const SportsBetHistory = ({
                                 className="radio" 
                                 type="checkbox" 
                                 name="radio" 
-                                checked={isChecked}
-                                onClick={() => setChecked(!isChecked)}
+                                checked={checkedState[type]}
+                                onChange={() => handleOnChange(type)}
                             />
                         </div>
                         <div className="w-131px h-full flex items-center justify-center border-l border-gray-fafafa">{time}</div>
