@@ -58,11 +58,13 @@ const InboxTable = ({
                         )}
                     </div>
 
-                    <div className={`${item.isRead === true ? "text-gray-r7b7b7b" : "text-gray-r454545"} w-158px flex font-spoqaMedium justify-center`}>{item.time}</div>
-                    
-                    <div className={`${checkedState[item.id] ? "bg-gray-r454545" : "bg-gray-a2a2a2" } w-49px h-29px flex justify-center rounded-full text-white font-spoqaMedium items-center`}>
-                        삭제
+                    <div className={`${item.isRead === true ? "text-gray-r7b7b7b" : "text-gray-r454545"} w-158px flex font-spoqaMedium justify-center font-roboto text-center`}>{item.time}</div>
+                    <div className="w-70px flex items-center justify-center">
+                        <div className={`${checkedState[item.id] ? "bg-gray-r454545" : "bg-gray-a2a2a2" } w-49px h-29px flex justify-center rounded-full text-white font-spoqaMedium items-center pt-2px`}>
+                            삭제
+                        </div>
                     </div>
+                    
                 </div>
             </button>
         ));
