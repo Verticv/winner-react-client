@@ -3,14 +3,14 @@ import React from 'react'
 const BetHistoryTable = () => {
     return (
         <table className="shadow-subNavbar rounded-3xl overflow-hidden">
-            <thead className="bg-gray-fafafa rounded-3xl font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd">
+            <thead className="bg-gray-fafafa rounded-3xl font-spoqaBold text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd">
                 <tr>
-                    <th className="w-235px">베팅시간</th>
-                    <th className="w-170px">게임종류</th>
-                    <th className="w-170px">티켓번호</th>
-                    <th className="w-170px">베팅금액</th>
-                    <th className="w-170px">적중/손실금액</th>
-                    <th className="w-126px">상태</th>
+                    <td className="w-235px text-center">베팅시간</td>
+                    <td className="w-170px text-center">게임종류</td>
+                    <td className="w-170px text-center">티켓번호</td>
+                    <td className="w-170px text-center">베팅금액</td>
+                    <td className="w-170px text-center">적중/손실금액</td>
+                    <td className="w-126px text-center">상태</td>
                 </tr>
             </thead>
             <tbody className="w-full text-585858 text-14px tracking-tight font-spoqaMedium">

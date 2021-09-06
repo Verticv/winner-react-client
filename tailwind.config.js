@@ -322,7 +322,8 @@ module.exports = {
           r0e508d: '#0e508d',
           r286bb7: '#286bb7',
           r4985d8: '#4985d8',
-          r0e84ed: '#0e84ed'
+          r0e84ed: '#0e84ed',
+          r3a93dd: '#3a93dd'
         },
         gray: {
           text: '#393e41',

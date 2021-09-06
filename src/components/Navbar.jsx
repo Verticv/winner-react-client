@@ -170,7 +170,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
                 )}
 
             </header>
-            <NavbarHover selection={hoveredTab} setHoveredTab={setHoveredTab} setSelectedTab={setSelectedTab}/>
+            <NavbarHover selection={hoveredTab} setHoveredTab={setHoveredTab}/>
         </div>
     )
 }

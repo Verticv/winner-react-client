@@ -13,12 +13,12 @@ const NavbarHover = ({selection, setHoveredTab}) => {
             // className={`${selection && "w-full"} ${selection === 0 ? "h-340px" : "h-244px"}`} 
             onMouseLeave={() => setHoveredTab(false)}
         >
-            <LiveCasinoHover setHoveredTab={setHoveredTab} selection={selection}/>
-            <SlotGameHover setHoveredTab={setHoveredTab} selection={selection}/>
-            <SportsHover setHoveredTab={setHoveredTab} selection={selection}/>
-            <EsportsHover setHoveredTab={setHoveredTab} selection={selection}/>
-            <MinigamesHover setHoveredTab={setHoveredTab} selection={selection}/>
-            <ARHover setHoveredTab={setHoveredTab} selection={selection}/>
+            <LiveCasinoHover selection={selection}/>
+            <SlotGameHover selection={selection}/>
+            <SportsHover selection={selection}/>
+            <EsportsHover selection={selection}/>
+            <MinigamesHover selection={selection}/>
+            <ARHover selection={selection}/>
         </div>
     )
 }

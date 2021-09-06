@@ -1,50 +1,60 @@
 import React from 'react'
 import '../RadioButton.css'
 
-const ExchangeHistoryTable = () => {
+const ExchangeHistoryTable = ({
+    checkedState,
+    setCheckedState
+}) => {
 
-    const RadioButton = (
+    const RadioButton =({id}) => (
         <input 
             className="radio" 
             type="checkbox" 
             name="radio" 
-            // checked={isChecked === row}
-            // onClick={() => setChecked(row)}
+            checked={checkedState[id]}
+            onChange={() => handleOnChange(id)}
         />
     )
 
+    const handleOnChange = (position) => {
+        const updatedCheckedState = checkedState.map((item, index) =>
+          index === position ? !item : item
+        );
+        setCheckedState(updatedCheckedState);
+    }; 
+
     return (
         <table className="shadow-subNavbar rounded-3xl overflow-hidden">
-            <thead className="bg-gray-fafafa rounded-3xl font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd">
+            <thead className="bg-gray-fafafa rounded-3xl font-spoqaBold text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd">
                 <tr>
-                    <th className="w-132px">선택</th>
-                    <th className="w-242px">신청일시</th>
-                    <th className="w-268px">환전금액</th>
-                    <th className="w-170px">처리일시</th>
-                    <th className="w-170px">처리상태</th>
+                    <td className="w-132px text-center pl-3px">선택</td>
+                    <td className="w-242px text-center">신청일시</td>
+                    <td className="w-268px text-center">환전금액</td>
+                    <td className="w-170px text-center">처리일시</td>
+                    <td className="w-170px text-center pl-12px">처리상태</td>
                 </tr>
             </thead>
             <tbody className="w-full text-585858 text-14px tracking-tight font-spoqaMedium">
                 <tr className="bg-gray-fefefe rounded-3xl font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px w-full border-b border-gray-dddddd">
-                    <td className="w-132px font-roboto h-56px text-center">{RadioButton}</td>
-                    <td className="w-242px h-56px text-center">2021-06-29 15:45:41</td>
-                    <td className="w-268px h-56px text-right pr-70px">12,000</td>
-                    <td className="w-242px h-56px text-center">2021-06-29 15:45:41</td>
-                    <td className="w-157px h-56px text-center text-blue-r0056a6">완료</td>
+                    <td className="w-132px font-roboto h-56px text-center pl-2px"><RadioButton id={0}/></td>
+                    <td className="w-242px h-56px text-center font-roboto">2021-06-29 15:45:41</td>
+                    <td className="w-268px h-56px text-right pr-70px font-roboto">12,000</td>
+                    <td className="w-242px h-56px text-center font-roboto">2021-06-29 15:45:41</td>
+                    <td className="w-157px h-56px text-center text-blue-r0056a6 pl-12px">완료</td>
                 </tr>
                 <tr className="bg-gray-f7f9fc rounded-3xl font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd">
-                    <td className="w-132px font-roboto h-56px text-center">{RadioButton}</td>
-                    <td className="w-242px h-56px text-center">2021-06-29 15:45:41</td>
-                    <td className="w-268px h-56px text-right pr-70px">100,000</td>
-                    <td className="w-242px h-56px text-center">2021-06-29 15:45:41</td>
-                    <td className="w-157px h-56px text-center">취소</td>
+                    <td className="w-132px font-roboto h-56px text-center pl-2px"><RadioButton id={1}/></td>
+                    <td className="w-242px h-56px text-center font-roboto">2021-06-29 15:45:41</td>
+                    <td className="w-268px h-56px text-right pr-70px font-roboto">100,000</td>
+                    <td className="w-242px h-56px text-center font-roboto">2021-06-29 15:45:41</td>
+                    <td className="w-157px h-56px text-center pl-12px">취소</td>
                 </tr>
-                <tr className="bg-gray-fefefe rounded-3xl font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px w-full border-b border-gray-dddddd">
-                    <td className="w-132px font-roboto h-56px text-center">{RadioButton}</td>
-                    <td className="w-242px h-56px text-center">2021-06-29 15:45:41</td>
-                    <td className="w-268px h-56px text-right pr-70px">50,000</td>
-                    <td className="w-242px h-56px text-center">2021-06-29 15:45:41</td>
-                    <td className="w-157px h-56px text-center text-blue-r0056a6">완료</td>
+                <tr className="bg-gray-fefefe rounded-3xl font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px w-full border-gray-dddddd">
+                    <td className="w-132px font-roboto h-56px text-center pl-2px"><RadioButton id={2}/></td>
+                    <td className="w-242px h-56px text-center font-roboto">2021-06-29 15:45:41</td>
+                    <td className="w-268px h-56px text-right pr-70px font-roboto">50,000</td>
+                    <td className="w-242px h-56px text-center font-roboto">2021-06-29 15:45:41</td>
+                    <td className="w-157px h-56px text-center text-blue-r0056a6 pl-12px">완료</td>
                 </tr>
             </tbody>
         </table>
