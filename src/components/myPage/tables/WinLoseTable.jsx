@@ -27,31 +27,31 @@ const WinLoseTable = () => {
                     </tr>
                 </thead>
                 <tbody className="w-full text-585858 text-14px tracking-tight font-spoqaMedium">
-                    <tr className="bg-gray-fefefe rounded-3xl font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px w-full border-b border-gray-dddddd">
+                    <tr className="bg-gray-fefefe rounded-3xl font-spoqaMedium text-14px tracking-tight text-gray-r585858 h-56px w-full border-b border-gray-dddddd">
                         <td className="w-100px font-roboto h-56px text-center">{RadioButton}</td>
-                        <td className="w-64px h-56px text-center">1</td>
-                        <td className="w-176px h-56px text-center">2021-06-29</td>
-                        <td className="w-136px h-56px text-center">2021-07-29</td>
+                        <td className="w-64px h-56px text-center font-roboto">1</td>
+                        <td className="w-176px h-56px text-center font-roboto">2021-06-29</td>
+                        <td className="w-136px h-56px text-center font-roboto">2021-07-29</td>
                         <td className="w-265px h-56px text-center">스포츠</td>
-                        <td className="w-170px h-56px text-center">78,308</td>
+                        <td className="w-170px h-56px text-center font-roboto">78,308</td>
                         <td className="w-128px h-56px text-center">진행중인 금액</td>
                     </tr>
-                    <tr className="bg-gray-f7f9fc rounded-3xl font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd">
+                    <tr className="bg-gray-f7f9fc rounded-3xl font-spoqaMedium text-14px tracking-tight text-gray-r585858 h-56px border-b border-gray-dddddd">
                         <td className="w-100px font-roboto h-56px text-center">{RadioButton}</td>
-                        <td className="w-64px h-56px text-center">2</td>
-                        <td className="w-176px h-56px text-center">2021-06-29</td>
-                        <td className="w-136px h-56px text-center">2021-07-29</td>
+                        <td className="w-64px h-56px text-center font-roboto">2</td>
+                        <td className="w-176px h-56px text-center font-roboto">2021-06-29</td>
+                        <td className="w-136px h-56px text-center font-roboto">2021-07-29</td>
                         <td className="w-265px h-56px text-center">미니게임</td>
-                        <td className="w-170px h-56px text-center text-red-500">+9,900</td>
+                        <td className="w-170px h-56px text-center text-red-500 font-roboto">+9,900</td>
                         <td className="w-128px h-56px text-center">정산완료</td>
                     </tr>
-                    <tr className="bg-gray-fefefe rounded-3xl font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px w-full border-b border-gray-dddddd">
+                    <tr className="bg-gray-fefefe rounded-3xl font-spoqaMedium text-14px tracking-tight text-gray-r585858 h-56px w-full border-b border-gray-dddddd">
                         <td className="w-100px font-roboto h-56px text-center">{RadioButton}</td>
-                        <td className="w-64px h-56px text-center">3</td>
-                        <td className="w-176px h-56px text-center">2021-06-29</td>
-                        <td className="w-136px h-56px text-center">2021-07-29</td>
+                        <td className="w-64px h-56px text-center font-roboto">3</td>
+                        <td className="w-176px h-56px text-center font-roboto">2021-06-29</td>
+                        <td className="w-136px h-56px text-center font-roboto">2021-07-29</td>
                         <td className="w-265px h-56px text-center">에볼루션</td>
-                        <td className="w-170px h-56px text-center text-red-500">+32,510</td>
+                        <td className="w-170px h-56px text-center text-red-500 font-roboto">+32,510</td>
                         <td className="w-128px h-56px text-center">정산완료</td>
                     </tr>
                 </tbody>

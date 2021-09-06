@@ -89,7 +89,7 @@ const LeftMenu = ({
                 selectedTab === path
                 ? "bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2" 
                 : "bg-white"
-            } flex w-full items-center p-5px h-53px rounded-full`} 
+            } flex w-full items-center p-5px h-52px rounded-full`} 
             onClick={(e) => {
                 buttonPressed(path)
                 setPopupOpen(true)
