@@ -1,9 +1,11 @@
+import clsx from "clsx";
 import jss from "jss";
 import React from "react";
 import useStore from "store/useStore";
 
-export default function ViewSelectButton({ viewName, viewType }) {
-    const { selectedView } = useStore((state) => state);
+export default function ViewSelectButton({ viewName, viewType, icon }) {
+    const selectedView = useStore((state) => state.selectedView);
+    const changeView = useStore((state) => state.changeView);
     const isSelected = viewType === selectedView;
     const styles = {
         bg: `
@@ -44,7 +46,6 @@ export default function ViewSelectButton({ viewName, viewType }) {
                     -webkit-border-radius: 6px;
                     -moz-border-radius: 6px;
                     border-radius: 6px;
-                    margin-right: 8px;
                     background: -moz-linear-gradient(90deg, #2a2a2a 0, #0e0e0e 100%);
                     background: -o-linear-gradient(90deg, #2a2a2a 0, #0e0e0e 100%);
                     background: -webkit-linear-gradient(90deg, #2a2a2a 0, #0e0e0e 100%);
@@ -63,24 +64,38 @@ export default function ViewSelectButton({ viewName, viewType }) {
                     -moz-background-clip: padding;
                     -webkit-background-clip: padding-box;
                     background-clip: padding-box; /*Will not allow bg color to leak outside borders*/
-            
             `,
+        hoverBackground: {
+            "&:hover": {
+                background:
+                    "linear-gradient(0deg, #614a21 0, #48371b 100%) no-repeat",
+                boxShadow: "inset 0px -10px 30px -12px #ffce62",
+            },
+            "&:hover $icon": {
+                filter: "brightness(4)",
+            },
+        },
+        icon: {
+            marginRight: "8px",
+            marginLeft: "4px",
+            filter: isSelected ? "brightness(4)" : "",
+        },
+        text: { fontSize: "16px", textTransform: "uppercase" },
     };
     const { classes } = jss.createStyleSheet(styles).attach();
-    const { changeView } = useStore((state) => state);
+    
     return (
         <button
             onClick={() => changeView(viewType)}
-            className={classes.buttonBackground}
+            className={clsx(classes.buttonBackground, classes.hoverBackground)}
+            style={{ display: "flex", justifyContent: "center", alignItems: "center"}}
         >
-            <img
-                className="ico-12"
-                src={require("../imagesHold/ico_16.png").default}
-                alt=""
-                width="17"
-                height="21"
-            />
-            <p className="text-23">{viewName}</p>
+            <img className={classes.icon} src={icon} alt="" />
+            <p
+                className={classes.text}
+            >
+                {viewName}
+            </p>
         </button>
     );
 }

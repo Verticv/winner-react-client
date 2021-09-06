@@ -1,7 +1,9 @@
 import jss from "jss";
 import React from "react";
 import useStore from "store/useStore";
+import LiveMatchCardButton from "./LiveMatchCardButton";
 import LiveMatchCoefficient from "./LiveMatchCoefficient";
+import MatchFavoriteButton from "./MatchFavoriteButton";
 
 export default function LiveMatchCard({ matchCard }) {
     const {
@@ -17,49 +19,18 @@ export default function LiveMatchCard({ matchCard }) {
         team2stats,
         team1Goals,
         team2Goals,
-        isFavorite,
-        topOffset,
     } = matchCard;
-    const {
-        selectedCardId,
-        changeSelectedCardId,
-        playingMatchId,
-        changePlayingMatchId,
-    } = useStore();
+
+    const selectedCardId = useStore((state) => state.selectedCardId);
+    const changeSelectedCardId = useStore(
+        (state) => state.changeSelectedCardId
+    );
+    const playingMatchId = useStore((state) => state.playingMatchId);
+    const changePlayingMatchId = useStore(
+        (state) => state.changePlayingMatchId
+    );
     const selected = selectedCardId === matchCard.id;
     const styles = {
-        container: `
-            height: 145px;
-            left: 0;
-            position: absolute;
-            top: ${topOffset};
-            width: 681px;
-            background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iNTAlIiB4Mj0iMTAwJSIgeTI9IjUwJSI+CjxzdG9wIG9mZnNldD0iLTUuMzY1NTQ1JSIgc3RvcC1jb2xvcj0iIzI2MjMzMCIgc3RvcC1vcGFjaXR5PSIxIiAvPgo8c3RvcCBvZmZzZXQ9Ijk0LjYzNDQ1JSIgc3RvcC1jb2xvcj0iIzRkMWUyMiIgc3RvcC1vcGFjaXR5PSIxIiAvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2JnKSIgLz48L3N2Zz4=);
-            background: -moz-linear-gradient(0deg, #262330 -5.365545%, #4d1e22 94.63445%);
-            background: -o-linear-gradient(0deg, #262330 -5.365545%, #4d1e22 94.63445%);
-            background: -webkit-linear-gradient(0deg, #262330 -5.365545%, #4d1e22 94.63445%);
-            background: -webkit-gradient(linear, left top, right top, color-stop(-5.365545%, #262330), color-stop(94.63445%, #4d1e22));
-            background: -webkit-linear-gradient(left, #262330 -5.365545%, #4d1e22 94.63445%);
-            background: -moz-linear-gradient(left, #262330 -5.365545%, #4d1e22 94.63445%);
-            background: -o-linear-gradient(left, #262330 -5.365545%, #4d1e22 94.63445%);
-            background: linear-gradient(90deg, #262330 -5.365545%, #4d1e22 94.63445%);
-    `,
-        containerSelected: `
-            height: 145px;
-            left: 0;
-            position: absolute;
-            top: ${topOffset};
-            width: 681px;
-            background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iNTAlIiB4Mj0iMTAwJSIgeTI9IjUwJSI+CjxzdG9wIG9mZnNldD0iLTUuMzY1NTQ1JSIgc3RvcC1jb2xvcj0iIzI2MjMzMCIgc3RvcC1vcGFjaXR5PSIxIiAvPgo8c3RvcCBvZmZzZXQ9Ijk0LjYzNDQ1JSIgc3RvcC1jb2xvcj0iIzRkMWUyMiIgc3RvcC1vcGFjaXR5PSIxIiAvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2JnKSIgLz48L3N2Zz4=);
-            background: -moz-linear-gradient(0deg, #262330 -5.365545%, #4d1e22 94.63445%);
-            background: -o-linear-gradient(0deg, #262330 -5.365545%, #4d1e22 94.63445%);
-            background: -webkit-linear-gradient(0deg, #262330 -5.365545%, #4d1e22 94.63445%);
-            background: -webkit-gradient(linear, left top, right top, color-stop(-5.365545%, #262330), color-stop(94.63445%, #4d1e22));
-            background: -webkit-linear-gradient(left, #262330 -5.365545%, #4d1e22 94.63445%);
-            background: -moz-linear-gradient(left, #262330 -5.365545%, #4d1e22 94.63445%);
-            background: -o-linear-gradient(left, #262330 -5.365545%, #4d1e22 94.63445%);
-            background: linear-gradient(270deg, #5f262d 0, #9b2f30 100%)
-          `,
         inlay: `
                 height: 105px;
                 left: 0;
@@ -68,15 +39,49 @@ export default function LiveMatchCard({ matchCard }) {
                 width: 681px;
                 background: url(${
                     selected
-                        ? require("../imagesHold/bg_220.jpg").default
+                        ? require("../imagesHold/selected_inlay.png").default
                         : require("../imagesHold/bg_201.jpg").default
                 }) no-repeat;
           `,
+        leftContainerHover: {},
+        centerContainerHover: {},
+        rightContainerHover: {},
+        container: {
+            height: "145px",
+            position: "relative",
+            width: "681px",
+            marginBottom: "9px",
+            background: selected
+                ? "linear-gradient(270deg, #5f262d 0, #9b2f30 100%)"
+                : "linear-gradient(90deg, #262330 -5.365545%, #4d1e22 94.63445%)",
+            "&:hover": {
+                background: "linear-gradient(270deg, #5f262d 0, #9b2f30 100%)",
+            },
+            "&:hover $inlay": {
+                background: `url(${
+                    require("../imagesHold/selected_inlay.png").default
+                })`,
+            },
+            "&:hover $leftContainerHover": {
+                background: `url(${
+                    require("../imagesHold/bg_227.png").default
+                })`,
+                zIndex: 1,
+            },
+            "&:hover $rightContainerHover": {
+                background: `url(${
+                    require("../imagesHold/bg_250.png").default
+                })`,
+                zIndex: 1,
+            },
+            "&:hover $centerContainerHover": {
+                background: `url(${
+                    require("../imagesHold/bg_228.png").default
+                }) no-repeat center`,
+            },
+        },
     };
     const { classes } = jss.createStyleSheet(styles).attach();
-    const handlePlusButton = (event) => {
-        event.stopPropagation();
-    };
     const handleContainerClick = () => {
         changeSelectedCardId(id);
     };
@@ -86,7 +91,7 @@ export default function LiveMatchCard({ matchCard }) {
             role="button"
             onClick={handleContainerClick}
             key={id + "live-match-card"}
-            className={selected ? classes.containerSelected : classes.container}
+            className={classes.container}
         >
             <div className={classes.inlay}>
                 <div className="row-39">
@@ -112,19 +117,7 @@ export default function LiveMatchCard({ matchCard }) {
                         {
                             // Star/Favorite Icon
                         }
-                        <img
-                            className="layer-15"
-                            src={
-                                isFavorite
-                                    ? require("../imagesHold/image_63.png")
-                                          .default
-                                    : require("../imagesHold/image_73.png")
-                                          .default
-                            }
-                            alt=""
-                            width="18"
-                            height="16"
-                        />
+                        <MatchFavoriteButton matchCard={matchCard} />
                         <div className="team-6">
                             <img
                                 className="layer-16"
@@ -193,12 +186,11 @@ export default function LiveMatchCard({ matchCard }) {
                     team1WinKof={team1WinKof}
                     team2WinKof={team2WinKof}
                     tieKof={tieKof}
+                    parentClasses={classes}
+                    parentSelected={selected}
                 />
             </div>
-            <button onClick={handlePlusButton} className="bg-5">
-                <p className="text-78">+</p>
-                <p className="text-79">23</p>
-            </button>
+            <LiveMatchCardButton />
             <div className="f-4">
                 <div className="s-4">
                     <img
@@ -231,8 +223,6 @@ export default function LiveMatchCard({ matchCard }) {
                         className="p-3"
                         src={require("../imagesHold/p.png").default}
                         alt=""
-                        width="14"
-                        height="17"
                     />
                     <img
                         className="ico-20"

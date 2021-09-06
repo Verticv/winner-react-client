@@ -1,3 +1,5 @@
+import produce from "immer";
+
 export const createLiveCardSlice = (set, get) => ({
     selectedCardId: 0,
     changeSelectedCardId: (id) => {
@@ -11,5 +13,23 @@ export const createLiveCardSlice = (set, get) => ({
         } else {
             set((state) => (state.playingMatchId = id));
         }
+    },
+    favoriteMatches: [],
+    addMatchToFavorites: (match) => {
+        set(
+            produce((draft) => {
+                draft.favoriteMatches.push(match);
+            })
+        );
+    },
+    removeMatchFromFavorites: (matchId) => {
+        set(
+            produce((draft) => {
+                const matchIndex = draft.favoriteMatches.findIndex(
+                    (el) => el.id === matchId
+                );
+                draft.favoriteMatches.splice(matchIndex, 1);
+            })
+        );
     },
 });

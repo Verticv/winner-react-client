@@ -36,8 +36,20 @@ footer, header, menu, nav, section, time {
                             'embedded-opentype', and 'svg' */
 }
 
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: local('Roboto-Regular'), url(../fonts/Roboto-Regular.ttf) format('truetype');
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
+/* Chrome */
 .hide-scrollbar-bet-page::-webkit-scrollbar {
 display: none;
+}
+/* Firebox */
+.hide-scrollbar-bet-page {
+  scrollbar-width: none;
 }
 
 .global_container_ {
@@ -631,9 +643,6 @@ html {
 }
 .group-23 {
   height: 21px;
-  left: 42px;
-  position: absolute;
-  top: 0;
   width: 31px;
   -webkit-border-radius: 4.89px/4.85px;
   -moz-border-radius: 4.89px/4.85px;
@@ -641,10 +650,7 @@ html {
   background: #414141;
 }
 .text-20 {
-  left: 8px;
-  position: absolute;
-  top: 2px;
-  font-family: Roboto, sans-serif;
+  white-space: nowrap;
   letter-spacing: 0;
   line-height: 21px;
   text-align: center;
@@ -2204,6 +2210,7 @@ html {
   text-transform: uppercase;
 }
 .line-12 {
+  z-index: 5;
   left: 81px;
   position: absolute;
   top: 0;
@@ -2305,7 +2312,8 @@ html {
   background: #b92025;
 }
 .p-3 {
-  left: 85px;
+  padding: 0;
+  left: 82px;
   position: absolute;
   top: 0;
 }
@@ -2777,11 +2785,9 @@ html {
   position: absolute;
   top: 10px;
   width: 104px;
+  line-height: 16px;
 }
 .text-80 {
-  left: 1px;
-  position: absolute;
-  top: 1px;
   color: #afb3be;
   font-size: 13px;
   letter-spacing: 0;
@@ -2801,7 +2807,6 @@ html {
 .text-81 {
   left: 5px;
   position: absolute;
-  top: 1px;
   font-family: Roboto, sans-serif;
   letter-spacing: 0;
   line-height: 18px;
@@ -2830,6 +2835,7 @@ html {
   position: absolute;
   top: 10px;
   width: 88px;
+  line-height: 16px;
 }
 .bg-holder-32 {
   height: 18px;
@@ -2843,9 +2849,6 @@ html {
   background: #225f8b;
 }
 .text-82 {
-  left: 2px;
-  position: absolute;
-  top: 1px;
   font-family: Roboto, sans-serif;
   letter-spacing: 0;
   line-height: 18px;
@@ -2908,7 +2911,6 @@ html {
   position: absolute;
   top: 40px;
   width: 681px;
-  background: url(../imagesHold/bg_240.jpg) no-repeat;
 }
 .col-33 {
   height: 45px;
