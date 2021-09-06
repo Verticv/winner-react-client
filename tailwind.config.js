@@ -77,6 +77,7 @@ module.exports = {
         '74px': '74px',
         '75px': '75px',
         '76px': '76px',
+        '77px': '77px',
         '78px': '75px',
         '79px': '79px',
         '80px': '80px',
@@ -254,6 +255,7 @@ module.exports = {
         plain6: '2px 2px 2px 0px rgba(0, 0, 0, 0.4)',
         plain7: '0px 2px 2px 0px rgba(0, 0, 0, 0.2)',
         plain8: '0 4px 3.5px 0px rgba(0, 0, 0, 0.15)',
+        plain9: '2px 2px 2px 0px rgba(0, 0, 0, 0.3)',
         subNavbar: '0 0px 6px 0 rgba(0, 0, 0, 0.2)',
         popup: '0 6px 10px 4px rgba(0, 0, 0, 0.3)',
         glow: '0 0 3px 2px rgba(0, 0, 0, 0.1)',
@@ -315,7 +317,11 @@ module.exports = {
           r0779de: '#0779de',
           r00a1e9: '#00a1e9',
           r3975ad: '#3975ad',
-          r1390fa: '#1390fa'
+          r1390fa: '#1390fa',
+          r003d70: '#003d70',
+          r0e508d: '#0e508d',
+          r286bb7: '#286bb7',
+          r4985d8: '#4985d8'
         },
         gray: {
           text: '#393e41',
@@ -375,8 +381,9 @@ module.exports = {
           r687b8e: '#687b8e',
           r253240: '#253240',
           r5b6773: '#5b6773',
-          cfd7e0: '#cfd7e0'
-
+          cfd7e0: '#cfd7e0',
+          f5feff: '#f5feff',
+          r45484c: '#45484c'
         },
         red: {
           notification: '#ed2f59',

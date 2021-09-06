@@ -17,16 +17,18 @@ import IconHighlight7 from '../../images/myPage/leftMenu/icon_7_highlight.png'
 import IconHighlight8 from '../../images/myPage/leftMenu/icon_8_highlight.png'
 import ArrowDown from '../../images/myPage/leftMenu/arr_down.png'
 import ArrowUp from '../../images/myPage/leftMenu/arr_up.png'
-import { useHistory, useLocation } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import PopupControls from '../popups/PopupControls'
 import ReauthenticatePopup from 'components/popups/ReauthenticatePopup'
 
-const LeftMenu = () => {
+const LeftMenu = ({
+    selectedTab,
+    setSelectedTab,
+    selectedSubTab,
+    setSelectedSubTab
+}) => {
 
     const history = useHistory();
-    const location = useLocation();
-    const [selectedTab, setSelectedTab] = useState(location.pathname)
-    const [selectedSubTab, setSelectedSubTab] = useState(location.pathname)
     const [isPopupOpen, setPopupOpen] = useState(true)
 
     const tabsArray = [
@@ -95,7 +97,7 @@ const LeftMenu = () => {
         >
             <div 
                 className={`${
-                    (selectedTab === path) && "shadow-plain3"
+                    (selectedTab === path) && "shadow-plain9"
                 } h-42px w-42px bg-white rounded-full flex items-center justify-center flex-shrink-0`} 
             >
                 <img 
@@ -109,7 +111,7 @@ const LeftMenu = () => {
                         (selectedTab === path)
                         ? "text-white" 
                         : "text-gray-r8c8c8c"
-                    } font-spoqaBold text-16px cursor-pointer tracking-tight`}>{text}</label>
+                    } font-spoqaMedium text-16px cursor-pointer tracking-tight`}>{text}</label>
             </div>
         </button>
     )
@@ -118,7 +120,7 @@ const LeftMenu = () => {
         
         return items.map(item => (
 
-            <>
+            <div key={item.id}>
                 {item.id === 7 ? (
                     <PopupControls 
                         buttonChild={(
@@ -136,7 +138,7 @@ const LeftMenu = () => {
                         <ReauthenticatePopup setPopupOpen={setPopupOpen} setSelectedTab={setSelectedTab}/>
                     </PopupControls>  
                 ) : (
-                    <div key={item.id} >
+                    <div>
                         <button 
                             className={`${
                                 selectedTab === item.path || selectedTab === item.path2 || selectedTab === item.path3
@@ -153,7 +155,7 @@ const LeftMenu = () => {
                         >
                             <div 
                                 className={`${
-                                    (selectedTab === item.path || selectedTab === item.path2 || selectedTab === item.path3) && "shadow-plain3"
+                                    (selectedTab === item.path || selectedTab === item.path2 || selectedTab === item.path3) && "shadow-plain9"
                                 } h-42px w-42px bg-white rounded-full flex items-center justify-center flex-shrink-0`} 
                             >
                                 <img 
@@ -168,7 +170,7 @@ const LeftMenu = () => {
                                             (selectedTab === item.path || selectedTab === item.path2 || selectedTab === item.path3)
                                             ? "text-white" 
                                             : "text-gray-r8c8c8c"
-                                        } font-spoqaBold text-16px cursor-pointer tracking-tight`}
+                                        } font-spoqaMedium text-16px cursor-pointer tracking-tight`}
                                     >
                                         {item.text}
                                     </label>
@@ -234,7 +236,7 @@ const LeftMenu = () => {
                     </div>
                 )}
                 
-            </>
+            </div>
         ));
     }
 

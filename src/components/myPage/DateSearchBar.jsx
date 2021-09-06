@@ -55,32 +55,32 @@ const DateSearchBar = ({
                 </div>
                 <div className="flex h-full space-x-6px items-center">
                     <div className="flex items-center justify-center h-42px w-75px rounded-4px bg-blue-r004b8a">
-                        <div className="flex items-center justify-center h-40px w-73px bg-black rounded-4px border border-blue-r2a699c bg-gradient-to-b from-blue-r004b8a via-blue-r004b8a to-blue-r012d53 cursor-pointer">
+                        <div className="flex items-center justify-center h-40px w-73px rounded-4px border border-blue-r2a699c bg-gradient-to-b from-blue-r004b8a via-blue-r003d70 to-blue-r012d53 cursor-pointer">
                             <span className="font-spoqaMedium tracking-tight text-14px text-white">오늘</span>
                         </div>
                     </div>
 
                     <div className="flex items-center justify-center h-42px w-75px rounded-4px bg-blue-r2068b2">
-                        <div className="flex items-center justify-center h-40px w-73px bg-black rounded-4px border border-blue-r3975ae bg-gradient-to-b from-blue-r125a9e via-blue-r125a9e to-blue-r0b447a cursor-pointer">
+                        <div className="flex items-center justify-center h-40px w-73px bg-black rounded-4px border border-blue-r3975ae bg-gradient-to-b from-blue-r125a9e via-blue-r0e508d to-blue-r0b447a cursor-pointer">
                             <span className="font-spoqaMedium tracking-tight text-14px text-white">1주일</span>
                         </div>
                     </div>
 
                     <div className="flex items-center justify-center h-42px w-75px rounded-4px bg-blue-r286fce">
-                        <div className="flex items-center justify-center h-40px w-73px bg-black rounded-4px border border-blue-r538dcf bg-gradient-to-b from-blue-r3176c5 via-blue-r3176c5 to-blue-r1c5ca5 cursor-pointer">
+                        <div className="flex items-center justify-center h-40px w-73px bg-black rounded-4px border border-blue-r538dcf bg-gradient-to-b from-blue-r3176c5 via-blue-r286bb7 to-blue-r1c5ca5 cursor-pointer">
                             <span className="font-spoqaMedium tracking-tight text-14px text-white">15일</span>
                         </div>
                     </div>
 
                     <div className="flex items-center justify-center h-42px w-75px rounded-4px bg-blue-r286fce">
-                        <div className="flex items-center justify-center h-40px w-73px bg-black rounded-4px border border-blue-r70a8f5 bg-gradient-to-b from-blue-r5497f4 via-blue-r5497f4 to-blue-r3d71b8 cursor-pointer">
+                        <div className="flex items-center justify-center h-40px w-73px bg-black rounded-4px border border-blue-r70a8f5 bg-gradient-to-b from-blue-r5497f4 via-blue-r4985d8 to-blue-r3d71b8 cursor-pointer">
                             <span className="font-spoqaMedium tracking-tight text-14px text-white">1개월</span>
                         </div>
                     </div>
 
                     {!hasIdSearch ? (
                         <div className="flex items-center justify-center h-42px w-75px rounded-4px bg-gray-r171a1d">
-                            <div className="flex items-center justify-center h-40px w-73px bg-black rounded-4px border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r585b5e to-gray-r303337 cursor-pointer">
+                            <div className="flex items-center justify-center h-40px w-73px bg-black rounded-4px border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r45484c to-gray-r303337 cursor-pointer">
                                 <span className="font-spoqaMedium tracking-tight text-14px text-white">검색</span>
                             </div>
                         </div>

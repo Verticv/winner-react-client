@@ -7,7 +7,10 @@ const DirectoryComponent = ({
     branch1 = "마이페이지",
     branch2, 
     branch3 = null,
-    branch4 = null
+    branch4 = null,
+    setSelectedTab,
+    setSelectedSubTab,
+    mainPath = ""
 }) => {
 
     const history = useHistory();
@@ -16,21 +19,38 @@ const DirectoryComponent = ({
         <div className="flex items-center h-22px w-default my-20px space-x-10px">
             <img className="object-none cursor-pointer" src={HomeIcon} alt="" onClick={() => history.push("/")} />
             <img className="object-none cursor-none" src={RightArrow} alt=""/>
-            <span className="font-spoqaBold text-13px text-gray-r7c7c7c tracking-tight">{branch1}</span>
+            <span 
+                className="font-spoqaBold text-13px text-gray-r7c7c7c tracking-tight cursor-pointer"
+                onClick={() => {
+                    history.push("/mypage/bet-history")
+                    setSelectedTab("/mypage/bet-history")
+                }}
+            >
+                {branch1}
+            </span>
             {branch2 && (
                 <>
                     <img className="object-none" src={RightArrow} alt="" />
-                    <span className={`${
-                        !branch3 
-                        ? "font-spoqaBold text-gray-393e41" 
-                        : "font-spoqaBold text-gray-r7c7c7c"
-                        } text-13px tracking-tight`}>{branch2}</span>
+                    <span 
+                        className={`${
+                            !branch3 
+                            ? "font-spoqaBold text-gray-393e41" 
+                            : "font-spoqaBold text-gray-r7c7c7c"
+                            } text-13px tracking-tight cursor-pointer`}
+                        onClick={() => {
+                            history.push(mainPath)
+                            setSelectedTab(mainPath)
+                            setSelectedSubTab(mainPath)
+                        }}
+                        >
+                            {branch2}
+                        </span>
                 </>
             )}
             {branch3 && (
                 <>
                     <img className="object-none" src={RightArrow} alt="" />
-                    <span className="font-spoqaBold text-13px text-gray-393e41 tracking-tight">{branch3}</span>
+                    <span className="font-spoqaBold text-13px text-gray-393e41 tracking-tight cursor-pointer">{branch3}</span>
                 </>
             )}
             {branch4 && (
