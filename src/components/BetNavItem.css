@@ -3772,7 +3772,6 @@ html {
   position: absolute;
   top: 0;
   width: 28px;
-  border: 1px solid #ffffff; /*stroke*/
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -4528,7 +4527,6 @@ html {
   position: absolute;
   top: 0;
   width: 28px;
-  border: 1px solid #ffffff; /*stroke*/
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -4920,7 +4918,6 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0, rgba(255, 255, 255, 0.1)
   position: absolute;
   top: 0;
   width: 179px;
-  border: 1px solid #ffffff; /*stroke*/
 }
 .col-10 {
   height: 40px;
@@ -4968,7 +4965,6 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0, rgba(255, 255, 255, 0.1)
   position: absolute;
   top: 0;
   width: 180px;
-  border: 1px solid #ffffff; /*stroke*/
 }
 .text-139 {
   left: 77px;
@@ -5011,7 +5007,6 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0, rgba(255, 255, 255, 0.1)
   position: absolute;
   top: 0;
   width: 360px;
-  border: 1px solid #ffffff; /*stroke*/
 }
 .line-46 {
   height: 1px;
@@ -5122,7 +5117,6 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0, rgba(255, 255, 255, 0.1)
   position: absolute;
   top: 0;
   width: 360px;
-  border: 1px solid #ffffff; /*stroke*/
 }
 .bg-18 {
   left: -1px;
@@ -5626,7 +5620,6 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0, rgba(255, 255, 255, 0.1)
   position: absolute;
   top: 0;
   width: 110px;
-  border: 1px solid #ffffff; /*stroke*/
   -webkit-border-radius: 3.36px/2.45px;
   -moz-border-radius: 3.36px/2.45px;
   border-radius: 3.36px/2.45px;
@@ -5690,7 +5683,6 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0, rgba(255, 255, 255, 0.1)
   position: absolute;
   top: 0;
   width: 110px;
-  border: 1px solid #ffffff; /*stroke*/
   -webkit-border-radius: 3.36px/2.45px;
   -moz-border-radius: 3.36px/2.45px;
   border-radius: 3.36px/2.45px;
@@ -5754,7 +5746,6 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0, rgba(255, 255, 255, 0.1)
   position: absolute;
   top: 0;
   width: 110px;
-  border: 1px solid #ffffff; /*stroke*/
   -webkit-border-radius: 3.36px/2.45px;
   -moz-border-radius: 3.36px/2.45px;
   border-radius: 3.36px/2.45px;
@@ -5825,7 +5816,6 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0, rgba(255, 255, 255, 0.1)
   position: absolute;
   top: 0;
   width: 110px;
-  border: 1px solid #ffffff; /*stroke*/
   -webkit-border-radius: 3.36px/2.45px;
   -moz-border-radius: 3.36px/2.45px;
   border-radius: 3.36px/2.45px;
@@ -5889,7 +5879,6 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0, rgba(255, 255, 255, 0.1)
   position: absolute;
   top: 0;
   width: 110px;
-  border: 1px solid #ffffff; /*stroke*/
   -webkit-border-radius: 3.36px/2.45px;
   -moz-border-radius: 3.36px/2.45px;
   border-radius: 3.36px/2.45px;
@@ -6063,7 +6052,6 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0, rgba(255, 255, 255, 0.1)
   position: absolute;
   top: 0;
   width: 165px;
-  border: 1px solid #ffffff; /*stroke*/
   -webkit-border-radius: 3.02px/3.56px;
   -moz-border-radius: 3.02px/3.56px;
   border-radius: 3.02px/3.56px;
@@ -6197,7 +6185,6 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0, rgba(255, 255, 255, 0.1)
   position: absolute;
   top: 0;
   width: 165px;
-  border: 1px solid #ffffff; /*stroke*/
   -webkit-border-radius: 3.02px/3.56px;
   -moz-border-radius: 3.02px/3.56px;
   border-radius: 3.02px/3.56px;
@@ -6378,7 +6365,6 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0, rgba(255, 255, 255, 0.1)
   position: absolute;
   top: 0;
   width: 65px;
-  border: 1px solid #ffffff; /*stroke*/
   -webkit-border-radius: 3.08px/3px;
   -moz-border-radius: 3.08px/3px;
   border-radius: 3.08px/3px;
@@ -6480,7 +6466,6 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0, rgba(255, 255, 255, 0.1)
   position: absolute;
   top: 0;
   width: 360px;
-  border: 1px solid #ffffff; /*stroke*/
 }
 .line-49 {
   height: 1px;
@@ -6548,7 +6533,6 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0, rgba(255, 255, 255, 0.1)
   position: absolute;
   top: 0;
   width: 360px;
-  border: 1px solid #ffffff; /*stroke*/
 }
 .line-50 {
   height: 1px;
@@ -6847,7 +6831,6 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0, rgba(255, 255, 255, 0.1)
   position: absolute;
   top: 0;
   width: 340px;
-  border: 1px solid #ffffff; /*stroke*/
   -webkit-border-radius: 3.02px/3.56px;
   -moz-border-radius: 3.02px/3.56px;
   border-radius: 3.02px/3.56px;
