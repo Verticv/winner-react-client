@@ -3,7 +3,15 @@ import React from 'react'
 export default function BetSlipBet() {
     return (
         <div className="bg-holder-79">
-            <div className="bg-holder-80">
+            <div
+                style={{
+                    height: "81px",
+                    left: "0",
+                    position: "absolute",
+                    top: "0",
+                    width: "360px",
+                }}
+            >
                 <div className="line-46"></div>
                 <img
                     className="bg-14"
