@@ -58,7 +58,7 @@ display: none;
   text-decoration: none;
   overflow-x: hidden;
   color: #ffffff;
-  font-family: NotoSansCJKkr-Regular, sans-serif;
+  font-family: 'NotoSansCJKkr-Regular';
   font-size: 14px;
   font-style: normal;
   font-weight: normal;
@@ -4912,15 +4912,7 @@ html {
   position: absolute;
   top: 0;
   width: 179px;
-  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjEwMCUiIHgyPSI1MCUiIHkyPSIwJSI+CjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjEiIC8+CjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjEiIC8+CjwvbGluZWFyR3JhZGllbnQ+CjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjYmcpIiAvPjwvc3ZnPg==), #303035;
-  background: -moz-linear-gradient(90deg, rgba(0, 0, 0, 0.1) 0, rgba(255, 255, 255, 0.1) 100%), #303035;
-  background: -o-linear-gradient(90deg, rgba(0, 0, 0, 0.1) 0, rgba(255, 255, 255, 0.1) 100%), #303035;
-  background: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0.1) 0, rgba(255, 255, 255, 0.1) 100%), #303035;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgba(0, 0, 0, 0.1)), to(rgba(255, 255, 255, 0.1))), #303035;
-  background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.1) 0, rgba(255, 255, 255, 0.1) 100%), #303035;
-  background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.1) 0, rgba(255, 255, 255, 0.1) 100%), #303035;
-  background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.1) 0, rgba(255, 255, 255, 0.1) 100%), #303035;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0, rgba(255, 255, 255, 0.1) 100%), #303035;
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0, rgba(255, 255, 255, 0.1) 100%), #303035;
 }
 .bg-12 {
   height: 40px;
@@ -4987,6 +4979,8 @@ html {
   line-height: 40px;
   text-align: center;
   text-transform: uppercase;
+  font-family: 'NotoSansCJKkr-Regular';
+  font-size: 14px;
 }
 .group-65 {
   height: 163px;
