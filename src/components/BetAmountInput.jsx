@@ -70,8 +70,8 @@ export default function BetAmountInput() {
                         height: "69px",
                         position: "absolute",
                         width: "340px",
-                        bottom: "10px",
                         left: "10px",
+                        marginTop: "12px",
                     }}
                 >
                     <div className="row-33">
@@ -185,7 +185,18 @@ export default function BetAmountInput() {
                 </div>
             </div>
             {/* Place a bet and cancel bet */}
-            <div className="group-77">
+            <div
+                style={{
+                    height: "60px",
+                    position: "absolute",
+                    width: "360px",
+                    background:
+                        "linear-gradient(90deg, #1a1a20 0, #161616 100%)",
+                    display: "flex",
+                    justifyContent: "space-between",
+                    marginTop: "2px",
+                }}
+            >
                 <div className="wrapper-2">
                     <div className="bg-holder-93">
                         <div className="bg-38"></div>
