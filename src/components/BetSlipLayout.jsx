@@ -1,7 +1,10 @@
+import { singleOrMultiOptions } from 'helpers/constants';
 import React from 'react'
+import useStore from 'store/useStore';
 
 export default function BetSlipLayout() {
-    const selected = true;
+    const singleOrMulti = useStore((state) => state.singleOrMulti);
+    const changeSingleOrMulti = useStore((state) => state.changeSingleOrMulti);
     return (
         <div
             style={{
@@ -12,7 +15,8 @@ export default function BetSlipLayout() {
                 width: "360px",
             }}
         >
-            <div
+            <button
+                onClick={() => changeSingleOrMulti(singleOrMultiOptions.single)}
                 style={{
                     height: "40px",
                     left: "0",
@@ -22,7 +26,7 @@ export default function BetSlipLayout() {
                     background: "#1d1e22",
                 }}
             >
-                {selected && (
+                {singleOrMulti === singleOrMultiOptions.single && (
                     <div
                         style={{
                             height: "40px",
@@ -39,8 +43,9 @@ export default function BetSlipLayout() {
                     </div>
                 )}
                 <p className="text-138">싱글</p>
-            </div>
-            <div
+            </button>
+            <button
+                onClick={() => changeSingleOrMulti(singleOrMultiOptions.multi)}
                 style={{
                     height: "40px",
                     left: "180px",
@@ -50,13 +55,26 @@ export default function BetSlipLayout() {
                     background: "#1d1e22",
                 }}
             >
+                {singleOrMulti === singleOrMultiOptions.multi && (
+                    <div
+                        style={{
+                            height: "40px",
+                            left: "0",
+                            position: "absolute",
+                            top: "0",
+                            width: "179px",
+                            background:
+                                "linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0, rgba(255, 255, 255, 0.1) 100%), #303035",
+                            borderBottom: "1px solid #FCE7AA",
+                        }}
+                    >
+                        <div className="col-10"></div>
+                    </div>
+                )}
                 <p
                     style={{
-                        left: "77px",
-                        position: "absolute",
                         opacity: 0.3,
                         color: "#909090",
-                        lineHeight: "40px",
                         textAlign: "center",
                         textTransform: "uppercase",
                         fontFamily: "'NotoSansCJKkr-Regular'",
@@ -65,7 +83,7 @@ export default function BetSlipLayout() {
                 >
                     멀티
                 </p>
-            </div>
+            </button>
         </div>
     );
 }
