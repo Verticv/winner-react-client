@@ -1,12 +1,28 @@
 import React from 'react'
-import BetSlipBet from './BetSlipBet';
+import BetAmount from './BetAmount';
+import BetSlipBets from './BetSlipBets';
 import BetSlipLayout from './BetSlipLayout';
 
 export default function BetSlip() {
     return (
         <div className="col-16">
-            <div className="group-62">
-                <div className="group-63">
+            <div
+                style={{
+                    position: "relative",
+                    width: "360px",
+                }}
+            >
+                <div
+                    style={{
+                        height: "40px",
+                        left: "0",
+                        position: "absolute",
+                        top: "0",
+                        width: "360px",
+                        background:
+                            "linear-gradient(90deg, #2c2c34 0, #24242a 100%)",
+                    }}
+                >
                     <div className="col-17">
                         <div className="line-45"></div>
                         <div className="row-27">
@@ -24,317 +40,9 @@ export default function BetSlip() {
                         </div>
                     </div>
                 </div>
-                <BetSlipLayout/>
-                <div className="group-65">
-                    <BetSlipBet />
-                    <div className="bg-holder-82">
-                        <div className="bg-holder-83">
-                            <img
-                                className="bg-18"
-                                src={require("../imagesHold/bg_57.png").default}
-                                alt=""
-                                width="1"
-                                height="81"
-                            />
-                            <div className="bg-holder-84">
-                                <div className="line-47"></div>
-                                <img
-                                    className="bg-19"
-                                    src={
-                                        require("../imagesHold/bg_56.png")
-                                            .default
-                                    }
-                                    alt=""
-                                    width="203"
-                                    height="1"
-                                />
-                                <img
-                                    className="bg-20"
-                                    src={
-                                        require("../imagesHold/bg_59.png")
-                                            .default
-                                    }
-                                    alt=""
-                                    width="360"
-                                    height="12"
-                                />
-                            </div>
-                            <div className="tab">
-                                <div className="wrapper-23">
-                                    <p className="text-142">
-                                        맨체스터유나이티드{" "}
-                                        <span className="colorc49f58">VS</span>{" "}
-                                        리버풀
-                                        <br />
-                                        <span className="colore5b877">
-                                            승무패(원정) - 리버풀
-                                        </span>
-                                        <br />
-                                        <span className="color909090">
-                                            6.11
-                                        </span>
-                                    </p>
-                                    <p className="text-143">3.75</p>
-                                    <img
-                                        className="arr-8"
-                                        src={
-                                            require("../imagesHold/arr_2.png")
-                                                .default
-                                        }
-                                        alt=""
-                                        width="13"
-                                        height="8"
-                                    />
-                                    <div className="line-48"></div>
-                                </div>
-                                <img
-                                    className="x-2"
-                                    src={require("../imagesHold/x.png").default}
-                                    alt=""
-                                    width="14"
-                                    height="14"
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="group-67">
-                    <p className="text-144">보유금액</p>
-                    <p className="text-145">3,000,000</p>
-                </div>
-                <div className="group-68">
-                    <div className="row-22">
-                        <p className="text-146">최소 베팅금액</p>
-                        <p className="text-147">5,000</p>
-                    </div>
-                    <div className="bg-21"></div>
-                </div>
-                <div className="group-69">
-                    <div className="row-21">
-                        <p className="text-148">최대 베팅금액</p>
-                        <p className="text-149">1,000,000</p>
-                    </div>
-                    <div className="bg-22"></div>
-                </div>
-                <div className="group-70">
-                    <div className="row-20">
-                        <p className="text-150">최대 당첨금액</p>
-                        <p className="text-151">2,000,000</p>
-                    </div>
-                    <div className="bg-23"></div>
-                </div>
-                <div className="group-71">
-                    <p className="text-152">최대 베팅배당</p>
-                    <p className="text-153">0.00</p>
-                </div>
-                <div className="group-72">
-                    <p className="text-154">배당률합계</p>
-                    <p className="text-155">0.00</p>
-                </div>
-                <div className="group-73">
-                    <p className="text-156">총적중금액</p>
-                    <p className="text-157">0</p>
-                </div>
-                <div className="group-74">
-                    <p className="text-158">베팅금액</p>
-                    <div className="row-26">
-                        <div className="wrapper-9">
-                            <div className="bg-holder-85">
-                                <div className="bg-24"></div>
-                            </div>
-                            <div className="col-9">
-                                <div className="bg-25"></div>
-                                <img
-                                    className="icon"
-                                    src={
-                                        require("../imagesHold/icon.png")
-                                            .default
-                                    }
-                                    alt=""
-                                    width="23"
-                                    height="19"
-                                />
-                            </div>
-                        </div>
-                        <p className="text-159">0</p>
-                    </div>
-                </div>
-                <div className="group-75">
-                    <div className="group-76">
-                        <div className="row-33">
-                            <div className="wrapper-29">
-                                <div className="bg-holder-86">
-                                    <div className="bg-26"></div>
-                                </div>
-                                <div className="col-3">
-                                    <img
-                                        className="bg-27"
-                                        src={
-                                            require("../imagesHold/bg_17.png")
-                                                .default
-                                        }
-                                        alt=""
-                                        width="95"
-                                        height="1"
-                                    />
-                                    <p className="text-160">5,000</p>
-                                </div>
-                            </div>
-                            <div className="wrapper-30">
-                                <div className="bg-holder-87">
-                                    <div className="bg-28"></div>
-                                </div>
-                                <div className="col-4">
-                                    <img
-                                        className="bg-29"
-                                        src={
-                                            require("../imagesHold/bg_17.png")
-                                                .default
-                                        }
-                                        alt=""
-                                        width="109"
-                                        height="1"
-                                    />
-                                    <p className="text-161">10,000</p>
-                                </div>
-                            </div>
-                            <div className="wrapper-31">
-                                <div className="bg-holder-88">
-                                    <div className="bg-30"></div>
-                                </div>
-                                <div className="col-5">
-                                    <img
-                                        className="bg-31"
-                                        src={
-                                            require("../imagesHold/bg_17.png")
-                                                .default
-                                        }
-                                        alt=""
-                                        width="109"
-                                        height="1"
-                                    />
-                                    <p className="text-162">50,000</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="row-34">
-                            <div className="wrapper-32">
-                                <div className="bg-holder-89">
-                                    <div className="bg-32"></div>
-                                </div>
-                                <div className="col-6">
-                                    <img
-                                        className="bg-33"
-                                        src={
-                                            require("../imagesHold/bg_17.png")
-                                                .default
-                                        }
-                                        alt=""
-                                        width="109"
-                                        height="1"
-                                    />
-                                    <p className="text-163">100,000</p>
-                                </div>
-                            </div>
-                            <div className="wrapper-33">
-                                <div className="bg-holder-90">
-                                    <div className="bg-34"></div>
-                                </div>
-                                <div className="col-7">
-                                    <img
-                                        className="bg-35"
-                                        src={
-                                            require("../imagesHold/bg_17.png")
-                                                .default
-                                        }
-                                        alt=""
-                                        width="109"
-                                        height="1"
-                                    />
-                                    <p className="text-164">1,000,000</p>
-                                </div>
-                            </div>
-                            <div className="wrapper-34">
-                                <div className="bg-holder-91">
-                                    <div className="bg-36"></div>
-                                </div>
-                                <div className="bg-holder-92">
-                                    <div className="col-8">
-                                        <img
-                                            className="bg-37"
-                                            src={
-                                                require("../imagesHold/bg_38.png")
-                                                    .default
-                                            }
-                                            alt=""
-                                            width="101"
-                                            height="1"
-                                        />
-                                        <p className="text-165">최대</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="group-77">
-                    <div className="wrapper-2">
-                        <div className="bg-holder-93">
-                            <div className="bg-38"></div>
-                        </div>
-                        <div className="col">
-                            <img
-                                className="bg-39"
-                                src={require("../imagesHold/bg_6.png").default}
-                                alt=""
-                                width="144"
-                                height="1"
-                            />
-                            <div className="group-78">
-                                <img
-                                    className="ico-31"
-                                    src={
-                                        require("../imagesHold/ico.png").default
-                                    }
-                                    alt=""
-                                    width="14"
-                                    height="14"
-                                />
-                                <p className="text-166">전체취소</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="wrapper-3">
-                        <div className="bg-holder-94">
-                            <div className="bg-40"></div>
-                        </div>
-                        <div className="bg-holder-95">
-                            <div className="bg-41"></div>
-                        </div>
-                        <div className="col-2">
-                            <img
-                                className="bg-42"
-                                src={require("../imagesHold/bg_12.png").default}
-                                alt=""
-                                width="150"
-                                height="1"
-                            />
-                            <div className="group-79">
-                                <img
-                                    className="ico-32"
-                                    src={
-                                        require("../imagesHold/ico_2.png")
-                                            .default
-                                    }
-                                    alt=""
-                                    width="16"
-                                    height="16"
-                                />
-                                <p className="text-167">베팅하기</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <BetSlipLayout />
+                <BetSlipBets />
+                <BetAmount />
             </div>
             <div className="group-80">
                 <div className="group-81">

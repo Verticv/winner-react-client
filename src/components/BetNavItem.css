@@ -5227,15 +5227,9 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0, rgba(255, 255, 255, 0.1)
   background: linear-gradient(90deg, #2a2a34 0, #1a1a20 100%);
 }
 .text-144 {
-  left: 9px;
-  position: absolute;
-  top: 9px;
   text-transform: uppercase;
 }
 .text-145 {
-  left: 272px;
-  position: absolute;
-  top: 8px;
   color: #e9ca4e;
   font-family: Roboto, sans-serif;
   font-size: 16px;
@@ -5267,25 +5261,17 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0, rgba(255, 255, 255, 0.1)
   width: 348px;
 }
 .text-146 {
-  left: 1px;
-  position: absolute;
-  top: 1px;
   color: #909090;
   text-transform: uppercase;
 }
 .text-147 {
-  left: 304px;
-  position: absolute;
-  top: 0;
   color: #e5b877;
   font-family: Roboto, sans-serif;
   text-transform: uppercase;
 }
 .bg-21 {
   height: 1px;
-  left: 10px;
-  position: absolute;
-  top: 35px;
+  margin-left: 8px;
   width: 340px;
   background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9ImJnLTIxIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iNTAlIiB4Mj0iMTAwJSIgeTI9IjUwJSI+CjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzM1MzUzYSIgc3RvcC1vcGFjaXR5PSIxIiAvPgo8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxZDFkMWQiIHN0b3Atb3BhY2l0eT0iMSIgLz4KPC9saW5lYXJHcmFkaWVudD4KPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNiZy0yMSkiIC8+PC9zdmc+);
   background: -moz-linear-gradient(0deg, #35353a 0, #1d1d1d 100%);
@@ -5321,16 +5307,10 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0, rgba(255, 255, 255, 0.1)
   width: 351px;
 }
 .text-148 {
-  left: 1px;
-  position: absolute;
-  top: 1px;
   color: #909090;
   text-transform: uppercase;
 }
 .text-149 {
-  left: 275px;
-  position: absolute;
-  top: 0;
   color: #e5b877;
   font-family: Roboto, sans-serif;
   text-transform: uppercase;
@@ -5375,16 +5355,10 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0, rgba(255, 255, 255, 0.1)
   width: 351px;
 }
 .text-150 {
-  left: 1px;
-  position: absolute;
-  top: 1px;
   color: #909090;
   text-transform: uppercase;
 }
 .text-151 {
-  left: 274px;
-  position: absolute;
-  top: 0;
   color: #e5b877;
   font-family: Roboto, sans-serif;
   text-transform: uppercase;
