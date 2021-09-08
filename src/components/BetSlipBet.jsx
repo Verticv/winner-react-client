@@ -63,13 +63,15 @@ export default function BetSlipBet() {
                         />
                         <div className="bg-17"></div>
                     </div>
-                    <img
-                        className="x"
-                        src={require("../imagesHold/x.png").default}
-                        alt=""
-                        width="14"
-                        height="14"
-                    />
+                    <button onClick={() => console.log("delete a bet")}>
+                        <img
+                            className="x"
+                            src={require("../imagesHold/x.png").default}
+                            alt=""
+                            width="14"
+                            height="14"
+                        />
+                    </button>
                 </div>
             </div>
         </div>

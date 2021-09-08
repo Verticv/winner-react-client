@@ -186,6 +186,9 @@ export default function BetAmountInput() {
                                     style={{
                                         boxShadow:
                                             "rgb(255 244 162) -2px -9px 18px 0px inset",
+                                        display: "flex",
+                                        justifyContent: "center",
+                                        alignItems: "center",
                                     }}
                                 >
                                     <img
