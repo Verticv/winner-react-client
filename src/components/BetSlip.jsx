@@ -1,4 +1,5 @@
 import React from 'react'
+import BetAmount from './BetAmount';
 import BetSlipBets from './BetSlipBets';
 import BetSlipLayout from './BetSlipLayout';
 
@@ -9,14 +10,14 @@ export default function BetSlip() {
                 style={{
                     position: "relative",
                     width: "360px",
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "flex-start",
                 }}
             >
                 <div
                     style={{
                         height: "40px",
-                        left: "0",
-                        position: "absolute",
-                        top: "0",
                         width: "360px",
                         background:
                             "linear-gradient(90deg, #2c2c34 0, #24242a 100%)",
@@ -41,7 +42,7 @@ export default function BetSlip() {
                 </div>
                 <BetSlipLayout />
                 <BetSlipBets />
-                {/* <BetAmount /> */}
+                <BetAmount />
             </div>
             <div className="group-80">
                 <div className="group-81">

@@ -6,8 +6,6 @@ export default function BetAmount() {
     return (
         <div
             style={{
-                position: "absolute",
-                top: "81px",
                 display: "flex",
                 justifyContent: "flex-start",
                 flexDirection: "column",
