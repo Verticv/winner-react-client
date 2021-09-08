@@ -1,6 +1,6 @@
 import create from "zustand";
 import { createBetNavSlice } from "./createBetNavSlice";
-import { createBetSlipBetSlice } from "./createBetSlipBet";
+import { createBetSlipBetSlice } from "./createBetSlipBetSlice";
 import { createLeagueSlice } from "./createLeagueSlice";
 import { createLiveCardSlice } from "./createLiveCardSlice";
 import { createSingleMultiSlice } from "./createSingleMultiSlice";

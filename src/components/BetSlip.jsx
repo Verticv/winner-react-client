@@ -1,5 +1,4 @@
 import React from 'react'
-import BetAmount from './BetAmount';
 import BetSlipBets from './BetSlipBets';
 import BetSlipLayout from './BetSlipLayout';
 
@@ -42,7 +41,7 @@ export default function BetSlip() {
                 </div>
                 <BetSlipLayout />
                 <BetSlipBets />
-                <BetAmount />
+                {/* <BetAmount /> */}
             </div>
             <div className="group-80">
                 <div className="group-81">

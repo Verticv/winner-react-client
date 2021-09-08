@@ -12,7 +12,8 @@ export const createBetSlipBetSlice = (set, get) => ({
     removeBetSlipBet: (id) => {
         set(
             produce((state) => {
-                state.betSlipBets.splice(id, 1);
+                const index = state.betSlipBets.findIndex(item => item.id === id)
+                state.betSlipBets.splice(index, 1);
             })
         );
     },
