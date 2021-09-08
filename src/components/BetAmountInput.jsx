@@ -37,10 +37,10 @@ export default function BetAmountInput() {
                                 alignItems: "center",
                             }}
                         >
-                            <button
+                            <div
                                 className="bg-24"
                                 style={{ position: "absolute" }}
-                            ></button>
+                            ></div>
                             <div
                                 className="col-9"
                                 style={{

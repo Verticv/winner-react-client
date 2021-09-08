@@ -1,7 +1,6 @@
 import React from "react";
 import BetAmountDetails from "./BetAmountDetails";
 import BetAmountInput from "./BetAmountInput";
-import BetSlipBet from "./BetSlipBet";
 
 export default function BetAmount() {
     return (
@@ -14,7 +13,6 @@ export default function BetAmount() {
                 flexDirection: "column",
             }}
         >
-            <BetSlipBet />
             <div
                 style={{
                     display: "flex",

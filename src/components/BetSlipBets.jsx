@@ -13,8 +13,8 @@ export default function BetSlipBets() {
                 width: "360px",
             }}
         >
-            {betSlipBets.map(bet => {
-                return <BetSlipBet/>
+            {betSlipBets.map((bet, index) => {
+                return <BetSlipBet key={bet.id + index}/>
             })}
         </div>
     );
