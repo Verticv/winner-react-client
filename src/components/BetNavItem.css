@@ -58,7 +58,7 @@ display: none;
   text-decoration: none;
   overflow-x: hidden;
   color: #ffffff;
-  font-family: NotoSansCJKkr-Regular, sans-serif;
+  font-family: 'NotoSansCJKkr-Regular';
   font-size: 14px;
   font-style: normal;
   font-weight: normal;
@@ -3772,7 +3772,6 @@ html {
   position: absolute;
   top: 0;
   width: 28px;
-  border: 1px solid #ffffff; /*stroke*/
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -4528,7 +4527,6 @@ html {
   position: absolute;
   top: 0;
   width: 28px;
-  border: 1px solid #ffffff; /*stroke*/
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -4912,15 +4910,7 @@ html {
   position: absolute;
   top: 0;
   width: 179px;
-  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjEwMCUiIHgyPSI1MCUiIHkyPSIwJSI+CjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjEiIC8+CjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjEiIC8+CjwvbGluZWFyR3JhZGllbnQ+CjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjYmcpIiAvPjwvc3ZnPg==), #303035;
-  background: -moz-linear-gradient(90deg, rgba(0, 0, 0, 0.1) 0, rgba(255, 255, 255, 0.1) 100%), #303035;
-  background: -o-linear-gradient(90deg, rgba(0, 0, 0, 0.1) 0, rgba(255, 255, 255, 0.1) 100%), #303035;
-  background: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0.1) 0, rgba(255, 255, 255, 0.1) 100%), #303035;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgba(0, 0, 0, 0.1)), to(rgba(255, 255, 255, 0.1))), #303035;
-  background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.1) 0, rgba(255, 255, 255, 0.1) 100%), #303035;
-  background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.1) 0, rgba(255, 255, 255, 0.1) 100%), #303035;
-  background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.1) 0, rgba(255, 255, 255, 0.1) 100%), #303035;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0, rgba(255, 255, 255, 0.1) 100%), #303035;
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0, rgba(255, 255, 255, 0.1) 100%), #303035;
 }
 .bg-12 {
   height: 40px;
@@ -4928,7 +4918,6 @@ html {
   position: absolute;
   top: 0;
   width: 179px;
-  border: 1px solid #ffffff; /*stroke*/
 }
 .col-10 {
   height: 40px;
@@ -4976,7 +4965,6 @@ html {
   position: absolute;
   top: 0;
   width: 180px;
-  border: 1px solid #ffffff; /*stroke*/
 }
 .text-139 {
   left: 77px;
@@ -4987,6 +4975,8 @@ html {
   line-height: 40px;
   text-align: center;
   text-transform: uppercase;
+  font-family: 'NotoSansCJKkr-Regular';
+  font-size: 14px;
 }
 .group-65 {
   height: 163px;
@@ -5017,7 +5007,6 @@ html {
   position: absolute;
   top: 0;
   width: 360px;
-  border: 1px solid #ffffff; /*stroke*/
 }
 .line-46 {
   height: 1px;
@@ -5128,7 +5117,6 @@ html {
   position: absolute;
   top: 0;
   width: 360px;
-  border: 1px solid #ffffff; /*stroke*/
 }
 .bg-18 {
   left: -1px;
@@ -5233,15 +5221,9 @@ html {
   background: linear-gradient(90deg, #2a2a34 0, #1a1a20 100%);
 }
 .text-144 {
-  left: 9px;
-  position: absolute;
-  top: 9px;
   text-transform: uppercase;
 }
 .text-145 {
-  left: 272px;
-  position: absolute;
-  top: 8px;
   color: #e9ca4e;
   font-family: Roboto, sans-serif;
   font-size: 16px;
@@ -5273,25 +5255,17 @@ html {
   width: 348px;
 }
 .text-146 {
-  left: 1px;
-  position: absolute;
-  top: 1px;
   color: #909090;
   text-transform: uppercase;
 }
 .text-147 {
-  left: 304px;
-  position: absolute;
-  top: 0;
   color: #e5b877;
   font-family: Roboto, sans-serif;
   text-transform: uppercase;
 }
 .bg-21 {
   height: 1px;
-  left: 10px;
-  position: absolute;
-  top: 35px;
+  margin-left: 8px;
   width: 340px;
   background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9ImJnLTIxIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iNTAlIiB4Mj0iMTAwJSIgeTI9IjUwJSI+CjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzM1MzUzYSIgc3RvcC1vcGFjaXR5PSIxIiAvPgo8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxZDFkMWQiIHN0b3Atb3BhY2l0eT0iMSIgLz4KPC9saW5lYXJHcmFkaWVudD4KPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNiZy0yMSkiIC8+PC9zdmc+);
   background: -moz-linear-gradient(0deg, #35353a 0, #1d1d1d 100%);
@@ -5327,16 +5301,10 @@ html {
   width: 351px;
 }
 .text-148 {
-  left: 1px;
-  position: absolute;
-  top: 1px;
   color: #909090;
   text-transform: uppercase;
 }
 .text-149 {
-  left: 275px;
-  position: absolute;
-  top: 0;
   color: #e5b877;
   font-family: Roboto, sans-serif;
   text-transform: uppercase;
@@ -5381,16 +5349,10 @@ html {
   width: 351px;
 }
 .text-150 {
-  left: 1px;
-  position: absolute;
-  top: 1px;
   color: #909090;
   text-transform: uppercase;
 }
 .text-151 {
-  left: 274px;
-  position: absolute;
-  top: 0;
   color: #e5b877;
   font-family: Roboto, sans-serif;
   text-transform: uppercase;
@@ -5460,15 +5422,9 @@ html {
   background: linear-gradient(90deg, #2a2a34 0, #1a1a20 100%);
 }
 .text-154 {
-  left: 10px;
-  position: absolute;
-  top: 10px;
   text-transform: uppercase;
 }
 .text-155 {
-  left: 317px;
-  position: absolute;
-  top: 9px;
   color: #4195c1;
   font-family: Roboto, sans-serif;
   font-size: 16px;
@@ -5492,15 +5448,9 @@ html {
   background: linear-gradient(90deg, #2a2a34 0, #1a1a20 100%);
 }
 .text-156 {
-  left: 9px;
-  position: absolute;
-  top: 9px;
   text-transform: uppercase;
 }
 .text-157 {
-  left: 342px;
-  position: absolute;
-  top: 9px;
   color: #00ff05;
   font-family: Roboto, sans-serif;
   font-size: 16px;
@@ -5524,16 +5474,10 @@ html {
   background: linear-gradient(90deg, #2a2a34 0, #1a1a20 100%);
 }
 .text-158 {
-  left: 10px;
-  position: absolute;
-  top: 9px;
   text-transform: uppercase;
 }
 .row-26 {
   height: 31px;
-  left: 128px;
-  position: absolute;
-  top: 2px;
   width: 222px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -5542,16 +5486,10 @@ html {
 }
 .wrapper-9 {
   height: 29px;
-  left: 1px;
-  position: absolute;
-  top: 1px;
   width: 29px;
 }
 .bg-holder-85 {
   height: 29px;
-  left: 0;
-  position: absolute;
-  top: 0;
   width: 29px;
   -webkit-border-radius: 3.08px/3px;
   -moz-border-radius: 3.08px/3px;
@@ -5568,9 +5506,6 @@ html {
 }
 .bg-24 {
   height: 29px;
-  left: 0;
-  position: absolute;
-  top: 0;
   width: 29px;
   -webkit-border-radius: 3.08px/3px;
   -moz-border-radius: 3.08px/3px;
@@ -5587,9 +5522,6 @@ html {
 }
 .col-9 {
   height: 29px;
-  left: 0;
-  position: absolute;
-  top: 0;
   width: 29px;
   -webkit-border-radius: 3.08px/3px;
   -moz-border-radius: 3.08px/3px;
@@ -5629,9 +5561,6 @@ html {
   top: 5px;
 }
 .text-159 {
-  left: 204px;
-  position: absolute;
-  top: 7px;
   color: #e9ca4e;
   font-family: Roboto, sans-serif;
   font-size: 16px;
@@ -5639,10 +5568,8 @@ html {
   text-transform: uppercase;
 }
 .group-75 {
+
   height: 91px;
-  left: 0;
-  position: absolute;
-  top: 534px;
   width: 360px;
   background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iNTAlIiB4Mj0iMTAwJSIgeTI9IjUwJSI+CjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzFhMWEyMCIgc3RvcC1vcGFjaXR5PSIxIiAvPgo8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxNjE2MTYiIHN0b3Atb3BhY2l0eT0iMSIgLz4KPC9saW5lYXJHcmFkaWVudD4KPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNiZykiIC8+PC9zdmc+);
   background: -moz-linear-gradient(0deg, #1a1a20 0, #161616 100%);
@@ -5656,9 +5583,7 @@ html {
 }
 .group-76 {
   height: 69px;
-  left: 10px;
   position: absolute;
-  top: 10px;
   width: 340px;
 }
 .row-33 {
@@ -5695,7 +5620,6 @@ html {
   position: absolute;
   top: 0;
   width: 110px;
-  border: 1px solid #ffffff; /*stroke*/
   -webkit-border-radius: 3.36px/2.45px;
   -moz-border-radius: 3.36px/2.45px;
   border-radius: 3.36px/2.45px;
@@ -5759,7 +5683,6 @@ html {
   position: absolute;
   top: 0;
   width: 110px;
-  border: 1px solid #ffffff; /*stroke*/
   -webkit-border-radius: 3.36px/2.45px;
   -moz-border-radius: 3.36px/2.45px;
   border-radius: 3.36px/2.45px;
@@ -5823,7 +5746,6 @@ html {
   position: absolute;
   top: 0;
   width: 110px;
-  border: 1px solid #ffffff; /*stroke*/
   -webkit-border-radius: 3.36px/2.45px;
   -moz-border-radius: 3.36px/2.45px;
   border-radius: 3.36px/2.45px;
@@ -5894,7 +5816,6 @@ html {
   position: absolute;
   top: 0;
   width: 110px;
-  border: 1px solid #ffffff; /*stroke*/
   -webkit-border-radius: 3.36px/2.45px;
   -moz-border-radius: 3.36px/2.45px;
   border-radius: 3.36px/2.45px;
@@ -5958,7 +5879,6 @@ html {
   position: absolute;
   top: 0;
   width: 110px;
-  border: 1px solid #ffffff; /*stroke*/
   -webkit-border-radius: 3.36px/2.45px;
   -moz-border-radius: 3.36px/2.45px;
   border-radius: 3.36px/2.45px;
@@ -6072,7 +5992,6 @@ html {
   position: absolute;
   top: 0;
   width: 110px;
-  border: 1px solid #ffffff; /*stroke*/
   -webkit-border-radius: 3.36px/2.45px;
   -moz-border-radius: 3.36px/2.45px;
   border-radius: 3.36px/2.45px;
@@ -6133,7 +6052,6 @@ html {
   position: absolute;
   top: 0;
   width: 165px;
-  border: 1px solid #ffffff; /*stroke*/
   -webkit-border-radius: 3.02px/3.56px;
   -moz-border-radius: 3.02px/3.56px;
   border-radius: 3.02px/3.56px;
@@ -6267,7 +6185,6 @@ html {
   position: absolute;
   top: 0;
   width: 165px;
-  border: 1px solid #ffffff; /*stroke*/
   -webkit-border-radius: 3.02px/3.56px;
   -moz-border-radius: 3.02px/3.56px;
   border-radius: 3.02px/3.56px;
@@ -6448,7 +6365,6 @@ html {
   position: absolute;
   top: 0;
   width: 65px;
-  border: 1px solid #ffffff; /*stroke*/
   -webkit-border-radius: 3.08px/3px;
   -moz-border-radius: 3.08px/3px;
   border-radius: 3.08px/3px;
@@ -6550,7 +6466,6 @@ html {
   position: absolute;
   top: 0;
   width: 360px;
-  border: 1px solid #ffffff; /*stroke*/
 }
 .line-49 {
   height: 1px;
@@ -6618,7 +6533,6 @@ html {
   position: absolute;
   top: 0;
   width: 360px;
-  border: 1px solid #ffffff; /*stroke*/
 }
 .line-50 {
   height: 1px;
@@ -6917,7 +6831,6 @@ html {
   position: absolute;
   top: 0;
   width: 340px;
-  border: 1px solid #ffffff; /*stroke*/
   -webkit-border-radius: 3.02px/3.56px;
   -moz-border-radius: 3.02px/3.56px;
   border-radius: 3.02px/3.56px;

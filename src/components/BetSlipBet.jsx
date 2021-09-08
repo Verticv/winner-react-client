@@ -2,8 +2,22 @@ import React from 'react'
 
 export default function BetSlipBet() {
     return (
-        <div className="bg-holder-79">
-            <div className="bg-holder-80">
+        <div
+            style={{
+                height: "81px",
+                width: "360px",
+                background: "linear-gradient(90deg, #43434f 0, #2a2a34 100%)",
+            }}
+        >
+            <div
+                style={{
+                    height: "81px",
+                    left: "0",
+                    position: "absolute",
+                    top: "0",
+                    width: "360px",
+                }}
+            >
                 <div className="line-46"></div>
                 <img
                     className="bg-14"

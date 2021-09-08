@@ -1,5 +1,6 @@
 import create from "zustand";
 import { createBetNavSlice } from "./createBetNavSlice";
+import { createBetSlipBetSlice } from "./createBetSlipBet";
 import { createLeagueSlice } from "./createLeagueSlice";
 import { createLiveCardSlice } from "./createLiveCardSlice";
 import { createSingleMultiSlice } from "./createSingleMultiSlice";
@@ -11,6 +12,7 @@ const useStore = create((set, get) => ({
     ...createLiveCardSlice(set, get),
     ...createSingleMultiSlice(set, get),
     ...createBetNavSlice(set, get),
+    ...createBetSlipBetSlice(set, get),
 }));
 
 export default useStore
