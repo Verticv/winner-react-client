@@ -9,10 +9,7 @@ import ARHover from './ARHover'
 const NavbarHover = ({selection, setHoveredTab}) => {
 
     return (
-        <div 
-            // className={`${selection && "w-full"} ${selection === 0 ? "h-340px" : "h-244px"}`} 
-            onMouseLeave={() => setHoveredTab(false)}
-        >
+        <div onMouseLeave={() => setHoveredTab(false)}>
             <LiveCasinoHover selection={selection}/>
             <SlotGameHover selection={selection}/>
             <SportsHover selection={selection}/>

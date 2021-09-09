@@ -20,6 +20,7 @@ import ArrowUp from '../../images/myPage/leftMenu/arr_up.png'
 import { useHistory } from 'react-router-dom'
 import PopupControls from '../popups/PopupControls'
 import ReauthenticatePopup from 'components/popups/ReauthenticatePopup'
+import Expand from 'react-expand-animated'
 
 const LeftMenu = ({
     selectedTab,
@@ -30,6 +31,7 @@ const LeftMenu = ({
 
     const history = useHistory();
     const [isPopupOpen, setPopupOpen] = useState(true)
+    const [isExpanded, setExpanded] = useState(window.location.pathname + "closed")
 
     const tabsArray = [
         { text: "베팅내역", icon: Icon1, iconHighlight: IconHighlight1, id: 0, path: "/mypage/bet-history" },
@@ -81,8 +83,14 @@ const LeftMenu = ({
         history.push(path)
         setSelectedTab(path)
         setSelectedSubTab(path)
+        
+        if (isExpanded === path) {
+            setExpanded(path + "closed")
+        } else {
+            setExpanded(path)
+        }
     }
-
+      
     const EditProfileButton = ({path, text, icon, iconHighlight, selectedTab}) => (
         <button 
             className={`${
@@ -181,58 +189,72 @@ const LeftMenu = ({
                                     )}
                                     </div>
                                     {item.sub1 && (
-                                        <img src={(selectedTab === item.path || selectedTab === item.path2 || selectedTab === item.path3) ? ArrowUp : ArrowDown} alt="" />
+                                        <img 
+                                            className={isExpanded === item.path + "closed" && "transform rotate-180"} 
+                                            src={
+                                                isExpanded === item.path + "closed"
+                                                ? ArrowUp 
+                                                : (selectedTab === item.path || selectedTab === item.path2 || selectedTab === item.path3) 
+                                                ? ArrowUp 
+                                                : ArrowDown
+                                            } 
+                                            alt="" 
+                                        />
                                     )}
                             </div>
                         </button>
-                        {(selectedTab === item.path || selectedTab === item.path2 || selectedTab === item.path3) &&(
-                            <div className="font-spoqaMedium text-16px cursor-pointer tracking-tight mt-px">
-                                {item.sub1 && (
-                                        <button 
-                                            onClick={() => {
-                                                setSelectedSubTab(item.path)
-                                                history.push(item.path)
-                                            }}
-                                            className={`${
-                                                selectedSubTab === item.path
-                                                ? "bg-blue-d0e8ff text-gray-r454545" 
-                                                : "bg-gray-f9f9f9 text-gray-r8c8c8c"
-                                            } flex items-center h-45px w-full  pl-60px`}>
-                                                {item.sub1}
-                                        </button>
-                                )}
-                                {item.sub2 && (
-                                    <button 
-                                        onClick={() => {
-                                            setSelectedSubTab(item.path2)
-                                            setSelectedTab(item.path2)
-                                            history.push(item.path2)
-                                        }}
-                                        className={`${
-                                            selectedSubTab === item.path2
-                                            ? "bg-blue-d0e8ff text-gray-r454545" 
-                                            : "bg-gray-f9f9f9 text-gray-r8c8c8c"
-                                        } flex items-center h-45px w-full bg-gray-f9f9f9 pl-60px`}>
-                                            {item.sub2}
-                                    </button>
-                                )}
-                                {item.sub3 && (
-                                    <button 
-                                        onClick={() => {
-                                            setSelectedSubTab(item.path3)
-                                            setSelectedTab(item.path3)
-                                            history.push(item.path3)
-                                        }}
-                                        className={`${
-                                            selectedSubTab === item.path3
-                                            ? "bg-blue-d0e8ff text-gray-r454545" 
-                                            : "bg-gray-f9f9f9 text-gray-r8c8c8c"
-                                        } flex items-center h-45px w-full bg-gray-f9f9f9 pl-60px`}>
-                                            {item.sub3}
-                                    </button>
-                                )}
-                            </div>
-                        )}
+                            
+                        <Expand 
+                            open={isExpanded === item.path} 
+                            duration={1000} 
+                            className="font-spoqaMedium text-16px cursor-pointer tracking-tight mt-px"
+                        >
+                            {item.sub1 && (
+                                <button 
+                                    onClick={() => {
+                                        setSelectedSubTab(item.path)
+                                        history.push(item.path)
+                                    }}
+                                    className={`${
+                                        selectedSubTab === item.path
+                                        ? "bg-blue-d0e8ff text-gray-r454545" 
+                                        : "bg-gray-f9f9f9 text-gray-r8c8c8c"
+                                    } flex items-center h-45px w-full  pl-60px`}>
+                                        {item.sub1}
+                                </button>
+                            )}
+                            {item.sub2 && (
+                                <button 
+                                    onClick={() => {
+                                        setSelectedSubTab(item.path2)
+                                        setSelectedTab(item.path2)
+                                        history.push(item.path2)
+                                    }}
+                                    className={`${
+                                        selectedSubTab === item.path2
+                                        ? "bg-blue-d0e8ff text-gray-r454545" 
+                                        : "bg-gray-f9f9f9 text-gray-r8c8c8c"
+                                    } flex items-center h-45px w-full bg-gray-f9f9f9 pl-60px`}>
+                                        {item.sub2}
+                                </button>
+                            )}
+                            {item.sub3 && (
+                                <button 
+                                    onClick={() => {
+                                        setSelectedSubTab(item.path3)
+                                        setSelectedTab(item.path3)
+                                        history.push(item.path3)
+                                    }}
+                                    className={`${
+                                        selectedSubTab === item.path3
+                                        ? "bg-blue-d0e8ff text-gray-r454545" 
+                                        : "bg-gray-f9f9f9 text-gray-r8c8c8c"
+                                    } flex items-center h-45px w-full bg-gray-f9f9f9 pl-60px`}>
+                                        {item.sub3}
+                                </button>
+                            )}
+                        </Expand>
+
                     </div>
                 )}
                 
