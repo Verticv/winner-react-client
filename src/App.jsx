@@ -5,6 +5,7 @@ import { Switch, Route } from "react-router-dom";
 import MyPage from "pages/MyPage";
 import DistributorPage from "pages/DistributorPage";
 import BetPage from "pages/BetPage";
+import AttendPage from "pages/AttendPage";
 
 
 function App() {
@@ -28,6 +29,9 @@ function App() {
                 </Route>
                 <Route path="/distributor-page">
                     <DistributorPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
+                </Route>
+                <Route path="/attendance">
+                    <AttendPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
                 </Route>
                 <Route path="*">
                     <MainPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />

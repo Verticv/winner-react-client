@@ -79,8 +79,8 @@ const Menus = () => {
                 optionIconHighlight2={ManageInboxIconHighlight}
                 optionIconHighlight3={ManageProfileIconHighlight}
                 extraIconCss="w-43px h-52px mr-6px -mb-px"
-                path1=""
-                path2=""
+                path1="/attendance"
+                path2="/mypage/inbox"
                 path3=""
             />
             <MenuCard 
