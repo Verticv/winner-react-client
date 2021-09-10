@@ -6,6 +6,7 @@ import MyPage from "pages/MyPage";
 import DistributorPage from "pages/DistributorPage";
 import BetPage from "pages/BetPage";
 import AttendPage from "pages/AttendPage";
+import MoneyPage from "pages/MoneyPage";
 
 
 function App() {
@@ -32,6 +33,9 @@ function App() {
                 </Route>
                 <Route path="/attendance">
                     <AttendPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
+                </Route>
+                <Route path="/money">
+                    <MoneyPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
                 </Route>
                 <Route path="*">
                     <MainPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />

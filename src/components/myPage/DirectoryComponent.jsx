@@ -22,7 +22,20 @@ const DirectoryComponent = ({
         } else if (branch1 === "출석부") {
             history.push("/attendance")
             setSelectedTab("/attendance")
+        } else if (branch1 === "충전/환전") {
+            history.push("/money/charge")
+            setSelectedTab("/money/charge")
         }
+    }
+
+    function branch2Clicked(branch2) {
+        if (setSelectedSubTab !== null) {
+            setSelectedSubTab(branch2)
+        }
+        if (setSelectedTab !== null) {
+            setSelectedTab(branch2)
+        }
+        history.push(branch2)
     }
 
     return (
@@ -44,11 +57,7 @@ const DirectoryComponent = ({
                             ? "font-spoqaBold text-gray-393e41" 
                             : "font-spoqaBold text-gray-r7c7c7c"
                             } text-13px tracking-tight cursor-pointer`}
-                        onClick={() => {
-                            history.push(mainPath)
-                            setSelectedTab(mainPath)
-                            setSelectedSubTab(mainPath)
-                        }}
+                        onClick={() => branch2Clicked(mainPath)}
                         >
                             {branch2}
                         </span>

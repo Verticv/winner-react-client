@@ -45,7 +45,7 @@ const Menus = () => {
                 optionIconHighlight2={ExchangeIconHighlight}
                 optionIconHighlight3={PointExchangeIconHighlight}
                 extraIconCss="w-49px h-47px mb-2px"
-                path1=""
+                path1="/money/charge"
                 path2=""
                 path3=""
             />
