@@ -1,4 +1,5 @@
-import React from 'react'
+import React from "react";
+import BetId from "./BetId";
 
 export default function MyBets() {
     return (
@@ -56,12 +57,7 @@ export default function MyBets() {
                     </div>
                 </div>
             </div>
-            <div className="group-82">
-                <p className="text-170">
-                    <span className="colorffffff">ID : </span>186123533
-                </p>
-                <p className="text-171">2020-05-16 03:45:11</p>
-            </div>
+            <BetId />
             <div className="group-83">
                 <div className="bg-holder-98">
                     <div className="line-49"></div>
