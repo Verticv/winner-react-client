@@ -2,6 +2,7 @@ import MyPageTitle from 'components/myPage/MyPageTitle'
 import Pagination from 'components/myPage/Pagination'
 import React, { useState } from 'react'
 import AlertIcon from '../../images/myPage/alert.png'
+import BankTable from './BankTable'
 
 const MoneyExchange = () => {
     
@@ -38,7 +39,7 @@ const MoneyExchange = () => {
                 <Pagination page={page} setPage={setPage}/>   
             </div>
 
-            <div style={{height: "344px"}} className="w-full rounded-2xl border border-gray-dddddd mb-60px -mt-20px" ></div>
+            <BankTable />
         </div>
     )
 }

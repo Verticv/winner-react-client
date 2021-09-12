@@ -411,7 +411,10 @@ module.exports = {
         },
         orange: {
           ff7e00: '#ff7e00',
-          e39e90: '#e39e90'
+          e39e90: '#e39e90',
+          ff7a45: '#ff7a45',
+          e9441d: '#e9441d',
+          f56032: '#f56032'
         },
         teal: {
           r4eb2ba: '#4eb2ba'
