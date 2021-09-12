@@ -1,5 +1,6 @@
 import React from "react";
 import BetId from "./BetId";
+import BetSlipMyBets from "./BetSlipMyBets";
 
 export default function MyBets() {
     return (
@@ -58,89 +59,7 @@ export default function MyBets() {
                 </div>
             </div>
             <BetId />
-            <div className="group-83">
-                <div className="bg-holder-98">
-                    <div className="line-49"></div>
-                    <img
-                        className="bg-46"
-                        src={require("../imagesHold/bg_90.png").default}
-                        alt=""
-                        width="185"
-                        height="1"
-                    />
-                    <img
-                        className="bg-47"
-                        src={require("../imagesHold/bg_91.png").default}
-                        alt=""
-                        width="1"
-                        height="51"
-                    />
-                    <img
-                        className="bg-48"
-                        src={require("../imagesHold/bg_92.png").default}
-                        alt=""
-                        width="360"
-                        height="28"
-                    />
-                    <img
-                        className="bg-49"
-                        src={require("../imagesHold/bg_59.png").default}
-                        alt=""
-                        width="360"
-                        height="12"
-                    />
-                    <p className="text-172">
-                        <span className="colorffffff">FC바로셀로나 </span>
-                        <span className="colorc49f58">VS</span>
-                        <span className="colorffffff"> 레알마드리드</span>
-                        <br />
-                        승무패(홈) - FC바로셀로나{" "}
-                        <span className="color4195c1">5.01</span>
-                    </p>
-                </div>
-            </div>
-            <div className="group-84">
-                <div className="bg-holder-99">
-                    <div className="line-50"></div>
-                    <img
-                        className="bg-50"
-                        src={require("../imagesHold/bg_90.png").default}
-                        alt=""
-                        width="203"
-                        height="1"
-                    />
-                    <img
-                        className="bg-51"
-                        src={require("../imagesHold/bg_91.png").default}
-                        alt=""
-                        width="1"
-                        height="59"
-                    />
-                    <img
-                        className="bg-52"
-                        src={require("../imagesHold/bg_92.png").default}
-                        alt=""
-                        width="360"
-                        height="48"
-                    />
-                    <img
-                        className="bg-53"
-                        src={require("../imagesHold/bg_59.png").default}
-                        alt=""
-                        width="360"
-                        height="12"
-                    />
-                    <p className="text-173">
-                        맨체스터유나이티드{" "}
-                        <span className="colorc49f58">VS</span> 리버풀
-                        <br />
-                        <span className="colore5b877">
-                            승무패(원정) - 리버풀
-                        </span>{" "}
-                        <span className="color4195c1">3.75</span>
-                    </p>
-                </div>
-            </div>
+            <BetSlipMyBets/>
             <div className="group-85">
                 <div className="row-25">
                     <p className="text-174">배당률</p>
