@@ -9,9 +9,6 @@ export default function BetSlipLayout() {
         <div
             style={{
                 height: "40px",
-                left: "0",
-                position: "absolute",
-                top: "41px",
                 width: "360px",
             }}
         >
@@ -19,9 +16,7 @@ export default function BetSlipLayout() {
                 onClick={() => changeSingleOrMulti(singleOrMultiOptions.single)}
                 style={{
                     height: "40px",
-                    left: "0",
                     position: "absolute",
-                    top: "0",
                     width: "179px",
                     background: "#1d1e22",
                 }}
@@ -68,7 +63,6 @@ export default function BetSlipLayout() {
                     height: "40px",
                     left: "180px",
                     position: "absolute",
-                    top: "0",
                     width: "180px",
                     background: "#1d1e22",
                     display: "flex",

@@ -190,7 +190,7 @@ export default function LiveMatchCard({ matchCard }) {
                     parentSelected={selected}
                 />
             </div>
-            <LiveMatchCardButton />
+            <LiveMatchCardButton matchCard={matchCard} />
             <div className="f-4">
                 <div className="s-4">
                     <img

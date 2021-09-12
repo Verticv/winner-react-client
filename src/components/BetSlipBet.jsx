@@ -1,6 +1,8 @@
 import React from 'react'
+import useStore from 'store/useStore';
 
-export default function BetSlipBet() {
+export default function BetSlipBet({ bet }) {
+    const removeBetSlipBet = useStore((s) => s.removeBetSlipBet);
     return (
         <div
             style={{
@@ -14,7 +16,6 @@ export default function BetSlipBet() {
                     height: "81px",
                     left: "0",
                     position: "absolute",
-                    top: "0",
                     width: "360px",
                 }}
             >
@@ -63,13 +64,15 @@ export default function BetSlipBet() {
                         />
                         <div className="bg-17"></div>
                     </div>
-                    <img
-                        className="x"
-                        src={require("../imagesHold/x.png").default}
-                        alt=""
-                        width="14"
-                        height="14"
-                    />
+                    <button onClick={() => removeBetSlipBet(bet.id)}>
+                        <img
+                            className="x"
+                            src={require("../imagesHold/x.png").default}
+                            alt=""
+                            width="14"
+                            height="14"
+                        />
+                    </button>
                 </div>
             </div>
         </div>

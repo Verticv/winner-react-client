@@ -1,7 +1,9 @@
 import jss from "jss";
 import React from "react";
+import useStore from "store/useStore";
 
-export default function LiveMatchCardButton() {
+export default function LiveMatchCardButton({matchCard}) {
+    const addBetSlipBet = useStore(s =>s.addBetSlipBet)
     const styles = {
         buttonContainer: {
             height: "145px",
@@ -29,6 +31,7 @@ export default function LiveMatchCardButton() {
     const { classes } = jss.createStyleSheet(styles).attach();
     const handlePlusButton = (event) => {
         event.stopPropagation();
+        addBetSlipBet(matchCard);
     };
     return (
         <button onClick={handlePlusButton} className={classes.buttonContainer}>

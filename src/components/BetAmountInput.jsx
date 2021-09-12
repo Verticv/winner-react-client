@@ -25,7 +25,10 @@ export default function BetAmountInput() {
                         paddingRight: "10px",
                     }}
                 >
-                    <div className="wrapper-9">
+                    <button
+                        onClick={() => console.log("Refresh")}
+                        className="wrapper-9"
+                    >
                         <div
                             className="bg-holder-85"
                             style={{
@@ -34,10 +37,10 @@ export default function BetAmountInput() {
                                 alignItems: "center",
                             }}
                         >
-                            <button
+                            <div
                                 className="bg-24"
                                 style={{ position: "absolute" }}
-                            ></button>
+                            ></div>
                             <div
                                 className="col-9"
                                 style={{
@@ -57,7 +60,7 @@ export default function BetAmountInput() {
                                 />
                             </div>
                         </div>
-                    </div>
+                    </button>
                     <p className="text-159">0</p>
                 </div>
             </div>
@@ -75,7 +78,10 @@ export default function BetAmountInput() {
                     }}
                 >
                     <div className="row-33">
-                        <div className="wrapper-29">
+                        <button
+                            onClick={() => console.log("5,000")}
+                            className="wrapper-29"
+                        >
                             <div className="bg-holder-86"></div>
                             <div className="col-3">
                                 <img
@@ -90,8 +96,11 @@ export default function BetAmountInput() {
                                 />
                                 <p className="text-160">5,000</p>
                             </div>
-                        </div>
-                        <div className="wrapper-30">
+                        </button>
+                        <button
+                            onClick={() => console.log("10,000")}
+                            className="wrapper-30"
+                        >
                             <div className="bg-holder-87"></div>
                             <div className="col-4">
                                 <img
@@ -106,8 +115,11 @@ export default function BetAmountInput() {
                                 />
                                 <p className="text-161">10,000</p>
                             </div>
-                        </div>
-                        <div className="wrapper-31">
+                        </button>
+                        <button
+                            onClick={() => console.log("50,000")}
+                            className="wrapper-31"
+                        >
                             <div className="bg-holder-88"></div>
                             <div className="col-5">
                                 <img
@@ -122,10 +134,13 @@ export default function BetAmountInput() {
                                 />
                                 <p className="text-162">50,000</p>
                             </div>
-                        </div>
+                        </button>
                     </div>
                     <div className="row-34">
-                        <div className="wrapper-32">
+                        <button
+                            onClick={() => console.log("100,000")}
+                            className="wrapper-32"
+                        >
                             <div className="bg-holder-89"></div>
                             <div className="col-6">
                                 <img
@@ -140,8 +155,11 @@ export default function BetAmountInput() {
                                 />
                                 <p className="text-163">100,000</p>
                             </div>
-                        </div>
-                        <div className="wrapper-33">
+                        </button>
+                        <button
+                            onClick={() => console.log("1,000,000")}
+                            className="wrapper-33"
+                        >
                             <div className="bg-holder-90"></div>
                             <div className="col-7">
                                 <img
@@ -156,8 +174,11 @@ export default function BetAmountInput() {
                                 />
                                 <p className="text-164">1,000,000</p>
                             </div>
-                        </div>
-                        <div className="wrapper-34">
+                        </button>
+                        <button
+                            onClick={() => console.log("maximum")}
+                            className="wrapper-34"
+                        >
                             <div className="bg-holder-91"></div>
                             <div className="bg-holder-92">
                                 <div
@@ -165,6 +186,9 @@ export default function BetAmountInput() {
                                     style={{
                                         boxShadow:
                                             "rgb(255 244 162) -2px -9px 18px 0px inset",
+                                        display: "flex",
+                                        justifyContent: "center",
+                                        alignItems: "center",
                                     }}
                                 >
                                     <img
@@ -180,7 +204,7 @@ export default function BetAmountInput() {
                                     <p className="text-165">최대</p>
                                 </div>
                             </div>
-                        </div>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -197,7 +221,10 @@ export default function BetAmountInput() {
                     marginTop: "2px",
                 }}
             >
-                <div className="wrapper-2">
+                <button
+                    onClick={() => console.log("Cancel All")}
+                    className="wrapper-2"
+                >
                     <div className="bg-holder-93">
                         <div className="bg-38"></div>
                     </div>
@@ -220,8 +247,11 @@ export default function BetAmountInput() {
                             <p className="text-166">전체취소</p>
                         </div>
                     </div>
-                </div>
-                <div className="wrapper-3">
+                </button>
+                <button
+                    onClick={() => console.log("Place a bet")}
+                    className="wrapper-3"
+                >
                     <div className="bg-holder-94">
                         <div className="bg-40"></div>
                     </div>
@@ -247,7 +277,7 @@ export default function BetAmountInput() {
                             <p className="text-167">베팅하기</p>
                         </div>
                     </div>
-                </div>
+                </button>
             </div>
         </div>
     );
