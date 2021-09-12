@@ -59,29 +59,29 @@ export default function MyBets() {
                 </div>
             </div>
             <BetId />
-            <BetSlipMyBets/>
+            <BetSlipMyBets />
             <div className="group-85">
                 <div className="row-25">
                     <p className="text-174">배당률</p>
                     <p className="text-175">6.10</p>
                 </div>
-                <div className="bg-54"></div>
             </div>
+            <div className="bg-54"></div>
             <div className="group-86">
                 <div className="row-24">
                     <p className="text-176">베팅금액</p>
                     <p className="text-177">30,000</p>
                 </div>
-                <div className="bg-55"></div>
             </div>
+            <div className="bg-54"></div>
             <div className="group-87">
                 <div className="row-23">
                     <p className="text-178">적중금액</p>
                     <p className="text-179">베팅대기중</p>
                     <p className="text-180">183,000</p>
                 </div>
-                <div className="bg-56"></div>
             </div>
+            <div className="bg-54"></div>
             <div className="group-88">
                 <div className="bg-holder-100">
                     <div className="bg-57"></div>
