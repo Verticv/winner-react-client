@@ -4,7 +4,6 @@ import ArrowUp from '../../images/myPage/leftMenu/arr_up.png'
 import { useHistory } from 'react-router-dom'
 import PopupControls from '../popups/PopupControls'
 import ReauthenticatePopup from 'components/popups/ReauthenticatePopup'
-import Expand from 'react-expand-animated'
 
 const LeftMenu = ({
     selectedTab,
@@ -42,7 +41,7 @@ const LeftMenu = ({
                 selectedTab === path
                 ? "bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2" 
                 : "bg-white"
-            } flex w-full items-center p-5px h-52px rounded-full`} 
+            } flex w-full items-center p-5px h-53px rounded-full`} 
             onClick={(e) => {
                 buttonPressed(path)
                 setPopupOpen(true)
@@ -74,7 +73,7 @@ const LeftMenu = ({
         return items.map(item => (
 
             <div key={item.id}>
-                {item.id === 7 ? (
+                {item.text === "회원정보수정" ? (
                     <PopupControls 
                         buttonChild={(
                             <EditProfileButton 
@@ -99,7 +98,7 @@ const LeftMenu = ({
                                 : "bg-white"
                             } flex w-full items-center p-5px h-53px rounded-full`} 
                             onClick={(e) => {
-                                item.id !== 2 ? (
+                                item.text !== "총판페이지" ? (
                                     buttonPressed(item.path)
                                 ) : (
                                     openTab()
@@ -149,11 +148,7 @@ const LeftMenu = ({
                             </div>
                         </button>
                             
-                        <Expand 
-                            open={isExpanded === item.path} 
-                            duration={1000} 
-                            className="font-spoqaMedium text-16px cursor-pointer tracking-tight mt-px"
-                        >
+                        <div className={`${isExpanded === item.path ? "" : "hidden"} font-spoqaMedium text-16px cursor-pointer tracking-tight mt-px`} >
                             {item.sub1 && (
                                 <button 
                                     onClick={() => {
@@ -194,11 +189,11 @@ const LeftMenu = ({
                                         selectedSubTab === item.path3
                                         ? "bg-blue-d0e8ff text-gray-r454545" 
                                         : "bg-gray-f9f9f9 text-gray-r8c8c8c"
-                                    } flex items-center h-45px w-full bg-gray-f9f9f9 pl-60px`}>
+                                    } ${item.sub3 === "가상게임" && "rounded-b-3xl"} flex items-center h-45px w-full bg-gray-f9f9f9 pl-60px`}>
                                         {item.sub3}
                                 </button>
                             )}
-                        </Expand>
+                        </div>
 
                     </div>
                 )}

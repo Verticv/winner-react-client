@@ -25,6 +25,10 @@ const DirectoryComponent = ({
         } else if (branch1 === "충전/환전") {
             history.push("/money/charge")
             setSelectedTab("/money/charge")
+        } else if (branch1 === "고객센터") {
+            history.push("/cscenter/contact")
+            setSelectedTab("/cscenter/contact")
+
         }
     }
 

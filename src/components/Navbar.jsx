@@ -47,7 +47,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
         { text: "경기결과", id: 8 },
         { text: "라이브영상", id: 9 },
         { text: "게시판", id: 10 },
-        { text: "고객센터", id: 11 },
+        { text: "고객센터", id: 11, path: "/cscenter/contact" },
     ];
 
     function TabsList({ items }) {
@@ -55,7 +55,10 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
             <button 
                 key={item.id} 
                 className={selectedTab === item.id ? selectedTabClass : tabClass} 
-                onClick={() => setSelectedTab(item.id)}
+                onClick={() => {
+                    setSelectedTab(item.id)
+                    history.push(item.path)
+                }}
                 onMouseOver={() => {
                     setHoveredTab(item.id)
                     setSelectedTab(item.id)

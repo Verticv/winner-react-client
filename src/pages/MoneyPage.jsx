@@ -10,14 +10,16 @@ import React, { useState } from 'react'
 import { Route, useLocation } from 'react-router'
 import MoneyChargeBanner from '../images/money/money_charge.png'
 import MoneyExchangeBanner from '../images/money/money_exchange.png'
-import Icon1 from '../images/myPage/leftMenu/icon_1.png'
-import IconHighlight1 from '../images/myPage/leftMenu/icon_1_highlight.png'
+import Icon1 from '../images/money/leftMenu/icon_1.png'
+import Icon2 from '../images/money/leftMenu/icon_2.png'
+import IconHighlight1 from '../images/money/leftMenu/icon_1_highlight.png'
+import IconHighlight2 from '../images/money/leftMenu/icon_2_highlight.png'
 
 const MoneyPage = ({isAuthenticated, setAuthenticated}) => {
 
     const LeftMenuArray = [
         { text: "보유머니 충전", icon: Icon1, iconHighlight: IconHighlight1, id: 0, path: "/money/charge" },
-        { text: "보유머니 환전", icon: Icon1, iconHighlight: IconHighlight1, id: 1, path: "/money/exchange" },
+        { text: "보유머니 환전", icon: Icon2, iconHighlight: IconHighlight2, id: 1, path: "/money/exchange" },
     ]
 
     const location = useLocation();
