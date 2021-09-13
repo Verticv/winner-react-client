@@ -46,8 +46,8 @@ const Menus = () => {
                 optionIconHighlight3={PointExchangeIconHighlight}
                 extraIconCss="w-49px h-47px mb-2px"
                 path1="/money/charge"
-                path2=""
-                path3=""
+                path2="/money/exchange"
+                path3="/mypage/points-apply"
             />
             <MenuCard 
                 mainIcon={MenuIcon} 
@@ -64,7 +64,7 @@ const Menus = () => {
                 extraIconCss="w-41px h-50px mr-6px mb-px"
                 path1="/mypage/bet-history"
                 path2="/mypage/charge-history"
-                path3="/mypage/points-apply"
+                path3="/mypage/points-accumulate-history"
             />
             <MenuCard 
                 mainIcon={MyMenuIcon} 

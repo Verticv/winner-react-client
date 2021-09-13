@@ -3,6 +3,8 @@ import Shadow from '../images/menu/shadow.png'
 import WhiteArrow from '../images/arrows/right_arrow_white.png'
 import GrayArrow from '../images/arrows/right_arrow_gray.png'
 import { useHistory } from 'react-router-dom'
+import PopupControls from './popups/PopupControls'
+import ReauthenticatePopup from './popups/ReauthenticatePopup'
 
 const MenuCard = ({ 
     mainIcon, 
@@ -24,6 +26,7 @@ const MenuCard = ({
     const history = useHistory();
 
     const [selectedTab, setSelectedTab] = useState()
+    const [isPopupOpen, setPopupOpen] = useState(true)
 
     const tabClass = "relative w-full border-b-1 border-gray-d5d5d5 h-59px p-6px z-20"
     const selectedTabClass = "relative w-full h-59px bg-blue-r009edf shadow-plain2 p-6px z-20"
@@ -36,26 +39,55 @@ const MenuCard = ({
 
     function MenuList({ items }) {
         return items.map(item => (
-            <button 
-                key={item.id} 
-                className={`${item.selectedCss} ${selectedTab === item.id ? selectedTabClass : tabClass}`}
-                onMouseDown={() => setSelectedTab(item.id)}
-                onMouseUp={() => {
-                    setSelectedTab(false)
-                    history.push(item.path)
-                }}
-            >
-                {selectedTab !== item.id && item.id !== 0 && (<div className="absolute top-0 left-0 h-px w-full bg-white"></div>)} 
-                <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-10px">
-                        <div className={selectedTab === item.id ? "rounded-full shadow-plain" : "rounded-full"}>
-                            <img className="w-full h-full" src={selectedTab === item.id ? item.iconHighlight : item.icon} alt="meunIcon" />
+            <>
+            {item.text === "회원정보수정" ? (
+                <PopupControls 
+                    buttonChild={(
+                        <button 
+                            key={item.id} 
+                            className={`${item.selectedCss} ${selectedTab === item.id ? selectedTabClass : tabClass}`}
+                        >
+                            {selectedTab !== item.id && item.id !== 0 && (<div className="absolute top-0 left-0 h-px w-full bg-white"></div>)} 
+                            <div className="flex items-center justify-between">
+                                <div className="flex items-center space-x-10px">
+                                    <div className={selectedTab === item.id ? "rounded-full shadow-plain" : "rounded-full"}>
+                                        <img className="w-full h-full" src={selectedTab === item.id ? item.iconHighlight : item.icon} alt="meunIcon" />
+                                    </div>
+                                    <label className={`cursor-pointer text-16px font-spoqaMedium tracking-tight pt-px ${selectedTab === item.id ? "text-white" : "text-gray-text"}`}>{item.text}</label>
+                                </div>
+                                <img className="h-15px object-contain mr-4px" src={selectedTab === item.id ? WhiteArrow : GrayArrow} alt="arrow" />
+                            </div>
+                        </button>
+                    ) }
+                    isPopupOpen={isPopupOpen} 
+                    setPopupOpen={setPopupOpen}
+                >
+                    <ReauthenticatePopup setPopupOpen={setPopupOpen} setSelectedTab={setSelectedTab}/>
+                </PopupControls> 
+            ) : (
+                <button 
+                    key={item.id} 
+                    className={`${item.selectedCss} ${selectedTab === item.id ? selectedTabClass : tabClass}`}
+                    onMouseDown={() => setSelectedTab(item.id)}
+                    onMouseUp={() => {
+                        setSelectedTab(false)
+                        history.push(item.path)
+                    }}
+                >
+                    {selectedTab !== item.id && item.id !== 0 && (<div className="absolute top-0 left-0 h-px w-full bg-white"></div>)} 
+                    <div className="flex items-center justify-between">
+                        <div className="flex items-center space-x-10px">
+                            <div className={selectedTab === item.id ? "rounded-full shadow-plain" : "rounded-full"}>
+                                <img className="w-full h-full" src={selectedTab === item.id ? item.iconHighlight : item.icon} alt="meunIcon" />
+                            </div>
+                            <label className={`cursor-pointer text-16px font-spoqaMedium tracking-tight pt-px ${selectedTab === item.id ? "text-white" : "text-gray-text"}`}>{item.text}</label>
                         </div>
-                        <label className={`cursor-pointer text-16px font-spoqaMedium tracking-tight pt-px ${selectedTab === item.id ? "text-white" : "text-gray-text"}`}>{item.text}</label>
+                        <img className="h-15px object-contain mr-4px" src={selectedTab === item.id ? WhiteArrow : GrayArrow} alt="arrow" />
                     </div>
-                    <img className="h-15px object-contain mr-4px" src={selectedTab === item.id ? WhiteArrow : GrayArrow} alt="arrow" />
-                </div>
-            </button>
+                </button>
+                )}
+            
+            </>
         ));
     }
 
