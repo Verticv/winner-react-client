@@ -97,8 +97,8 @@ const Menus = () => {
                 optionIconHighlight3={FaqIconHighlight}
                 extraIconCss="w-48px h-49px mb-2px"
                 path1="/cscenter/contact"
-                path2=""
-                path3=""
+                path2="/cscenter/announcement"
+                path3="/cscenter/faq"
             />
         </div>
     )
