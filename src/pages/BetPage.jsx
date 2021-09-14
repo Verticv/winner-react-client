@@ -25,7 +25,10 @@ export default function BetPage() {
         <div className="global_container_">
             <LeagueSelectPopup />
             <div className="col-32">
-                <div className="group-2">
+                <div
+                    className="group-2"
+                    style={{ zIndex: 10, backgroundColor: "black" }}
+                >
                     <div className="col-24">
                         <div className="wrapper-28">
                             <BetNav />
