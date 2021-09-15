@@ -71,7 +71,7 @@ const Faq = () => {
                 <img className={`${openedCell === cellId && "transform rotate-180"}`} src={openedCell === cellId ? ArrowDown : ArrowDown} alt="" />
             </button>
             {openedCell === cellId && (
-                <div style={{height: "421px", zIndex: 1 }} className="w-full rounded-3xl bg-gray-fafafa -mt-64px z-0 mb-14px border border-gray-dddddd"></div>
+                <div style={{height: "421px", zIndex: 1, backgroundColor: "#fcfcfc" }} className="w-full rounded-3xl -mt-64px z-0 mb-14px border border-gray-dddddd"></div>
             )}
         </>
     )
