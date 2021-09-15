@@ -17,6 +17,9 @@ import IconHighlight3 from '../images/cscenter/leftMenu/icon_3_highlight.png'
 import IconHighlight4 from '../images/cscenter/leftMenu/icon_4_highlight.png'
 import IconHighlight5 from '../images/cscenter/leftMenu/icon_5_highlight.png'
 import CsPageBanner from '../images/cscenter/cscenter_banner.png'
+import Contact from 'components/cscenter/Contact';
+import ContactView from 'components/cscenter/ContactView';
+import ContactCompose from 'components/cscenter/ContactCompose';
 
 const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
 
@@ -54,10 +57,28 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
 
             <div className="flex flex-col items-start limit:items-center mt-92px w-full h-full">
 
-                <Route path="/cscenter/contact">
+                <Route exact path="/cscenter/contact">
                     <DirectoryComponent 
                         branch1="고객센터"
                         branch2="문의하기" 
+                        mainPath="/cscenter/contact"
+                        setSelectedTab={setSelectedTab}
+                    />
+                </Route>
+                <Route path="/cscenter/contact/view/*">
+                    <DirectoryComponent 
+                        branch1="고객센터"
+                        branch2="문의하기" 
+                        branch3="뷰" 
+                        mainPath="/cscenter/contact"
+                        setSelectedTab={setSelectedTab}
+                    />
+                </Route>
+                <Route path="/cscenter/contact/compose">
+                    <DirectoryComponent 
+                        branch1="고객센터"
+                        branch2="문의하기" 
+                        branch3="작성하기" 
                         mainPath="/cscenter/contact"
                         setSelectedTab={setSelectedTab}
                     />
@@ -133,8 +154,14 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
                     </div>
 
                     <div className="ml-20px w-1040px">
-                        <Route path="/money/charge">
-                            asd1
+                        <Route exact path="/cscenter/contact">
+                            <Contact />
+                        </Route>
+                        <Route path="/cscenter/contact/view/*">
+                            <ContactView />
+                        </Route>
+                        <Route path="/cscenter/contact/compose">
+                            <ContactCompose />
                         </Route>
                         <Route path="*">
                         </Route>

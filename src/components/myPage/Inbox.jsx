@@ -159,6 +159,7 @@ const Inbox = () => {
             </div>
         </div>
     )
+    
     return (
         <div>
             <MyPageTitle title="쪽지관리" inboxCount="7"/>
@@ -193,7 +194,7 @@ const Inbox = () => {
                 <Pagination page={page} setPage={setPage}/>   
             </div>
 
-            <div className="-mt-30px">
+            <div className="-mt-30px mb-60px">
                 {InboxSearch}
             </div>
         </div>
