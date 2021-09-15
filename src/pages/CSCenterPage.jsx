@@ -20,6 +20,9 @@ import CsPageBanner from '../images/cscenter/cscenter_banner.png'
 import Contact from 'components/cscenter/Contact';
 import ContactView from 'components/cscenter/ContactView';
 import ContactCompose from 'components/cscenter/ContactCompose';
+import Announcement from 'components/cscenter/Announcement';
+import AnnouncementView from 'components/cscenter/AnnouncementView';
+import Faq from 'components/cscenter/Faq';
 
 const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
 
@@ -83,10 +86,19 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
                         setSelectedTab={setSelectedTab}
                     />
                 </Route>
-                <Route path="/cscenter/announcement">
+                <Route exact path="/cscenter/announcement">
                     <DirectoryComponent 
                         branch1="고객센터"
                         branch2="공지사항" 
+                        mainPath="/cscenter/announcement"
+                        setSelectedTab={setSelectedTab}
+                    />
+                </Route>
+                <Route path="/cscenter/announcement/view">
+                    <DirectoryComponent 
+                        branch1="고객센터"
+                        branch2="공지사항" 
+                        branch3="뷰"
                         mainPath="/cscenter/announcement"
                         setSelectedTab={setSelectedTab}
                     />
@@ -162,6 +174,15 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
                         </Route>
                         <Route path="/cscenter/contact/compose">
                             <ContactCompose />
+                        </Route>
+                        <Route exact path="/cscenter/announcement">
+                            <Announcement />
+                        </Route>
+                        <Route exact path="/cscenter/announcement/view">
+                            <AnnouncementView />
+                        </Route>
+                        <Route exact path="/cscenter/faq">
+                            <Faq />
                         </Route>
                         <Route path="*">
                         </Route>
