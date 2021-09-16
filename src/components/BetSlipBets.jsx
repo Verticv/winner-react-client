@@ -4,7 +4,6 @@ import BetSlipBet from './BetSlipBet';
 
 export default function BetSlipBets() {
     const betSlipBets = useStore(s => s.betSlipBets)
-    console.log(betSlipBets);
     return (
         <div
             style={{

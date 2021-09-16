@@ -80,7 +80,7 @@ export default function BetNav() {
     ];
     const [navListItems] = useState(navListItemsDefinition);
     const changeSelectedNav = useStore((state) => state.changeSelectedNav);
-    console.log(changeSelectedNav);
+
     return (
         <>
             {navListItems.map((item) => {

@@ -7,7 +7,7 @@ import MyBets from './MyBets';
 
 export default function BetSlip() {
     return (
-        <div style={{overflow: 'scroll'}} className={clsx("col-16", "hide-scrollbar-bet-page")}>
+        <div style={{overflow: 'scroll', zIndex: 20}} className={clsx("col-16", "hide-scrollbar-bet-page")}>
             <div
                 style={{
                     position: "relative",
