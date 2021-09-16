@@ -13,6 +13,7 @@ import Icon10 from '../../images/cscenter/10.png'
 import HorizontalMenu from 'components/myPage/HorizontalMenu'
 import ArrowDown from '../../images/myPage/leftMenu/arr_down.png'
 import QIcon from '../../images/cscenter/q.png'
+import AIcon from '../../images/cscenter/a.png'
 
 const Faq = () => {
 
@@ -42,6 +43,9 @@ const Faq = () => {
         { id: 9, type: "기타", text: "이 사이트는 안전한가요?" },
         { id: 10, type: "기타", text: "중복 IP 또는 본인 아이디를 공유하여 사용이 가능한가요?" },
     ]
+
+    const BodyText1 = '☞ 첫, 매충 10% 포인트를 받지 않을시 모든게임의 롤링은 단폴, 카지노 배팅 포함 100%만 해주시면 환전가능합니다. \n - 포인트 받지 않기를 원할시 : 충전 --> "보너스받기" 에서 "받지않기" 클릭하시고 충전신청해주시면 됩니다. \n ☞ 첫, 매충 10%포인트를 받았을시 각게임당 아래와 같이 롤링해 주시면 됩니다. '
+
     const [selectedTab, setSelectedTab] = useState(0)
     const [openedCell, setOpenedCell] = useState(0)
 
@@ -71,7 +75,52 @@ const Faq = () => {
                 <img className={`${openedCell === cellId && "transform rotate-180"}`} src={openedCell === cellId ? ArrowDown : ArrowDown} alt="" />
             </button>
             {openedCell === cellId && (
-                <div style={{height: "421px", zIndex: 1, backgroundColor: "#fcfcfc" }} className="w-full rounded-3xl -mt-64px z-0 mb-14px border border-gray-dddddd"></div>
+                <div 
+                    style={{height: "421px", zIndex: 1, backgroundColor: "#fcfcfc" }} 
+                    className="flex h-full items-start justify-start w-full rounded-3xl -mt-64px z-0 mb-14px border border-gray-dddddd"
+                >
+                    <img 
+                        style={{marginTop: "68px"}} 
+                        className="ml-30px object-none" 
+                        src={AIcon} 
+                        alt="" 
+                    />
+                    <div className="flex flex-col">
+                        <div style={{marginTop: "82px"}} className="ml-16px h-16px flex items-center text-16px font-spoqaMedium tracking-tight text-gray-r585858">
+                            <p style={{color: "#2980b9"}} className="mr-3px" >
+                                No.1
+                            </p> 
+                            그 이상.! 최고를 넘어선 『 Winner 』입니다.  ☞ 첫, 매충 10% 포인트를 받지 않을시 모든게
+                        </div>
+
+                        <div className="font-spoqaMedium text-14px tracking-tight text-gray-r585858 space-y-10px mt-34px">
+                            {BodyText1.split('\n').map((item, i) => 
+                                <p key={i} className={`flex items-center h-14px`}>{item}</p>
+                            )}
+                        </div>
+                        <div className="font-spoqaMedium text-14px tracking-tight text-gray-r585858 space-y-10px mt-10px flex items-center h-14px">
+                            - 스포츠 : <p style={{color: "#c0392b"}} className="mx-3px">두폴더 이상 </p> 롤링 100% 최대 30만원 
+                        </div>
+                        <div className="font-spoqaMedium text-14px tracking-tight text-gray-r585858 space-y-10px mt-10px flex items-center h-14px">
+                            - 스포츠단폴더, 가상게임, 미니게임, 카지노 : <p style={{color: "#c0392b"}} className="mx-3px">이용불가</p>
+                        </div>
+                        <div className="font-spoqaMedium text-14px tracking-tight text-gray-r585858 space-y-10px mt-10px flex items-center h-14px">
+                            - 스포츠 2폴더 이상 100% 롤링 후 이용 가능 스포츠 단폴더, 타 게임 이용 가능하며, 스포츠 2폴더 100% 롤링 전 타게임 이용시 보유금 <p style={{color: "#c0392b"}} className="mx-3px">전액 몰수처리</p>
+                        </div>
+                           
+                        <div className="font-spoqaMedium text-14px tracking-tight text-gray-r585858 space-y-10px mt-34px flex items-center h-14px">
+                            ※ 모든게임의 롤링적용시점은 게임이 끝나서 마감처리된 때입니다. 이후에 출금신청해주셔야 처리가능합니다.
+                        </div>
+
+                        <div className="font-spoqaMedium text-14px tracking-tight text-gray-r585858 space-y-10px mt-34px flex items-center h-14px">
+                            언제나 고객에게 최상의 서비스 제공을 할 수 있도록 노력하는 『 Winner 』가 되겠습니다.
+                        </div>
+                        <div className="font-spoqaMedium text-14px tracking-tight text-gray-r585858 space-y-10px mt-10px flex items-center h-14px">
+                            감사합니다.
+                        </div>
+                    </div>
+                    
+                </div>
             )}
         </>
     )

@@ -23,6 +23,7 @@ import ContactCompose from 'components/cscenter/ContactCompose';
 import Announcement from 'components/cscenter/Announcement';
 import AnnouncementView from 'components/cscenter/AnnouncementView';
 import Faq from 'components/cscenter/Faq';
+import SportsGamePolicy from 'components/cscenter/SportsGamePolicy';
 
 const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
 
@@ -183,6 +184,9 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
                         </Route>
                         <Route exact path="/cscenter/faq">
                             <Faq />
+                        </Route>
+                        <Route exact path="/cscenter/policy/sportsgame">
+                            <SportsGamePolicy />
                         </Route>
                         <Route path="*">
                         </Route>
