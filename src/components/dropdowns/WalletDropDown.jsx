@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useHistory } from 'react-router'
 import ChargeMoneyIcon from '../../images/wallet/charge_money_gradient.png'
 import ChargeMoneyIconHighlight from '../../images/wallet/charge_money_highlight.png'
 import ExchangeIcon from '../../images/wallet/exchange_icon_gradient.png'
@@ -9,11 +10,12 @@ import PointExchangeIconHighlight from '../../images/wallet/point_exchange_highl
 const WalletDropDown = () => {
 
     const [selectedTab, setSelectedTab] = useState()
+    const history = useHistory();
 
     const menuArray = [
-        { icon: ChargeMoneyIcon, iconHighlight: ChargeMoneyIconHighlight, text: "보유머니 충전", id: 0 },
-        { icon: ExchangeIcon, iconHighlight: ExchangeIconHighlight, text: "보유머니 환전", id: 1 },
-        { icon: PointExchangeIcon, iconHighlight: PointExchangeIconHighlight, text: "포인트 전환", id: 2 }
+        { icon: ChargeMoneyIcon, iconHighlight: ChargeMoneyIconHighlight, text: "보유머니 충전", id: 0, path: "/money/charge" },
+        { icon: ExchangeIcon, iconHighlight: ExchangeIconHighlight, text: "보유머니 환전", id: 1, path: "/money/exchange" },
+        { icon: PointExchangeIcon, iconHighlight: PointExchangeIconHighlight, text: "포인트 전환", id: 2, path: "/mypage/points-apply" }
     ];
 
     function MenuList({ items }) {
@@ -22,7 +24,10 @@ const WalletDropDown = () => {
                 key={item.id} 
                 className={`${selectedTab === item.id ? "bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2" : "bg-white"} flex w-full items-center p-4px h-40px rounded-full`} 
                 onPointerDown={() => setSelectedTab(item.id)}
-                onPointerUp={() => setSelectedTab(false)}
+                onPointerUp={() => {
+                    setSelectedTab(false)
+                    history.push(item.path)
+                }}
             >
                 <div className={`${selectedTab === item.id && "shadow-plain3"} bg-white rounded-full flex items-center justify-center flex-shrink-0`} >
                     <img className="object-none" src={selectedTab === item.id ? item.iconHighlight : item.icon} alt="icon"></img>

@@ -25,7 +25,7 @@ const ProfileDropDown = ({setAuth}) => {
         { icon: LinkIcon, iconHighlight: LinkIconHighlight, text: "총판페이지", id: 1, path: "/distributor-page" },
         { icon: AttendanceIcon, iconHighlight: AttendanceIconHighlight, text: "출석부", id: 2, path: "/attendance" },
         { icon: ContactIcon, iconHighlight: ContactIconHighlight, text: "문의하기", id: 3, path: "/cscenter/contact" },
-        { icon: PolicyIcon, iconHighlight: PolicyIconHighlight, text: "베팅규정", id: 4 },
+        { icon: PolicyIcon, iconHighlight: PolicyIconHighlight, text: "베팅규정", id: 4, path: "/cscenter/policy/sportsgame" },
         { icon: LogoutIcon, iconHighlight: LogoutIconHighlight, text: "로그아웃", id: 5 },
     ];
 

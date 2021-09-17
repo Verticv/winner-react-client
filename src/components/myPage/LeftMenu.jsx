@@ -98,10 +98,10 @@ const LeftMenu = ({
                                 : "bg-white"
                             } flex w-full items-center p-5px h-53px rounded-full`} 
                             onClick={(e) => {
-                                item.text !== "총판페이지" ? (
-                                    buttonPressed(item.path)
-                                ) : (
+                                item.text === "총판페이지" ? (
                                     openTab()
+                                ) : (
+                                    buttonPressed(item.path)
                                 )
                             }}
                         >

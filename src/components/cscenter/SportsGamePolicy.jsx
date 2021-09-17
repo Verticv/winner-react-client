@@ -10,6 +10,8 @@ import Icon6 from '../../images/cscenter/sportsPolicy/6.png'
 import Icon7 from '../../images/cscenter/sportsPolicy/7.png'
 import Icon8 from '../../images/cscenter/sportsPolicy/8.png'
 import Icon9 from '../../images/cscenter/sportsPolicy/9.png'
+import SportsGamePolicyTable1 from './tables/SportsGamePolicyTable1';
+import SportsGamePolicyTable2 from './tables/SportsGamePolicyTable2';
 
 const SportsGamePolicy = () => {
 
@@ -39,6 +41,15 @@ const SportsGamePolicy = () => {
             <div className=" mt-29px w-full flex h-16px items-center justify-center text-16px tracking-tight font-spoqaMedium text-gray-r454545">
                 모든 프로축구는 해당 리그의 공식협회가 인정하는 경기 결과대로 반영됩니다.
             </div>
+
+            <div className="mt-27px" />
+            <SportsGamePolicyTable1 />
+
+            <div className="mt-20px" />
+            <SportsGamePolicyTable2 />
+
+            <div className="mt-60px" />
+
         </div>
     )
 }
