@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import MyPageTitle from './MyPageTitle'
-import HorizontalMenu from './HorizontalMenu'
+import HorizontalMenu from '../horizontalMenus/HorizontalMenu'
 import Icon1 from '../../images/myPage/coupon/coupon_img1.png'
 import Icon2 from '../../images/myPage/coupon/coupon_img2.png'
 import Pagination from './Pagination'

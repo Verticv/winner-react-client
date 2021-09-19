@@ -44,7 +44,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
         { text: "가상게임", id: 5 },
         { text: "피싱게임", id: 6 },
         { text: "로터리", id: 7 },
-        { text: "경기결과", id: 8 },
+        { text: "경기결과", id: 8, path: "/gameresults/sports/win-draw-lose" },
         { text: "라이브영상", id: 9 },
         { text: "게시판", id: 10 },
         { text: "고객센터", id: 11, path: "/cscenter/contact" },

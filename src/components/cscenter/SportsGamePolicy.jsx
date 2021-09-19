@@ -1,4 +1,4 @@
-import HorizontalMenu from 'components/myPage/HorizontalMenu';
+import HorizontalMenu from 'components/horizontalMenus/HorizontalMenu';
 import MyPageTitle from 'components/myPage/MyPageTitle'
 import React, { useState } from 'react'
 import Icon1 from '../../images/cscenter/sportsPolicy/1.png'

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import HorizontalMenu from './HorizontalMenu'
+import HorizontalMenu from '../horizontalMenus/HorizontalMenu'
 import Icon1 from '../../images/myPage/betHistory/ico_1.png'
 import Icon2 from '../../images/myPage/betHistory/ico_2.png'
 import Icon3 from '../../images/myPage/betHistory/ico_3.png'

@@ -51,7 +51,7 @@ const Footer = () => {
                         <button className={buttonClass} onClick={() => history.push("/cscenter/announcement")}>공지사항</button>
                         <button className={buttonClass} onClick={() => history.push("/cscenter/faq")}>자주하는질문</button>
                         <button className={buttonClass} onClick={() => history.push("/cscenter/policy/sportsgame")}>베팅규정</button>
-                        <button className={buttonClass}>경기결과</button>
+                        <button className={buttonClass} onClick={() => history.push("/gameresults/sports/win-draw-lose")}>경기결과</button>
                         <button className={buttonClass}>게시판</button>
                     </div>
                 </div>

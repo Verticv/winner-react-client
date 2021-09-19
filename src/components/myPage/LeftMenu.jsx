@@ -15,7 +15,7 @@ const LeftMenu = ({
 
     const history = useHistory();
     const [isPopupOpen, setPopupOpen] = useState(true)
-    const [isExpanded, setExpanded] = useState(window.location.pathname + "closed")
+    const [isExpanded, setExpanded] = useState(window.location.pathname)
 
     function openTab() {
         window.open('/distributor-page');
@@ -93,7 +93,7 @@ const LeftMenu = ({
                     <div>
                         <button 
                             className={`${
-                                selectedTab === item.path || selectedTab === item.path2 || selectedTab === item.path3
+                                selectedTab === item.path || selectedTab === item.path2 || selectedTab === item.path3 || selectedTab === item.path4
                                 ? "bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2" 
                                 : "bg-white"
                             } flex w-full items-center p-5px h-53px rounded-full`} 
@@ -107,19 +107,19 @@ const LeftMenu = ({
                         >
                             <div 
                                 className={`${
-                                    (selectedTab === item.path || selectedTab === item.path2 || selectedTab === item.path3) && "shadow-plain9"
+                                    (selectedTab === item.path || selectedTab === item.path2 || selectedTab === item.path3 || selectedTab === item.path4) && "shadow-plain9"
                                 } h-42px w-42px bg-white rounded-full flex items-center justify-center flex-shrink-0`} 
                             >
                                 <img 
                                     className="h-42px w-42px bg-white rounded-full flex items-center justify-center" 
-                                    src={(selectedTab === item.path || selectedTab === item.path2 || selectedTab === item.path3) ? item.iconHighlight : item.icon} 
+                                    src={(selectedTab === item.path || selectedTab === item.path2 || selectedTab === item.path3 || selectedTab === item.path4) ? item.iconHighlight : item.icon} 
                                     alt="icon" />
                             </div>
                             <div className="w-full flex mx-14px justify-between items-center">
                                 <div className="flex items-center">
                                     <label
                                         className={`${
-                                            (selectedTab === item.path || selectedTab === item.path2 || selectedTab === item.path3)
+                                            (selectedTab === item.path || selectedTab === item.path2 || selectedTab === item.path3 || selectedTab === item.path4)
                                             ? "text-white" 
                                             : "text-gray-r8c8c8c"
                                         } font-spoqaMedium text-16px cursor-pointer tracking-tight`}
@@ -138,7 +138,7 @@ const LeftMenu = ({
                                             src={
                                                 isExpanded === item.path + "closed"
                                                 ? ArrowUp 
-                                                : (selectedTab === item.path || selectedTab === item.path2 || selectedTab === item.path3) 
+                                                : (selectedTab === item.path || selectedTab === item.path2 || selectedTab === item.path3 || selectedTab === item.path4) 
                                                 ? ArrowUp 
                                                 : ArrowDown
                                             } 
@@ -191,6 +191,21 @@ const LeftMenu = ({
                                         : "bg-gray-f9f9f9 text-gray-r8c8c8c"
                                     } ${item.sub3 === "가상게임" && "rounded-b-3xl"} flex items-center h-45px w-full bg-gray-f9f9f9 pl-60px`}>
                                         {item.sub3}
+                                </button>
+                            )}
+                            {item.sub4 && (
+                                <button 
+                                    onClick={() => {
+                                        setSelectedSubTab(item.path4)
+                                        setSelectedTab(item.path4)
+                                        history.push(item.path4)
+                                    }}
+                                    className={`${
+                                        selectedSubTab === item.path4
+                                        ? "bg-blue-d0e8ff text-gray-r454545" 
+                                        : "bg-gray-f9f9f9 text-gray-r8c8c8c"
+                                    } ${item.text === "미니게임" && "rounded-b-3xl"} flex items-center h-45px w-full bg-gray-f9f9f9 pl-60px`}>
+                                        {item.sub4}
                                 </button>
                             )}
                         </div>

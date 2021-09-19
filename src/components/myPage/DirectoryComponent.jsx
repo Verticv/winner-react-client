@@ -28,7 +28,9 @@ const DirectoryComponent = ({
         } else if (branch1 === "고객센터") {
             history.push("/cscenter/contact")
             setSelectedTab("/cscenter/contact")
-
+        } else if (branch1 === " 경기결과") {
+            history.push("/gameresults/win-draw-lose")
+            setSelectedTab("/gameresults/win-draw-lose")
         }
     }
 

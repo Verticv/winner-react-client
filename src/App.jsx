@@ -8,6 +8,7 @@ import BetPage from "pages/BetPage";
 import AttendPage from "pages/AttendPage";
 import MoneyPage from "pages/MoneyPage";
 import CSCenterPage from "pages/CSCenterPage";
+import GameResultsPage from "pages/GameResultsPage";
 
 
 function App() {
@@ -40,6 +41,9 @@ function App() {
                 </Route>
                 <Route path="/cscenter">
                     <CSCenterPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
+                </Route>
+                <Route path="/gameresults">
+                    <GameResultsPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
                 </Route>
                 <Route path="*">
                     <MainPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />

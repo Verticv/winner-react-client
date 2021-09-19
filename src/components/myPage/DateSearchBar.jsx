@@ -4,16 +4,64 @@ import "react-datepicker/dist/react-datepicker.css";
 import { registerLocale } from  "react-datepicker";
 import ko from 'date-fns/locale/ko';
 import CalendarIcon from '../../images/myPage/betHistory/calendar.png'
+import DropDownControls from 'components/dropdowns/DropDownControls';
+import ArrowDownGray from '../../images/arrows/arrow_down_gray.png'
 registerLocale('ko', ko)
 
 const DateSearchBar = ({
     isLeagueSearch = false, 
     hasIdSearch = false,
-    has3MonthSearch = false
+    has3MonthSearch = false,
+    isGameResultsSearch = false
 }) => {
 
 
     const [startDate, setStartDate] = useState(new Date())
+    const [endDate, setEndDate] = useState(new Date())
+    const [isDropdownOpen, setDropdownOpen] = useState()
+    const [selectedCarrier, setSelectedCarrier] = useState("전체")
+
+    const dropDownCellClass = "flex w-138px h-42px py-2px bg-white items-center hover:bg-blue-lightGradLight px-14px"
+
+    const gameResultButton = (
+        <div className="flex items-center justify-between bg-white placeholder-gray-r8c8c8c outline-none w-138px h-42px rounded-md border border-gray-dddddd px-10px font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c" >
+            <p className="mt-px">{selectedCarrier}</p>
+            <img src={ArrowDownGray} alt="" />
+        </div>
+    )
+
+    const searchDropdown = (
+        <div className="mt-4px flex flex-col items-center justify-center w-138px overflow-hidden bg-white rounded-md border border-gray-dddddd text-gray-r8c8c8c font-spoqaMedium text-14px tracking-tight">
+            <button className={dropDownCellClass} onClick={() => {
+                setSelectedCarrier("본문")
+                setDropdownOpen(false)
+            }}>
+                본문
+            </button>
+            <button className={dropDownCellClass} onClick={() => {
+                setSelectedCarrier("작성자")
+                setDropdownOpen(false)
+            }}>
+                작성자
+            </button>
+            <button className={dropDownCellClass} onClick={() => {
+                setSelectedCarrier("카테고리")
+                setDropdownOpen(false)
+            }}>
+                카테고리
+            </button>
+        </div>
+    )
+
+    const InboxSearch = (
+        <DropDownControls
+            buttonChild={gameResultButton} 
+            isDropdownOpen={isDropdownOpen} 
+            setDropdownOpen={setDropdownOpen}
+        >
+            {searchDropdown}
+        </DropDownControls>
+    )
 
 
     return (
@@ -27,6 +75,15 @@ const DateSearchBar = ({
                         />
                         <input
                             placeholder="팀명검색" 
+                            className="pt-px mt-px placeholder-gray-r8c8c8c flex-shrink-0 outline-none w-138px h-42px rounded-md border border-gray-dddddd px-10px font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c" />
+                    </div>
+                )}
+
+                {isGameResultsSearch === true && (
+                    <div className="space-x-10px flex">
+                        <div>{InboxSearch}</div>
+                        <input
+                            placeholder="팀명" 
                             className="pt-px mt-px placeholder-gray-r8c8c8c flex-shrink-0 outline-none w-138px h-42px rounded-md border border-gray-dddddd px-10px font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c" />
                     </div>
                 )}
@@ -47,8 +104,8 @@ const DateSearchBar = ({
                         <DatePicker 
                             className="pt-px mt-px flex-shrink-0 outline-none w-138px h-42px rounded-md border border-gray-dddddd px-10px font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c" 
                             locale="ko"
-                            selected={startDate} 
-                            onChange={(date) => setStartDate(date)}
+                            selected={endDate} 
+                            onChange={(date) => setEndDate(date)}
                             dateFormat="yyyy-MM-dd"
                         />
                         <img src={CalendarIcon} alt="" className="absolute top-0 right-0 mt-14px mr-10px" />
