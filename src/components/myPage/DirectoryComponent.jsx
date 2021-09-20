@@ -49,7 +49,11 @@ const DirectoryComponent = ({
             <img className="object-none cursor-pointer" src={HomeIcon} alt="" onClick={() => history.push("/")} />
             <img className="object-none cursor-none" src={RightArrow} alt=""/>
             <span 
-                className="font-spoqaBold text-13px text-gray-r7c7c7c tracking-tight cursor-pointer"
+                className={`${
+                    !branch2 
+                        ? "font-spoqaBold text-gray-393e41" 
+                        : "font-spoqaBold text-gray-r7c7c7c"
+                } font-spoqaBold text-13px tracking-tight cursor-pointer`}
                 onClick={() => {branch1Clicked(branch1)}}
             >
                 {branch1}
