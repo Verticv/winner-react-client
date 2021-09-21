@@ -1,6 +1,7 @@
 import Footer from 'components/Footer'
 import Footer2 from 'components/Footer2'
 import FreeBoardMain from 'components/freeBoard/FreeBoardMain'
+import FreeBoardView from 'components/freeBoard/FreeBoardView'
 import DirectoryComponent from 'components/myPage/DirectoryComponent'
 import Navbar from 'components/Navbar'
 import NoticeBanner from 'components/NoticeBanner'
@@ -20,9 +21,16 @@ const Freeboard = ({isAuthenticated, setAuthenticated}) => {
 
 
             <div className="flex flex-col items-start limit:items-center mt-92px w-full h-full">
-                <Route path="/freeboard">
+                <Route exact path="/freeboard">
                     <DirectoryComponent 
                         branch1="게시판" 
+                        mainPath="/freeboard"
+                    />
+                </Route>
+                <Route path="/freeboard/view">
+                    <DirectoryComponent 
+                        branch1="게시판" 
+                        branch2="뷰"
                         mainPath="/freeboard"
                     />
                 </Route>
@@ -32,7 +40,12 @@ const Freeboard = ({isAuthenticated, setAuthenticated}) => {
                 </div>
 
                 <div className="mt-20px w-default">
-                    <FreeBoardMain />
+                    <Route exact path="/freeboard">
+                        <FreeBoardMain />
+                    </Route>
+                    <Route path="/freeboard/view">
+                        <FreeBoardView />
+                    </Route>
                 </div>
 
                 <div>
