@@ -1,5 +1,6 @@
 import Footer from 'components/Footer'
 import Footer2 from 'components/Footer2'
+import FreeBoardCompose from 'components/freeBoard/FreeBoardCompose'
 import FreeBoardMain from 'components/freeBoard/FreeBoardMain'
 import FreeBoardView from 'components/freeBoard/FreeBoardView'
 import DirectoryComponent from 'components/myPage/DirectoryComponent'
@@ -31,7 +32,14 @@ const Freeboard = ({isAuthenticated, setAuthenticated}) => {
                     <DirectoryComponent 
                         branch1="게시판" 
                         branch2="뷰"
-                        mainPath="/freeboard"
+                        mainPath="/freeboard/view"
+                    />
+                </Route>
+                <Route path="/freeboard/compose">
+                    <DirectoryComponent 
+                        branch1="게시판" 
+                        branch2="작성하기"
+                        mainPath="/freeboard/compose"
                     />
                 </Route>
                 <div className="relative w-default h-225px">
@@ -45,6 +53,9 @@ const Freeboard = ({isAuthenticated, setAuthenticated}) => {
                     </Route>
                     <Route path="/freeboard/view">
                         <FreeBoardView />
+                    </Route>
+                    <Route path="/freeboard/compose">
+                        <FreeBoardCompose />
                     </Route>
                 </div>
 

@@ -445,7 +445,7 @@ const FreeBoardMain = () => {
 
 
             <div className="mt-20px flex justify-end">
-                <button className="flex items-center justify-center h-36px w-90px rounded-4px bg-blue-r0070d9">
+                <button onClick={() => history.push('/freeboard/compose')} className="flex items-center justify-center h-36px w-90px rounded-4px bg-blue-r0070d9">
                     <div className="flex items-center justify-center h-34px w-88px bg-black rounded-4px border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
                         <span className="font-spoqaMedium tracking-tight text-14px text-white">작성하기</span>
                     </div>
