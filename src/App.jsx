@@ -10,6 +10,7 @@ import MoneyPage from "pages/MoneyPage";
 import CSCenterPage from "pages/CSCenterPage";
 import GameResultsPage from "pages/GameResultsPage";
 import Freeboard from "pages/Freeboard";
+import BetCombinationPage from "pages/BetCombinationPage";
 
 
 function App() {
@@ -48,6 +49,9 @@ function App() {
                 </Route>
                 <Route path="/freeboard">
                     <Freeboard isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
+                </Route>
+                <Route path="/bet-combination">
+                    <BetCombinationPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
                 </Route>
                 <Route path="*">
                     <MainPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />

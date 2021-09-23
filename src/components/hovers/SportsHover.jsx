@@ -20,7 +20,16 @@ const SportsHover = ({selection}) => {
             btnText: "게임시작", 
             class: "bg-opacity-25", 
             path: "/bet" },
-        { id: 1, background: TennisBanner, highlight: TennisBannerHighlight, imgText: "조합베팅", color: "group-hover:bg-blue-r3384ca", btnText: "게임시작", class: "bg-opacity-25", path: "/" },
+        { 
+            id: 1, 
+            background: TennisBanner, 
+            highlight: TennisBannerHighlight, 
+            imgText: "조합베팅", 
+            color: "group-hover:bg-blue-r3384ca", 
+            btnText: "게임시작", 
+            class: "bg-opacity-25", 
+            path: "/bet-combination" 
+        },
         { id: 2, background: MessiBanner, highlight: MessiBannerHighlight, imgText: "스페셜", color: "group-hover:bg-red-db4a4a", btnText: "게임시작", class: "bg-opacity-25", path: "/" }
     ];
 
