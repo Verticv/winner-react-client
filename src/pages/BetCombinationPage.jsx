@@ -60,7 +60,7 @@ const BetCombinationPage = ({isAuthenticated, setAuthenticated}) => {
                         </div>
                     </div>
                     
-                    <div style={{width: "307px"}} className="">
+                    <div style={{width: "307px"}} className="mb-60px">
                         <BetCombinationRightPanel />
                     </div>
 

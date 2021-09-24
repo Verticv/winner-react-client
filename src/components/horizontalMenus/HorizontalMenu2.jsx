@@ -24,8 +24,8 @@ const HorizontalMenu2 = ({
                     className={`${
                         isState === item.id 
                         ? "bg-gradient-to-b from-blue-r2087f0 via-blue-r2087f0 to-blue-gradDark"
-                        : "bg-gray-fafafa "
-                    } w-full rounded-b-md rounded-t-lg flex items-center justify-center space-x-4px`}
+                        : "bg-gray-fafafa"
+                    } mt-2px w-full rounded-b-md rounded-t-lg flex items-center justify-center space-x-4px`}
                 >
                     <img className="object-none" src={isState === item.id ? item.iconHighlight : item.icon} alt="" />
                     <div 
@@ -53,7 +53,7 @@ const HorizontalMenu2 = ({
     }
 
     return (
-        <div className="flex w-full h-103px space-x-2px">
+        <div className="flex w-full space-x-2px">
             <TabsList items={itemsArray} />
         </div>
     )
