@@ -4,7 +4,6 @@ import MainPage from "./pages/MainPage";
 import { Switch, Route } from "react-router-dom";
 import MyPage from "pages/MyPage";
 import DistributorPage from "pages/DistributorPage";
-import BetPage from "pages/BetPage";
 import AttendPage from "pages/AttendPage";
 import MoneyPage from "pages/MoneyPage";
 import CSCenterPage from "pages/CSCenterPage";
@@ -26,9 +25,6 @@ function App() {
                   <Route path="/home" render={() => <Home prop={prop} />} />
                 </Router> 
               */}
-                <Route path="/bet">
-                    <BetPage />
-                </Route>
                 <Route path="/mypage">
                     <MyPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
                 </Route>
