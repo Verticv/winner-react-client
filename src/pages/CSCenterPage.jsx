@@ -1,9 +1,9 @@
-import Footer from 'components/Footer';
-import Footer2 from 'components/Footer2';
+import Footer from 'components/mainPage/Footer';
+import Footer2 from 'components/mainPage/Footer2';
 import DirectoryComponent from 'components/myPage/DirectoryComponent';
 import LeftMenu from 'components/myPage/LeftMenu';
-import Navbar from 'components/Navbar'
-import NoticeBanner from 'components/NoticeBanner'
+import Navbar from 'components/mainPage/Navbar'
+import NoticeBanner from 'components/mainPage/NoticeBanner'
 import React, { useState } from 'react'
 import { Route, useLocation } from 'react-router';
 import Icon1 from '../images/cscenter/leftMenu/icon_1.png'

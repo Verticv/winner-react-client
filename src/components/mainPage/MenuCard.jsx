@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import Shadow from '../images/menu/shadow.png'
-import WhiteArrow from '../images/arrows/right_arrow_white.png'
-import GrayArrow from '../images/arrows/right_arrow_gray.png'
+import Shadow from '../../images/menu/shadow.png'
+import WhiteArrow from '../../images/arrows/right_arrow_white.png'
+import GrayArrow from '../../images/arrows/right_arrow_gray.png'
 import { useHistory } from 'react-router-dom'
-import PopupControls from './popups/PopupControls'
-import ReauthenticatePopup from './popups/ReauthenticatePopup'
+import PopupControls from '../popups/PopupControls'
+import ReauthenticatePopup from '../popups/ReauthenticatePopup'
 
 const MenuCard = ({ 
     mainIcon, 

@@ -1,12 +1,12 @@
 import React from 'react'
-import Carousel from '../components/Carousel'
-import Footer from '../components/Footer'
-import Footer2 from '../components/Footer2'
-import Menus from '../components/Menus'
-import Navbar from '../components/Navbar'
-import NoticeBanner from '../components/NoticeBanner'
-import Slots from '../components/Slots'
-import SubNavbar from '../components/SubNavbar'
+import Carousel from '../components/mainPage/Carousel'
+import Footer from '../components/mainPage/Footer'
+import Footer2 from '../components/mainPage/Footer2'
+import Menus from '../components/mainPage/Menus'
+import Navbar from '../components/mainPage/Navbar'
+import NoticeBanner from '../components/mainPage/NoticeBanner'
+import Slots from '../components/mainPage/Slots'
+import SubNavbar from '../components/mainPage/SubNavbar'
 
 const MainPage = ({isAuthenticated, setAuthenticated}) => {
 

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import visual from '../images/carousel/visual.png'
-import visual2 from '../images/carousel/visual2.png'
-import LeftArrow from '../images/arrows/left_arrow.png'
-import RightArrow from '../images/arrows/right_arrow.png'
+import visual from '../../images/carousel/visual.png'
+import visual2 from '../../images/carousel/visual2.png'
+import LeftArrow from '../../images/arrows/left_arrow.png'
+import RightArrow from '../../images/arrows/right_arrow.png'
 
 const images = [visual,visual2]
 // images must be an array of urls , if using Next JS this could something like

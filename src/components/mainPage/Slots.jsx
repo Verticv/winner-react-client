@@ -1,9 +1,9 @@
 import React from 'react'
-import SlotBackground from '../images/slots/slot_background.png'
-import RankIcon1 from '../images/slots/rankicon_1.png'
-import RankIcon2 from '../images/slots/rankicon_2.png'
-import RankIcon3 from '../images/slots/rankicon_3.png'
-import RankIcon4 from '../images/slots/rankicon_4.png'
+import SlotBackground from '../../images/slots/slot_background.png'
+import RankIcon1 from '../../images/slots/rankicon_1.png'
+import RankIcon2 from '../../images/slots/rankicon_2.png'
+import RankIcon3 from '../../images/slots/rankicon_3.png'
+import RankIcon4 from '../../images/slots/rankicon_4.png'
 
 const Slots = () => {
 
