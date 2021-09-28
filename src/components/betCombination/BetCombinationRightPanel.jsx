@@ -12,7 +12,7 @@ import RefrshIcon from '../../images/betCombination/refresh.png'
 import { format } from 'date-fns'
 import { ko } from "date-fns/locale"
 
-const BetCombinationRightPanel = () => {
+const BetCombinationRightPanel = ({isPanelFixed, setPanelFixed}) => {
 
     const tabsArray = [
         { text: "베팅카트", icon: Cart, iconHighlight: CartHighlight , id: 0, number: 2 },
@@ -33,7 +33,6 @@ const BetCombinationRightPanel = () => {
     }, []);
 
     const [selectedTab, setSelectedTab] = useState(0)
-    const [isLocked, setLocked] = useState(false)
 
     const BetAmountButton = ({amount}) => (
         <button style={{width:"94px", backgroundColor: "#b3bac1"}} className="flex items-center justify-center h-46px w-75px rounded-4px">
@@ -44,7 +43,7 @@ const BetCombinationRightPanel = () => {
     )
 
     return (
-        <div className="w-fill rounded-xl shadow-subNavbar">
+        <div className="w-fill rounded-xl shadow-subNavbar overflow-hidden">
 
             <div className="relative bg-gradient-to-b from-gray-f8f9fb via-gray-efeff0 to-gray-e5e6e6 h-54px w-full shadow-plain5 z-20 rounded-t-xl flex items-center justify-between px-8px">
                 <div className="flex flex-col space-y-2px">
@@ -58,9 +57,9 @@ const BetCombinationRightPanel = () => {
                             <img src={TrashIcon} alt="" />
                         </div>
                     </button>
-                    <button onClick={() => setLocked(!isLocked)} style={{width: "38px", height: "38px", borderColor:"#9c9c9c"}} className="rounded-4px border bg-gradient-to-br from-white to-gray-r9c9c9c flex items-center justify-center">
+                    <button onClick={() => setPanelFixed(!isPanelFixed)} style={{width: "38px", height: "38px", borderColor:"#9c9c9c"}} className="rounded-4px border bg-gradient-to-br from-white to-gray-r9c9c9c flex items-center justify-center">
                         <div style={{width: "34px", height: "34px", borderColor:"#9c9c9c"}} className="flex items-center justify-center bg-gradient-to-b from-gray-ececec to-gray-d8d8d8">
-                            <img src={isLocked ? LockIconOn : LockIcon} alt="" />
+                            <img src={isPanelFixed ? LockIconOn : LockIcon} alt="" />
                         </div>
                     </button>
                     <button style={{width: "38px", height: "38px", borderColor:"#9c9c9c"}} className="rounded-4px border bg-gradient-to-br from-white to-gray-r9c9c9c flex items-center justify-center">
@@ -133,17 +132,17 @@ const BetCombinationRightPanel = () => {
 
                 <div className="flex space-x-2px mt-2px">
                     <button style={{width:"94px"}} className="flex items-center justify-center h-46px w-75px rounded-4px bg-gray-r171a1d">
-                        <div style={{width:"92px"}} className="flex items-center justify-center h-44px w-73px rounded-4px border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r585b5e to-gray-r303337 cursor-pointer">
+                        <div style={{width:"92px"}} className="flex items-center justify-center h-44px w-73px rounded-4px border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e to-gray-r303337 cursor-pointer">
                             <span className="font-spoqaMedium tracking-tight text-16px text-white">하프</span>
                         </div>
                     </button>
                     <button style={{width:"94px"}} className="flex items-center justify-center h-46px w-75px rounded-4px bg-gray-r171a1d">
-                        <div style={{width:"92px"}} className="flex items-center justify-center h-44px w-73px rounded-4px border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r585b5e to-gray-r303337 cursor-pointer">
+                        <div style={{width:"92px"}} className="flex items-center justify-center h-44px w-73px rounded-4px border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e to-gray-r303337 cursor-pointer">
                             <span className="font-spoqaMedium tracking-tight text-16px text-white">최대</span>
                         </div>
                     </button>
                     <button style={{width:"94px"}} className="flex items-center justify-center h-46px w-75px rounded-4px bg-gray-r171a1d">
-                        <div style={{width:"92px"}} className="flex items-center justify-center h-44px w-73px rounded-4px border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r585b5e to-gray-r303337 cursor-pointer">
+                        <div style={{width:"92px"}} className="flex items-center justify-center h-44px w-73px rounded-4px border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e to-gray-r303337 cursor-pointer">
                             <span className="font-spoqaMedium tracking-tight text-16px text-white">정정</span>
                         </div>
                     </button>

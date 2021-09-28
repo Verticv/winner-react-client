@@ -31,6 +31,7 @@ const BetCombinationPage = ({isAuthenticated, setAuthenticated}) => {
     ];
 
     const [selectedTab, setSelectedTab] = useState(0)
+    const [isPanelFixed, setPanelFixed] = useState(false)
 
     return (
         <div className="relative flex flex-col justify-center limit:overflow-x-hidden">
@@ -60,8 +61,8 @@ const BetCombinationPage = ({isAuthenticated, setAuthenticated}) => {
                         </div>
                     </div>
                     
-                    <div style={{width: "307px"}} className="mb-60px">
-                        <BetCombinationRightPanel />
+                    <div style={{width: "307px", right:"326px"}} className={`${isPanelFixed && "fixed"} mb-60px`}>
+                        <BetCombinationRightPanel isPanelFixed={isPanelFixed} setPanelFixed={setPanelFixed} />
                     </div>
 
                 </div>
