@@ -463,7 +463,8 @@ module.exports = {
         spoqaBold: ['SpoqaHanSansNeoBold'],
         roboto: ['RobotoMedium'],
         robotoBold: ['RobotoBold'],
-        digital: ['Digital-7']
+        digital: ['Digital-7'],
+        swagger: ['Swagger']
       },
       fontSize: {
         '12px': '12px',

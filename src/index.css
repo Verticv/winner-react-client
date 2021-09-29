@@ -11,6 +11,14 @@
 }
 
 @font-face {
+  font-family: 'Swagger';
+  src:url('./fonts/SDSwaggerTTF.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
   font-family: 'SpoqaHanSansNeo';
   src:url('./fonts/SpoqaHanSansNeo-Regular.ttf');
   font-weight: normal;

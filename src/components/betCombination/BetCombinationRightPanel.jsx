@@ -107,8 +107,8 @@ const BetCombinationRightPanel = ({isPanelFixed, setPanelFixed}) => {
             <div className="h-47px border-b border-gray-dddddd flex items-center justify-between pl-11px pr-10px">
                 <p className="text-14px font-spoqaMedium tracking-tight text-gray-r454545">베팅금액</p>
                 <p 
-                style={{color: "#d52e2e", width: "191px", height: "32px", backgroundColor: "#e8e8e8"}} 
-                className="flex items-center justify-end px-5px border rounded-4px border-gray-dddddd text-14px font-roboto tracking-tight text-blue-r0056a6"
+                    style={{color: "#d52e2e", width: "191px", height: "32px", backgroundColor: "#e8e8e8"}} 
+                    className="flex items-center justify-end px-5px border rounded-4px border-gray-dddddd text-14px font-roboto tracking-tight text-blue-r0056a6"
                 >
                     10,000
                 </p>

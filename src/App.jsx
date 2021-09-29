@@ -10,6 +10,7 @@ import CSCenterPage from "pages/CSCenterPage";
 import GameResultsPage from "pages/GameResultsPage";
 import Freeboard from "pages/Freeboard";
 import BetCombinationPage from "pages/BetCombinationPage";
+import MinigamesPage from "pages/MinigamesPage";
 
 
 function App() {
@@ -47,7 +48,10 @@ function App() {
                     <Freeboard isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
                 </Route>
                 <Route path="/bet-combination">
-                    <BetCombinationPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
+                    <BetCombinationPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated}/>
+                </Route>
+                <Route path="/minigame">
+                    <MinigamesPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated}/>
                 </Route>
                 <Route path="*">
                     <MainPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />

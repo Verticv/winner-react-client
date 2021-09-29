@@ -8,23 +8,26 @@ import SpeedkinoHighlight from '../../images/navbarHover/speedkino_banner_highli
 import KinoLadder from '../../images/navbarHover/kinoladder_banner.png'
 import KinoLadderHighlight from '../../images/navbarHover/kinoladder_banner_highlight.png'
 import Expand from 'react-expand-animated'
+import { useHistory } from 'react-router'
 
 const MinigamesHover = ({selection}) => {
 
-    const [selectedGame, setSelectedGame] = useState()
+    const [selectedGame, setSelectedGame] = useState(false)
+    const history = useHistory();
 
     const gamesArray = [
-        { id: 0, background: Powerball, highlight: PowerballHighlight, imgText: "파워볼", color: "bg-purple-d03ab7 text-white shadow-plain4", btnText: "게임시작", class: "bg-opacity-25" },
-        { id: 1, background: PowerLadder, highlight: PowerLadderHighlight, imgText: "파워사다리", color: "bg-blue-r3384ca text-white shadow-plain4", btnText: "게임시작", class: "bg-opacity-25" },
-        { id: 2, background: Speedkino, highlight: SpeedkinoHighlight, imgText: "스피드키노", color: "bg-red-db4a4a text-white shadow-plain4", btnText: "게임시작", class: "bg-opacity-25" },
-        { id: 3, background: KinoLadder, highlight: KinoLadderHighlight, imgText: "키노사다리", color: "bg-green-e3ba3c text-white shadow-plain4", btnText: "게임시작", class: "bg-opacity-25" }
+        { id: 0, background: Powerball, highlight: PowerballHighlight, imgText: "파워볼", color: "bg-purple-d03ab7 text-white shadow-plain4", btnText: "게임시작", class: "bg-opacity-25", path: "/minigame/powerball" },
+        { id: 1, background: PowerLadder, highlight: PowerLadderHighlight, imgText: "파워사다리", color: "bg-blue-r3384ca text-white shadow-plain4", btnText: "게임시작", class: "bg-opacity-25", path: "/minigame/powerladder" },
+        { id: 2, background: Speedkino, highlight: SpeedkinoHighlight, imgText: "스피드키노", color: "bg-red-db4a4a text-white shadow-plain4", btnText: "게임시작", class: "bg-opacity-25", path: "/minigame/speedkino" },
+        { id: 3, background: KinoLadder, highlight: KinoLadderHighlight, imgText: "키노사다리", color: "bg-green-e3ba3c text-white shadow-plain4", btnText: "게임시작", class: "bg-opacity-25", path: "/minigame/kinoladder" }
     ];
 
     function GamesList({ items }) {
         return items.map(item => (
             <div 
                 key={item.id} 
-                className="relative group w-305px h-206px cursor-pointer" 
+                className="relative group w-305px h-206px cursor-pointer"
+                onClick={() => history.push(item.path)}
                 onMouseEnter={() => setSelectedGame(item.id)} 
                 onMouseLeave={() => setSelectedGame(false)}
             >
