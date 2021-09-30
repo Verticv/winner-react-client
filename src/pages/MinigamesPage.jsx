@@ -10,6 +10,7 @@ import SpeedKino from '../images/minigames/speedkino.png'
 import KinoLadder from '../images/minigames/kinoladder.png'
 import MinigamesRightPanel from 'components/minigames/MinigamesRightPanel'
 import Placeholder from '../images/minigames/placeholder.png'
+import MinigamesPanel from 'components/minigames/MinigamesPanel'
 
 
 const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
@@ -21,7 +22,7 @@ const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
         { id: 3, img: KinoLadder, time: "02:50" },
     ]
 
-    const [selectedTab, setSelectedTab] = useState(0)
+    const [selectedGame, setSelectedGame] = useState(0)
 
     return (
         <div className="relative flex flex-col justify-center limit:overflow-x-hidden">
@@ -35,7 +36,7 @@ const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
                 <div className="w-default">
 
 
-                    <HorizontalMenu3 itemsArray={GameTypeArray} selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
+                    <HorizontalMenu3 itemsArray={GameTypeArray} selectedTab={selectedGame} setSelectedTab={setSelectedGame} />
 
 
                     <div className="flex w-full mt-8px space-x-8px">
@@ -48,6 +49,9 @@ const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
                         <MinigamesRightPanel />
                     </div>
 
+                    <div className="mt-8px">
+                        <MinigamesPanel selectedGame={selectedGame} setSelectedGame={setSelectedGame}  />
+                    </div>
 
 
                 </div>

@@ -17,7 +17,7 @@ const MinigamesRightPanel = () => {
 
     return (
         <div 
-            style={{width: "347px"}}
+            style={{width: "347px", height:"509px"}}
             className="rounded-xl shadow-subNavbar flex flex-col"
         >
             <div 
