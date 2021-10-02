@@ -16,13 +16,13 @@ import MinigamesPanel from 'components/minigames/MinigamesPanel'
 const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
 
     const GameTypeArray = [
-        { id: 0, img: PowerballIcon, time: "02:16" },
-        { id: 1, img: PowerLadder, time: "02:50" },
-        { id: 2, img: SpeedKino, time: "02:50" },
-        { id: 3, img: KinoLadder, time: "02:50" },
+        { id: 0, img: PowerballIcon, time: "02:16", path: "/minigame/powerball" },
+        { id: 1, img: PowerLadder, time: "02:50", path: "/minigame/powerladder" },
+        { id: 2, img: SpeedKino, time: "02:50", path: "/minigame/speedkino" },
+        { id: 3, img: KinoLadder, time: "02:50", path: "/minigame/kinoladder" },
     ]
 
-    const [selectedGame, setSelectedGame] = useState(0)
+    const [selectedGame, setSelectedGame] = useState(window.location.pathname)
 
     return (
         <div className="relative flex flex-col justify-center limit:overflow-x-hidden">
