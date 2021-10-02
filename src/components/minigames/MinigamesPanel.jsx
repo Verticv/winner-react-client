@@ -1,6 +1,9 @@
 import HorizontalMenu4 from 'components/horizontalMenus/HorizontalMenu4'
 import React, { useState } from 'react'
+import KinoLadderPanel from './KinoLadderPanel'
 import PowerballPanel from './PowerballPanel'
+import PowerLadderPanel from './PowerLadderPanel'
+import SpeedKinoPanel from './SpeedKinoPanel'
 
 const MinigamesPanel = ({
     selectedGame,
@@ -28,11 +31,11 @@ const MinigamesPanel = ({
                     {selectedGame === 0 ? (
                         <PowerballPanel />
                     ) : selectedGame === 1 ? (
-                        <></>
+                        <PowerLadderPanel />
                     ) : selectedGame === 2 ? (
-                        <></>
+                        <SpeedKinoPanel />
                     ) : selectedGame === 3 ? (
-                        <></>
+                        <KinoLadderPanel />
                     ) : <></>}
 
 
