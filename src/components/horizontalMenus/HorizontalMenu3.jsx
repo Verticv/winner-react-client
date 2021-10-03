@@ -1,4 +1,5 @@
 import React from 'react'
+import { useHistory } from 'react-router';
 import ClockIcon from '../../images/minigames/clock.png'
 import ClockIconWhite from '../../images/minigames/clock_white.png'
 
@@ -8,6 +9,7 @@ const HorizontalMenu3 = ({
     setSelectedTab
 }) => {
 
+    const history = useHistory();
 
     function TabsList({ items }) {
         return items.map(item => (
@@ -18,7 +20,10 @@ const HorizontalMenu3 = ({
                     ? "bg-blue-r58baf7" 
                     : "bg-white"
                 } overflow-hidden h-59px w-full rounded-lg flex justify-end border border-gray-dddddd`} 
-                onClick={() => setSelectedTab(item.path)}
+                onClick={() => {
+                    setSelectedTab(item.path)
+                    history.push(item.path)
+                }}
             >
                 <div 
                     style={{height: "57px"}}

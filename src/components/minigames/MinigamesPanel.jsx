@@ -6,7 +6,8 @@ import PowerLadderPanel from './PowerLadderPanel'
 import SpeedKinoPanel from './SpeedKinoPanel'
 import {
     PowerballHistoryArray,
-    PowerballResultsArray
+    PowerballResultsArray,
+    PowerLadderResultsArray
 } from './arrays'
 
 const MinigamesPanel = ({
@@ -44,11 +45,32 @@ const MinigamesPanel = ({
                             setCheckedState={setCheckedState}
                         />
                     ) : selectedGame === "/minigame/powerladder" ? (
-                        <PowerLadderPanel />
+                        <PowerLadderPanel 
+                            selectedTab={selectedTab} 
+                            setSelectedTab={setSelectedTab} 
+                            historyArray={PowerballHistoryArray}
+                            resultsArray={PowerLadderResultsArray}
+                            checkedState={checkedState}
+                            setCheckedState={setCheckedState}
+                        />
                     ) : selectedGame === "/minigame/speedkino" ? (
-                        <SpeedKinoPanel />
+                        <SpeedKinoPanel
+                            selectedTab={selectedTab} 
+                            setSelectedTab={setSelectedTab} 
+                            historyArray={PowerballHistoryArray}
+                            resultsArray={PowerLadderResultsArray}
+                            checkedState={checkedState}
+                            setCheckedState={setCheckedState}
+                        />
                     ) : selectedGame === "/minigame/kinoladder" ? (
-                        <KinoLadderPanel />
+                        <KinoLadderPanel 
+                            selectedTab={selectedTab} 
+                            setSelectedTab={setSelectedTab} 
+                            historyArray={PowerballHistoryArray}
+                            resultsArray={PowerLadderResultsArray}
+                            checkedState={checkedState}
+                            setCheckedState={setCheckedState}
+                        />
                     ) : <></>
                     }
 

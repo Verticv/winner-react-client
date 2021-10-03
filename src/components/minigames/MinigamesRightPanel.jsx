@@ -4,8 +4,11 @@ import RefreshIcon from '../../images/minigames/refresh_icon.png'
 import SelectionBg from '../../images/minigames/selection_bg.png'
 import CheckIcon from '../../images/minigames/checkbox.png'
 import BetIcon from '../../images/betCombination/bet_icon.png'
+import LockIcon from '../../images/minigames/lock.png'
 
-const MinigamesRightPanel = () => {
+const MinigamesRightPanel = ({
+    disabled = true
+}) => {
 
     const BetAmountButton = ({amount}) => (
         <button style={{width:"110px", backgroundColor: "#b3bac1"}} className="flex items-center h-46px justify-center rounded-4px">
@@ -18,7 +21,7 @@ const MinigamesRightPanel = () => {
     return (
         <div 
             style={{width: "347px", height:"509px"}}
-            className="rounded-xl shadow-subNavbar flex flex-col"
+            className="relative rounded-xl shadow-subNavbar flex flex-col overflow-hidden"
         >
             <div 
                 style={{height: "131px"}}
@@ -116,6 +119,18 @@ const MinigamesRightPanel = () => {
                 </button>
 
             </div>
+
+            {disabled === true && (
+                <div className="absolute w-full h-full bg-black bg-opacity-70 z-20 flex justify-center"> 
+                    <div className="flex flex-col items-center justify-center">
+                        <img className="object-none" src={LockIcon} alt="" />
+                        <div 
+                            style={{textShadow: "2px 4px 4px #00000080"}} 
+                            className="text-white font-spoqaMedium text-18px tracking-tight mt-6px"
+                        >지금은 베팅할 수 없습니다.</div>
+                    </div>
+                </div>
+            )}
         </div>
     )
 }
