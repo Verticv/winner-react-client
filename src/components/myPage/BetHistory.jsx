@@ -25,14 +25,6 @@ import MyPageTitle from './MyPageTitle'
 
 const BetHistory = () => {
 
-    const [selectedTab, setSelectedTab] = useState(0)
-    const [selectedSubTab, setSelectedSubTab] = useState(0)
-    const [page, setPage] = useState(0)
-    const [checkedState, setCheckedState] = useState(
-        new Array(3).fill(false)
-    );
-    const [isAllSelected, setAllSelected] = useState(false)
-
     const tabsArray = [
         { text: "전체", icon: Icon1, id: 0 },
         { text: "라이브카지노", icon: Icon2, id: 1 },
@@ -54,6 +46,14 @@ const BetHistory = () => {
         { text: "섹시게이밍", icon: SexyIcon, id: 5 },
         { text: "빅게이밍", icon: BigIcon, id: 6 },
     ];
+
+    const [selectedTab, setSelectedTab] = useState(0)
+    const [selectedSubTab, setSelectedSubTab] = useState(0)
+    const [page, setPage] = useState(0)
+    const [checkedState, setCheckedState] = useState(
+        new Array(3).fill(false)
+    );
+    const [isAllSelected, setAllSelected] = useState(false)
 
     const AllSelectButtonPressed = () => {
 

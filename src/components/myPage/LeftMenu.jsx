@@ -16,23 +16,32 @@ const LeftMenu = ({
     const history = useHistory();
     const [isPopupOpen, setPopupOpen] = useState(true)
     const [isExpanded, setExpanded] = useState(window.location.pathname)
-
-    function openTab() {
-        window.open('/distributor-page');
-      }
+    const [isMouseHover, setMouseHover] = useState("")
     
-    function buttonPressed(path) {
-        history.push(path)
-        setSelectedTab(path)
-        if (setSelectedSubTab !== null) {
-            setSelectedSubTab(path)
-        }
-        
-        if (isExpanded === path) {
-            setExpanded(path + "closed")
+    function buttonPressed(text, path) {
+        if (text === "총판페이지") {
+            window.open('/distributor-page');
         } else {
-            setExpanded(path)
+            history.push(path)
+            setSelectedTab(path)
+            if (setSelectedSubTab !== null) {
+                setSelectedSubTab(path)
+            }
+            
+            if (isExpanded === path) {
+                setExpanded(path + "closed")
+            } else {
+                setExpanded(path)
+            }
         }
+    }
+
+    function mouseHover(path) {
+        setMouseHover(path)
+    }
+
+    function mouseLeave(path) {
+        setMouseHover("")
     }
       
     const EditProfileButton = ({path, text, icon, iconHighlight, selectedTab}) => (
@@ -42,10 +51,12 @@ const LeftMenu = ({
                 ? "bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2" 
                 : "bg-white"
             } flex w-full items-center p-5px h-53px rounded-full`} 
-            onClick={(e) => {
+            onClick={() => {
                 buttonPressed(path)
                 setPopupOpen(true)
             }}
+            onMouseEnter={() => mouseHover(path)}
+            onMouseLeave={() => mouseLeave(path)}
         >
             <div 
                 className={`${
@@ -62,6 +73,8 @@ const LeftMenu = ({
                     className={`${
                         (selectedTab === path)
                         ? "text-white" 
+                        : isMouseHover === path
+                        ? "text-gray-r454545"
                         : "text-gray-r8c8c8c"
                     } font-spoqaMedium text-16px cursor-pointer tracking-tight`}>{text}</label>
             </div>
@@ -97,13 +110,9 @@ const LeftMenu = ({
                                 ? "bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2" 
                                 : "bg-white"
                             } flex w-full items-center p-5px h-53px rounded-full`} 
-                            onClick={(e) => {
-                                item.text === "총판페이지" ? (
-                                    openTab()
-                                ) : (
-                                    buttonPressed(item.path)
-                                )
-                            }}
+                            onClick={(e) => buttonPressed(item.text, item.path)}
+                            onMouseEnter={() => mouseHover(item.path)}
+                            onMouseLeave={() => mouseLeave(item.path)}
                         >
                             <div 
                                 className={`${
@@ -121,6 +130,8 @@ const LeftMenu = ({
                                         className={`${
                                             (selectedTab === item.path || selectedTab === item.path2 || selectedTab === item.path3 || selectedTab === item.path4)
                                             ? "text-white" 
+                                            : isMouseHover === item.path
+                                            ? "text-gray-r454545"
                                             : "text-gray-r8c8c8c"
                                         } font-spoqaMedium text-16px cursor-pointer tracking-tight`}
                                     >

@@ -18,7 +18,7 @@ const MyPageTitle = ({
                             <div className="h-12px w-px bg-gray-r8c8c8c" />
                             <div className="font-spoqaMedium tracking-tight text-gray-r8c8c8c space-x-2px">
                                 <span>{couponText}</span>
-                                <span className="text-red-500 font-spoqaBold">{couponCount}</span>
+                                <span style={{color: "#ed2f59"}} className="font-spoqaBold">{couponCount}</span>
                                 <span>장</span>
                             </div>
                         </div>

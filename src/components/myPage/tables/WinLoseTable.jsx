@@ -1,59 +1,158 @@
 import React from 'react'
 
-const WinLoseTable = () => {
+const WinLoseTable = ({
+    checkedState,
+    setCheckedState
+}) => {
 
-    const RadioButton = (
+    const ExampleArray = [
+        {
+            id: 0,
+            number: 1,
+            startDate: "2021-06-29",
+            endDate: "2021-07-29",
+            type: "스포츠",
+            amount: "78,308",
+            status: "진행중인 금액"
+        },
+        {
+            id: 1,
+            number: 2,
+            startDate: "2021-06-29",
+            endDate: "2021-07-29",
+            type: "미니게임",
+            amount: "+9,900",
+            status: "정산완료"
+        },
+        {
+            id: 2,
+            number: 3,
+            startDate: "2021-06-29",
+            endDate: "2021-07-29",
+            type: "스포츠",
+            amount: "+32,510",
+            status: "정산완료"
+        },
+        {
+            id: 3,
+            number: 4,
+            startDate: "2021-06-29",
+            endDate: "2021-07-29",
+            type: "에볼루션",
+            amount: "-560,500",
+            status: "정산완료"
+        },
+        {
+            id: 4,
+            number: 5,
+            startDate: "2021-06-29",
+            endDate: "2021-07-29",
+            type: "미니게임",
+            amount: "+78,308",
+            status: "정산완료"
+        },
+        {
+            id: 5,
+            number: 6,
+            startDate: "2021-06-29",
+            endDate: "2021-07-29",
+            type: "스포츠",
+            amount: "-78,308",
+            status: "정산완료"
+        },
+        {
+            id: 6,
+            number: 7,
+            startDate: "2021-06-29",
+            endDate: "2021-07-29",
+            type: "스포츠",
+            amount: "+78,308",
+            status: "정산완료"
+        },
+        {
+            id: 7,
+            number: 8,
+            startDate: "2021-06-29",
+            endDate: "2021-07-29",
+            type: "스포츠",
+            amount: "+78,308",
+            status: "정산완료"
+        },
+        {
+            id: 8,
+            number: 9,
+            startDate: "2021-06-29",
+            endDate: "2021-07-29",
+            type: "스포츠",
+            amount: "+78,308",
+            status: "정산완료"
+        },
+        {
+            id: 9,
+            number: 10,
+            startDate: "2021-06-29",
+            endDate: "2021-07-29",
+            type: "스포츠",
+            amount: "+78,308",
+            status: "정산완료"
+        },
+    ]
+
+    const RadioButton = ({id}) => (
         <input 
             className="radio" 
             type="checkbox" 
             name="radio" 
-            // checked={isChecked === row}
-            // onClick={() => setChecked(row)}
+            checked={checkedState[id]}
+            onChange={() => handleOnChange(id)}
         />
     )
+
+    const handleOnChange = (position) => {
+        const updatedCheckedState = checkedState.map((item, index) =>
+          index === position ? !item : item
+        );
+        setCheckedState(updatedCheckedState);
+    }; 
+
+    function Cells({ items }) {
+        return items.map(item => (
+            <tr 
+                style={{backgroundColor: item.id % 2 === 0 ? "#fefefe" : "#f8f9fb"}} 
+                className=" rounded-3xl font-spoqa text-14px tracking-tight text-gray-r585858 h-56px w-full border-b border-gray-dddddd"
+            >
+                <td className="w-100px font-robotoRegular h-56px text-center flex items-center justify-center"><RadioButton id={item.id}/></td>
+                <td className="w-64px h-56px text-center font-robotoRegular">{item.number}</td>
+                <td className="w-176px h-56px text-center font-robotoRegular">{item.startDate}</td>
+                <td className="w-136px h-56px text-center font-robotoRegular">{item.endDate}</td>
+                <td className="w-265px h-56px text-center">{item.type}</td>
+                <td 
+                    style={{color: item.amount.includes("+") ? "#d52e2e" : item.amount.includes("-") ? "#0056a6" : "#585858"}}
+                    className="w-170px h-56px text-center font-robotoRegular"
+                >
+                    {item.amount}
+                </td>
+                <td className="w-128px h-56px text-center">{item.status}</td>
+            </tr>
+        ));
+    }
 
     return (
         <div className="shadow-subNavbar rounded-3xl overflow-hidden">
             <table >
                 <thead className="bg-gray-fafafa rounded-3xl font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd">
                     <tr>
-                        <th className="w-100px">선택</th>
-                        <th className="w-64px">번호</th>
-                        <th className="w-176px">정산시작일</th>
-                        <th className="w-136px">정산종료일</th>
-                        <th className="w-265px">분류</th>
-                        <th className="w-170px">금액</th>
-                        <th className="w-128px">처리상태</th>
+                        <td className="w-100px text-center">선택</td>
+                        <td className="w-64px text-center">번호</td>
+                        <td className="w-176px text-center">정산시작일</td>
+                        <td className="w-136px text-center">정산종료일</td>
+                        <td className="w-265px text-center">분류</td>
+                        <td className="w-170px text-center">금액</td>
+                        <td className="w-128px text-center">처리상태</td>
                     </tr>
                 </thead>
-                <tbody className="w-full text-585858 text-14px tracking-tight font-spoqaMedium">
-                    <tr className="bg-gray-fefefe rounded-3xl font-spoqaMedium text-14px tracking-tight text-gray-r585858 h-56px w-full border-b border-gray-dddddd">
-                        <td className="w-100px font-roboto h-56px text-center">{RadioButton}</td>
-                        <td className="w-64px h-56px text-center font-roboto">1</td>
-                        <td className="w-176px h-56px text-center font-roboto">2021-06-29</td>
-                        <td className="w-136px h-56px text-center font-roboto">2021-07-29</td>
-                        <td className="w-265px h-56px text-center">스포츠</td>
-                        <td className="w-170px h-56px text-center font-roboto">78,308</td>
-                        <td className="w-128px h-56px text-center">진행중인 금액</td>
-                    </tr>
-                    <tr className="bg-gray-f7f9fc rounded-3xl font-spoqaMedium text-14px tracking-tight text-gray-r585858 h-56px border-b border-gray-dddddd">
-                        <td className="w-100px font-roboto h-56px text-center">{RadioButton}</td>
-                        <td className="w-64px h-56px text-center font-roboto">2</td>
-                        <td className="w-176px h-56px text-center font-roboto">2021-06-29</td>
-                        <td className="w-136px h-56px text-center font-roboto">2021-07-29</td>
-                        <td className="w-265px h-56px text-center">미니게임</td>
-                        <td className="w-170px h-56px text-center text-red-500 font-roboto">+9,900</td>
-                        <td className="w-128px h-56px text-center">정산완료</td>
-                    </tr>
-                    <tr className="bg-gray-fefefe rounded-3xl font-spoqaMedium text-14px tracking-tight text-gray-r585858 h-56px w-full border-b border-gray-dddddd">
-                        <td className="w-100px font-roboto h-56px text-center">{RadioButton}</td>
-                        <td className="w-64px h-56px text-center font-roboto">3</td>
-                        <td className="w-176px h-56px text-center font-roboto">2021-06-29</td>
-                        <td className="w-136px h-56px text-center font-roboto">2021-07-29</td>
-                        <td className="w-265px h-56px text-center">에볼루션</td>
-                        <td className="w-170px h-56px text-center text-red-500 font-roboto">+32,510</td>
-                        <td className="w-128px h-56px text-center">정산완료</td>
-                    </tr>
+                <tbody className="w-full text-585858 text-14px tracking-tight font-spoqa">
+                    <Cells items={ExampleArray} />
                 </tbody>
             </table>
             <div className="flex bg-gray-fefefe font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px">
