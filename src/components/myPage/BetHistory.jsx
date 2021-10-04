@@ -63,7 +63,7 @@ const BetHistory = () => {
             <div className="relative w-full mt-20px">
                 <HorizontalMenu itemsArray={tabsArray} isState={selectedTab} setState={setSelectedTab} />
                 {(selectedTab !== 0 && selectedTab !== 3) && (
-                    <div className={`ml-${selectedTab * 116 + 50}px absolute bottom-0 w-20px -mb-10px overflow-hidden inline-block `}>
+                    <div style={{marginLeft: `${selectedTab * 116 + 50}px`}} className={`absolute bottom-0 w-20px -mb-10px overflow-hidden inline-block `}>
                         <div className="h-10px w-10px bg-gradient-to-br from-gray-d2dfea via-gray-eff3f6 to-gray-eff3f6 rotate-45 transform origin-bottom-left shadow"></div>
                     </div>
                 )}

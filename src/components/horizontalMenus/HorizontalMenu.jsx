@@ -19,6 +19,11 @@ const HorizontalMenu = ({
                 onClick={() => setState(item.id)}
             >
                 <div 
+                    style={{
+                        background: isState === item.id 
+                        ? "linear-gradient(to bottom, #2087f0, #1873cf)"
+                        : "linear-gradient(to bottom, #c4d6e6, #e8f3fd 26%, #ffffff )"
+                    }}
                     className={`${
                         isState === item.id 
                         ? "bg-gradient-to-b from-blue-r2087f0 via-blue-r2087f0 to-blue-gradDark"
