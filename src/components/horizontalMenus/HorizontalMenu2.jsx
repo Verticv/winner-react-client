@@ -11,23 +11,30 @@ const HorizontalMenu2 = ({
         return items.map(item => (
             <button 
                 key={item.id} 
-                style={{height:"56px"}}
+                style={{
+                    height:"56px",
+                    borderRadius: "6px"
+                }}
                 className={`${
                     isState === item.id
                     ? "bg-blue-r58baf7" 
                     : "bg-gray-fafafa"
-                } relative overflow-hidden h-103px w-full rounded-lg flex justify-end border border-gray-dddddd`} 
+                } relative overflow-hidden h-103px w-full flex justify-end border border-gray-dddddd`} 
                 onClick={() => setState(item.id)}
             >
                 <div 
-                    style={{height: "54px"}}
+                    style={{
+                        height: "54px",
+                        borderTopLeftRadius: "4px",
+                        borderTopRightRadius: "4px"
+                    }}
                     className={`${
                         isState === item.id 
                         ? "bg-gradient-to-b from-blue-r2087f0 via-blue-r2087f0 to-blue-gradDark"
                         : "bg-gray-fafafa"
-                    } mt-2px w-full rounded-b-md rounded-t-lg flex items-center justify-center space-x-4px`}
+                    } mt-2px w-full rounded-b-md flex items-center justify-center space-x-4px`}
                 >
-                    <img className="object-none" src={isState === item.id ? item.iconHighlight : item.icon} alt="" />
+                    <img className={`${item.id === 0 ? "mb-3px" : "mb-2px" } object-none`} src={isState === item.id ? item.iconHighlight : item.icon} alt="" />
                     <div 
                         className={`${
                             isState === item.id

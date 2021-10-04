@@ -26,7 +26,7 @@ const HorizontalMenu1 = ({
                         : "bg-gradient-to-b from-blue-c4d6e6 via-gray-f5feff to-white border-b border-l border-r border-blue-d6dfe8"
                     } mt-3px w-full rounded-b-md rounded-t-lg flex flex-col items-center`}
                 >
-                    <img className="mt-6px ml-2px object-none" src={item.icon} alt="" />
+                    <img className="mt-5px ml-2px object-none" src={item.icon} alt="" />
                     <div 
                         className={`${
                             isState === item.id
@@ -37,12 +37,13 @@ const HorizontalMenu1 = ({
                         {item.text}
                     </div>
                     <div 
-                        style={{width: "38px"}}
-                        className={`${
-                            isState === item.id
-                            ? "bg-blue-r0056a6" 
-                            : "bg-gray-r8c8c8c" 
-                        } text-white text-12px font-roboto tracking-tight mt-12px h-17px rounded-full flex items-center justify-center`}
+                        style={{
+                            width: "38px",
+                            backgroundColor: isState === item.id 
+                            ? "#1b4372"
+                            : "#8c8c8c"
+                        }}
+                        className={`text-white text-12px font-roboto tracking-tight mt-9px h-17px rounded-full flex items-center justify-center`}
                     >
                         {item.number}
                     </div>

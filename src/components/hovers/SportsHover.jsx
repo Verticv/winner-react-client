@@ -19,7 +19,7 @@ const SportsHover = ({selection}) => {
             color: "group-hover:bg-yellow-e3ba3c", 
             btnText: "게임시작", 
             class: "bg-opacity-25", 
-            external: "https://stupefied-meitner-dfc324.netlify.app/" },
+        },
         { 
             id: 1, 
             background: TennisBanner, 
@@ -30,7 +30,16 @@ const SportsHover = ({selection}) => {
             class: "bg-opacity-25", 
             path: "/bet-combination" 
         },
-        { id: 2, background: MessiBanner, highlight: MessiBannerHighlight, imgText: "스페셜", color: "group-hover:bg-red-db4a4a", btnText: "게임시작", class: "bg-opacity-25", path: "/" }
+        { 
+            id: 2, 
+            background: MessiBanner, 
+            highlight: MessiBannerHighlight, 
+            imgText: "스페셜", 
+            color: "group-hover:bg-red-db4a4a", 
+            btnText: "게임시작", 
+            class: "bg-opacity-25", 
+            path: "/bet-combination" 
+        }
     ];
 
     function GamesList({ items }) {

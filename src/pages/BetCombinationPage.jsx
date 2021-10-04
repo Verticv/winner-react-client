@@ -34,7 +34,7 @@ const BetCombinationPage = ({isAuthenticated, setAuthenticated}) => {
     const [isPanelFixed, setPanelFixed] = useState(false)
 
     return (
-        <div className="relative flex flex-col justify-center limit:overflow-x-hidden">
+        <div className="relative flex flex-col justify-center">
 
             <div className="fixed w-1920 top-0 z-50 flex flex-col items-start limit1920:items-center">
                 <NoticeBanner />
@@ -61,7 +61,7 @@ const BetCombinationPage = ({isAuthenticated, setAuthenticated}) => {
                         </div>
                     </div>
                     
-                    <div style={{width: "307px", right:"326px"}} className={`${isPanelFixed && "fixed"} mb-60px`}>
+                    <div style={{width: "307px", left:"0px", position:"sticky", top: "150px", height: isPanelFixed ? "100%" : ""}} className={`${isPanelFixed && "sticky bottom-0 flex"} mb-60px`}>
                         <BetCombinationRightPanel isPanelFixed={isPanelFixed} setPanelFixed={setPanelFixed} />
                     </div>
 

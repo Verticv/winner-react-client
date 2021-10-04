@@ -24,6 +24,8 @@ const BetCombinationRightPanel = ({isPanelFixed, setPanelFixed}) => {
 
 
     const [time, setTime] = useState(Date.now());
+    const [inputValue, setInputValue] = useState(null)
+    var nf = new Intl.NumberFormat();
 
     useEffect(() => {
         const interval = setInterval(() => setTime(Date.now()), 1000);
@@ -34,10 +36,20 @@ const BetCombinationRightPanel = ({isPanelFixed, setPanelFixed}) => {
 
     const [selectedTab, setSelectedTab] = useState(0)
 
-    const BetAmountButton = ({amount}) => (
-        <button style={{width:"94px", backgroundColor: "#b3bac1"}} className="flex items-center justify-center h-46px w-75px rounded-4px">
-            <div style={{width:"92px"}} className="flex items-center justify-center h-44px w-73px rounded-4px border border-white bg-gradient-to-b from-white to-blue-c4d6e6 via-gray-f5feff cursor-pointer">
-                <span className="font-roboto tracking-tight text-16px text-gray-r585858">{amount}</span>
+    const BetAmountButton = ({amount, setInputValue}) => (
+        <button 
+            style={{width:"94px", backgroundColor: "#b3bac1"}} 
+            className="flex items-center justify-center h-46px w-75px rounded-4px"
+            onClick={() => setInputValue(amount)}
+        >
+            <div 
+                style={{
+                    width:"92px",
+                    background: "linear-gradient(to bottom, #feffff, #cedeed)"
+                    }} 
+                className="flex items-center justify-center h-44px w-73px rounded-4px border border-white bg-gradient-to-b cursor-pointer"
+            >
+                <span className="font-roboto tracking-tight text-16px text-gray-r585858 pt-px">{nf.format(amount)}</span>
             </div>
         </button>
     )
@@ -106,12 +118,18 @@ const BetCombinationRightPanel = ({isPanelFixed, setPanelFixed}) => {
 
             <div className="h-47px border-b border-gray-dddddd flex items-center justify-between pl-11px pr-10px">
                 <p className="text-14px font-spoqaMedium tracking-tight text-gray-r454545">베팅금액</p>
-                <p 
+                <input 
                     style={{color: "#d52e2e", width: "191px", height: "32px", backgroundColor: "#e8e8e8"}} 
-                    className="flex items-center justify-end px-5px border rounded-4px border-gray-dddddd text-14px font-roboto tracking-tight text-blue-r0056a6"
-                >
-                    10,000
-                </p>
+                    className="flex items-center justify-end px-5px border rounded-4px border-gray-dddddd text-14px font-roboto tracking-tight outline-none text-right"
+                    placeholder="0"
+                    value={nf.format(inputValue)}
+                    onChange={e => setInputValue(e.target.value.replace(/,/g, ''))}
+                    onKeyPress={(event) => {
+                        if (!/[0-9]/.test(event.key)) {
+                            event.preventDefault();
+                        }
+                    }}
+                />
             </div>
 
             <div className="h-47px border-b border-gray-dddddd flex items-center justify-between pl-11px pr-16px">
@@ -122,28 +140,40 @@ const BetCombinationRightPanel = ({isPanelFixed, setPanelFixed}) => {
             <div style={{height:"213px"}} className="w-full bg-gray-fafafa p-10px">
 
                 <div className="grid grid-cols-3 gap-2px">
-                    <BetAmountButton amount="5,000"/>
-                    <BetAmountButton amount="10,000"/>
-                    <BetAmountButton amount="50,000"/>
-                    <BetAmountButton amount="100,000"/>
-                    <BetAmountButton amount="500,000"/>
-                    <BetAmountButton amount="1,000,000"/>
+                    <BetAmountButton amount={5000} setInputValue={setInputValue}/>
+                    <BetAmountButton amount={10000} setInputValue={setInputValue}/>
+                    <BetAmountButton amount={50000} setInputValue={setInputValue}/>
+                    <BetAmountButton amount={100000} setInputValue={setInputValue}/>
+                    <BetAmountButton amount={500000} setInputValue={setInputValue}/>
+                    <BetAmountButton amount={1000000} setInputValue={setInputValue}/>
                 </div>
 
                 <div className="flex space-x-2px mt-2px">
-                    <button style={{width:"94px"}} className="flex items-center justify-center h-46px w-75px rounded-4px bg-gray-r171a1d">
+                    <button 
+                    style={{width:"94px"}} 
+                    className="flex items-center justify-center h-46px w-75px rounded-4px bg-gray-r171a1d"
+                    onClick={() => setInputValue(3522170/2)}
+                    >
                         <div style={{width:"92px"}} className="flex items-center justify-center h-44px w-73px rounded-4px border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e to-gray-r303337 cursor-pointer">
-                            <span className="font-spoqaMedium tracking-tight text-16px text-white">하프</span>
+                            <span className="font-spoqaMedium tracking-tight text-16px text-white pt-2px">하프</span>
                         </div>
                     </button>
-                    <button style={{width:"94px"}} className="flex items-center justify-center h-46px w-75px rounded-4px bg-gray-r171a1d">
+                    <button 
+                        style={{width:"94px"}} 
+                        className="flex items-center justify-center h-46px w-75px rounded-4px bg-gray-r171a1d"
+                        onClick={() => setInputValue(3522170)}
+                    >
                         <div style={{width:"92px"}} className="flex items-center justify-center h-44px w-73px rounded-4px border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e to-gray-r303337 cursor-pointer">
-                            <span className="font-spoqaMedium tracking-tight text-16px text-white">최대</span>
+                            <span className="font-spoqaMedium tracking-tight text-16px text-white pt-2px">최대</span>
                         </div>
                     </button>
-                    <button style={{width:"94px"}} className="flex items-center justify-center h-46px w-75px rounded-4px bg-gray-r171a1d">
+                    <button 
+                        style={{width:"94px"}} 
+                        className="flex items-center justify-center h-46px w-75px rounded-4px bg-gray-r171a1d"
+                        onClick={() => setInputValue(0)}
+                    >
                         <div style={{width:"92px"}} className="flex items-center justify-center h-44px w-73px rounded-4px border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e to-gray-r303337 cursor-pointer">
-                            <span className="font-spoqaMedium tracking-tight text-16px text-white">정정</span>
+                            <span className="font-spoqaMedium tracking-tight text-16px text-white pt-2px">정정</span>
                         </div>
                     </button>
                 </div>
