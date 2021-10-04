@@ -5,6 +5,8 @@ import USFlagIcon from '../../images/myPage/betHistory/us_flag.png'
 import UKFlagIcon from '../../images/myPage/betHistory/uk_flag_rec.png'
 import SpainFlagIcon from '../../images/myPage/betHistory/spain_flag.png'
 import ClockIcon from '../../images/myPage/betHistory/clock.png'
+import UpIcon from '../../images/myPage/betHistory/UP.png'
+import DownIcon from '../../images/myPage/betHistory/DOWN.png'
 
 const SportsBetHistory = ({
     id = 0,
@@ -37,7 +39,8 @@ const SportsBetHistory = ({
 
     const handleRemoveItem = (id) => {
         setAttachedArray(attachedArray.filter(item => item !== id));
-       };
+    };
+    
     const CardContent = ({
         bet, 
         result, 
@@ -47,7 +50,9 @@ const SportsBetHistory = ({
         team2, 
         stat1, 
         stat2, 
-        stat3
+        stat3,
+        hasUp = false,
+        hasDown = false
     }) => (
         <div className="flex items-center w-full h-56px bg-gray-fefefe border-b border-gray-dddddd">
             <div style={{width: isAttached ? "127px" : "122px", marginLeft: isAttached ? "16px" : "0px"}} className="-space-y-4px flex flex-col items-center justify-center h-56px font-spoqaMedium text-14px tracking-tight text-gray-r454545">
@@ -55,7 +60,14 @@ const SportsBetHistory = ({
                 <span>(연장포함)</span>
             </div>
             <div className="flex space-x-4px">
-                <button style={{width: isAttached ? "365px" : "285px"}} className={`flex items-center justify-center h-36px rounded-lg ${bet === "left" ? "bg-red-cb4343" : "bg-gray-dddddd"}`}>
+                <button 
+                    style={{
+                        width: isAttached ? "365px" : "285px",
+                        textShadow: bet === "left" ? "1px 1px 1px #00000050" : "",
+                        backgroundColor: bet === "left" ? "#cb4343" : "#dddddd"
+                    }} 
+                    className="flex items-center justify-center h-36px rounded-lg"
+                >
                     <div 
                     style={{width: isAttached ? "363px" : "283px"}}
                     className={`${
@@ -65,7 +77,10 @@ const SportsBetHistory = ({
                         flex items-center justify-between h-34px rounded-lg border bg-gradient-to-b cursor-pointer px-10px pt-px`
                     }>
                         <span className="truncate w-108px text-left font-spoqaMedium tracking-tight text-14px">{team1}</span>
-                        <span className="font-roboto tracking-tight text-14px">{stat1}</span>
+                        <div className="flex items-center space-x-5px">
+                            {hasUp && <img className="object-none" src={UpIcon} alt="" /> }
+                            <span className="font-roboto tracking-tight text-14px">{stat1}</span>
+                        </div>
                     </div>
                 </button>
 
@@ -82,22 +97,29 @@ const SportsBetHistory = ({
 
                 <button style={{width: isAttached ? "365px" : "285px"}} className={`${bet === "right" ? "bg-red-cb4343" : "bg-gray-dddddd"} flex group items-center justify-center h-36px rounded-lg bg-gray-dddddd`}>
                     <div
-                    style={{width: isAttached ? "363px" : "283px"}} 
+                    style={{
+                        width: isAttached ? "363px" : "283px",
+                        textShadow: bet === "right" ? "1px 1px 1px #00000050" : "",
+                        backgroundColor: bet === "right" ? "#cb4343" : "#dddddd"
+                    }} 
                     className={`${
                         bet === "right" 
                         ? "text-white border-red-ff7982 from-red-ff535f via-red-f8515d to-red-ee4e5a" 
                         : "border-white from-gray-f9f9f9 via-gray-f9f9f9 to-gray-ebebeb text-gray-r454545"} 
                         pt-px flex items-center justify-between h-34px rounded-lg border border-white bg-gradient-to-b from-gray-f9f9f9 via-gray-f9f9f9 to-gray-ebebeb cursor-pointer px-10px`}
                     >
-                        <span className="font-roboto tracking-tight text-14px">{stat3}</span>
+                        <div className="flex items-center space-x-5px">
+                            <span className="font-roboto tracking-tight text-14px">{stat3}</span>
+                            {hasDown && <img className="object-none" src={DownIcon} alt="" /> }
+                        </div>
                         <span className="truncate w-108px font-spoqaMedium tracking-tight text-14px text-right">{team2}</span>
                     </div>
                 </button>
             </div>
 
             <div className="flex ml-10px font-spoqaMedium tracking-tight text-14px text-center">
-                <div className="font-roboto w-99px">{score}</div>
-                <div className="w-61px">{choice === "home" ? "홈팀 승" : "원정팀 승"}</div>
+                <div className="font-roboto w-99px text-gray-r454545">{score}</div>
+                <div className="w-61px text-gray-r454545">{choice === "home" ? "홈팀 승" : "원정팀 승"}</div>
                 <div className={`${
                     result === "win" 
                     ? "text-red-500" 
@@ -125,11 +147,16 @@ const SportsBetHistory = ({
                 <div className="flex items-center">
                     <img src={FootballIcon} alt="" />
                     <img className="ml-5px" src={USFlagIcon} alt="" />
-                    <span className="ml-4px font-spoqaMedium text-20px tracking-tight text-white">MLS</span>
+                    <span className="ml-4px font-spoqaMedium text-20px tracking-tight text-white pt-2px">MLS</span>
                 </div>
                 <div className="flex items-center">
                     <img src={ClockIcon} alt="" />
-                    <span className="ml-5px font-spoqa text-16px tracking-tight text-white">2021-06-29 15:45</span>
+                    <span 
+                        style={{color: "#dae8f5"}}
+                        className="ml-5px font-spoqa text-16px tracking-tight text-white"
+                    >
+                        2021-06-29 15:45
+                    </span>
                 </div>
             </div>
             <div className="flex flex-col w-full bg-gray-fefefe border-gray-dddddd">
@@ -154,11 +181,16 @@ const SportsBetHistory = ({
                 <div className="flex items-center">
                     <img src={FootballIcon} alt="" />
                     <img className="ml-5px" src={UKFlagIcon} alt="" />
-                    <span className="ml-4px font-spoqaMedium text-20px tracking-tight text-white">EPL</span>
+                    <span className="ml-4px font-spoqaMedium text-20px tracking-tight text-white pt-2px">EPL</span>
                 </div>
                 <div className="flex items-center">
                     <img src={ClockIcon} alt="" />
-                    <span className="ml-5px font-spoqa text-16px tracking-tight text-white">2021-06-29 15:45</span>
+                    <span 
+                        style={{color: "#dae8f5"}}
+                        className="ml-5px font-spoqa text-16px tracking-tight text-white"
+                    >
+                        2021-06-29 15:45
+                    </span>
                 </div>
             </div>
             <div className="flex flex-col w-full bg-gray-fefefe border-gray-dddddd">
@@ -183,6 +215,8 @@ const SportsBetHistory = ({
                     stat1="2.95"
                     stat2="3.32"
                     stat3="2.5"
+                    hasDown={true}
+                    hasUp={true}
                 />
 
             </div>
@@ -195,11 +229,16 @@ const SportsBetHistory = ({
                 <div className="flex items-center">
                     <img src={FootballIcon} alt="" />
                     <img className="ml-5px" src={UKFlagIcon} alt="" />
-                    <span className="ml-4px font-spoqaMedium text-20px tracking-tight text-white">EPL</span>
+                    <span className="ml-4px font-spoqaMedium text-20px tracking-tight text-white pt-2px">EPL</span>
                 </div>
                 <div className="flex items-center">
                     <img src={ClockIcon} alt="" />
-                    <span className="ml-5px font-spoqa text-16px tracking-tight text-white">2021-06-29 15:45</span>
+                    <span 
+                        style={{color: "#dae8f5"}}
+                        className="ml-5px font-spoqa text-16px tracking-tight text-white"
+                    >
+                        2021-06-29 15:45
+                    </span>
                 </div>
             </div>
             <div className="flex flex-col w-full bg-gray-fefefe border-gray-dddddd">
@@ -224,11 +263,16 @@ const SportsBetHistory = ({
                 <div className="flex items-center">
                     <img src={FootballIcon} alt="" />
                     <img className="ml-5px" src={SpainFlagIcon} alt="" />
-                    <span className="ml-4px font-spoqaMedium text-20px tracking-tight text-white">라리가</span>
+                    <span className="ml-4px font-spoqaMedium text-20px tracking-tight text-white pt-2px">라리가</span>
                 </div>
                 <div className="flex items-center">
                     <img src={ClockIcon} alt="" />
-                    <span className="ml-5px font-spoqa text-16px tracking-tight text-white">2021-06-29 15:45</span>
+                    <span 
+                        style={{color: "#dae8f5"}}
+                        className="ml-5px font-spoqa text-16px tracking-tight text-white"
+                    >
+                        2021-06-29 15:45
+                    </span>
                 </div>
             </div>
             <div className="flex flex-col w-full bg-gray-fefefe border-gray-dddddd">
@@ -275,7 +319,7 @@ const SportsBetHistory = ({
             
             <div className="flex w-full px-10px mt-10px space-x-10px">
                 <table>
-                    <div className="flex w-auto h-36px rounded-lg bg-gray-efefef font-spoqaMedium text-14px tracking-tight text-gray-r454545">
+                    <div className="flex w-auto h-36px rounded-lg bg-gray-efefef font-spoqaMedium text-14px tracking-tight text-gray-r585858">
                         {(isAttached === false && isPopup === false) && (
                             <div className="w-45px h-full flex items-center justify-center">선택</div>
                         )}
@@ -285,10 +329,10 @@ const SportsBetHistory = ({
                         <div style={{width: isAttached === true ? "212px" : isPopup === false ? "131px" : "178px"}} className="h-full flex items-center justify-center border-l border-gray-fafafa">예상적중금액</div>
                         <div style={{width: isAttached === true ? "212px" : isPopup === false ? "131px" : "178px"}} className="h-full flex items-center justify-center border-l border-gray-fafafa">당첨금</div>
                         {(isAttached === false && isPopup === false) && (
-                            <div className="w-116px h-full flex items-center justify-center border-l border-gray-fafafa">티켓번호</div>
+                            <div className="w-116px h-full flex items-center justify-center border-l border-gray-fafafa">베팅번호</div>
                         )}
                     </div>
-                    <div className="flex w-auto h-36px font-spoqaMedium text-14px tracking-tight text-gray-r454545">
+                    <div className="flex w-auto h-36px font-spoqa text-14px tracking-tight text-gray-r585858">
                         {(isAttached === false && isPopup === false) && checkedState && (
                             <div className="w-45px h-full flex items-center justify-center">
                                 <input 

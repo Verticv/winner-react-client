@@ -461,6 +461,7 @@ module.exports = {
         spoqa: ['SpoqaHanSansNeo'],
         spoqaMedium: ['SpoqaHanSansNeoMedium'],
         spoqaBold: ['SpoqaHanSansNeoBold'],
+        robotoRegular: ['RobotoRegular'],
         roboto: ['RobotoMedium'],
         robotoBold: ['RobotoBold'],
         digital: ['Digital-7'],

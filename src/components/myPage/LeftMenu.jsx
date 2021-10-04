@@ -127,7 +127,7 @@ const LeftMenu = ({
                                         {item.text}
                                     </label>
                                     {item.inboxCount && (
-                                        <div style={{backgroundColor:"#ed2f59"}} className="ml-10px h-17px w-18px rounded-full text-white flex items-center justify-center text-12px font-roboto pt-px pr-px">
+                                        <div style={{backgroundColor:"#ed2f59"}} className="ml-10px h-17px w-18px rounded-xl text-white flex items-center justify-center text-12px font-roboto pt-px pr-px">
                                             {item.inboxCount}
                                         </div>
                                     )}

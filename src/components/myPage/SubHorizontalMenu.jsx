@@ -18,6 +18,11 @@ const SubHorizontalMenu = ({
                 onClick={() => setState(item.id)}
             >
                 <div 
+                    style={{
+                        background: isState === item.id 
+                        ? "linear-gradient(to bottom, #b9dcff, #d2f6ff)"
+                        : "linear-gradient(to bottom, #d0dbe4, #ffffff 60%)"
+                    }}
                     className={`${
                         isState === item.id 
                         ? "bg-gradient-to-b from-blue-b9dcff to-blue-d2f6ff"

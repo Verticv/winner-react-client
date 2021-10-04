@@ -39,6 +39,12 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'RobotoRegular';
+  src:url('./fonts/Roboto-Regular.ttf');
+  font-weight: medium;
+  font-style: normal;
+}
 
 @font-face {
   font-family: 'RobotoMedium';
