@@ -11,8 +11,10 @@ import BankTable from './BankTable'
 const MoneyCharge = () => {
 
     const [page, setPage] = useState(0)
-    const [inputValue, setInputValue] = useState("")
+    const [inputValue, setInputValue] = useState(null)
+    const [inputClicked, setInputClicked] = useState(false)
     const [radioValue, setRadioValue] = useState("")
+    var nf = new Intl.NumberFormat();
 
     const Title = ({text}) => (
         <div style={{width: "201px"}} className="space-y-14px flex-shrink-0">
@@ -33,7 +35,7 @@ const MoneyCharge = () => {
                 </div>
                 <div className="mt-18px flex flex-col space-y-14px text-red-ac6d6d tracking-tight font-spoqaMedium text-16px">
                     <span className="h-14px"><span className="font-bold">✓</span>  입금 시 반드시 회원님의 성함으로 입금 바랍니다.</span>
-                    <span className="h-14px"><span className="font-bold">✓</span>  은행 점검 시간을 확인하신 후 해당 시간에는 입금이 지연될 수 있으니 점검 시간을 피해 신청해 주시기 바랍니다.</span>
+                    <span className="h-14px"><span className="font-bold">✓</span>  입금이 지연될 수 있으니 은행 점검 시간을 확인하신 후 점검 시간을 피해 신청해 주시기 바랍니다.</span>
                     <span className="h-14px"><span className="font-bold">✓</span>  입금계좌는 수시로 변경되오니 반드시 계좌번호 문의 신청을 통해 계좌번호를 확인 후 입금하여 주시기 바랍니다.</span>
                     <span className="h-14px"><span className="font-bold">✓</span>  자세한 문의사항은 고객센터를 이용해 주시기 바랍니다.</span>
                 </div>
@@ -102,14 +104,22 @@ const MoneyCharge = () => {
                             <input 
                                 className="w-full text-gray-r393e41 font-spoqaMedium text-16px text-gray-r585858 outline-none pl-9px placeholder-gray-bebebe"
                                 placeholder="직접 입력시 숫자만 입력해 주세요."
-                                value={inputValue}
-                                onChange={e => setInputValue(e.target.value)}
-                                />
-                            <div className="h-px w-full bg-gray-bebebe"></div>
+                                value={inputValue !==null ? nf.format(inputValue) : ""}
+                                onChange={e => setInputValue(e.target.value.replace(/,/g, ''))}
+                                onFocus={() => setInputClicked(true)}
+                                onBlur={() => setInputClicked(false)}
+                                onKeyPress={(event) => {
+                                    if (!/[0-9]/.test(event.key)) {
+                                        event.preventDefault();
+                                    }
+                                }}
+                                type = "tel"
+                            />
+                            <div className={`${inputClicked ? "bg-blue-r1ca7ec h-2px" : " h-px bg-gray-bebebe"} w-full`}></div>
                         </div>
                     </div>
                 </div>
-                <div style={{marginLeft: "277px"}} className="mt-20px flex space-x-5px w-full justify-start pr-115px">
+                <div style={{marginLeft: "277px"}} className={`${inputClicked ? "mt-19px" : "mt-20px"} flex space-x-5px w-full justify-start pr-115px`}>
                     <button 
                         className="flex items-center justify-center h-42px w-75px rounded-4px bg-blue-r004b8a"
                         onClick={() => setInputValue("10000")}

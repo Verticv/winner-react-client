@@ -5,7 +5,8 @@ const MyPageTitle = ({
     couponCount = null,
     couponText ="사용 가능한 쿠폰:",
     pointsFor = null,
-    inboxCount = null
+    inboxCount = null,
+    isTransaction = false
 }) => {
     return (
         <div className="flex h-21px w-full justify-between">
@@ -29,7 +30,7 @@ const MyPageTitle = ({
                         <div className="h-12px w-px bg-gray-r8c8c8c" />
                         <div className="font-spoqaMedium tracking-tight text-gray-r8c8c8c space-x-2px">
                             <span className="font-spoqaBold text-blue-r0056a6">{pointsFor}</span>
-                            <span className="">님의 포인트적립 정보입니다.</span>
+                            <span className="님의 포인트전환 정보입니다.">{isTransaction ? "" : "님의 포인트적립 정보입니다."}</span>
                         </div>
                     </div>
                 )}

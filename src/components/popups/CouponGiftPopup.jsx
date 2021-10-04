@@ -18,7 +18,7 @@ const CouponGiftPopup = ({setPopupOpen}) => {
             <div className="w-full h-full bg-white pl-33px pr-37px">
                 <div className="flex items-center h-19px mt-36px space-x-8px">
                     <img src={Step1} alt="" />
-                    <span className="font-spoqaMedium text-16px tracking-tight text-gray-r7c7c7c">선물로 보낼 쿠폰을 확인하세요.</span>
+                    <span className="font-spoqaMedium text-16px tracking-tight text-gray-r7c7c7c pt-3px">선물로 보낼 쿠폰을 확인하세요.</span>
                 </div>
 
                 <div className="mt-17px h-64px w-full bg-gray-f9f9f9 border border-gray-dddddd rounded-2xl flex items-center font-spoqaMedium text-14px tracking-tight ">
@@ -30,7 +30,7 @@ const CouponGiftPopup = ({setPopupOpen}) => {
 
                 <div className="flex items-center h-19px mt-40px space-x-8px">
                     <img src={Step2} alt="" />
-                    <span className="font-spoqaMedium text-16px tracking-tight text-gray-r7c7c7c">쿠폰받을 회원을 선택하세요.</span>
+                    <span className="font-spoqaMedium text-16px tracking-tight text-gray-r7c7c7c pt-3px">쿠폰받을 회원을 선택하세요.</span>
                 </div>
 
                 <div className="mt-17px w-full h-337px overflow-y-scroll rounded-3xl shadow-subNavbar">

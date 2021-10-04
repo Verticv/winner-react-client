@@ -20,29 +20,38 @@ const InboxTable = ({
 
     function InboxList({ items }) {
         return items.map(item => (
-            <button 
+            <div 
                 key={item.id} 
                 className={`${
-                    checkedState[item.id] === true ? "bg-gray-e8eff6" :
-                    item.id % 2 === 0 ? "bg-gray-fdfdfd" : "bg-gray-f8f9fb"
+                    item.isRead === false
+                    ? "bg-gray-e8eff6" :
+                    item.id % 2 === 0 
+                    ? "bg-gray-fdfdfd" 
+                    : "bg-gray-f8f9fb"
                 } font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px w-full border-b border-gray-dddddd`}
-                onClick={() => history.push(item.path)}
             >
                 <div className="flex items-center font-spoqaBold text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd px-54px">        
                     
                     <div className="-ml-2px w-28px flex justify-center">
-                    <input
-                        type="checkbox"
-                        checked={checkedState[item.id]}
-                        onChange={() => handleOnChange(item.id)}
-                    />
+                        <input
+                            type="checkbox"
+                            checked={checkedState[item.id]}
+                            onChange={() => handleOnChange(item.id)}
+                        />
                     </div>
 
-                    <div className="w-107px flex justify-center">
+                    <div className="w-107px flex justify-center cursor-pointer" onClick={() => history.push(item.path)}>
                         <img src={item.isRead === true ? MailOpenedIcon : MailIcon} alt=""/>
                     </div>
 
-                    <div className={`${item.isRead === true ? "text-gray-r7b7b7b font-spoqaMedium" : "text-gray-r454545 font-spoqaBold"} w-612px flex items-center space-x-10px`}>
+                    <div
+                        className={`${
+                            item.isRead === true 
+                            ? "text-gray-r7b7b7b font-spoqaMedium" 
+                            : "text-gray-r454545 font-spoqaMedium"
+                            } w-612px flex items-center space-x-10px cursor-pointer`}
+                        onClick={() => history.push(item.path)}
+                    >
                         {
                             item.type === "안내" 
                             ? <div className="w-45px h-25px rounded-full bg-blue-r00a1e9 flex items-center justify-center text-white text-12px">안내</div> 
@@ -52,21 +61,22 @@ const InboxTable = ({
                         }
                         <p>{item.text}</p>
                         {item.isRead === false && (
-                            <div className="w-18px h-17px bg-red-notification rounded-full text-12px text-white flex items-center justify-center font-roboto">
+                            <div className="w-18px h-17px bg-red-ff1237 rounded-full text-12px text-white flex items-center justify-center font-roboto">
                                 N
                             </div>
                         )}
                     </div>
 
-                    <div className={`${item.isRead === true ? "text-gray-r7b7b7b" : "text-gray-r454545"} w-158px flex font-spoqaMedium justify-center font-roboto text-center`}>{item.time}</div>
-                    <div className="w-70px flex items-center justify-center">
-                        <div className={`${checkedState[item.id] ? "bg-gray-r454545" : "bg-gray-a2a2a2" } w-49px h-29px flex justify-center rounded-full text-white font-spoqaMedium items-center pt-2px`}>
+                    <div className={`${item.isRead === true ? "text-gray-r7b7b7b" : "text-gray-r454545"} w-158px flex font-spoqa justify-center text-center`}>{item.time}</div>
+
+                    <button className="w-70px flex items-center justify-center">
+                        <div className={`${item.isRead === false  ? "bg-gray-r454545" : "bg-gray-a2a2a2" } w-49px h-29px flex justify-center rounded-full text-white font-spoqaMedium items-center pt-2px`}>
                             삭제
                         </div>
-                    </div>
+                    </button>
                     
                 </div>
-            </button>
+            </div>
         ));
     }
 

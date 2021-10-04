@@ -16,6 +16,7 @@ import AttendanceFilled from '../../images/attendance/attendance_filled.png'
 
 class Calendar extends React.Component {
   state = {
+    today: new Date(),
     currentMonth: new Date(),
     currendDate: new Date(),
     selectedDate: new Date(),
@@ -28,14 +29,14 @@ class Calendar extends React.Component {
 
     return (
         <div className="flex items-center w-full justify-center h-23px space-x-30px mt-10px mb-30px">
-            <img className="cursor-pointer transform rotate-180" onClick={this.prevMonth} src={Arrow} alt="" />
+            <img className={`${this.state.currentMonth  >  this.state.today ? "opacity-100" : "opacity-20"} cursor-pointer transform rotate-180`} onClick={this.prevMonth} src={Arrow} alt="" />
             <div className="flex items-center h-23px text-blue-r0056a6">
                 <div className="flex items-center font-roboto text-32px h-23px">{format(this.state.currentMonth, dateFormat1)}</div>
                 <div className="flex items-center font-spoqaMedium text-25px h-23px pt-px -ml-4px">년</div>
                 <div className="flex items-center font-roboto text-32px h-23px ml-6px">{format(this.state.currentMonth, dateFormat2)}</div>
                 <div className="flex items-center font-spoqaMedium text-25px h-23px pt-px">월</div>
             </div>
-            <img className="cursor-pointer" onClick={this.nextMonth} src={Arrow} alt="" />
+            <img className={`cursor-pointer`} onClick={this.nextMonth} src={Arrow} alt="" />
 
         </div>
     );
@@ -63,16 +64,19 @@ class Calendar extends React.Component {
         const endDate = endOfWeek(monthEnd);
 
         const dateFormat = "d";
+        const dateFormat1 = "MM/dd";
         const rows = [];
 
         let days = [];
         let day = startDate;
         let formattedDate = "";
+        let formattedDate1 = "";
 
         while (day <= endDate) {
             for (let i = 0; i < 7; i++) {
-                formattedDate = format(day, dateFormat);
-                days.push(
+              formattedDate = format(day, dateFormat);
+              formattedDate1 = format(day, dateFormat1);
+              days.push(
                     <div
                         style={{height:"130px"}}
                         className="relative w-full border-t border-l border-gray-dddddd flex items-center justify-center"
@@ -87,7 +91,7 @@ class Calendar extends React.Component {
                             <p>{isSameMonth(day, monthStart) && formattedDate}</p>
                         </div>
                         {isSameMonth(day, monthStart) && (
-                            <img className="absolute" src={isChecked && format(currendDate, dateFormat) === formattedDate ? AttendanceFilled : AttendanceEmpty} alt="" />
+                            <img className="absolute" src={isChecked && format(currendDate, dateFormat1) === formattedDate1 ? AttendanceFilled : AttendanceEmpty} alt="" />
                         )}
                     </div>
                 );
@@ -95,7 +99,7 @@ class Calendar extends React.Component {
             }
             rows.push(
                 <div className="flex" key={day}>
-                {days}
+                  {days}
                 </div>
             );
             days = [];
@@ -117,9 +121,11 @@ class Calendar extends React.Component {
   };
 
   prevMonth = () => {
-    this.setState({
-      currentMonth: subMonths(this.state.currentMonth, 1)
-    });
+    if (this.state.currentMonth  >  this.state.today) {
+      this.setState({
+        currentMonth: subMonths(this.state.currentMonth, 1)
+      });
+    }
   };
 
   checkAttendance = () => {
@@ -148,8 +154,8 @@ class Calendar extends React.Component {
             </div>
         </div>
         <button 
-        className="flex items-center justify-center h-52px w-192px rounded-4px bg-blue-r0070d9 mt-20px mb-63px"
-        onClick={this.checkAttendance}
+          className="flex items-center justify-center h-52px w-192px rounded-4px bg-blue-r0070d9 mt-20px mb-63px"
+          onClick={this.checkAttendance}
         >
             <div className="flex items-center justify-center h-50px w-190px bg-black rounded-4px border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
                 <span className="font-spoqaMedium tracking-tight text-16px text-white">출석체크하기</span>

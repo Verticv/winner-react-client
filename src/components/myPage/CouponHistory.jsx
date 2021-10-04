@@ -5,6 +5,7 @@ import Icon1 from '../../images/myPage/coupon/coupon_img1.png'
 import Icon2 from '../../images/myPage/coupon/coupon_img2.png'
 import Pagination from './Pagination'
 import CouponHistoryTable from './tables/CouponHistoryTable'
+import CouponRequestTable from './tables/CouponRequestTable'
 
 
 const CouponHistory = () => {
@@ -23,11 +24,6 @@ const CouponHistory = () => {
 
             <div className="relative w-full mt-20px">
                 <HorizontalMenu itemsArray={tabsArray} isState={selectedTab} setState={setSelectedTab} />
-                {(selectedTab !== 0 && selectedTab !== 3) && (
-                    <div className={`ml-${selectedTab * 116 + 50}px absolute bottom-0 w-20px -mb-10px overflow-hidden inline-block `}>
-                        <div className="h-10px w-10px bg-gradient-to-br from-gray-d2dfea via-gray-eff3f6 to-gray-eff3f6 rotate-45 transform origin-bottom-left shadow"></div>
-                    </div>
-                )}
             </div>
                 
             <div className="mt-20px w-full">
@@ -58,7 +54,11 @@ const CouponHistory = () => {
             </div>
 
             <div className="mt-20px">
-                <CouponHistoryTable />
+                {selectedTab === 0 ? (
+                    <CouponRequestTable />
+                ) : (
+                    <CouponHistoryTable />
+                )}
             </div>
             
             <div className="mt-60px">

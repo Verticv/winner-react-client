@@ -94,11 +94,24 @@ const Inbox = () => {
     ];
 
     const [page, setPage] = useState(0)
-    const [isDropdownOpen, setDropdownOpen] = useState()
+    const [isDropdownOpen, setDropdownOpen] = useState(false)
     const [selectedCarrier, setSelectedCarrier] = useState("제목")
     const [checkedState, setCheckedState] = useState(
         new Array(inboxArray.length).fill(false)
     );
+    const [isAllSelected, setAllSelected] = useState(false)
+
+    const AllSelectButtonPressed = () => {
+
+        if (isAllSelected === false) {
+            setAllSelected(true)
+            setCheckedState(Array(inboxArray.length).fill(true))
+        } else {
+            setAllSelected(false)
+            setCheckedState(Array(inboxArray.length).fill(false))
+        }
+    };
+
     const dropDownCellClass = "flex w-120px h-40px py-2px bg-white items-center hover:bg-blue-lightGradLight px-14px"
 
 
@@ -106,22 +119,16 @@ const Inbox = () => {
     const searchDropdown = (
         <div className="mt-4px flex flex-col items-center justify-center w-120px overflow-hidden bg-white rounded-md border border-gray-dddddd shadow-plain5 text-gray-r393e41 font-spoqaMedium text-14px tracking-tight">
             <button className={dropDownCellClass} onClick={() => {
+                setSelectedCarrier("제목")
+                setDropdownOpen(false)
+            }}>
+                제목
+            </button>
+            <button className={dropDownCellClass} onClick={() => {
                 setSelectedCarrier("본문")
                 setDropdownOpen(false)
             }}>
                 본문
-            </button>
-            <button className={dropDownCellClass} onClick={() => {
-                setSelectedCarrier("작성자")
-                setDropdownOpen(false)
-            }}>
-                작성자
-            </button>
-            <button className={dropDownCellClass} onClick={() => {
-                setSelectedCarrier("카테고리")
-                setDropdownOpen(false)
-            }}>
-                카테고리
             </button>
         </div>
     )
@@ -171,7 +178,7 @@ const Inbox = () => {
                 <div className="flex space-x-2px">
                     <button 
                         className="flex items-center justify-center w-90px h-36px rounded-md bg-gray-r171a1d"
-                        onClick={() => setCheckedState(Array(inboxArray.length).fill(true))}
+                        onClick={() => AllSelectButtonPressed()}
                     >
                         <div className="flex items-center justify-center h-34px w-88px rounded-4px border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r45484c to-gray-r303337 cursor-pointer">
                             <span className="font-spoqaMedium tracking-tight text-14px text-white">전체선택</span>

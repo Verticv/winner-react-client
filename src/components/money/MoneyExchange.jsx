@@ -8,8 +8,10 @@ import MoneyExchangeTable from './tables/MoneyExchangeTable'
 const MoneyExchange = () => {
     
     const [page, setPage] = useState(0)
-    const [inputValue, setInputValue] = useState("")
+    const [inputValue, setInputValue] = useState(null)
     const [passwordValue, setPasswordValue] = useState("")
+    const [inputClicked, setInputClicked] = useState(null)
+    var nf = new Intl.NumberFormat();
 
     const Title = ({text}) => (
         <div style={{width: "201px"}} className="space-y-14px flex-shrink-0">
@@ -65,17 +67,23 @@ const MoneyExchange = () => {
                                 <input 
                                     className="w-full text-gray-r393e41 font-spoqaMedium text-16px text-gray-r585858 outline-none pl-9px placeholder-gray-bebebe"
                                     placeholder="직접 입력시 숫자만 입력해 주세요."
-                                    value={inputValue}
-                                    onChange={e => setInputValue(e.target.value)}
-                                    name="text"
-                                />
+                                    value={inputValue !==null ? nf.format(inputValue) : ""}
+                                    onChange={e => setInputValue(e.target.value.replace(/,/g, ''))}
+                                    onFocus={() => setInputClicked(0)}
+                                    onBlur={() => setInputClicked(null)}
+                                    onKeyPress={(event) => {
+                                        if (!/[0-9]/.test(event.key)) {
+                                            event.preventDefault();
+                                        }
+                                    }}
+                                /> 
                             </form>
-                            <div className="h-px w-full bg-gray-bebebe"></div>
+                            <div className={`${inputClicked === 0 ? "bg-blue-r1ca7ec h-2px" : " h-px bg-gray-bebebe"} w-full`}></div>
                         </div>
                     </div>
                 </div>
 
-                <div style={{marginLeft: "277px"}} className="mt-20px flex space-x-5px w-full justify-start pr-115px">
+                <div style={{marginLeft: "277px"}} className={`${inputClicked === 0 ? "mt-19px" : "mt-20px"} flex space-x-5px w-full justify-start pr-115px`}>
                     <button 
                         className="flex items-center justify-center h-42px w-75px rounded-4px bg-blue-r004b8a"
                         onClick={() => setInputValue("10000")}
@@ -158,16 +166,18 @@ const MoneyExchange = () => {
                                 placeholder="비밀번호를 입력하세요."
                                 value={passwordValue}
                                 onChange={e => setPasswordValue(e.target.value)}
+                                onFocus={() => setInputClicked(1)}
+                                onBlur={() => setInputClicked(null)}
                                 type="password"
                             />
-                            <div className="h-px w-full bg-gray-bebebe"></div>
+                            <div className={`${inputClicked === 1 ? "bg-blue-r1ca7ec h-2px" : " h-px bg-gray-bebebe"} w-full`}></div>
                         </div>
                     </div>
                 </div>
 
             </div>
 
-            <button style={{width: "228px"}} className="flex items-center justify-center h-52px rounded-4px bg-blue-r0070d9 mt-20px">
+            <button style={{width: "228px"}} className={`mt-20px flex items-center justify-center h-52px rounded-4px bg-blue-r0070d9`}>
                 <div style={{width: "226px"}} className="flex items-center justify-center h-50px rounded-4px border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
                     <span className="font-spoqaMedium tracking-tight text-16px text-white">신청하기</span>
                 </div>
