@@ -30,8 +30,11 @@ const BetCombinationPage = ({isAuthenticated, setAuthenticated}) => {
         { text: "격투기", icon: Icon8, id: 7, number: 9 },
     ];
 
+    const cardsArray = []
+
     const [selectedTab, setSelectedTab] = useState(0)
     const [isPanelFixed, setPanelFixed] = useState(false)
+    const [addedCard, setAddedCard] = useState(cardsArray)
 
     return (
         <div className="relative flex flex-col justify-center">
@@ -57,12 +60,17 @@ const BetCombinationPage = ({isAuthenticated, setAuthenticated}) => {
                         <HorizontalMenu1 itemsArray={tabsArray} isState={selectedTab} setState={setSelectedTab} />
 
                         <div className="mt-20px">
-                            <BetCombinationPanel />
+                            <BetCombinationPanel addedCard={addedCard} setAddedCard={setAddedCard} />
                         </div>
                     </div>
                     
                     <div style={{width: "307px", left:"0px", position:"sticky", top: "150px", height: isPanelFixed ? "100%" : ""}} className={`${isPanelFixed && "sticky bottom-0 flex"} mb-60px`}>
-                        <BetCombinationRightPanel isPanelFixed={isPanelFixed} setPanelFixed={setPanelFixed} />
+                        <BetCombinationRightPanel 
+                            addedCard={addedCard} 
+                            setAddedCard={setAddedCard} 
+                            isPanelFixed={isPanelFixed} 
+                            setPanelFixed={setPanelFixed} 
+                        />
                     </div>
 
                 </div>

@@ -29,9 +29,9 @@ import NetherlandIcon from '../../images/betCombination/netherland.png'
 import UKIcon from '../../images/betCombination/uk.png'
 import Bubble1 from '../../images/betCombination/bubble1.png'
 import Bubble2 from '../../images/betCombination/bubble2.png'
+import _uniqueId from 'lodash/uniqueId';
 
-
-const BetCombinationPanel = () => {
+const BetCombinationPanel = ({addedCard, setAddedCard}) => {
 
     const subArray = [
         {
@@ -236,6 +236,8 @@ const BetCombinationPanel = () => {
     const [isDropdownOpen, setDropdownOpen] = useState(false)
     const [selectedCarrier, setSelectedCarrier] = useState("국가선택")
     const [isHover1, setHover1] = useState(null)
+    const [isOpen, setOpen] = useState(new Array(20).fill(false))
+    const [isHover2, setHover2] = useState(false)
 
     const dropDownCellClass = "flex w-full h-42px py-2px bg-white items-center hover:bg-blue-lightGradLight px-14px"
 
@@ -395,6 +397,7 @@ const BetCombinationPanel = () => {
     )
 
     const NormalOptions = ({
+        id,
         bet = "none",
         team1 = "FK Haugesund",
         team2 = "스트룀스고세 IF",
@@ -416,6 +419,8 @@ const BetCombinationPanel = () => {
                     backgroundColor: bet === "left" ? "#cb4343" : "#b3b3b3" 
                 }}  
                 className="flex items-center justify-center rounded-lg"
+                onClick={() => setAddedCard(prevArray => 
+                    [...prevArray, {id: _uniqueId('prefix-'), value: "left"}])}
             >
                 <div 
                     style={{
@@ -450,6 +455,8 @@ const BetCombinationPanel = () => {
                     backgroundColor: bet === "middle" ? "#cb4343" : "#b3b3b3" 
                 }}  
                 className="flex items-center justify-center rounded-lg"
+                onClick={() => setAddedCard(prevArray => 
+                    [...prevArray, {id: _uniqueId('prefix-'), value: "middle"}])}
             >
                 <div 
                     style={{
@@ -475,6 +482,8 @@ const BetCombinationPanel = () => {
                     backgroundColor: bet === "right" ? "#cb4343" : "#b3b3b3" 
                 }}  
                 className="flex items-center justify-center rounded-lg"
+                onClick={() => setAddedCard(prevArray => 
+                    [...prevArray, {id: _uniqueId('prefix-'), value: "right"}])}
             >
                 <div 
                     style={{
@@ -506,8 +515,7 @@ const BetCombinationPanel = () => {
 
     function LeagueCell({array, isSubArray = false}) {
 
-        const [isOpen, setOpen] = useState(new Array(20).fill(false))
-        const [isHover2, setHover2] = useState(false)
+        
 
         const handleOnChange = (position) => {
             const updatedCheckedState = isOpen.map((item, index) =>
@@ -528,6 +536,7 @@ const BetCombinationPanel = () => {
                     </div>
                     <div className="ml-14px h-full flex items-center">
                         <NormalOptions  
+                            id={items.id}
                             bet={items.bet}
                             logo1={items.logo1}
                             logo2={items.logo2}
@@ -543,7 +552,7 @@ const BetCombinationPanel = () => {
                         <button 
                             style={{
                                 width:"71px",
-                                backgroundColor: isOpen === items.id ? "#5b646e" : "#171a1d"
+                                backgroundColor: isOpen[items.id] === true ? "#5b646e" : "#171a1d"
                             }} 
                             className="relative flex items-center justify-center h-39px w-75px rounded-4px ml-4px"
                             onClick={() => handleOnChange(items.id)}
@@ -553,8 +562,8 @@ const BetCombinationPanel = () => {
                             <div 
                                 style={{
                                     width:"69px",
-                                    borderColor: isOpen === items.id ? "#8f97a0" : "#737579",
-                                    background: isOpen === items.id 
+                                    borderColor: isOpen[items.id] === true ? "#8f97a0" : "#737579",
+                                    background: isOpen[items.id] === true
                                     ? "linear-gradient(to bottom, #8995a2, #757d87)"
                                     : "linear-gradient(to bottom, #585b5e, #303337)"
                                 }} 
