@@ -105,8 +105,8 @@ const BetCombinationPanel = ({addedCard, setAddedCard}) => {
         {
             id: 5,
             type: "승무패",
-            team1: "FK Haugesund",
-            team2: "스트룀스고세 IF",
+            team1: "바살룬즈 IF",
+            team2: "스타백 IF",
             logo1: T1,
             logo2: T4,
             stat1: 2.26,
