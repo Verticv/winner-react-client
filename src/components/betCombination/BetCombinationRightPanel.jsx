@@ -140,9 +140,13 @@ const BetCombinationRightPanel = ({
                 </div>
 
                 <div className="flex space-x-2px">
-                    <button style={{width: "38px", height: "38px", borderColor:"#9c9c9c"}} className="rounded-4px border bg-gradient-to-br from-white to-gray-r9c9c9c flex items-center justify-center">
+                    <button 
+                        style={{width: "38px", height: "38px", borderColor:"#9c9c9c"}} 
+                        className="rounded-4px border bg-gradient-to-br from-white to-gray-r9c9c9c flex items-center justify-center"
+                        onClick={() => setAddedCard([])}
+                    >
                         <div style={{width: "34px", height: "34px", borderColor:"#9c9c9c"}} className="flex items-center justify-center bg-gradient-to-b from-gray-ececec to-gray-d8d8d8">
-                            <img src={TrashIcon} alt="" onClick={() => setAddedCard([])} />
+                            <img src={TrashIcon} alt="" />
                         </div>
                     </button>
                     <button onClick={() => setPanelFixed(!isPanelFixed)} style={{width: "38px", height: "38px", borderColor:"#9c9c9c"}} className="rounded-4px border bg-gradient-to-br from-white to-gray-r9c9c9c flex items-center justify-center">
