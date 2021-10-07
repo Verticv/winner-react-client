@@ -1,14 +1,14 @@
 import React from 'react'
-import './RadioButton.css'
-import FootballIcon from '../../images/myPage/betHistory/football.png'
-import USFlagIcon from '../../images/myPage/betHistory/us_flag.png'
-import UKFlagIcon from '../../images/myPage/betHistory/uk_flag_rec.png'
-import SpainFlagIcon from '../../images/myPage/betHistory/spain_flag.png'
-import ClockIcon from '../../images/myPage/betHistory/clock.png'
-import UpIcon from '../../images/myPage/betHistory/UP.png'
-import DownIcon from '../../images/myPage/betHistory/DOWN.png'
+import '../RadioButton.css'
+import FootballIcon from '../../../images/myPage/betHistory/football.png'
+import USFlagIcon from '../../../images/myPage/betHistory/us_flag.png'
+import UKFlagIcon from '../../../images/myPage/betHistory/uk_flag_rec.png'
+import SpainFlagIcon from '../../../images/myPage/betHistory/spain_flag.png'
+import ClockIcon from '../../../images/myPage/betHistory/clock.png'
+import UpIcon from '../../../images/myPage/betHistory/UP.png'
+import DownIcon from '../../../images/myPage/betHistory/DOWN.png'
 
-const SportsBetHistory = ({
+const SportsBetHistoryPanel = ({
     id = 0,
     type = 0,
     time = "2021-06-29 15:45",
@@ -383,4 +383,4 @@ const SportsBetHistory = ({
     )
 }
 
-export default SportsBetHistory
+export default SportsBetHistoryPanel

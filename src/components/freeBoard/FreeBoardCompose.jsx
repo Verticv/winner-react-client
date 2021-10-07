@@ -1,4 +1,4 @@
-import SportsBetHistory from 'components/myPage/SportsBetHistory';
+import SportsBetHistory from 'components/myPage/betHistory/SportsBetHistoryPanel';
 import BetHistoryPopup from 'components/popups/BetHistoryPopup';
 import PopupControls from 'components/popups/PopupControls';
 import React, { useState } from 'react'

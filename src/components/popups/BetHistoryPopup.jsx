@@ -9,7 +9,7 @@ import Icon7 from '../../images/myPage/betHistory/ico_7.png'
 import Icon8 from '../../images/myPage/betHistory/ico_8.png'
 import Icon9 from '../../images/myPage/betHistory/ico_9.png'
 import HorizontalMenu from 'components/horizontalMenus/HorizontalMenu'
-import SportsBetHistory from 'components/myPage/SportsBetHistory'
+import SportsBetHistory from 'components/myPage/betHistory/SportsBetHistoryPanel'
 
 const BetHistoryPopup = ({setPopupOpen, setAttachedArray, attachedArray}) => {
 

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const BetHistoryTable = () => {
+const AllHistoryTable = () => {
     return (
         <table className="shadow-subNavbar rounded-3xl overflow-hidden">
             <thead className="bg-gray-fafafa rounded-3xl font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd">
@@ -43,4 +43,4 @@ const BetHistoryTable = () => {
     )
 }
 
-export default BetHistoryTable
+export default AllHistoryTable
