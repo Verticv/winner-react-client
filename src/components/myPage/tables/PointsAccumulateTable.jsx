@@ -24,7 +24,7 @@ const PointsAccumulateTable = () => {
                     <td className="w-141px text-right pr-14px font-robotoRegular">5,000</td>
                     <td className="w-116px text-center font-robotoRegular">1.00%</td>
                     <td className="w-102px text-center font-robotoRegular">100%</td>
-                    <td className="w-133px text-center font-robotoRegular">50P</td>
+                    <td className="w-133px text-center font-robotoRegular text-blue-r0056a6">50P</td>
                 </tr>
                 <tr className="bg-gray-f7f9fc rounded-3xl font-spoqa text-14px tracking-tight text-gray-r454545 h-56px w-full border-b border-gray-dddddd">
                     <td className="w-152px text-center font-robotoRegular">2021-06-30</td>
@@ -34,7 +34,7 @@ const PointsAccumulateTable = () => {
                     <td className="w-141px text-right pr-14px font-robotoRegular">5,000</td>
                     <td className="w-116px text-center font-robotoRegular">1.00%</td>
                     <td className="w-102px text-center font-robotoRegular">100%</td>
-                    <td className="w-133px text-center font-robotoRegular">50P</td>
+                    <td className="w-133px text-center font-robotoRegular text-blue-r0056a6">50P</td>
                 </tr>
                 <tr className="bg-gray-fefefe rounded-3xl font-spoqa text-14px tracking-tight text-gray-r454545 h-56px w-full border-b border-gray-dddddd">
                     <td className="w-152px text-center font-robotoRegular">2021-06-30</td>
@@ -44,7 +44,7 @@ const PointsAccumulateTable = () => {
                     <td className="w-141px text-right pr-14px font-robotoRegular">5,000</td>
                     <td className="w-116px text-center font-robotoRegular">1.00%</td>
                     <td className="w-102px text-center font-robotoRegular">100%</td>
-                    <td className="w-133px text-center font-robotoRegular">50P</td>
+                    <td className="w-133px text-center font-robotoRegular text-blue-r0056a6">50P</td>
                 </tr>
             </tbody>
         </table> 
