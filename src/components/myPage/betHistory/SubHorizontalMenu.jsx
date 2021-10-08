@@ -37,9 +37,18 @@ const SubHorizontalMenu = ({
     }
 
     return (
-        <div className="flex w-full h-80px space-x-px">
-            <TabsList items={itemsArray} />
-        </div>
+        <>
+            {itemsArray.length < 10 ? (
+                <div className="flex w-full h-80px space-x-px">
+                    <TabsList items={itemsArray} />
+                </div>
+            ) : (
+                <div className="grid grid-cols-8 gap-px w-full space-x-px">
+                    <TabsList items={itemsArray} />
+                </div>
+            )}
+            
+        </>
     )
 }
 

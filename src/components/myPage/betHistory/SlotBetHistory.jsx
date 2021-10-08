@@ -3,21 +3,40 @@ import DateSearchBar from '../DateSearchBar'
 import SubHorizontalMenu from './SubHorizontalMenu'
 import LiveCasinoBetHistoryTable from '../tables/LiveCasinoBetHistoryTable'
 import AllIcon from '../../../images/myPage/betHistory/all.png'
-import EvoIcon from '../../../images/myPage/betHistory/evolution.png'
-import AsiaIcon from '../../../images/myPage/betHistory/asia.png'
-import PragIcon from '../../../images/myPage/betHistory/pragmatic.png'
-import DgIcon from '../../../images/myPage/betHistory/dg.png'
-import SexyIcon from '../../../images/myPage/betHistory/sexy.png'
-import BigIcon from '../../../images/myPage/betHistory/big.png'
+import Sub1 from '../../../images/myPage/betHistory/slotGame/sub1.png'
+import Sub2 from '../../../images/myPage/betHistory/slotGame/sub2.png'
+import Sub3 from '../../../images/myPage/betHistory/slotGame/sub3.png'
+import Sub4 from '../../../images/myPage/betHistory/slotGame/sub4.png'
+import Sub5 from '../../../images/myPage/betHistory/slotGame/sub5.png'
+import Sub6 from '../../../images/myPage/betHistory/slotGame/sub6.png'
+import Sub7 from '../../../images/myPage/betHistory/slotGame/sub7.png'
+import Sub8 from '../../../images/myPage/betHistory/slotGame/sub8.png'
+import Sub9 from '../../../images/myPage/betHistory/slotGame/sub9.png'
+import Sub10 from '../../../images/myPage/betHistory/slotGame/sub10.png'
+import Sub11 from '../../../images/myPage/betHistory/slotGame/sub11.png'
+import Sub12 from '../../../images/myPage/betHistory/slotGame/sub12.png'
+import Sub13 from '../../../images/myPage/betHistory/slotGame/sub13.png'
+import Sub14 from '../../../images/myPage/betHistory/slotGame/sub14.png'
+import Sub15 from '../../../images/myPage/betHistory/slotGame/sub15.png'
+
 
 const subTabsArray = [
     { text: "전체", icon: AllIcon, id: 0 },
-    { text: "에볼루션", icon: EvoIcon, id: 1 },
-    { text: "아시아게이밍", icon: AsiaIcon, id: 2 },
-    { text: "프레그메틱플레이", icon: PragIcon, id: 3, custom: "mt-8px" },
-    { text: "드임게이밍", icon: DgIcon, id: 4 },
-    { text: "섹시게이밍", icon: SexyIcon, id: 5 },
-    { text: "빅게이밍", icon: BigIcon, id: 6 },
+    { text: "마이크로게이밍", icon: Sub1, id: 1 },
+    { text: "YGG드라실", icon: Sub2, id: 2 },
+    { text: "드라군소프트", icon: Sub3, id: 3, custom: "mt-8px" },
+    { text: "분고", icon: Sub4, id: 4 },
+    { text: "플레이슨", icon: Sub5, id: 5 },
+    { text: "넷엔트", icon: Sub6, id: 6 },
+    { text: "프레그메틱플레이", icon: Sub7, id: 7 },
+    { text: "퀵스핀", icon: Sub8, id: 8 },
+    { text: "스페이드", icon: Sub9, id: 9 },
+    { text: "하바네로", icon: Sub10, id: 10 },
+    { text: "월드매치", icon: Sub11, id: 11 },
+    { text: "메버릭", icon: Sub12, id: 12 },
+    { text: "플레이앤고", icon: Sub13, id: 13 },
+    { text: "YL게이밍", icon: Sub14, id: 14 },
+    { text: "레드타이거", icon: Sub15, id: 15 },
 ];
 
 const tableArray = [
@@ -25,8 +44,8 @@ const tableArray = [
         id: 0,
         number: 7193915,
         time: "2021-06-29 15:46:13",
-        type: "에볼루션",
-        name: "바카라",
+        type: "레드타이거",
+        name: "Dragon's Luck",
         amount: "12,000",
         profit: "-12,000",
         status: "패"
@@ -35,8 +54,8 @@ const tableArray = [
         id: 1,
         number: 7193914,
         time: "2021-06-29 15:45:41",
-        type: "에볼루션",
-        name: "바카라",
+        type: "레드타이거",
+        name: "Dragon's Luck",
         amount: "900,000,000",
         profit: "+900,000,000",
         status: "승"
@@ -46,14 +65,14 @@ const tableArray = [
         number: 7193913,
         time: "2021-06-29 15:45:41",
         type: "프레그메틱플레이",
-        name: "블랙잭",
+        name: "Starz Megaways",
         amount: "800,000",
         profit: "-800,000",
         status: "패"
     },
 ];
 
-const LiveCasinoBetHistory = ({isState, setState}) => {
+const SlotBetHistory = ({isState, setState}) => {
 
     const [checkedState, setCheckedState] = useState(new Array(3).fill(false))
     const [isAllSelected, setAllSelected] = useState(false)
@@ -70,7 +89,7 @@ const LiveCasinoBetHistory = ({isState, setState}) => {
 
     return (
         <div className="w-full">
-            <div className="mt-10px h-88px w-full bg-gray-eff3f6 rounded-xl p-4px">
+            <div className="mt-10px w-full bg-gray-eff3f6 rounded-xl pt-4px px-4px pb-3px">
                 <SubHorizontalMenu itemsArray={subTabsArray} isState={isState} setState={setState} />
             </div>
 
@@ -121,4 +140,4 @@ const LiveCasinoBetHistory = ({isState, setState}) => {
     )
 }
 
-export default LiveCasinoBetHistory
+export default SlotBetHistory

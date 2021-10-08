@@ -3,21 +3,24 @@ import DateSearchBar from '../DateSearchBar'
 import SubHorizontalMenu from './SubHorizontalMenu'
 import LiveCasinoBetHistoryTable from '../tables/LiveCasinoBetHistoryTable'
 import AllIcon from '../../../images/myPage/betHistory/all.png'
-import EvoIcon from '../../../images/myPage/betHistory/evolution.png'
-import AsiaIcon from '../../../images/myPage/betHistory/asia.png'
-import PragIcon from '../../../images/myPage/betHistory/pragmatic.png'
-import DgIcon from '../../../images/myPage/betHistory/dg.png'
-import SexyIcon from '../../../images/myPage/betHistory/sexy.png'
-import BigIcon from '../../../images/myPage/betHistory/big.png'
+import Sub1 from '../../../images/myPage/betHistory/ARGame/sub1.png'
+import Sub2 from '../../../images/myPage/betHistory/ARGame/sub2.png'
+import Sub3 from '../../../images/myPage/betHistory/ARGame/sub3.png'
+import Sub4 from '../../../images/myPage/betHistory/ARGame/sub4.png'
+import Sub5 from '../../../images/myPage/betHistory/ARGame/sub5.png'
+import Sub6 from '../../../images/myPage/betHistory/ARGame/sub6.png'
+import Sub7 from '../../../images/myPage/betHistory/ARGame/sub7.png'
+
 
 const subTabsArray = [
     { text: "전체", icon: AllIcon, id: 0 },
-    { text: "에볼루션", icon: EvoIcon, id: 1 },
-    { text: "아시아게이밍", icon: AsiaIcon, id: 2 },
-    { text: "프레그메틱플레이", icon: PragIcon, id: 3, custom: "mt-8px" },
-    { text: "드임게이밍", icon: DgIcon, id: 4 },
-    { text: "섹시게이밍", icon: SexyIcon, id: 5 },
-    { text: "빅게이밍", icon: BigIcon, id: 6 },
+    { text: "축구", icon: Sub1, id: 1 },
+    { text: "경마", icon: Sub2, id: 2 },
+    { text: "개경주", icon: Sub3, id: 3 },
+    { text: "레이싱", icon: Sub4, id: 4 },
+    { text: "탁구", icon: Sub5, id: 5 },
+    { text: "배드민턴", icon: Sub6, id: 6 },
+    { text: "양궁", icon: Sub7, id: 7 },
 ];
 
 const tableArray = [
@@ -25,8 +28,8 @@ const tableArray = [
         id: 0,
         number: 7193915,
         time: "2021-06-29 15:46:13",
-        type: "에볼루션",
-        name: "바카라",
+        type: "탁구",
+        name: "승패",
         amount: "12,000",
         profit: "-12,000",
         status: "패"
@@ -35,8 +38,8 @@ const tableArray = [
         id: 1,
         number: 7193914,
         time: "2021-06-29 15:45:41",
-        type: "에볼루션",
-        name: "바카라",
+        type: "개경주",
+        name: "승리",
         amount: "900,000,000",
         profit: "+900,000,000",
         status: "승"
@@ -45,15 +48,15 @@ const tableArray = [
         id: 2,
         number: 7193913,
         time: "2021-06-29 15:45:41",
-        type: "프레그메틱플레이",
-        name: "블랙잭",
+        type: "축구",
+        name: "경기결과",
         amount: "800,000",
         profit: "-800,000",
         status: "패"
     },
 ];
 
-const LiveCasinoBetHistory = ({isState, setState}) => {
+const ARGameBetHistory = ({isState, setState}) => {
 
     const [checkedState, setCheckedState] = useState(new Array(3).fill(false))
     const [isAllSelected, setAllSelected] = useState(false)
@@ -74,7 +77,7 @@ const LiveCasinoBetHistory = ({isState, setState}) => {
                 <SubHorizontalMenu itemsArray={subTabsArray} isState={isState} setState={setState} />
             </div>
 
-            <DateSearchBar isLeagueSearch={false} />
+            <DateSearchBar isLeagueSearch={true} />
 
             <div className="w-full h-full mt-20px">
                 <LiveCasinoBetHistoryTable 
@@ -121,4 +124,4 @@ const LiveCasinoBetHistory = ({isState, setState}) => {
     )
 }
 
-export default LiveCasinoBetHistory
+export default ARGameBetHistory

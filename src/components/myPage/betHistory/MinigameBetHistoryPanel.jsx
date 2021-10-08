@@ -1,16 +1,12 @@
 import React from 'react'
 import '../RadioButton.css'
-import FootballIcon from '../../../images/myPage/betHistory/football.png'
-import USFlagIcon from '../../../images/myPage/betHistory/us_flag.png'
-import UKFlagIcon from '../../../images/myPage/betHistory/uk_flag_rec.png'
-import SpainFlagIcon from '../../../images/myPage/betHistory/spain_flag.png'
 import ClockIcon from '../../../images/myPage/betHistory/clock.png'
 import UpIcon from '../../../images/myPage/betHistory/UP.png'
 import DownIcon from '../../../images/myPage/betHistory/DOWN.png'
+import Example1 from '../../../images/myPage/betHistory/minigame/example1.png'
 
-const SportsBetHistoryPanel = ({
+const MinigameBetHistoryPanel = ({
     id = 0,
-    type = 0,
     time = "2021-06-29 15:45",
     amount = "5,000원",
     ratio = "4.34",
@@ -23,7 +19,11 @@ const SportsBetHistoryPanel = ({
     isPopup = false,
     isAttached = false,
     setAttachedArray = null,
-    attachedArray = null
+    attachedArray = null,
+    team1 = "홀 [200회]",
+    team2 = "[200회] 짝",
+    choice = "even",
+    result = "lose"
 }) => {
 
     const handleOnChange = (position) => {
@@ -45,7 +45,6 @@ const SportsBetHistoryPanel = ({
         bet, 
         result, 
         choice, 
-        score, 
         team1, 
         team2, 
         stat1, 
@@ -55,11 +54,13 @@ const SportsBetHistoryPanel = ({
         hasDown = false
     }) => (
         <div className="flex items-center w-full h-56px bg-gray-fefefe border-b border-gray-dddddd">
-            <div style={{width: isAttached ? "127px" : "122px", marginLeft: isAttached ? "16px" : "0px"}} className="-space-y-4px flex flex-col items-center justify-center h-56px font-spoqaMedium text-14px tracking-tight text-gray-r454545">
-                <span>승무패</span> 
-                <span>(연장포함)</span>
+            <div 
+                style={{width: isAttached ? "127px" : "122px", marginLeft: isAttached ? "16px" : "0px"}} 
+                className="-space-y-4px flex items-center justify-center h-56px font-spoqaMedium text-14px tracking-tight text-gray-r454545 flex-shrink-0"
+            >
+                <span>200</span> 
             </div>
-            <div className="flex space-x-4px">
+            <div className="flex space-x-4px flex-shrink-0">
                 <button 
                     style={{
                         width: isAttached ? "365px" : "285px",
@@ -118,9 +119,10 @@ const SportsBetHistoryPanel = ({
             </div>
 
             <div className="flex ml-10px font-spoqaMedium tracking-tight text-14px text-center">
-                <div className="font-roboto w-99px text-gray-r454545">{score}</div>
-                <div className="w-61px text-gray-r454545">{choice === "home" ? "홈팀 승" : "원정팀 승"}</div>
-                <div className={`${
+                <div style={{width:"160px"}} className="w-61px text-gray-r454545">{choice === "even" ? "짝" : "우"}</div>
+                <div 
+                style={{width:"32px"}}
+                className={`${
                     result === "win" 
                     ? "text-red-500" 
                     : result === "lose" 
@@ -141,13 +143,12 @@ const SportsBetHistoryPanel = ({
         </div>
     )
 
-    const Cards0 = () => (
+    const Card = ({team1, team2, choice, result}) => (
         <div className="w-full rounded-lg overflow-hidden shadow-subNavbar">
             <div className="flex items-center justify-between h-56px w-full bg-blue-r3591d5 border-b border-gray-dddddd px-20px">
                 <div className="flex items-center">
-                    <img src={FootballIcon} alt="" />
-                    <img className="ml-5px" src={USFlagIcon} alt="" />
-                    <span className="ml-4px font-spoqaMedium text-20px tracking-tight text-white pt-2px">MLS</span>
+                    <img src={Example1} alt="" />
+                    <span className="ml-4px font-spoqaMedium text-20px text-white pt-2px">파워사다리</span>
                 </div>
                 <div className="flex items-center">
                     <img src={ClockIcon} alt="" />
@@ -162,160 +163,32 @@ const SportsBetHistoryPanel = ({
             <div className="flex flex-col w-full bg-gray-fefefe border-gray-dddddd">
                 <CardContent 
                     bet="right" 
-                    result="cancel" 
-                    choice="away" 
-                    score="4 : 4"
-                    team1="CF파추카"
-                    team2="과달하라 차바스..."
-                    stat1="2.26"
-                    stat2="2.96"
-                    stat3="3.47"
+                    result={result}
+                    choice={choice}
+                    team1={team1}
+                    team2={team2}
+                    stat1="1.95"
+                    stat2="VS"
+                    stat3="1.95"
                 />
             </div>
         </div>
     )
-
-    const Cards1 = () => (
-        <div className="w-full rounded-lg overflow-hidden shadow-subNavbar">
-            <div className="flex items-center justify-between h-56px w-full bg-blue-r3591d5 border-b border-gray-dddddd px-20px">
-                <div className="flex items-center">
-                    <img src={FootballIcon} alt="" />
-                    <img className="ml-5px" src={UKFlagIcon} alt="" />
-                    <span className="ml-4px font-spoqaMedium text-20px tracking-tight text-white pt-2px">EPL</span>
-                </div>
-                <div className="flex items-center">
-                    <img src={ClockIcon} alt="" />
-                    <span 
-                        style={{color: "#dae8f5"}}
-                        className="ml-5px font-spoqa text-16px tracking-tight text-white"
-                    >
-                        2021-06-29 15:45
-                    </span>
-                </div>
-            </div>
-            <div className="flex flex-col w-full bg-gray-fefefe border-gray-dddddd">
-                <CardContent 
-                    bet="left" 
-                    result="win" 
-                    choice="home" 
-                    score="5 : 2"
-                    team1="맨유"
-                    team2="첼시"
-                    stat1="2.95"
-                    stat2="4.62"
-                    stat3="1.39"
-                />
-                <CardContent 
-                    bet="right" 
-                    result="win" 
-                    choice="away"
-                    score="0 : 3"
-                    team1="아스널"
-                    team2="맨시티"
-                    stat1="2.95"
-                    stat2="3.32"
-                    stat3="2.5"
-                    hasDown={true}
-                    hasUp={true}
-                />
-
-            </div>
-        </div>
-    )
-
-    const Cards2 = () => (
-        <div className="w-full rounded-lg overflow-hidden shadow-subNavbar">
-            <div className="flex items-center justify-between h-56px w-full bg-blue-r3591d5 border-b border-gray-dddddd px-20px">
-                <div className="flex items-center">
-                    <img src={FootballIcon} alt="" />
-                    <img className="ml-5px" src={UKFlagIcon} alt="" />
-                    <span className="ml-4px font-spoqaMedium text-20px tracking-tight text-white pt-2px">EPL</span>
-                </div>
-                <div className="flex items-center">
-                    <img src={ClockIcon} alt="" />
-                    <span 
-                        style={{color: "#dae8f5"}}
-                        className="ml-5px font-spoqa text-16px tracking-tight text-white"
-                    >
-                        2021-06-29 15:45
-                    </span>
-                </div>
-            </div>
-            <div className="flex flex-col w-full bg-gray-fefefe border-gray-dddddd">
-                <CardContent 
-                    bet="left" 
-                    result="win" 
-                    choice="home" 
-                    score="5 : 2"
-                    team1="맨유"
-                    team2="첼시"
-                    stat1="2.95"
-                    stat2="4.62"
-                    stat3="1.39"
-                />
-            </div>
-        </div>
-    )
-
-    const Cards3 = () => (
-        <div className="w-full rounded-lg overflow-hidden shadow-subNavbar">
-            <div className="flex items-center justify-between h-56px w-full bg-blue-r3591d5 border-b border-gray-dddddd px-20px">
-                <div className="flex items-center">
-                    <img src={FootballIcon} alt="" />
-                    <img className="ml-5px" src={SpainFlagIcon} alt="" />
-                    <span className="ml-4px font-spoqaMedium text-20px tracking-tight text-white pt-2px">라리가</span>
-                </div>
-                <div className="flex items-center">
-                    <img src={ClockIcon} alt="" />
-                    <span 
-                        style={{color: "#dae8f5"}}
-                        className="ml-5px font-spoqa text-16px tracking-tight text-white"
-                    >
-                        2021-06-29 15:45
-                    </span>
-                </div>
-            </div>
-            <div className="flex flex-col w-full bg-gray-fefefe border-gray-dddddd">
-                <CardContent 
-                    bet="left" 
-                    result="lose" 
-                    choice="away" 
-                    score="1 : 2"
-                    team1="바르셀로나"
-                    team2="레알마드리드"
-                    stat1="1.80"
-                    stat2="3.32"
-                    stat3="1.90"
-                />
-            </div>
-        </div>
-    )
-
-
-
 
     return (
         <div className="w-full shadow-subNavbar rounded-3xl bg-gray-fafafa pb-10px">
             <div className="flex h-54px w-full font-spoqaMedium text-14px tracking-tight text-gray-r454545">
                 <div style={{width: isAttached === true ? "162px" : "138px"}} className="h-full flex items-center justify-center">베팅구분</div>
                 <div style={{width: isAttached === true ? "315px" : "274px"}} className="h-full flex items-center justify-center">승(홈)</div>
-                <div style={{width: isAttached === true ? "139px" : "100px"}} className="h-full flex items-center justify-center">무</div>
-                <div style={{width: isAttached === true ? "317px" : "284px"}} className="h-full flex items-center justify-center">패(원정)</div>
-                <div style={{width: isAttached === true ? "85px" : "108px", marginLeft:  isAttached === true ? "40px" : "0px"}} className="h-full flex items-center justify-center">스코어</div>
-                <div style={{width: isAttached === true ? "66px" : "50px"}} className="h-full flex items-center justify-center">선택</div>
-                <div style={{width: isAttached === true ? "58px" : "80px", marginRight:  isAttached === true ? "25px" : "0px"}} className="h-full flex items-center justify-center">결과</div>
+                <div style={{width: isAttached === true ? "139px" : "98px"}} className="h-full flex items-center justify-center">VS</div>
+                <div style={{width: isAttached === true ? "317px" : "293px"}} className="h-full flex items-center justify-center">패(원정)</div>
+                <div style={{width: isAttached === true ? "66px" : "150px"}} className="h-full flex items-center justify-center">선택</div>
+                <div style={{width: isAttached === true ? "58px" : "42px", marginRight:  isAttached === true ? "25px" : "0px"}} className="h-full flex items-center justify-center">결과</div>
             </div>
 
             <div className="w-full px-10px space-y-10px">
-                {type === 0 
-                ? <Cards0 />
-                : type === 1 
-                ? <Cards1 />
-                : type === 2 
-                ? <><Cards2 /><Cards3 /></>
-                : ""
-                }
-                </div>
+                <Card team1={team1} team2={team2} choice={choice} result={result} />
+            </div>
             
             <div className="flex w-full px-10px mt-10px space-x-10px">
                 <table>
@@ -331,7 +204,6 @@ const SportsBetHistoryPanel = ({
                         <div style={{width: isAttached === true ? "212px" : isPopup === false ? "78px" : "178px"}} className="h-full flex items-center justify-center border-l border-gray-fafafa">배당률</div>
                         <div style={{width: isAttached === true ? "212px" : isPopup === false ? "131px" : "178px"}} className="h-full flex items-center justify-center border-l border-gray-fafafa">예상적중금액</div>
                         <div style={{width: isAttached === true ? "212px" : isPopup === false ? "131px" : "178px"}} className="h-full flex items-center justify-center border-l border-gray-fafafa">당첨금</div>
-                        
                     </div>
                     <div className="flex w-auto h-36px font-spoqa text-14px tracking-tight text-gray-r585858">
                         {(isAttached === false && isPopup === false) && checkedState && (
@@ -340,8 +212,8 @@ const SportsBetHistoryPanel = ({
                                     className="radio" 
                                     type="checkbox" 
                                     name="radio" 
-                                    checked={checkedState[type]}
-                                    onChange={() => handleOnChange(type)}
+                                    checked={checkedState[id]}
+                                    onChange={() => handleOnChange(id)}
                                 />
                             </div>
                         )}
@@ -353,6 +225,7 @@ const SportsBetHistoryPanel = ({
                         <div style={{width: isAttached === true ? "212px" : isPopup === false ? "78px" : "178px"}} className="h-full flex items-center justify-center border-l border-gray-fafafa">{ratio}</div>
                         <div style={{width: isAttached === true ? "212px" : isPopup === false ? "131px" : "178px"}} className="h-full flex items-center justify-end border-l border-gray-fafafa pr-5px">{predictedPrice}</div>
                         <div style={{width: isAttached === true ? "212px" : isPopup === false ? "131px" : "178px"}} className="h-full flex items-center justify-end border-l border-gray-fafafa pr-5px"><p className={`${winAmount.includes("+") && "text-red-500"}`}>{winAmount}</p>원</div>
+                        
                     </div>
                 </table>
                 
@@ -384,4 +257,4 @@ const SportsBetHistoryPanel = ({
     )
 }
 
-export default SportsBetHistoryPanel
+export default MinigameBetHistoryPanel

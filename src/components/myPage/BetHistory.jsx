@@ -14,6 +14,9 @@ import MyPageTitle from './MyPageTitle'
 import LiveCasinoBetHistory from './betHistory/LiveCasinoBetHistory'
 import SportsBetHistory from './betHistory/SportsBetHistory'
 import AllBetHistory from './betHistory/AllBetHistory'
+import SlotBetHistory from './betHistory/SlotBetHistory'
+import MinigameBetHistory from './betHistory/MinigameBetHistory'
+import ARGameBetHistory from './betHistory/ARGameBetHistory'
 
 const tabsArray = [
     { text: "전체", icon: Icon1, id: 0 },
@@ -55,8 +58,16 @@ const BetHistory = () => {
                 <AllBetHistory />
             ) : selectedTab === 1 ? (
                 <LiveCasinoBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
-            ) : (
+            ) : selectedTab === 2 ? (
+                <SlotBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
+            ) : selectedTab === 3 ? (
                 <SportsBetHistory checkedState={checkedState} setCheckedState={setCheckedState} />
+            ) : selectedTab === 4 ? (
+                <SportsBetHistory checkedState={checkedState} setCheckedState={setCheckedState} />
+            ) : selectedTab === 5 ? (
+                <MinigameBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
+            ) : (
+                <ARGameBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
             )}
 
             <Pagination page={page} setPage={setPage}/>   
