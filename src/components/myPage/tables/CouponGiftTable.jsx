@@ -32,7 +32,7 @@ const CouponGiftTable = () => {
                     <td className="w-340px text-center">테스트쿠폰</td>
                     <td className="w-143px text-right text-red-e9441d pr-20px font-robotoRegular">10,000</td>
                     <td className="w-135px text-center">eric123</td>
-                    <td className="w-94px text-center  text-blue-r0056a6">사용가능</td>
+                    <td className="w-94px text-center  text-red-ff1237">사용가능</td>
                     <td className="w-132px text-center font-robotoRegular">2021-06-29</td>
                     <td className="w-119px text-center font-robotoRegular">2021-07-29</td>
                 </tr> 
@@ -41,7 +41,7 @@ const CouponGiftTable = () => {
                     <td className="w-340px text-center">테스트쿠폰</td>
                     <td className="w-143px text-right text-red-e9441d pr-20px font-robotoRegular">10,000</td>
                     <td className="w-135px text-center">eric123</td>
-                    <td className="w-94px text-center  text-blue-r0056a6">사용가능</td>
+                    <td className="w-94px text-center  text-red-ff1237">사용가능</td>
                     <td className="w-132px text-center font-robotoRegular">2021-06-29</td>
                     <td className="w-119px text-center font-robotoRegular">2021-07-29</td>
                 </tr> 
@@ -50,7 +50,7 @@ const CouponGiftTable = () => {
                     <td className="w-340px text-center">테스트쿠폰</td>
                     <td className="w-143px text-right text-red-e9441d pr-20px font-robotoRegular">10,000</td>
                     <td className="w-135px text-center">eric123</td>
-                    <td className="w-94px text-center  text-blue-r0056a6">사용가능</td>
+                    <td className="w-94px text-center  text-red-ff1237">사용가능</td>
                     <td className="w-132px text-center font-robotoRegular">2021-06-29</td>
                     <td className="w-119px text-center font-robotoRegular">2021-07-29</td>
                 </tr> 

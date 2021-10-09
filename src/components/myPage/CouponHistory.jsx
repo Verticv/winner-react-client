@@ -30,13 +30,13 @@ const CouponHistory = () => {
                 <div className="flex items-center space-x-10px font-spoqaMedium text-16px tracking-tight text-gray-r8c8c8c">
                     
                     <div className="space-x-2px">
-                        <div>사용가능: <span className="text-blue-r0056a6 font-spoqaBold">32</span>장</div>
+                        <div>사용가능: <span className="text-red-ff1237 font-spoqaBold">32</span>장</div>
                     </div>
 
                     <div className="h-12px w-px bg-gray-r8c8c8c" />
 
                     <div className="space-x-2px">
-                        <div>사용완료: <span className="text-red-ff1237 font-spoqaBold">8</span>장</div>
+                        <div>사용완료: <span className="text-blue-r0056a6 font-spoqaBold">8</span>장</div>
                     </div>
 
                     <div className="h-12px w-px bg-gray-r8c8c8c" />

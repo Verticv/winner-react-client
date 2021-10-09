@@ -37,8 +37,10 @@ const AnnouncementView = () => {
                     {NewLabel}
                 </div>
                 {/* SENDER */}
-                <div className="h-56px w-full bg-gray-fafafa flex px-19px space-x-10px border-b border-gray-dddddd">
-                    <img className="h-17px w-72px object-contain mt-19px" src={WinnerLogo} alt=""/>
+                <div className="h-56px w-full bg-gray-fafafa flex px-19px space-x-10px border-b border-gray-dddddd items-center">
+                    <img className="h-17px w-72px object-contain mb-4px" src={WinnerLogo} alt=""/>
+                    <div className="w-px bg-gray-dddddd h-11px" />
+                    <div className="text-14px font-spoqaMedium tracking-tight text-gray-r7b7b7b">2021.06.29</div>
                 </div>
                 <div className="w-full bg-white flex flex-col px-19px border-b border-gray-dddddd py-18px px-19px">
                     <p className="font-spoqaMedium text-16px tracking-tight text-gray-r585858 ">
