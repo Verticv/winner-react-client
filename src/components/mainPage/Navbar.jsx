@@ -131,7 +131,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
     )
 
     return (
-        <div className="limit:w-full w-1920 z-20">
+        <div className="limit:w-full w-1920 z-50">
             <header className="flex items-center justify-between h-60px px-10px shadow-plain bg-white">
                 <div className="flex items-center flex-shrink-0">
                     <img className="w-130px object-contain mb-2 mr-10px cursor-pointer" src={Logo} alt="logo" onClick={() => history.push('/')} />

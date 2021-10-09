@@ -31,7 +31,13 @@ import Bubble1 from '../../images/betCombination/bubble1.png'
 import Bubble2 from '../../images/betCombination/bubble2.png'
 import _uniqueId from 'lodash/uniqueId';
 
-const BetCombinationPanel = ({addedCard, setAddedCard}) => {
+const BetCombinationPanel = ({
+    addedCard, 
+    setAddedCard,
+    checkedState,
+    setCheckedState,
+    filterArray
+}) => {
 
     const subArray = [
         {
@@ -244,7 +250,7 @@ const BetCombinationPanel = ({addedCard, setAddedCard}) => {
     const [isHover2, setHover2] = useState(false)
     const [isButtonClicked, setButtonClicked] = useState("")
 
-    const dropDownCellClass = "flex w-full h-42px py-2px bg-white items-center hover:bg-blue-lightGradLight px-14px"
+    const dropDownCellClass = "flex w-full h-42px py-2px bg-white items-center hover:bg-blue-lightGradLight px-14px space-x-8px"
 
     const gameResultButton = (
         <div
@@ -262,35 +268,86 @@ const BetCombinationPanel = ({addedCard, setAddedCard}) => {
         </div>
     )
 
+    const handleOnChange = (position) => {
+        const updatedCheckedState = checkedState.map((item, index) =>
+          index === position ? !item : item
+        );
+        setCheckedState(updatedCheckedState);
+    }; 
+
+    function SearchDropdownCell({ items }) {
+        return items.map(item => (
+            <div className={dropDownCellClass} onClick={() => {
+                setSelectedCarrier("국가선택")
+            }}>
+                <input
+                    type="checkbox"
+                    checked={checkedState[item.id]}
+                    onChange={() => handleOnChange(item.id)}
+                />
+                <span>{item.text}</span>
+            </div>
+        ));
+    }
+
     const searchDropdown = (
         <div 
-            style={{width: "159px" }}
-            className="mt-4px flex flex-col items-center justify-center overflow-hidden bg-white rounded-md border border-gray-dddddd text-gray-r454545 font-spoqaMedium text-14px tracking-tight"
+            style={{width: "159px", height:"229px" }}
+            className="mt-px flex flex-col items-start overflow-hidden bg-white rounded-md border border-gray-dddddd text-gray-r454545 font-spoqaMedium text-14px tracking-tight"
         >
-            <button className={dropDownCellClass} onClick={() => {
-                setSelectedCarrier("국가선택")
-                setDropdownOpen(false)
-            }}>
-                국가선택
-            </button>
-            <button className={dropDownCellClass} onClick={() => {
-                setSelectedCarrier("영국")
-                setDropdownOpen(false)
-            }}>
-                영국
-            </button>
-            <button className={dropDownCellClass} onClick={() => {
-                setSelectedCarrier("독일")
-                setDropdownOpen(false)
-            }}>
-                독일
-            </button>
-            <button className={dropDownCellClass} onClick={() => {
-                setSelectedCarrier("스페인")
-                setDropdownOpen(false)
-            }}>
-                스페인
-            </button>
+            <div style={{height:"185px", width:"155px"}} className="w-full overflow-y-scroll mt-2px flex-shrink-0">
+                <SearchDropdownCell items={filterArray} />
+            </div>
+            <div style={{backgroundColor:"#e8e8e8"}} className="w-full h-full flex items-center justify-center space-x-3px">
+                <button 
+                    style={{
+                        width:"75px",
+                        backgroundColor: "#171a1d",
+                        height:"35px"
+                    }} 
+                    className="relative flex items-center justify-center rounded-4px"
+                    onClick={() => setDropdownOpen(false)}
+                >
+                    <div 
+                        style={{
+                            width:"73px",
+                            borderColor: "#737579",
+                            background: "linear-gradient(to bottom, #585b5e, #303337)",
+                            height:"33px",
+                            borderRadius:"3px"
+                        }} 
+                        className="flex items-center justify-center border cursor-pointer"
+                    >
+                        <span style={{textShadow: "1px 1px 1px #00000070"}} className="font-spoqaMedium tracking-tight text-14px text-white" >
+                            확인
+                        </span>
+                    </div>
+                </button>
+                <button 
+                    style={{
+                        width:"75px",
+                        backgroundColor: "#cb4343",
+                        height:"35px"
+                    }} 
+                    className="relative flex items-center justify-center rounded-4px"
+                    onClick={() => setCheckedState(filterArray.fill(false))}
+                >
+                    <div 
+                        style={{
+                            width:"73px",
+                            borderColor: "#f36576",
+                            background: "linear-gradient(to bottom, #f03a50, #cf254d)",
+                            height:"33px",
+                            borderRadius:"3px"
+                        }} 
+                        className="flex items-center justify-center border cursor-pointer"
+                    >
+                        <span style={{textShadow: "1px 1px 1px #00000070"}} className="font-spoqaMedium tracking-tight text-14px text-white" >
+                            초기화
+                        </span>
+                    </div>
+                </button>
+            </div>
         </div>
     )
 
