@@ -117,7 +117,8 @@ const BetCombinationPanel = ({addedCard, setAddedCard}) => {
             hasUp: false,
             hasDown: false,
             bet: "none",
-            subArray: subArray
+            subArray: subArray,
+            isLast: true
         },
     ]
 
@@ -137,7 +138,8 @@ const BetCombinationPanel = ({addedCard, setAddedCard}) => {
             hasUp: false,
             hasDown: false,
             bet: "left",
-            subArray: subArray
+            subArray: subArray,
+            isLast: true
         },
     ]
 
@@ -174,7 +176,8 @@ const BetCombinationPanel = ({addedCard, setAddedCard}) => {
             hasUp: false,
             hasDown: false,
             bet: "none",
-            subArray: subArray
+            subArray: subArray,
+            isLast: true
         },
     ]
 
@@ -228,7 +231,8 @@ const BetCombinationPanel = ({addedCard, setAddedCard}) => {
             hasUp: false,
             hasDown: false,
             bet: "none",
-            subArray: subArray
+            subArray: subArray,
+            isLast: true
         },
         
     ]
@@ -238,6 +242,7 @@ const BetCombinationPanel = ({addedCard, setAddedCard}) => {
     const [isHover1, setHover1] = useState(null)
     const [isOpen, setOpen] = useState(new Array(20).fill(false))
     const [isHover2, setHover2] = useState(false)
+    const [isButtonClicked, setButtonClicked] = useState("")
 
     const dropDownCellClass = "flex w-full h-42px py-2px bg-white items-center hover:bg-blue-lightGradLight px-14px"
 
@@ -416,22 +421,24 @@ const BetCombinationPanel = ({addedCard, setAddedCard}) => {
                 style={{
                     width:"267px", 
                     height: "39px",
-                    backgroundColor: bet === "left" ? "#cb4343" : "#b3b3b3" 
+                    backgroundColor: `${id}left` === isButtonClicked ? "#cb4343" : "#b3b3b3" 
                 }}  
                 className="flex items-center justify-center rounded-lg"
-                onClick={() => setAddedCard(prevArray => 
-                    [...prevArray, {id: _uniqueId('prefix-'), value: "left"}])}
+                onClick={() => {
+                    setButtonClicked(`${id}left`)
+                    setAddedCard(prevArray => 
+                    [...prevArray, {id: _uniqueId('prefix-'), value: "left"}])}}
             >
                 <div 
                     style={{
                         width:"265px", 
                         height: "37px",
-                        borderColor: bet === "left" ? "#ff7982" : "#ffffff",
-                        background:  bet === "left" 
+                        borderColor: `${id}left` === isButtonClicked ? "#ff7982" : "#ffffff",
+                        background:  `${id}left` === isButtonClicked
                         ? "linear-gradient(to bottom, #ff535f, #ee4e5a)"  
                         : "linear-gradient(to bottom, #f9f9f9, #e7ecf1)",
-                        color: bet === "left" ? "#ffffff" : "#454545",
-                        textShadow: bet === "left" ? "1px 1px 0px #00000070" : ""
+                        color: `${id}left` === isButtonClicked ? "#ffffff" : "#454545",
+                        textShadow: `${id}left` === isButtonClicked ? "1px 1px 0px #00000070" : ""
                     }}  
                     className="flex items-center justify-end rounded-lg border bg-gradient-to-b cursor-pointer px-10px pt-px"
                 >
@@ -444,7 +451,7 @@ const BetCombinationPanel = ({addedCard, setAddedCard}) => {
                             <img src={UpIcon} alt="" />
                         )}
                     </div>
-                    <span style={{color: stat1Color === "red" ? "#d52e2e" : ""}} className="font-roboto tracking-tight text-14px">{stat1}</span>
+                    <span style={{color: stat1Color === "red" && `${id}left` !== isButtonClicked ? "#d52e2e" : ""}} className="font-roboto tracking-tight text-14px">{stat1}</span>
                 </div>
             </button>
 
@@ -452,26 +459,28 @@ const BetCombinationPanel = ({addedCard, setAddedCard}) => {
                 style={{
                     width:"71px", 
                     height: "39px",
-                    backgroundColor: bet === "middle" ? "#cb4343" : "#b3b3b3" 
+                    backgroundColor: `${id}middle` === isButtonClicked ? "#cb4343" : "#b3b3b3" 
                 }}  
                 className="flex items-center justify-center rounded-lg"
-                onClick={() => setAddedCard(prevArray => 
-                    [...prevArray, {id: _uniqueId('prefix-'), value: "middle"}])}
+                onClick={() => {
+                    setButtonClicked(`${id}middle`)
+                    setAddedCard(prevArray => 
+                    [...prevArray, {id: _uniqueId('prefix-'), value: "middle"}])}}
             >
                 <div 
                     style={{
                         width:"69px", 
                         height: "37px",
-                        borderColor: bet === "middle" ? "#ff7982" : "#ffffff",
-                        background: bet === "middle" 
+                        borderColor: `${id}middle` === isButtonClicked ? "#ff7982" : "#ffffff",
+                        background: `${id}middle` === isButtonClicked 
                         ? "linear-gradient(to bottom, #ff535f, #ee4e5a)"  
                         : "linear-gradient(to bottom, #f9f9f9, #e7ecf1)",
-                        color: bet === "middle" ? "#ffffff" : "#454545",
-                        textShadow: bet === "middle" ? "1px 1px 0px #00000070" : ""
+                        color: `${id}middle` === isButtonClicked ? "#ffffff" : "#454545",
+                        textShadow: `${id}middle` === isButtonClicked ? "1px 1px 0px #00000070" : ""
                     }}  
                     className="flex items-center justify-center rounded-lg border bg-gradient-to-b cursor-pointer px-10px pt-px"
                 >
-                    <span  style={{color: stat2Color === "blue" ? "#0056a6" : ""}} className="font-roboto tracking-tight text-14px">{stat2}</span>
+                    <span  style={{color: stat2Color === "blue" && `${id}middle` !== isButtonClicked ? "#0056a6" : ""}} className="font-roboto tracking-tight text-14px">{stat2}</span>
                 </div>
             </button>
 
@@ -479,22 +488,24 @@ const BetCombinationPanel = ({addedCard, setAddedCard}) => {
                 style={{
                     width:"267px", 
                     height: "39px",
-                    backgroundColor: bet === "right" ? "#cb4343" : "#b3b3b3" 
+                    backgroundColor: `${id}right` === isButtonClicked ? "#cb4343" : "#b3b3b3" 
                 }}  
                 className="flex items-center justify-center rounded-lg"
-                onClick={() => setAddedCard(prevArray => 
-                    [...prevArray, {id: _uniqueId('prefix-'), value: "right"}])}
+                onClick={() => {
+                    setButtonClicked(`${id}right`)
+                    setAddedCard(prevArray => 
+                    [...prevArray, {id: _uniqueId('prefix-'), value: "right"}])}}
             >
                 <div 
                     style={{
                         width:"265px", 
                         height: "37px",
-                        borderColor: bet === "right" ? "#ff7982" : "#ffffff",
-                        background: bet === "right" 
+                        borderColor: `${id}right` === isButtonClicked ? "#ff7982" : "#ffffff",
+                        background: `${id}right` === isButtonClicked
                         ? "linear-gradient(to bottom, #ff535f, #ee4e5a)"  
                         : "linear-gradient(to bottom, #f9f9f9, #e7ecf1)",
-                        color: bet === "right" ? "#ffffff" : "#454545",
-                        textShadow: bet === "right" ? "1px 1px 0px #00000070" : ""
+                        color: `${id}right` === isButtonClicked ? "#ffffff" : "#454545",
+                        textShadow: `${id}right` === isButtonClicked ? "1px 1px 0px #00000070" : ""
                     }}  
                     className="flex items-center justify-start rounded-lg border bg-gradient-to-b cursor-pointer px-10px pt-px"
                 >
@@ -526,15 +537,18 @@ const BetCombinationPanel = ({addedCard, setAddedCard}) => {
         
         return array.map(items => (
             <div className="flex flex-col">
-                <div style={{backgroundColor: isSubArray === true ? "#f1f1f1" : "#ffffff"}} className="w-full h-59px border-b border-gray-dddddd flex items-center">
+                <div 
+                    style={{backgroundColor: isSubArray === true ? "#f1f1f1" : "#ffffff"}} 
+                    className={`${items.isLast && " rounded-b-xl"} w-full h-59px border-b border-gray-dddddd flex items-center`}
+                >
                     <div style={{width: "129px"}} className="flex items-center justify-center h-full">
-                        <p className="font-roboto text-14px tracking-tight text-gray-r454545">2021-06-29 15:45</p>
+                        <p style={{color: isSubArray === true ? "#585858" : "#454545"}} className="font-roboto text-14px tracking-tight">2021-06-29 15:45</p>
                     </div>
-                    <div style={{width: "75px"}} className="flex flex-col items-center justify-center h-full -space-y-4px">
-                        <p className="font-spoqaMedium text-14px tracking-tight text-r454545">{items.type}</p>
-                        <p className="font-spoqa text-12px tracking-tight text-r454545">(연장미포함)</p>
+                    <div style={{width: "75px", color: isSubArray === true ? "#585858" : "#454545"}} className="flex flex-col items-center justify-center h-full -space-y-4px">
+                        <p className="font-spoqaMedium text-14px tracking-tight">{items.type}</p>
+                        <p className="font-spoqa text-12px tracking-tight">(연장미포함)</p>
                     </div>
-                    <div className="ml-14px h-full flex items-center">
+                    <div className="ml-11px h-full flex items-center">
                         <NormalOptions  
                             id={items.id}
                             bet={items.bet}
@@ -637,7 +651,7 @@ const BetCombinationPanel = ({addedCard, setAddedCard}) => {
                 </div>
                 <div className="h-60px w-full z-20 flex items-center">
                     <div style={{color:"#614f46"}} className="font-roboto text-14px tracking-tight ml-10px">2021-06-29 15:45</div>
-                    <div style={{color:"#614f46"}} className="font-spoqaMedium text-14px tracking-tight ml-32px mr-29px">보너스</div>
+                    <div style={{color:"#614f46"}} className="font-spoqaMedium text-14px tracking-tight ml-32px mr-26px">보너스</div>
                     <EventOptions 
                         team1 = "다폴더 보너스 배당"
                         team2 = "◀ 3폴더 이상 베팅 시"

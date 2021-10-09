@@ -2,7 +2,6 @@ import BetCombinationPanel from 'components/betCombination/BetCombinationPanel'
 import BetCombinationRightPanel from 'components/betCombination/BetCombinationRightPanel'
 import Footer from 'components/mainPage/Footer'
 import Footer2 from 'components/mainPage/Footer2'
-import HorizontalMenu1 from 'components/horizontalMenus/HorizontalMenu1'
 import DirectoryComponent from 'components/myPage/DirectoryComponent'
 import Navbar from 'components/mainPage/Navbar'
 import NoticeBanner from 'components/mainPage/NoticeBanner'
@@ -16,6 +15,7 @@ import Icon5 from '../images/gameResults/horizontalMenu/icon_5.png'
 import Icon6 from '../images/gameResults/horizontalMenu/icon_6.png'
 import Icon7 from '../images/gameResults/horizontalMenu/icon_7.png'
 import Icon8 from '../images/gameResults/horizontalMenu/icon_8.png'
+import HorizontalMenu6 from 'components/horizontalMenus/HorizontalMenu6'
 
 const BetCombinationPage = ({isAuthenticated, setAuthenticated}) => {
 
@@ -57,7 +57,7 @@ const BetCombinationPage = ({isAuthenticated, setAuthenticated}) => {
                 <div className="flex w-default space-x-20px">
 
                     <div style={{width: "933px"}}>
-                        <HorizontalMenu1 itemsArray={tabsArray} isState={selectedTab} setState={setSelectedTab} />
+                        <HorizontalMenu6 itemsArray={tabsArray} isState={selectedTab} setState={setSelectedTab} />
 
                         <div className="mt-20px">
                             <BetCombinationPanel addedCard={addedCard} setAddedCard={setAddedCard} />

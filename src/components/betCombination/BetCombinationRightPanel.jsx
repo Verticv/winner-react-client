@@ -40,7 +40,7 @@ const BetCombinationRightPanel = ({
     const [selectedTab, setSelectedTab] = useState(0)
 
     return (
-        <div className="w-fill rounded-xl shadow-subNavbar">
+        <div className="w-fill rounded-lg shadow-subNavbar">
 
             <div className="relative bg-gradient-to-b from-gray-f8f9fb via-gray-efeff0 to-gray-e5e6e6 h-54px w-full shadow-plain5 z-20 rounded-t-xl flex items-center justify-between px-8px">
                 <div className="flex flex-col space-y-2px">

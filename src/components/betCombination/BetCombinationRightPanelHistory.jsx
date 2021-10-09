@@ -98,7 +98,7 @@ const BetCombinationRightPanelHistory = () => {
 
             </div>
 
-            <div className="bg-white border-b border-2px border-gray-dddddd pt-12px pb-3px px-3px flex flex-col">
+            <div className="bg-white border-b border-2px border-gray-dddddd pt-12px pb-3px px-3px flex flex-col rounded-b-lg">
 
                 <div className="flex flex-col space-y-4px">
                     <HistoryCard title="러시아 - Liga Pro Women" team1="Malahlt" team2="Granat" side="right" type="배구 - 승무패 (게임)" winStatus="win" />
