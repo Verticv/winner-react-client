@@ -166,8 +166,23 @@ const DateSearchBar = ({
                             className="w-138px h-42px rounded-4px border border-gray-dddddd bg-white outline-none text-15px font-spoqaMedium tracking-tight text-gray-r8c8c8c px-10px" 
                             placeholder="아이디" 
                         />
-                        <div className="flex items-center justify-center h-42px w-75px rounded-4px bg-gray-r171a1d">
-                            <div className="flex items-center justify-center h-40px w-73px bg-black rounded-4px border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r585b5e to-gray-r303337 cursor-pointer">
+                        <div 
+                            style={{
+                                width:"75px",
+                                height:"42px",
+                                borderRadius: "4px",
+                            }} 
+                            className="flex items-center justify-center rounded-4px bg-gray-r171a1d"
+                        >
+                            <div 
+                                style={{
+                                    width:"73px", 
+                                    height:"40px",
+                                    background: "linear-gradient(to bottom, #585b5e, #303337)",
+                                    borderRadius: "3px"
+                                }} 
+                                className="flex items-center justify-center bg-black rounded-4px border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r585b5e to-gray-r303337 cursor-pointer"
+                            >
                                 <span className="font-spoqaMedium tracking-tight text-14px text-white">검색</span>
                             </div>
                         </div>

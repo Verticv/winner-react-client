@@ -23,6 +23,7 @@ import Diamond from '../images/myPage/diamond.png'
 import WhiteArrow from '../images/arrows/white_arrow.png'
 import ReplyArrow from '../images/arrows/reply_arrow.png'
 import BlueTriangle from '../images/blue_triangle.png'
+import DefaultUser from '../images/myPage/distributor/default.png'
 
 const DistributorPage = ({
     isAuthenticated,
@@ -547,6 +548,26 @@ const DistributorPage = ({
         ));
     }
 
+    const UsersOnline = ({name="tntwk"}) => (
+        <div 
+            style={{
+                background: "linear-gradient(to bottom, #f5f7f8, #e9e9e9",
+            }} 
+            className="h-48px rounded-full border border-gray-dddddd flex items-center justify-center"
+        >
+            <div 
+                style={{
+                    height:"44px",
+                    background: "linear-gradient(to bottom, #d0dbe4, #ffffff 60%)"
+                }} 
+                className="pl-9px pr-15px w-full rounded-full flex items-center space-x-5px"
+            >
+                    <img src={DefaultUser} alt="" />
+                    <span className="text-gray-r7b7b7b">{name}</span>
+            </div>
+        </div>
+    )
+
     return (
         <div className="relative flex flex-col justify-center limit:overflow-x-hidden">
              <div className="fixed w-1920 top-0 z-50 flex flex-col items-start limit1920:items-center">
@@ -791,9 +812,36 @@ const DistributorPage = ({
                     </div>
                     </div>
 
-                    <div className="mt-60px h-29px w-full flex items-center space-x-6px text-24px tracking-tight text-gray-r7b7b7b font-spoqaMedium">
+                    <div className="mt-52px h-42px w-full flex items-center space-x-6px text-24px tracking-tight text-gray-r7b7b7b font-spoqaMedium">
                         <img src={MemberIcon} alt="" />
                         <div>접속중인 회원수: <span className="font-spoqaBold text-black tracking-tight">0</span></div>
+
+                        <div 
+                            style={{
+                                width:"75px",
+                                height:"42px",
+                                borderRadius: "4px",
+                                marginLeft: "14px"
+                            }} 
+                            className="flex items-center justify-center rounded-4px bg-gray-r171a1d"
+                        >
+                            <div 
+                                style={{
+                                    width:"73px", 
+                                    height:"40px",
+                                    background: "linear-gradient(to bottom, #585b5e, #303337)",
+                                    borderRadius: "3px"
+                                }} 
+                                className="flex items-center justify-center bg-black rounded-4px border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r585b5e to-gray-r303337 cursor-pointer"
+                            >
+                                <span className="font-spoqaMedium tracking-tight text-14px text-white">보기</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style={{height:"66px"}} className="flex bg-gray-f9f9f9 border border-gray-dddddd rounded-md mt-13px px-8px items-center space-x-10px">
+                        <UsersOnline />
+                        <UsersOnline name="tkskdl12" />
                     </div>
 
                     <div className="mt-60px h-29px w-full flex items-end justify-between text-24px tracking-tight text-gray-r7b7b7b font-spoqaMedium">
