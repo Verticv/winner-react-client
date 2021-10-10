@@ -86,7 +86,7 @@ const BetCombinationPage = ({isAuthenticated, setAuthenticated}) => {
                     <div style={{width: "933px"}}>
                         <HorizontalMenu6 itemsArray={tabsArray} isState={selectedTab} setState={setSelectedTab} />
 
-                        <div className="mt-20px">
+                        <div className="mt-15px">
                             <BetCombinationPanel 
                                 addedCard={addedCard} 
                                 setAddedCard={setAddedCard} 
@@ -97,7 +97,7 @@ const BetCombinationPage = ({isAuthenticated, setAuthenticated}) => {
                         </div>
                     </div>
                     
-                    <div style={{width: isPanelFixed ? "307px" : "307px", left:"0px", position:"sticky", top: "150px", height: isPanelFixed ? "100%" : ""}} className={`${isPanelFixed && "sticky bottom-0 flex"} mb-60px`}>
+                    <div style={{width: isPanelFixed ? "307px" : "307px", left:"0px", position:"sticky", top: "150px", height: isPanelFixed ? "100%" : ""}} className={`${isPanelFixed && "sticky bottom-0 flex"} mb-60px pt-px`}>
                         <BetCombinationRightPanel 
                             addedCard={addedCard} 
                             setAddedCard={setAddedCard} 

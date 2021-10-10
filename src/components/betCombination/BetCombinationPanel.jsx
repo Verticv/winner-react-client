@@ -86,7 +86,59 @@ const BetCombinationPanel = ({
             stat3: 3.47,
             hasUp: true,
             hasDown: true,
+            bet: "none",
+        },
+    ]
+
+    const subArray2 = [
+        {
+            id: 0,
+            type: "핸디캡",
+            team1: "FK Haugesund",
+            team2: "스트룀스고세 IF",
+            stat1: 2.26,
+            stat2: 2.96,
+            stat3: 3.47,
+            hasUp: false,
+            hasDown: false,
             bet: "none" 
+        },
+        {
+            id: 1,
+            type: "핸디캡",
+            team1: "FK Haugesund",
+            team2: "스트룀스고세 IF",
+            stat1: 2.26,
+            stat2: 2.96,
+            stat3: 3.47,
+            hasUp: false,
+            hasDown: false,
+            bet: "right" 
+        },
+        {
+            id: 2,
+            type: "언오버",
+            team1: "오버",
+            team2: "언더",
+            stat1: 2.26,
+            stat2: 2.96,
+            stat3: 3.47,
+            hasUp: true,
+            hasDown: true,
+            bet: "none" 
+        },
+        {
+            id: 3,
+            type: "언오버",
+            team1: "오버",
+            team2: "언더",
+            stat1: 2.26,
+            stat2: 2.96,
+            stat3: 3.47,
+            hasUp: true,
+            hasDown: true,
+            bet: "none",
+            isLastSubarray: true
         },
     ]
 
@@ -123,7 +175,7 @@ const BetCombinationPanel = ({
             hasUp: false,
             hasDown: false,
             bet: "none",
-            subArray: subArray,
+            subArray: subArray2,
             isLast: true
         },
     ]
@@ -144,7 +196,7 @@ const BetCombinationPanel = ({
             hasUp: false,
             hasDown: false,
             bet: "left",
-            subArray: subArray,
+            subArray: subArray2,
             isLast: true
         },
     ]
@@ -182,7 +234,7 @@ const BetCombinationPanel = ({
             hasUp: false,
             hasDown: false,
             bet: "none",
-            subArray: subArray,
+            subArray: subArray2,
             isLast: true
         },
     ]
@@ -237,7 +289,7 @@ const BetCombinationPanel = ({
             hasUp: false,
             hasDown: false,
             bet: "none",
-            subArray: subArray,
+            subArray: subArray2,
             isLast: true
         },
         
@@ -262,7 +314,7 @@ const BetCombinationPanel = ({
         >
             <div className="flex">
                 <img className="object-none" src={GlobeIcon} alt="" />
-                <p className="mt-px ml-6px">{selectedCarrier}</p>
+                <p className="mt-px ml-6px text-14px">{selectedCarrier}</p>
             </div>
             <img src={ArrowBlack} alt="" />
         </div>
@@ -581,7 +633,11 @@ const BetCombinationPanel = ({
         </div>
     )
 
-    function LeagueCell({array, isSubArray = false}) {
+    function LeagueCell({
+        array, 
+        isSubArray = false, 
+        isLastSubarray = false
+    }) {
 
         
 
@@ -596,7 +652,7 @@ const BetCombinationPanel = ({
             <div className="flex flex-col">
                 <div 
                     style={{backgroundColor: isSubArray === true ? "#f1f1f1" : "#ffffff"}} 
-                    className={`${items.isLast && " rounded-b-xl"} w-full h-59px border-b border-gray-dddddd flex items-center`}
+                    className={`${items.isLast && isOpen[items.id] === false && " rounded-b-xl"} ${items.isLastSubarray === true && "rounded-b-xl"} w-full h-59px border-b border-gray-dddddd flex items-center`}
                 >
                     <div style={{width: "129px"}} className="flex items-center justify-center h-full">
                         <p style={{color: isSubArray === true ? "#585858" : "#454545"}} className="font-roboto text-14px tracking-tight">2021-06-29 15:45</p>
@@ -657,7 +713,7 @@ const BetCombinationPanel = ({
                     
                 </div>
                 {isOpen[items.id] === true && (
-                    <LeagueCell array={items.subArray} isSubArray={true} />
+                    <LeagueCell array={items.subArray} isSubArray={true} isLastSubarray={items.isLast} />
                 )}
             </div>
         ))

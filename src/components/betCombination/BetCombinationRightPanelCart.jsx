@@ -206,7 +206,10 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
                 <button 
                     style={{width:"287px"}}
                     className="mt-5px flex items-center justify-center h-46px rounded-4px bg-blue-r2068b2"
-                    onClick={() => setShowConfirm(true)}
+                    onClick={() => {
+                        setAddedCard([])
+                        setShowConfirm(true)
+                    }}
                 >
                     <div style={{width:"285px"}} className="flex items-center justify-center h-44px rounded-4px border border-blue-r3975ae bg-gradient-to-b from-blue-r125a9e via-blue-r0e508d to-blue-r0b447a cursor-pointer">
                         <img src={BetIcon} alt="" />

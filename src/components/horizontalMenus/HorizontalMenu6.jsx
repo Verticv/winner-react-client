@@ -22,7 +22,8 @@ const HorizontalMenu6 = ({
             >
                 <div 
                     style={{
-                        height: "96px"
+                        height: "93px",
+                        borderColor: "#e9eced"
                     }}
                     className={`${
                         isState === item.id 
@@ -30,7 +31,7 @@ const HorizontalMenu6 = ({
                         : "bg-gradient-to-b from-blue-c4d6e6 via-gray-f5feff to-white border-b border-l border-r border-blue-d6dfe8"
                     } mt-3px w-full rounded-b-md rounded-t-lg flex flex-col items-center`}
                 >
-                    <img className="mt-4px ml-2px object-none" src={item.icon} alt="" />
+                    <img className="mt-4px ml-3px object-none" src={item.icon} alt="" />
                     <div 
                         className={`${
                             isState === item.id
