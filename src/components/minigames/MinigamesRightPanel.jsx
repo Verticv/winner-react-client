@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ClockIcon from '../../images/minigames/clock_blue.png'
 import RefreshIcon from '../../images/minigames/refresh_icon.png'
 import SelectionBg from '../../images/minigames/selection_bg.png'
@@ -7,13 +7,20 @@ import BetIcon from '../../images/betCombination/bet_icon.png'
 import LockIcon from '../../images/minigames/lock.png'
 
 const MinigamesRightPanel = ({
-    disabled = true
+    selectedGame
 }) => {
 
+    const [inputValue, setInputValue] = useState(null)
+    var nf = new Intl.NumberFormat();
+
     const BetAmountButton = ({amount}) => (
-        <button style={{width:"110px", backgroundColor: "#b3bac1"}} className="flex items-center h-46px justify-center rounded-4px">
+        <button 
+            style={{width:"110px", backgroundColor: "#b3bac1"}} 
+            className="flex items-center h-46px justify-center rounded-4px"
+            onClick={() => setInputValue(inputValue + amount)}
+        >
             <div style={{width:"108px"}} className="flex items-center justify-center rounded-4px h-44px border border-white bg-gradient-to-b from-white to-blue-c4d6e6 via-gray-f5feff cursor-pointer">
-                <span className="font-roboto tracking-tight text-16px text-gray-r585858">{amount}</span>
+                <span className="font-roboto tracking-tight text-16px text-gray-r585858">{nf.format(amount)}</span>
             </div>
         </button>
     )
@@ -70,12 +77,19 @@ const MinigamesRightPanel = ({
             </div>
             <div className="h-47px border-b border-gray-dddddd flex items-center justify-between pl-14px pr-13px">
                 <p className="text-16px font-spoqaMedium tracking-tight text-gray-r454545">베팅금액</p>
-                <p 
+
+                <input 
                     style={{color: "#d52e2e", width: "216px", height: "32px", backgroundColor: "#e8e8e8"}} 
-                    className="flex items-center justify-end px-5px border rounded-4px border-gray-dddddd text-16px font-roboto tracking-tight text-blue-r0056a6"
-                >
-                    10,000
-                </p>
+                    className="flex items-center justify-end px-5px border rounded-4px border-gray-dddddd text-16px font-roboto tracking-tight text-blue-r0056a6 text-right"
+                    placeholder="0"
+                    value={nf.format(inputValue)}
+                    onChange={e => setInputValue(e.target.value.replace(/,/g, ''))}
+                    onKeyPress={(event) => {
+                        if (!/[0-9]/.test(event.key)) {
+                            event.preventDefault();
+                        }
+                    }}
+                />
             </div>
             <div className="h-43px border-b border-gray-dddddd flex items-center justify-between pl-14px pr-19px">
                 <p className="text-16px font-spoqaMedium tracking-tight text-gray-r454545">적중금액</p>
@@ -85,26 +99,38 @@ const MinigamesRightPanel = ({
             <div style={{height:"208px"}} className="w-full bg-gray-fafafa p-7px">
 
                 <div className="grid grid-cols-3 gap-2px">
-                    <BetAmountButton amount="5,000"/>
-                    <BetAmountButton amount="10,000"/>
-                    <BetAmountButton amount="50,000"/>
-                    <BetAmountButton amount="100,000"/>
-                    <BetAmountButton amount="500,000"/>
-                    <BetAmountButton amount="1,000,000"/>
+                    <BetAmountButton amount={5000}/>
+                    <BetAmountButton amount={10000}/>
+                    <BetAmountButton amount={50000}/>
+                    <BetAmountButton amount={100000}/>
+                    <BetAmountButton amount={500000}/>
+                    <BetAmountButton amount={1000000}/>
                 </div>
 
                 <div className="flex space-x-2px mt-2px">
-                    <button style={{width:"110px"}} className="flex items-center justify-center h-46px rounded-4px bg-gray-r171a1d">
+                    <button 
+                        style={{width:"110px"}} 
+                        className="flex items-center justify-center h-46px rounded-4px bg-gray-r171a1d"
+                        onClick={() => setInputValue(22170)}
+                    >
                         <div style={{width:"108px"}} className="flex items-center justify-center h-44px rounded-4px border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e to-gray-r303337 cursor-pointer">
                             <span className="font-spoqaMedium tracking-tight text-16px text-white">잔돈</span>
                         </div>
                     </button>
-                    <button style={{width:"110px"}} className="flex items-center justify-center h-46px rounded-4px bg-gray-r171a1d">
+                    <button 
+                        style={{width:"110px"}} 
+                        className="flex items-center justify-center h-46px rounded-4px bg-gray-r171a1d"
+                        onClick={() => setInputValue(null)}
+                    >
                         <div style={{width:"108px"}} className="flex items-center justify-center h-44px rounded-4px border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e to-gray-r303337 cursor-pointer">
                             <span className="font-spoqaMedium tracking-tight text-16px text-white">초기화</span>
                         </div>
                     </button>
-                    <button style={{width:"110px"}} className="flex items-center justify-center h-46px rounded-4px bg-gray-r171a1d">
+                    <button 
+                        style={{width:"110px"}} 
+                        className="flex items-center justify-center h-46px rounded-4px bg-gray-r171a1d"
+                        onClick={() => setInputValue(3522170)}
+                    >
                         <div style={{width:"108px"}} className="flex items-center justify-center h-44px rounded-4px border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e to-gray-r303337 cursor-pointer">
                             <span className="font-spoqaMedium tracking-tight text-16px text-white">최대</span>
                         </div>
@@ -120,7 +146,7 @@ const MinigamesRightPanel = ({
 
             </div>
 
-            {disabled === true && (
+            {(selectedGame === "/minigame/speedkino" || selectedGame === "/minigame/kinoladder") && (
                 <div className="absolute w-full h-full bg-black bg-opacity-70 z-20 flex justify-center"> 
                     <div className="flex flex-col items-center justify-center">
                         <img className="object-none" src={LockIcon} alt="" />

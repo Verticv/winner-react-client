@@ -4,6 +4,7 @@ import RedButton from '../../../images/minigames/red.png'
 import YellowButton from '../../../images/minigames/yellow.png'
 import GreenButton from '../../../images/minigames/green.png'
 import RedButtonPressed from '../../../images/minigames/red_pressed.png'
+import BlueButtonPressed from '../../../images/minigames/blue_pressed.png'
 
 const PowerballGame = ({state, setChosen}) => {
 
@@ -81,7 +82,7 @@ const PowerballGame = ({state, setChosen}) => {
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
                                     className="relative flex items-center justify-center cursor-pointer"
                                 >
-                                    <img className="absolute object-none" src={state === `${titleNumber}-1` ? BlueButton : BlueButton} alt="" />
+                                    <img className="absolute object-none" src={state === `${titleNumber}-1` ? BlueButtonPressed : BlueButton} alt="" />
                                     <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">홀</p>
                                 </div>
                                 <p className="text-12px font-robotoRegular tracking-tight text-gray-r585858">1.95</p>
@@ -107,7 +108,7 @@ const PowerballGame = ({state, setChosen}) => {
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
                                     className="relative flex items-center justify-center cursor-pointer"
                                 >
-                                    <img className="absolute object-none" src={state === `${titleNumber}-1` ? BlueButton : BlueButton} alt="" />
+                                    <img className="absolute object-none" src={state === `${titleNumber}-1` ? BlueButtonPressed : BlueButton} alt="" />
                                     <div className="flex flex-col items-center -space-y-6px">
                                         <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">언더</p>
                                         <p style={{fontSize:"10px"}} className="z-20 font-spoqa text-white tracking-tight">
@@ -142,7 +143,7 @@ const PowerballGame = ({state, setChosen}) => {
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
                                     className="relative flex items-center justify-center cursor-pointer"
                                 >
-                                    <img className="absolute object-none" src={state === `${titleNumber}-1` ? BlueButton : BlueButton} alt="" />
+                                    <img className="absolute object-none" src={state === `${titleNumber}-1` ? BlueButtonPressed : BlueButton} alt="" />
                                     <div className="flex flex-col items-center -space-y-6px">
                                         <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">홀언더</p>
                                         <p style={{fontSize:"10px"}} className="z-20 font-spoqa text-white tracking-tight">
@@ -158,7 +159,7 @@ const PowerballGame = ({state, setChosen}) => {
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
                                     className="relative flex items-center justify-center cursor-pointer"
                                 >
-                                    <img className="absolute object-none" src={state === `${titleNumber}-2` ? BlueButton : BlueButton} alt="" />
+                                    <img className="absolute object-none" src={state === `${titleNumber}-2` ? BlueButtonPressed : BlueButton} alt="" />
                                     <div className="flex flex-col items-center -space-y-6px">
                                         <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">홀오버</p>
                                         <p style={{fontSize:"10px"}} className="z-20 font-spoqa text-white tracking-tight">

@@ -9,7 +9,10 @@ import PowerLadder from '../images/minigames/powerladder.png'
 import SpeedKino from '../images/minigames/speedkino.png'
 import KinoLadder from '../images/minigames/kinoladder.png'
 import MinigamesRightPanel from 'components/minigames/MinigamesRightPanel'
-import Placeholder from '../images/minigames/placeholder.png'
+import Placeholder1 from '../images/minigames/placeholder1.png'
+import Placeholder2 from '../images/minigames/placeholder2.png'
+import Placeholder3 from '../images/minigames/placeholder3.png'
+import Placeholder4 from '../images/minigames/placeholder4.png'
 import MinigamesPanel from 'components/minigames/MinigamesPanel'
 
 
@@ -44,9 +47,21 @@ const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
                             style={{width: "905px", height: "509px", backgroundColor:"#e8e8e8"}}
                             className="rounded-xl  flex justify-center border border-gray-dddddd"
                         >
-                            <img className="object-none" src={Placeholder} alt="" />
+                            <img
+                                className="object-none" 
+                                src={
+                                    selectedGame === "/minigame/powerball"
+                                    ? Placeholder1
+                                    : selectedGame === "/minigame/powerladder"
+                                    ? Placeholder2
+                                    : selectedGame === "/minigame/speedkino"
+                                    ? Placeholder3 
+                                    : Placeholder4
+                                } 
+                                alt="" 
+                            />
                         </div>
-                        <MinigamesRightPanel />
+                        <MinigamesRightPanel selectedGame={selectedGame}/>
                     </div>
 
                     <div className="mt-8px">
