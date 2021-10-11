@@ -56,8 +56,8 @@ const DateSearchBar = ({
 
 
     const searchDropdown = (
-        <div style={{height:"229px"}} className="mt-4px flex flex-col items-center justify-center w-138px overflow-hidden bg-white rounded-md border border-gray-dddddd text-gray-r8c8c8c font-spoqaMedium text-14px tracking-tight">
-            <div style={{width:"134px"}} className="mt-2px h-full overflow-y-scroll overflow-x-hidden">
+        <div style={{height:"249px"}} className="mt-4px flex flex-col items-center justify-center w-138px overflow-hidden bg-white rounded-md border border-gray-dddddd text-gray-r8c8c8c font-spoqaMedium text-14px tracking-tight">
+            <div style={{width:"134px"}} className="pt-4px mt-2px h-full overflow-y-scroll overflow-x-hidden">
                 <DropdownCells items={LeagueExampleArray} />
             </div>
         </div>
