@@ -10,13 +10,14 @@ const PowerLadderPanel = ({
     historyArray, 
     resultsArray,
     checkedState, 
-    setCheckedState
+    setCheckedState,
+    setSelectedOption
 }) => {
 
     return (
         <>
             {selectedTab === 0 ? (
-                <PowerLadderGame />
+                <PowerLadderGame setSelectedOption={setSelectedOption} />
             ) : selectedTab === 1 ? (
                 <PowerLadderResults array={resultsArray} />
             ) : (

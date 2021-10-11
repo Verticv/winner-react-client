@@ -33,7 +33,11 @@ const HorizontalMenu3 = ({
                         : "bg-gradient-to-b from-blue-c4d6e6 via-gray-f5feff to-white"
                     } mt-3px w-full rounded-b-md rounded-t-lg flex items-center justify-between pr-20px`}
                 >
-                    <img className="ml-14px" src={item.img} alt="" />
+                    <div className="flex items-center mb-4px">
+                        <img className="ml-14px" src={item.img} alt="" />
+                        <span style={{color: selectedTab === item.path ? "#ffffff" : "#616161"}} className="text-20px tracking-tight font-spoqaBold ml-5px">{item.text}</span>
+                    </div>
+                    
                     <div className="flex items-center">
                         <img className="mr-5px object-none mb-3px" src={selectedTab === item.path ? ClockIconWhite : ClockIcon} alt="" />
                         <div 

@@ -9,13 +9,14 @@ const KinoLadderPanel = ({
     historyArray, 
     resultsArray,
     checkedState, 
-    setCheckedState
+    setCheckedState,
+    setSelectedOption
 }) => {
 
     return (
         <>
             {selectedTab === 0 ? (
-                <KinoLadderGame />
+                <KinoLadderGame setSelectedOption={setSelectedOption} />
             ) : selectedTab === 1 ? (
                 <SpeedKinoResults array={resultsArray} />
             ) : selectedTab === 2 ? (

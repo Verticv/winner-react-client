@@ -30,7 +30,7 @@ const HorizontalMenu4 = ({
                     <div className="flex items-center">
                         <div 
                             style={{color: selectedTab === item.id ? "#ffffff" : "#5b5b5b"}}
-                            className="text-16px tracking-tight font-spoqaMedium flex h-16px items-center"
+                            className="text-16px tracking-tight font-spoqaMedium flex h-16px items-center pt-3px"
                         >
                             {item.text}
                         </div>

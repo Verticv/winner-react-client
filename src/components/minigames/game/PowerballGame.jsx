@@ -8,7 +8,7 @@ import BlueButtonPressed from '../../../images/minigames/blue_pressed.png'
 import GreenButtonPressed from '../../../images/minigames/green_pressed.png'
 import YellowButtonPressed from '../../../images/minigames/yellow_pressed.png'
 
-const PowerballGame = ({state, setChosen}) => {
+const PowerballGame = ({state, setChosen, setSelectedOption}) => {
 
     const PanelTitle = ({title}) => (
         <div className="w-full h-30px flex items-center pl-3px space-x-5px">
@@ -83,7 +83,14 @@ const PowerballGame = ({state, setChosen}) => {
                         <div className="flex justify-center w-full h-full items-start">
                             <div className="flex flex-col items-center">
                                 <div 
-                                    onClick={() => setChosen(`${titleNumber}-1`)} 
+                                    onClick={() => {
+                                        setChosen(`${titleNumber}-1`)
+                                        if (titleNumber === 1) {
+                                            setSelectedOption([{type:"파워볼", name:"홀짝", selection:"홀", buttonType:"blue"}])
+                                        } else {
+                                            setSelectedOption([{type:"일반볼", name:"홀짝", selection:"홀", buttonType:"blue"}])
+                                        }
+                                    }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
                                     className="relative flex items-center justify-center cursor-pointer"
                                 >
@@ -95,7 +102,14 @@ const PowerballGame = ({state, setChosen}) => {
 
                             <div className="flex flex-col items-center">
                                 <div 
-                                    onClick={() => setChosen(`${titleNumber}-2`)} 
+                                    onClick={() => {
+                                        setChosen(`${titleNumber}-2`)
+                                        if (titleNumber === 1) {
+                                            setSelectedOption([{type:"파워볼", name:"홀짝", selection:"짝", buttonType:"red"}])
+                                        } else {
+                                            setSelectedOption([{type:"일반볼", name:"홀짝", selection:"짝", buttonType:"red"}])
+                                        }
+                                    }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
                                     className="relative flex items-center justify-center cursor-pointer"
                                 >
@@ -109,7 +123,14 @@ const PowerballGame = ({state, setChosen}) => {
                         <div className="flex justify-center w-full h-full items-start">
                             <div className="flex flex-col items-center">
                                 <div 
-                                    onClick={() => setChosen(`${titleNumber}-1`)} 
+                                    onClick={() => {
+                                        setChosen(`${titleNumber}-1`)
+                                        if (titleNumber === 2) {
+                                            setSelectedOption([{type:"파워볼", name:"언오버", selection:"언더", buttonType:"blue", subtitle: "4.5"}])
+                                        } else {
+                                            setSelectedOption([{type:"일반볼", name:"언오버", selection:"언더", buttonType:"blue", subtitle: "72.5"}])
+                                        }
+                                    }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
                                     className="relative flex items-center justify-center cursor-pointer"
                                 >
@@ -125,7 +146,14 @@ const PowerballGame = ({state, setChosen}) => {
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
-                                    onClick={() => setChosen(`${titleNumber}-2`)} 
+                                    onClick={() => {
+                                        setChosen(`${titleNumber}-2`)
+                                        if (titleNumber === 2) {
+                                            setSelectedOption([{type:"파워볼", name:"언오버", selection:"오버", buttonType:"red", subtitle: "4.5"}])
+                                        } else {
+                                            setSelectedOption([{type:"일반볼", name:"언오버", selection:"오버", buttonType:"red", subtitle: "72.5"}])
+                                        }
+                                    }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
                                     className="relative flex items-center justify-center cursor-pointer"
                                 >
@@ -144,7 +172,14 @@ const PowerballGame = ({state, setChosen}) => {
                         <div className="flex justify-center w-full h-full items-start">
                             <div className="flex flex-col items-center">
                                 <div 
-                                    onClick={() => setChosen(`${titleNumber}-1`)} 
+                                    onClick={() => {
+                                        setChosen(`${titleNumber}-1`)
+                                        if (titleNumber === 3) {
+                                            setSelectedOption([{type:"파워볼", name:"홀짝/언오버", selection:"홀언더", buttonType:"blue", subtitle: "4.5"}])
+                                        } else {
+                                            setSelectedOption([{type:"일반볼", name:"홀짝/언오버", selection:"홀언더", buttonType:"blue", subtitle: "72.5"}])
+                                        }
+                                    }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
                                     className="relative flex items-center justify-center cursor-pointer"
                                 >
@@ -160,7 +195,14 @@ const PowerballGame = ({state, setChosen}) => {
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
-                                    onClick={() => setChosen(`${titleNumber}-2`)} 
+                                    onClick={() => {
+                                        setChosen(`${titleNumber}-2`)
+                                        if (titleNumber === 3) {
+                                            setSelectedOption([{type:"파워볼", name:"홀짝/언오버", selection:"홀오버", buttonType:"blue", subtitle: "4.5"}])
+                                        } else {
+                                            setSelectedOption([{type:"일반볼", name:"홀짝/언오버", selection:"홀오버", buttonType:"blue", subtitle: "72.5"}])
+                                        }
+                                    }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
                                     className="relative flex items-center justify-center cursor-pointer"
                                 >
@@ -176,7 +218,14 @@ const PowerballGame = ({state, setChosen}) => {
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
-                                    onClick={() => setChosen(`${titleNumber}-3`)} 
+                                    onClick={() => {
+                                        setChosen(`${titleNumber}-3`)
+                                        if (titleNumber === 3) {
+                                            setSelectedOption([{type:"파워볼", name:"홀짝/언오버", selection:"짝언더", buttonType:"red", subtitle: "4.5"}])
+                                        } else {
+                                            setSelectedOption([{type:"일반볼", name:"홀짝/언오버", selection:"짝언더", buttonType:"red", subtitle: "72.5"}])
+                                        }
+                                    }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
                                     className="relative flex items-center justify-center cursor-pointer"
                                 >
@@ -192,7 +241,14 @@ const PowerballGame = ({state, setChosen}) => {
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
-                                    onClick={() => setChosen(`${titleNumber}-4`)} 
+                                    onClick={() => {
+                                        setChosen(`${titleNumber}-4`)
+                                        if (titleNumber === 3) {
+                                            setSelectedOption([{type:"파워볼", name:"홀짝/언오버", selection:"짝오버", buttonType:"red", subtitle: "4.5"}])
+                                        } else {
+                                            setSelectedOption([{type:"일반볼", name:"홀짝/언오버", selection:"짝오버", buttonType:"red", subtitle: "72.5"}])
+                                        }
+                                    }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
                                     className="relative flex items-center justify-center cursor-pointer"
                                 >
@@ -211,7 +267,10 @@ const PowerballGame = ({state, setChosen}) => {
                         <div className="flex justify-center w-full h-full items-start">
                             <div className="flex flex-col items-center">
                                 <div 
-                                    onClick={() => setChosen(`${titleNumber}-1`)} 
+                                    onClick={() => {
+                                        setChosen(`${titleNumber}-1`)
+                                        setSelectedOption([{type:"파워볼", name:"구간", selection:"A", buttonType:"yellow", subtitle: "(0~2)"}])
+                                    }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
                                     className="relative flex items-center justify-center cursor-pointer"
                                 >
@@ -225,7 +284,10 @@ const PowerballGame = ({state, setChosen}) => {
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
-                                    onClick={() => setChosen(`${titleNumber}-2`)} 
+                                    onClick={() => {
+                                        setChosen(`${titleNumber}-2`)
+                                        setSelectedOption([{type:"파워볼", name:"구간", selection:"B", buttonType:"yellow", subtitle: "(3~4)"}])
+                                    }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
                                     className="relative flex items-center justify-center cursor-pointer"
                                 >
@@ -239,7 +301,10 @@ const PowerballGame = ({state, setChosen}) => {
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
-                                    onClick={() => setChosen(`${titleNumber}-3`)} 
+                                    onClick={() => {
+                                        setChosen(`${titleNumber}-3`)
+                                        setSelectedOption([{type:"파워볼", name:"구간", selection:"C", buttonType:"yellow", subtitle: "(5~6)"}])
+                                    }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
                                     className="relative flex items-center justify-center cursor-pointer"
                                 >
@@ -253,7 +318,10 @@ const PowerballGame = ({state, setChosen}) => {
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
-                                    onClick={() => setChosen(`${titleNumber}-4`)} 
+                                    onClick={() => {
+                                        setChosen(`${titleNumber}-4`)
+                                        setSelectedOption([{type:"파워볼", name:"구간", selection:"D", buttonType:"yellow", subtitle: "(7~8)"}])
+                                    }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
                                     className="relative flex items-center justify-center cursor-pointer"
                                 >
@@ -270,7 +338,10 @@ const PowerballGame = ({state, setChosen}) => {
                         <div className="flex justify-center w-full h-full items-start -space-x-12px">
                             <div className="flex flex-col items-center">
                                 <div 
-                                    onClick={() => setChosen(`${titleNumber}-1`)} 
+                                    onClick={() => {
+                                        setChosen(`${titleNumber}-1`)
+                                        setSelectedOption([{type:"파워볼", name:"숫자", selection:"0", buttonType:"yellow"}])
+                                    }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
                                     className="relative flex items-center justify-center cursor-pointer"
                                 >
@@ -281,7 +352,10 @@ const PowerballGame = ({state, setChosen}) => {
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
-                                    onClick={() => setChosen(`${titleNumber}-2`)} 
+                                    onClick={() => {
+                                        setChosen(`${titleNumber}-2`)
+                                        setSelectedOption([{type:"파워볼", name:"숫자", selection:"1", buttonType:"yellow"}])
+                                    }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
                                     className="relative flex items-center justify-center cursor-pointer"
                                 >
@@ -293,7 +367,10 @@ const PowerballGame = ({state, setChosen}) => {
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
-                                    onClick={() => setChosen(`${titleNumber}-3`)} 
+                                    onClick={() => {
+                                        setChosen(`${titleNumber}-3`)
+                                        setSelectedOption([{type:"파워볼", name:"숫자", selection:"2", buttonType:"yellow"}])
+                                    }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
                                     className="relative flex items-center justify-center cursor-pointer"
                                 >
@@ -305,7 +382,10 @@ const PowerballGame = ({state, setChosen}) => {
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
-                                    onClick={() => setChosen(`${titleNumber}-4`)} 
+                                    onClick={() => {
+                                        setChosen(`${titleNumber}-4`)
+                                        setSelectedOption([{type:"파워볼", name:"숫자", selection:"3", buttonType:"yellow"}])
+                                    }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
                                     className="relative flex items-center justify-center cursor-pointer"
                                 >
@@ -317,7 +397,10 @@ const PowerballGame = ({state, setChosen}) => {
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
-                                    onClick={() => setChosen(`${titleNumber}-5`)} 
+                                    onClick={() => {
+                                        setChosen(`${titleNumber}-5`)
+                                        setSelectedOption([{type:"파워볼", name:"숫자", selection:"4", buttonType:"yellow"}])
+                                    }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
                                     className="relative flex items-center justify-center cursor-pointer"
                                 >
@@ -329,7 +412,10 @@ const PowerballGame = ({state, setChosen}) => {
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
-                                    onClick={() => setChosen(`${titleNumber}-6`)} 
+                                    onClick={() => {
+                                        setChosen(`${titleNumber}-6`)
+                                        setSelectedOption([{type:"파워볼", name:"숫자", selection:"5", buttonType:"yellow"}])
+                                    }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
                                     className="relative flex items-center justify-center cursor-pointer"
                                 >
@@ -341,7 +427,10 @@ const PowerballGame = ({state, setChosen}) => {
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
-                                    onClick={() => setChosen(`${titleNumber}-7`)} 
+                                    onClick={() => {
+                                        setChosen(`${titleNumber}-7`)
+                                        setSelectedOption([{type:"파워볼", name:"숫자", selection:"6", buttonType:"yellow"}])
+                                    }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
                                     className="relative flex items-center justify-center cursor-pointer"
                                 >
@@ -352,7 +441,10 @@ const PowerballGame = ({state, setChosen}) => {
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
-                                    onClick={() => setChosen(`${titleNumber}-8`)} 
+                                    onClick={() => {
+                                        setChosen(`${titleNumber}-8`)
+                                        setSelectedOption([{type:"파워볼", name:"숫자", selection:"7", buttonType:"yellow"}])
+                                    }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
                                     className="relative flex items-center justify-center cursor-pointer"
                                 >
@@ -363,7 +455,10 @@ const PowerballGame = ({state, setChosen}) => {
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
-                                    onClick={() => setChosen(`${titleNumber}-9`)} 
+                                    onClick={() => {
+                                        setChosen(`${titleNumber}-9`)
+                                        setSelectedOption([{type:"파워볼", name:"숫자", selection:"8", buttonType:"yellow"}])
+                                    }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
                                     className="relative flex items-center justify-center cursor-pointer"
                                 >
@@ -374,7 +469,10 @@ const PowerballGame = ({state, setChosen}) => {
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
-                                    onClick={() => setChosen(`${titleNumber}-10`)} 
+                                    onClick={() => {
+                                        setChosen(`${titleNumber}-10`)
+                                        setSelectedOption([{type:"파워볼", name:"숫자", selection:"9", buttonType:"yellow"}])
+                                    }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
                                     className="relative flex items-center justify-center cursor-pointer"
                                 >
@@ -388,7 +486,10 @@ const PowerballGame = ({state, setChosen}) => {
                         <div className="flex justify-center w-full h-full items-start space-x-34px">
                             <div className="flex flex-col items-center">
                                 <div 
-                                    onClick={() => setChosen(`${titleNumber}-1`)} 
+                                    onClick={() => {
+                                        setChosen(`${titleNumber}-1`)
+                                        setSelectedOption([{type:"일반볼", name:"구간", selection:"소", buttonType:"green", subtitle:"(15~64)"}])
+                                    }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
                                     className="relative flex items-center justify-center cursor-pointer"
                                 >
@@ -402,7 +503,10 @@ const PowerballGame = ({state, setChosen}) => {
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
-                                    onClick={() => setChosen(`${titleNumber}-2`)} 
+                                    onClick={() => {
+                                        setChosen(`${titleNumber}-2`)
+                                        setSelectedOption([{type:"일반볼", name:"구간", selection:"중", buttonType:"green", subtitle:"(65~80)"}])
+                                    }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
                                     className="relative flex items-center justify-center cursor-pointer"
                                 >
@@ -416,7 +520,10 @@ const PowerballGame = ({state, setChosen}) => {
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
-                                    onClick={() => setChosen(`${titleNumber}-3`)} 
+                                    onClick={() => {
+                                        setChosen(`${titleNumber}-3`)
+                                        setSelectedOption([{type:"일반볼", name:"구간", selection:"대", buttonType:"green", subtitle:"(81~130)"}])
+                                    }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
                                     className="relative flex items-center justify-center cursor-pointer"
                                 >
@@ -433,7 +540,10 @@ const PowerballGame = ({state, setChosen}) => {
                         <div className="flex justify-center w-full h-full items-start space-x-20px">
                             <div className="flex flex-col items-center">
                                 <div 
-                                    onClick={() => setChosen(`${titleNumber}-1`)} 
+                                    onClick={() => {
+                                        setChosen(`${titleNumber}-1`)
+                                        setSelectedOption([{type:"일반볼", name:"홀짝/소중대", selection:"홀소", buttonType:"green", subtitle:"(15~64)"}])
+                                    }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
                                     className="relative flex items-center justify-center cursor-pointer"
                                 >
@@ -447,7 +557,10 @@ const PowerballGame = ({state, setChosen}) => {
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
-                                    onClick={() => setChosen(`${titleNumber}-2`)} 
+                                    onClick={() => {
+                                        setChosen(`${titleNumber}-2`)
+                                        setSelectedOption([{type:"일반볼", name:"홀짝/소중대", selection:"홀중", buttonType:"green", subtitle:"(65~80)"}])
+                                    }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
                                     className="relative flex items-center justify-center cursor-pointer"
                                 >
@@ -461,7 +574,10 @@ const PowerballGame = ({state, setChosen}) => {
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
-                                    onClick={() => setChosen(`${titleNumber}-3`)} 
+                                    onClick={() => {
+                                        setChosen(`${titleNumber}-3`)
+                                        setSelectedOption([{type:"일반볼", name:"홀짝/소중대", selection:"홀대", buttonType:"green", subtitle:"(81~130)"}])
+                                    }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
                                     className="relative flex items-center justify-center cursor-pointer"
                                 >
@@ -475,35 +591,44 @@ const PowerballGame = ({state, setChosen}) => {
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
-                                    onClick={() => setChosen(`${titleNumber}-4`)} 
+                                    onClick={() => {
+                                        setChosen(`${titleNumber}-4`)
+                                        setSelectedOption([{type:"일반볼", name:"홀짝/소중대", selection:"짝소", buttonType:"green", subtitle:"(15~64)"}])
+                                    }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
                                     className="relative flex items-center justify-center cursor-pointer"
                                 >
                                     <img className="absolute object-none" src={state === `${titleNumber}-4` ? GreenButtonPressed : GreenButton} alt="" />
                                     <div className="flex flex-col items-center -space-y-6px -ml-px -mt-4px">
                                         <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">짝소</p>
-                                        <p style={{fontSize:"10px"}} className="z-20 font-spoqa text-white tracking-tight">(81~130)</p>
+                                        <p style={{fontSize:"10px"}} className="z-20 font-spoqa text-white tracking-tight">(15~64)</p>
                                     </div>
                                 </div>
                                 <p className="text-12px font-robotoRegular tracking-tight text-gray-r585858">4.85</p>
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
-                                    onClick={() => setChosen(`${titleNumber}-5`)} 
+                                    onClick={() => {
+                                        setChosen(`${titleNumber}-5`)
+                                        setSelectedOption([{type:"일반볼", name:"홀짝/소중대", selection:"짝중", buttonType:"green", subtitle:"(64~80)"}])
+                                    }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
                                     className="relative flex items-center justify-center cursor-pointer"
                                 >
                                     <img className="absolute object-none" src={state === `${titleNumber}-5` ? GreenButtonPressed : GreenButton} alt="" />
                                     <div className="flex flex-col items-center -space-y-6px -ml-px -mt-4px">
                                         <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">짝중</p>
-                                        <p style={{fontSize:"10px"}} className="z-20 font-spoqa text-white tracking-tight">(81~130)</p>
+                                        <p style={{fontSize:"10px"}} className="z-20 font-spoqa text-white tracking-tight">(64~80)</p>
                                     </div>
                                 </div>
                                 <p className="text-12px font-robotoRegular tracking-tight text-gray-r585858">4.85</p>
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
-                                    onClick={() => setChosen(`${titleNumber}-6`)} 
+                                    onClick={() => {
+                                        setChosen(`${titleNumber}-6`)
+                                        setSelectedOption([{type:"일반볼", name:"홀짝/소중대", selection:"짝대", buttonType:"green", subtitle:"(81~130)"}])
+                                    }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
                                     className="relative flex items-center justify-center cursor-pointer"
                                 >

@@ -5,9 +5,16 @@ import SelectionBg from '../../images/minigames/selection_bg.png'
 import CheckIcon from '../../images/minigames/checkbox.png'
 import BetIcon from '../../images/betCombination/bet_icon.png'
 import LockIcon from '../../images/minigames/lock.png'
+import BlueButton from '../../images/minigames/blue.png'
+import RedButton from '../../images/minigames/red.png'
+import YellowButton from '../../images/minigames/yellow.png'
+import GreenButton from '../../images/minigames/green.png'
+import BlueButtonSq from '../../images/minigames/blue_sq.png'
+import RedButtonSq from '../../images/minigames/red_sq.png'
 
 const MinigamesRightPanel = ({
-    selectedGame
+    selectedGame,
+    selectedOption
 }) => {
 
     const [inputValue, setInputValue] = useState(null)
@@ -59,10 +66,50 @@ const MinigamesRightPanel = ({
                         <img src={CheckIcon} alt="" />
                         <p style={{color:"#7a5a37"}} className="text-16px tracking-tight font-spoqaBold mt-px">게임선택</p>
                     </div>
-                    <div style={{width:"90px"}} className="ml-18px flex h-full z-20 flex items-center justify-center pr-2px">
-                        <p style={{color:"#355b7d"}} className="text-12px tracking-tight font-spoqaBold mt-px">언더/오버</p>
+                    <div style={{width:"90px"}} className="ml-18px flex h-full z-20 items-center justify-center pr-2px flex-col space-y-4px">
+                        <p style={{color:"#3e83b3"}} className="text-12px tracking-tight font-spoqaMedium flex items-center h-12px">{selectedOption[0].type}</p>
+                        <p style={{color:"#365b7e"}} className="text-14px tracking-tight font-spoqaBold flex items-center h-12px">{selectedOption[0].name}</p>
                     </div>
-                    <div style={{width:"81px"}} className="ml-20px flex h-full z-20 flex items-center justify-center"></div>
+                    <div style={{width:"81px"}} className="ml-20px flex h-full z-20 flex items-center justify-center">
+                        {selectedOption[0].buttonType && (
+                            <div 
+                                style={{width:"68px", height:"59px"}} 
+                                className="relative flex items-center justify-center cursor-pointer pt-2px"
+                            >
+                                <img 
+                                    style={{height:"60px"}}
+                                    className="absolute object-contain" 
+                                    src={
+                                        selectedOption[0].buttonType === "blue" 
+                                        ? BlueButton
+                                        : selectedOption[0].buttonType === "red"
+                                        ? RedButton
+                                        : selectedOption[0].buttonType === "yellow"
+                                        ? YellowButton
+                                        : selectedOption[0].buttonType === "green"
+                                        ? GreenButton
+                                        : selectedOption[0].buttonType === "blue_sq"
+                                        ? BlueButtonSq
+                                        : RedButtonSq
+                                    } 
+                                    alt="" 
+                                />
+                                <div className="flex flex-col items-center -space-y-6px">
+                                    <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">{selectedOption[0].selection}</p>
+                                    {selectedOption[0].subtitle && (
+                                        <p style={{fontSize:"10px"}} className="z-20 font-spoqa text-white tracking-tight">
+                                            {selectedOption[0].subtitle}
+                                        </p>
+                                    )}
+                                </div> 
+                                {selectedOption[0].tailSide && (
+                                    <div className={`${selectedOption[0].tailSide === "left" ? "left-6px" : "right-6px"} absolute w-22px h-22px rounded-full bg-black z-20 top-0 flex items-center justify-center`}>
+                                        <div className="text-white text-12px tracking-tight font-spoqaMedium">{selectedOption[0].tail}</div>
+                                    </div>
+                                )}   
+                            </div>
+                        )}
+                    </div>
                 </div>
 
             </div>

@@ -22,7 +22,7 @@ const HorizontalMenu5 = ({
             >
                 <div 
                     style={{
-                        height: "38px",
+                        height: "37px",
                         background: selectedTab === item.id 
                         ? "linear-gradient(to bottom, #3e9dfd, #1c7cde)" 
                         : "linear-gradient(to bottom, #f7f7f7, #e9e9e9)"

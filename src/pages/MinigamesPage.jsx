@@ -19,13 +19,22 @@ import MinigamesPanel from 'components/minigames/MinigamesPanel'
 const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
 
     const GameTypeArray = [
-        { id: 0, img: PowerballIcon, time: "02:16", path: "/minigame/powerball" },
-        { id: 1, img: PowerLadder, time: "02:50", path: "/minigame/powerladder" },
-        { id: 2, img: SpeedKino, time: "02:50", path: "/minigame/speedkino" },
-        { id: 3, img: KinoLadder, time: "02:50", path: "/minigame/kinoladder" },
+        { id: 0, img: PowerballIcon, text:"파워볼", time: "02:16", path: "/minigame/powerball" },
+        { id: 1, img: PowerLadder, text:"파워사다리", time: "02:50", path: "/minigame/powerladder" },
+        { id: 2, img: SpeedKino, text:"스피드키노", time: "02:50", path: "/minigame/speedkino" },
+        { id: 3, img: KinoLadder, text:"키노사다리", time: "02:50", path: "/minigame/kinoladder" },
     ]
 
     const [selectedGame, setSelectedGame] = useState(window.location.pathname)
+    const [selectedOption, setSelectedOption] = useState([
+        {
+            type: "",
+            name: "",
+            selection: "",
+            buttonType: "",
+            subtitle: null
+        }
+    ])
 
     return (
         <div className="relative flex flex-col justify-center limit:overflow-x-hidden">
@@ -61,11 +70,11 @@ const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
                                 alt="" 
                             />
                         </div>
-                        <MinigamesRightPanel selectedGame={selectedGame}/>
+                        <MinigamesRightPanel selectedGame={selectedGame} selectedOption={selectedOption}/>
                     </div>
 
                     <div className="mt-8px">
-                        <MinigamesPanel selectedGame={selectedGame} setSelectedGame={setSelectedGame}  />
+                        <MinigamesPanel selectedGame={selectedGame} setSelectedGame={setSelectedGame} setSelectedOption={setSelectedOption} />
                     </div>
 
 

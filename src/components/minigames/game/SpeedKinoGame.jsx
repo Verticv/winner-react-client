@@ -4,9 +4,11 @@ import RedButton from '../../../images/minigames/red_sq.png'
 import BlueSMButton from '../../../images/minigames/blue_sm.png'
 import RedSMButton from '../../../images/minigames/red_sm.png'
 import BlueButtonPressed from '../../../images/minigames/blue_sq_pressed.png'
+import RedButtonPressed from '../../../images/minigames/red_sq_pressed.png'
+import RedSMButtonPressed from '../../../images/minigames/red_pressed.png'
+import BlueSMButtonPressed from '../../../images/minigames/blue_pressed.png'
 
-
-const SpeedKinoGame = () => {
+const SpeedKinoGame = ({setSelectedOption}) => {
 
     const [state, setstate] = useState("")
 
@@ -71,7 +73,7 @@ const SpeedKinoGame = () => {
                     </div>
 
                     <div style={{height:"162px", width:"2px"}} className="flex flex-shrink-0 pt-px">
-                        <div style={{backgroundColor:"#abc7db"}} className="h-full w-px"></div>
+                        <div style={{backgroundColor:"#cf9494"}} className="h-full w-px"></div>
                         <div style={{backgroundColor:"#ffffff"}} className="h-full w-px"></div>
                     </div>
 
@@ -79,7 +81,14 @@ const SpeedKinoGame = () => {
                         <div className="flex justify-center w-full h-full items-start">
                             <div className="flex flex-col items-center">
                                 <div 
-                                    onClick={() => setstate(`${titleNumber}-1`)} 
+                                    onClick={() => {
+                                        setstate(`${titleNumber}-1`)
+                                        if (titleNumber === 1) {
+                                            setSelectedOption([{type:"스피드키노", name:"홀짝", selection: "홀", buttonType: "blue_sq"}])
+                                        } else {
+                                            setSelectedOption([{type:"스피드키노", name:"언더/오버", selection: "언더", buttonType: "blue_sq"}])
+                                        }
+                                    }} 
                                     style={{width:"121px", height:"127px", marginTop:"14px"}} 
                                     className="relative flex items-center justify-center cursor-pointer"
                                 >
@@ -96,11 +105,18 @@ const SpeedKinoGame = () => {
 
                             <div className="flex flex-col items-center">
                                 <div 
-                                    onClick={() => setstate(`${titleNumber}-2`)} 
+                                    onClick={() => {
+                                        setstate(`${titleNumber}-2`)
+                                        if (titleNumber === 1) {
+                                            setSelectedOption([{type:"스피드키노", name:"홀짝", selection: "짝", buttonType: "red_sq"}])
+                                        } else {
+                                            setSelectedOption([{type:"스피드키노", name:"언더/오버", selection: "오버", buttonType: "red_sq"}])
+                                        }
+                                    }} 
                                     style={{width:"121px", height:"127px", marginTop: "14px"}} 
                                     className="relative flex items-center justify-center cursor-pointer"
                                 >
-                                    <img className="absolute object-none" src={state === `${titleNumber}-2` ? RedButton : RedButton} alt="" />
+                                    <img className="absolute object-none" src={state === `${titleNumber}-2` ? RedButtonPressed : RedButton} alt="" />
                                     <p 
                                         style={{textShadow: "2px 2px 2px #00000050", fontSize: "48px"}} 
                                         className="z-20 font-swagger text-white text-20px"
@@ -113,49 +129,61 @@ const SpeedKinoGame = () => {
                         </div>
                     ) : titleNumber === 3 ? (
                         <div className="flex flex-col items-center w-full h-full">
-                            <div className="flex space-x-30px pt-7px"> 
+                            <div className="flex space-x-18px pt-7px"> 
                                 <div className="flex flex-col items-center">
                                     <div 
-                                        onClick={() => setstate(`${titleNumber}-1`)} 
-                                        style={{width:"56px", height:"59px"}} 
+                                        onClick={() => {
+                                            setstate(`${titleNumber}-1`)
+                                            setSelectedOption([{type:"스피드키노", name:"홀짝/언오버", selection: "홀언더", buttonType: "red"}])
+                                        }} 
+                                        style={{width:"68px", height:"59px"}} 
                                         className="relative flex items-center justify-center cursor-pointer"
                                     >
-                                        <img className="absolute object-none" src={state === `${titleNumber}-1` ? RedSMButton : RedSMButton} alt="" />
+                                        <img className="absolute object-none" src={state === `${titleNumber}-1` ? RedSMButtonPressed : RedSMButton} alt="" />
                                         <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">홀언더</p>
                                     </div>
                                     <div className="text-12px font-robotoRegular tracking-tight text-gray-r585858 h-12px flex items-center">3.80</div>
                                 </div>
                                 <div className="flex flex-col items-center">
                                     <div 
-                                        onClick={() => setstate(`${titleNumber}-2`)} 
-                                        style={{width:"56px", height:"59px"}} 
+                                        onClick={() => {
+                                            setstate(`${titleNumber}-2`)
+                                            setSelectedOption([{type:"스피드키노", name:"홀짝/언오버", selection: "홀오버", buttonType: "blue"}])
+                                        }} 
+                                        style={{width:"68px", height:"59px"}} 
                                         className="relative flex items-center justify-center cursor-pointer"
                                     >
-                                        <img className="absolute object-none" src={state === `${titleNumber}-2` ? BlueSMButton : BlueSMButton} alt="" />
+                                        <img className="absolute object-none" src={state === `${titleNumber}-2` ? BlueSMButtonPressed : BlueSMButton} alt="" />
                                         <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">홀오버</p>
                                     </div>
                                     <div className="text-12px font-robotoRegular tracking-tight text-gray-r585858 h-12px flex items-center">3.80</div>
                                 </div>
                             </div>
-                            <div className="flex space-x-30px mt-10px"> 
+                            <div className="flex space-x-18px mt-10px"> 
                                 <div className="flex flex-col items-center">
                                     <div 
-                                        onClick={() => setstate(`${titleNumber}-1`)} 
-                                        style={{width:"56px", height:"59px"}} 
+                                        onClick={() => {
+                                            setstate(`${titleNumber}-3`)
+                                            setSelectedOption([{type:"스피드키노", name:"홀짝/언오버", selection: "짝언더", buttonType: "blue"}])
+                                        }} 
+                                        style={{width:"68px", height:"59px"}} 
                                         className="relative flex items-center justify-center cursor-pointer"
                                     >
-                                        <img className="absolute object-none" src={state === `${titleNumber}-1` ? BlueSMButton : BlueSMButton} alt="" />
+                                        <img className="absolute object-none" src={state === `${titleNumber}-3` ? BlueSMButtonPressed : BlueSMButton} alt="" />
                                         <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">짝언더</p>
                                     </div>
                                     <div className="text-12px font-robotoRegular tracking-tight text-gray-r585858 h-12px flex items-center">3.80</div>
                                 </div>
                                 <div className="flex flex-col items-center">
                                     <div 
-                                        onClick={() => setstate(`${titleNumber}-2`)} 
-                                        style={{width:"56px", height:"59px"}} 
+                                        onClick={() => {
+                                            setstate(`${titleNumber}-4`)
+                                            setSelectedOption([{type:"스피드키노", name:"홀짝/언오버", selection: "짝오버", buttonType: "red"}])
+                                        }} 
+                                        style={{width:"68px", height:"59px"}} 
                                         className="relative flex items-center justify-center cursor-pointer"
                                     >
-                                        <img className="absolute object-none" src={state === `${titleNumber}-2` ? RedSMButton : RedSMButton} alt="" />
+                                        <img className="absolute object-none" src={state === `${titleNumber}-4` ? RedSMButtonPressed : RedSMButton} alt="" />
                                         <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">짝오버</p>
                                     </div>
                                     <div className="text-12px font-robotoRegular tracking-tight text-gray-r585858 h-12px flex items-center">3.80</div>

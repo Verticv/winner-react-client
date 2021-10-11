@@ -12,7 +12,7 @@ const LeftMenu = ({
     setSelectedSubTab = null,
     array
 }) => {
-
+    const pathname = window.location.pathname
     const history = useHistory();
     const [isPopupOpen, setPopupOpen] = useState(true)
     const [isExpanded, setExpanded] = useState(window.location.pathname)
@@ -106,7 +106,7 @@ const LeftMenu = ({
                     <div>
                         <button 
                             className={`${
-                                selectedTab === item.path || selectedTab === item.path2 || selectedTab === item.path3 || selectedTab === item.path4
+                                selectedTab === item.path || selectedTab === item.path2 || selectedTab === item.path3 || selectedTab === item.path4 || pathname.includes(item.path)
                                 ? "bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2" 
                                 : "bg-white"
                             } flex w-full items-center p-5px h-53px rounded-full`} 
@@ -116,19 +116,19 @@ const LeftMenu = ({
                         >
                             <div 
                                 className={`${
-                                    (selectedTab === item.path || selectedTab === item.path2 || selectedTab === item.path3 || selectedTab === item.path4) && "shadow-plain9"
+                                    (selectedTab === item.path || selectedTab === item.path2 || selectedTab === item.path3 || selectedTab === item.path4 || pathname.includes(item.path)) && "shadow-plain9"
                                 } h-42px w-42px bg-white rounded-full flex items-center justify-center flex-shrink-0`} 
                             >
                                 <img 
                                     className="h-42px w-42px bg-white rounded-full flex items-center justify-center" 
-                                    src={(selectedTab === item.path || selectedTab === item.path2 || selectedTab === item.path3 || selectedTab === item.path4) ? item.iconHighlight : item.icon} 
+                                    src={(selectedTab === item.path || selectedTab === item.path2 || selectedTab === item.path3 || selectedTab === item.path4 || pathname.includes(item.path)) ? item.iconHighlight : item.icon} 
                                     alt="icon" />
                             </div>
                             <div className="w-full flex mx-14px justify-between items-center">
                                 <div className="flex items-center">
                                     <label
                                         className={`${
-                                            (selectedTab === item.path || selectedTab === item.path2 || selectedTab === item.path3 || selectedTab === item.path4)
+                                            (selectedTab === item.path || selectedTab === item.path2 || selectedTab === item.path3 || selectedTab === item.path4 || pathname.includes(item.path))
                                             ? "text-white" 
                                             : isMouseHover === item.path
                                             ? "text-gray-r454545"
@@ -149,7 +149,7 @@ const LeftMenu = ({
                                             src={
                                                 isExpanded === item.path + "closed"
                                                 ? ArrowUp 
-                                                : (selectedTab === item.path || selectedTab === item.path2 || selectedTab === item.path3 || selectedTab === item.path4) 
+                                                : (selectedTab === item.path || selectedTab === item.path2 || selectedTab === item.path3 || selectedTab === item.path4 || pathname.includes(item.path)) 
                                                 ? ArrowUp 
                                                 : ArrowDown
                                             } 

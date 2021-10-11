@@ -4,8 +4,11 @@ import RedButton from '../../../images/minigames/red_sq.png'
 import BlueSMButton from '../../../images/minigames/blue_sm.png'
 import RedSMButton from '../../../images/minigames/red_sm.png'
 import BlueButtonPressed from '../../../images/minigames/blue_sq_pressed.png'
+import RedButtonPressed from '../../../images/minigames/red_sq_pressed.png'
+import RedSMButtonPressed from '../../../images/minigames/red_pressed.png'
+import BlueSMButtonPressed from '../../../images/minigames/blue_pressed.png'
 
-const KinoLadderGame = () => {
+const KinoLadderGame = ({setSelectedOption}) => {
 
     const [state, setstate] = useState("")
 
@@ -74,7 +77,7 @@ const KinoLadderGame = () => {
                     </div>
 
                     <div style={{height:"162px", width:"2px"}} className="flex flex-shrink-0 pt-px">
-                        <div style={{backgroundColor:"#abc7db"}} className="h-full w-px"></div>
+                        <div style={{backgroundColor:"#c7b8a4"}} className="h-full w-px"></div>
                         <div style={{backgroundColor:"#ffffff"}} className="h-full w-px"></div>
                     </div>
 
@@ -82,7 +85,16 @@ const KinoLadderGame = () => {
                         <div className="flex justify-center w-full h-full items-start">
                             <div className="flex flex-col items-center">
                                 <div 
-                                    onClick={() => setstate(`${titleNumber}-1`)} 
+                                    onClick={() => {
+                                        setstate(`${titleNumber}-1`)
+                                        if (titleNumber === 1) {
+                                            setSelectedOption([{type:"키노사다리", name:"홀짝", selection: "홀", buttonType: "blue_sq"}])
+                                        } else if (titleNumber === 2) {
+                                            setSelectedOption([{type:"키노사다리", name:"출발점", selection: "좌", buttonType: "blue_sq"}])
+                                        } else {
+                                            setSelectedOption([{type:"키노사다리", name:"즐겟수", selection: "3줄", buttonType: "blue_sq"}])
+                                        }
+                                    }} 
                                     style={{width:"121px", height:"127px", marginTop:"14px"}} 
                                     className="relative flex items-center justify-center cursor-pointer"
                                 >
@@ -99,11 +111,20 @@ const KinoLadderGame = () => {
 
                             <div className="flex flex-col items-center">
                                 <div 
-                                    onClick={() => setstate(`${titleNumber}-2`)} 
+                                    onClick={() => {
+                                        setstate(`${titleNumber}-2`)
+                                        if (titleNumber === 1) {
+                                            setSelectedOption([{type:"키노사다리", name:"홀짝", selection: "짝", buttonType: "red_sq"}])
+                                        } else if (titleNumber === 2) {
+                                            setSelectedOption([{type:"키노사다리", name:"출발점", selection: "우", buttonType: "red_sq"}])
+                                        } else {
+                                            setSelectedOption([{type:"키노사다리", name:"즐겟수", selection: "4줄", buttonType: "red_sq"}])
+                                        }
+                                    }} 
                                     style={{width:"121px", height:"127px", marginTop: "14px"}} 
                                     className="relative flex items-center justify-center cursor-pointer"
                                 >
-                                    <img className="absolute object-none" src={state === `${titleNumber}-2` ? RedButton : RedButton} alt="" />
+                                    <img className="absolute object-none" src={state === `${titleNumber}-2` ? RedButtonPressed : RedButton} alt="" />
                                     <p 
                                         style={{textShadow: "2px 2px 2px #00000050", fontSize: "48px"}} 
                                         className="z-20 font-swagger text-white text-20px"
@@ -116,16 +137,19 @@ const KinoLadderGame = () => {
                         </div>
                     ) : titleNumber === 4 ? (
                         <div className="flex flex-col items-center w-full h-full">
-                            <div className="flex space-x-30px pt-7px"> 
+                            <div className="flex space-x-18px pt-7px"> 
                                 <div className="flex flex-col items-center">
                                     <div 
-                                        onClick={() => setstate(`${titleNumber}-1`)} 
-                                        style={{width:"56px", height:"59px"}} 
+                                        onClick={() => {
+                                            setstate(`${titleNumber}-1`)
+                                            setSelectedOption([{type:"키노사다리", name:"좌우/3/4줄", selection: "짝", buttonType: "red", tailSide:"left", tail:"3"}])
+                                        }} 
+                                        style={{width:"68px", height:"59px"}} 
                                         className="relative flex items-center justify-center cursor-pointer"
                                     >
-                                        <img className="absolute object-none" src={state === `${titleNumber}-1` ? RedSMButton : RedSMButton} alt="" />
+                                        <img className="absolute object-none" src={state === `${titleNumber}-1` ? RedSMButtonPressed : RedSMButton} alt="" />
                                         <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">짝</p>
-                                        <div className="absolute w-22px h-22px rounded-full bg-black z-20 left-0 top-0 flex items-center justify-center">
+                                        <div className="absolute w-22px h-22px rounded-full bg-black z-20 left-6px top-0 flex items-center justify-center">
                                             <div className="text-white text-12px tracking-tight font-spoqaMedium">3</div>
                                         </div>
                                     </div>
@@ -133,29 +157,35 @@ const KinoLadderGame = () => {
                                 </div>
                                 <div className="flex flex-col items-center">
                                     <div 
-                                        onClick={() => setstate(`${titleNumber}-2`)} 
-                                        style={{width:"56px", height:"59px"}} 
+                                        onClick={() => {
+                                            setstate(`${titleNumber}-2`)
+                                            setSelectedOption([{type:"키노사다리", name:"좌우/3/4줄", selection: "홀", buttonType: "blue", tailSide:"right", tail:"3"}])
+                                        }} 
+                                        style={{width:"68px", height:"59px"}} 
                                         className="relative flex items-center justify-center cursor-pointer"
                                     >
-                                        <img className="absolute object-none" src={state === `${titleNumber}-2` ? BlueSMButton : BlueSMButton} alt="" />
+                                        <img className="absolute object-none" src={state === `${titleNumber}-2` ? BlueSMButtonPressed : BlueSMButton} alt="" />
                                         <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">홀</p>
-                                        <div className="absolute w-22px h-22px rounded-full bg-black z-20 right-0 top-0 flex items-center justify-center">
+                                        <div className="absolute w-22px h-22px rounded-full bg-black z-20 right-6px top-0 flex items-center justify-center">
                                             <div className="text-white text-12px tracking-tight font-spoqaMedium">3</div>
                                         </div>
                                     </div>
                                     <div className="text-12px font-robotoRegular tracking-tight text-gray-r585858 h-12px flex items-center">3.80</div>
                                 </div>
                             </div>
-                            <div className="flex space-x-30px mt-10px"> 
+                            <div className="flex space-x-18px mt-10px"> 
                                 <div className="flex flex-col items-center">
                                     <div 
-                                        onClick={() => setstate(`${titleNumber}-1`)} 
-                                        style={{width:"56px", height:"59px"}} 
+                                        onClick={() => {
+                                            setstate(`${titleNumber}-3`)
+                                            setSelectedOption([{type:"키노사다리", name:"좌우/3/4줄", selection: "홀", buttonType: "blue", tailSide:"left", tail:"4"}])
+                                        }} 
+                                        style={{width:"68px", height:"59px"}} 
                                         className="relative flex items-center justify-center cursor-pointer"
                                     >
-                                        <img className="absolute object-none" src={state === `${titleNumber}-1` ? BlueSMButton : BlueSMButton} alt="" />
+                                        <img className="absolute object-none" src={state === `${titleNumber}-3` ? BlueSMButtonPressed : BlueSMButton} alt="" />
                                         <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">홀</p>
-                                        <div className="absolute w-22px h-22px rounded-full bg-black z-20 left-0 top-0 flex items-center justify-center">
+                                        <div className="absolute w-22px h-22px rounded-full bg-black z-20 left-6px top-0 flex items-center justify-center">
                                             <div className="text-white text-12px tracking-tight font-spoqaMedium">4</div>
                                         </div>
                                     </div>
@@ -163,13 +193,16 @@ const KinoLadderGame = () => {
                                 </div>
                                 <div className="flex flex-col items-center">
                                     <div 
-                                        onClick={() => setstate(`${titleNumber}-2`)} 
-                                        style={{width:"56px", height:"59px"}} 
+                                        onClick={() => {
+                                            setstate(`${titleNumber}-4`)
+                                            setSelectedOption([{type:"키노사다리", name:"좌우/3/4줄", selection: "짝", buttonType: "red", tailSide:"right", tail:"4"}])
+                                        }} 
+                                        style={{width:"68px", height:"59px"}} 
                                         className="relative flex items-center justify-center cursor-pointer"
                                     >
-                                        <img className="absolute object-none" src={state === `${titleNumber}-2` ? RedSMButton : RedSMButton} alt="" />
+                                        <img className="absolute object-none" src={state === `${titleNumber}-4` ? RedSMButtonPressed : RedSMButton} alt="" />
                                         <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">짝</p>
-                                        <div className="absolute w-22px h-22px rounded-full bg-black z-20 right-0 top-0 flex items-center justify-center">
+                                        <div className="absolute w-22px h-22px rounded-full bg-black z-20 right-6px top-0 flex items-center justify-center">
                                             <div className="text-white text-12px tracking-tight font-spoqaMedium">4</div>
                                         </div>
                                     </div>

@@ -10,7 +10,8 @@ const PowerballPanel = ({
     historyArray, 
     resultsArray,
     checkedState, 
-    setCheckedState
+    setCheckedState,
+    setSelectedOption
 }) => {
 
     const [chosen, setChosen] = useState("")
@@ -19,7 +20,7 @@ const PowerballPanel = ({
     return (
         <>
             {selectedTab === 0 ? (
-                <PowerballGame state={chosen} setChosen={setChosen} />
+                <PowerballGame state={chosen} setChosen={setChosen} setSelectedOption={setSelectedOption} />
             ) : selectedTab === 1 ? (
                 <PowerBallResults array={resultsArray} />
             ) : (

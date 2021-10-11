@@ -9,17 +9,21 @@ import {
     PowerballResultsArray,
     PowerLadderResultsArray
 } from './arrays'
+import { useHistory } from 'react-router'
 
 const MinigamesPanel = ({
     selectedGame,
-    setSelectedGame
+    setSelectedGame,
+    setSelectedOption
 }) => {
 
     const [selectedTab, setSelectedTab] = useState(0)
     const [checkedState, setCheckedState] = useState(
         new Array(PowerballHistoryArray.length).fill(false)
     );
-    
+    const [isAllSelected, setAllSelected] = useState(false)
+    const history = useHistory();
+
     const MenuArray = [
         { id: 0, text: "게임하기" },
         { id: 1, text: "회차결과" },
@@ -43,6 +47,7 @@ const MinigamesPanel = ({
                             resultsArray={PowerballResultsArray}
                             checkedState={checkedState}
                             setCheckedState={setCheckedState}
+                            setSelectedOption={setSelectedOption}
                         />
                     ) : selectedGame === "/minigame/powerladder" ? (
                         <PowerLadderPanel 
@@ -52,6 +57,7 @@ const MinigamesPanel = ({
                             resultsArray={PowerLadderResultsArray}
                             checkedState={checkedState}
                             setCheckedState={setCheckedState}
+                            setSelectedOption={setSelectedOption}
                         />
                     ) : selectedGame === "/minigame/speedkino" ? (
                         <SpeedKinoPanel
@@ -61,6 +67,7 @@ const MinigamesPanel = ({
                             resultsArray={PowerLadderResultsArray}
                             checkedState={checkedState}
                             setCheckedState={setCheckedState}
+                            setSelectedOption={setSelectedOption}
                         />
                     ) : selectedGame === "/minigame/kinoladder" ? (
                         <KinoLadderPanel 
@@ -70,6 +77,7 @@ const MinigamesPanel = ({
                             resultsArray={PowerLadderResultsArray}
                             checkedState={checkedState}
                             setCheckedState={setCheckedState}
+                            setSelectedOption={setSelectedOption}
                         />
                     ) : <></>
                     }
@@ -82,7 +90,14 @@ const MinigamesPanel = ({
                     <div className="flex space-x-2px">
                         <button 
                             className="flex items-center justify-center w-90px h-36px rounded-md bg-gray-r171a1d"
-                            onClick={() => setCheckedState(Array(PowerballHistoryArray.length).fill(true))}
+                            onClick={() => {
+                                if (isAllSelected === true) {
+                                    setCheckedState(Array(PowerballHistoryArray.length).fill(false))
+                                } else {
+                                    setCheckedState(Array(PowerballHistoryArray.length).fill(true))
+                                }
+                                setAllSelected(!isAllSelected)
+                            }}
                         >
                             <div className="flex items-center justify-center h-34px w-88px rounded-4px border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r45484c to-gray-r303337 cursor-pointer">
                                 <span className="font-spoqaMedium tracking-tight text-14px text-white">전체선택</span>
@@ -94,7 +109,10 @@ const MinigamesPanel = ({
                             </div>
                         </button>
                     </div>
-                    <button className="flex items-center justify-center h-36px w-114px rounded-4px bg-blue-r0070d9">
+                    <button 
+                        className="flex items-center justify-center h-36px w-114px rounded-4px bg-blue-r0070d9"
+                        onClick={() => history.push('/mypage/bet-history/minigame')}
+                    >
                         <div className="flex items-center justify-center h-34px w-112px bg-black rounded-4px border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
                             <span className="font-spoqaMedium tracking-tight text-14px text-white">전체베팅내역</span>
                         </div>
