@@ -80,7 +80,7 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
     const BetAmountButton = ({amount, inputValue, setInputValue}) => (
         <button 
             style={{
-                width:"94px", 
+                width:"95px", 
                 borderColor: "#b3bac1",
                 height:"46px"
             }} 
@@ -168,7 +168,7 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
 
             <div style={{height:"213px"}} className="w-full bg-gray-fafafa p-10px rounded-b-xl">
 
-                <div className="flex flex-col space-y-2px">
+                <div style={{width:"287px"}} className="flex flex-col space-y-2px w-full">
                     <div className="flex space-x-2px">
                         <BetAmountButton amount={5000} inputValue={inputValue} setInputValue={setInputValue}/>
                         <BetAmountButton amount={10000} inputValue={inputValue} setInputValue={setInputValue}/>
@@ -184,7 +184,7 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
                 <div className="flex space-x-2px mt-2px">
                     <button 
                         style={{
-                            width:"94px",
+                            width:"95px",
                             borderColor: "#171a1d",
                             height:"46px"
                         }} 
@@ -204,7 +204,7 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
                     </button>
                     <button 
                         style={{
-                            width:"94px",
+                            width:"95px",
                             borderColor: "#171a1d",
                             height:"46px"
                         }} 
@@ -224,7 +224,7 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
                     </button>
                     <button 
                         style={{
-                            width:"94px",
+                            width:"95px",
                             borderColor: "#171a1d",
                             height:"46px"
                         }} 
