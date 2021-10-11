@@ -35,7 +35,7 @@ const tabsArray = [
 const BetHistory = () => {
     const pathname = window.location.pathname
     const [selectedTab, setSelectedTab] = useState(0)
-    const [selectedPath, setSelectedPath] = useState(pathname)
+    const [, setSelectedPath] = useState(pathname)
     const [selectedSubTab, setSelectedSubTab] = useState(0)
     const [page, setPage] = useState(0)
     const [checkedState, setCheckedState] = useState(
@@ -48,7 +48,7 @@ const BetHistory = () => {
             <MyPageTitle title="베팅내역" />
             
             <div className="relative w-full mt-20px">
-                <HorizontalMenu itemsArray={tabsArray} isState={selectedTab} setState={setSelectedTab} setSelectedPath={setSelectedPath} selectedPath={selectedPath} />
+                <HorizontalMenu itemsArray={tabsArray} setState={setSelectedTab} setSelectedPath={setSelectedPath} />
                 {(selectedTab !== 0 && selectedTab !== 3 && selectedTab !== 4 && selectedTab !== 7 && selectedTab !== 8) && (
                     <div style={{marginLeft: `${selectedTab * 116 + 50}px`}} className={`absolute bottom-0 w-20px -mb-10px overflow-hidden inline-block `}>
                         <div className="h-10px w-10px bg-gradient-to-br from-gray-d2dfea via-gray-eff3f6 to-gray-eff3f6 rotate-45 transform origin-bottom-left shadow"></div>

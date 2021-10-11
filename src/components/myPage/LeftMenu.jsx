@@ -106,7 +106,7 @@ const LeftMenu = ({
                     <div>
                         <button 
                             className={`${
-                                selectedTab === item.path || selectedTab === item.path2 || selectedTab === item.path3 || selectedTab === item.path4 || pathname.includes(item.mainPath)
+                                pathname.includes(item.mainPath)
                                 ? "bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2" 
                                 : "bg-white"
                             } flex w-full items-center p-5px h-53px rounded-full`} 
@@ -116,19 +116,19 @@ const LeftMenu = ({
                         >
                             <div 
                                 className={`${
-                                    (selectedTab === item.path || selectedTab === item.path2 || selectedTab === item.path3 || selectedTab === item.path4 || pathname.includes(item.mainPath)) && "shadow-plain9"
+                                    pathname.includes(item.mainPath) && "shadow-plain9"
                                 } h-42px w-42px bg-white rounded-full flex items-center justify-center flex-shrink-0`} 
                             >
                                 <img 
                                     className="h-42px w-42px bg-white rounded-full flex items-center justify-center" 
-                                    src={(selectedTab === item.path || selectedTab === item.path2 || selectedTab === item.path3 || selectedTab === item.path4 || pathname.includes(item.mainPath)) ? item.iconHighlight : item.icon} 
+                                    src={pathname.includes(item.mainPath) ? item.iconHighlight : item.icon} 
                                     alt="icon" />
                             </div>
                             <div className="w-full flex mx-14px justify-between items-center">
                                 <div className="flex items-center">
                                     <label
                                         className={`${
-                                            (selectedTab === item.path || selectedTab === item.path2 || selectedTab === item.path3 || selectedTab === item.path4 || pathname.includes(item.mainPath))
+                                            pathname.includes(item.mainPath)
                                             ? "text-white" 
                                             : isMouseHover === item.path
                                             ? "text-gray-r454545"
@@ -149,7 +149,7 @@ const LeftMenu = ({
                                             src={
                                                 isExpanded === item.path + "closed"
                                                 ? ArrowUp 
-                                                : (selectedTab === item.path || selectedTab === item.path2 || selectedTab === item.path3 || selectedTab === item.path4 || pathname.includes(item.mainPath)) 
+                                                : pathname.includes(item.mainPath)
                                                 ? ArrowUp 
                                                 : ArrowDown
                                             } 
@@ -159,7 +159,7 @@ const LeftMenu = ({
                             </div>
                         </button>
                             
-                        <div className={`${isExpanded === item.path || pathname.includes(item.mainPath) ? "" : "hidden"} font-spoqaMedium text-16px cursor-pointer tracking-tight mt-px`} >
+                        <div className={`${isExpanded === item.path && pathname.includes(item.mainPath) ? "" : "hidden"} font-spoqaMedium text-16px cursor-pointer tracking-tight mt-px`} >
                             {item.sub1 && (
                                 <button 
                                     onClick={() => {

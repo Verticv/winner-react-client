@@ -10,12 +10,12 @@ import DownArrowIcon from '../../images/down_arrow_icon.png'
 
 const SignupPopup = ({setAuth, setPopupOpen}) => {
 
-    const [selectedInput, setSelectedInput] = useState()
+    const [selectedInput, setSelectedInput] = useState(null)
     const [isSignedUp, setSignedUp] = useState()
     const [toLogin, setToLogin] = useState()
     const [selectedCarrier, setSelectedCarrier] = useState("통신사선택")
     const [selectedBank, setSelectedBank] = useState("은행선택")
-    const [isDropdownOpen, setDropdownOpen] = useState()
+    const [isDropdownOpen, setDropdownOpen] = useState(true)
 
 
     const dropDownCellClass = "flex w-170px h-40px py-4px bg-white items-center hover:bg-blue-lightGradLight px-10px"

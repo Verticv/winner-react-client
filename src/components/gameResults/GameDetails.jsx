@@ -57,7 +57,7 @@ const GameDetails = () => {
                 <div className="flex items-center">
                     <img src={FootballIcon} alt="" />
                     <img className="ml-5px" src={USFlagIcon} alt="" />
-                    <span className="ml-4px font-spoqaMedium text-20px tracking-tight text-white">미국-MLS</span>
+                    <span className="ml-4px font-spoqaMedium text-20px tracking-tight text-white pt-2px">미국-MLS</span>
                 </div>
             </div>            
             <div className="w-full h-56px bg-white flex items-center tracking-tight">
@@ -81,7 +81,7 @@ const GameDetails = () => {
                 <div className="flex items-center">
                     <img src={BasketballIcon} alt="" />
                     <img className="ml-5px" src={USFlagIcon} alt="" />
-                    <span className="ml-4px font-spoqaMedium text-20px tracking-tight text-white">NBA</span>
+                    <span className="ml-4px font-spoqaMedium text-20px tracking-tight text-white pt-2px">NBA</span>
                 </div>
             </div>   
 

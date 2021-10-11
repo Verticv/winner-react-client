@@ -53,8 +53,8 @@ const MyPage = ({isAuthenticated, setAuthenticated}) => {
             path2: "/mypage/transaction/exchange-history",
             mainPath: "/mypage/transaction"
         },
-        { text: "총판페이지", icon: Icon3, iconHighlight: IconHighlight3, id: 2, path: "/distributor-page" },
-        { text: "원루즈정산", icon: Icon4, iconHighlight: IconHighlight4, id: 3, path: "/mypage/win-lose-settlement" },
+        { text: "총판페이지", icon: Icon3, iconHighlight: IconHighlight3, id: 2, path: "/distributor-page", mainPath:"/distributor-page" },
+        { text: "원루즈정산", icon: Icon4, iconHighlight: IconHighlight4, id: 3, path: "/mypage/win-lose-settlement", mainPath:"/mypage/win-lose-settlement" },
         { 
             text: "쿠폰관리",
             icon: Icon5, 
@@ -65,7 +65,7 @@ const MyPage = ({isAuthenticated, setAuthenticated}) => {
             sub2: "쿠폰선물",
             sub3: "쿠폰내역",
             path2: "/mypage/coupon/coupon-gift", 
-            path3: "/mypage/coupon/coupon-history",
+            path3: "/mypage/coupon/coupon-history/received",
             mainPath: "/mypage/coupon"
         },
         { 
@@ -81,8 +81,8 @@ const MyPage = ({isAuthenticated, setAuthenticated}) => {
             path3: "/mypage/points/points-transaction-history",
             mainPath: "/mypage/points"
         },
-        { text: "쪽지관리", icon: Icon7, iconHighlight: IconHighlight7, id: 6, path: "/mypage/inbox", inboxCount: "3" },
-        { text: "회원정보수정", icon: Icon8, iconHighlight: IconHighlight8, id: 7, path: "/mypage/edit-info" }
+        { text: "쪽지관리", icon: Icon7, iconHighlight: IconHighlight7, id: 6, path: "/mypage/inbox", inboxCount: "3", mainPath:"/mypage/inbox" },
+        { text: "회원정보수정", icon: Icon8, iconHighlight: IconHighlight8, id: 7, path: "/mypage/edit-info", mainPath:"/mypage/edit-info" }
     ];
 
     const location = useLocation();

@@ -34,15 +34,8 @@ const GameResultsPage = ({isAuthenticated, setAuthenticated}) => {
             text: "미니게임", 
             icon: Icon2, 
             iconHighlight: IconHighlight2, 
-            id: 0, 
+            id: 1, 
             path: "/gameresults/minigame/win-draw-lose", 
-            sub1: "승무패",
-            sub2: "핸디캡",
-            sub3: "언오버",
-            sub4: "스페셜",
-            path2: "/gameresults/minigame/handicap",
-            path3: "/gameresults/minigame/unover",
-            path4: "/gameresults/minigame/special"
         },
     ];
 

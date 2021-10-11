@@ -33,7 +33,7 @@ const CouponGiftPopup = ({setPopupOpen}) => {
                     <span className="font-spoqaMedium text-16px tracking-tight text-gray-r7c7c7c pt-3px">쿠폰받을 회원을 선택하세요.</span>
                 </div>
 
-                <div className="mt-17px w-full h-337px rounded-2xl shadow-subNavbar overflow-hidden">
+                <div style={{borderRadius:"0.5rem"}} className="mt-17px w-full h-337px rounded-2xl shadow-subNavbar overflow-hidden">
                     <CouponGiftPopupTable />
                 </div>
 

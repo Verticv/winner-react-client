@@ -55,13 +55,13 @@ const MoneyPage = ({isAuthenticated, setAuthenticated}) => {
 
                 <Route path="/money/charge">
                     <div className="relative w-default h-225px">
-                        <label className="text-36px font-spoqaMedium text-blue-r325685 absolute right-0 bottom-0 z-20 mb-86px mr-50px">보유머니 충전</label>
+                        <label style={{color:"#9e4f8d"}} className="text-36px font-spoqaMedium text-blue-r325685 absolute right-0 bottom-0 z-20 mb-86px mr-50px">보유머니 충전</label>
                         <img className="z-10" src={MoneyChargeBanner} alt="" />
                     </div>
                 </Route>
                 <Route path="/money/exchange">
                     <div className="relative w-default h-225px">
-                        <label className="text-36px font-spoqaMedium text-blue-r325685 absolute right-0 bottom-0 z-20 mb-86px mr-50px">보유머니 충전</label>
+                        <label className="text-36px font-spoqaMedium text-blue-r325685 absolute right-0 bottom-0 z-20 mb-86px mr-50px">보유머니 환전</label>
                         <img className="z-10" src={MoneyExchangeBanner} alt="" />
                     </div>
                 </Route>

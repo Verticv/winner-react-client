@@ -13,7 +13,7 @@ const CouponGiftPopupTable = () => {
     )
 
     return (
-        <div className="shadow-subNavbar rounded-2xl overflow-y-scroll">
+        <div style={{borderRadius:"0.5rem"}} className="shadow-subNavbar overflow-y-scroll">
             <div className="bg-gray-fafafa font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd flex items-center">
                 <div>
                     <td className="w-143px text-center">선택</td>

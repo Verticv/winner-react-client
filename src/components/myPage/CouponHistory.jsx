@@ -25,7 +25,7 @@ const CouponHistory = () => {
             <MyPageTitle title="쿠폰내역"  couponCount={32}/>
 
             <div className="relative w-full mt-20px">
-                <HorizontalMenu itemsArray={tabsArray} isState={selectedTab} setState={setSelectedTab} setSelectedPath={setSelectedPath}/>
+                <HorizontalMenu itemsArray={tabsArray} setState={setSelectedTab} setSelectedPath={setSelectedPath}/>
             </div>
                 
             <div className="mt-20px w-full">

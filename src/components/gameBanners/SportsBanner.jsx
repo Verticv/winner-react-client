@@ -10,9 +10,9 @@ const SportsBanner = () => {
     const history = useHistory();
 
     const gamesArray = [
-        { id: 0, background: SportsBanner1, color: "bg-yellow-e3ba3c", btnText: "게임시작", class: "", link: "https://stupefied-meitner-dfc324.netlify.app/" },
+        { id: 0, background: SportsBanner1, color: "bg-yellow-e3ba3c", btnText: "게임시작", class: "" },
         { id: 1, background: SportsBanner2, color: "bg-blue-r3384ca", btnText: "게임시작", class: "", path: "/bet-combination" },
-        { id: 2, background: SportsBanner3, color: "bg-orange-e39e90", btnText: "게임시작", class: "", path: "/" },
+        { id: 2, background: SportsBanner3, color: "bg-orange-e39e90", btnText: "게임시작", class: "", path: "/bet-combination" },
     ];
 
     function BannerList({ items }) {
