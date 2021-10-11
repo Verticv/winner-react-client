@@ -64,7 +64,7 @@ const Menus = () => {
                 extraIconCss="w-41px h-50px mr-6px mb-px"
                 path1="/mypage/bet-history"
                 path2="/mypage/transaction/charge-history"
-                path3="/mypage/transaction/points-accumulate-history"
+                path3="/mypage/points/points-accumulate-history"
             />
             <MenuCard 
                 mainIcon={MyMenuIcon} 

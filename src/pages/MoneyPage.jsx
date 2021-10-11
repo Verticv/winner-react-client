@@ -18,8 +18,8 @@ import IconHighlight2 from '../images/money/leftMenu/icon_2_highlight.png'
 const MoneyPage = ({isAuthenticated, setAuthenticated}) => {
 
     const LeftMenuArray = [
-        { text: "보유머니 충전", icon: Icon1, iconHighlight: IconHighlight1, id: 0, path: "/money/charge" },
-        { text: "보유머니 환전", icon: Icon2, iconHighlight: IconHighlight2, id: 1, path: "/money/exchange" },
+        { text: "보유머니 충전", icon: Icon1, iconHighlight: IconHighlight1, id: 0, path: "/money/charge", mainPath: "/money/charge" },
+        { text: "보유머니 환전", icon: Icon2, iconHighlight: IconHighlight2, id: 1, path: "/money/exchange", mainPath: "/money/exchange" },
     ]
 
     const location = useLocation();
