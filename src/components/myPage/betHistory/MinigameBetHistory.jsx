@@ -81,7 +81,7 @@ const MinigameBetHistory = ({isState, setState}) => {
 
             <div className="w-full h-full mt-20px">
 
-                {isState === 0 || isState === 1 ? (
+                {isState === 0 ? (
                     <MinigameBetHistoryTable 
                         array={tableArray} 
                         checkedState={checkedState} 
@@ -89,7 +89,7 @@ const MinigameBetHistory = ({isState, setState}) => {
                         isPopupOpen={isPopupOpen}
                         setPopupOpen={setPopupOpen}
                     />   
-                ) : (
+                ) : isState === 2 ? (
                     <div className="space-y-15px">
                         <MinigameBetHistoryPanel 
                             id={0} 
@@ -106,8 +106,9 @@ const MinigameBetHistory = ({isState, setState}) => {
                             result="win"
                             winAmount="+900,000,000"
                         />
-                    </div>
-                    
+                    </div>           
+                ) : (
+                    <div />
                 )}
                 
             </div>
