@@ -14,8 +14,8 @@ const InboxView = () => {
     const history = useHistory();
 
     const NewLabel = (
-        <div className="w-18px h-17px rounded-full bg-red-ff1237 -mt-px text-white font-roboto text-12px flex items-center justify-center">
-            N
+        <div style={{paddingTop:"1px", paddingLeft:"1px"}} className="w-17px h-17px rounded-full bg-red-ff1237 text-white font-roboto text-12px flex items-center justify-center">
+            <span className="flex items-center h-12px">N</span>
         </div>
     )
 

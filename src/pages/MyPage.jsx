@@ -41,16 +41,17 @@ import IconHighlight8 from '../images/myPage/leftMenu/icon_8_highlight.png'
 const MyPage = ({isAuthenticated, setAuthenticated}) => {
 
     const LeftMenuArray = [
-        { text: "베팅내역", icon: Icon1, iconHighlight: IconHighlight1, id: 0, path: "/mypage/bet-history" },
+        { text: "베팅내역", icon: Icon1, iconHighlight: IconHighlight1, id: 0, path: "/mypage/bet-history", mainPath:"/mypage/bet-history" },
         { 
             text: "충/환전내역", 
             icon: Icon2, 
             iconHighlight: IconHighlight2, 
             id: 1, 
-            path: "/mypage/charge-history", 
+            path: "/mypage/transaction/charge-history", 
             sub1: "충전내역", 
             sub2: "환전내역",
-            path2: "/mypage/exchange-history"
+            path2: "/mypage/transaction/exchange-history",
+            mainPath: "/mypage/transaction"
         },
         { text: "총판페이지", icon: Icon3, iconHighlight: IconHighlight3, id: 2, path: "/distributor-page" },
         { text: "원루즈정산", icon: Icon4, iconHighlight: IconHighlight4, id: 3, path: "/mypage/win-lose-settlement" },
@@ -59,24 +60,26 @@ const MyPage = ({isAuthenticated, setAuthenticated}) => {
             icon: Icon5, 
             iconHighlight: IconHighlight5, 
             id: 4, 
-            path: "/mypage/coupon-usage", 
+            path: "/mypage/coupon/coupon-usage", 
             sub1: "쿠폰사용",
             sub2: "쿠폰선물",
             sub3: "쿠폰내역",
-            path2: "/mypage/coupon-gift", 
-            path3: "/mypage/coupon-history"
+            path2: "/mypage/coupon/coupon-gift", 
+            path3: "/mypage/coupon/coupon-history",
+            mainPath: "/mypage/coupon"
         },
         { 
             text: "포인트", 
             icon: Icon6, 
             iconHighlight: IconHighlight6, 
             id: 5, 
-            path: "/mypage/points-apply", 
+            path: "/mypage/points/points-apply", 
             sub1: "포인트전환신청",
             sub2: "포인트적립내역",
             sub3: "포인트전환내역",
-            path2: "/mypage/points-accumulate-history", 
-            path3: "/mypage/points-transaction-history"
+            path2: "/mypage/points/points-accumulate-history", 
+            path3: "/mypage/points/points-transaction-history",
+            mainPath: "/mypage/points"
         },
         { text: "쪽지관리", icon: Icon7, iconHighlight: IconHighlight7, id: 6, path: "/mypage/inbox", inboxCount: "3" },
         { text: "회원정보수정", icon: Icon8, iconHighlight: IconHighlight8, id: 7, path: "/mypage/edit-info" }
@@ -104,22 +107,22 @@ const MyPage = ({isAuthenticated, setAuthenticated}) => {
                         mainPath="/mypage/bet-history"
                     />
                 </Route>
-                <Route path="/mypage/charge-history">
+                <Route path="/mypage/transaction/charge-history">
                     <DirectoryComponent 
                         setSelectedTab={setSelectedTab} 
                         setSelectedSubTab={setSelectedSubTab}
                         branch2="충/환전내역" 
                         branch3="충전내역"
-                        mainPath="/mypage/charge-history"
+                        mainPath="/mypage/transaction/charge-history"
                     />
                 </Route>
-                <Route path="/mypage/exchange-history">
+                <Route path="/mypage/transaction/exchange-history">
                     <DirectoryComponent 
                         setSelectedTab={setSelectedTab} 
                         setSelectedSubTab={setSelectedSubTab}
                         branch2="충/환전내역"
                         branch3="환전내역" 
-                        mainPath="/mypage/charge-history"
+                        mainPath="/mypage/transaction/charge-history"
                     />
                 </Route>
                 <Route path="/mypage/win-lose-settlement">
@@ -130,58 +133,58 @@ const MyPage = ({isAuthenticated, setAuthenticated}) => {
                         mainPath="/mypage/win-lose-settlement"
                     />
                 </Route>
-                <Route path="/mypage/coupon-usage">
+                <Route path="/mypage/coupon/coupon-usage">
                     <DirectoryComponent 
                         setSelectedTab={setSelectedTab} 
                         setSelectedSubTab={setSelectedSubTab}
                         branch2="쿠폰관리" 
                         branch3="쿠폰사용" 
-                        mainPath="/mypage/coupon-usage"
+                        mainPath="/mypage/coupon/coupon-usage"
                     />
                 </Route>
-                <Route path="/mypage/coupon-gift">
+                <Route path="/mypage/coupon/coupon-gift">
                     <DirectoryComponent 
                         setSelectedTab={setSelectedTab} 
                         setSelectedSubTab={setSelectedSubTab}
                         branch2="쿠폰관리" 
                         branch3="쿠폰선물" 
-                        mainPath="/mypage/coupon-usage"
+                        mainPath="/mypage/coupon/coupon-usage"
                     />
                 </Route>
-                <Route path="/mypage/coupon-history">
+                <Route path="/mypage/coupon/coupon-history">
                     <DirectoryComponent 
                         setSelectedTab={setSelectedTab} 
                         setSelectedSubTab={setSelectedSubTab}
                         branch2="쿠폰관리" 
                         branch3="쿠폰내역" 
-                        mainPath="/mypage/coupon-usage"
+                        mainPath="/mypage/coupon/coupon-usage"
                     />
                 </Route>
-                <Route path="/mypage/points-apply">
+                <Route path="/mypage/points/points-apply">
                     <DirectoryComponent 
                         setSelectedTab={setSelectedTab} 
                         setSelectedSubTab={setSelectedSubTab}
                         branch2="포인트" 
                         branch3="포인트전환신청" 
-                        mainPath="/mypage/points-apply"
+                        mainPath="/mypage/points/points-apply"
                     />
                 </Route>
-                <Route path="/mypage/points-accumulate-history">
+                <Route path="/mypage/points/points-accumulate-history">
                     <DirectoryComponent 
                         setSelectedTab={setSelectedTab} 
                         setSelectedSubTab={setSelectedSubTab}
                         branch2="포인트" 
-                        branch3="포인트적립신청" 
-                        mainPath="/mypage/points-apply"
+                        branch3="포인트적립내역" 
+                        mainPath="/mypage/points/points-apply"
                     />
                 </Route>
-                <Route path="/mypage/points-transaction-history">
+                <Route path="/mypage/points/points-transaction-history">
                     <DirectoryComponent 
                         setSelectedTab={setSelectedTab} 
                         setSelectedSubTab={setSelectedSubTab}
                         branch2="포인트" 
                         branch3="포인트전환내역" 
-                        mainPath="/mypage/points-apply"
+                        mainPath="/mypage/points/points-apply"
                     />
                 </Route>
                 <Route exact path="/mypage/inbox">
@@ -230,31 +233,31 @@ const MyPage = ({isAuthenticated, setAuthenticated}) => {
                         <Route path="/mypage/bet-history">
                             <BetHistory />
                         </Route>
-                        <Route path="/mypage/charge-history">
+                        <Route path="/mypage/transaction/charge-history">
                             <ChargeHistory />
                         </Route>
-                        <Route path="/mypage/exchange-history">
+                        <Route path="/mypage/transaction/exchange-history">
                             <ExchangeHistory />
                         </Route>
                         <Route path="/mypage/win-lose-settlement">
                             <WinLoseSettlement />
                         </Route>
-                        <Route path="/mypage/coupon-usage">
+                        <Route path="/mypage/coupon/coupon-usage">
                             <CouponUsage />
                         </Route>
-                        <Route path="/mypage/coupon-gift">
+                        <Route path="/mypage/coupon/coupon-gift">
                             <CouponGift />
                         </Route>
-                        <Route path="/mypage/coupon-history">
+                        <Route path="/mypage/coupon/coupon-history">
                             <CouponHistory />
                         </Route>
-                        <Route path="/mypage/points-apply">
+                        <Route path="/mypage/points/points-apply">
                             <PointsApply />
                         </Route>
-                        <Route path="/mypage/points-accumulate-history">
+                        <Route path="/mypage/points/points-accumulate-history">
                             <PointsAccumulate />
                         </Route>
-                        <Route path="/mypage/points-transaction-history">
+                        <Route path="/mypage/points/points-transaction-history">
                             <PointsTransaction />
                         </Route>
                         <Route exact path="/mypage/inbox">

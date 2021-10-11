@@ -1,8 +1,12 @@
 import React from 'react'
 import CloseIcon from '../../images/popups/close.png'
 import AlertIcon from '../../images/myPage/alert.png'
+import { useHistory } from 'react-router'
 
 const PointsApplyPopup = ({setPopupOpen}) => {
+
+    const history = useHistory()
+
     return (
         <div className="h-518px w-610px flex flex-col rounded-lg overflow-hidden">
             <div className="relative h-71px bg-blue-r5d799c flex items-center justify-center flex-shrink-0">
@@ -41,12 +45,21 @@ const PointsApplyPopup = ({setPopupOpen}) => {
 
                 <div className="flex w-full mt-20px space-x-3px">
                     <button className="flex items-center justify-center h-52px w-268px rounded-4px bg-blue-r0070d9">
-                        <div className="flex items-center justify-center h-50px w-266px rounded-4px border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r1491fc to-blue-r0675db cursor-pointer">
+                        <div 
+                            style={{background:"linear-gradient(to bottom, #1491fc, #0675db)"}} 
+                            className="flex items-center justify-center h-50px w-266px rounded-4px border border-blue-r3ba3fc cursor-pointer"
+                        >
                             <span className="font-spoqaMedium tracking-tight text-16px text-white">포인트전환</span>
                         </div>
                     </button>
-                    <button className="flex items-center justify-center h-52px w-268px rounded-4px bg-blue-r004b8a">
-                        <div className="flex items-center justify-center h-50px w-266px bg-black rounded-4px border border-blue-r2a699c bg-gradient-to-b from-blue-r004b8a via-blue-r004b8a to-blue-r012d53 cursor-pointer">
+                    <button 
+                    className="flex items-center justify-center h-52px w-268px rounded-4px bg-blue-r004b8a"
+                    onClick={() => history.push('/mypage/points/points-transaction-history')}
+                    >
+                        <div 
+                            style={{background:"linear-gradient(to bottom, #004b8a, #012d53)"}} 
+                            className="flex items-center justify-center h-50px w-266px bg-black rounded-4px border border-blue-r2a699c cursor-pointer"
+                        >
                             <span className="font-spoqaMedium tracking-tight text-16px text-white">상세내역</span>
                         </div>
                     </button>

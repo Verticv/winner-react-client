@@ -61,7 +61,7 @@ const InboxTable = ({
                         }
                         <p>{item.text}</p>
                         {item.isRead === false && (
-                            <div className="w-18px h-17px bg-red-ff1237 rounded-full text-12px text-white flex items-center justify-center font-roboto">
+                            <div className="w-17px h-17px bg-red-ff1237 rounded-full text-12px text-white flex items-center justify-center font-roboto">
                                 N
                             </div>
                         )}

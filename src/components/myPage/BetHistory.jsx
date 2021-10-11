@@ -49,7 +49,7 @@ const BetHistory = () => {
             
             <div className="relative w-full mt-20px">
                 <HorizontalMenu itemsArray={tabsArray} isState={selectedTab} setState={setSelectedTab} setSelectedPath={setSelectedPath} selectedPath={selectedPath} />
-                {(selectedTab !== 0 && selectedTab !== 3) && (
+                {(selectedTab !== 0 && selectedTab !== 3 && selectedTab !== 4) && (
                     <div style={{marginLeft: `${selectedTab * 116 + 50}px`}} className={`absolute bottom-0 w-20px -mb-10px overflow-hidden inline-block `}>
                         <div className="h-10px w-10px bg-gradient-to-br from-gray-d2dfea via-gray-eff3f6 to-gray-eff3f6 rotate-45 transform origin-bottom-left shadow"></div>
                     </div>
@@ -60,28 +60,28 @@ const BetHistory = () => {
                 <AllBetHistory />
             </Route>
             <Route path="/mypage/bet-history/live-casino">
-            <LiveCasinoBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
+                <LiveCasinoBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
             </Route>
             <Route path="/mypage/bet-history/slot-game">
-            <SlotBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
+                <SlotBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
             </Route>
             <Route path="/mypage/bet-history/sports">
-            <SportsBetHistory checkedState={checkedState} setCheckedState={setCheckedState} />
+                <SportsBetHistory checkedState={checkedState} setCheckedState={setCheckedState} />
             </Route>
             <Route path="/mypage/bet-history/e-sports">
-            <SportsBetHistory checkedState={checkedState} setCheckedState={setCheckedState} />
+                <SportsBetHistory checkedState={checkedState} setCheckedState={setCheckedState} />
             </Route>
             <Route path="/mypage/bet-history/minigame">
-            <MinigameBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
+                <MinigameBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
             </Route>
             <Route path="/mypage/bet-history/ar-game">
-            <ARGameBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
+                <ARGameBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
             </Route>
             <Route path="/mypage/bet-history/fishing-game">
-            <ARGameBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
+                <ARGameBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
             </Route>
             <Route path="/mypage/bet-history/lottery-game">
-            <ARGameBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
+                <ARGameBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
             </Route>
 
             {/* {selectedTab === 0 ? (

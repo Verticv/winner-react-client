@@ -3,10 +3,8 @@ import { useHistory } from 'react-router';
 
 const HorizontalMenu = ({
     itemsArray, 
-    isState = 0, 
     setState,
     setSelectedPath,
-    selectedPath
 }) => {
 
     const history = useHistory();

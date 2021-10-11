@@ -15,13 +15,26 @@ const DateSearchBar = ({
     isGameResultsSearch = false
 }) => {
 
+    const LeagueExampleArray = [
+        {id: 0, text: "League1"},
+        {id: 1, text: "League2"},
+        {id: 2, text: "League3"},
+        {id: 3, text: "League4"},
+        {id: 4, text: "League5"},
+        {id: 5, text: "League6"},
+        {id: 6, text: "League7"},
+        {id: 7, text: "League8"},
+        {id: 8, text: "League9"},
+        {id: 9, text: "League10"},
+    ]
+
 
     const [startDate, setStartDate] = useState(new Date())
     const [endDate, setEndDate] = useState(new Date())
     const [isDropdownOpen, setDropdownOpen] = useState()
-    const [selectedCarrier, setSelectedCarrier] = useState("전체")
+    const [selectedCarrier, setSelectedCarrier] = useState("리그선택")
 
-    const dropDownCellClass = "flex w-138px h-42px py-2px bg-white items-center hover:bg-blue-lightGradLight px-14px"
+    const dropDownCellClass = "flex w-full h-30px py-2px bg-white items-center hover:bg-gray-ebebeb px-10px"
 
     const gameResultButton = (
         <div className="flex items-center justify-between bg-white placeholder-gray-r8c8c8c outline-none w-138px h-42px rounded-md border border-gray-dddddd px-10px font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c" >
@@ -30,26 +43,23 @@ const DateSearchBar = ({
         </div>
     )
 
+    function DropdownCells({ items }) {
+        return items.map(item => (
+            <button className={dropDownCellClass} onClick={() => {
+                setSelectedCarrier(item.text)
+                setDropdownOpen(false)
+            }}>
+                {item.text}
+            </button>
+        ));
+    }
+
+
     const searchDropdown = (
-        <div className="mt-4px flex flex-col items-center justify-center w-138px overflow-hidden bg-white rounded-md border border-gray-dddddd text-gray-r8c8c8c font-spoqaMedium text-14px tracking-tight">
-            <button className={dropDownCellClass} onClick={() => {
-                setSelectedCarrier("본문")
-                setDropdownOpen(false)
-            }}>
-                본문
-            </button>
-            <button className={dropDownCellClass} onClick={() => {
-                setSelectedCarrier("작성자")
-                setDropdownOpen(false)
-            }}>
-                작성자
-            </button>
-            <button className={dropDownCellClass} onClick={() => {
-                setSelectedCarrier("카테고리")
-                setDropdownOpen(false)
-            }}>
-                카테고리
-            </button>
+        <div style={{height:"229px"}} className="mt-4px flex flex-col items-center justify-center w-138px overflow-hidden bg-white rounded-md border border-gray-dddddd text-gray-r8c8c8c font-spoqaMedium text-14px tracking-tight">
+            <div style={{width:"134px"}} className="mt-2px h-full overflow-y-scroll overflow-x-hidden">
+                <DropdownCells items={LeagueExampleArray} />
+            </div>
         </div>
     )
 
@@ -80,10 +90,10 @@ const DateSearchBar = ({
                 )}
 
                 {isGameResultsSearch === true && (
-                    <div className="space-x-10px flex">
-                        <div>{InboxSearch}</div>
+                    <div className="space-x-5px flex">
+                        <div className="pt-px">{InboxSearch}</div>
                         <input
-                            placeholder="팀명" 
+                            placeholder="팀명검색" 
                             className="pt-px mt-px placeholder-gray-r8c8c8c flex-shrink-0 outline-none w-138px h-42px rounded-md border border-gray-dddddd px-10px font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c" />
                     </div>
                 )}

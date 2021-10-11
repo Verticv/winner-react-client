@@ -60,7 +60,7 @@ const ARGameBetHistory = ({isState, setState}) => {
 
     const [checkedState, setCheckedState] = useState(new Array(3).fill(false))
     const [isAllSelected, setAllSelected] = useState(false)
-    const [isPopupOpen, setPopupOpen] = useState(false)
+    const [isPopupOpen, setPopupOpen] = useState(true)
 
     function allSelectButtonPressed() {
         if (isAllSelected) {
@@ -77,7 +77,7 @@ const ARGameBetHistory = ({isState, setState}) => {
                 <SubHorizontalMenu itemsArray={subTabsArray} isState={isState} setState={setState} />
             </div>
 
-            <DateSearchBar isLeagueSearch={true} />
+            <DateSearchBar isGameResultsSearch={true} />
 
             <div className="w-full h-full mt-20px">
                 <LiveCasinoBetHistoryTable 
@@ -91,30 +91,30 @@ const ARGameBetHistory = ({isState, setState}) => {
 
             <div className="mt-40px h-36px w-full flex items-center justify-start space-x-2px">
                 <button 
-                    style={{borderRadius:"5px"}}
+                    style={{borderRadius:"4px"}}
                     className="flex items-center justify-center w-90px h-36px rounded-md bg-gray-r171a1d"
                     onClick={() => allSelectButtonPressed()}
                 >
                     <div 
                         style={{
                             background: "linear-gradient(to bottom, #555555, #333333)",
-                            borderRadius: "4px"
+                            borderRadius: "3px"
                         }}
-                        className="flex items-center justify-center h-34px w-88px rounded-4px border border-gray-r737579 cursor-pointer"
+                        className="flex items-center justify-center h-34px w-88px rounded-4px border border-gray-r737579 cursor-pointer pt-2px"
                     >
-                        <span className="font-spoqaMedium tracking-tight text-14px text-white">전체선택</span>
+                        <span className="font-spoqaMedium tracking-tight text-14px text-white">{isAllSelected ? "선택해제" : "전체선택"}</span>
                     </div>
                 </button>
                 <button 
-                    style={{borderRadius:"5px"}}
+                    style={{borderRadius:"4px"}}
                     className="flex items-center justify-center w-90px h-36px rounded-md bg-red-cb4343"
                 >
                     <div 
                         style={{
                             background: "linear-gradient(to bottom, #f03a50, #cf254d)",
-                            borderRadius: "4px"
+                            borderRadius: "3px"
                         }}
-                        className="flex items-center justify-center h-34px w-88px rounded-4px border border-red-f36576 cursor-pointer"
+                        className="flex items-center justify-center h-34px w-88px rounded-4px border border-red-f36576 cursor-pointer pt-2px"
                     >
                         <span className="font-spoqaMedium tracking-tight text-14px text-white">선택삭제</span>
                     </div>

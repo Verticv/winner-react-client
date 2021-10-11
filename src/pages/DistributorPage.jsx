@@ -378,6 +378,7 @@ const DistributorPage = ({
                     ? <div className="">{item.added_amount}</div>
                     : 
                     <button 
+                        style={{width: "87px"}}
                         className={`${isUserCountOpen ? "bg-blue-r0070d9" : "bg-blue-r2068b2"} flex items-center justify-center h-36px w-87px rounded-4px`}
                         onClick={() => {
                             isUserCountOpen === `${item.id} user_count`
@@ -385,11 +386,13 @@ const DistributorPage = ({
                             : setUserCountOpen(`${item.id} user_count`)
                         }}
                     >
-                        <div className={`${
-                            isUserCountOpen === `${item.id} user_count`
-                            ? "border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r1491fc to-blue-r0675db" 
-                            : "border-blue-r3975ad bg-gradient-to-b from-blue-r125a9e via-blue-r125a9e to-blue-r0b447a"
-                            } flex items-center justify-center h-34px w-85px rounded-4px border  cursor-pointer space-x-10px`}
+                        <div 
+                            style={{width:"85px"}}
+                            className={`${
+                                isUserCountOpen === `${item.id} user_count`
+                                ? "border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r1491fc to-blue-r0675db" 
+                                : "border-blue-r3975ad bg-gradient-to-b from-blue-r125a9e via-blue-r125a9e to-blue-r0b447a"
+                                } flex items-center justify-center h-34px w-85px rounded-4px border  cursor-pointer space-x-10px`}
                         >
                             <span className="font-spoqaMedium tracking-tight text-14px text-white">
                                 {isUserCountOpen === `${item.id} user_count` ? "접기" : "보기"}  {item.user_count}
@@ -563,7 +566,7 @@ const DistributorPage = ({
                 className="pl-9px pr-15px w-full rounded-full flex items-center space-x-5px"
             >
                     <img src={DefaultUser} alt="" />
-                    <span className="text-gray-r7b7b7b">{name}</span>
+                    <span className="text-gray-r7b7b7b text-20px tracking-tight font-spoqaMedium pt-2px">{name}</span>
             </div>
         </div>
     )
@@ -577,7 +580,7 @@ const DistributorPage = ({
             
             <div className="flex flex-col items-start limit:items-center mt-92px w-full h-full">
                 <div className="relative w-default h-225px mt-20px">
-                    <label className="text-36px font-spoqaMedium text-blue-r325685 absolute right-0 bottom-0 z-20 mb-86px mr-50px">마이페이지</label>
+                    <label style={{color:"#3a5f39"}} className="text-36px font-spoqaMedium absolute right-0 bottom-0 z-20 mb-86px mr-50px">마이페이지</label>
                     <img className="z-10" src={DistributorBanner} alt="" />
                 </div>
                 
@@ -671,33 +674,33 @@ const DistributorPage = ({
                     <DateSearchBar isLeagueSearch={false} hasIdSearch={true}/>
 
                     <div className="flex mt-30px w-full space-x-11px">
-                        <div className="w-333px h-48px rounded-full border-2 border-gray-b4b4b4 bg-gray-r5a6067 flex items-center justify-center font-spoqaMedium text-16px tracking-tight">
+                        <div className="w-333px h-48px rounded-full border-2 border-gray-b4b4b4 bg-gray-r5a6067 flex items-center justify-center font-spoqaMedium text-20px tracking-tight">
                             <img className="mr-16px" src={Diamond} alt="" />
-                            <div className="flex items-center space-x-4px">
+                            <div className="flex items-center space-x-4px pt-2px">
                                 <span className="text-white">입금:</span>
                                 <span className="text-yellow-ffcc00">0</span>
                             </div>
                         </div>
 
-                        <div className="w-333px h-48px rounded-full border-2 border-gray-b4b4b4 bg-gray-r5a6067 flex items-center justify-center font-spoqaMedium text-16px tracking-tight">
+                        <div className="w-333px h-48px rounded-full border-2 border-gray-b4b4b4 bg-gray-r5a6067 flex items-center justify-center font-spoqaMedium text-20px tracking-tight">
                             <img className="mr-16px" src={Diamond} alt="" />
-                            <div className="flex items-center space-x-4px">
+                            <div className="flex items-center space-x-4px pt-2px">
                                 <span className="text-white">보너스:</span>
                                 <span className="text-yellow-ffcc00">0</span>
                             </div>
                         </div>
 
-                        <div className="w-333px h-48px rounded-full border-2 border-gray-b4b4b4 bg-gray-r5a6067 flex items-center justify-center font-spoqaMedium text-16px tracking-tight">
+                        <div className="w-333px h-48px rounded-full border-2 border-gray-b4b4b4 bg-gray-r5a6067 flex items-center justify-center font-spoqaMedium text-20px tracking-tight">
                             <img className="mr-16px" src={Diamond} alt="" />
-                            <div className="flex items-center space-x-4px">
+                            <div className="flex items-center space-x-4px pt-2px">
                                 <span className="text-white">출금:</span>
                                 <span className="text-yellow-ffcc00">0</span>
                             </div>
                         </div>
 
-                        <div className="w-333px h-48px rounded-full border-2 border-gray-b4b4b4 bg-gray-r5a6067 flex items-center justify-center font-spoqaMedium text-16px tracking-tight">
+                        <div className="w-333px h-48px rounded-full border-2 border-gray-b4b4b4 bg-gray-r5a6067 flex items-center justify-center font-spoqaMedium text-20px tracking-tight">
                             <img className="mr-16px" src={Diamond} alt="" />
-                            <div className="flex items-center space-x-4px">
+                            <div className="flex items-center space-x-4px pt-2px">
                                 <span className="text-white">입출금 합계:</span>
                                 <span className="text-red-f47d7d">-3,200,000</span>
                             </div>
@@ -814,7 +817,7 @@ const DistributorPage = ({
 
                     <div className="mt-52px h-42px w-full flex items-center space-x-6px text-24px tracking-tight text-gray-r7b7b7b font-spoqaMedium">
                         <img src={MemberIcon} alt="" />
-                        <div>접속중인 회원수: <span className="font-spoqaBold text-black tracking-tight">0</span></div>
+                        <div>접속중인 회원수: <span className="font-spoqaBold text-black tracking-tight">2 명</span></div>
 
                         <div 
                             style={{
@@ -850,9 +853,9 @@ const DistributorPage = ({
                             <div>추천 회원내역</div>
                         </div>
                         
-                        <div className="w-333px h-48px rounded-full border-2 border-gray-b4b4b4 bg-gray-r5a6067 flex items-center justify-center font-spoqaMedium text-16px tracking-tight">
+                        <div className="w-333px h-48px rounded-full border-2 border-gray-b4b4b4 bg-gray-r5a6067 flex items-center justify-center font-spoqaMedium text-20px tracking-tight">
                             <img className="mr-16px" src={Diamond} alt="" />
-                            <div className="flex items-center space-x-4px">
+                            <div className="flex items-center space-x-4px pt-2px">
                                 <span className="text-white">보유금 총합계:</span>
                                 <span className="text-yellow-ffcc00">75,000</span>
                             </div>
