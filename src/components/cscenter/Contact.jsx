@@ -21,16 +21,16 @@ import { useHistory } from 'react-router';
 const Contact = () => {
 
     const tabsArray = [
-        { text: "전체", icon: Icon1, id: 0 },
-        { text: "라이브카지노", icon: Icon2, id: 1 },
-        { text: "슬롯", icon: Icon3, id: 2 },
-        { text: "스포츠", icon: Icon4, id: 3 },
-        { text: "e-스포츠", icon: Icon5, id: 4 },
-        { text: "미니게임", icon: Icon6, id: 5 },
-        { text: "가상게임", icon: Icon7, id: 6 },
-        { text: "충전/환전", icon: Icon8, id: 7 },
-        { text: "베팅관련", icon: Icon9, id: 8 },
-        { text: "기타", icon: Icon10, id: 9 },
+        { text: "전체", icon: Icon1, id: 0, path: "/cscenter/contact/all" },
+        { text: "라이브카지노", icon: Icon2, id: 1, path: "/cscenter/contact/lvie-casino" },
+        { text: "슬롯", icon: Icon3, id: 2, path: "/cscenter/contact/slot" },
+        { text: "스포츠", icon: Icon4, id: 3, path: "/cscenter/contact/sports" },
+        { text: "e-스포츠", icon: Icon5, id: 4, path: "/cscenter/contact/e-sports" },
+        { text: "미니게임", icon: Icon6, id: 5, path: "/cscenter/contact/minigame" },
+        { text: "가상게임", icon: Icon7, id: 6, path: "/cscenter/contact/ar-game" },
+        { text: "충전/환전", icon: Icon8, id: 7, path: "/cscenter/contact/transaction" },
+        { text: "베팅관련", icon: Icon9, id: 8, path: "/cscenter/contact/about-betting" },
+        { text: "기타", icon: Icon10, id: 9, path: "/cscenter/contact/other" },
     ];
 
     const inboxArray = [
@@ -118,7 +118,7 @@ const Contact = () => {
         
     ];
 
-    const [selectedTab, setSelectedTab] = useState(0)
+    const [, setSelectedTab] = useState(0)
     const [page, setPage] = useState(0)
     const [selectedCarrier, setSelectedCarrier] = useState("제목")
     const [isDropdownOpen, setDropdownOpen] = useState()
@@ -128,6 +128,12 @@ const Contact = () => {
 
     const searchDropdown = (
         <div className="mt-4px flex flex-col items-center justify-center w-120px overflow-hidden bg-white rounded-md border border-gray-dddddd shadow-plain5 text-gray-r393e41 font-spoqaMedium text-14px tracking-tight">
+            <button className={dropDownCellClass} onClick={() => {
+                setSelectedCarrier("제목")
+                setDropdownOpen(false)
+            }}>
+                제목
+            </button>
             <button className={dropDownCellClass} onClick={() => {
                 setSelectedCarrier("본문")
                 setDropdownOpen(false)
@@ -139,12 +145,6 @@ const Contact = () => {
                 setDropdownOpen(false)
             }}>
                 작성자
-            </button>
-            <button className={dropDownCellClass} onClick={() => {
-                setSelectedCarrier("카테고리")
-                setDropdownOpen(false)
-            }}>
-                카테고리
             </button>
         </div>
     )
@@ -176,7 +176,7 @@ const Contact = () => {
                     className="pl-11px rounded-md placeholder-gray-r7c7c7c w-full text-gray-r393e41 font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight"
                     placeholder="검색어를 입력해 주세요"
                 />
-                <button className="flex items-center justify-center w-42px h-42px rounded-md bg-gradient-to-b from-gray-r555555 via-gray-r555555 to-gray-r333333 -mt-px -mr-px">
+                <button className="flex items-center justify-center w-42px h-42px rounded-md bg-gradient-to-b from-gray-r555555 via-gray-r555555 to-gray-r333333 -mt-px -mr-px flex-shrink-0">
                     <img src={SearchIcon} alt=""/>
                 </button>
             </div>
@@ -189,14 +189,15 @@ const Contact = () => {
             <MyPageTitle title="문의하기" />
 
             <div className="relative w-full mt-20px">
-                <HorizontalMenu itemsArray={tabsArray} isState={selectedTab} setState={setSelectedTab} />
+                <HorizontalMenu itemsArray={tabsArray} setState={setSelectedTab} />
 
                 <div className="mt-20px"></div>
+
                 <ContactTable array={inboxArray}/>
   
 
                 <div className="mt-20px h-36px w-full flex items-center justify-end space-x-2px">
-                    <button className="flex items-center justify-center w-90px h-36px rounded-md bg-red-cb4343">
+                    <button className="flex items-center justify-center w-90px h-36px  rounded-4px bg-red-cb4343">
                         <div className="flex items-center justify-center h-34px w-88px rounded-4px border border-red-f36576 bg-gradient-to-b from-red-f03a50 via-red-e2314f to-red-cf254d cursor-pointer">
                             <span className="font-spoqaMedium tracking-tight text-14px text-white">계좌문의</span>
                         </div>

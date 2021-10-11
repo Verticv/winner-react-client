@@ -274,6 +274,12 @@ const FreeBoardMain = () => {
     const searchDropdown = (
         <div className="mt-4px flex flex-col items-center justify-center w-120px overflow-hidden bg-white rounded-md border border-gray-dddddd text-gray-r393e41 font-spoqaMedium text-14px tracking-tight">
             <button className={dropDownCellClass} onClick={() => {
+                setSelectedCarrier("제목")
+                setDropdownOpen(false)
+            }}>
+                제목
+            </button>
+            <button className={dropDownCellClass} onClick={() => {
                 setSelectedCarrier("본문")
                 setDropdownOpen(false)
             }}>
@@ -284,12 +290,6 @@ const FreeBoardMain = () => {
                 setDropdownOpen(false)
             }}>
                 작성자
-            </button>
-            <button className={dropDownCellClass} onClick={() => {
-                setSelectedCarrier("카테고리")
-                setDropdownOpen(false)
-            }}>
-                카테고리
             </button>
         </div>
     )
@@ -321,7 +321,7 @@ const FreeBoardMain = () => {
                     className="pl-11px rounded-md placeholder-gray-r7c7c7c w-full text-gray-r393e41 font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight"
                     placeholder="검색어를 입력해 주세요"
                 />
-                <button className="flex items-center justify-center w-42px h-42px rounded-md bg-gradient-to-b from-gray-r555555 via-gray-r555555 to-gray-r333333 -mt-px -mr-px">
+                <button className="flex items-center justify-center w-42px h-42px rounded-md bg-gradient-to-b from-gray-r555555 via-gray-r555555 to-gray-r333333 -mt-px -mr-px flex-shrink-0">
                     <img src={SearchIcon} alt=""/>
                 </button>
             </div>
@@ -346,7 +346,7 @@ const FreeBoardMain = () => {
                         ? "#f7f9fc"
                         : ""
                     }}
-                    className="flex items-center font-spoqaBold text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd" >     
+                    className="flex items-center font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd" >     
                     
                     <div style={{width: "128px"}} className="font-spoqaMedium text-14px tracking-tight text-gray-r585858 flex items-center justify-center">
                         {item.type === "안내" 
@@ -359,7 +359,7 @@ const FreeBoardMain = () => {
 
                     <div 
                         style={{width: "808px"}}
-                        className={`w-612px flex items-center space-x-10px font-spoqaBold text-gray-r585858`}>
+                        className={`w-612px flex items-center space-x-10px font-spoqaMedium text-gray-r585858`}>
                         {
                             item.type === "안내" 
                             ? <div className="w-45px h-25px rounded-full bg-blue-r00a1e9 flex items-center justify-center text-white text-12px">안내</div> 
@@ -415,7 +415,7 @@ const FreeBoardMain = () => {
                             )
                             }
                         </div>
-                    <div style={{width: "216px"}} className="w-70px flex items-center justify-center text-gray-r585858">
+                    <div style={{width: "216px"}} className="w-70px flex items-center justify-center text-gray-r585858 font-spoqaMedium">
                         {item.type !== "일반"
                             ? ""
                             : item.time
@@ -431,7 +431,7 @@ const FreeBoardMain = () => {
         <div className="w-full">
 
             <div className="rounded-2xl shadow-subNavbar w-full overflow-hidden">
-                <div className="h-56px bg-gray-fafafa w-full flex items-center text-14px font-spoqaBold tracking-tight text-gray-r454545">
+                <div className="h-56px bg-gray-fafafa w-full flex items-center text-14px font-spoqaMedium tracking-tight text-gray-r454545">
                     <div style={{width: "128px"}} className="flex items-center justify-center">번호</div>
                     <div style={{width: "808px"}} className="flex items-center justify-center">제목</div>
                     <div style={{width: "108px"}} className="flex items-center justify-center">닉네임</div>

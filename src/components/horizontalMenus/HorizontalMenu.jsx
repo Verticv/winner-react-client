@@ -4,7 +4,6 @@ import { useHistory } from 'react-router';
 const HorizontalMenu = ({
     itemsArray, 
     setState,
-    setSelectedPath,
 }) => {
 
     const history = useHistory();
@@ -22,7 +21,6 @@ const HorizontalMenu = ({
                 onClick={() => {
                     setState(item.id)
                     history.push(item.path)
-                    setSelectedPath(item.path)
                 }}
             >
                 <div 

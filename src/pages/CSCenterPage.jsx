@@ -28,21 +28,22 @@ import SportsGamePolicy from 'components/cscenter/SportsGamePolicy';
 const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
 
     const LeftMenuArray = [
-        { text: "문의하기", icon: Icon1, iconHighlight: IconHighlight1, id: 0, path: "/cscenter/contact" },
-        { text: "공지사항", icon: Icon2, iconHighlight: IconHighlight2, id: 1, path: "/cscenter/announcement" },
-        { text: "자주묻는질문", icon: Icon3, iconHighlight: IconHighlight3, id: 2, path: "/cscenter/faq" },
-        { text: "계좌문의", icon: Icon4, iconHighlight: IconHighlight4, id: 3, path: "/cscenter/inquiry" },
+        { text: "문의하기", icon: Icon1, iconHighlight: IconHighlight1, id: 0, path: "/cscenter/contact/all", mainPath: "/cscenter/contact" },
+        { text: "공지사항", icon: Icon2, iconHighlight: IconHighlight2, id: 1, path: "/cscenter/announcement", mainPath: "/cscenter/announcement" },
+        { text: "자주묻는질문", icon: Icon3, iconHighlight: IconHighlight3, id: 2, path: "/cscenter/faq/all", mainPath: "/cscenter/faq" },
+        { text: "계좌문의", icon: Icon4, iconHighlight: IconHighlight4, id: 3, path: "/cscenter/inquiry", mainPath: "/cscenter/inquiry" },
         { 
             text: "베팅규정",
             icon: Icon5, 
             iconHighlight: IconHighlight5, 
             id: 4, 
-            path: "/cscenter/policy/sportsgame", 
+            path: "/cscenter/policy/sportsgame/soccer", 
             sub1: "스포츠게임",
             sub2: "미니게임",
             sub3: "가상게임",
             path2: "/cscenter/policy/minigame", 
-            path3: "/cscenter/policy/argame"
+            path3: "/cscenter/policy/argame",
+            mainPath: "/cscenter/policy"
         },
     ];
 
@@ -61,7 +62,7 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
 
             <div className="flex flex-col items-start limit:items-center mt-92px w-full h-full">
 
-                <Route exact path="/cscenter/contact">
+                <Route path="/cscenter/contact">
                     <DirectoryComponent 
                         branch1="고객센터"
                         branch2="문의하기" 
@@ -151,7 +152,7 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
                 </Route>
 
                 <div className="relative w-default h-225px">
-                    <label className="text-36px font-spoqaMedium text-blue-r325685 absolute right-0 bottom-0 z-20 mb-86px mr-50px">고객센터</label>
+                    <label style={{color:"#974458"}} className="text-36px font-spoqaMedium text-blue-r325685 absolute right-0 bottom-0 z-20 mb-86px mr-50px">고객센터</label>
                     <img className="z-10" src={CsPageBanner} alt="" />
                 </div>
                 
@@ -167,7 +168,7 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
                     </div>
 
                     <div className="ml-20px w-1040px">
-                        <Route exact path="/cscenter/contact">
+                        <Route path="/cscenter/contact">
                             <Contact />
                         </Route>
                         <Route path="/cscenter/contact/view/*">
@@ -182,10 +183,10 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
                         <Route exact path="/cscenter/announcement/view">
                             <AnnouncementView />
                         </Route>
-                        <Route exact path="/cscenter/faq">
+                        <Route path="/cscenter/faq">
                             <Faq />
                         </Route>
-                        <Route exact path="/cscenter/policy/sportsgame">
+                        <Route path="/cscenter/policy/sportsgame">
                             <SportsGamePolicy />
                         </Route>
                         <Route path="*">

@@ -38,7 +38,7 @@ const ContactTable = ({
                         {item.category}
                     </div>
 
-                    <div style={{width: "427px"}} className={`${item.isRead === true ? "text-gray-r7b7b7b font-spoqaMedium" : "text-gray-r454545 font-spoqaBold"} flex items-center space-x-10px`}>
+                    <div style={{width: "427px"}} className={`${item.isRead === true ? "text-gray-r7b7b7b" : "text-gray-r454545"} font-spoqaMedium flex items-center space-x-10px`}>
                         <p>{item.text}</p>
                         {item.isRead === false && (
                             <div className="w-18px h-17px bg-red-notification rounded-full text-12px text-white flex items-center justify-center font-roboto">
@@ -47,7 +47,7 @@ const ContactTable = ({
                         )}
                     </div>
 
-                    <div className={`${item.isRead === true ? "text-gray-r7b7b7b" : "text-gray-r454545"} w-138px flex font-spoqaMedium justify-center font-roboto text-center`}>{item.time}</div>
+                    <div className={`${item.isRead === true ? "text-gray-r7b7b7b" : "text-gray-r454545"} w-138px flex font-spoqaMedium justify-center text-center`}>{item.time}</div>
                     <div className="ml-33px w-70px flex items-center justify-center">
                         <div className={`${item.isRead === false ? "bg-gray-r454545" : "bg-gray-a2a2a2" } w-49px h-29px flex justify-center rounded-full text-white font-spoqaMedium items-center pt-2px`}>
                             삭제
@@ -62,7 +62,7 @@ const ContactTable = ({
     return (
         <div className="w-full shadow-subNavbar rounded-3xl overflow-hidden">
 
-            <div className="flex items-center bg-gray-fafafa rounded-t-2xl font-spoqaBold text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd px-54px">        
+            <div className="flex items-center bg-gray-fafafa rounded-t-2xl font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd px-54px">        
                 <div className="w-54px flex justify-center">확인</div>
                 <div className="w-98px flex justify-center">상태</div>
                 <div className="w-114px flex justify-center">구분</div>

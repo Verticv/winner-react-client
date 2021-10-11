@@ -18,16 +18,16 @@ import AIcon from '../../images/cscenter/a.png'
 const Faq = () => {
 
     const tabsArray = [
-        { text: "전체", icon: Icon1, id: 0 },
-        { text: "라이브카지노", icon: Icon2, id: 1 },
-        { text: "슬롯", icon: Icon3, id: 2 },
-        { text: "스포츠", icon: Icon4, id: 3 },
-        { text: "e-스포츠", icon: Icon5, id: 4 },
-        { text: "미니게임", icon: Icon6, id: 5 },
-        { text: "가상게임", icon: Icon7, id: 6 },
-        { text: "충전/환전", icon: Icon8, id: 7 },
-        { text: "베팅관련", icon: Icon9, id: 8 },
-        { text: "기타", icon: Icon10, id: 9 },
+        { text: "전체", icon: Icon1, id: 0, path: "/cscenter/faq/all" },
+        { text: "라이브카지노", icon: Icon2, id: 1, path: "/cscenter/faq/live-casino" },
+        { text: "슬롯", icon: Icon3, id: 2, path: "/cscenter/faq/slot" },
+        { text: "스포츠", icon: Icon4, id: 3, path: "/cscenter/faq/sports" },
+        { text: "e-스포츠", icon: Icon5, id: 4, path: "/cscenter/faq/e-sports" },
+        { text: "미니게임", icon: Icon6, id: 5, path: "/cscenter/faq/minigame" },
+        { text: "가상게임", icon: Icon7, id: 6, path: "/cscenter/faq/ar-game" },
+        { text: "충전/환전", icon: Icon8, id: 7, path: "/cscenter/faq/transaction" },
+        { text: "베팅관련", icon: Icon9, id: 8, path: "/cscenter/faq/about-betting" },
+        { text: "기타", icon: Icon10, id: 9, path: "/cscenter/faq/other" },
     ];
 
     const questionArray = [
@@ -47,7 +47,7 @@ const Faq = () => {
     const BodyText1 = '☞ 첫, 매충 10% 포인트를 받지 않을시 모든게임의 롤링은 단폴, 카지노 배팅 포함 100%만 해주시면 환전가능합니다. \n - 포인트 받지 않기를 원할시 : 충전 --> "보너스받기" 에서 "받지않기" 클릭하시고 충전신청해주시면 됩니다. \n ☞ 첫, 매충 10%포인트를 받았을시 각게임당 아래와 같이 롤링해 주시면 됩니다. '
 
     const [selectedTab, setSelectedTab] = useState(0)
-    const [openedCell, setOpenedCell] = useState(0)
+    const [openedCell, setOpenedCell] = useState(null)
 
     const QuestionCell = ({type, text, cellId}) => (
         <>

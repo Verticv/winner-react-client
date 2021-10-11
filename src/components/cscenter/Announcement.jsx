@@ -19,6 +19,12 @@ const Announcement = () => {
     const searchDropdown = (
         <div className="mt-4px flex flex-col items-center justify-center w-120px overflow-hidden bg-white rounded-md border border-gray-dddddd shadow-plain5 text-gray-r393e41 font-spoqaMedium text-14px tracking-tight">
             <button className={dropDownCellClass} onClick={() => {
+                setSelectedCarrier("제목")
+                setDropdownOpen(false)
+            }}>
+                제목
+            </button>
+            <button className={dropDownCellClass} onClick={() => {
                 setSelectedCarrier("본문")
                 setDropdownOpen(false)
             }}>
@@ -29,12 +35,6 @@ const Announcement = () => {
                 setDropdownOpen(false)
             }}>
                 작성자
-            </button>
-            <button className={dropDownCellClass} onClick={() => {
-                setSelectedCarrier("카테고리")
-                setDropdownOpen(false)
-            }}>
-                카테고리
             </button>
         </div>
     )
@@ -66,7 +66,7 @@ const Announcement = () => {
                     className="pl-11px rounded-md placeholder-gray-r7c7c7c w-full text-gray-r393e41 font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight"
                     placeholder="검색어를 입력해 주세요"
                 />
-                <button className="flex items-center justify-center w-42px h-42px rounded-md bg-gradient-to-b from-gray-r555555 via-gray-r555555 to-gray-r333333 -mt-px -mr-px">
+                <button className="flex items-center justify-center w-42px h-42px rounded-md bg-gradient-to-b from-gray-r555555 via-gray-r555555 to-gray-r333333 -mt-px -mr-px flex-shrink-0">
                     <img src={SearchIcon} alt=""/>
                 </button>
             </div>

@@ -28,7 +28,8 @@ const GameResultsPage = ({isAuthenticated, setAuthenticated}) => {
             sub4: "스페셜",
             path2: "/gameresults/sports/handicap",
             path3: "/gameresults/sports/unover",
-            path4: "/gameresults/sports/special"
+            path4: "/gameresults/sports/special",
+            mainPath: "/gameresults/sports"
         },
         { 
             text: "미니게임", 
@@ -36,6 +37,7 @@ const GameResultsPage = ({isAuthenticated, setAuthenticated}) => {
             iconHighlight: IconHighlight2, 
             id: 1, 
             path: "/gameresults/minigame/win-draw-lose", 
+            mainPath: "/gameresults/minigame/win-draw-lose"
         },
     ];
 
