@@ -79,16 +79,20 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
 
     const BetAmountButton = ({amount, inputValue, setInputValue}) => (
         <button 
-            style={{width:"94px", backgroundColor: "#b3bac1"}} 
-            className="flex items-center justify-center h-46px w-75px rounded-4px"
+            style={{
+                width:"94px", 
+                borderColor: "#b3bac1",
+                height:"46px"
+            }} 
+            className="flex items-center justify-center rounded-4px border"
             onClick={() => setInputValue(inputValue + amount)}
         >
             <div 
                 style={{
-                    width:"92px",
-                    background: "linear-gradient(to bottom, #feffff, #cedeed)"
-                    }} 
-                className="flex items-center justify-center h-44px w-73px rounded-4px border border-white bg-gradient-to-b cursor-pointer"
+                    background: "linear-gradient(to bottom, #feffff, #cedeed)",
+                    borderRadius: "3px",
+                }}  
+                className="flex items-center justify-center border border-white cursor-pointer w-full h-full"
             >
                 <span className="font-roboto tracking-tight text-16px text-gray-r585858 pt-px">{nf.format(amount)}</span>
             </div>
@@ -164,40 +168,77 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
 
             <div style={{height:"213px"}} className="w-full bg-gray-fafafa p-10px rounded-b-xl">
 
-                <div className="grid grid-cols-3 gap-2px">
-                    <BetAmountButton amount={5000} inputValue={inputValue} setInputValue={setInputValue}/>
-                    <BetAmountButton amount={10000} inputValue={inputValue} setInputValue={setInputValue}/>
-                    <BetAmountButton amount={50000} inputValue={inputValue} setInputValue={setInputValue}/>
-                    <BetAmountButton amount={100000} inputValue={inputValue} setInputValue={setInputValue}/>
-                    <BetAmountButton amount={500000} inputValue={inputValue} setInputValue={setInputValue}/>
-                    <BetAmountButton amount={1000000} inputValue={inputValue} setInputValue={setInputValue}/>
+                <div className="flex flex-col space-y-2px">
+                    <div className="flex space-x-2px">
+                        <BetAmountButton amount={5000} inputValue={inputValue} setInputValue={setInputValue}/>
+                        <BetAmountButton amount={10000} inputValue={inputValue} setInputValue={setInputValue}/>
+                        <BetAmountButton amount={50000} inputValue={inputValue} setInputValue={setInputValue}/>
+                    </div>
+                    <div className="flex space-x-2px">
+                        <BetAmountButton amount={100000} inputValue={inputValue} setInputValue={setInputValue}/>
+                        <BetAmountButton amount={500000} inputValue={inputValue} setInputValue={setInputValue}/>
+                        <BetAmountButton amount={1000000} inputValue={inputValue} setInputValue={setInputValue}/>
+                    </div>
                 </div>
-
+                
                 <div className="flex space-x-2px mt-2px">
                     <button 
-                    style={{width:"94px"}} 
-                    className="flex items-center justify-center h-46px w-75px rounded-4px bg-gray-r171a1d"
-                    onClick={() => setInputValue(inputValue/2)}
+                        style={{
+                            width:"94px",
+                            borderColor: "#171a1d",
+                            height:"46px"
+                        }} 
+                        className="flex items-center justify-center rounded-4px border"
+                        onClick={() => setInputValue(inputValue/2)}
                     >
-                        <div style={{width:"92px"}} className="flex items-center justify-center h-44px w-73px rounded-4px border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e to-gray-r303337 cursor-pointer">
+                        <div 
+                            style={{
+                                borderRadius:"3px",
+                                background: "linear-gradient(to bottom, #585b5e, #303337)",
+                                borderColor:"#747679"
+                            }} 
+                            className="flex items-center justify-center h-full w-full border cursor-pointer"
+                        >
                             <span className="font-spoqaMedium tracking-tight text-16px text-white pt-2px">하프</span>
                         </div>
                     </button>
                     <button 
-                        style={{width:"94px"}} 
-                        className="flex items-center justify-center h-46px w-75px rounded-4px bg-gray-r171a1d"
+                        style={{
+                            width:"94px",
+                            borderColor: "#171a1d",
+                            height:"46px"
+                        }} 
+                        className="flex items-center justify-center rounded-4px border"
                         onClick={() => setInputValue(3522170)}
                     >
-                        <div style={{width:"92px"}} className="flex items-center justify-center h-44px w-73px rounded-4px border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e to-gray-r303337 cursor-pointer">
+                        <div 
+                            style={{
+                                borderRadius:"3px",
+                                background: "linear-gradient(to bottom, #585b5e, #303337)",
+                                borderColor:"#747679"
+                            }} 
+                            className="flex items-center justify-center h-full w-full border cursor-pointer"
+                        >
                             <span className="font-spoqaMedium tracking-tight text-16px text-white pt-2px">최대</span>
                         </div>
                     </button>
                     <button 
-                        style={{width:"94px"}} 
-                        className="flex items-center justify-center h-46px w-75px rounded-4px bg-gray-r171a1d"
+                        style={{
+                            width:"94px",
+                            borderColor: "#171a1d",
+                            height:"46px"
+                        }} 
+                        className="flex items-center justify-center rounded-4px border"
                         onClick={() => setInputValue(0)}
                     >
-                        <div style={{width:"92px"}} className="flex items-center justify-center h-44px w-73px rounded-4px border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e to-gray-r303337 cursor-pointer">
+                        <div
+                            style={{
+                                borderRadius:"3px",
+                                background: "linear-gradient(to bottom, #585b5e, #303337)",
+                                borderColor:"#747679"
+                            }} 
+                            className="flex items-center justify-center h-full w-full border cursor-pointer"
+                        >
                             <span className="font-spoqaMedium tracking-tight text-16px text-white pt-2px">정정</span>
                         </div>
                     </button>

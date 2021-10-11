@@ -740,7 +740,7 @@ const BetCombinationPanel = ({
     )
 
     return (
-        <div className="w-full rounded-2xl shadow-subNavbar bg-gray-fafafa">
+        <div style={{borderRadius:"0.5rem"}} className="w-full shadow-subNavbar bg-gray-fafafa">
 
             <div className="h-50px w-full flex items-center text-14px font-spoqaMedium tracking-tight text-gray-r454545 pt-4px">
                 <p className="ml-50px">경기일시</p>
