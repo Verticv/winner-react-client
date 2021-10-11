@@ -5,7 +5,7 @@ const CouponGiftPopupTable = () => {
     const RadioButton = (
         <input 
             className="radio" 
-            type="checkbox" 
+            type="radio" 
             name="radio" 
             // checked={isChecked === row}
             // onClick={() => setChecked(row)}
@@ -13,57 +13,57 @@ const CouponGiftPopupTable = () => {
     )
 
     return (
-        <table className="shadow-subNavbar rounded-3xl">
-            <thead className="bg-gray-fafafa rounded-3xl font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd">
-                <tr>
+        <div className="shadow-subNavbar rounded-2xl overflow-y-scroll">
+            <div className="bg-gray-fafafa font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd flex items-center">
+                <div>
                     <td className="w-143px text-center">선택</td>
                     <td className="w-198px text-center">아이디</td>
                     <td className="w-199px text-center">별명</td>
-                </tr>
-            </thead>
-            <tbody className="w-full text-585858 text-14px tracking-tight font-spoqa">
-                <tr className="bg-gray-fefefe rounded-3xl font-spoqa text-14px tracking-tight text-gray-r454545 h-56px w-full border-b border-gray-dddddd">
+                </div>
+            </div>
+            <div style={{height:"280px"}} className="w-full text-585858 text-14px tracking-tight font-spoqa">
+                <div className="bg-gray-fefefe font-spoqa text-14px tracking-tight text-gray-r454545 h-56px w-full border-b border-gray-dddddd flex items-center">
                     <td className="w-143px text-center">{RadioButton}</td>
                     <td className="w-198px text-center">louie32</td>
                     <td className="w-199px text-center">위너테스트2</td>
-                </tr>
-                <tr className="bg-gray-f7f9fc rounded-3xl font-spoqa text-14px tracking-tight text-gray-r454545 h-56px w-full border-b border-gray-dddddd">
+                </div>
+                <div className="bg-gray-f7f9fc font-spoqa text-14px tracking-tight text-gray-r454545 h-56px w-full border-b border-gray-dddddd flex items-center">
                     <td className="w-143px text-center">{RadioButton}</td>
                     <td className="w-198px text-center">louie32</td>
                     <td className="w-199px text-center">위너테스트2</td>
-                </tr>
-                <tr className="bg-gray-fefefe rounded-3xl font-spoqa text-14px tracking-tight text-gray-r454545 h-56px w-full border-b border-gray-dddddd">
+                </div>
+                <div className="bg-gray-fefefe font-spoqa text-14px tracking-tight text-gray-r454545 h-56px w-full border-b border-gray-dddddd flex items-center">
                     <td className="w-143px text-center">{RadioButton}</td>
                     <td className="w-198px text-center">louie32</td>
                     <td className="w-199px text-center">위너테스트2</td>
-                </tr>
-                <tr className="bg-gray-f7f9fc rounded-3xl font-spoqa text-14px tracking-tight text-gray-r454545 h-56px w-full border-b border-gray-dddddd">
+                </div>
+                <div className="bg-gray-f7f9fc font-spoqa text-14px tracking-tight text-gray-r454545 h-56px w-full border-b border-gray-dddddd flex items-center">
                     <td className="w-143px text-center">{RadioButton}</td>
                     <td className="w-198px text-center">louie32</td>
                     <td className="w-199px text-center">위너테스트2</td>
-                </tr>
-                <tr className="bg-gray-fefefe rounded-3xl font-spoqa text-14px tracking-tight text-gray-r454545 h-56px w-full border-b border-gray-dddddd">
+                </div>
+                <div className="bg-gray-fefefe font-spoqa text-14px tracking-tight text-gray-r454545 h-56px w-full border-b border-gray-dddddd flex items-center">
                     <td className="w-143px text-center">{RadioButton}</td>
                     <td className="w-198px text-center">louie32</td>
                     <td className="w-199px text-center">위너테스트2</td>
-                </tr>
-                <tr className="bg-gray-f7f9fc rounded-3xl font-spoqa text-14px tracking-tight text-gray-r454545 h-56px w-full border-b border-gray-dddddd">
+                </div>
+                <div className="bg-gray-f7f9fc font-spoqa text-14px tracking-tight text-gray-r454545 h-56px w-full border-b border-gray-dddddd flex items-center">
                     <td className="w-143px text-center">{RadioButton}</td>
                     <td className="w-198px text-center">louie32</td>
                     <td className="w-199px text-center">위너테스트2</td>
-                </tr>
-                <tr className="bg-gray-fefefe rounded-3xl font-spoqa text-14px tracking-tight text-gray-r454545 h-56px w-full border-b border-gray-dddddd">
+                </div>
+                <div className="bg-gray-fefefe font-spoqa text-14px tracking-tight text-gray-r454545 h-56px w-full border-b border-gray-dddddd flex items-center">
                     <td className="w-143px text-center">{RadioButton}</td>
                     <td className="w-198px text-center">louie32</td>
                     <td className="w-199px text-center">위너테스트2</td>
-                </tr>
-                <tr className="bg-gray-f7f9fc rounded-3xl font-spoqa text-14px tracking-tight text-gray-r454545 h-56px w-full border-b border-gray-dddddd">
+                </div>
+                <div className="bg-gray-f7f9fc font-spoqa text-14px tracking-tight text-gray-r454545 h-56px w-full border-b border-gray-dddddd flex items-center">
                     <td className="w-143px text-center">{RadioButton}</td>
                     <td className="w-198px text-center">louie32</td>
                     <td className="w-199px text-center">위너테스트2</td>
-                </tr>
-            </tbody>
-        </table> 
+                </div>
+            </div>
+        </div> 
     )
 }
 

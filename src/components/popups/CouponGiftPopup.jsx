@@ -33,13 +33,16 @@ const CouponGiftPopup = ({setPopupOpen}) => {
                     <span className="font-spoqaMedium text-16px tracking-tight text-gray-r7c7c7c pt-3px">쿠폰받을 회원을 선택하세요.</span>
                 </div>
 
-                <div className="mt-17px w-full h-337px overflow-y-scroll rounded-3xl shadow-subNavbar">
+                <div className="mt-17px w-full h-337px rounded-2xl shadow-subNavbar overflow-hidden">
                     <CouponGiftPopupTable />
                 </div>
 
                 <div className="w-full flex items-center justify-center mt-21px">
                     <button className="flex items-center justify-center h-52px w-192px rounded-4px bg-blue-r0070d9" onClick={()=> setPopupOpen(false)}>
-                        <div className="flex items-center justify-center h-50px w-190px rounded-4px border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r1491fc to-blue-r0675db cursor-pointer">
+                        <div 
+                        style={{background:"linear-gradient(to bottom, #1491fc, #0675db)"}} 
+                        className="flex items-center justify-center h-50px w-190px rounded-4px border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r1491fc to-blue-r0675db cursor-pointer"
+                        >
                             <span className="font-spoqaMedium tracking-tight text-16px text-white">쿠폰발송</span>
                         </div>
                     </button>
