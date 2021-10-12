@@ -24,6 +24,7 @@ import Announcement from 'components/cscenter/Announcement';
 import AnnouncementView from 'components/cscenter/AnnouncementView';
 import Faq from 'components/cscenter/Faq';
 import SportsGamePolicy from 'components/cscenter/SportsGamePolicy';
+import MinigamePolicy from 'components/cscenter/MinigamePolicy';
 
 const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
 
@@ -41,7 +42,7 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
             sub1: "스포츠게임",
             sub2: "미니게임",
             sub3: "가상게임",
-            path2: "/cscenter/policy/minigame", 
+            path2: "/cscenter/policy/minigame/powerball", 
             path3: "/cscenter/policy/argame",
             mainPath: "/cscenter/policy"
         },
@@ -188,6 +189,9 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
                         </Route>
                         <Route path="/cscenter/policy/sportsgame">
                             <SportsGamePolicy />
+                        </Route>
+                        <Route path="/cscenter/policy/minigame">
+                            <MinigamePolicy />
                         </Route>
                         <Route path="*">
                         </Route>
