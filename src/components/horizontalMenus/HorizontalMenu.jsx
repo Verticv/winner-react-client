@@ -3,7 +3,6 @@ import { useHistory } from 'react-router';
 
 const HorizontalMenu = ({
     itemsArray, 
-    setState,
 }) => {
 
     const history = useHistory();
@@ -19,7 +18,6 @@ const HorizontalMenu = ({
                     : "bg-white"
                 } overflow-hidden h-80px w-full rounded-lg flex justify-end border border-gray-dddddd`} 
                 onClick={() => {
-                    setState(item.id)
                     history.push(item.path)
                 }}
             >
