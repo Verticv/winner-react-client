@@ -384,7 +384,7 @@ const DistributorPage = ({
                     </button>
                     }
                     {isUserCountOpen[item.id] === true && (
-                        <div className="absolute bottom-0">
+                        <div className="absolute bottom-0 -mb-px">
                             <img src={BlueTriangle} alt="" />
                         </div>
                     )}
@@ -414,7 +414,7 @@ const DistributorPage = ({
                         </div>
                     </button>
                     {isUserCountOpen[item.id + 1] === true && (
-                        <div className="absolute bottom-0">
+                        <div className="absolute bottom-0 -mb-px">
                             <img src={BlueTriangle} alt="" />
                         </div>
                     )}
@@ -445,7 +445,7 @@ const DistributorPage = ({
                         </div>
                     </button>
                     {isUserCountOpen[item.id + 2] === true && (
-                        <div className="absolute bottom-0">
+                        <div className="absolute bottom-0 -mb-px">
                             <img src={BlueTriangle} alt="" />
                         </div>
                     )}
