@@ -100,7 +100,7 @@ const MinigamesPanel = ({
                             }}
                         >
                             <div className="flex items-center justify-center h-34px w-88px rounded-4px border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r45484c to-gray-r303337 cursor-pointer">
-                                <span className="font-spoqaMedium tracking-tight text-14px text-white">전체선택</span>
+                                <span className="font-spoqaMedium tracking-tight text-14px text-white">{isAllSelected ? "선택해제" : "전체선택"}</span>
                             </div>
                         </button>
                         <button className="flex items-center justify-center w-90px h-36px rounded-md bg-red-cb4343">

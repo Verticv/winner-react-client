@@ -16,7 +16,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
         <div className="w-full h-30px flex items-center pl-3px space-x-5px">
             <div
                 style={{background: "linear-gradient(to bottom, #2087f0, #1873cf"}}
-                className="h-17px w-5px rounded-3px"
+                className="h-17px w-5px rounded-3px pb-px"
             />
             <p style={{color:"#5b5b5b"}} className="font-spoqaMedium text-14px tracking-tight pt-2px">{title}</p>
         </div>
@@ -37,23 +37,26 @@ const PowerLadderGame = ({setSelectedOption}) => {
             style={{
                 width: width + "px", 
                 height: height+ "px",
-                background: "linear-gradient(to bottom, #b8d5e6, #b7c7d4)"
+                background: "linear-gradient(to bottom, #b8d5e6, #b7c7d4)",
+                borderRadius:"6px"
             }}
-            className={`overflow-hidden rounded-md flex justify-center border border-gray-dddddd flex items-center`} 
+            className={`flex justify-center items-center flex-shrink-0`} 
         >
             <div
                 style={{
-                    width: width - 0.5 + "px", 
-                    height: height - 0.5 + "px",
+                    width: width - 2 + "px", 
+                    height: height - 2 + "px",
                     backgroundColor: "#fdfdf8",
+                    borderRadius:"5px"
                 }}
-                className={`rounded-md flex justify-end border border-gray-dddddd`} 
+                className={`flex items-center`} 
             >
                 <div 
                     style={{
-                        background: `linear-gradient(to bottom, ${gradient1}, ${gradient2})`
+                        background: `linear-gradient(to bottom, ${gradient1}, ${gradient2})`,
+                        borderRadius: "5px"
                     }}
-                    className="mt-px w-full h-full rounded-b-md flex items-start justify-start"
+                    className="w-full h-full rounded-b flex items-start justify-start border-t border-white"
                 >
 
                     <div className="w-42px h-full flex flex-col  flex-shrink-0">
@@ -92,7 +95,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
                                         } else if (titleNumber === 2) {
                                             setSelectedOption([{type:"파워사다리", name:"출발점", selection: "좌", buttonType: "blue_sq"}])
                                         } else {
-                                            setSelectedOption([{type:"파워사다리", name:"즐겟수", selection: "3줄", buttonType: "blue_sq"}])
+                                            setSelectedOption([{type:"파워사다리", name:"줄갯수", selection: "3줄", buttonType: "blue_sq"}])
                                         }
                                     }} 
                                     style={{width:"121px", height:"127px", marginTop:"14px"}} 
@@ -118,7 +121,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
                                         } else if (titleNumber === 2) {
                                             setSelectedOption([{type:"파워사다리", name:"출발점", selection: "우", buttonType: "red_sq"}])
                                         } else {
-                                            setSelectedOption([{type:"파워사다리", name:"즐겟수", selection: "4줄", buttonType: "red_sq"}])
+                                            setSelectedOption([{type:"파워사다리", name:"줄갯수", selection: "4줄", buttonType: "red_sq"}])
                                         }
                                     }} 
                                     style={{width:"121px", height:"127px", marginTop: "14px"}} 
@@ -142,7 +145,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
                                     <div 
                                         onClick={() => {
                                             setstate(`${titleNumber}-1`)
-                                            setSelectedOption([{type:"파워사다리", name:"좌우/3/4줄", selection: "짝", buttonType: "red", tailSide:"left", tail:"3"}])
+                                            setSelectedOption([{type:"파워사다리", name:"좌우출발3/4줄", selection: "짝", buttonType: "red", tailSide:"left", tail:"3"}])
                                         }} 
                                         style={{width:"68px", height:"59px"}} 
                                         className="relative flex items-center justify-center cursor-pointer"
@@ -159,7 +162,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
                                     <div 
                                         onClick={() => {
                                             setstate(`${titleNumber}-2`)
-                                            setSelectedOption([{type:"파워사다리", name:"좌우/3/4줄", selection: "홀", buttonType: "blue", tailSide:"right", tail:"3"}])
+                                            setSelectedOption([{type:"파워사다리", name:"좌우출발3/4줄", selection: "홀", buttonType: "blue", tailSide:"right", tail:"3"}])
                                         }} 
                                         style={{width:"68px", height:"59px"}} 
                                         className="relative flex items-center justify-center cursor-pointer"
@@ -178,7 +181,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
                                     <div 
                                         onClick={() => {
                                             setstate(`${titleNumber}-3`)
-                                            setSelectedOption([{type:"파워사다리", name:"좌우/3/4줄", selection: "홀", buttonType: "blue", tailSide:"left", tail:"4"}])
+                                            setSelectedOption([{type:"파워사다리", name:"좌우출발3/4줄", selection: "홀", buttonType: "blue", tailSide:"left", tail:"4"}])
                                         }} 
                                         style={{width:"68px", height:"59px"}} 
                                         className="relative flex items-center justify-center cursor-pointer"
@@ -195,7 +198,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
                                     <div 
                                         onClick={() => {
                                             setstate(`${titleNumber}-4`)
-                                            setSelectedOption([{type:"파워사다리", name:"좌우/3/4줄", selection: "짝", buttonType: "red", tailSide:"right", tail:"4"}])
+                                            setSelectedOption([{type:"파워사다리", name:"좌우출발3/4줄", selection: "짝", buttonType: "red", tailSide:"right", tail:"4"}])
                                         }} 
                                         style={{width:"68px", height:"59px"}} 
                                         className="relative flex items-center justify-center cursor-pointer"
@@ -220,15 +223,19 @@ const PowerLadderGame = ({setSelectedOption}) => {
     return (
         <div 
             style={{height: "205px"}}
-            className="flex w-full"
+            className="flex w-full px-7px pb-7px"
         >
-            <div className="w-full flex flex-col px-7px pb-7px">
+            <div className="w-full flex flex-col">
                 <PanelTitle title="파워사다리" />
-                <div className="flex space-x-2px">
-                    <BetOptions titleNumber={1} subText="홀짝" />
-                    <BetOptions titleNumber={2} subText="출발점"/>
-                    <BetOptions titleNumber={3} subText="줄갯수" />
-                    <BetOptions titleNumber={4} subText="좌우" subText2="출발" subText3="3/4줄" />
+                <div className="flex space-x-6px">
+                    <div className="flex space-x-2px">
+                        <BetOptions width={308} titleNumber={1} subText="홀짝" />
+                        <BetOptions titleNumber={2} subText="출발점"/>
+                    </div>
+                    <div className="flex space-x-2px">
+                        <BetOptions width={308} titleNumber={3} subText="줄갯수" />
+                        <BetOptions titleNumber={4} subText="좌우" subText2="출발" subText3="3/4줄" />
+                    </div>
                 </div>
             </div>
         </div>

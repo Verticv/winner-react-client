@@ -23,7 +23,7 @@ const SpeedKinoGame = ({setSelectedOption}) => {
     )
 
     const BetOptions = ({
-        width = 414, 
+        width = 413, 
         height = 168,
         gradient1 = "#ffece3",
         gradient2 = "#ffbda6",
@@ -36,23 +36,26 @@ const SpeedKinoGame = ({setSelectedOption}) => {
             style={{
                 width: width + "px", 
                 height: height+ "px",
-                background: "linear-gradient(to bottom, #b8d5e6, #b7c7d4)"
+                background: "linear-gradient(to bottom, #b8d5e6, #b7c7d4)",
+                borderRadius:"6px"
             }}
-            className={`overflow-hidden rounded-md flex justify-center border border-gray-dddddd flex items-center`} 
+            className={`flex justify-center items-center flex-shrink-0`} 
         >
             <div
                 style={{
-                    width: width - 0.5 + "px", 
-                    height: height - 0.5 + "px",
+                    width: width - 2 + "px", 
+                    height: height - 2 + "px",
                     backgroundColor: "#fdfdf8",
+                    borderRadius:"5px"
                 }}
-                className={`rounded-md flex justify-end border border-gray-dddddd`} 
+                className={`flex items-center`} 
             >
                 <div 
                     style={{
-                        background: `linear-gradient(to bottom, ${gradient1}, ${gradient2})`
+                        background: `linear-gradient(to bottom, ${gradient1}, ${gradient2})`,
+                        borderRadius: "5px"
                     }}
-                    className="mt-px w-full h-full rounded-b-md flex items-start justify-start"
+                    className="w-full h-full rounded-b flex items-start justify-start border-t border-white"
                 >
 
                     <div className="w-42px h-full flex flex-col  flex-shrink-0">
@@ -205,7 +208,7 @@ const SpeedKinoGame = ({setSelectedOption}) => {
             <div className="w-full flex flex-col px-7px pb-7px">
                 <PanelTitle title="스피드키노" />
                 <div className="flex space-x-2px">
-                    <BetOptions titleNumber={1} subText="홀짝" />
+                    <BetOptions width={414} titleNumber={1} subText="홀짝" />
                     <BetOptions titleNumber={2} subText="언더" subText2="오버"/>
                     <BetOptions titleNumber={3} subText="홀짝" subText2="언오버" />
                 </div>

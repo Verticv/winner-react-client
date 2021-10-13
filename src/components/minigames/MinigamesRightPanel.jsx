@@ -92,8 +92,14 @@ const MinigamesRightPanel = ({
                         <p style={{color:"#7a5a37"}} className="text-16px tracking-tight font-spoqaBold mt-px">게임선택</p>
                     </div>
                     <div style={{width:"90px"}} className="ml-18px flex h-full z-20 items-center justify-center pr-2px flex-col space-y-4px">
-                        <p style={{color:"#3e83b3"}} className="text-12px tracking-tight font-spoqaMedium flex items-center h-12px">{selectedOption[0].type}</p>
-                        <p style={{color:"#365b7e"}} className="text-14px tracking-tight font-spoqaBold flex items-center h-12px">{selectedOption[0].name}</p>
+                        {(selectedOption[0].type === "일반볼" || selectedOption[0].type === "파워볼") && (
+                            <p style={{color:"#3e83b3"}} className="text-12px tracking-tight font-spoqaMedium flex items-center h-12px">{selectedOption[0].type}</p>
+                        )}
+                        {(selectedOption[0].type === "일반볼" || selectedOption[0].type === "파워볼") ? (
+                            <p style={{color:"#365b7e"}} className="text-14px tracking-tight font-spoqaBold flex items-center h-12px">{selectedOption[0].name}</p>
+                        ) :(
+                            <p style={{color:"#365b7e"}} className="text-12px tracking-tight font-spoqaBold flex items-center h-12px">{selectedOption[0].name}</p>
+                        )}
                     </div>
                     <div style={{width:"81px"}} className="ml-20px flex h-full z-20 flex items-center justify-center">
                         {selectedOption[0].buttonType && (
@@ -102,8 +108,9 @@ const MinigamesRightPanel = ({
                                 className="relative flex items-center justify-center cursor-pointer pt-2px"
                             >
                                 <img 
-                                    style={{height:"60px"}}
-                                    className="absolute object-contain" 
+                                    className={`${
+                                        (selectedOption[0].buttonType === "blue_sq" || selectedOption[0].buttonType === "red_sq") ? "h-54px" : "h-59px"
+                                    } absolute object-contain`} 
                                     src={
                                         selectedOption[0].buttonType === "blue" 
                                         ? BlueButton

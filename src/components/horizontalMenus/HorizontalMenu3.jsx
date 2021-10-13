@@ -6,7 +6,8 @@ import ClockIconWhite from '../../images/minigames/clock_white.png'
 const HorizontalMenu3 = ({
     itemsArray, 
     selectedTab = "", 
-    setSelectedTab
+    setSelectedTab,
+    setSelectedOption
 }) => {
 
     const history = useHistory();
@@ -23,6 +24,15 @@ const HorizontalMenu3 = ({
                 onClick={() => {
                     setSelectedTab(item.path)
                     history.push(item.path)
+                    setSelectedOption([
+                        {
+                            type: "",
+                            name: "",
+                            selection: "",
+                            buttonType: "",
+                            subtitle: null
+                        }
+                    ])
                 }}
             >
                 <div 

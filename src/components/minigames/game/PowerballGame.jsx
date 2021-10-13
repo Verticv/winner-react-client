@@ -38,7 +38,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                 background: "linear-gradient(to bottom, #dddddd, #bcbcbc)",
                 borderRadius:"6px"
             }}
-            className={`rounded-md flex justify-center flex items-center`} 
+            className={`flex justify-center items-center flex-shrink-0`} 
         >
             <div
                 style={{
@@ -54,7 +54,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                         background: `linear-gradient(to bottom, ${gradient1}, ${gradient2})`,
                         borderRadius: "5px"
                     }}
-                    className="w-full h-full rounded-b-md flex items-start justify-start rounded-md border-t border-white"
+                    className="w-full h-full rounded-b flex items-start justify-start border-t border-white"
                 >
 
                     <div className="w-42px h-full flex flex-col flex-shrink-0">
@@ -650,21 +650,21 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
 
     return (
         <div 
-            style={{height: "290px"}}
-            className="flex w-full"
+            style={{width:"1260px" ,height: "290px"}}
+            className="flex px-7px pb-7px space-x-6px w-full"
         >
-            <div className="w-full flex flex-col pl-6px">
+            <div className="w-full flex flex-col">
                 <PanelTitle title="파워볼" />
                 <div className="space-y-2px flex flex-col">
                     <div className="flex space-x-2px">
                         <BetOptions />
-                        <BetOptions titleNumber={3} count={3} width={409} subText2="언오버" />
+                        <BetOptions titleNumber={3} width={409} subText2="언오버" />
                     </div>
                     <div className="flex space-x-2px">
                         <BetOptions titleNumber={2} subText="언오버" />
-                        <BetOptions titleNumber={4} count={4} width={409} subText="구간" />
+                        <BetOptions titleNumber={4} width={409} subText="구간" />
                     </div>
-                    <BetOptions titleNumber={5} count={10} width={619} subText="숫자" />
+                    <BetOptions titleNumber={5} width={619} subText="숫자" />
                 </div>
             </div>
             <div className="w-full flex flex-col">

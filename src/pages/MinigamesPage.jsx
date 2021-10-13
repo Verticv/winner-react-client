@@ -48,7 +48,7 @@ const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
                 <div className="w-default">
 
 
-                    <HorizontalMenu3 itemsArray={GameTypeArray} selectedTab={selectedGame} setSelectedTab={setSelectedGame} />
+                    <HorizontalMenu3 itemsArray={GameTypeArray} selectedTab={selectedGame} setSelectedTab={setSelectedGame} setSelectedOption={setSelectedOption} />
 
 
                     <div className="flex w-full mt-8px space-x-8px">
