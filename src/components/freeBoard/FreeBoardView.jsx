@@ -150,7 +150,7 @@ const FreeBoardView = () => {
             <div style={{height:"171px"}} className="w-full bg-gray-fafafa rounded-2xl shadow-subNavbar px-20px pb-20px">
                 <div className="h-58px flex items-center space-x-10px">
                     <p className="text-15px font-spoqaMedium tracking-tight text-gray-r454545">댓글 작성하기</p>
-                    <div className="w-17px h-17px text-white text-12px font-roboto flex items-center justify-center rounded-full bg-red-notification">2</div>
+                    <div className="w-17px h-17px text-white text-12px font-roboto flex items-center justify-center rounded-full bg-red-notification pt-px">2</div>
                 </div>
                 <div style={{height:"93px"}} className="relative flex w-full bg-white rounded-xl border border-gray-dddddd overflow-hidden">
 
@@ -238,7 +238,7 @@ const FreeBoardView = () => {
 
                         <button className="right-0 absolute flex items-center justify-center h-93px w-120px rounded-xl bg-blue-r2068b2">
                             <div style={{width:"118px"}} className="flex items-center justify-center h-91px w-118px bg-black rounded-xl border border-blue-r3975ae bg-gradient-to-b from-blue-r125a9e via-blue-r0e508d to-blue-r0b447a cursor-pointer">
-                                <span className="font-spoqaMedium tracking-tight text-14px text-white pt-px">댓글작성</span>
+                                <span className="font-spoqaMedium tracking-tight text-14px text-white pt-px">댓글수정</span>
                             </div>
                         </button>
                     </div>
@@ -274,7 +274,7 @@ const FreeBoardView = () => {
 
                         <button className="right-0 absolute flex items-center justify-center h-93px w-120px rounded-xl bg-blue-r2068b2">
                             <div style={{width:"118px"}} className="flex items-center justify-center h-91px w-118px bg-black rounded-xl border border-blue-r3975ae bg-gradient-to-b from-blue-r125a9e via-blue-r0e508d to-blue-r0b447a cursor-pointer">
-                                <span className="font-spoqaMedium tracking-tight text-14px text-white pt-px">댓글작성</span>
+                                <span className="font-spoqaMedium tracking-tight text-14px text-white pt-px">답글작성</span>
                             </div>
                         </button>
                     </div>

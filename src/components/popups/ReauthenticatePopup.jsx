@@ -30,9 +30,8 @@ const ReauthenticatePopup = ({setPopupOpen, setSelectedTab}) => {
                 </div>
 
                 <div className="w-480px">
-                    <input 
+                    <div 
                         className="w-full h-12 text-25px text-center outline-none font-spoqaMedium tracking-tight placeholder-gray-bebebe pb-10px tracking-mimus05" 
-                        placeholder={"아이디"} 
                         onFocus={(e) => {
                             e.target.placeholder = ""
                             setSelectedInput(0)
@@ -41,7 +40,7 @@ const ReauthenticatePopup = ({setPopupOpen, setSelectedTab}) => {
                             e.target.placeholder = "아이디"
                             setSelectedInput(false)
                         }}
-                    />
+                    >louie3</div>
                     <div className={`${selectedInput === 0 ? "bg-blue-r1ca7ec h-2px -mb-px" : "bg-gray-bebebe h-px"} w-full`} />
                 </div>
                 <div className="w-480px">

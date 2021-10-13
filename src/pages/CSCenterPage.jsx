@@ -63,11 +63,11 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
 
             <div className="flex flex-col items-start limit:items-center mt-92px w-full h-full">
 
-                <Route path="/cscenter/contact">
+                <Route path="/cscenter/contact/all*">
                     <DirectoryComponent 
                         branch1="고객센터"
                         branch2="문의하기" 
-                        mainPath="/cscenter/contact"
+                        mainPath="/cscenter/contact/all"
                         setSelectedTab={setSelectedTab}
                     />
                 </Route>
@@ -169,7 +169,7 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
                     </div>
 
                     <div className="ml-20px w-1040px">
-                        <Route path="/cscenter/contact">
+                        <Route path="/cscenter/contact/all/">
                             <Contact />
                         </Route>
                         <Route path="/cscenter/contact/view/*">

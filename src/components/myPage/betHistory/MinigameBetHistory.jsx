@@ -8,6 +8,7 @@ import Sub3 from '../../../images/myPage/betHistory/minigame/sub3.png'
 import Sub4 from '../../../images/myPage/betHistory/minigame/sub4.png'
 import MinigameBetHistoryPanel from './MinigameBetHistoryPanel'
 import MinigameBetHistoryTable from '../tables/MinigameBetHistoryTable'
+import MinigameBetHistoryPowerballTable from '../tables/MinigameBetHistoryPowerballTable'
 
 const subTabsArray = [
     { text: "전체", icon: AllIcon, id: 0 },
@@ -89,6 +90,14 @@ const MinigameBetHistory = ({isState, setState}) => {
                         isPopupOpen={isPopupOpen}
                         setPopupOpen={setPopupOpen}
                     />   
+                ) : isState === 1 ? (
+                    <MinigameBetHistoryPowerballTable 
+                        array={tableArray} 
+                        checkedState={checkedState} 
+                        setCheckedState={setCheckedState}
+                        isPopupOpen={isPopupOpen}
+                        setPopupOpen={setPopupOpen}
+                    /> 
                 ) : isState === 2 ? (
                     <div className="space-y-15px">
                         <MinigameBetHistoryPanel 
@@ -107,8 +116,48 @@ const MinigameBetHistory = ({isState, setState}) => {
                             winAmount="+900,000,000"
                         />
                     </div>           
+                ) : isState === 3 ? (
+                    <div className="space-y-15px">
+                        <MinigameBetHistoryPanel 
+                            id={0} 
+                            checkedState={checkedState} 
+                            setCheckedState={setCheckedState}
+                            game="스피드키노"
+                        />
+                        <MinigameBetHistoryPanel 
+                            id={1} 
+                            checkedState={checkedState} 
+                            setCheckedState={setCheckedState}
+                            team1="우3홀 [200회]"
+                            team2="[200회] 좌3짝"
+                            choice="odd"
+                            result="win"
+                            winAmount="+900,000,000"
+                            game="스피드키노"
+                        />
+                    </div> 
+                ) : isState === 4 ? (
+                    <div className="space-y-15px">
+                        <MinigameBetHistoryPanel 
+                            id={0} 
+                            checkedState={checkedState} 
+                            setCheckedState={setCheckedState}
+                            game="키노사다리"
+                        />
+                        <MinigameBetHistoryPanel 
+                            id={1} 
+                            checkedState={checkedState} 
+                            setCheckedState={setCheckedState}
+                            team1="우3홀 [200회]"
+                            team2="[200회] 좌3짝"
+                            choice="odd"
+                            result="win"
+                            winAmount="+900,000,000"
+                            game="키노사다리"
+                        />
+                    </div>
                 ) : (
-                    <div />
+                    <></>
                 )}
                 
             </div>

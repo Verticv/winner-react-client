@@ -47,7 +47,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
         { text: "경기결과", id: 8, path: "/gameresults/sports/win-draw-lose" },
         { text: "라이브영상", id: 9 },
         { text: "게시판", id: 10, path: "/freeboard" },
-        { text: "고객센터", id: 11, path: "/cscenter/contact" },
+        { text: "고객센터", id: 11, path: "/cscenter/contact/all" },
     ];
 
     function TabsList({ items }) {

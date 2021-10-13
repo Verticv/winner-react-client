@@ -1,13 +1,10 @@
 import React, { useState } from 'react'
 import MyPageTitle from './MyPageTitle'
 import AlertIcon from '../../images/myPage/alert.png'
-import PopupControls from 'components/popups/PopupControls'
-import PointsApplyPopup from 'components/popups/PointsApplyPopup'
 
 const PointsApply = () => {
 
     const [inputValue, setInputValue] = useState(null)
-    const [isPopupOpen, setPopupOpen] = useState(true)
     const [inputClicked, setInputClicked] = useState(false)
     var nf = new Intl.NumberFormat();
 
@@ -108,7 +105,7 @@ const PointsApply = () => {
                 <div className={`${inputClicked ? "mt-19px" : "mt-20px"} flex space-x-5px w-full justify-end pr-117px`}>
                     <button 
                         className="flex items-center justify-center h-42px w-75px rounded-4px bg-blue-r004b8a"
-                        onClick={() => setInputValue(1000)}
+                        onClick={() => setInputValue(inputValue + 1000)}
                     >
                         <div className="flex items-center justify-center h-40px w-73px bg-black rounded-4px border border-blue-r2a699c bg-gradient-to-b from-blue-r004b8a via-blue-r003d70 to-blue-r012d53 cursor-pointer">
                             <span className="font-spoqaMedium tracking-tight text-14px text-white">1천P</span>
@@ -117,7 +114,7 @@ const PointsApply = () => {
 
                     <button 
                         className="flex items-center justify-center h-42px w-75px rounded-4px bg-blue-r004b8a"
-                        onClick={() => setInputValue(5000)}
+                        onClick={() => setInputValue(inputValue + 5000)}
                     >
                         <div className="flex items-center justify-center h-40px w-73px bg-black rounded-4px border border-blue-r2a699c bg-gradient-to-b from-blue-r004b8a via-blue-r003d70 to-blue-r012d53 cursor-pointer">
                             <span className="font-spoqaMedium tracking-tight text-14px text-white">5천P</span>
@@ -126,7 +123,7 @@ const PointsApply = () => {
 
                     <button 
                         className="flex items-center justify-center h-42px w-75px rounded-4px bg-blue-r004b8a"
-                        onClick={() => setInputValue(10000)}
+                        onClick={() => setInputValue(inputValue + 10000)}
                     >
                         <div className="flex items-center justify-center h-40px w-73px bg-black rounded-4px border border-blue-r2a699c bg-gradient-to-b from-blue-r004b8a via-blue-r003d70 to-blue-r012d53 cursor-pointer">
                             <span className="font-spoqaMedium tracking-tight text-14px text-white">1만P</span>
@@ -135,7 +132,7 @@ const PointsApply = () => {
 
                     <button 
                         className="flex items-center justify-center h-42px w-75px rounded-4px bg-blue-r2068b2"
-                        onClick={() => setInputValue(50000)}
+                        onClick={() => setInputValue(inputValue + 50000)}
                     >
                         <div className="flex items-center justify-center h-40px w-73px bg-black rounded-4px border border-blue-r3975ae bg-gradient-to-b from-blue-r125a9e via-blue-r0e508d to-blue-r0b447a cursor-pointer">
                             <span className="font-spoqaMedium tracking-tight text-14px text-white">5만P</span>
@@ -144,7 +141,7 @@ const PointsApply = () => {
 
                     <button 
                         className="flex items-center justify-center h-42px w-75px rounded-4px bg-blue-r286fce"
-                        onClick={() => setInputValue(100000)}
+                        onClick={() => setInputValue(inputValue + 100000)}
                     >
                         <div className="flex items-center justify-center h-40px w-73px bg-black rounded-4px border border-blue-r538dcf bg-gradient-to-b from-blue-r3176c5 via-blue-r286bb7 to-blue-r1c5ca5 cursor-pointer">
                             <span className="font-spoqaMedium tracking-tight text-14px text-white">10만P</span>
@@ -153,7 +150,7 @@ const PointsApply = () => {
 
                     <button 
                         className="flex items-center justify-center h-42px w-75px rounded-4px bg-blue-r286fce"
-                        onClick={() => setInputValue(500000)}
+                        onClick={() => setInputValue(inputValue + 500000)}
                     >
                         <div className="flex items-center justify-center h-40px w-73px bg-black rounded-4px border border-blue-r70a8f5 bg-gradient-to-b from-blue-r5497f4 via-blue-r4985d8 to-blue-r3d71b8 cursor-pointer">
                             <span className="font-spoqaMedium tracking-tight text-14px text-white">50만P</span>
@@ -162,7 +159,7 @@ const PointsApply = () => {
 
                     <button 
                         className="flex items-center justify-center h-42px w-75px rounded-4px bg-blue-r177cce"
-                        onClick={() => setInputValue(1000000)}
+                        onClick={() => setInputValue(inputValue + 1000000)}
                     >
                         <div className="flex items-center justify-center h-40px w-73px rounded-4px border border-blue-r62b3f7 bg-gradient-to-b from-blue-r5497f4 via-blue-r3a93dd to-blue-r3d71b8 cursor-pointer">
                             <span className="font-spoqaMedium tracking-tight text-14px text-white">100만P</span>
@@ -183,9 +180,7 @@ const PointsApply = () => {
 
 
             <div className="mt-20px mb-60px">
-                <PopupControls buttonChild={PopupButton} isPopupOpen={isPopupOpen} setPopupOpen={setPopupOpen}>
-                    <PointsApplyPopup setPopupOpen={setPopupOpen} />
-                </PopupControls> 
+                {PopupButton}
             </div>
 
             

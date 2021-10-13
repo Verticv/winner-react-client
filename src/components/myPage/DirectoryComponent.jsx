@@ -26,11 +26,14 @@ const DirectoryComponent = ({
             history.push("/money/charge")
             setSelectedTab("/money/charge")
         } else if (branch1 === "고객센터") {
-            history.push("/cscenter/contact")
-            setSelectedTab("/cscenter/contact")
+            history.push("/cscenter/contact/all")
+            setSelectedTab("/cscenter/contact/all")
         } else if (branch1 === "경기결과") {
-            history.push("/gameresults/win-draw-lose")
-            setSelectedTab("/gameresults/win-draw-lose")
+            history.push("/gameresults/sports/win-draw-lose")
+            setSelectedTab("/gameresults/sports/win-draw-lose")
+            if (setSelectedSubTab !== null) {
+                setSelectedSubTab("/gameresults/sports/win-draw-lose")
+            }
         } else if (branch1 === "게시판") {
             history.push("/freeboard")
         }
@@ -67,7 +70,7 @@ const DirectoryComponent = ({
                         className={`${
                             !branch3 
                             ? "font-spoqaBold text-gray-r393e41" 
-                            : "font-spoqaBold text-gray-r7c7c7c"
+                            : "font-spoqaMedium text-gray-r7c7c7c"
                             } text-13px tracking-tight cursor-pointer`}
                         onClick={() => branch2Clicked(mainPath)}
                         >

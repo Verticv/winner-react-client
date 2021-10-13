@@ -2,7 +2,7 @@ import PopupControls from 'components/popups/PopupControls';
 import React from 'react'
 import LiveCasinoHistoryDetailPopup from '../popups/LiveCasinoHistoryDetailPopup';
 
-const MinigameBetHistoryTable = ({array, checkedState, setCheckedState, isPopupOpen, setPopupOpen}) => {
+const MinigameBetHistoryPowerballTable = ({array, checkedState, setCheckedState, isPopupOpen, setPopupOpen}) => {
 
     function Cells({ items }) {
 
@@ -33,7 +33,6 @@ const MinigameBetHistoryTable = ({array, checkedState, setCheckedState, isPopupO
                 </td>
                 <td style={{width: "86px"}} className="font-robotoRegular text-center">{item.number}</td>
                 <td style={{width: "111px"}} className="font-robotoRegular text-center">{item.time}</td>
-                <td style={{width: "98px"}} className="text-center">{item.type}</td>
                 <td style={{width: "119px"}} className="text-center">{item.name}</td>
                 <td style={{width: "84px"}} className="text-center">{item.history}</td>
                 <td style={{width: "108px"}} className="font-robotoRegular text-right">{item.amount}</td>
@@ -56,7 +55,6 @@ const MinigameBetHistoryTable = ({array, checkedState, setCheckedState, isPopupO
                     <td style={{width: "58px"}} className="ml-20px text-center">선택</td>
                     <td style={{width: "86px"}} className="text-center">베팅번호</td>
                     <td style={{width: "111px"}} className="text-center">베팅시간</td>
-                    <td style={{width: "98px"}} className="text-center">게임종류</td>
                     <td style={{width: "119px"}} className="text-center">게임구분</td>
                     <td style={{width: "84px"}} className="text-center">베팅내역</td>
                     <td style={{width: "108px"}} className="text-center">베팅금액</td>
@@ -73,4 +71,4 @@ const MinigameBetHistoryTable = ({array, checkedState, setCheckedState, isPopupO
     )
 }
 
-export default MinigameBetHistoryTable
+export default MinigameBetHistoryPowerballTable

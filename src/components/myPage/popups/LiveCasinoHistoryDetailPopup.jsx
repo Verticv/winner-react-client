@@ -35,7 +35,7 @@ const LiveCasinoHistoryDetailPopup = ({setPopupOpen}) => {
                             style={{backgroundColor:"#8e9296"}}
                             className="h-42px flex items-center justify-center text-16px font-spoqaMedium tracking-tight text-white"
                         >
-                            바타라 on 2021-08-09 17:26:30
+                            바카라 on 2021-08-09 17:26:30
                         </div>
 
                         <div className="flex">
@@ -218,19 +218,19 @@ const LiveCasinoHistoryDetailPopup = ({setPopupOpen}) => {
                                     style={{height:"41px"}} 
                                     className="h-41px border-b border-gray-dddddd flex items-center justify-center"
                                 >
-                                    게임
+                                    총 베팅금액
                                 </div>
                                 <div 
                                     style={{height:"41px"}} 
                                     className="h-41px border-b border-gray-dddddd flex items-center justify-center"
                                 >
-                                    테이블아이디
+                                    총 지불금액
                                 </div>
                                 <div 
                                     style={{height:"41px"}} 
                                     className="h-41px border-b border-gray-dddddd flex items-center justify-center"
                                 >
-                                    게임상태
+                                    총 회원승패
                                 </div>
                             </div>
                             <div 

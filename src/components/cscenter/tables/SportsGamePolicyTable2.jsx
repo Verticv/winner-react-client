@@ -4,8 +4,8 @@ const SportsGamePolicyTable2 = ({array}) => {
 
     function Cells({ items }) {     
         return items.map(item => (
-            <tr className="bg-gray-fefefe rounded-3xl font-spoqa text-14px tracking-tight text-gray-r585858 h-56px w-full border-b border-gray-dddddd">
-                <td style={{width: "248px"}} className="font-spoqa h-56px text-center pl-20px flex justify-around items-center">
+            <tr className="bg-gray-fefefe rounded-xl font-spoqa text-14px tracking-tight text-gray-r585858 h-56px w-full border-b border-gray-dddddd">
+                <td style={{width: "248px"}} className="font-spoqaMedium h-56px text-center pl-20px flex justify-around items-center">
                     <p style={{color: item.color}}>{item.title}</p>
                     {item.title2 && (
                         <p>{item.title2}</p>
@@ -21,8 +21,8 @@ const SportsGamePolicyTable2 = ({array}) => {
 
     
     return (
-        <table className="shadow-subNavbar rounded-3xl overflow-hidden">
-            <thead className="bg-gray-fafafa rounded-3xl font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd">
+        <table className="shadow-subNavbar rounded-xl overflow-hidden">
+            <thead className="bg-gray-fafafa rounded-xl font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd">
                 <tr>
                     <td style={{width: "248px"}} className="text-center pl-20px">타입및 경기시간</td>
                     <td style={{width: "792px"}} className="text-center">결과적용기준</td>

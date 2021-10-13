@@ -47,36 +47,27 @@ const LeftMenu = ({
     const EditProfileButton = ({path, text, icon, iconHighlight, selectedTab}) => (
         <button 
             className={`${
-                selectedTab === path
+                pathname.includes(path)
                 ? "bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2" 
                 : "bg-white"
-            } flex w-full items-center p-5px h-53px rounded-full`} 
+            } flex w-full items-center p-5px h-53px rounded-full group`} 
             onClick={() => {
                 buttonPressed(path)
                 setPopupOpen(true)
             }}
-            onMouseEnter={() => mouseHover(path)}
-            onMouseLeave={() => mouseLeave(path)}
         >
             <div 
                 className={`${
-                    (selectedTab === path) && "shadow-plain9"
+                    (pathname.includes(path)) && "shadow-plain9"
                 } h-42px w-42px bg-white rounded-full flex items-center justify-center flex-shrink-0`} 
             >
                 <img 
                     className="h-42px w-42px bg-white rounded-full flex items-center justify-center" 
-                    src={(selectedTab === path) ? iconHighlight : icon} 
+                    src={(pathname.includes(path)) ? iconHighlight : icon} 
                     alt="icon" />
             </div>
             <div className="w-full flex mx-14px justify-between items-center">                
-                <label
-                    className={`${
-                        (selectedTab === path)
-                        ? "text-white" 
-                        : isMouseHover === path
-                        ? "text-gray-r454545"
-                        : "text-gray-r8c8c8c"
-                    } font-spoqaMedium text-16px cursor-pointer tracking-tight`}>{text}</label>
+                <label className={`${(pathname.includes(path)) ? "text-white group-hover:text-white" : "text-gray-r8c8c8c group-hover:text-gray-r454545"} font-spoqaMedium text-16px cursor-pointer tracking-tight`}>{text}</label>
             </div>
         </button>
     )
@@ -159,7 +150,7 @@ const LeftMenu = ({
                             </div>
                         </button>
                             
-                        <div className={`${isExpanded === item.path && pathname.includes(item.mainPath) ? "" : "hidden"} font-spoqaMedium text-16px cursor-pointer tracking-tight mt-px`} >
+                        <div className={`${isExpanded === item.path || pathname.includes(item.mainPath) ? "" : "hidden"} font-spoqaMedium text-16px cursor-pointer tracking-tight mt-px`} >
                             {item.sub1 && (
                                 <button 
                                     onClick={() => {

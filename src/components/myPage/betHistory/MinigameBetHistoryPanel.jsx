@@ -4,6 +4,8 @@ import ClockIcon from '../../../images/myPage/betHistory/clock.png'
 import UpIcon from '../../../images/myPage/betHistory/UP.png'
 import DownIcon from '../../../images/myPage/betHistory/DOWN.png'
 import Example1 from '../../../images/myPage/betHistory/minigame/example1.png'
+import Sub3 from '../../../images/myPage/betHistory/minigame/sub3.png'
+import Sub4 from '../../../images/myPage/betHistory/minigame/sub4.png'
 
 const MinigameBetHistoryPanel = ({
     id = 0,
@@ -23,7 +25,8 @@ const MinigameBetHistoryPanel = ({
     team1 = "홀 [200회]",
     team2 = "[200회] 짝",
     choice = "even",
-    result = "lose"
+    result = "lose",
+    game ="파워사다리"
 }) => {
 
     const handleOnChange = (position) => {
@@ -147,8 +150,21 @@ const MinigameBetHistoryPanel = ({
         <div className="w-full rounded-lg overflow-hidden shadow-subNavbar">
             <div className="flex items-center justify-between h-56px w-full bg-blue-r3591d5 border-b border-gray-dddddd px-20px">
                 <div className="flex items-center">
-                    <img src={Example1} alt="" />
-                    <span className="ml-4px font-spoqaMedium text-20px text-white pt-2px">파워사다리</span>
+                    {game === "파워사다리" ? (
+                        <img src={Example1} alt="" />
+                    ) : game === "스피드키노" ? (
+                        <img style={{zoom:"0.8"}} className="object-contain" src={Sub3} alt="" />
+                    ) : (
+                        <img style={{zoom:"0.8"}} className="object-contain" src={Sub4} alt="" />
+                    )}
+                    <span className="ml-4px font-spoqaMedium text-20px text-white pt-2px">
+                        {game === "파워사다리" 
+                        ? "파워사다리" 
+                        : game === "스피드키노" 
+                        ? "스피드키노"
+                        : "키노사다리"
+                        }
+                    </span>
                 </div>
                 <div className="flex items-center">
                     <img src={ClockIcon} alt="" />

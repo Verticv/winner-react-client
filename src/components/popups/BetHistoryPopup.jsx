@@ -8,8 +8,8 @@ import Icon6 from '../../images/myPage/betHistory/ico_6.png'
 import Icon7 from '../../images/myPage/betHistory/ico_7.png'
 import Icon8 from '../../images/myPage/betHistory/ico_8.png'
 import Icon9 from '../../images/myPage/betHistory/ico_9.png'
-import HorizontalMenu from 'components/horizontalMenus/HorizontalMenu'
 import SportsBetHistory from 'components/myPage/betHistory/SportsBetHistoryPanel'
+import HorizontalMenu8 from 'components/horizontalMenus/HorizontalMenu8'
 
 const BetHistoryPopup = ({setPopupOpen, setAttachedArray, attachedArray}) => {
 
@@ -26,7 +26,6 @@ const BetHistoryPopup = ({setPopupOpen, setAttachedArray, attachedArray}) => {
 
     const [selectedTab, setSelectedTab] = useState(1)
 
-
     return (
         <div style={{height:"811px", width: "1110px"}} className="flex flex-col rounded-lg overflow-hidden">
             <div className="relative h-71px bg-blue-r5d799c flex items-center justify-center flex-shrink-0">
@@ -39,14 +38,15 @@ const BetHistoryPopup = ({setPopupOpen, setAttachedArray, attachedArray}) => {
             <div className="w-full h-full bg-white pt-30px pb-40px">
                 
                 <div className="px-36px">
-                    <HorizontalMenu itemsArray={tabsArray} isState={selectedTab} setState={setSelectedTab} />
+                    <HorizontalMenu8 itemsArray={tabsArray} selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
                 </div>
-                <div style={{height: "559px"}} className="overflow-y-scroll mt-30px py-5px px-36px space-y-28px">
-                    <SportsBetHistory type={0} setPopupOpen={setPopupOpen} isPopup={true} id={0} attachedArray={attachedArray} setAttachedArray={setAttachedArray} />
-                    <SportsBetHistory type={1} setPopupOpen={setPopupOpen} winAmount="+900,000,000" isPopup={true} id={1}  attachedArray={attachedArray} setAttachedArray={setAttachedArray} />
-                    <SportsBetHistory type={2} setPopupOpen={setPopupOpen} isPopup={true} id={2} attachedArray={attachedArray} setAttachedArray={setAttachedArray} />
+                <div className="w-full px-30px">
+                    <div style={{height: "559px"}} className="overflow-y-scroll mt-30px py-5px px-6px space-y-28px">
+                        <SportsBetHistory type={0} setPopupOpen={setPopupOpen} isPopup={true} id={0} attachedArray={attachedArray} setAttachedArray={setAttachedArray} />
+                        <SportsBetHistory type={1} setPopupOpen={setPopupOpen} winAmount="+900,000,000" isPopup={true} id={1}  attachedArray={attachedArray} setAttachedArray={setAttachedArray} />
+                        <SportsBetHistory type={2} setPopupOpen={setPopupOpen} isPopup={true} id={2} attachedArray={attachedArray} setAttachedArray={setAttachedArray} />
+                    </div>
                 </div>
-                
             </div>
 
             

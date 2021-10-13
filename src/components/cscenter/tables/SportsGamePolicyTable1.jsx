@@ -9,9 +9,9 @@ const SportsGamePolicyTable1 = ({array}) => {
         ruleText, 
         ruleText2 = null
     }) => (
-        <tr className={`${ruleText2 ? "h-73px" : "h-56px"} bg-gray-fefefe rounded-3xl font-spoqa text-14px tracking-tight text-gray-r585858  w-full border-b border-gray-dddddd`}>
-            <td style={{width: "162px", color: typeColor}} className=" font-spoqa w-235px h-56px text-center">{type}</td>
-            <td style={{width: "86px", color: overtime === null ? "#FF0000" : overtime === true ? "#dbae00" : "#585858"}} className="font-spoqa h-56px text-center">{overtime === null ? "연장포함" : overtime === true ? "연장제외" : "연장없음"}</td>
+        <tr className={`${ruleText2 ? "h-73px" : "h-56px"} bg-gray-fefefe rounded-xl font-spoqa text-14px tracking-tight text-gray-r585858  w-full border-b border-gray-dddddd`}>
+            <td style={{width: "162px", color: typeColor}} className="font-spoqaMedium w-235px h-56px text-center">{type}</td>
+            <td style={{width: "86px", color: overtime === null ? "#FF0000" : overtime === true ? "#dbae00" : "#585858"}} className="font-spoqaMedium h-56px text-center">{overtime === null ? "연장포함" : overtime === true ? "연장제외" : "연장없음"}</td>
             <td style={{width: "792px"}} className="h-56px pl-20px -space-y-4px">
                 <p>{ruleText}</p>
                 <p>{ruleText2}</p>
@@ -26,8 +26,8 @@ const SportsGamePolicyTable1 = ({array}) => {
     )}
 
     return (
-        <table className="shadow-subNavbar rounded-3xl overflow-hidden">
-            <thead className="bg-gray-fafafa rounded-3xl font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd">
+        <table className="shadow-subNavbar rounded-xl overflow-hidden">
+            <thead className="bg-gray-fafafa rounded-xl font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd">
                 <tr>
                     <td style={{width: "162px"}} className="text-center">베팅타입</td>
                     <td style={{width: "86px"}} className="w-170px text-center">적용시간</td>

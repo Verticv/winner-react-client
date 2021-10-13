@@ -100,7 +100,7 @@ const AnnouncementTable = () => {
     }
 
     return (
-        <table className="shadow-subNavbar rounded-3xl overflow-hidden w-full">
+        <table className="shadow-subNavbar rounded-xl overflow-hidden w-full">
             <thead className="bg-gray-fafafa rounded-3xl font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd">
                 <tr>
                     <td style={{width: "173px"}} className="text-center">구분</td>

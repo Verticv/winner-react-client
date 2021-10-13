@@ -9,7 +9,7 @@ import AnnouncementTable from './tables/AnnouncementTable'
 const Announcement = () => {
 
     const [page, setPage] = useState(0)
-    const [isDropdownOpen, setDropdownOpen] = useState()
+    const [isDropdownOpen, setDropdownOpen] = useState(true)
     const [selectedCarrier, setSelectedCarrier] = useState("제목")
 
     const dropDownCellClass = "flex w-120px h-40px py-2px bg-white items-center hover:bg-blue-lightGradLight px-14px"
@@ -29,12 +29,6 @@ const Announcement = () => {
                 setDropdownOpen(false)
             }}>
                 본문
-            </button>
-            <button className={dropDownCellClass} onClick={() => {
-                setSelectedCarrier("작성자")
-                setDropdownOpen(false)
-            }}>
-                작성자
             </button>
         </div>
     )

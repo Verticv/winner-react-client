@@ -18,6 +18,7 @@ import SlotBetHistory from './betHistory/SlotBetHistory'
 import MinigameBetHistory from './betHistory/MinigameBetHistory'
 import ARGameBetHistory from './betHistory/ARGameBetHistory'
 import { Route } from 'react-router'
+import ESportsBetHistory from './betHistory/ESportsBetHistory'
 
 const tabsArray = [
     { text: "전체", icon: Icon1, id: 0, path: "/mypage/bet-history" },
@@ -46,7 +47,7 @@ const BetHistory = () => {
             <MyPageTitle title="베팅내역" />
             
             <div className="relative w-full mt-20px">
-                <HorizontalMenu itemsArray={tabsArray} setState={setSelectedTab} />
+                <HorizontalMenu itemsArray={tabsArray} setSelectedTab={setSelectedTab} />
                 {(selectedTab !== 0 && selectedTab !== 3 && selectedTab !== 4 && selectedTab !== 7 && selectedTab !== 8) && (
                     <div style={{marginLeft: `${selectedTab * 116 + 50}px`}} className={`absolute bottom-0 w-20px -mb-10px overflow-hidden inline-block `}>
                         <div className="h-10px w-10px bg-gradient-to-br from-gray-d2dfea via-gray-eff3f6 to-gray-eff3f6 rotate-45 transform origin-bottom-left shadow"></div>
@@ -55,33 +56,51 @@ const BetHistory = () => {
             </div>
             
             <Route exact path="/mypage/bet-history">
-                <AllBetHistory />
+                <>
+                    <AllBetHistory />
+                    <Pagination page={page} setPage={setPage}/>   
+                </>
             </Route>
             <Route path="/mypage/bet-history/live-casino">
-                <LiveCasinoBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
+                <>
+                    <LiveCasinoBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
+                    <Pagination page={page} setPage={setPage}/>   
+                </>
             </Route>
             <Route path="/mypage/bet-history/slot-game">
-                <SlotBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
+                <>
+                    <SlotBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
+                    <Pagination page={page} setPage={setPage}/>   
+                </>
             </Route>
             <Route path="/mypage/bet-history/sports">
-                <SportsBetHistory checkedState={checkedState} setCheckedState={setCheckedState} />
+                <>
+                    <SportsBetHistory checkedState={checkedState} setCheckedState={setCheckedState} />
+                    <Pagination page={page} setPage={setPage}/>   
+                </>
             </Route>
             <Route path="/mypage/bet-history/e-sports">
-                {/* <SportsBetHistory checkedState={checkedState} setCheckedState={setCheckedState} /> */}
-                <div className="mt-40px"/>
+                <>
+                    <ESportsBetHistory />
+                    <Pagination page={page} setPage={setPage}/>   
+                </>
             </Route>
             <Route path="/mypage/bet-history/minigame">
-                <MinigameBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
+                <>
+                    <MinigameBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
+                    <Pagination page={page} setPage={setPage}/>   
+                </>
             </Route>
             <Route path="/mypage/bet-history/ar-game">
-                <ARGameBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
+                <>
+                    <ARGameBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
+                    <Pagination page={page} setPage={setPage}/>   
+                </>
             </Route>
             <Route path="/mypage/bet-history/fishing-game">
-                {/* <ARGameBetHistory isState={selectedSubTab} setState={setSelectedSubTab} /> */}
                 <div className="mt-40px"/>
             </Route>
             <Route path="/mypage/bet-history/lottery-game">
-                {/* <ARGameBetHistory isState={selectedSubTab} setState={setSelectedSubTab} /> */}
                 <div className="mt-40px"/>
             </Route>
 
@@ -101,7 +120,6 @@ const BetHistory = () => {
                 <ARGameBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
             )} */}
 
-            <Pagination page={page} setPage={setPage}/>   
 
         </div>
     )

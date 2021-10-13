@@ -380,14 +380,14 @@ const FreeBoardMain = () => {
                             {item.text}
                         </p>
                         {item.replies && (
-                            <div className="h-17px px-8px rounded-full flex items-center justify-center text-white font-roboto text-12px bg-blue-r0056a6">{item.replies}</div>
+                            <div className="h-17px pl-7px pr-8px rounded-full flex items-center justify-center text-white font-roboto text-12px bg-blue-r0056a6">{item.replies}</div>
                         )}
                         {item.isBetHistory === true && (
                             <div style={{backgroundColor: "#41b06c"}} className="h-25px w-65px rounded-full flex items-center justify-center text-white font-spoqaMedium text-12px">베팅내역</div>
                         )}
                         {item.isRead === false && (
                             <div className="w-18px h-18px bg-red-notification rounded-full text-12px text-white flex items-center justify-center font-roboto">
-                                N
+                                <p className="flex items-center h-12px pr-px pt-px">N</p>
                             </div>
                         )}
                     </div>
