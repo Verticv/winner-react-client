@@ -101,7 +101,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
                                     style={{width:"121px", height:"127px", marginTop:"14px"}} 
                                     className="relative flex items-center justify-center cursor-pointer"
                                 >
-                                    <img className="absolute object-none" src={state === `${titleNumber}-1` ? BlueButtonPressed : BlueButton} alt="" />
+                                    <img className={`absolute object-none ${state === `${titleNumber}-1` && "mb-2px"}`} src={state === `${titleNumber}-1` ? BlueButtonPressed : BlueButton} alt="" />
                                     <p 
                                         style={{textShadow: "2px 2px 2px #00000050", fontSize: "48px"}} 
                                         className="z-20 font-swagger text-white"
@@ -127,7 +127,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
                                     style={{width:"121px", height:"127px", marginTop: "14px"}} 
                                     className="relative flex items-center justify-center cursor-pointer"
                                 >
-                                    <img className="absolute object-none" src={state === `${titleNumber}-2` ? RedButtonPressed : RedButton} alt="" />
+                                    <img className={`absolute object-none ${state === `${titleNumber}-2` && "mb-2px"}`} src={state === `${titleNumber}-2` ? RedButtonPressed : RedButton} alt="" />
                                     <p 
                                         style={{textShadow: "2px 2px 2px #00000050", fontSize: "48px"}} 
                                         className="z-20 font-swagger text-white text-20px"
@@ -223,7 +223,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
     return (
         <div 
             style={{height: "205px"}}
-            className="flex w-full px-7px pb-7px"
+            className="flex w-full px-6px pb-7px"
         >
             <div className="w-full flex flex-col">
                 <PanelTitle title="파워사다리" />

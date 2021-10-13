@@ -101,7 +101,7 @@ const KinoLadderGame = ({setSelectedOption}) => {
                                     style={{width:"121px", height:"127px", marginTop:"14px"}} 
                                     className="relative flex items-center justify-center cursor-pointer"
                                 >
-                                    <img className="absolute object-none" src={state === `${titleNumber}-1` ? BlueButtonPressed : BlueButton} alt="" />
+                                    <img className={`absolute object-none ${state === `${titleNumber}-1` && "mb-2px"}`} src={state === `${titleNumber}-1` ? BlueButtonPressed : BlueButton} alt="" />
                                     <p 
                                         style={{textShadow: "2px 2px 2px #00000050", fontSize: "48px"}} 
                                         className="z-20 font-swagger text-white"
@@ -127,7 +127,7 @@ const KinoLadderGame = ({setSelectedOption}) => {
                                     style={{width:"121px", height:"127px", marginTop: "14px"}} 
                                     className="relative flex items-center justify-center cursor-pointer"
                                 >
-                                    <img className="absolute object-none" src={state === `${titleNumber}-2` ? RedButtonPressed : RedButton} alt="" />
+                                    <img className={`absolute object-none ${state === `${titleNumber}-2` && "mb-2px"}`} src={state === `${titleNumber}-2` ? RedButtonPressed : RedButton} alt="" />
                                     <p 
                                         style={{textShadow: "2px 2px 2px #00000050", fontSize: "48px"}} 
                                         className="z-20 font-swagger text-white text-20px"
@@ -225,7 +225,7 @@ const KinoLadderGame = ({setSelectedOption}) => {
             style={{height: "205px"}}
             className="flex w-full"
         >
-            <div className="w-full flex flex-col px-7px pb-7px">
+            <div className="w-full flex flex-col px-6px pb-7px">
                 <PanelTitle title="키노사다리" />
                 <div className="flex space-x-6px">
                     <div className="flex space-x-2px">

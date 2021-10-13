@@ -73,7 +73,7 @@ const HorizontalMenu3 = ({
                                 item.id === 0 
                                 ? "ml-4px"
                                 : item.id === 1 
-                                ? "ml-4px"
+                                ? "ml-6px"
                                 : item.id === 2
                                 ? "ml-8px"
                                 : "ml-7px"
@@ -84,7 +84,7 @@ const HorizontalMenu3 = ({
                     </div>
                     
                     <div className="flex items-center ">
-                        <img className="mr-5px object-none mb-4px" src={selectedTab === item.path ? ClockIconWhite : ClockIcon} alt="" />
+                        <img className="mr-4px object-none mb-5px" src={selectedTab === item.path ? ClockIconWhite : ClockIcon} alt="" />
                         <div 
                             style={{color: selectedTab === item.path ? "#ffffff" : "#748496"}}
                             className="text-24px tracking-tight font-swagger flex h-24px items-center mb-px"

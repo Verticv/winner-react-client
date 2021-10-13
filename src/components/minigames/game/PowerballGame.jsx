@@ -80,7 +80,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                     </div>
 
                     {titleNumber === 1 || titleNumber === 6 ? (
-                        <div className="flex justify-center w-full h-full items-start">
+                        <div className="flex justify-center w-full h-full items-start pt-2px space-x-6px">
                             <div className="flex flex-col items-center">
                                 <div 
                                     onClick={() => {
@@ -120,7 +120,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                             </div>
                         </div>
                     ) : titleNumber === 2 || titleNumber === 7 ? (
-                        <div className="flex justify-center w-full h-full items-start">
+                        <div className="flex justify-center w-full h-full items-start pt-2px space-x-6px">
                             <div className="flex flex-col items-center">
                                 <div 
                                     onClick={() => {
@@ -169,7 +169,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                             </div>
                         </div>
                     ) : titleNumber === 3 || titleNumber === 8 ? (
-                        <div className="flex justify-center w-full h-full items-start">
+                        <div className="flex justify-center w-full h-full items-start pt-2px space-x-6px">
                             <div className="flex flex-col items-center">
                                 <div 
                                     onClick={() => {
@@ -264,7 +264,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                             </div>
                         </div>
                     ) : titleNumber === 4 ? (
-                        <div className="flex justify-center w-full h-full items-start">
+                        <div className="flex justify-center w-full h-full items-start pt-2px space-x-6px">
                             <div className="flex flex-col items-center">
                                 <div 
                                     onClick={() => {
@@ -335,7 +335,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                             </div>
                         </div>
                     ) : titleNumber === 5 ? (
-                        <div className="flex justify-center w-full h-full items-start -space-x-12px">
+                        <div className="flex justify-center w-full h-full items-start -space-x-12px pt-2px">
                             <div className="flex flex-col items-center">
                                 <div 
                                     onClick={() => {
@@ -483,7 +483,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                             </div>
                         </div>
                     ) : titleNumber === 9 ? (
-                        <div className="flex justify-center w-full h-full items-start space-x-34px">
+                        <div className="flex justify-center w-full h-full items-start space-x-43px pt-2px">
                             <div className="flex flex-col items-center">
                                 <div 
                                     onClick={() => {
@@ -537,7 +537,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                             </div>
                         </div>
                     ) : titleNumber === 10 ? (
-                        <div className="flex justify-center w-full h-full items-start space-x-20px">
+                        <div className="flex justify-center w-full h-full items-start space-x-26px pt-2px">
                             <div className="flex flex-col items-center">
                                 <div 
                                     onClick={() => {
@@ -651,7 +651,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
     return (
         <div 
             style={{width:"1260px" ,height: "290px"}}
-            className="flex px-7px pb-7px space-x-6px w-full"
+            className="flex px-6px pb-7px space-x-6px w-full"
         >
             <div className="w-full flex flex-col">
                 <PanelTitle title="파워볼" />

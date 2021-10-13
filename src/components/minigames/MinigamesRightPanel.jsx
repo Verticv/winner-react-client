@@ -24,22 +24,41 @@ const MinigamesRightPanel = ({
 
     const BetAmountButton = ({amount}) => (
         <button 
-            style={{width:"110px", backgroundColor: "#b3bac1"}} 
-            className="flex items-center h-46px justify-center rounded-4px flex-shrink-0"
+            style={{
+                width:"110px", 
+                borderColor: "#b3bac1"
+            }} 
+            className="flex items-center h-46px justify-center rounded-4px flex-shrink-0 border"
             onClick={() => setInputValue(inputValue + amount)}
         >
-            <div style={{width:"108px", borderRadius:"3px"}} className="flex items-center justify-center h-44px border border-white bg-gradient-to-b from-white to-blue-c4d6e6 via-gray-f5feff cursor-pointer">
-                <span className="font-roboto tracking-tight text-16px text-gray-r585858">{nf.format(amount)}</span>
+            <div 
+                style={{
+                    width:"108px", 
+                    borderRadius:"3px",
+                    background: "linear-gradient(to bottom, #feffff, #cedeed)",
+                }} 
+                className="flex items-center justify-center h-44px border border-white cursor-pointer pt-px">
+                <span className="font-roboto tracking-tight text-16px text-gray-r585858 ">{nf.format(amount)}</span>
             </div>
         </button>
     )
     const BetFixedAmountButton = ({amount, text}) => (
         <button 
-            style={{width:"110px"}} 
-            className="flex items-center justify-center h-46px rounded-4px bg-gray-r171a1d flex-shrink-0"
+            style={{
+                width:"110px",
+                borderColor: "#171a1d",
+            }} 
+            className="flex items-center justify-center h-46px rounded-4px flex-shrink-0 border"
             onClick={() => setInputValue(amount)}
         >
-            <div style={{width:"108px", borderRadius:"3px"}} className="flex items-center justify-center h-44px border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e to-gray-r303337 cursor-pointer">
+            <div 
+                style={{
+                    width:"108px", 
+                    borderRadius:"3px",
+                    background: "linear-gradient(to bottom, #585b5e, #303337)",
+                    borderColor:"#747679"
+                }} 
+                className="flex items-center justify-center h-44px border cursor-pointer pt-px">
                 <span className="font-spoqaMedium tracking-tight text-16px text-white">{text}</span>
             </div>
         </button>
@@ -87,8 +106,8 @@ const MinigamesRightPanel = ({
 
                 <div style={{height: "62px"}} className="relative w-full rounded-sm flex">
                     <img className="absolute object-none z-10" src={SelectionBg} alt="" />
-                    <div style={{width:"106px"}} className="ml-8px flex h-full z-20 flex items-center justify-center space-x-4px pt-1px pr-8px">
-                        <img src={CheckIcon} alt="" />
+                    <div style={{width:"106px"}} className="ml-8px flex h-full z-20 flex items-center justify-center space-x-2px pt-1px pr-8px">
+                        <img className="" src={CheckIcon} alt="" />
                         <p style={{color:"#7a5a37"}} className="text-16px tracking-tight font-spoqaBold mt-px">게임선택</p>
                     </div>
                     <div style={{width:"90px"}} className="ml-18px flex h-full z-20 items-center justify-center pr-2px flex-col space-y-4px">
@@ -154,7 +173,7 @@ const MinigamesRightPanel = ({
                 <p className="text-16px font-spoqaMedium tracking-tight text-gray-r454545">배당률</p>
                 <p style={{color:"#f26522"}} className="text-16px font-roboto tracking-tight">1.95</p>
             </div>
-            <div className="h-45px border-b border-gray-dddddd flex items-center justify-between pl-14px pr-13px">
+            <div className="h-44px border-b border-gray-dddddd flex items-center justify-between pl-14px pr-13px">
                 <p className="text-16px font-spoqaMedium tracking-tight text-gray-r454545">베팅금액</p>
 
                 <input 
