@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import ClockIcon from '../../images/minigames/clock_blue.png'
 import RefreshIcon from '../../images/minigames/refresh_icon.png'
 import SelectionBg from '../../images/minigames/selection_bg.png'
@@ -11,6 +11,8 @@ import YellowButton from '../../images/minigames/yellow.png'
 import GreenButton from '../../images/minigames/green.png'
 import BlueButtonSq from '../../images/minigames/blue_sq.png'
 import RedButtonSq from '../../images/minigames/red_sq.png'
+import { format } from 'date-fns'
+import { ko } from "date-fns/locale"
 
 const MinigamesRightPanel = ({
     selectedGame,
@@ -23,14 +25,37 @@ const MinigamesRightPanel = ({
     const BetAmountButton = ({amount}) => (
         <button 
             style={{width:"110px", backgroundColor: "#b3bac1"}} 
-            className="flex items-center h-46px justify-center rounded-4px"
+            className="flex items-center h-46px justify-center rounded-4px flex-shrink-0"
             onClick={() => setInputValue(inputValue + amount)}
         >
-            <div style={{width:"108px"}} className="flex items-center justify-center rounded-4px h-44px border border-white bg-gradient-to-b from-white to-blue-c4d6e6 via-gray-f5feff cursor-pointer">
+            <div style={{width:"108px", borderRadius:"3px"}} className="flex items-center justify-center h-44px border border-white bg-gradient-to-b from-white to-blue-c4d6e6 via-gray-f5feff cursor-pointer">
                 <span className="font-roboto tracking-tight text-16px text-gray-r585858">{nf.format(amount)}</span>
             </div>
         </button>
     )
+    const BetFixedAmountButton = ({amount, text}) => (
+        <button 
+            style={{width:"110px"}} 
+            className="flex items-center justify-center h-46px rounded-4px bg-gray-r171a1d flex-shrink-0"
+            onClick={() => setInputValue(amount)}
+        >
+            <div style={{width:"108px", borderRadius:"3px"}} className="flex items-center justify-center h-44px border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e to-gray-r303337 cursor-pointer">
+                <span className="font-spoqaMedium tracking-tight text-16px text-white">{text}</span>
+            </div>
+        </button>
+    )
+
+    const dateFormat = "MM월 dd일"
+    const dateFormat1 = "hh:mm:ss"
+
+    const [time, setTime] = useState(Date.now());
+    
+    useEffect(() => {
+        const interval = setInterval(() => setTime(Date.now()), 1000);
+        return () => {
+            clearInterval(interval);
+        };
+    }, []);
 
     return (
         <div 
@@ -48,9 +73,9 @@ const MinigamesRightPanel = ({
                     }} 
                     className="h-52px w-full rounded-lg flex justify-between items-center pr-6px"
                 >
-                    <div className="flex flex-col px-7px space-y-4px pt-px">
+                    <div className="flex flex-col px-7px space-y-4px pt-2px">
                         <div className="text-16px font-spoqaMedium tracking-tight text-white h-16px flex items-center">
-                            08원 02일 18:25:00 <p style={{color:"#ffea00"}} className="ml-3px">[216회차]</p>
+                            {format(time, dateFormat, { locale : ko })} {format(time, dateFormat1, { locale : ko })} <p style={{color:"#ffea00"}} className="ml-3px">[216회차]</p>
                         </div>
                         <div style={{color:"#bffff5"}} className="flex space-x-2px text-18px font-spoqaBold tracking-tight h-18px items-center">
                             <img className="object-none mb-2px" src={ClockIcon} alt="" />
@@ -62,7 +87,7 @@ const MinigamesRightPanel = ({
 
                 <div style={{height: "62px"}} className="relative w-full rounded-sm flex">
                     <img className="absolute object-none z-10" src={SelectionBg} alt="" />
-                    <div style={{width:"106px"}} className="ml-8px flex h-full z-20 flex items-center justify-center space-x-4px pt-2px pr-8px">
+                    <div style={{width:"106px"}} className="ml-8px flex h-full z-20 flex items-center justify-center space-x-4px pt-1px pr-8px">
                         <img src={CheckIcon} alt="" />
                         <p style={{color:"#7a5a37"}} className="text-16px tracking-tight font-spoqaBold mt-px">게임선택</p>
                     </div>
@@ -122,7 +147,7 @@ const MinigamesRightPanel = ({
                 <p className="text-16px font-spoqaMedium tracking-tight text-gray-r454545">배당률</p>
                 <p style={{color:"#f26522"}} className="text-16px font-roboto tracking-tight">1.95</p>
             </div>
-            <div className="h-47px border-b border-gray-dddddd flex items-center justify-between pl-14px pr-13px">
+            <div className="h-45px border-b border-gray-dddddd flex items-center justify-between pl-14px pr-13px">
                 <p className="text-16px font-spoqaMedium tracking-tight text-gray-r454545">베팅금액</p>
 
                 <input 
@@ -145,47 +170,28 @@ const MinigamesRightPanel = ({
             
             <div style={{height:"208px"}} className="w-full bg-gray-fafafa p-7px">
 
-                <div className="grid grid-cols-3 gap-2px">
-                    <BetAmountButton amount={5000}/>
-                    <BetAmountButton amount={10000}/>
-                    <BetAmountButton amount={50000}/>
-                    <BetAmountButton amount={100000}/>
-                    <BetAmountButton amount={500000}/>
-                    <BetAmountButton amount={1000000}/>
+                <div className="flex flex-col space-y-2px">
+                    <div className="flex space-x-2px">
+                        <BetAmountButton amount={5000}/>
+                        <BetAmountButton amount={10000}/>
+                        <BetAmountButton amount={50000}/>
+                    </div>
+                    <div className="flex space-x-2px">
+                        <BetAmountButton amount={100000}/>
+                        <BetAmountButton amount={500000}/>
+                        <BetAmountButton amount={1000000}/>
+                    </div>
+                    <div className="flex space-x-2px">
+                        <BetFixedAmountButton amount={22170} text="잔돈" />
+                        <BetFixedAmountButton amount={null} text="초기화" />
+                        <BetFixedAmountButton amount={3522170} text="최대" />
+                    </div>
                 </div>
 
-                <div className="flex space-x-2px mt-2px">
-                    <button 
-                        style={{width:"110px"}} 
-                        className="flex items-center justify-center h-46px rounded-4px bg-gray-r171a1d"
-                        onClick={() => setInputValue(22170)}
-                    >
-                        <div style={{width:"108px"}} className="flex items-center justify-center h-44px rounded-4px border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e to-gray-r303337 cursor-pointer">
-                            <span className="font-spoqaMedium tracking-tight text-16px text-white">잔돈</span>
-                        </div>
-                    </button>
-                    <button 
-                        style={{width:"110px"}} 
-                        className="flex items-center justify-center h-46px rounded-4px bg-gray-r171a1d"
-                        onClick={() => setInputValue(null)}
-                    >
-                        <div style={{width:"108px"}} className="flex items-center justify-center h-44px rounded-4px border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e to-gray-r303337 cursor-pointer">
-                            <span className="font-spoqaMedium tracking-tight text-16px text-white">초기화</span>
-                        </div>
-                    </button>
-                    <button 
-                        style={{width:"110px"}} 
-                        className="flex items-center justify-center h-46px rounded-4px bg-gray-r171a1d"
-                        onClick={() => setInputValue(3522170)}
-                    >
-                        <div style={{width:"108px"}} className="flex items-center justify-center h-44px rounded-4px border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e to-gray-r303337 cursor-pointer">
-                            <span className="font-spoqaMedium tracking-tight text-16px text-white">최대</span>
-                        </div>
-                    </button>
-                </div>
+                
 
-                <button style={{width:"333px"}} className="mt-5px flex items-center justify-center h-46px rounded-4px bg-blue-r2068b2">
-                    <div style={{width:"331px"}} className="flex items-center justify-center h-44px rounded-4px border border-blue-r3975ae bg-gradient-to-b from-blue-r125a9e via-blue-r0e508d to-blue-r0b447a cursor-pointer">
+                <button style={{width:"334px"}} className="mt-5px flex items-center justify-center h-46px rounded-4px bg-blue-r2068b2 flex-shrink-0">
+                    <div style={{width:"332px", borderRadius:"3px"}} className="flex items-center justify-center h-44px rounded-4px border border-blue-r3975ae bg-gradient-to-b from-blue-r125a9e via-blue-r0e508d to-blue-r0b447a cursor-pointer">
                         <img src={BetIcon} alt="" />
                         <span className="ml-5px font-spoqaMedium tracking-tight text-16px text-white pt-px">베팅하기</span>
                     </div>

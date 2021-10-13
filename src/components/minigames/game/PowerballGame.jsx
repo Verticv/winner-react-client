@@ -16,7 +16,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                 style={{background: "linear-gradient(to bottom, #2087f0, #1873cf"}}
                 className="h-17px w-5px rounded-3px"
             />
-            <p style={{color:"#5b5b5b"}} className="font-spoqaMedium text-14px tracking-tight">{title}</p>
+            <p style={{color:"#5b5b5b"}} className="font-spoqaMedium text-14px tracking-tight pt-2px">{title}</p>
         </div>
     )
 
@@ -74,7 +74,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                         </div>
                     </div>
 
-                    <div style={{height:"76px", width:"2px"}} className="flex flex-shrink-0">
+                    <div style={{height:"76px", width:"2px"}} className="flex flex-shrink-0 pt-3px">
                         <div style={{backgroundColor: dividerColor}} className="h-full w-px"></div>
                         <div style={{backgroundColor:"#ffffff"}} className="h-full w-px"></div>
                     </div>

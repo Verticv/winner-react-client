@@ -31,18 +31,53 @@ const HorizontalMenu3 = ({
                         selectedTab === item.path 
                         ? "bg-gradient-to-b from-blue-r2087f0 via-blue-r2087f0 to-blue-gradDark"
                         : "bg-gradient-to-b from-blue-c4d6e6 via-gray-f5feff to-white"
+                    } ${
+                        item.id === 0 
+                        ? ""
+                        : item.id === 1 
+                        ? ""
+                        : item.id === 2
+                        ? ""
+                        : ""
                     } mt-3px w-full rounded-b-md rounded-t-lg flex items-center justify-between pr-20px`}
                 >
-                    <div className="flex items-center mb-4px">
-                        <img className="ml-14px" src={item.img} alt="" />
-                        <span style={{color: selectedTab === item.path ? "#ffffff" : "#616161"}} className="text-20px tracking-tight font-spoqaBold ml-5px">{item.text}</span>
+                    <div className={`flex items-center mb-4px`}>
+                        <img 
+                            className={`
+                            ${
+                                item.id === 0 
+                                ? "ml-15px"
+                                : item.id === 1 
+                                ? "ml-12px"
+                                : item.id === 2
+                                ? "ml-18px"
+                                : "ml-20px"
+                            }`} 
+                            src={item.img} 
+                            alt="" 
+                        />
+                        <span 
+                            style={{color: selectedTab === item.path ? "#ffffff" : "#616161"}} 
+                            className={`
+                            ${
+                                item.id === 0 
+                                ? "ml-4px"
+                                : item.id === 1 
+                                ? "ml-4px"
+                                : item.id === 2
+                                ? "ml-8px"
+                                : "ml-7px"
+                            } text-20px tracking-tight font-spoqaBold`}
+                        >
+                            {item.text}
+                        </span>
                     </div>
                     
-                    <div className="flex items-center">
-                        <img className="mr-5px object-none mb-3px" src={selectedTab === item.path ? ClockIconWhite : ClockIcon} alt="" />
+                    <div className="flex items-center ">
+                        <img className="mr-5px object-none mb-4px" src={selectedTab === item.path ? ClockIconWhite : ClockIcon} alt="" />
                         <div 
                             style={{color: selectedTab === item.path ? "#ffffff" : "#748496"}}
-                            className="text-24px tracking-tight font-swagger flex h-24px items-center"
+                            className="text-24px tracking-tight font-swagger flex h-24px items-center mb-px"
                         >
                             {item.time}
                         </div>

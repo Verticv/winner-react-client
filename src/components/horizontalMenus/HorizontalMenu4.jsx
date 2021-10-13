@@ -25,7 +25,7 @@ const HorizontalMenu4 = ({
                         ? "linear-gradient(to bottom, #2087f0, #1873cf)" 
                         : "linear-gradient(to bottom, #f9f9f9, #f9f9f9, #d4d9de)"
                     }}
-                    className="mt-2px w-full rounded-b-md rounded-t-lg flex items-start justify-center pr-20px pt-9px"
+                    className="mt-2px w-full rounded-b-md rounded-t-lg flex items-start justify-center pt-9px"
                 >
                     <div className="flex items-center">
                         <div 
