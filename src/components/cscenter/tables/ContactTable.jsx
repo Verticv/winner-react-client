@@ -67,7 +67,7 @@ const ContactTable = ({
                 <div className="w-98px flex justify-center">상태</div>
                 <div className="w-114px flex justify-center">구분</div>
                 <div style={{width: "427px"}} className="flex justify-center">제목</div>
-                <div className="w-138px flex justify-center">보낸시간</div>
+                <div className="w-138px flex justify-center">등록일시</div>
                 <div className="ml-33px w-70px flex justify-center">삭제</div>
             </div>
 
