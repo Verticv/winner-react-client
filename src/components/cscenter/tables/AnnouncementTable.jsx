@@ -61,7 +61,7 @@ const ExampleArray = [
     {
         id: 8,
         type: "스포츠북",
-        title: "라이브 배팅 기본규정",
+        title: "라이브 베팅 기본규정",
         isNew: false,
         time: "2021.06.29"
     },

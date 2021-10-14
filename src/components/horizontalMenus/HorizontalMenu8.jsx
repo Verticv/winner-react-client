@@ -23,13 +23,16 @@ const HorizontalMenu8 = ({
                     style={{
                         background: selectedTab === item.id
                         ? "linear-gradient(to bottom, #2087f0, #1873cf)"
-                        : "linear-gradient(to bottom, #c4d6e6, #e8f3fd 26%, #ffffff )"
+                        : "linear-gradient(to bottom, #c4d6e6, #e8f3fd 26%, #ffffff )",
+                        borderBottomLeftRadius:"6px",
+                        borderBottomRightRadius:"6px",
+                        borderColor: selectedTab === item.id ? "#1a73ce" : "#d6dfe8",
                     }}
                     className={`${
                         selectedTab === item.id
                         ? "bg-gradient-to-b from-blue-r2087f0 via-blue-r2087f0 to-blue-gradDark"
-                        : "bg-gradient-to-b from-blue-c4d6e6 via-gray-f5feff to-white border-b border-l border-r border-blue-d6dfe8"
-                    } mt-3px h-77px w-full rounded-b-md rounded-t-lg flex flex-col items-center`}
+                        : "bg-gradient-to-b from-blue-c4d6e6 via-gray-f5feff to-white  border-blue-d6dfe8"
+                    } mt-3px h-75px w-full rounded-b-md rounded-t-lg flex flex-col items-center border-b border-l border-r`}
                 >
                     <img className="mt-8px ml-2px object-none" src={item.icon} alt="" />
                     <span 

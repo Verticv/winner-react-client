@@ -5,7 +5,7 @@ import Rank1Icon from '../../images/cscenter/rank1.png'
 
 const ContactView = () => {
 
-    const BodyText1 = "안녕하세요. 혁신적인 완성형 배팅업체『WINNER 고객센터』입니다."
+    const BodyText1 = "안녕하세요. 혁신적인 완성형 베팅업체『WINNER 고객센터』입니다."
     const BodyText2 = "추가적인 문의사항은 언제든지 전화 요청 또는 카카오톡, 텔레그램 고객센터로 \n 문의하시면 24시간 항상 친절하게 안내 도와드리겠습니다. \n 앞으로 많은 이용 부탁드립니다."
     const BodyText3 = "감사합니다."
     const BodyText4 = "24시 모바일 고객센터 카카오톡: WINN7777 텔레그램: WINN7777 \n 예비 도메인안내: 위너주소.com"

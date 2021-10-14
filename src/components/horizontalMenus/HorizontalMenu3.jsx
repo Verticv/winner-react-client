@@ -36,20 +36,16 @@ const HorizontalMenu3 = ({
                 }}
             >
                 <div 
-                    style={{height: "57px"}}
-                    className={`${
-                        selectedTab === item.path 
-                        ? "bg-gradient-to-b from-blue-r2087f0 via-blue-r2087f0 to-blue-gradDark"
-                        : "bg-gradient-to-b from-blue-c4d6e6 via-gray-f5feff to-white"
-                    } ${
-                        item.id === 0 
-                        ? ""
-                        : item.id === 1 
-                        ? ""
-                        : item.id === 2
-                        ? ""
-                        : ""
-                    } mt-3px w-full rounded-b-md rounded-t-lg flex items-center justify-between pr-20px`}
+                    style={{
+                        height: "54px",
+                        background: selectedTab === item.path 
+                        ? "linear-gradient(to bottom, #2087f0, #1873cf)"
+                        : "linear-gradient(to bottom, #c4d6e6, #e8f3fd 26%, #ffffff)",
+                        borderBottomLeftRadius:"6px",
+                        borderBottomRightRadius:"6px",
+                        borderColor: selectedTab === item.path ? "#1a73ce" : "#d6dfe8"
+                    }}
+                    className={`mt-3px w-full rounded-b-md rounded-t-lg flex items-center justify-between pr-20px border-l border-r border-b`}
                 >
                     <div className={`flex items-center mb-4px`}>
                         <img 

@@ -94,7 +94,7 @@ const FreeBoardView = () => {
                     </div>
 
                     <div className="px-20px pt-20px">
-                        <div className="h-14px flex items-center text-14px font-spoqaMedium tracking-tight text-gray-r585858">이벤트 중 주간 낙첨 포인트 지급은 21년 6월 7일 이후 배팅건 부터 아래와 같이 적용됩니다.</div>
+                        <div className="h-14px flex items-center text-14px font-spoqaMedium tracking-tight text-gray-r585858">이벤트 중 주간 낙첨 포인트 지급은 21년 6월 7일 이후 베팅건 부터 아래와 같이 적용됩니다.</div>
                         <div 
                             style={{color:"#c0392b"}} 
                             className="h-16px flex items-center text-16px font-spoqaMedium tracking-tight mt-37px">
@@ -123,10 +123,10 @@ const FreeBoardView = () => {
                         </div>
 
                         <div className="h-14px flex items-center text-14px font-spoqaMedium tracking-tight text-gray-r585858 mt-36px">
-                            * 2021년 5월 31일 ~ 6월 6일 (일요일)까지 배팅 내역을 화요일 낙첨금액 5% 쿠폰 발행되며,
+                            * 2021년 5월 31일 ~ 6월 6일 (일요일)까지 베팅 내역을 화요일 낙첨금액 5% 쿠폰 발행되며,
                         </div>
                         <div className="h-14px flex items-center text-14px font-spoqaMedium tracking-tight text-gray-r585858 mt-21px">
-                            <p style={{color:"#2980b9"}}>* 2021년 6월 7일 (월) 이후 배팅에 대한 낙첨쿠폰은 위 기준에 따라 제공</p>되오니 참고 부탁 드립니다.
+                            <p style={{color:"#2980b9"}}>* 2021년 6월 7일 (월) 이후 베팅에 대한 낙첨쿠폰은 위 기준에 따라 제공</p>되오니 참고 부탁 드립니다.
                         </div>
                     </div>
 

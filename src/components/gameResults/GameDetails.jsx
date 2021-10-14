@@ -14,7 +14,10 @@ const GameDetails = () => {
         stat3 = "3.47"
     }) => (
         <div className="flex space-x-4px">
-            <button className={`flex items-center justify-center w-285px h-36px rounded-lg ${bet === "left" ? "bg-red-cb4343" : "bg-gray-dddddd"}`}>
+            <button 
+                style={{textShadow: bet === "left" ? "1px 1px 1px #00000070" : "",}}
+                className={`flex items-center justify-center w-285px h-36px rounded-lg ${bet === "left" ? "bg-red-cb4343" : "bg-gray-dddddd"}`}
+            >
                 <div className={`${
                     bet === "left" 
                     ? "text-white border-red-ff7982 from-red-ff535f via-red-ff535f to-red-ee4e5a" 
@@ -26,7 +29,10 @@ const GameDetails = () => {
                 </div>
             </button>
 
-            <button className={`flex group items-center justify-center w-81px h-36px rounded-lg bg-gray-dddddd ${bet === "middle" ? "bg-red-cb4343" : "bg-gray-dddddd"}`}>
+            <button
+                style={{textShadow: bet === "middle" ? "1px 1px 1px #00000070" : "",}}
+                className={`flex group items-center justify-center w-81px h-36px rounded-lg bg-gray-dddddd ${bet === "middle" ? "bg-red-cb4343" : "bg-gray-dddddd"}`}
+            >
                 <div className={`${
                     bet === "middle" 
                     ? "text-white border-red-ff7982 from-red-ff535f via-red-ff535f to-red-ee4e5a" 
@@ -37,7 +43,10 @@ const GameDetails = () => {
                 </div>
             </button>
 
-            <button className={`${bet === "right" ? "bg-red-cb4343" : "bg-gray-dddddd"} flex group items-center justify-center w-285px h-36px rounded-lg bg-gray-dddddd`}>
+            <button 
+                style={{textShadow: bet === "right" ? "1px 1px 1px #00000070" : "",}}
+                className={`${bet === "right" ? "bg-red-cb4343" : "bg-gray-dddddd"} flex group items-center justify-center w-285px h-36px rounded-lg bg-gray-dddddd`}
+            >
                 <div className={`${
                     bet === "right" 
                     ? "text-white border-red-ff7982 from-red-ff535f via-red-f8515d to-red-ee4e5a" 

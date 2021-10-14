@@ -145,11 +145,11 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
                 <p style={{color: "#f26522"}} className="text-14px font-roboto tracking-tight text-blue-r0056a6">1.00</p>
             </div>
 
-            <div className="h-47px border-b border-gray-dddddd flex items-center justify-between pl-11px pr-10px pt-px">
-                <p className="text-14px font-spoqaMedium tracking-tight text-gray-r454545 pt-px">베팅금액</p>
+            <div className="h-47px border-b border-gray-dddddd flex items-center justify-between pl-11px pr-10px">
+                <p className="text-14px font-spoqaMedium tracking-tight text-gray-r454545 pt-2px">베팅금액</p>
                 <input 
                     style={{color: "#d52e2e", width: "191px", height: "32px", backgroundColor: "#e8e8e8"}} 
-                    className="flex items-center justify-end px-5px border rounded-4px border-gray-dddddd text-14px font-roboto tracking-tight outline-none text-right pt-px"
+                    className="flex items-center justify-end px-5px border rounded-4px border-gray-dddddd text-14px font-roboto tracking-tight outline-none text-right pt-2px"
                     placeholder="0"
                     value={nf.format(inputValue)}
                     onChange={e => setInputValue(e.target.value.replace(/,/g, ''))}

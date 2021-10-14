@@ -24,15 +24,18 @@ const HorizontalMenu2 = ({
             >
                 <div 
                     style={{
-                        height: "54px",
-                        borderTopLeftRadius: "4px",
-                        borderTopRightRadius: "4px"
+                        height: "52px",
+                        background: isState === item.id 
+                        ? "linear-gradient(to bottom, #2087f0, #1873cf)"
+                        : "#fafafa",
+                        borderRadius: isState === item.id ? "4px" : "0px",
+                        borderColor: isState === item.id  ? "#1a73ce" : "#d6dfe8",
                     }}
                     className={`${
                         isState === item.id 
                         ? "bg-gradient-to-b from-blue-r2087f0 via-blue-r2087f0 to-blue-gradDark"
                         : "bg-gray-fafafa"
-                    } mt-2px w-full rounded-b-md flex items-center justify-center space-x-4px`}
+                    } mt-2px w-full rounded-b-md flex items-center justify-center space-x-4px border-l border-r border-b`}
                 >
                     <img className={`${item.id === 0 ? "mb-3px" : "mb-2px" } object-none`} src={isState === item.id ? item.iconHighlight : item.icon} alt="" />
                     <div 

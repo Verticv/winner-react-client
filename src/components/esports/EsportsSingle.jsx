@@ -48,7 +48,7 @@ const EsportsSingle = () => {
             <div className="flex space-x-20px items-start">
                 <img className="object-none" src={Image5} alt="" />
                 <div style={{backgroundColor:"#efefef", height:"368px"}} className="w-full h-full rounded-xl p-20px">
-                    <Item number="3." title="배팅금액입력" text="가. ① 베팅금액을 입력합니다." text2="나. ② [확인] 버튼을 누르면 베팅이" text3="완료됩니다." />
+                    <Item number="3." title="베팅금액입력" text="가. ① 베팅금액을 입력합니다." text2="나. ② [확인] 버튼을 누르면 베팅이" text3="완료됩니다." />
                     <div style={{width:"97px", height:"25px", backgroundColor:"#f45400"}} className="text-white flex items-center justify-center font-spoqaBold text-18px tracking-tight pt-px mt-60px">알아두세요!</div>
                     <div className="flex items-center">
                         <img src={Dot} className="object-contain mr-4px h-4px mt-6px" alt="" />
@@ -70,7 +70,7 @@ const EsportsSingle = () => {
             <div className="flex space-x-20px items-start">
                 <img className="object-none" src={Image6} alt="" />
                 <div style={{backgroundColor:"#efefef", height:"368px"}} className="w-full h-full rounded-xl p-20px">
-                    <Item number="4." title="배팅완료" text="베팅이 완료되면 ① 베팅내역 화면이 나타나며" text2="상세 베팅내역을 확인할 수 있습니다." />
+                    <Item number="4." title="베팅완료" text="베팅이 완료되면 ① 베팅내역 화면이 나타나며" text2="상세 베팅내역을 확인할 수 있습니다." />
                 </div>
             </div>
 
@@ -79,7 +79,7 @@ const EsportsSingle = () => {
             <div className="flex space-x-20px items-start">
                 <img className="object-none" src={Image7} alt="" />
                 <div style={{backgroundColor:"#efefef", height:"368px"}} className="w-full h-full rounded-xl p-20px">
-                    <Item number="5." title="배팅내역확인" text="가. ① [내 베팅] 메뉴를 선택합니다." text2="나. ② 베팅내역을 확인할 수 있습니다." />
+                    <Item number="5." title="베팅내역확인" text="가. ① [내 베팅] 메뉴를 선택합니다." text2="나. ② 베팅내역을 확인할 수 있습니다." />
                 </div>
             </div>
 

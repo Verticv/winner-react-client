@@ -19,13 +19,16 @@ const HorizontalMenu1 = ({
                 onClick={() => setState(item.id)}
             >
                 <div 
-                    style={{height: "101px"}}
-                    className={`${
-                        isState === item.id 
-                        ? "bg-gradient-to-b from-blue-r2087f0 via-blue-r2087f0 to-blue-gradDark"
-                        : "bg-gradient-to-b from-blue-c4d6e6 via-gray-f5feff to-white border-b border-l border-r border-blue-d6dfe8"
-                    } mt-3px w-full rounded-b-md rounded-t-lg flex flex-col items-center`}
-                >
+                    style={{
+                        height: "98px",
+                        background: isState === item.id 
+                        ? "linear-gradient(to bottom, #2087f0, #1873cf)"
+                        : "linear-gradient(to bottom, #c4d6e6, #e8f3fd 26%, #ffffff)",
+                        borderBottomLeftRadius:"6px",
+                        borderBottomRightRadius:"6px",
+                        borderColor: isState === item.id  ? "#1a73ce" : "#d6dfe8"
+                    }}
+                    className={`mt-3px w-full rounded-b-md rounded-t-md flex flex-col items-center border-b border-l border-r`}>
                     <img className="mt-5px ml-2px object-none" src={item.icon} alt="" />
                     <div 
                         className={`${

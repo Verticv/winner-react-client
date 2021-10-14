@@ -87,7 +87,7 @@ const EsportsStructure = () => {
                     <div className="mt-20px w-full h-px bg-gray-dddddd"></div>
 
                     <div className="pt-20px space-y-23px">
-                        <Item title="메인(초기)화면" text="메인화면으로 이동합니다." />
+                        <Item title="메인(초기)화면" text="메인화면으로 이동됩니다." />
                         <Item number="2." title="베팅타입 정렬" text="베팅타입 별로 배당판이 정렬됩니다." />
                         <Item number="3." title="라이브 배당률" text="경기가 시작되면 라이브 배당률을 확인할 수" text2="있습니다." />
                         <Item number="4." title="배당판" text="다양한 배당정보가 표시됩니다." />

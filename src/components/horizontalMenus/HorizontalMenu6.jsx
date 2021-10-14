@@ -23,13 +23,15 @@ const HorizontalMenu6 = ({
                 <div 
                     style={{
                         height: "93px",
-                        borderColor: "#e9eced"
+                        borderBottomLeftRadius:"6px",
+                        borderBottomRightRadius:"6px",
+                        borderColor: isState === item.id ? "#1a73ce" : "#d6dfe8",
                     }}
                     className={`${
                         isState === item.id 
                         ? "bg-gradient-to-b from-blue-r2087f0 via-blue-r2087f0 to-blue-gradDark"
-                        : "bg-gradient-to-b from-blue-c4d6e6 via-gray-f5feff to-white border-b border-l border-r border-blue-d6dfe8"
-                    } mt-3px w-full rounded-b-md rounded-t-lg flex flex-col items-center`}
+                        : "bg-gradient-to-b from-blue-c4d6e6 via-gray-f5feff to-white border-blue-d6dfe8"
+                    } mt-3px w-full rounded-b-md rounded-t-lg flex flex-col items-center border-b border-l border-r`}
                 >
                     <img className={`${item.id === 0 || item.id === 1 || item.id === 4 || item.id === 5 ? "ml-4px" : "ml-3px"} mt-4px object-none`} src={item.icon} alt="" />
                     <div 
