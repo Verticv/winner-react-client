@@ -101,37 +101,6 @@ const GameResultsPage = ({isAuthenticated, setAuthenticated}) => {
                     <DirectoryComponent 
                         branch1="경기결과"
                         branch2="미니게임" 
-                        branch3="승무패"
-                        mainPath="/gameresults/minigame/win-draw-lose"
-                        setSelectedTab={setSelectedTab}
-                        setSelectedSubTab={setSelectedSubTab}
-                    />
-                </Route>
-                <Route exact path="/gameresults/minigame/handicap">
-                    <DirectoryComponent 
-                        branch1="경기결과"
-                        branch2="미니게임" 
-                        branch3="핸디캡"
-                        mainPath="/gameresults/minigame/win-draw-lose"
-                        setSelectedTab={setSelectedTab}
-                        setSelectedSubTab={setSelectedSubTab}
-                    />
-                </Route>
-                <Route exact path="/gameresults/minigame/unover">
-                    <DirectoryComponent 
-                        branch1="경기결과"
-                        branch2="미니게임" 
-                        branch3="언오버"
-                        mainPath="/gameresults/minigame/win-draw-lose"
-                        setSelectedTab={setSelectedTab}
-                        setSelectedSubTab={setSelectedSubTab}
-                    />
-                </Route>
-                <Route exact path="/gameresults/minigame/special">
-                    <DirectoryComponent 
-                        branch1="경기결과"
-                        branch2="미니게임" 
-                        branch3="스페셜"
                         mainPath="/gameresults/minigame/win-draw-lose"
                         setSelectedTab={setSelectedTab}
                         setSelectedSubTab={setSelectedSubTab}

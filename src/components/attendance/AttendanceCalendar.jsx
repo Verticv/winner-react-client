@@ -29,14 +29,14 @@ class Calendar extends React.Component {
 
     return (
         <div className="flex items-center w-full justify-center h-23px space-x-30px mt-10px mb-30px">
-            <img className={`${this.state.currentMonth  >  this.state.today ? "opacity-100" : "opacity-20"} cursor-pointer transform rotate-180`} onClick={this.prevMonth} src={Arrow} alt="" />
+            <img className={`cursor-pointer transform rotate-180`} onClick={this.prevMonth} src={Arrow} alt="" />
             <div className="flex items-center h-23px text-blue-r0056a6">
                 <div className="flex items-center font-roboto text-32px h-23px">{format(this.state.currentMonth, dateFormat1)}</div>
                 <div className="flex items-center font-spoqaMedium text-25px h-23px pt-px -ml-4px">년</div>
                 <div className="flex items-center font-roboto text-32px h-23px ml-6px">{format(this.state.currentMonth, dateFormat2)}</div>
                 <div className="flex items-center font-spoqaMedium text-25px h-23px pt-px">월</div>
             </div>
-            <img className={`cursor-pointer`} onClick={this.nextMonth} src={Arrow} alt="" />
+            <img className={`${this.state.currentMonth < this.state.today ? "opacity-100" : "opacity-20"} cursor-pointer`} onClick={this.nextMonth} src={Arrow} alt="" />
 
         </div>
     );
@@ -115,17 +115,19 @@ class Calendar extends React.Component {
   };
 
   nextMonth = () => {
-    this.setState({
-      currentMonth: addMonths(this.state.currentMonth, 1)
-    });
+    if (this.state.currentMonth  <  this.state.today) {
+      this.setState({
+        currentMonth: addMonths(this.state.currentMonth, 1)
+      });
+    }
+    
   };
 
   prevMonth = () => {
-    if (this.state.currentMonth  >  this.state.today) {
       this.setState({
         currentMonth: subMonths(this.state.currentMonth, 1)
       });
-    }
+    
   };
 
   checkAttendance = () => {

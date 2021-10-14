@@ -36,6 +36,9 @@ const DirectoryComponent = ({
             }
         } else if (branch1 === "게시판") {
             history.push("/freeboard")
+        } else if (branch1 ==="e-스포츠") {
+            history.push("/esports/structure")
+            setSelectedTab("/esports/structure")
         }
     }
 

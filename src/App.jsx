@@ -11,6 +11,7 @@ import GameResultsPage from "pages/GameResultsPage";
 import Freeboard from "pages/Freeboard";
 import BetCombinationPage from "pages/BetCombinationPage";
 import MinigamesPage from "pages/MinigamesPage";
+import EsportsPage from "pages/EsportsPage";
 
 
 function App() {
@@ -52,6 +53,9 @@ function App() {
                 </Route>
                 <Route path="/minigame">
                     <MinigamesPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated}/>
+                </Route>
+                <Route path="/esports">
+                    <EsportsPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated}/>
                 </Route>
                 <Route path="*">
                     <MainPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />

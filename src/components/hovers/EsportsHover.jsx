@@ -8,19 +8,26 @@ import OverwatchBannerHighlight from '../../images/navbarHover/overwatch_banner_
 import PubgBanner from '../../images/navbarHover/pubg_banner.png'
 import PubgBannerHighlight from '../../images/navbarHover/pubg_banner_highlight.png'
 import Expand from 'react-expand-animated'
+import { useHistory } from 'react-router'
 
 const EsportsHover = ({selection}) => {
-    
+
+    const history = useHistory();
+
     const gamesArray = [
-        { id: 0, background: LolBanner, highlight: LolBannerHighlight, imgText: "게임시작", color: "group-hover:bg-purple-a898ee", btnText: "게임시작", class: "bg-opacity-25" },
-        { id: 1, background: SuddenAttackBanner, highlight: SuddenAttackBannerHighlight, imgText: "화면구성설명", color: "group-hover:bg-red-db4a4a", btnText: "게임시작", class: "bg-opacity-25" },
-        { id: 2, background: OverwatchBanner, highlight: OverwatchBannerHighlight, imgText: "단폴더베팅방법", color: "group-hover:bg-blue-r3384ca", btnText: "게임시작", class: "bg-opacity-25" },
-        { id: 3, background: PubgBanner, highlight: PubgBannerHighlight, imgText: "다폴더베팅방법", color: "group-hover:bg-teal-r4eb2ba", btnText: "게임시작", class: "bg-opacity-25" }
+        { id: 0, background: LolBanner, highlight: LolBannerHighlight, imgText: "게임시작", color: "group-hover:bg-purple-a898ee", btnText: "게임시작", class: "bg-opacity-25", path: "/esports/structure" },
+        { id: 1, background: SuddenAttackBanner, highlight: SuddenAttackBannerHighlight, imgText: "화면구성설명", color: "group-hover:bg-red-db4a4a", btnText: "게임시작", class: "bg-opacity-25", path: "/esports/structure" },
+        { id: 2, background: OverwatchBanner, highlight: OverwatchBannerHighlight, imgText: "단폴더베팅방법", color: "group-hover:bg-blue-r3384ca", btnText: "게임시작", class: "bg-opacity-25", path: "/esports/single" },
+        { id: 3, background: PubgBanner, highlight: PubgBannerHighlight, imgText: "다폴더베팅방법", color: "group-hover:bg-teal-r4eb2ba", btnText: "게임시작", class: "bg-opacity-25", path: "/esports/multi" }
     ];
 
     function GamesList({ items }) {
         return items.map(item => (
-            <div key={item.id} className="relative group w-305px h-206px cursor-pointer" >
+            <div 
+                key={item.id} 
+                className="relative group w-305px h-206px cursor-pointer" 
+                onClick={() => history.push(item.path)}
+            >
                 <img className={`opacity-100 group-hover:opacity-0 w-305px h-206px object-none object-left`} src={item.background} alt="game_image" />
                 <img className={`opacity-0 group-hover:opacity-100 absolute top-0 w-305px h-206px object-none object-left `} src={item.highlight} alt="game_image" />
                 <div className="absolute bottom-0 h-20px w-175px right-0 flex items-center justify-center -mb-2px"><span className={`ml-10px group-hover:text-black font-spoqaBold tracking-tight text-12px text-gray-r616161 ${item.id === 0 && "ml-20px" }`}>{item.imgText}</span></div>

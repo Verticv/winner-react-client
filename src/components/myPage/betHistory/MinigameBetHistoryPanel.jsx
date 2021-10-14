@@ -153,9 +153,9 @@ const MinigameBetHistoryPanel = ({
                     {game === "파워사다리" ? (
                         <img src={Example1} alt="" />
                     ) : game === "스피드키노" ? (
-                        <img style={{zoom:"0.8", marginLeft:"4px"}} className="object-contain" src={Sub3} alt="" />
+                        <img style={{zoom:"0.8", marginLeft:"5px"}} className="object-contain" src={Sub3} alt="" />
                     ) : (
-                        <img style={{zoom:"0.8", marginLeft:"4px"}} className="object-contain" src={Sub4} alt="" />
+                        <img style={{zoom:"0.8", marginLeft:"5px"}} className="object-contain" src={Sub4} alt="" />
                     )}
 
                     {game === "파워사다리" ? (

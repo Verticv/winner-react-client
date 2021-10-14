@@ -27,7 +27,7 @@ const AnnouncementView = () => {
         <div>
             <MyPageTitle title="공지사항"/>
 
-            <div style={{borderRadius:"1em"}} className="w-full overflow-hidden shadow-subNavbar border border-gray-dddddd mt-20px">
+            <div style={{borderRadius:"1em"}} className="w-full overflow-hidden shadow-subNavbar mt-20px">
                 {/* TITLE */}
                 <div className="h-56px w-full bg-gray-fafafa flex items-center px-19px space-x-10px border-b border-gray-dddddd">
                     <p className="text-14px font-spoqaMedium tracking-tight text-blue-r0056a6">스포츠북</p>

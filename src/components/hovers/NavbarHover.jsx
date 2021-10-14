@@ -5,6 +5,7 @@ import SportsHover from './SportsHover'
 import EsportsHover from './EsportsHover'
 import MinigamesHover from './MinigamesHover'
 import ARHover from './ARHover'
+import FishingGameHover from './FishingGameHover'
 
 const NavbarHover = ({selection, setHoveredTab}) => {
 
@@ -16,6 +17,7 @@ const NavbarHover = ({selection, setHoveredTab}) => {
             <EsportsHover selection={selection}/>
             <MinigamesHover selection={selection}/>
             <ARHover selection={selection}/>
+            <FishingGameHover selection={selection}/>
         </div>
     )
 }

@@ -31,7 +31,7 @@ const AttendPage = ({isAuthenticated, setAuthenticated}) => {
                 </Route>
 
                 <div className="relative w-default h-225px">
-                    <label className="text-36px font-spoqaMedium text-blue-r325685 absolute right-0 bottom-0 z-20 mb-86px mr-50px">출석부</label>
+                    <label style={{color: "#7a5b28"}} className="text-36px font-spoqaMedium text-blue-r325685 absolute right-0 bottom-0 z-20 mb-86px mr-50px">출석부</label>
                     <img className="z-10" src={MyPageBanner} alt="" />
                 </div>
 

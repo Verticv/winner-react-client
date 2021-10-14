@@ -38,7 +38,7 @@ const MinigamesRightPanel = ({
                     background: "linear-gradient(to bottom, #feffff, #cedeed)",
                 }} 
                 className="flex items-center justify-center h-44px border border-white cursor-pointer pt-px">
-                <span className="font-roboto tracking-tight text-16px text-gray-r585858 ">{nf.format(amount)}</span>
+                <span className="font-roboto tracking-tight text-16px text-gray-r585858 pt-px">{nf.format(amount)}</span>
             </div>
         </button>
     )
@@ -165,16 +165,16 @@ const MinigamesRightPanel = ({
 
             </div>
 
-            <div className="h-43px border-b border-gray-dddddd flex items-center justify-between pl-14px pr-19px">
-                <p className="text-16px font-spoqaMedium tracking-tight text-gray-r454545">보유금액</p>
-                <p className="text-16px font-robotoBold tracking-tight text-blue-r0056a6">3,522,170</p>
+            <div className="h-43px border-b border-gray-dddddd flex items-center justify-between pl-14px pr-19px ">
+                <p className="text-16px font-spoqaMedium tracking-tight text-gray-r454545 pt-px">보유금액</p>
+                <p className="text-16px font-robotoBold tracking-tight text-blue-r0056a6 pt-px">3,522,170</p>
             </div>
             <div className="h-43px border-b border-gray-dddddd flex items-center justify-between pl-14px pr-19px">
-                <p className="text-16px font-spoqaMedium tracking-tight text-gray-r454545">배당률</p>
-                <p style={{color:"#f26522"}} className="text-16px font-roboto tracking-tight">1.95</p>
+                <p className="text-16px font-spoqaMedium tracking-tight text-gray-r454545 pt-px">배당률</p>
+                <p style={{color:"#f26522"}} className="text-16px font-roboto tracking-tight pt-px">1.95</p>
             </div>
             <div className="h-44px border-b border-gray-dddddd flex items-center justify-between pl-14px pr-13px">
-                <p className="text-16px font-spoqaMedium tracking-tight text-gray-r454545">베팅금액</p>
+                <p className="text-16px font-spoqaMedium tracking-tight text-gray-r454545 pt-px">베팅금액</p>
 
                 <input 
                     style={{color: "#d52e2e", width: "216px", height: "32px", backgroundColor: "#e8e8e8"}} 
@@ -190,8 +190,8 @@ const MinigamesRightPanel = ({
                 />
             </div>
             <div className="h-43px border-b border-gray-dddddd flex items-center justify-between pl-14px pr-19px">
-                <p className="text-16px font-spoqaMedium tracking-tight text-gray-r454545">적중금액</p>
-                <p className="text-16px font-roboto tracking-tight text-blue-r0056a6">19,500</p>
+                <p className="text-16px font-spoqaMedium tracking-tight text-gray-r454545 pt-px">적중금액</p>
+                <p className="text-16px font-roboto tracking-tight text-blue-r0056a6 pt-px">19,500</p>
             </div>
             
             <div style={{height:"208px"}} className="w-full bg-gray-fafafa p-7px">
