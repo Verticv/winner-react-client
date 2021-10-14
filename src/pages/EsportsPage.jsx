@@ -7,6 +7,8 @@ import React, { useState } from 'react'
 import { Route } from 'react-router';
 import HorizontalMenu9 from 'components/horizontalMenus/HorizontalMenu9';
 import EsportsStructure from 'components/esports/EsportsStructure';
+import EsportsSingle from 'components/esports/EsportsSingle';
+import EsportsMulti from 'components/esports/EsportsMulti';
 
 const EsportsPage = ({isAuthenticated, setAuthenticated}) => {
 
@@ -65,8 +67,10 @@ const EsportsPage = ({isAuthenticated, setAuthenticated}) => {
                             <EsportsStructure />
                         </Route>
                         <Route path="/esports/single">
+                            <EsportsSingle />
                         </Route>
                         <Route path="/esports/multi">
+                            <EsportsMulti />
                         </Route>
                         <Route path="*">
                         </Route>
