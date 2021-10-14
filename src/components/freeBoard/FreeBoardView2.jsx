@@ -80,8 +80,8 @@ const FreeBoardView2 = () => {
                 </div>
 
                 <div className="py-20px border-b border-gray-dddddd px-30px space-y-28px"> 
-                    <SportsBetHistoryPanel type={4} id={0} isAttached={true} attachedArray={[0]} />
-                    <SportsBetHistoryPanel type={3} id={0} isAttached={true} attachedArray={[2]} />
+                    <SportsBetHistoryPanel type={4} id={0} isAttached={true} noButtons={true} attachedArray={[0]} />
+                    <SportsBetHistoryPanel type={3} id={0} isAttached={true} noButtons={true} attachedArray={[2]} />
                 </div>
 
                 <div style={{height:"441px"}} className="p-20px bg-white text-14px font-spoqa tracking-tight text-gray-r585858">

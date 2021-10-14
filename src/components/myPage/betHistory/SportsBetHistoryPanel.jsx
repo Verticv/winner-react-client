@@ -23,7 +23,8 @@ const SportsBetHistoryPanel = ({
     isPopup = false,
     isAttached = false,
     setAttachedArray = null,
-    attachedArray = null
+    attachedArray = null,
+    noButtons = false
 }) => {
 
     const handleOnChange = (position) => {
@@ -84,7 +85,10 @@ const SportsBetHistoryPanel = ({
                     </div>
                 </button>
 
-                <button className={`flex group items-center justify-center w-81px h-36px rounded-lg bg-gray-dddddd ${bet === "middle" ? "bg-red-cb4343" : "bg-gray-dddddd"}`}>
+                <button
+                    style={{textShadow: bet === "middle" ? "1px 1px 1px #00000070" : "",}} 
+                    className={`flex group items-center justify-center w-81px h-36px rounded-lg bg-gray-dddddd ${bet === "middle" ? "bg-red-cb4343" : "bg-gray-dddddd"}`}
+                >
                     <div className={`${
                         bet === "middle" 
                         ? "text-white border-red-ff7982 from-red-ff535f via-red-ff535f to-red-ee4e5a" 
@@ -330,11 +334,11 @@ const SportsBetHistoryPanel = ({
                         {(isAttached === false && isPopup === false) && (
                             <div className="w-116px h-full flex items-center justify-center border-l border-gray-fafafa">베팅번호</div>
                         )}
-                        <div style={{width: isAttached === true ? "212px" : isPopup === false ? "151px" : "178px"}} className="h-full flex items-center justify-center border-l border-gray-fafafa">베팅시간</div>
-                        <div style={{width: isAttached === true ? "212px" : isPopup === false ? "131px" : "178px"}} className="h-full flex items-center justify-center border-l border-gray-fafafa">베팅금액</div>
-                        <div style={{width: isAttached === true ? "212px" : isPopup === false ? "78px" : "178px"}} className="h-full flex items-center justify-center border-l border-gray-fafafa">배당률</div>
-                        <div style={{width: isAttached === true ? "212px" : isPopup === false ? "131px" : "178px"}} className="h-full flex items-center justify-center border-l border-gray-fafafa">예상적중금액</div>
-                        <div style={{width: isAttached === true ? "212px" : isPopup === false ? "131px" : "178px"}} className="h-full flex items-center justify-center border-l border-gray-fafafa">당첨금</div>
+                        <div style={{width: noButtons === true ? "236px" : isAttached === true ? "212px" : isPopup === false ? "151px" : "178px"}} className="h-full flex items-center justify-center border-l border-gray-fafafa">베팅시간</div>
+                        <div style={{width: noButtons === true ? "236px" : isAttached === true ? "212px" : isPopup === false ? "131px" : "178px"}} className="h-full flex items-center justify-center border-l border-gray-fafafa">베팅금액</div>
+                        <div style={{width: noButtons === true ? "236px" : isAttached === true ? "212px" : isPopup === false ? "78px" : "178px"}} className="h-full flex items-center justify-center border-l border-gray-fafafa">배당률</div>
+                        <div style={{width: noButtons === true ? "236px" : isAttached === true ? "212px" : isPopup === false ? "131px" : "178px"}} className="h-full flex items-center justify-center border-l border-gray-fafafa">예상적중금액</div>
+                        <div style={{width: noButtons === true ? "236px" : isAttached === true ? "212px" : isPopup === false ? "131px" : "178px"}} className="h-full flex items-center justify-center border-l border-gray-fafafa">당첨금</div>
                         
                     </div>
                     <div className="flex w-auto h-36px font-spoqa text-14px tracking-tight text-gray-r585858">
@@ -350,13 +354,13 @@ const SportsBetHistoryPanel = ({
                             </div>
                         )}
                         {(isAttached === false && isPopup === false) && (
-                            <div className="w-116px h-full flex items-center justify-center border-l border-gray-fafafa">{ticketNumber}</div>
+                            <div className="w-300px h-full flex items-center justify-center border-l border-gray-fafafa">{ticketNumber}</div>
                         )}
-                        <div style={{width: isAttached === true ? "212px" : isPopup === false ? "151px" : "178px"}} className="h-full flex items-center justify-center border-l border-gray-fafafa">{time}</div>
-                        <div style={{width: isAttached === true ? "212px" : isPopup === false ? "131px" : "178px"}} className="h-full flex items-center justify-end border-l border-gray-fafafa pr-5px">{amount}</div>
-                        <div style={{width: isAttached === true ? "212px" : isPopup === false ? "78px" : "178px"}} className="h-full flex items-center justify-center border-l border-gray-fafafa">{ratio}</div>
-                        <div style={{width: isAttached === true ? "212px" : isPopup === false ? "131px" : "178px"}} className="h-full flex items-center justify-end border-l border-gray-fafafa pr-5px">{predictedPrice}</div>
-                        <div style={{width: isAttached === true ? "212px" : isPopup === false ? "131px" : "178px"}} className="h-full flex items-center justify-end border-l border-gray-fafafa pr-5px"><p className={`${winAmount.includes("+") && "text-red-500"}`}>{winAmount}</p>원</div>
+                        <div style={{width: noButtons === true ? "236px" : isAttached === true ? "212px" : isPopup === false ? "151px" : "178px"}} className="h-full flex items-center justify-center border-l border-gray-fafafa">{time}</div>
+                        <div style={{width: noButtons === true ? "236px" : isAttached === true ? "212px" : isPopup === false ? "131px" : "178px"}} className="h-full flex items-center justify-end border-l border-gray-fafafa pr-5px">{amount}</div>
+                        <div style={{width: noButtons === true ? "236px" : isAttached === true ? "212px" : isPopup === false ? "78px" : "178px"}} className="h-full flex items-center justify-center border-l border-gray-fafafa">{ratio}</div>
+                        <div style={{width: noButtons === true ? "236px" : isAttached === true ? "212px" : isPopup === false ? "131px" : "178px"}} className="h-full flex items-center justify-end border-l border-gray-fafafa pr-5px">{predictedPrice}</div>
+                        <div style={{width: noButtons === true ? "236px" : isAttached === true ? "212px" : isPopup === false ? "131px" : "178px"}} className="h-full flex items-center justify-end border-l border-gray-fafafa pr-5px"><p className={`${winAmount.includes("+") && "text-red-500"}`}>{winAmount}</p>원</div>
                     </div>
                 </table>
                 
@@ -375,7 +379,7 @@ const SportsBetHistoryPanel = ({
                         </button>
                     )}
                     
-                    {(isPopup === false) && (
+                    {(isPopup === false && noButtons === false) && (
                         <button onClick={() => setAttachedArray && handleRemoveItem(id) } className="flex items-center justify-center w-111px h-73px rounded-md bg-red-cb4343">
                             <div className="pt-px flex items-center justify-center h-71px w-109px rounded-4px border border-red-f36576 bg-gradient-to-b from-red-f03a50 via-red-df304f to-red-cf254d cursor-pointer">
                                 <span className="font-spoqaMedium tracking-tight text-14px text-white">내역삭제</span>

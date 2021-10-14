@@ -166,7 +166,7 @@ const MinigamesRightPanel = ({
             </div>
 
             <div className="h-43px border-b border-gray-dddddd flex items-center justify-between pl-14px pr-19px ">
-                <p className="text-16px font-spoqaMedium tracking-tight text-gray-r454545 pt-px">보유금액</p>
+                <p className="text-16px font-spoqaMedium tracking-tight text-gray-r454545 pt-2px">보유금액</p>
                 <p className="text-16px font-robotoBold tracking-tight text-blue-r0056a6 pt-px">3,522,170</p>
             </div>
             <div className="h-43px border-b border-gray-dddddd flex items-center justify-between pl-14px pr-19px">

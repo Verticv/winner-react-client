@@ -140,12 +140,12 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
                 <p className="text-14px font-robotoRegular tracking-tight">20,000,000</p>
             </div>
 
-            <div className="h-47px border-b border-gray-dddddd flex items-center justify-between pl-11px pr-16px pt-px">
+            <div className="h-47px border-b border-gray-dddddd flex items-center justify-between pl-11px pr-16px pt-2px">
                 <p className="text-14px font-spoqaMedium tracking-tight text-gray-r454545">배당률합계</p>
                 <p style={{color: "#f26522"}} className="text-14px font-roboto tracking-tight text-blue-r0056a6">1.00</p>
             </div>
 
-            <div className="h-47px border-b border-gray-dddddd flex items-center justify-between pl-11px pr-10px">
+            <div className="h-47px border-b border-gray-dddddd flex items-center justify-between pl-11px pr-10px pt-px">
                 <p className="text-14px font-spoqaMedium tracking-tight text-gray-r454545 pt-px">베팅금액</p>
                 <input 
                     style={{color: "#d52e2e", width: "191px", height: "32px", backgroundColor: "#e8e8e8"}} 
@@ -161,7 +161,7 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
                 />
             </div>
 
-            <div className="h-47px border-b border-gray-dddddd flex items-center justify-between pl-11px pr-16px pt-px">
+            <div className="h-47px border-b border-gray-dddddd flex items-center justify-between pl-11px pr-16px pt-2px">
                 <p className="text-14px font-spoqaMedium tracking-tight text-gray-r454545">적중예상금액</p>
                 <p className="text-14px font-roboto tracking-tight text-blue-r0056a6">11,000</p>
             </div>

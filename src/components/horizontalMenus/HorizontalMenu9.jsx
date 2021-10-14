@@ -10,6 +10,8 @@ const HorizontalMenu9 = ({
     const history = useHistory();
     const pathname = window.location.pathname
 
+    console.log(pathname)
+
     function TabsList({ items }) {
         return items.map(item => (
             <button 

@@ -15,7 +15,7 @@ const FishingGameHover = ({selection}) => {
                 <img className={`opacity-100 group-hover:opacity-0 w-362px h-206px object-none object-left`} src={item.background} alt="game_image" />
                 <img className={`opacity-0 group-hover:opacity-100 absolute w-362px h-206px top-0 object-none object-left `} src={item.highlight} alt="game_image" />
                 <div style={{right:"49px"}} className="absolute bottom-0 h-20px w-170px flex items-center justify-center -mb-2px"><span className="group-hover:text-black font-spoqaBold tracking-tight text-12px text-gray-r616161">{item.imgText}</span></div>
-                <div className={`absolute bottom-0 font-spoqaBold text-12px w-80px h-25px -ml-120px -mb-15px flex items-center justify-center rounded-full bg-white text-gray-r888889 group-hover:text-white group-hover:shadow-plain4 ${item.color}`}>게임시작</div>
+                <div className={`absolute bottom-0 font-spoqaBold text-12px w-80px h-25px -ml-120px -mb-15px flex items-center justify-center rounded-full bg-white text-gray-r888889 group-hover:text-white shadow-plain4 ${item.color}`}>게임시작</div>
             </div>
         ));
     }

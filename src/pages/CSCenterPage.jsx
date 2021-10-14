@@ -138,7 +138,7 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
                         branch1="고객센터"
                         branch2="베팅규정" 
                         branch3="스포츠게임"
-                        mainPath="/cscenter/policy/sportsgame"
+                        mainPath="/cscenter/policy/sportsgame/soccer"
                         setSelectedTab={setSelectedTab}
                     />
                 </Route>
@@ -147,7 +147,7 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
                         branch1="고객센터"
                         branch2="베팅규정" 
                         branch3="미니게임"
-                        mainPath="/cscenter/policy/sportsgame"
+                        mainPath="/cscenter/policy/sportsgame/soccer"
                         setSelectedTab={setSelectedTab}
                         setSelectedSubTab={setSelectedSubTab}
                     />
@@ -157,7 +157,7 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
                         branch1="고객센터"
                         branch2="베팅규정"
                         branch3="가상게임"
-                        mainPath="/cscenter/policy/sportsgame"
+                        mainPath="/cscenter/policy/sportsgame/soccer"
                         setSelectedTab={setSelectedTab}
                         setSelectedSubTab={setSelectedSubTab}
                     />

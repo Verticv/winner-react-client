@@ -56,8 +56,18 @@ const EsportsPage = ({isAuthenticated, setAuthenticated}) => {
                     />
                 </Route>
 
+                
+
                 <div className="w-default">
-                    <HorizontalMenu9 itemsArray={MenuArray} setSelectedTab={setSelectedTab} />
+                    <Route path="/esports/structure">
+                        <HorizontalMenu9 itemsArray={MenuArray} setSelectedTab={setSelectedTab} />
+                    </Route>
+                    <Route path="/esports/single">
+                        <HorizontalMenu9 itemsArray={MenuArray} setSelectedTab={setSelectedTab} />
+                    </Route>
+                    <Route path="/esports/multi">
+                        <HorizontalMenu9 itemsArray={MenuArray} setSelectedTab={setSelectedTab} />
+                    </Route>
                 </div>
                 
                 <div className="flex mt-20px mb-60px w-default">

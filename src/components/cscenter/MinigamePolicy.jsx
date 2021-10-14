@@ -21,7 +21,7 @@ const MinigamePolicy = () => {
     
     return (
         <div>
-            <MyPageTitle title="스포츠게임" />
+            <MyPageTitle title="미니게임" />
 
 
             <div className="mt-20px" />

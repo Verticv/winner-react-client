@@ -31,13 +31,12 @@ const HorizontalMenu = ({
                     style={{
                         background: pathname === item.path
                         ? "linear-gradient(to bottom, #2087f0, #1873cf)"
-                        : "linear-gradient(to bottom, #c4d6e6, #e8f3fd 26%, #ffffff )"
+                        : "linear-gradient(to bottom, #c4d6e6, #e8f3fd 26%, #ffffff)",
+                        borderBottomLeftRadius:"6px",
+                        borderBottomRightRadius:"6px",
+                        borderColor: pathname === item.path ? "#1a73ce" : "#d6dfe8"
                     }}
-                    className={`${
-                        pathname === item.path
-                        ? "bg-gradient-to-b from-blue-r2087f0 via-blue-r2087f0 to-blue-gradDark"
-                        : "bg-gradient-to-b from-blue-c4d6e6 via-gray-f5feff to-white border-b border-l border-r border-blue-d6dfe8"
-                    } mt-3px h-77px w-full rounded-b-md rounded-t-lg flex flex-col items-center`}
+                    className={`mt-3px h-75px w-full rounded-b-lg rounded-t-md flex flex-col items-center border-b border-l border-r`}
                 >
                     <img className="mt-8px ml-2px object-none" src={item.icon} alt="" />
                     <span 

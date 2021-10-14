@@ -58,7 +58,7 @@ const SportsHover = ({selection}) => {
                         <img className={`opacity-100 group-hover:opacity-0 w-305px h-206px object-none object-left`} src={item.background} alt="game_image" />
                         <img className={`opacity-0 group-hover:opacity-100 absolute top-0 w-305px h-206px object-none object-left`} src={item.highlight} alt="game_image" />
                         <div className="absolute bottom-0 h-20px w-170px right-0 flex items-center justify-center -mb-2px"><span className={`group-hover:text-black font-spoqaBold tracking-tight text-12px text-gray-r616161 ${item.id === 1 && "ml-6px"}`}>{item.imgText}</span></div>
-                        <div className={`absolute bottom-0 font-spoqaBold text-12px w-80px h-25px ml-80px -mb-17px flex items-center justify-center rounded-full bg-white text-gray-r888889 group-hover:text-white group-hover:shadow-plain4 ${item.color}`}>게임시작</div>
+                        <div className={`absolute bottom-0 font-spoqaBold text-12px w-80px h-25px ml-80px -mb-17px flex items-center justify-center rounded-full bg-white text-gray-r888889 group-hover:text-white shadow-plain4 ${item.color}`}>게임시작</div>
                     </div>
                 )}
             
