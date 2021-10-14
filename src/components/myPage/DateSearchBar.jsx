@@ -6,6 +6,7 @@ import ko from 'date-fns/locale/ko';
 import CalendarIcon from '../../images/myPage/betHistory/calendar.png'
 import DropDownControls from 'components/dropdowns/DropDownControls';
 import ArrowDownGray from '../../images/arrows/arrow_down_gray.png'
+import './DatePicker.css'
 registerLocale('ko', ko)
 
 const DateSearchBar = ({
@@ -106,6 +107,7 @@ const DateSearchBar = ({
                             selected={startDate} 
                             onChange={(date) => setStartDate(date)}
                             dateFormat="yyyy-MM-dd"
+                            dateFormatCalendar="yyyy년 MM월"
                         />
                         <img src={CalendarIcon} alt="" className="absolute top-0 right-0 mt-14px mr-10px" />
                     </div>
@@ -117,6 +119,7 @@ const DateSearchBar = ({
                             selected={endDate} 
                             onChange={(date) => setEndDate(date)}
                             dateFormat="yyyy-MM-dd"
+                            dateFormatCalendar="yyyy년 MM월"
                         />
                         <img src={CalendarIcon} alt="" className="absolute top-0 right-0 mt-14px mr-10px" />
                     </div>
