@@ -62,11 +62,11 @@ const Faq = () => {
                     }
                 }}
             >
-                <img className="object-none" src={QIcon} alt="" />
+                <img className="object-none mt-3px" src={QIcon} alt="" />
                 <div className="w-full h-full px-18px flex items-center space-x-9px"> 
                     <div 
                         style={{backgroundColor: "#8494a4", width: "89px"}} 
-                        className="h-29px rounded-full flex items-center justify-center text-white text-14px font-spoqaMedium tracking-tight"
+                        className="h-29px rounded-full flex items-center justify-center text-white text-14px font-spoqaMedium tracking-tight pt-2px"
                     > 
                         {type}
                     </div>

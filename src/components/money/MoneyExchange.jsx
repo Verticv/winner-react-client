@@ -32,7 +32,7 @@ const MoneyExchange = () => {
                 </div>
                 <div className="mt-18px flex flex-col space-y-14px text-red-ac6d6d tracking-tight font-spoqaMedium text-16px">
                     <span className="h-14px"><span className="font-bold">✓</span>  환전 신청 시 현재 보유머니에서 차감되며, 회원님의 계좌번호로 입금됩니다.</span>
-                    <span className="h-14px"><span className="font-bold">✓</span>  은행 점검 시간을 확인하신 후 해당 시간에는 입금이 지연될 수 있으니 점검 시간을 피해 신청해 주시기 바랍니다.</span>
+                    <span className="h-14px"><span className="font-bold">✓</span>  입금이 지연될 수 있으니 은행 점검 시간을 확인하신 후 점검 시간을 피해 신청해 주시기 바랍니다.</span>
                     <span className="h-14px"><span className="font-bold">✓</span>  자세한 문의사항은 고객센터를 이용해 주시기 바랍니다.</span>
                 </div>
             </div>

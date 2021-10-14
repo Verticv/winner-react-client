@@ -166,7 +166,10 @@ const LeftMenu = ({
                                         history.push(item.path)
                                     }}
                                     className={`${
-                                        pathname === item.path
+                                        pathname === item.path || pathname === item.path_1 
+                                        || pathname === item.path_2 || pathname === item.path_3 
+                                        || pathname === item.path_4 || pathname === item.path_5 
+                                        || pathname === item.path_6 || pathname === item.path_7 || pathname === item.path_8 
                                         ? "bg-blue-d0e8ff text-gray-r454545" 
                                         : "bg-gray-f9f9f9 text-gray-r8c8c8c"
                                     } flex items-center h-45px w-full  pl-60px`}>
@@ -181,7 +184,7 @@ const LeftMenu = ({
                                         history.push(item.path2)
                                     }}
                                     className={`${
-                                        pathname === item.path2
+                                        pathname === item.path2 || pathname === item.path2_1 || pathname === item.path2_2 || pathname === item.path2_3
                                         ? "bg-blue-d0e8ff text-gray-r454545" 
                                         : "bg-gray-f9f9f9 text-gray-r8c8c8c"
                                     } flex items-center h-45px w-full bg-gray-f9f9f9 pl-60px`}>

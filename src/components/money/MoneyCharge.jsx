@@ -34,7 +34,7 @@ const MoneyCharge = () => {
                     <span className="text-red-ee3c62 font-spoqaMedium text-20px tracking-tight">확인/필독사항</span>
                 </div>
                 <div className="mt-18px flex flex-col space-y-14px text-red-ac6d6d tracking-tight font-spoqaMedium text-16px">
-                    <span className="h-14px"><span className="font-bold">✓</span>  입금 시 반드시 회원님의 성함으로 입금 바랍니다.</span>
+                    <span style={{color:"#8c5757"}} className="h-14px"><span className="font-bold">✓</span>  입금 시 반드시 회원님의 성함으로 입금 바랍니다.</span>
                     <span className="h-14px"><span className="font-bold">✓</span>  입금이 지연될 수 있으니 은행 점검 시간을 확인하신 후 점검 시간을 피해 신청해 주시기 바랍니다.</span>
                     <span className="h-14px"><span className="font-bold">✓</span>  입금계좌는 수시로 변경되오니 반드시 계좌번호 문의 신청을 통해 계좌번호를 확인 후 입금하여 주시기 바랍니다.</span>
                     <span className="h-14px"><span className="font-bold">✓</span>  자세한 문의사항은 고객센터를 이용해 주시기 바랍니다.</span>

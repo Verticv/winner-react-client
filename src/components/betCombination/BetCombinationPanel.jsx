@@ -745,16 +745,16 @@ const BetCombinationPanel = ({
             <div className="h-50px w-full flex items-center text-14px font-spoqaMedium tracking-tight text-gray-r454545 pt-4px">
                 <p className="ml-50px">경기일시</p>
                 <p style={{marginLeft: "62px"}}>구분</p>
-                <div style={{marginLeft: "144px"}} className="flex">
+                <div style={{marginLeft: "136px"}} className="flex">
                     <p>승(홈)오버</p>
                     <img className="object-none ml-5px" src={UpIcon} alt="" />
                 </div>
-                <p style={{marginLeft: "107px"}}>무/핸/합</p>
-                <div style={{marginLeft: "112px"}} className="flex">
+                <p style={{marginLeft: "112px"}}>무/핸/합</p>
+                <div style={{marginLeft: "107px"}} className="flex">
                     <p>패(원정)언더</p>
                     <img className="object-none ml-5px" src={DownIcon} alt="" />
                 </div>
-                <p style={{marginLeft: "110px"}}>정보</p>
+                <p style={{marginLeft: "118px"}}>정보</p>
             </div>
 
             <div className="relative flex flex-col justify-start items-center h-119px px-10px">
@@ -777,7 +777,7 @@ const BetCombinationPanel = ({
 
             <div className="mt-6px px-10px">
                 <div className="flex items-center justify-between h-59px border border-gray-dddddd rounded-lg bg-gray-f9f9f9">
-                    <div className="flex">
+                    <div className="flex items-center">
                         <img className="object-none mx-9px" src={FootballIcon} alt="" />
                         <p className="text-20px font-spoqaMedium text-gray-r454545 mr-9px">축구</p>
                         <div 

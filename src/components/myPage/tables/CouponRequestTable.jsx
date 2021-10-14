@@ -102,7 +102,7 @@ const CouponRequestTable = () => {
                 className="font-spoqa text-14px tracking-tight text-gray-r454545 h-56px w-full border-b border-gray-dddddd"
             >
                 <td className="w-292px text-center">{item.name}</td>
-                <td className="w-119px text-center text-red-e9441d font-robotoRegular">{item.amount}</td>
+                <td className="w-119px text-right text-red-e9441d font-robotoRegular pr-20px">{item.amount}</td>
                 <td className="w-140px text-center">{item.username}</td>
                 <td 
                     style={{

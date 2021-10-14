@@ -72,7 +72,7 @@ const LiveCasinoHistoryDetailPopup = ({setPopupOpen}) => {
                                     style={{backgroundColor:"#8e9296"}}
                                     className="h-42px flex items-center justify-center text-16px font-spoqaMedium tracking-tight text-white"
                                 >
-                                    벙커 핸드
+                                    뱅커 핸드
                                 </div>
 
                                 <div 

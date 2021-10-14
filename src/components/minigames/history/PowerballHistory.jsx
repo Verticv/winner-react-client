@@ -75,7 +75,7 @@ const PowerballHistory = ({array, checkedState, setCheckedState}) => {
     return (
         <div className="w-full ">
 
-            <div className="flex items-center justify-start bg-gray-fafafa font-spoqaBold text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd">        
+            <div className="flex items-center justify-start bg-gray-fafafa font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd">        
                 <div style={{width: "60px"}} className="flex justify-center ml-28px">선택</div>
                 <div style={{width: "117px"}} className="flex justify-center">번호</div>
                 <div style={{width: "147px"}} className="flex justify-center">회차</div>

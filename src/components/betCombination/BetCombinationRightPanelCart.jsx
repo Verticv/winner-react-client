@@ -101,7 +101,7 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
 
 
     return (
-        <div>
+        <div style={{width:"307px"}}>
             <div className="bg-white border-b border-gray-dddddd pb-5px px-3px flex flex-col">
                 {showConfirm && (
                     <>
@@ -120,36 +120,36 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
                     </div>
                 )}
             </div>
-            <div className="h-47px border-b border-gray-dddddd flex items-center justify-between pl-11px pr-16px">
+            <div className="h-47px border-b border-gray-dddddd flex items-center justify-between pl-11px pr-16px pt-px">
                 <p className="text-16px font-spoqaMedium tracking-tight text-gray-r454545">보유금액</p>
                 <p className="text-16px font-robotoBold tracking-tight text-blue-r0056a6">3,522,170</p>
             </div>
 
-            <div className="h-34px border-b border-gray-dddddd flex  pl-11px pr-16px items-center justify-between bg-gray-fafafa">
+            <div className="h-34px border-b border-gray-dddddd flex  pl-11px pr-16px items-center justify-between bg-gray-fafafa pt-px">
                 <p className="text-14px font-spoqaMedium tracking-tight text-gray-r7b7b7b">베팅 최소금액</p>
-                <p style={{color: "#d52e2e"}} className="text-14px font-roboto tracking-tight">5,000</p>
+                <p style={{color: "#d52e2e"}} className="text-14px font-robotoRegular tracking-tight">5,000</p>
             </div>
             
-            <div className="h-34px border-b border-gray-dddddd flex pl-11px pr-16px items-center justify-between bg-gray-fafafa">
+            <div className="h-34px border-b border-gray-dddddd flex pl-11px pr-16px items-center justify-between bg-gray-fafafa pt-px">
                 <p className="text-14px font-spoqaMedium tracking-tight text-gray-r7b7b7b">베팅 최대금액</p>
-                <p className="text-14px font-roboto tracking-tight">7,000,000</p>
+                <p className="text-14px font-robotoRegular tracking-tight">7,000,000</p>
             </div>
 
-            <div className="h-34px border-b border-gray-dddddd flex pl-11px pr-16px items-center justify-between bg-gray-fafafa">
+            <div className="h-34px border-b border-gray-dddddd flex pl-11px pr-16px items-center justify-between bg-gray-fafafa pt-px">
                 <p className="text-14px font-spoqaMedium tracking-tight text-gray-r7b7b7b">적중 최대금액</p>
-                <p className="text-14px font-roboto tracking-tight">20,000,000</p>
+                <p className="text-14px font-robotoRegular tracking-tight">20,000,000</p>
             </div>
 
-            <div className="h-47px border-b border-gray-dddddd flex items-center justify-between pl-11px pr-16px">
+            <div className="h-47px border-b border-gray-dddddd flex items-center justify-between pl-11px pr-16px pt-px">
                 <p className="text-14px font-spoqaMedium tracking-tight text-gray-r454545">배당률합계</p>
                 <p style={{color: "#f26522"}} className="text-14px font-roboto tracking-tight text-blue-r0056a6">1.00</p>
             </div>
 
             <div className="h-47px border-b border-gray-dddddd flex items-center justify-between pl-11px pr-10px">
-                <p className="text-14px font-spoqaMedium tracking-tight text-gray-r454545">베팅금액</p>
+                <p className="text-14px font-spoqaMedium tracking-tight text-gray-r454545 pt-px">베팅금액</p>
                 <input 
                     style={{color: "#d52e2e", width: "191px", height: "32px", backgroundColor: "#e8e8e8"}} 
-                    className="flex items-center justify-end px-5px border rounded-4px border-gray-dddddd text-14px font-roboto tracking-tight outline-none text-right"
+                    className="flex items-center justify-end px-5px border rounded-4px border-gray-dddddd text-14px font-roboto tracking-tight outline-none text-right pt-px"
                     placeholder="0"
                     value={nf.format(inputValue)}
                     onChange={e => setInputValue(e.target.value.replace(/,/g, ''))}
@@ -161,7 +161,7 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
                 />
             </div>
 
-            <div className="h-47px border-b border-gray-dddddd flex items-center justify-between pl-11px pr-16px">
+            <div className="h-47px border-b border-gray-dddddd flex items-center justify-between pl-11px pr-16px pt-px">
                 <p className="text-14px font-spoqaMedium tracking-tight text-gray-r454545">적중예상금액</p>
                 <p className="text-14px font-roboto tracking-tight text-blue-r0056a6">11,000</p>
             </div>

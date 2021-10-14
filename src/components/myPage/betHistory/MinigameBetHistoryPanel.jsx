@@ -67,7 +67,7 @@ const MinigameBetHistoryPanel = ({
                 <button 
                     style={{
                         width: isAttached ? "365px" : "285px",
-                        textShadow: bet === "left" ? "1px 1px 1px #00000050" : "",
+                        textShadow: bet === "left" ? "1px 1px 1px #00000070" : "",
                         backgroundColor: bet === "left" ? "#cb4343" : "#dddddd"
                     }} 
                     className="flex items-center justify-center h-36px rounded-lg"
@@ -103,7 +103,7 @@ const MinigameBetHistoryPanel = ({
                     <div
                     style={{
                         width: isAttached ? "363px" : "283px",
-                        textShadow: bet === "right" ? "1px 1px 1px #00000050" : "",
+                        textShadow: bet === "right" ? "1px 1px 1px #00000070" : "",
                         backgroundColor: bet === "right" ? "#cb4343" : "#dddddd"
                     }} 
                     className={`${

@@ -174,7 +174,7 @@ const DistributorPage = ({
                         <div className="w-full h-full flex items-center justify-center">스페이드</div>
                         <div className="w-full h-full flex items-center justify-center">하바네로</div>
                         <div className="w-full h-full flex items-center justify-center">월드매치</div>
-                        <div className="w-full h-full flex items-center justify-center">매버릭</div>
+                        <div className="w-full h-full flex items-center justify-center">메버릭</div>
                         <div className="w-full h-full flex flex-col items-center justify-center -space-y-4px"><span>플레이</span><span>앤고</span></div>
                         <div className="w-full h-full flex flex-col items-center justify-center -space-y-4px"><span>YL</span><span>게이밍</span></div>
                         <div className="w-full h-full flex flex-col items-center justify-center -space-y-4px"><span>레드</span><span>타이거</span></div>
@@ -257,7 +257,7 @@ const DistributorPage = ({
                         <div className="w-full h-full flex items-center justify-center">스페이드</div>
                         <div className="w-full h-full flex items-center justify-center">하바네로</div>
                         <div className="w-full h-full flex items-center justify-center">월드매치</div>
-                        <div className="w-full h-full flex items-center justify-center">매버릭</div>
+                        <div className="w-full h-full flex items-center justify-center">메버릭</div>
                         <div className="w-full h-full flex flex-col items-center justify-center -space-y-4px"><span>플레이</span><span>앤고</span></div>
                         <div className="w-full h-full flex flex-col items-center justify-center -space-y-4px"><span>YL</span><span>게이밍</span></div>
                         <div className="w-full h-full flex flex-col items-center justify-center -space-y-4px"><span>레드</span><span>타이거</span></div>
@@ -341,12 +341,20 @@ const DistributorPage = ({
     function RecommendedUserCell({ items }) {
 
         const [isUserCountOpen, setUserCountOpen] = useState(new Array(20).fill(false))
-        const handleOnChange = (position) => {
+        const [subArrowClicked, setSubArrowClicked] = useState(new Array(8).fill(false))
+        const handleOnChange1 = (position) => {
             const updatedCheckedState = isUserCountOpen.map((item, index) =>
               index === position ? !item : item
             );
             setUserCountOpen(updatedCheckedState);
         }; 
+
+        const handleOnChange2 = (position) => {
+            const updatedCheckedState = subArrowClicked.map((item, index) =>
+              index === position ? !item : item
+            );
+            setSubArrowClicked(updatedCheckedState);
+        };
     
         return items.map(item => (
             <>
@@ -365,7 +373,7 @@ const DistributorPage = ({
                         style={{width: "87px"}}
                         className={`${isUserCountOpen ? "bg-blue-r0070d9" : "bg-blue-r2068b2"} flex items-center justify-center h-36px w-87px rounded-4px`}
                         onClick={() => {
-                            handleOnChange(item.id)
+                            handleOnChange1(item.id)
                         }}
                     >
                         <div 
@@ -398,7 +406,7 @@ const DistributorPage = ({
                     <button 
                         className={`${isUserCountOpen ? "bg-blue-r0070d9" : "bg-blue-r2068b2"} flex items-center justify-center h-36px w-87px rounded-4px`}
                         onClick={() => {
-                            handleOnChange(item.id + 1)
+                            handleOnChange1(item.id + 1)
                         }}
                     >
                         <div className={`${
@@ -429,7 +437,7 @@ const DistributorPage = ({
                     <button 
                         className={`${isUserCountOpen ? "bg-blue-r0070d9" : "bg-blue-r2068b2"} flex items-center justify-center h-36px w-87px rounded-4px`}
                         onClick={() => {
-                            handleOnChange(item.id + 2)
+                            handleOnChange1(item.id + 2)
                         }}
                     >
                         <div className={`${
@@ -471,54 +479,78 @@ const DistributorPage = ({
                             {/* === Header === */}
                             <div className="h-67px w-full bg-gray-r687b8e border-b border-gray-dddddd flex items-center justify-evenly font-spoqaMedium text-16px text-white tracking-tight">
                                 <div className="w-full h-full flex items-center justify-center">번호</div>
-                                <div className="w-full h-full flex items-center justify-center space-x-5px">
+                                <button 
+                                    className="w-full h-full flex items-center justify-center space-x-5px"
+                                    onClick={() => handleOnChange2(0)}
+                                >
                                     <p>아이디</p>
-                                    <img src={WhiteArrow} alt=""/>
-                                </div>
+                                    <img src={WhiteArrow} className={`${subArrowClicked[0] === true ? "transform rotate-180" : ""}`} alt=""/>
+                                </button>
                                 <div className="w-full h-full flex items-center justify-center">별명</div>
-                                <div className="w-full h-full flex items-center justify-center space-x-5px">
+                                <button 
+                                    className="w-full h-full flex items-center justify-center space-x-5px"
+                                    onClick={() => handleOnChange2(1)}
+                                >
                                     <div className="flex flex-col items-center justify-center space-y-3px ">
                                         <div className="flex items-center h-16px">하부</div>
                                         <div className="flex items-center h-16px">유저수</div>
                                     </div>
-                                    <img src={WhiteArrow} alt=""/>
-                                </div>
-                                <div className="w-full h-full flex items-center justify-center space-x-5px">
+                                    <img src={WhiteArrow} className={`${subArrowClicked[1] === true ? "transform rotate-180" : ""}`} alt=""/>
+                                </button>
+                                <button 
+                                    className="w-full h-full flex items-center justify-center space-x-5px"
+                                    onClick={() => handleOnChange2(2)}
+                                >
                                     <div className="flex flex-col items-center justify-center space-y-3px ">
                                         <div className="flex items-center h-16px">추천일시</div>
                                         <div className="flex items-center h-16px">로그인일시</div>
                                         <div className="flex items-center h-16px">(미접속일수)</div>
                                     </div>
-                                    <img src={WhiteArrow} alt=""/>
-                                </div>
+                                    <img src={WhiteArrow} className={`${subArrowClicked[2] === true ? "transform rotate-180" : ""}`} alt=""/>
+                                </button>
                                 <div className="w-full h-full flex items-center justify-center">요율보기</div>
                                 <div className="w-full h-full flex items-center justify-center">입금액</div>
                                 <div className="w-full h-full flex items-center justify-center">보너스</div>
-                                <div className="w-full h-full flex items-center justify-center space-x-5px">
+                                <button 
+                                    className="w-full h-full flex items-center justify-center space-x-5px"
+                                    onClick={() => handleOnChange2(3)}
+                                >
                                     <p>출금액</p>
-                                    <img src={WhiteArrow} alt=""/>
-                                </div>
+                                    <img src={WhiteArrow} className={`${subArrowClicked[3] === true ? "transform rotate-180" : ""}`} alt=""/>
+                                </button>
                                 <div className="w-full h-full flex items-center justify-center">입출금액</div>
-                                <div className="w-full h-full flex items-center justify-center space-x-5px">
+                                <button 
+                                    className="w-full h-full flex items-center justify-center space-x-5px"
+                                    onClick={() => handleOnChange2(4)}
+                                >
                                     <p>베팅액</p>
-                                    <img src={WhiteArrow} alt=""/>
-                                </div>
-                                <div className="w-full h-full flex items-center justify-center space-x-5px">
+                                    <img src={WhiteArrow} className={`${subArrowClicked[4] === true ? "transform rotate-180" : ""}`} alt=""/>
+                                </button>
+                                <button 
+                                    className="w-full h-full flex items-center justify-center space-x-5px"
+                                    onClick={() => handleOnChange2(5)}
+                                >
                                     <p>윈루즈</p>
-                                    <img src={WhiteArrow} alt=""/>
-                                </div>
+                                    <img src={WhiteArrow} className={`${subArrowClicked[5] === true ? "transform rotate-180" : ""}`} alt=""/>
+                                </button>
                                 <div className="w-full h-full flex items-center justify-center">상세내역</div>
-                                <div className="w-full h-full flex items-center justify-center space-x-5px">
+                                <button 
+                                    className="w-full h-full flex items-center justify-center space-x-5px"
+                                    onClick={() => handleOnChange2(6)}
+                                >
                                     <p>포인트</p>
-                                    <img src={WhiteArrow} alt=""/>
-                                </div>
-                                <div className="w-full h-full flex items-center justify-center space-x-5px">
+                                    <img src={WhiteArrow} className={`${subArrowClicked[6] === true ? "transform rotate-180" : ""}`} alt=""/>
+                                </button>
+                                <button 
+                                    className="w-full h-full flex items-center justify-center space-x-5px"
+                                    onClick={() => handleOnChange2(7)}
+                                >
                                     <div className="flex flex-col items-center justify-center space-y-3px ">
                                         <div className="flex items-center h-16px">보유</div>
                                         <div className="flex items-center h-16px">금액</div>
                                     </div>
-                                    <img src={WhiteArrow} alt=""/>
-                                </div>
+                                    <img src={WhiteArrow} className={`${subArrowClicked[7] === true ? "transform rotate-180" : ""}`} alt=""/>
+                                </button>
                             </div>
                             <RecommendedUserCell items={RecommendedUserArray2} />
                         </div>
@@ -602,7 +634,7 @@ const DistributorPage = ({
                         <span>총판현황</span>
                     </div>
                     <div className="flex h-165px w-full mt-20px space-x-4px">
-                        <SummaryCard img={SummaryIcon1} text="전체유저" count={5} />
+                        <SummaryCard img={SummaryIcon1} text="전체 유저" count={5} />
                         <SummaryCard img={SummaryIcon2} text="요율 설정 완료건" count={20} />
                         <SummaryCard img={SummaryIcon3} text="요율 설정 미완료건" count={5} />
                         <SummaryCard img={SummaryIcon4} text="전체 포인트" count={0} />
@@ -634,7 +666,7 @@ const DistributorPage = ({
                                     <td className="w-91px text-center">스페이드</td>
                                     <td className="w-91px text-center">하바네로</td>
                                     <td className="w-91px text-center">월드매치</td>
-                                    <td className="w-91px text-center">매버릭</td>
+                                    <td className="w-91px text-center">메버릭</td>
                                     <td className="w-91px text-center flex flex-col pt-2px -space-y-4px"><span>플레이</span><span>앤고</span></td>
                                     <td className="w-91px text-center flex flex-col pt-2px -space-y-4px"><span>YL</span><span>게이밍</span></td>
                                     <td className="w-91px text-center flex flex-col pt-2px -space-y-4px"><span>레드</span><span>타이거</span></td>
@@ -731,7 +763,7 @@ const DistributorPage = ({
                                     <td className="w-83px text-center">스페이드</td>
                                     <td className="w-83px text-center">하바네로</td>
                                     <td className="w-83px text-center">월드매치</td>
-                                    <td className="w-83px text-center">매버릭</td>
+                                    <td className="w-83px text-center">메버릭</td>
                                     <td className="w-83px text-center flex flex-col pt-2px -space-y-4px"><span>플레이</span><span>앤고</span></td>
                                     <td className="w-83px text-center flex flex-col pt-2px -space-y-4px"><span>YL</span><span>게이밍</span></td>
                                     <td className="w-83px text-center flex flex-col pt-2px -space-y-4px"><span>레드</span><span>타이거</span></td>

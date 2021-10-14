@@ -30,7 +30,7 @@ const EditInfo = () => {
                         <div className="flex space-x-10px w-full">
                             <Title text="아이디" />
                             <div className="w-540px space-y-2 flex-shrink-0">
-                                <label className="text-gray-r585858 font-spoqaMedium text-16px pl-10px">louie3</label>
+                                <label className="text-gray-r585858 font-spoqa text-16px pl-10px">louie3</label>
                                 <div className="border-b w-full border-gray-bebebe"></div>
                             </div>
                         </div>
@@ -41,7 +41,7 @@ const EditInfo = () => {
                             <Title text="비밀번호" />
                             <div className={`${selectedInput === 0 ? "space-y-7px" : "space-y-8px"} w-full `}>
                                 <input 
-                                    className="w-full text-gray-r393e41 font-spoqaMedium text-16px outline-none" 
+                                    className="w-full text-gray-r393e41 font-spoqa text-16px outline-none" 
                                     onFocus={(e) => setSelectedInput(0)}
                                     onBlur={(e) => setSelectedInput(false)}
                                     type="password"
@@ -49,7 +49,7 @@ const EditInfo = () => {
                                 <div className={`${selectedInput === 0 ? "bg-blue-r1ca7ec h-2px" : "bg-gray-bebebe h-px"} w-full`} />
                             </div>
                         </div>
-                        <div className="h-13px flex items-center text-14px font-spoqaMedium text-gray-bebebe ml-150px tracking-minus05">영문 및 숫자를 1자 이상 반드시 포함하여 6~16자 내외로 입력해주세요. (특수문자 사용불가)</div>
+                        <div className="h-13px flex items-center text-14px font-spoqaMedium text-gray-bebebe ml-150px tracking-minus05">영문과 숫자 그리고 특수문자(ex. !@#$%^&)를 반드시 포함하여 6~16자로 입력해야 합니다.</div>
                     </div>
                     {/* BREAK */}
                     <div className="w-full flex flex-col space-y-10px mt-30px">
@@ -57,7 +57,7 @@ const EditInfo = () => {
                             <Title text="비밀번호 확인" />
                             <div className={`${selectedInput === 1 ? "space-y-7px" : "space-y-8px"} w-full `}>
                                 <input 
-                                    className="w-full text-gray-r393e41 font-spoqaMedium text-16px outline-none" 
+                                    className="w-full text-gray-r393e41 font-spoqa text-16px outline-none" 
                                     onFocus={(e) => setSelectedInput(1)}
                                     onBlur={(e) => setSelectedInput(false)}
                                     type="password"
@@ -72,7 +72,7 @@ const EditInfo = () => {
                             <Title text="환전 비밀번호" />
                             <div className={`${selectedInput === 2 ? "space-y-7px" : "space-y-8px"} w-full `}>
                                 <input 
-                                    className="w-full text-gray-r393e41 font-spoqaMedium text-16px outline-none" 
+                                    className="w-full text-gray-r393e41 font-spoqa text-16px outline-none" 
                                     onFocus={(e) => setSelectedInput(2)}
                                     onBlur={(e) => setSelectedInput(false)}
                                     type="password"
@@ -80,7 +80,7 @@ const EditInfo = () => {
                                 <div className={`${selectedInput === 2 ? "bg-blue-r1ca7ec h-2px" : "bg-gray-bebebe h-px"} w-full`} />
                             </div>
                         </div>
-                        <div className="h-13px flex items-center text-14px font-spoqaMedium text-gray-bebebe ml-150px tracking-minus05">영문 및 숫자를 1자 이상 반드시 포함하여 4~8자 내외로 입력해주세요. (특수문자 사용불가)</div>
+                        <div className="h-13px flex items-center text-14px font-spoqa text-gray-bebebe ml-150px tracking-minus05">영문과 숫자 6~8자로 입력해야 합니다. (특수문자 포함시 변경불가)</div>
                     </div>
                     {/* BREAK */}
                     <div className="w-full flex flex-col space-y-10px mt-30px">
@@ -88,7 +88,7 @@ const EditInfo = () => {
                             <Title text="환전 비밀번호" />
                             <div className={`${selectedInput === 3 ? "space-y-7px" : "space-y-8px"} w-full `}>
                                 <input 
-                                    className="w-full text-gray-r393e41 font-spoqaMedium text-16px outline-none" 
+                                    className="w-full text-gray-r393e41 font-spoqa text-16px outline-none" 
                                     onFocus={(e) => setSelectedInput(3)}
                                     onBlur={(e) => setSelectedInput(false)}
                                     type="password"
@@ -103,7 +103,7 @@ const EditInfo = () => {
                             <div className="flex space-x-10px w-full">
                                 <Title text="레벨" />
                                 <div className="w-540px space-y-2 flex-shrink-0">
-                                    <label className="text-gray-r585858 font-spoqaMedium text-16px pl-10px">레벨 LV.1 (점수: 0)</label>
+                                    <label className="text-gray-r585858 font-spoqa text-16px pl-10px">레벨 LV.1 (점수: 0)</label>
                                     <div className="border-b w-full border-gray-bebebe"></div>
                                 </div>
                             </div>
@@ -112,7 +112,7 @@ const EditInfo = () => {
                             <div className="flex space-x-10px w-full">
                                 <Title text="스포츠" />
                                 <div className="w-540px space-y-2 flex-shrink-0">
-                                    <label className="text-gray-r585858 font-spoqaMedium text-16px pl-10px">Bronze</label>
+                                    <label className="text-gray-r585858 font-spoqa text-16px pl-10px">Bronze</label>
                                     <div className="border-b w-full border-gray-bebebe"></div>
                                 </div>
                             </div>
@@ -121,7 +121,7 @@ const EditInfo = () => {
                             <div className="flex space-x-10px w-full">
                                 <Title text="카지노" />
                                 <div className="w-540px space-y-2 flex-shrink-0">
-                                    <label className="text-gray-r585858 font-spoqaMedium text-16px pl-10px">Bronze</label>
+                                    <label className="text-gray-r585858 font-spoqa text-16px pl-10px">Bronze</label>
                                     <div className="border-b w-full border-gray-bebebe"></div>
                                 </div>
                             </div>
@@ -130,7 +130,7 @@ const EditInfo = () => {
                             <div className="flex space-x-10px w-full">
                                 <Title text="슬롯" />
                                 <div className="w-540px space-y-2 flex-shrink-0">
-                                    <label className="text-gray-r585858 font-spoqaMedium text-16px pl-10px">Bronze</label>
+                                    <label className="text-gray-r585858 font-spoqa text-16px pl-10px">Bronze</label>
                                     <div className="border-b w-full border-gray-bebebe"></div>
                                 </div>
                             </div>
@@ -139,7 +139,7 @@ const EditInfo = () => {
                             <div className="flex space-x-10px w-full">
                                 <Title text="미니게임" />
                                 <div className="w-540px space-y-2 flex-shrink-0">
-                                    <label className="text-gray-r585858 font-spoqaMedium text-16px pl-10px">Bronze</label>
+                                    <label className="text-gray-r585858 font-spoqa text-16px pl-10px">Bronze</label>
                                     <div className="border-b w-full border-gray-bebebe"></div>
                                 </div>
                             </div>

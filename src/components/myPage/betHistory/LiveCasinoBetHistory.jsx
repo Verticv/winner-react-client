@@ -15,7 +15,7 @@ const subTabsArray = [
     { text: "에볼루션", icon: EvoIcon, id: 1 },
     { text: "아시아게이밍", icon: AsiaIcon, id: 2 },
     { text: "프레그메틱플레이", icon: PragIcon, id: 3, custom: "mt-8px" },
-    { text: "드임게이밍", icon: DgIcon, id: 4 },
+    { text: "드림게이밍", icon: DgIcon, id: 4 },
     { text: "섹시게이밍", icon: SexyIcon, id: 5 },
     { text: "빅게이밍", icon: BigIcon, id: 6 },
 ];

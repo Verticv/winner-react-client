@@ -9,6 +9,7 @@ import NoticeBanner from 'components/mainPage/NoticeBanner'
 import React from 'react'
 import { Route } from 'react-router'
 import FreeBoardBanner from '../images/freeBoard/free_board_banner.png'
+import FreeBoardView2 from 'components/freeBoard/FreeBoardView2'
 
 const Freeboard = ({isAuthenticated, setAuthenticated}) => {
 
@@ -35,6 +36,13 @@ const Freeboard = ({isAuthenticated, setAuthenticated}) => {
                         mainPath="/freeboard/view"
                     />
                 </Route>
+                <Route path="/freeboard/view2">
+                    <DirectoryComponent 
+                        branch1="게시판" 
+                        branch2="뷰"
+                        mainPath="/freeboard/view"
+                    />
+                </Route>
                 <Route path="/freeboard/compose">
                     <DirectoryComponent 
                         branch1="게시판" 
@@ -53,6 +61,9 @@ const Freeboard = ({isAuthenticated, setAuthenticated}) => {
                     </Route>
                     <Route path="/freeboard/view">
                         <FreeBoardView />
+                    </Route>
+                    <Route path="/freeboard/view2">
+                        <FreeBoardView2 />
                     </Route>
                     <Route path="/freeboard/compose">
                         <FreeBoardCompose />

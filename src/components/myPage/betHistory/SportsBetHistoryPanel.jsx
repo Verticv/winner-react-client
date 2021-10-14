@@ -63,7 +63,7 @@ const SportsBetHistoryPanel = ({
                 <button 
                     style={{
                         width: isAttached ? "365px" : "285px",
-                        textShadow: bet === "left" ? "1px 1px 1px #00000050" : "",
+                        textShadow: bet === "left" ? "1px 1px 1px #00000070" : "",
                         backgroundColor: bet === "left" ? "#cb4343" : "#dddddd"
                     }} 
                     className="flex items-center justify-center h-36px rounded-lg"
@@ -99,7 +99,7 @@ const SportsBetHistoryPanel = ({
                     <div
                     style={{
                         width: isAttached ? "363px" : "283px",
-                        textShadow: bet === "right" ? "1px 1px 1px #00000050" : "",
+                        textShadow: bet === "right" ? "1px 1px 1px #00000070" : "",
                         backgroundColor: bet === "right" ? "#cb4343" : "#dddddd"
                     }} 
                     className={`${
@@ -141,7 +141,7 @@ const SportsBetHistoryPanel = ({
         </div>
     )
 
-    const Cards0 = () => (
+    const Cards0 = ({bet = "right"}) => (
         <div className="w-full rounded-lg overflow-hidden shadow-subNavbar">
             <div className="flex items-center justify-between h-56px w-full bg-blue-r3591d5 border-b border-gray-dddddd px-20px">
                 <div className="flex items-center">
@@ -161,7 +161,7 @@ const SportsBetHistoryPanel = ({
             </div>
             <div className="flex flex-col w-full bg-gray-fefefe border-gray-dddddd">
                 <CardContent 
-                    bet="right" 
+                    bet={bet} 
                     result="cancel" 
                     choice="away" 
                     score="4 : 4"
@@ -175,7 +175,7 @@ const SportsBetHistoryPanel = ({
         </div>
     )
 
-    const Cards1 = () => (
+    const Cards1 = ({hasUp = true, hasDown = true}) => (
         <div className="w-full rounded-lg overflow-hidden shadow-subNavbar">
             <div className="flex items-center justify-between h-56px w-full bg-blue-r3591d5 border-b border-gray-dddddd px-20px">
                 <div className="flex items-center">
@@ -215,8 +215,8 @@ const SportsBetHistoryPanel = ({
                     stat1="2.95"
                     stat2="3.32"
                     stat3="2.5"
-                    hasDown={true}
-                    hasUp={true}
+                    hasDown={hasDown}
+                    hasUp={hasUp}
                 />
 
             </div>
@@ -313,7 +313,11 @@ const SportsBetHistoryPanel = ({
                 ? <Cards1 />
                 : type === 2 
                 ? <><Cards2 /><Cards3 /></>
-                : ""
+                : type === 3
+                ? <><Cards0 bet="middle" /><Cards1 hasDown={false} hasUp={false} /></>
+                : type === 4 
+                ? <Cards0 bet="middle" />
+                : <></>
                 }
                 </div>
             

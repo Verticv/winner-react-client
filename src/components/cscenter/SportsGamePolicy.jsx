@@ -403,31 +403,31 @@ const SportsGamePolicy = ({setSelectedTab}) => {
 
             <div className=" mt-29px w-full flex h-16px items-center justify-center text-16px tracking-tight font-spoqaMedium text-gray-r454545">
                 <Route path="/cscenter/policy/sportsgame/soccer">
-                    <p className="text-gray-r454545">모든 프로축구 경기는 해당 리그의 공식협회가 인정하는 경기 결과대로 반영됩니다.</p>
+                    <p className="text-gray-r7b7b7b">모든 프로축구 경기는 해당 리그의 공식협회가 인정하는 경기 결과대로 반영됩니다.</p>
                 </Route>
                 <Route path="/cscenter/policy/sportsgame/basketball">
-                    <p className="text-gray-r454545">모든 프로농구 경기는 해당 공식협회가 인정하는 경기 결과대로 반영됩니다.</p>
+                    <p className="text-gray-r7b7b7b">모든 프로농구 경기는 해당 공식협회가 인정하는 경기 결과대로 반영됩니다.</p>
                 </Route>
                 <Route path="/cscenter/policy/sportsgame/baseball">
-                    <p className="text-gray-r454545">모든 프로야구 경기는 해당 리그의 공식협회가 인정하는 경기 결과대로 반영됩니다.</p>
+                    <p className="text-gray-r7b7b7b">모든 프로야구 경기는 해당 리그의 공식협회가 인정하는 경기 결과대로 반영됩니다.</p>
                 </Route>
                 <Route path="/cscenter/policy/sportsgame/volleyball">
-                    <p className="text-gray-r454545">모든 프로배구 경기는 해당 공식협회가 인정하는 경기 결과대로 반영됩니다.</p>
+                    <p className="text-gray-r7b7b7b">모든 프로배구 경기는 해당 공식협회가 인정하는 경기 결과대로 반영됩니다.</p>
                 </Route>
                 <Route path="/cscenter/policy/sportsgame/tennis">
-                    <p className="text-gray-r454545">모든 테니스 경기는 해당 리그의 공식협회가 인정하는 경기 결과대로 반영됩니다.</p>
+                    <p className="text-gray-r7b7b7b">모든 테니스 경기는 해당 리그의 공식협회가 인정하는 경기 결과대로 반영됩니다.</p>
                 </Route>
                 <Route path="/cscenter/policy/sportsgame/hockey">
-                    <p className="text-gray-r454545">모든 아이스하키 경기는 해당 공식협회가 인정하는 경기 결과대로 반영됩니다.</p>
+                    <p className="text-gray-r7b7b7b">모든 아이스하키 경기는 해당 공식협회가 인정하는 경기 결과대로 반영됩니다.</p>
                 </Route>
                 <Route path="/cscenter/policy/sportsgame/handball">
-                    <p className="text-gray-r454545">모든 핸드볼 경기는 해당 공식협회가 인정하는 경기 결과대로 반영됩니다.</p>
+                    <p className="text-gray-r7b7b7b">모든 핸드볼 경기는 해당 공식협회가 인정하는 경기 결과대로 반영됩니다.</p>
                 </Route>
                 <Route path="/cscenter/policy/sportsgame/football">
-                    <p className="text-gray-r454545">모든 미식축구 경기는 해당 공식협회가 인정하는 경기 결과대로 반영됩니다.</p>
+                    <p className="text-gray-r7b7b7b">모든 미식축구 경기는 해당 공식협회가 인정하는 경기 결과대로 반영됩니다.</p>
                 </Route>
                 <Route path="/cscenter/policy/sportsgame/e-sports">
-                    <p className="text-gray-r454545">모든 e-스포츠 경기는 해당 리그의 공식협회가 인정하는 경기 결과대로 반영됩니다.</p>
+                    <p className="text-gray-r7b7b7b">모든 e-스포츠 경기는 해당 리그의 공식협회가 인정하는 경기 결과대로 반영됩니다.</p>
                 </Route>        
             </div>
 

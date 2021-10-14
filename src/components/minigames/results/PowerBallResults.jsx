@@ -22,7 +22,7 @@ const PowerBallResults = ({array}) => {
 
     return (
         <table className="w-full">
-            <thead className="bg-gray-fafafa rounded-3xl font-spoqaBold text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd">
+            <thead className="bg-gray-fafafa rounded-3xl font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd">
                 <tr>
                     <td style={{width: "156px"}} className="text-center">회차</td>
                     <td style={{width: "226px"}} className="text-center">당첨번호결과</td>
