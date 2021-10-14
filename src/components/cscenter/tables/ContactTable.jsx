@@ -30,7 +30,7 @@ const ContactTable = ({
                             style={{backgroundColor: item.isRead === true ? "#dfebf7" : "#0056a6", color: item.isRead === true ? "#4b87bf" : "#ffffff"}}
                             className={`w-69px h-29px rounded-full font-spoqaMedium text-14px tracking-tight flex items-center justify-center`} 
                         >
-                            <p>답변대기</p>
+                            <p>{item.isRead === true ? "답변완료" : "답변대기"}</p>
                         </div>
                     </div>
 
