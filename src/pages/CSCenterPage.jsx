@@ -188,7 +188,7 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
                             <Faq />
                         </Route>
                         <Route path="/cscenter/policy/sportsgame">
-                            <SportsGamePolicy />
+                            <SportsGamePolicy setSelectedTab={setSelectedTab} />
                         </Route>
                         <Route path="/cscenter/policy/minigame">
                             <MinigamePolicy />

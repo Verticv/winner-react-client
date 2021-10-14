@@ -105,7 +105,7 @@ const CouponUsageTable = () => {
         return items.map(item => (
             <tr 
                 style={{backgroundColor: item.id % 2 === 0 ? "#fefefe" : "#f8f9fb"}} 
-                className="rounded-3xl font-spoqa text-14px tracking-tight text-gray-r454545 h-56px w-full border-b border-gray-dddddd"
+                className="font-spoqa text-14px tracking-tight text-gray-r454545 h-56px w-full border-b border-gray-dddddd"
             >
                     <td className="w-313px text-center">{item.name}</td>
                     <td className="w-172px text-right text-red-e9441d pr-20px font-robotoRegular">{item.amount}</td>
@@ -120,8 +120,8 @@ const CouponUsageTable = () => {
     
 
     return (
-        <table className="shadow-subNavbar rounded-3xl overflow-hidden">
-            <thead className="bg-gray-fafafa rounded-3xl font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd">
+        <table style={{borderRadius: "1em"}} className="shadow-subNavbar overflow-hidden">
+            <thead className="bg-gray-fafafa font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd">
                 <tr>
                     <td className="w-313px text-center">쿠폰명</td>
                     <td className="w-172px text-center">쿠폰금액</td>

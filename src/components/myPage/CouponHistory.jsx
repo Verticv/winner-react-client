@@ -9,15 +9,13 @@ import CouponRequestTable from './tables/CouponRequestTable'
 
 
 const CouponHistory = () => {
-    const pathname = window.location.pathname
 
     const [selectedTab, setSelectedTab] = useState(0)
     const [page, setPage] = useState(0)
-    const [, setSelectedPath] = useState(pathname)
 
     const tabsArray = [
         { text: "쿠폰발급내역", icon: Icon1, id: 0, path: "/mypage/coupon/coupon-history/received" },
-        { text: "쿠폰선물내역", icon: Icon2, id: 1,path: "/mypage/coupon/coupon-history/sent" }
+        { text: "쿠폰선물내역", icon: Icon2, id: 1, path: "/mypage/coupon/coupon-history/sent" }
     ]
 
     return (
@@ -25,7 +23,7 @@ const CouponHistory = () => {
             <MyPageTitle title="쿠폰내역"  couponCount={32}/>
 
             <div className="relative w-full mt-20px">
-                <HorizontalMenu itemsArray={tabsArray} setState={setSelectedTab} setSelectedPath={setSelectedPath}/>
+                <HorizontalMenu itemsArray={tabsArray} setSelectedTab={setSelectedTab} />
             </div>
                 
             <div className="mt-20px w-full">

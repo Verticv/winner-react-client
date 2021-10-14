@@ -378,7 +378,7 @@ const ESportsSubArray = [
     {id:0, title: "핸디캡 (전체)", color: "#905a12", text: "선택한 기준점수는 미만 또는 초과 이므로, 연장을 포함하여 핸디캡 적용 결과가 무승부일 경우는 미당첨 처리됨"},
 ]
 
-const SportsGamePolicy = () => {
+const SportsGamePolicy = ({setSelectedTab}) => {
 
     const tabsArray = [
         { text: "축구", icon: Icon1, id: 0, path: "/cscenter/policy/sportsgame/soccer" },
@@ -398,7 +398,7 @@ const SportsGamePolicy = () => {
 
 
             <div className="mt-20px" />
-            <HorizontalMenu itemsArray={tabsArray} />
+            <HorizontalMenu itemsArray={tabsArray} setSelectedTab={setSelectedTab}/>
 
 
             <div className=" mt-29px w-full flex h-16px items-center justify-center text-16px tracking-tight font-spoqaMedium text-gray-r454545">

@@ -78,7 +78,7 @@ const InboxView = () => {
                         }}
                         className="flex items-center justify-center h-50px w-190px bg-black rounded-4px border border-gray-r737579 cursor-pointer"
                     >
-                        <span className="font-spoqaMedium tracking-tight text-14px text-white">목록보기</span>
+                        <span className="font-spoqaMedium tracking-tight text-16px text-white">목록보기</span>
                     </div>
                 </button>
 

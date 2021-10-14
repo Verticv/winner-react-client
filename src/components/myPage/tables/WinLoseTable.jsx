@@ -119,7 +119,7 @@ const WinLoseTable = ({
         return items.map(item => (
             <tr 
                 style={{backgroundColor: item.id % 2 === 0 ? "#fefefe" : "#f8f9fb"}} 
-                className=" rounded-3xl font-spoqa text-14px tracking-tight text-gray-r585858 h-56px w-full border-b border-gray-dddddd"
+                className="font-spoqa text-14px tracking-tight text-gray-r585858 h-56px w-full border-b border-gray-dddddd"
             >
                 <td className="w-100px font-robotoRegular h-56px text-center flex items-center justify-center"><RadioButton id={item.id}/></td>
                 <td className="w-64px h-56px text-center font-robotoRegular">{item.number}</td>
@@ -138,9 +138,9 @@ const WinLoseTable = ({
     }
 
     return (
-        <div className="shadow-subNavbar rounded-3xl overflow-hidden">
+        <div style={{borderRadius: "1em"}} className="shadow-subNavbar overflow-hidden">
             <table >
-                <thead className="bg-gray-fafafa rounded-3xl font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd">
+                <thead className="bg-gray-fafafa font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd">
                     <tr>
                         <td className="w-100px text-center">선택</td>
                         <td className="w-64px text-center">번호</td>

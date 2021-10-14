@@ -17,7 +17,8 @@ const LeftMenu = ({
     const [isPopupOpen, setPopupOpen] = useState(true)
     const [isExpanded, setExpanded] = useState(window.location.pathname)
     const [isMouseHover, setMouseHover] = useState("")
-    
+
+    console.log(pathname)
     function buttonPressed(text, path) {
         if (text === "총판페이지") {
             window.open('/distributor-page');
@@ -150,7 +151,14 @@ const LeftMenu = ({
                             </div>
                         </button>
                             
-                        <div className={`${isExpanded === item.path || pathname.includes(item.mainPath) ? "" : "hidden"} font-spoqaMedium text-16px cursor-pointer tracking-tight mt-px`} >
+                        <div className={`${
+                            pathname.includes(item.mainPath) 
+                            && isExpanded !== item.path + "closed" 
+                            && isExpanded !== item.path2 + "closed"
+                            && isExpanded !== item.path3 + "closed" 
+                            ? "" : "hidden"
+                            } font-spoqaMedium text-16px cursor-pointer tracking-tight mt-px`} 
+                        >
                             {item.sub1 && (
                                 <button 
                                     onClick={() => {
@@ -173,7 +181,7 @@ const LeftMenu = ({
                                         history.push(item.path2)
                                     }}
                                     className={`${
-                                        selectedSubTab === item.path2
+                                        pathname === item.path2
                                         ? "bg-blue-d0e8ff text-gray-r454545" 
                                         : "bg-gray-f9f9f9 text-gray-r8c8c8c"
                                     } flex items-center h-45px w-full bg-gray-f9f9f9 pl-60px`}>
@@ -188,7 +196,7 @@ const LeftMenu = ({
                                         history.push(item.path3)
                                     }}
                                     className={`${
-                                        selectedSubTab === item.path3
+                                        pathname === item.path3 || pathname === item.path3_1
                                         ? "bg-blue-d0e8ff text-gray-r454545" 
                                         : "bg-gray-f9f9f9 text-gray-r8c8c8c"
                                     } ${item.sub3 === "가상게임" && "rounded-b-3xl"} flex items-center h-45px w-full bg-gray-f9f9f9 pl-60px`}>
@@ -203,7 +211,7 @@ const LeftMenu = ({
                                         history.push(item.path4)
                                     }}
                                     className={`${
-                                        selectedSubTab === item.path4
+                                        pathname === item.path4
                                         ? "bg-blue-d0e8ff text-gray-r454545" 
                                         : "bg-gray-f9f9f9 text-gray-r8c8c8c"
                                     } ${item.text === "미니게임" && "rounded-b-3xl"} flex items-center h-45px w-full bg-gray-f9f9f9 pl-60px`}>

@@ -153,18 +153,18 @@ const MinigameBetHistoryPanel = ({
                     {game === "파워사다리" ? (
                         <img src={Example1} alt="" />
                     ) : game === "스피드키노" ? (
-                        <img style={{zoom:"0.8"}} className="object-contain" src={Sub3} alt="" />
+                        <img style={{zoom:"0.8", marginLeft:"4px"}} className="object-contain" src={Sub3} alt="" />
                     ) : (
-                        <img style={{zoom:"0.8"}} className="object-contain" src={Sub4} alt="" />
+                        <img style={{zoom:"0.8", marginLeft:"4px"}} className="object-contain" src={Sub4} alt="" />
                     )}
-                    <span className="ml-4px font-spoqaMedium text-20px text-white pt-2px">
-                        {game === "파워사다리" 
-                        ? "파워사다리" 
-                        : game === "스피드키노" 
-                        ? "스피드키노"
-                        : "키노사다리"
-                        }
-                    </span>
+
+                    {game === "파워사다리" ? (
+                        <span className="ml-4px font-spoqaMedium text-20px text-white pt-2px">파워사다리</span>
+                    ) : game === "스피드키노" ? (
+                        <span className="ml-6px font-spoqaMedium text-20px text-white pt-2px">스피드키노</span>
+                    ) : (
+                        <span className="ml-6px font-spoqaMedium text-20px text-white pt-2px">키노사다리</span>
+                    )}
                 </div>
                 <div className="flex items-center">
                     <img src={ClockIcon} alt="" />

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import CloseIcon from '../../images/popups/close.png'
 import AlertIcon from '../../images/myPage/alert.png'
 import { useHistory } from 'react-router'
@@ -6,6 +6,8 @@ import { useHistory } from 'react-router'
 const PointsApplyPopup = ({setPopupOpen}) => {
 
     const history = useHistory()
+    var nf = new Intl.NumberFormat();
+    const [inputValue, setInputValue] = useState(null)
 
     return (
         <div className="h-518px w-610px flex flex-col rounded-lg overflow-hidden">
@@ -40,6 +42,13 @@ const PointsApplyPopup = ({setPopupOpen}) => {
                     <input 
                         placeholder="0"
                         className="flex-shrink-0 outline-none w-311px h-42px rounded-md border border-gray-dddddd px-10px font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c" 
+                        value={inputValue !==null ? nf.format(inputValue) : ""}
+                        onChange={e => setInputValue(e.target.value.replace(/,/g, ''))}
+                        onKeyPress={(event) => {
+                            if (!/[0-9]/.test(event.key)) {
+                                event.preventDefault();
+                            }
+                        }}
                     />
                 </div>
 

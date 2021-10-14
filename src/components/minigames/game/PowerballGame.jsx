@@ -264,7 +264,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                             </div>
                         </div>
                     ) : titleNumber === 4 ? (
-                        <div className="flex justify-center w-full h-full items-start pt-2px space-x-6px">
+                        <div className="flex justify-center w-full h-full items-start pt-4px space-x-6px">
                             <div className="flex flex-col items-center">
                                 <div 
                                     onClick={() => {
@@ -537,7 +537,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                             </div>
                         </div>
                     ) : titleNumber === 10 ? (
-                        <div className="flex justify-center w-full h-full items-start space-x-26px pt-2px">
+                        <div className="flex justify-center w-full h-full items-start space-x-23px pt-2px">
                             <div className="flex flex-col items-center">
                                 <div 
                                     onClick={() => {

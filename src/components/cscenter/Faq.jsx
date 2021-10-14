@@ -46,7 +46,7 @@ const Faq = () => {
 
     const BodyText1 = '☞ 첫, 매충 10% 포인트를 받지 않을시 모든게임의 롤링은 단폴, 카지노 배팅 포함 100%만 해주시면 환전가능합니다. \n - 포인트 받지 않기를 원할시 : 충전 --> "보너스받기" 에서 "받지않기" 클릭하시고 충전신청해주시면 됩니다. \n ☞ 첫, 매충 10%포인트를 받았을시 각게임당 아래와 같이 롤링해 주시면 됩니다. '
 
-    const [selectedTab, setSelectedTab] = useState(0)
+    const [, setSelectedTab] = useState(0)
     const [openedCell, setOpenedCell] = useState(null)
 
     const QuestionCell = ({type, text, cellId}) => (
@@ -137,7 +137,7 @@ const Faq = () => {
             <MyPageTitle title="자주묻는질문" />
 
             <div className="relative w-full mt-20px">
-                <HorizontalMenu itemsArray={tabsArray} isState={selectedTab} setState={setSelectedTab} />
+                <HorizontalMenu itemsArray={tabsArray} setSelectedTab={setSelectedTab} />
             </div>
 
             <div className="mt-20px mb-90px">

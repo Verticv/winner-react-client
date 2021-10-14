@@ -66,6 +66,7 @@ const MyPage = ({isAuthenticated, setAuthenticated}) => {
             sub3: "쿠폰내역",
             path2: "/mypage/coupon/coupon-gift", 
             path3: "/mypage/coupon/coupon-history/received",
+            path3_1: "/mypage/coupon/coupon-history/sent",
             mainPath: "/mypage/coupon"
         },
         { 

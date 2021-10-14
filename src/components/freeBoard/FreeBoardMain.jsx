@@ -415,7 +415,7 @@ const FreeBoardMain = () => {
                             )
                             }
                         </div>
-                    <div style={{width: "216px"}} className="w-70px flex items-center justify-center text-gray-r585858 font-spoqaMedium">
+                    <div style={{width: "216px"}} className="w-70px flex items-center justify-center text-gray-r585858 font-spoqa">
                         {item.type !== "일반"
                             ? ""
                             : item.time
@@ -430,7 +430,7 @@ const FreeBoardMain = () => {
     return (
         <div className="w-full">
 
-            <div className="rounded-2xl shadow-subNavbar w-full overflow-hidden">
+            <div style={{borderRadius:"1em"}} className="shadow-subNavbar w-full overflow-hidden">
                 <div className="h-56px bg-gray-fafafa w-full flex items-center text-14px font-spoqaMedium tracking-tight text-gray-r454545">
                     <div style={{width: "128px"}} className="flex items-center justify-center">번호</div>
                     <div style={{width: "808px"}} className="flex items-center justify-center">제목</div>

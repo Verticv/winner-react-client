@@ -147,7 +147,7 @@ const SportsBetHistoryPanel = ({
                 <div className="flex items-center">
                     <img src={FootballIcon} alt="" />
                     <img className="ml-5px" src={USFlagIcon} alt="" />
-                    <span className="ml-4px font-spoqaMedium text-20px tracking-tight text-white pt-2px">MLS</span>
+                    <span className="ml-4px font-spoqaMedium text-20px tracking-tight text-white pt-3px">MLS</span>
                 </div>
                 <div className="flex items-center">
                     <img src={ClockIcon} alt="" />
@@ -181,7 +181,7 @@ const SportsBetHistoryPanel = ({
                 <div className="flex items-center">
                     <img src={FootballIcon} alt="" />
                     <img className="ml-5px" src={UKFlagIcon} alt="" />
-                    <span className="ml-4px font-spoqaMedium text-20px tracking-tight text-white pt-2px">EPL</span>
+                    <span className="ml-4px font-spoqaMedium text-20px tracking-tight text-white pt-3px">EPL</span>
                 </div>
                 <div className="flex items-center">
                     <img src={ClockIcon} alt="" />
@@ -229,7 +229,7 @@ const SportsBetHistoryPanel = ({
                 <div className="flex items-center">
                     <img src={FootballIcon} alt="" />
                     <img className="ml-5px" src={UKFlagIcon} alt="" />
-                    <span className="ml-4px font-spoqaMedium text-20px tracking-tight text-white pt-2px">EPL</span>
+                    <span className="ml-4px font-spoqaMedium text-20px tracking-tight text-white pt-3px">EPL</span>
                 </div>
                 <div className="flex items-center">
                     <img src={ClockIcon} alt="" />
@@ -263,7 +263,7 @@ const SportsBetHistoryPanel = ({
                 <div className="flex items-center">
                     <img src={FootballIcon} alt="" />
                     <img className="ml-5px" src={SpainFlagIcon} alt="" />
-                    <span className="ml-4px font-spoqaMedium text-20px tracking-tight text-white pt-2px">라리가</span>
+                    <span className="ml-4px font-spoqaMedium text-20px tracking-tight text-white pt-3px">라리가</span>
                 </div>
                 <div className="flex items-center">
                     <img src={ClockIcon} alt="" />

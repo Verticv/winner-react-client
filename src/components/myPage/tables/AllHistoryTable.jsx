@@ -23,7 +23,7 @@ const AllHistoryTable = ({array, checkedState, setCheckedState, isPopupOpen, set
         }; 
 
         return items.map(item => (
-            <tr className="bg-gray-fefefe rounded-3xl font-spoqa text-14px tracking-tight text-gray-r585858 h-56px w-full border-b border-gray-dddddd">
+            <tr className="bg-gray-fefefe font-spoqa text-14px tracking-tight text-gray-r585858 h-56px w-full border-b border-gray-dddddd">
                 <td style={{width: "92px"}} className="text-center">
                     <input
                         type="checkbox"
@@ -48,8 +48,8 @@ const AllHistoryTable = ({array, checkedState, setCheckedState, isPopupOpen, set
     }
 
     return (
-        <table className="shadow-subNavbar rounded-3xl overflow-hidden">
-            <thead className="bg-gray-fafafa rounded-3xl font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd">
+        <table style={{borderRadius: "1em"}} className="shadow-subNavbar overflow-hidden">
+            <thead className="bg-gray-fafafa font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd">
                 <tr>
                     <td style={{width: "92px"}} className="text-center">선택</td>
                     <td style={{width: "74px"}} className="text-center">베팅번호</td>

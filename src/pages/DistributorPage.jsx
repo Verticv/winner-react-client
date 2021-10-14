@@ -583,7 +583,7 @@ const DistributorPage = ({
             
             <div className="flex flex-col items-start limit:items-center mt-92px w-full h-full">
                 <div className="relative w-default h-225px mt-20px">
-                    <label style={{color:"#3a5f39"}} className="text-36px font-spoqaMedium absolute right-0 bottom-0 z-20 mb-86px mr-50px">마이페이지</label>
+                    <label style={{color:"#3a5f39"}} className="text-36px font-spoqaMedium absolute right-0 bottom-0 z-20 mb-86px mr-50px">총판페이지</label>
                     <img className="z-10" src={DistributorBanner} alt="" />
                 </div>
                 
@@ -820,7 +820,7 @@ const DistributorPage = ({
 
                     <div className="mt-52px h-42px w-full flex items-center space-x-6px text-24px tracking-tight text-gray-r7b7b7b font-spoqaMedium">
                         <img src={MemberIcon} alt="" />
-                        <div>접속중인 회원수: <span className="font-spoqaBold text-black tracking-tight">2 명</span></div>
+                        <div>접속중인 회원수: <span className="font-spoqaBold text-black tracking-tight text-gray-r454545">2 명</span></div>
 
                         <div 
                             style={{
@@ -887,7 +887,7 @@ const DistributorPage = ({
                                     <div className="flex items-center h-16px">하부</div>
                                     <div className="flex items-center h-16px">유저수</div>
                                 </div>
-                                <img src={WhiteArrow} className={`${isArrowUp[1] === true ? "transform rotate-180" : ""}`} alt=""/>
+                                <img src={WhiteArrow} className={`${isArrowUp[1] === false ? "transform rotate-180" : ""}`} alt=""/>
                             </button>
                             <button 
                                 className="w-114px text-center flex items-center justify-center space-x-5px"
@@ -898,7 +898,7 @@ const DistributorPage = ({
                                     <div className="flex items-center h-16px">로그인일시</div>
                                     <div className="flex items-center h-16px">(미접속일수)</div>
                                 </div>
-                                <img src={WhiteArrow} className={`${isArrowUp[2] === true ? "transform rotate-180" : ""}`} alt=""/>
+                                <img src={WhiteArrow} className={`${isArrowUp[2] === false ? "transform rotate-180" : ""}`} alt=""/>
                             </button>
                             <div className="w-114px text-center">요율보기</div>
                             <div className="w-114px text-center">입금액</div>
@@ -908,7 +908,7 @@ const DistributorPage = ({
                                 onClick={() => handleOnChange(3)}
                             >
                                 <p>출금액</p>
-                                <img src={WhiteArrow} className={`${isArrowUp[3] === true ? "transform rotate-180" : ""}`} alt=""/>
+                                <img src={WhiteArrow} className={`${isArrowUp[3] === false ? "transform rotate-180" : ""}`} alt=""/>
                             </button>
                             <div className="w-114px text-center">입출금액</div>
                             <button 
@@ -916,14 +916,14 @@ const DistributorPage = ({
                                 onClick={() => handleOnChange(4)}
                             >
                                 <p>베팅액</p>
-                                <img src={WhiteArrow} className={`${isArrowUp[4] === true ? "transform rotate-180" : ""}`} alt=""/>
+                                <img src={WhiteArrow} className={`${isArrowUp[4] === false ? "transform rotate-180" : ""}`} alt=""/>
                             </button>
                             <button 
                                 className="flex w-114px text-center items-center space-x-5px justify-center"
                                 onClick={() => handleOnChange(5)}
                             >
                                 <p>윈루즈</p>
-                                <img src={WhiteArrow} className={`${isArrowUp[5] === true ? "transform rotate-180" : ""}`} alt=""/>
+                                <img src={WhiteArrow} className={`${isArrowUp[5] === false ? "transform rotate-180" : ""}`} alt=""/>
                             </button>
                             <div className="w-114px text-center">상세내역</div>
                             <button 
@@ -931,7 +931,7 @@ const DistributorPage = ({
                                 onClick={() => handleOnChange(6)}
                             >
                                 <p>포인트</p>
-                                <img src={WhiteArrow} className={`${isArrowUp[6] === true ? "transform rotate-180" : ""}`} alt=""/>
+                                <img src={WhiteArrow} className={`${isArrowUp[6] === false ? "transform rotate-180" : ""}`} alt=""/>
                             </button>
                             <button 
                                 className="w-114px text-center flex items-center justify-center space-x-5px"
@@ -941,7 +941,7 @@ const DistributorPage = ({
                                     <div className="flex items-center h-16px">보유</div>
                                     <div className="flex items-center h-16px">금액</div>
                                 </div>
-                                <img src={WhiteArrow} className={`${isArrowUp[7] === true ? "transform rotate-180" : ""}`} alt=""/>
+                                <img src={WhiteArrow} className={`${isArrowUp[7] === false ? "transform rotate-180" : ""}`} alt=""/>
                             </button>
                         </div>
                         {/* === Body === */}

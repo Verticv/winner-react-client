@@ -95,7 +95,7 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                                     style={{width:"121px", height:"127px", marginTop:"14px"}} 
                                     className="relative flex items-center justify-center cursor-pointer"
                                 >
-                                    <img className={`absolute object-none ${state === `${titleNumber}-1` && "mb-2px"}`} src={state === `${titleNumber}-1` ? BlueButtonPressed : BlueButton} alt="" />
+                                    <img className={`absolute object-none ${state === `${titleNumber}-1` && "mb-3px"}`} src={state === `${titleNumber}-1` ? BlueButtonPressed : BlueButton} alt="" />
                                     <p 
                                         style={{textShadow: "2px 2px 2px #00000050", fontSize: "48px"}} 
                                         className="z-20 font-swagger text-white"
@@ -119,7 +119,7 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                                     style={{width:"121px", height:"127px", marginTop: "14px"}} 
                                     className="relative flex items-center justify-center cursor-pointer"
                                 >
-                                    <img className={`absolute object-none ${state === `${titleNumber}-2` && "mb-2px"}`} src={state === `${titleNumber}-2` ? RedButtonPressed : RedButton} alt="" />
+                                    <img className={`absolute object-none ${state === `${titleNumber}-2` && "mb-3px"}`} src={state === `${titleNumber}-2` ? RedButtonPressed : RedButton} alt="" />
                                     <p 
                                         style={{textShadow: "2px 2px 2px #00000050", fontSize: "48px"}} 
                                         className="z-20 font-swagger text-white text-20px"

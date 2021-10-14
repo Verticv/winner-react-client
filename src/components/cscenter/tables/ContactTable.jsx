@@ -41,7 +41,7 @@ const ContactTable = ({
                     <div style={{width: "427px"}} className={`${item.isRead === true ? "text-gray-r7b7b7b" : "text-gray-r454545"} font-spoqaMedium flex items-center space-x-10px`}>
                         <p>{item.text}</p>
                         {item.isRead === false && (
-                            <div className="w-17px h-17px bg-red-notification rounded-full text-12px text-white flex items-center justify-center font-roboto">
+                            <div className={`w-17px h-17px bg-red-notification rounded-full text-12px text-white flex items-center justify-center font-roboto ${item.id === 6 && "pr-px"}`}>
                                 N
                             </div>
                         )}
@@ -60,9 +60,9 @@ const ContactTable = ({
     }
 
     return (
-        <div className="w-full shadow-subNavbar rounded-xl overflow-hidden">
+        <div style={{borderRadius:"1em"}} className="w-full shadow-subNavbar overflow-hidden">
 
-            <div className="flex items-center bg-gray-fafafa rounded-t-2xl font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd px-54px">        
+            <div className="flex items-center bg-gray-fafafa font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd px-54px">        
                 <div className="w-54px flex justify-center">확인</div>
                 <div className="w-98px flex justify-center">상태</div>
                 <div className="w-114px flex justify-center">구분</div>

@@ -81,7 +81,7 @@ const InboxTable = ({
     }
 
     return (
-        <div className="w-full shadow-subNavbar rounded-3xl overflow-hidden">
+        <div style={{borderRadius:"1em"}} className="w-full shadow-subNavbar overflow-hidden">
 
             <div className="flex items-center bg-gray-fafafa rounded-t-2xl font-spoqaBold text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd px-54px">        
                 <div className="-ml-2px w-28px flex justify-center">선택</div>

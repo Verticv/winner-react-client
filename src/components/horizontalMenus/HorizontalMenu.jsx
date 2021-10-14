@@ -3,7 +3,8 @@ import { useHistory } from 'react-router';
 
 const HorizontalMenu = ({
     itemsArray, 
-    setSelectedTab
+    setSelectedTab,
+    setSelectedSubTab = null
 }) => {
 
     const history = useHistory();
@@ -21,6 +22,9 @@ const HorizontalMenu = ({
                 onClick={() => {
                     history.push(item.path)
                     setSelectedTab(item.id)
+                    if (setSelectedSubTab !== null) {
+                        setSelectedSubTab(0)
+                    }
                 }}
             >
                 <div 

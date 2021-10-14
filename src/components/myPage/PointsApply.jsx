@@ -27,7 +27,7 @@ const PointsApply = () => {
         <div className="w-full flex flex-col items-center">
             <MyPageTitle title="포인트전환신청" />
 
-            <div className="mt-20px w-full h-157px rounded-2xl border border-red-e8c2b3 bg-red-ffe9de px-19px pt-17px">
+            <div style={{borderRadius:"1em"}} className="mt-20px w-full h-157px border border-red-e8c2b3 bg-red-ffe9de px-19px pt-17px">
                 <div className="flex items-center h-26px space-x-10px">
                     <img src={AlertIcon} alt="" />
                     <span className="text-red-ee3c62 font-spoqaMedium text-20px tracking-tight">확인/필독사항</span>
@@ -39,7 +39,7 @@ const PointsApply = () => {
                 </div>
             </div>
 
-            <div className="mt-20px w-full rounded-2xl h-573px shadow-subNavbar p-10px border border-gray-ececec flex flex-col">
+            <div style={{borderRadius:"1em"}} className="mt-20px w-full h-573px shadow-subNavbar p-10px border border-gray-ececec flex flex-col">
                 <div className="w-full rounded-2xl h-128px bg-gray-f9f9f9 border border-gray-dddddd">
                     <div className="ml-114px mt-34px flex flex-col font-spoqaMedium tracking-tight">
                         <span className="text-20px h-19px">전환 포인트 입력</span>

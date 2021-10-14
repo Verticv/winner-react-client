@@ -83,13 +83,13 @@ const AnnouncementTable = () => {
         return items.map(item => (
             <tr 
                 style={{backgroundColor: item.id % 2 === 0 ? "#fefefe" : "#f7f9fb"}} 
-                className="bg-gray-fefefe rounded-3xl text-14px tracking-tight text-gray-r585858 h-56px w-full border-b border-gray-dddddd"
+                className="bg-gray-fefefe text-14px tracking-tight text-gray-r585858 h-56px w-full border-b border-gray-dddddd"
             >
                 <td style={{width: "173px"}} className="h-56px text-center text-blue-r0056a6 ">{item.type}</td>
                 <td  style={{width: "698px"}} className="w-full h-56px flex items-center space-x-10px">
                     <p>{item.title}</p>
                     {item.isNew && (
-                        <div className="w-18px h-17px bg-red-notification rounded-full text-12px text-white flex items-center justify-center font-roboto">
+                        <div className="w-17px h-17px bg-red-notification rounded-full text-12px text-white flex items-center justify-center font-roboto pr-px">
                             N
                         </div>
                     )}
@@ -100,8 +100,8 @@ const AnnouncementTable = () => {
     }
 
     return (
-        <table className="shadow-subNavbar rounded-xl overflow-hidden w-full">
-            <thead className="bg-gray-fafafa rounded-3xl font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd">
+        <table style={{borderRadius:"1em"}} className="shadow-subNavbar overflow-hidden w-full">
+            <thead className="bg-gray-fafafa font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd">
                 <tr>
                     <td style={{width: "173px"}} className="text-center">구분</td>
                     <td style={{width: "698px"}} className="w-full text-center pr-44px">제목</td>

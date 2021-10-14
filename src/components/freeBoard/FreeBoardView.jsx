@@ -50,7 +50,7 @@ const FreeBoardView = () => {
                
             </div> 
             <div className="pl-49px">
-                <div className="h-54px w-full bg-white border rounded-xl border-gray-dddddd flex items-center px-20px justify-between">
+                <div style={{borderRadius:"1em"}} className="h-54px w-full bg-white border border-gray-dddddd flex items-center px-20px justify-between">
                     <div className="flex text-15px font-spoqa">
                     {tag && ( <p className="text-blue-r0056a6 mr-10px font-spoqaMedium">@{tag}</p>)}
                     <p className="text-gray-r585858">{text}</p>
@@ -63,7 +63,7 @@ const FreeBoardView = () => {
 
     return (
         <div className="w-full">
-            <div className="w-full rounded-2xl shadow-subNavbar overflow-hidden">
+            <div style={{borderRadius:"1em"}} className="w-full shadow-subNavbar overflow-hidden">
                 <div className="bg-gray-fafafa h-58px border-b border-gray-dddddd flex items-center px-20px space-x-10px">
                     <div 
                         style={{backgroundColor:"#02569c"}} 
@@ -147,12 +147,12 @@ const FreeBoardView = () => {
             </div>
 
 
-            <div style={{height:"171px"}} className="w-full bg-gray-fafafa rounded-2xl shadow-subNavbar px-20px pb-20px">
+            <div style={{height:"171px", borderRadius:"1em"}} className="w-full bg-gray-fafafa shadow-subNavbar px-20px pb-20px">
                 <div className="h-58px flex items-center space-x-10px">
                     <p className="text-15px font-spoqaMedium tracking-tight text-gray-r454545">댓글 작성하기</p>
                     <div className="w-17px h-17px text-white text-12px font-roboto flex items-center justify-center rounded-full bg-red-notification pt-px">2</div>
                 </div>
-                <div style={{height:"93px"}} className="relative flex w-full bg-white rounded-xl border border-gray-dddddd overflow-hidden">
+                <div style={{height:"93px", borderRadius:"1em"}} className="relative flex w-full bg-white border border-gray-dddddd overflow-hidden">
 
                     <textarea 
                         style={{width: "1099px", resize: "none"}}
@@ -160,8 +160,8 @@ const FreeBoardView = () => {
                         placeholder="욕설, 상대방 비방글, 타사이트 언급, 홍보 등은 경고없이 삭제되며 사이트 이용에 제한을 받을 수 있습니다."
                     />
 
-                    <button className="right-0 absolute flex items-center justify-center h-93px w-120px rounded-xl bg-blue-r2068b2">
-                        <div style={{width:"118px"}} className="flex items-center justify-center h-91px w-118px bg-black rounded-xl border border-blue-r3975ae bg-gradient-to-b from-blue-r125a9e via-blue-r0e508d to-blue-r0b447a cursor-pointer">
+                    <button style={{borderRadius:"1em"}} className="right-0 absolute flex items-center justify-center h-93px w-120px bg-blue-r2068b2">
+                        <div style={{width:"118px", borderRadius:"1em"}} className="flex items-center justify-center h-91px w-118px bg-black rounded-xl border border-blue-r3975ae bg-gradient-to-b from-blue-r125a9e via-blue-r0e508d to-blue-r0b447a cursor-pointer">
                             <span className="font-spoqaMedium tracking-tight text-14px text-white pt-px">댓글작성</span>
                         </div>
                     </button>
@@ -169,7 +169,7 @@ const FreeBoardView = () => {
             </div>
 
 
-            <div className="w-full bg-gray-fafafa shadow-subNavbar rounded-2xl mt-20px pb-20px">
+            <div style={{borderRadius:"1em"}} className="w-full bg-gray-fafafa shadow-subNavbar mt-20px pb-20px">
                 <div style={{height:"123px"}} className="border-b border-gray-dddddd px-20px"> 
                     <div className="h-58px w-full flex items-center flex justify-between">
                         <div className="flex items-center space-x-5px">
@@ -190,7 +190,7 @@ const FreeBoardView = () => {
                         </div>
                     </div>
                     
-                    <div className="h-54px w-full bg-white border rounded-xl border-gray-dddddd flex items-center px-20px justify-between">
+                    <div style={{borderRadius:"1em"}} className="h-54px w-full bg-white border border-gray-dddddd flex items-center px-20px justify-between">
                         <p className="text-15px font-spoqa text-gray-r585858">두개의 이벤트 모두 참여하였습니다</p>
                         <p className="text-gray-r7b7b7b text-13px tracking-tight font-spoqa">2021.06.28 15:36</p>
                     </div>
@@ -202,7 +202,7 @@ const FreeBoardView = () => {
 
 
 
-            <div className="w-full bg-gray-fafafa shadow-subNavbar rounded-2xl mt-20px">
+            <div style={{borderRadius:"1em"}} className="w-full bg-gray-fafafa shadow-subNavbar mt-20px">
                 <div style={{height:"123px"}} className="border-b border-gray-dddddd px-20px"> 
                     <div className="h-58px w-full flex items-center flex justify-between">
                         <div className="flex items-center space-x-5px">
@@ -223,21 +223,21 @@ const FreeBoardView = () => {
                         </div>
                     </div>
                     
-                    <div className="h-54px w-full bg-white border rounded-xl border-gray-dddddd flex items-center px-20px justify-between">
+                    <div style={{borderRadius:"1em"}} className="h-54px w-full bg-white border border-gray-dddddd flex items-center px-20px justify-between">
                         <p className="text-15px font-spoqa text-gray-r585858">두개의 이벤트 모두 참여하였습니다</p>
                         <p className="text-gray-r7b7b7b text-13px tracking-tight font-spoqa">2021.06.28 15:36</p>
                     </div>
                 </div>
                 <div style={{height:"115px"}} className="px-20px py-11px">
-                    <div style={{height:"93px"}} className="relative flex w-full bg-white rounded-xl border border-gray-dddddd overflow-hidden">
+                    <div style={{height:"93px", borderRadius:"1em"}} className="relative flex w-full bg-white border border-gray-dddddd overflow-hidden">
                         <textarea 
                             style={{width: "1099px", resize: "none"}}
                             className="outline-none w-full px-19px py-19px text-14px font-spoqa tracking-tight placeholder-gray-r8f8f8f"
                             placeholder="두개의 이벤트 모두 참여하였습니다."
                         />
 
-                        <button className="right-0 absolute flex items-center justify-center h-93px w-120px rounded-xl bg-blue-r2068b2">
-                            <div style={{width:"118px"}} className="flex items-center justify-center h-91px w-118px bg-black rounded-xl border border-blue-r3975ae bg-gradient-to-b from-blue-r125a9e via-blue-r0e508d to-blue-r0b447a cursor-pointer">
+                        <button style={{borderRadius:"1em"}} className="right-0 absolute flex items-center justify-center h-93px w-120px bg-blue-r2068b2">
+                            <div style={{width:"118px", borderRadius:"1em"}} className="flex items-center justify-center h-91px w-118px bg-black border border-blue-r3975ae bg-gradient-to-b from-blue-r125a9e via-blue-r0e508d to-blue-r0b447a cursor-pointer">
                                 <span className="font-spoqaMedium tracking-tight text-14px text-white pt-px">댓글수정</span>
                             </div>
                         </button>
@@ -245,7 +245,7 @@ const FreeBoardView = () => {
                 </div>
             </div>
 
-            <div className="w-full bg-gray-fafafa shadow-subNavbar rounded-2xl mt-20px">
+            <div style={{borderRadius:"1em"}} className="w-full bg-gray-fafafa shadow-subNavbar mt-20px">
                 <div style={{height:"123px"}} className="border-b border-gray-dddddd px-20px"> 
                     <div className="h-58px w-full flex items-center flex justify-between">
                         <div className="flex items-center space-x-5px">
@@ -259,21 +259,21 @@ const FreeBoardView = () => {
                         </button>
                     </div>
                     
-                    <div className="h-54px w-full bg-white border rounded-xl border-gray-dddddd flex items-center px-20px justify-between">
+                    <div style={{borderRadius:"1em"}} className="h-54px w-full bg-white border border-gray-dddddd flex items-center px-20px justify-between">
                         <p className="text-15px font-spoqa text-gray-r585858">두개의 이벤트 모두 참여하였습니다</p>
                         <p className="text-gray-r7b7b7b text-13px tracking-tight font-spoqa">2021.06.28 15:36</p>
                     </div>
                 </div>
                 <div style={{height:"115px"}} className="px-20px py-11px">
-                    <div style={{height:"93px"}} className="relative flex w-full bg-white rounded-xl border border-gray-dddddd overflow-hidden">
+                    <div style={{height:"93px", borderRadius:"1em"}} className="relative flex w-full bg-white border border-gray-dddddd overflow-hidden">
                         <textarea 
                             style={{width: "1099px", resize: "none"}}
                             className="outline-none w-full px-19px py-19px text-14px font-spoqa tracking-tight placeholder-gray-r8f8f8f"
                             placeholder="욕설, 상대방 비방글, 타사이트 언급, 홍보 등은 경고없이 삭제되며 사이트 이용에 제한을 받을 수 있습니다."
                         />
 
-                        <button className="right-0 absolute flex items-center justify-center h-93px w-120px rounded-xl bg-blue-r2068b2">
-                            <div style={{width:"118px"}} className="flex items-center justify-center h-91px w-118px bg-black rounded-xl border border-blue-r3975ae bg-gradient-to-b from-blue-r125a9e via-blue-r0e508d to-blue-r0b447a cursor-pointer">
+                        <button style={{borderRadius:"1em"}} className="right-0 absolute flex items-center justify-center h-93px w-120px bg-blue-r2068b2">
+                            <div style={{width:"118px", borderRadius:"1em"}} className="flex items-center justify-center h-91px w-118px bg-black border border-blue-r3975ae bg-gradient-to-b from-blue-r125a9e via-blue-r0e508d to-blue-r0b447a cursor-pointer">
                                 <span className="font-spoqaMedium tracking-tight text-14px text-white pt-px">답글작성</span>
                             </div>
                         </button>
@@ -304,7 +304,7 @@ const FreeBoardView = () => {
                         }}
                         className="flex items-center justify-center h-50px w-190px bg-black rounded-4px border border-gray-r737579 cursor-pointer"
                     >
-                        <span className="font-spoqaMedium tracking-tight text-14px text-white">목록보기</span>
+                        <span className="font-spoqaMedium tracking-tight text-16px text-white">목록보기</span>
                     </div>
                 </button>
 

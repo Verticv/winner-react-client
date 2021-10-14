@@ -18,7 +18,7 @@ const AnnouncementView = () => {
     const history = useHistory();
 
     const NewLabel = (
-        <div className="w-18px h-17px rounded-full bg-red-ff1237 -mt-px text-white font-roboto text-12px flex items-center justify-center">
+        <div className="w-17px h-17px rounded-full bg-red-ff1237 -mt-px text-white font-roboto text-12px flex items-center justify-center pt-px">
             N
         </div>
     )
@@ -27,7 +27,7 @@ const AnnouncementView = () => {
         <div>
             <MyPageTitle title="공지사항"/>
 
-            <div className="w-full rounded-2xl overflow-hidden shadow-subNavbar border border-gray-dddddd mt-20px">
+            <div style={{borderRadius:"1em"}} className="w-full overflow-hidden shadow-subNavbar border border-gray-dddddd mt-20px">
                 {/* TITLE */}
                 <div className="h-56px w-full bg-gray-fafafa flex items-center px-19px space-x-10px border-b border-gray-dddddd">
                     <p className="text-14px font-spoqaMedium tracking-tight text-blue-r0056a6">스포츠북</p>
@@ -86,7 +86,12 @@ const AnnouncementView = () => {
 
             <div className="mt-20px mb-60px flex items-start justify-between">
                 <button className="flex items-center justify-center h-36px w-90px rounded-4px bg-gray-r171a1d">
-                    <div className="flex items-center justify-center h-34px w-88px bg-black rounded-4px border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r585b5e to-gray-r303337 cursor-pointer">
+                    <div 
+                        style={{
+                            background: "linear-gradient(to bottom, #585b5e, #303337)",
+                        }}
+                        className="flex items-center justify-center h-34px w-88px bg-black rounded-4px border border-gray-r737579 cursor-pointer"
+                    >
                         <span className="font-spoqaMedium tracking-tight text-14px text-white">이전</span>
                     </div>
                 </button>
@@ -95,13 +100,23 @@ const AnnouncementView = () => {
                     className="flex items-center justify-center h-52px w-192px rounded-4px bg-gray-r171a1d"
                     onClick={() => history.push('/cscenter/announcement')}
                 >
-                    <div className="flex items-center justify-center h-50px w-190px bg-black rounded-4px border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r585b5e to-gray-r303337 cursor-pointer">
-                        <span className="font-spoqaMedium tracking-tight text-14px text-white">목록보기</span>
+                    <div
+                        style={{
+                            background: "linear-gradient(to bottom, #585b5e, #303337)",
+                        }}
+                        className="flex items-center justify-center h-50px w-190px bg-black rounded-4px border border-gray-r737579 cursor-pointer"
+                    >
+                        <span className="font-spoqaMedium tracking-tight text-16px text-white">목록보기</span>
                     </div>
                 </button>
 
                 <button className="flex items-center justify-center h-36px w-90px rounded-4px bg-gray-r171a1d">
-                    <div className="flex items-center justify-center h-34px w-88px bg-black rounded-4px border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r585b5e to-gray-r303337 cursor-pointer">
+                    <div 
+                        style={{
+                            background: "linear-gradient(to bottom, #585b5e, #303337)",
+                        }}
+                        className="flex items-center justify-center h-34px w-88px bg-black rounded-4px border border-gray-r737579 cursor-pointer"
+                    >
                         <span className="font-spoqaMedium tracking-tight text-14px text-white">다음</span>
                     </div>
                 </button>

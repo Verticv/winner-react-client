@@ -84,7 +84,7 @@ const ContactCompose = () => {
         <div>
             <MyPageTitle title="문의하기" />
 
-            <div className="mt-20px rounded-xl shadow-subNavbar overflow-hidden">
+            <div style={{borderRadius:"1em"}} className="mt-20px shadow-subNavbar overflow-hidden">
                 <div className="h-55px bg-gray-fafafa border-b border-gray-dddddd flex">
                     <div style={{width: "139px"}} className="flex-shrink-0 border-r flex items-center justify-center">
                         <p className="text-14px font-spoqaMedium tracking-tight text-gray-r585858">유형</p>

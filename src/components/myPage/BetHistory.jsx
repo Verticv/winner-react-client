@@ -47,7 +47,7 @@ const BetHistory = () => {
             <MyPageTitle title="베팅내역" />
             
             <div className="relative w-full mt-20px">
-                <HorizontalMenu itemsArray={tabsArray} setSelectedTab={setSelectedTab} />
+                <HorizontalMenu itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
                 {(selectedTab !== 0 && selectedTab !== 3 && selectedTab !== 4 && selectedTab !== 7 && selectedTab !== 8) && (
                     <div style={{marginLeft: `${selectedTab * 116 + 50}px`}} className={`absolute bottom-0 w-20px -mb-10px overflow-hidden inline-block `}>
                         <div className="h-10px w-10px bg-gradient-to-br from-gray-d2dfea via-gray-eff3f6 to-gray-eff3f6 rotate-45 transform origin-bottom-left shadow"></div>
@@ -82,7 +82,6 @@ const BetHistory = () => {
             <Route path="/mypage/bet-history/e-sports">
                 <>
                     <ESportsBetHistory />
-                    <Pagination page={page} setPage={setPage}/>   
                 </>
             </Route>
             <Route path="/mypage/bet-history/minigame">
@@ -103,23 +102,6 @@ const BetHistory = () => {
             <Route path="/mypage/bet-history/lottery-game">
                 <div className="mt-40px"/>
             </Route>
-
-            {/* {selectedTab === 0 ? (
-                <AllBetHistory />
-            ) : selectedTab === 1 ? (
-                <LiveCasinoBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
-            ) : selectedTab === 2 ? (
-                <SlotBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
-            ) : selectedTab === 3 ? (
-                <SportsBetHistory checkedState={checkedState} setCheckedState={setCheckedState} />
-            ) : selectedTab === 4 ? (
-                <SportsBetHistory checkedState={checkedState} setCheckedState={setCheckedState} />
-            ) : selectedTab === 5 ? (
-                <MinigameBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
-            ) : (
-                <ARGameBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
-            )} */}
-
 
         </div>
     )

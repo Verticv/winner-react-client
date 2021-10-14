@@ -16,7 +16,7 @@ const ContactView = () => {
             <MyPageTitle title="문의하기" />
 
 
-            <div className="rounded-2xl shadow-subNavbar w-full mt-20px bg-gray-fafafa overflow-hidden">
+            <div style={{borderRadius:"1em"}} className="shadow-subNavbar w-full mt-20px bg-gray-fafafa overflow-hidden">
                 <div className="h-56px w-full border-b border-gray-dddddd px-20px flex items-center space-x-10px">
                     <div 
                         style={{backgroundColor: "#dfebf7", color: "#4b87bf"}} 
@@ -45,11 +45,11 @@ const ContactView = () => {
                 </div>
 
                 <div className="w-full bg-white py-20px px-16px">
-                    <div className="rounded-xl border border-gray-dddddd h-54px flex items-center px-21px font-spoqa text-14px tracking-tight text-gray-r585858">
+                    <div style={{borderRadius:"1em"}} className="border border-gray-dddddd h-54px flex items-center px-21px font-spoqa text-14px tracking-tight text-gray-r585858">
                         스포츠북 문의 입니다.
                     </div>
 
-                    <div className="rounded-xl bg-blue-e8f3fd py-20px px-23px mt-20px font-spoqaMedium text-14px tracking-tight text-gray-r585858 space-y-32px">
+                    <div style={{borderRadius:"1em"}} className="bg-blue-e8f3fd py-20px px-23px mt-20px font-spoqaMedium text-14px tracking-tight text-gray-r585858 space-y-32px">
                         <div className="space-y-10px">
                             {BodyText1.split('\n').map((item, i) => 
                                 <p key={i} className="flex items-center h-14px">{item}</p>
@@ -78,7 +78,7 @@ const ContactView = () => {
 
 
             <div className="mt-20px mb-60px flex items-start justify-between">
-            <button className="flex items-center justify-center h-36px w-90px rounded-4px bg-gray-r171a1d">
+                <button className="flex items-center justify-center h-36px w-90px rounded-4px bg-gray-r171a1d">
                     <div 
                         style={{
                             background: "linear-gradient(to bottom, #585b5e, #303337)",
@@ -99,7 +99,7 @@ const ContactView = () => {
                         }}
                         className="flex items-center justify-center h-50px w-190px bg-black rounded-4px border border-gray-r737579 cursor-pointer"
                     >
-                        <span className="font-spoqaMedium tracking-tight text-14px text-white">목록보기</span>
+                        <span className="font-spoqaMedium tracking-tight text-16px text-white">목록보기</span>
                     </div>
                 </button>
 
