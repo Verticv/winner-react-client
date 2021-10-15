@@ -12,6 +12,7 @@ import IconHighlight1 from '../images/gameResults/leftMenu/icon_1_highlight.png'
 import IconHighlight2 from '../images/gameResults/leftMenu/icon_2_highlight.png'
 import GameResultsBanner from '../images/gameResults/game_results_banner.png'
 import WinDrawLose from 'components/gameResults/WinDrawLose';
+import MinigameResults from 'components/gameResults/MinigameResults';
 
 const GameResultsPage = ({isAuthenticated, setAuthenticated}) => {
 
@@ -36,8 +37,8 @@ const GameResultsPage = ({isAuthenticated, setAuthenticated}) => {
             icon: Icon2, 
             iconHighlight: IconHighlight2, 
             id: 1, 
-            path: "/gameresults/minigame/win-draw-lose", 
-            mainPath: "/gameresults/minigame/win-draw-lose"
+            path: "/gameresults/minigame/powerball", 
+            mainPath: "/gameresults/minigame"
         },
     ];
 
@@ -97,11 +98,11 @@ const GameResultsPage = ({isAuthenticated, setAuthenticated}) => {
                     />
                 </Route>
 
-                <Route exact path="/gameresults/minigame/win-draw-lose">
+                <Route path="/gameresults/minigame">
                     <DirectoryComponent 
                         branch1="경기결과"
                         branch2="미니게임" 
-                        mainPath="/gameresults/minigame/win-draw-lose"
+                        mainPath="/gameresults/minigame"
                         setSelectedTab={setSelectedTab}
                         setSelectedSubTab={setSelectedSubTab}
                     />
@@ -136,17 +137,8 @@ const GameResultsPage = ({isAuthenticated, setAuthenticated}) => {
                         <Route exact path="/gameresults/sports/special">
                             <WinDrawLose pageTitle="스페셜" />
                         </Route>
-                        <Route exact path="/gameresults/minigame/win-draw-lose">
-                            <WinDrawLose />
-                        </Route>
-                        <Route exact path="/gameresults/minigame/handicap">
-                            <WinDrawLose pageTitle="핸디캡" />
-                        </Route>
-                        <Route exact path="/gameresults/minigame/unover">
-                            <WinDrawLose pageTitle="언오버" />
-                        </Route>
-                        <Route exact path="/gameresults/minigame/special">
-                            <WinDrawLose pageTitle="스페셜" />
+                        <Route path="/gameresults/minigame">
+                            <MinigameResults />
                         </Route>
 
                         <Route path="*">
