@@ -35,7 +35,7 @@ const HorizontalMenu2 = ({
                         isState === item.id 
                         ? "bg-gradient-to-b from-blue-r2087f0 via-blue-r2087f0 to-blue-gradDark"
                         : "bg-gray-fafafa"
-                    } mt-2px w-full rounded-b-md flex items-center justify-center space-x-4px border-l border-r border-b`}
+                    } mt-2px w-full rounded-b-md flex items-center justify-center space-x-4px`}
                 >
                     <img className={`${item.id === 0 ? "mb-3px" : "mb-2px" } object-none`} src={isState === item.id ? item.iconHighlight : item.icon} alt="" />
                     <div 

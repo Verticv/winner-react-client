@@ -42,7 +42,7 @@ const HorizontalMenu7 = ({
                             pathname === item.path
                             ? "text-white"
                             : "text-gray-r616161" }
-                            text-14px font-spoqaMedium tracking-tight mb-11px flex items-center h-14px`}
+                            text-14px font-spoqaMedium tracking-tight mb-9px flex items-center h-14px`}
                     >{item.text}</span>
                 </div>
             </button>
