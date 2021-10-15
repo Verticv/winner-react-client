@@ -47,7 +47,7 @@ const HorizontalMenu3 = ({
                     }}
                     className={`mt-3px w-full rounded-b-md rounded-t-lg flex items-center justify-between pr-20px border-l border-r border-b`}
                 >
-                    <div className={`flex items-center mb-2px ml-px`}>
+                    <div className={`flex items-center -ml-px`}>
                         <img 
                             className={`
                             ${
@@ -79,7 +79,7 @@ const HorizontalMenu3 = ({
                         </span>
                     </div>
                     
-                    <div className="flex items-center -mr-px mt-2px">
+                    <div className="flex items-center -mr-px mt-3px">
                         <img className="mr-4px object-none mb-5px" src={selectedTab === item.path ? ClockIconWhite : ClockIcon} alt="" />
                         <div 
                             style={{color: selectedTab === item.path ? "#ffffff" : "#748496"}}

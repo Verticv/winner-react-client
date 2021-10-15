@@ -38,14 +38,14 @@ const PowerballResults = () => {
     )
 
     return (
-        <div style={{height:"858px", borderRadius:"1em"}} className="w-full shadow-subNavbar bg-gray-fafafa">
+        <div style={{borderRadius:"1em"}} className="w-full shadow-subNavbar bg-gray-fafafa">
             <div style={{height:"54px"}} className="w-full flex items-center text-14px font-spoqaMedium tracking-tight text-gray-r454545">
                 <div style={{marginLeft:"96px"}}>경기일시</div>
                 <div style={{marginLeft:"218px"}}>회차</div>
                 <div style={{marginLeft:"250px"}}>결과</div>
                 <div style={{marginLeft:"244px"}}>배당률</div>
             </div>
-            <div className="px-10px space-y-10px">
+            <div className="px-10px space-y-10px pb-12px">
                 <Table count="211" />
                 <Table count="212" />
             </div>

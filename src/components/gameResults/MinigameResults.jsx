@@ -3,11 +3,13 @@ import DateSearchBar2 from 'components/myPage/DateSearchBar2';
 import MyPageTitle from 'components/myPage/MyPageTitle'
 import Pagination from 'components/myPage/Pagination';
 import React, { useState } from 'react'
+import { Route } from 'react-router';
 import Icon1 from '../../images/gameResults/minigame/1.png'
 import Icon2 from '../../images/gameResults/minigame/2.png'
 import Icon3 from '../../images/gameResults/minigame/3.png'
 import Icon4 from '../../images/gameResults/minigame/4.png'
 import PowerballResults from './PowerballResults';
+import PowerladderResults from './PowerladderResults';
 
 const MinigameResults = ({pageTitle = "미니게임"}) => {
 
@@ -31,7 +33,12 @@ const MinigameResults = ({pageTitle = "미니게임"}) => {
 
             <div className="mt-20px"/>
 
-            <PowerballResults />
+            <Route path="/gameresults/minigame/powerball">
+                <PowerballResults />
+            </Route>
+            <Route path="/gameresults/minigame/powerladder">
+                <PowerladderResults />
+            </Route>
 
             <div className="flex w-full justify-center mt-60px">
                 <Pagination page={page} setPage={setPage}/>   
