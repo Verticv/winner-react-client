@@ -36,8 +36,11 @@ import Subicon6 from '../../images/navbarHover/submenus/subicon_6.png'
 import Subicon7 from '../../images/navbarHover/submenus/subicon_7.png'
 import Subicon8 from '../../images/navbarHover/submenus/subicon_8.png'
 import Expand from 'react-expand-animated'
+import { useHistory } from 'react-router'
 
 const LiveCasinoHover = ({selection}) => {
+
+    const history = useHistory()
 
     const gamesArray = [
         { id: 0, background: EvoBanner, highlight: EvoBannerHighlight, color: "group-hover:bg-teal-r4eb2ba", imgText: "에볼루션", btnText: "게임시작", class: "bg-opacity-25" },
@@ -61,7 +64,11 @@ const LiveCasinoHover = ({selection}) => {
 
     function GamesList({ items }) {
         return items.map(item => (
-            <div key={item.id} className="group relative w-305px h-206px cursor-pointer" >
+            <div 
+                key={item.id} 
+                className="group relative w-305px h-206px cursor-pointer" 
+                onClick={() => history.push('/live-casino')}
+            >
                 <img className={`opacity-100 group-hover:opacity-0 w-305px h-206px object-none object-left`} src={item.background} alt="game_image" />
                 <img className={`opacity-0 group-hover:opacity-100 absolute top-0 w-305px h-206px object-none object-left`} src={item.highlight} alt="game_image" />
                 <div className="absolute bottom-0 h-20px w-156px right-0 flex items-center justify-center -mb-2px"><span className="ml-10px group-hover:text-black font-spoqaBold tracking-tight text-12px text-gray-r616161">{item.imgText}</span></div>

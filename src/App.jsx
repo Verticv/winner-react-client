@@ -12,6 +12,7 @@ import Freeboard from "pages/Freeboard";
 import BetCombinationPage from "pages/BetCombinationPage";
 import MinigamesPage from "pages/MinigamesPage";
 import EsportsPage from "pages/EsportsPage";
+import LiveCasinoPage from "pages/LiveCasinoPage";
 
 
 function App() {
@@ -29,6 +30,9 @@ function App() {
               */}
                 <Route path="/mypage">
                     <MyPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
+                </Route>
+                <Route path="/live-casino">
+                    <LiveCasinoPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
                 </Route>
                 <Route path="/distributor-page">
                     <DistributorPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
