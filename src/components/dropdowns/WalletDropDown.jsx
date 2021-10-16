@@ -25,11 +25,8 @@ const WalletDropDown = () => {
         <button 
             key={id} 
             className={`${selectedTab === id ? "bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2" : "bg-white"} flex w-full items-center p-4px h-40px rounded-full`} 
-            onPointerDown={() => {
-                if (id !== 2) {
-                    setSelectedTab(id)
-                }
-            }}
+            onMouseOver={() => {setSelectedTab(id)}}
+            onMouseLeave={() => setSelectedTab(null)}
             onPointerUp={() => {
                 if (id !== 2) {
                     history.push(path)

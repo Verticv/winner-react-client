@@ -28,7 +28,7 @@ const MenuCard = ({
     const [selectedTab, setSelectedTab] = useState()
     const [isPopupOpen, setPopupOpen] = useState(true)
 
-    const tabClass = "relative w-full border-b-1 border-gray-d5d5d5 h-59px p-6px z-20"
+    const tabClass = "relative w-full border-b-1 border-gray-d5d5d5 h-59px p-6px z-20 hover:bg-blue-r009edf group"
     const selectedTabClass = "relative w-full h-59px bg-blue-r009edf shadow-plain2 p-6px z-20"
 
     const menuArray = [
@@ -48,14 +48,16 @@ const MenuCard = ({
                             className={`${item.selectedCss} ${selectedTab === item.id ? selectedTabClass : tabClass}`}
                         >
                             {selectedTab !== item.id && item.id !== 0 && (<div className="absolute top-0 left-0 h-px w-full bg-white"></div>)} 
-                            <div className="flex items-center justify-between">
+                            <div className="relative flex items-center justify-between">
                                 <div className="flex items-center space-x-10px">
-                                    <div className={selectedTab === item.id ? "rounded-full shadow-plain" : "rounded-full"}>
-                                        <img className="w-full h-full" src={selectedTab === item.id ? item.iconHighlight : item.icon} alt="meunIcon" />
+                                    <div className={selectedTab === item.id ? "relative rounded-full shadow-plain" : "relative rounded-full"}>
+                                        <img className="group-hover:opacity-0" src={selectedTab === item.id ? item.iconHighlight : item.icon} alt="meunIcon" />
+                                        <img className="absolute group-hover:opacity-100 opacity-0 object-none top-0" src={item.iconHighlight} alt="meunIcon" />                                    
                                     </div>
-                                    <label className={`cursor-pointer text-16px font-spoqaMedium tracking-tight pt-px ${selectedTab === item.id ? "text-white" : "text-gray-text"}`}>{item.text}</label>
+                                    <label className={`cursor-pointer text-16px font-spoqaMedium tracking-tight pt-px group-hover:text-white ${selectedTab === item.id ? "text-white" : "text-gray-text"}`}>{item.text}</label>
                                 </div>
                                 <img className="h-15px object-contain mr-4px" src={selectedTab === item.id ? WhiteArrow : GrayArrow} alt="arrow" />
+                                <img className="absolute right-0 h-15px object-contain mr-4px group-hover:opacity-100 opacity-0 object-none" src={WhiteArrow} alt="arrow" />
                             </div>
                         </button>
                     ) }
@@ -74,15 +76,17 @@ const MenuCard = ({
                         history.push(item.path)
                     }}
                 >
-                    {selectedTab !== item.id && item.id !== 0 && (<div className="absolute top-0 left-0 h-px w-full bg-white"></div>)} 
-                    <div className="flex items-center justify-between">
+                    {selectedTab !== item.id && item.id !== 0 && (<div className="absolute top-0 left-0 h-px w-full bg-white group-hover:bg-blue-r009edf"></div>)} 
+                    <div className="relative flex items-center justify-between">
                         <div className="flex items-center space-x-10px">
-                            <div className={selectedTab === item.id ? "rounded-full shadow-plain" : "rounded-full"}>
-                                <img className="w-full h-full" src={selectedTab === item.id ? item.iconHighlight : item.icon} alt="meunIcon" />
+                            <div className={selectedTab === item.id ? "relative rounded-full shadow-plain" : "relative rounded-full"}>
+                                <img className="w-full h-full group-hover:opacity-0" src={selectedTab === item.id ? item.iconHighlight : item.icon} alt="meunIcon" />
+                                <img className="absolute w-full h-full group-hover:opacity-100 opacity-0 object-none top-0" src={item.iconHighlight} alt="meunIcon" />
                             </div>
-                            <label className={`cursor-pointer text-16px font-spoqaMedium tracking-tight pt-px ${selectedTab === item.id ? "text-white" : "text-gray-text"}`}>{item.text}</label>
+                            <label className={`cursor-pointer text-16px font-spoqaMedium tracking-tight pt-px group-hover:text-white ${selectedTab === item.id ? "text-white" : "text-gray-text"}`}>{item.text}</label>
                         </div>
-                        <img className="h-15px object-contain mr-4px" src={selectedTab === item.id ? WhiteArrow : GrayArrow} alt="arrow" />
+                        <img className="h-15px object-contain mr-4px group-hover:opacity-0" src={selectedTab === item.id ? WhiteArrow : GrayArrow} alt="arrow" />
+                        <img className="absolute right-0 h-15px object-contain mr-4px group-hover:opacity-100 opacity-0 object-none" src={WhiteArrow} alt="arrow" />
                     </div>
                 </button>
                 )}

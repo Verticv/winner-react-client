@@ -34,9 +34,9 @@ const ProfileDropDown = ({setAuth}) => {
             <button 
                 key={item.id} 
                 className={`${selectedTab === item.id ? "bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2" : "bg-white"} flex w-full items-center p-4px h-40px rounded-full`} 
-                onPointerDown={(e) => setSelectedTab(item.id)}
+                onMouseOver={() => {setSelectedTab(item.id)}}
+                onMouseLeave={() => setSelectedTab(null)}
                 onPointerUp={() => {
-                    setSelectedTab(false)
                     if (item.id === 5) setAuth(false)
                     history.push(item.path)
                 }}

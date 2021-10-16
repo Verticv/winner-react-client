@@ -92,13 +92,13 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
 
     const WalletButton = (
         <div className="flex items-center space-x-10px h-40px">
-            <div className="flex flex-col items-end -space-y-6px">
+            <div className="flex flex-col items-end -space-y-6px group">
                 <div className="">
-                    <label className="text-blue-r2087f0 cursor-pointer font-spoqaMedium mr-3px">₩</label>
-                    <label className="text-blue-r2087f0 cursor-pointer font-roboto">100,000</label>
-                    <label className="text-blue-r2087f0 cursor-pointer font-spoqaMedium">원</label>
+                    <label className="text-blue-r2087f0 cursor-pointer font-spoqaMedium mr-3px group-hover:text-blue-700">₩</label>
+                    <label className="text-blue-r2087f0 cursor-pointer font-roboto group-hover:text-blue-700">100,000</label>
+                    <label className="text-blue-r2087f0 cursor-pointer font-spoqaMedium group-hover:text-blue-700">원</label>
                 </div>
-                <label className="text-orange-ff7e00 cursor-pointer font-roboto">12,500 P</label>
+                <label className="text-orange-ff7e00 cursor-pointer font-roboto  group-hover:text-yellow-700">12,500 P</label>
             </div>
             <DropdownArrow isOpen={isWalletOpen}/>
         </div>

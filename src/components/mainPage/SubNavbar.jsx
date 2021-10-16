@@ -23,7 +23,7 @@ const SubNavbar = () => {
     const [selectedTab, setSelectedTab] = useState(0)
     const [isGameBanner, setGameBanner] = useState(0)
 
-    const tabClass = "flex items-center pl-5px space-x-2px w-156px h-60px rounded-full text-gray-subNavbar cursor-pointer z-20 transition duration-300 ease-in-out tracking-tight"
+    const tabClass = "flex items-center pl-5px space-x-2px w-156px h-60px rounded-full text-gray-subNavbar cursor-pointer z-20 transition duration-300 ease-in-out tracking-tight hover:bg-gray-d8dfea"
     const selectedTabClass = "flex items-center justify-center w-156px h-60px rounded-full text-white cursor-pointer z-20 py-4 transition duration-150 ease-in-out tracking-tight"
 
     const tabsArray = [
@@ -62,7 +62,7 @@ const SubNavbar = () => {
 
     return (
         <div id="container" className="relative w-full">
-            <div className="flex justify-around w-full rounded-full shadow-subNavbar bg-gradient-to-b from-blue-lightGradLight border-2 border-white">
+            <div className=" flex justify-around w-full rounded-full shadow-subNavbar bg-gradient-to-b from-blue-lightGradLight to-white border-2 border-white">
                 <div className="highlight" />
                 <TabsList items={tabsArray}/>
             </div>

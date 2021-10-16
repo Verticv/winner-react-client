@@ -5,6 +5,7 @@ import UKflag from '../../images/uk_flag.png'
 const CountryDropDown = ({setCountry, country}) => {
 
     const [selectedTab, setSelectedTab] = useState(country === "KR" ? 0 : 1)
+    const [hoveredTab, setHoveredTab] = useState(null)
 
     const countriesArray = [
         { icon: Koreaflag, text: "KR", id: 0 },
@@ -15,17 +16,19 @@ const CountryDropDown = ({setCountry, country}) => {
         return items.map(item => (
             <button 
                 key={item.id} 
-                className={`${selectedTab === item.id ? "bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2" : "bg-white"} flex w-full items-center p-1 h-40px rounded-full`} 
+                className={`${(selectedTab === item.id || hoveredTab === item.id) ? "bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2" : "bg-white"} flex w-full items-center p-1 h-40px rounded-full`} 
+                onMouseOver={() => {setHoveredTab(item.id)}}
+                onMouseLeave={() => setHoveredTab(null)}
                 onClick={
                     () => {setSelectedTab(item.id)
                     setCountry(item.text)}
                 }
             >
-                <div className={`${selectedTab === item.id && "shadow-plain3"} h-32px w-32px bg-white rounded-full flex items-center justify-center flex-shrink-0`} >
+                <div className={`${(selectedTab === item.id || hoveredTab === item.id) && "shadow-plain3"} h-32px w-32px bg-white rounded-full flex items-center justify-center flex-shrink-0`} >
                     <img src={item.icon} alt="flag"></img>
                 </div>
                 <div className="w-full flex justify-center mr-3">                
-                    <label className={`${selectedTab === item.id ? "text-white" : "text-gray-subNavbar"} font-spoqaBold text-14px cursor-pointer`}>{item.text}</label>
+                    <label className={`${(selectedTab === item.id || hoveredTab === item.id) ? "text-white" : "text-gray-subNavbar"} font-spoqaBold text-14px cursor-pointer`}>{item.text}</label>
                 </div>
             </button>
         ));
