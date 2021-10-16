@@ -202,7 +202,7 @@ const LeftMenu = ({
                                         pathname === item.path3 || pathname === item.path3_1
                                         ? "bg-blue-d0e8ff text-gray-r454545" 
                                         : "bg-gray-f9f9f9 text-gray-r8c8c8c"
-                                    } ${item.sub3 === "가상게임" && "rounded-b-3xl"} flex items-center h-45px w-full bg-gray-f9f9f9 pl-60px`}>
+                                    } ${item.sub3 === "키론가상게임" && "rounded-b-3xl"} flex items-center h-45px w-full bg-gray-f9f9f9 pl-60px`}>
                                         {item.sub3}
                                 </button>
                             )}

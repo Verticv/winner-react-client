@@ -49,7 +49,7 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
             path_8: "/cscenter/policy/sportsgame/e-sports", 
             sub1: "스포츠게임",
             sub2: "미니게임",
-            sub3: "가상게임",
+            sub3: "키론가상게임",
             path2: "/cscenter/policy/minigame/powerball", 
             path2_1: "/cscenter/policy/minigame/powerladder", 
             path2_2: "/cscenter/policy/minigame/speedkino", 
@@ -156,7 +156,7 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
                     <DirectoryComponent 
                         branch1="고객센터"
                         branch2="베팅규정"
-                        branch3="가상게임"
+                        branch3="키론가상게임"
                         mainPath="/cscenter/policy/sportsgame/soccer"
                         setSelectedTab={setSelectedTab}
                         setSelectedSubTab={setSelectedSubTab}

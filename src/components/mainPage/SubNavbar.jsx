@@ -32,7 +32,7 @@ const SubNavbar = () => {
         { text: "스포츠", icon: Sport, iconDefault: SportDefault, id: 2, class: "pt-1 mr-8px", classDefault: "pt-6px" },
         { text: "e-스포츠", icon: Esport, iconDefault: EsportDefault, id: 3, class: "pt-1 mr-6px", classDefault: "pt-6px" },
         { text: "미니게임", icon: Minigame, iconDefault: MinigameDefault, id: 4, class: "pt-1 mr-6px", classDefault: "pt-6px" },
-        { text: "가상게임", icon: AugmentedGame, iconDefault: AugmentedGameDefault, id: 5, class: "pt-1 mr-6px", classDefault: "pt-6px" },
+        { text: "키론가상게임", icon: AugmentedGame, iconDefault: AugmentedGameDefault, id: 5, class: "pt-1 mr-6px", classDefault: "pt-6px" },
         { text: "피싱게임", icon: Fishing, iconDefault: FishingDefault, id: 6, class: "pt-1 mr-2px", classDefault: "pt-6px" },
         { text: "로터리게임", icon: Lottery, iconDefault: LotteryDefault, id: 7, class: "pt-1 mr-6px", classDefault: "pt-6px" }
     ];

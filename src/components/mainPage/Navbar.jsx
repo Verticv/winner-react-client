@@ -41,7 +41,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
         { text: "스포츠", id: 2 },
         { text: "e-스포츠", id: 3 },
         { text: "미니게임", id: 4 },
-        { text: "가상게임", id: 5 },
+        { text: "키론가상게임", id: 5 },
         { text: "피싱게임", id: 6 },
         { text: "로터리", id: 7 },
         { text: "경기결과", id: 8, path: "/gameresults/sports/win-draw-lose" },
@@ -62,6 +62,10 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
                 onMouseOver={() => {
                     setHoveredTab(item.id)
                     setSelectedTab(item.id)
+                }}
+                onMouseLeave={() => {
+                    item.id > 6 
+                    && setSelectedTab(null)
                 }}
             >
                 <span className="cursor-pointer font-spoqaBold text-16px tracking-tight mt-px">{item.text}</span>
@@ -173,7 +177,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
                 )}
 
             </header>
-            <NavbarHover selection={hoveredTab} setHoveredTab={setHoveredTab}/>
+            <NavbarHover selection={hoveredTab} setHoveredTab={setHoveredTab} setSelectedTab={setSelectedTab}/>
         </div>
     )
 }

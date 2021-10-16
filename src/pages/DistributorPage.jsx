@@ -179,7 +179,7 @@ const DistributorPage = ({
                         <div className="w-full h-full flex flex-col items-center justify-center -space-y-4px"><span>YL</span><span>게이밍</span></div>
                         <div className="w-full h-full flex flex-col items-center justify-center -space-y-4px"><span>레드</span><span>타이거</span></div>
                         <div className="w-full h-full flex items-center justify-center">e-스포츠</div>
-                        <div className="w-full h-full flex items-center justify-center">가상게임</div>
+                        <div className="w-full h-full flex items-center justify-center">키론가상게임</div>
                     </div>
                     <div className="flex h-56px w-full border-gray-dddddd items-center text-16px tracking-tight font-roboto text-gray-r585858 border-r-2 border-gray-dddddd bg-white">
                         <div className="w-full h-full flex items-center justify-center font-spoqaMedium text-white bg-gray-r5b6773">변경</div>
@@ -262,7 +262,7 @@ const DistributorPage = ({
                         <div className="w-full h-full flex flex-col items-center justify-center -space-y-4px"><span>YL</span><span>게이밍</span></div>
                         <div className="w-full h-full flex flex-col items-center justify-center -space-y-4px"><span>레드</span><span>타이거</span></div>
                         <div className="w-full h-full flex items-center justify-center">e-스포츠</div>
-                        <div className="w-full h-full flex items-center justify-center">가상게임</div>
+                        <div className="w-full h-full flex items-center justify-center">키론가상게임</div>
                     </div>
                     <div className="flex h-56px w-full border-gray-dddddd items-center text-16px tracking-tight font-roboto text-gray-r585858 border-b">
                         <div className="w-full h-full flex items-center justify-center font-spoqaMedium text-white bg-gray-r5b6773">베팅금</div>
@@ -671,7 +671,7 @@ const DistributorPage = ({
                                     <td className="w-91px text-center flex flex-col pt-2px -space-y-4px"><span>YL</span><span>게이밍</span></td>
                                     <td className="w-91px text-center flex flex-col pt-2px -space-y-4px"><span>레드</span><span>타이거</span></td>
                                     <td className="w-91px text-center">e-스포츠</td>
-                                    <td className="w-91px text-center">가상게임</td>
+                                    <td className="w-91px text-center">키론가상게임</td>
                                 </tr>
                             </thead>
                             <tbody className="w-full text-585858 text-14px tracking-tight font-spoqaMedium">
@@ -768,7 +768,7 @@ const DistributorPage = ({
                                     <td className="w-83px text-center flex flex-col pt-2px -space-y-4px"><span>YL</span><span>게이밍</span></td>
                                     <td className="w-83px text-center flex flex-col pt-2px -space-y-4px"><span>레드</span><span>타이거</span></td>
                                     <td className="w-83px text-center">e-스포츠</td>
-                                    <td className="w-83px text-center">가상게임</td>
+                                    <td className="w-83px text-center">키론가상게임</td>
                                     <td className="w-83px text-center">합계</td>
                                 </tr>
                             </thead>

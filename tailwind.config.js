@@ -393,7 +393,8 @@ module.exports = {
           f5feff: '#f5feff',
           r45484c: '#45484c',
           r9c9c9c: '#9c9c9c',
-          d8dfea: '#d8dfea'
+          d8dfea: '#d8dfea',
+          f2f2f2: '#f2f2f2'
         },
         red: {
           notification: '#ed2f59',

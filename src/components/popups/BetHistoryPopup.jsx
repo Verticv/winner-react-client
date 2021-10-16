@@ -19,7 +19,7 @@ const BetHistoryPopup = ({setPopupOpen, setAttachedArray, attachedArray}) => {
         { text: "스포츠", icon: Icon4, id: 3 },
         { text: "e-스포츠", icon: Icon5, id: 4 },
         { text: "미니게임", icon: Icon6, id: 5 },
-        { text: "가상게임", icon: Icon7, id: 6 },
+        { text: "키론가상게임", icon: Icon7, id: 6 },
         { text: "피싱게임", icon: Icon8, id: 7 },
         { text: "로터리게임", icon: Icon9, id: 8 }
     ];

@@ -27,7 +27,7 @@ const tabsArray = [
     { text: "스포츠", icon: Icon4, id: 3, path: "/mypage/bet-history/sports" },
     { text: "e-스포츠", icon: Icon5, id: 4, path: "/mypage/bet-history/e-sports" },
     { text: "미니게임", icon: Icon6, id: 5, path: "/mypage/bet-history/minigame" },
-    { text: "가상게임", icon: Icon7, id: 6, path: "/mypage/bet-history/ar-game" },
+    { text: "키론가상게임", icon: Icon7, id: 6, path: "/mypage/bet-history/ar-game" },
     { text: "피싱게임", icon: Icon8, id: 7, path: "/mypage/bet-history/fishing-game" },
     { text: "로터리게임", icon: Icon9, id: 8, path: "/mypage/bet-history/lottery-game" }
 ];

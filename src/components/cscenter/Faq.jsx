@@ -24,7 +24,7 @@ const Faq = () => {
         { text: "스포츠", icon: Icon4, id: 3, path: "/cscenter/faq/sports" },
         { text: "e-스포츠", icon: Icon5, id: 4, path: "/cscenter/faq/e-sports" },
         { text: "미니게임", icon: Icon6, id: 5, path: "/cscenter/faq/minigame" },
-        { text: "가상게임", icon: Icon7, id: 6, path: "/cscenter/faq/ar-game" },
+        { text: "키론가상게임", icon: Icon7, id: 6, path: "/cscenter/faq/ar-game" },
         { text: "충전/환전", icon: Icon8, id: 7, path: "/cscenter/faq/transaction" },
         { text: "베팅관련", icon: Icon9, id: 8, path: "/cscenter/faq/about-betting" },
         { text: "기타", icon: Icon10, id: 9, path: "/cscenter/faq/other" },
@@ -102,7 +102,7 @@ const Faq = () => {
                             - 스포츠 : <p style={{color: "#c0392b"}} className="mx-3px">두폴더 이상 </p> 롤링 100% 최대 30만원 
                         </div>
                         <div className="font-spoqaMedium text-14px tracking-tight text-gray-r585858 space-y-10px mt-10px flex items-center h-14px">
-                            - 스포츠단폴더, 가상게임, 미니게임, 카지노 : <p style={{color: "#c0392b"}} className="mx-3px">이용불가</p>
+                            - 스포츠단폴더, 키론가상게임, 미니게임, 카지노 : <p style={{color: "#c0392b"}} className="mx-3px">이용불가</p>
                         </div>
                         <div className="font-spoqaMedium text-14px tracking-tight text-gray-r585858 space-y-10px mt-10px flex items-center h-14px">
                             - 스포츠 2폴더 이상 100% 롤링 후 이용 가능 스포츠 단폴더, 타 게임 이용 가능하며, 스포츠 2폴더 100% 롤링 전 타게임 이용시 보유금 <p style={{color: "#c0392b"}} className="mx-3px">전액 몰수처리</p>

@@ -54,10 +54,10 @@ const ContactCompose = () => {
                 미니게임
             </button>
             <button className={dropDownCellClass} onClick={() => {
-                setSelectedCarrier("가상게임")
+                setSelectedCarrier("키론가상게임")
                 setDropdownOpen(false)
             }}>
-                가상게임
+                키론가상게임
             </button>
             <button className={dropDownCellClass} onClick={() => {
                 setSelectedCarrier("충전/환전")

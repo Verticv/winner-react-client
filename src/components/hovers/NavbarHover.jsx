@@ -7,10 +7,14 @@ import MinigamesHover from './MinigamesHover'
 import ARHover from './ARHover'
 import FishingGameHover from './FishingGameHover'
 
-const NavbarHover = ({selection, setHoveredTab}) => {
+const NavbarHover = ({selection, setHoveredTab, setSelectedTab}) => {
 
     return (
-        <div onMouseLeave={() => setHoveredTab(false)}>
+        <div 
+        onMouseLeave={() => {
+            setHoveredTab(null)
+            setSelectedTab(null)
+        }}>
             <LiveCasinoHover selection={selection}/>
             <SlotGameHover selection={selection}/>
             <SportsHover selection={selection}/>

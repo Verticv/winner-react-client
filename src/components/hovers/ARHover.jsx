@@ -6,7 +6,7 @@ import AugBannerHighlight from '../../images/navbarHover/aug_banner_highlight.pn
 const ARHover = ({selection}) => {
 
     const gamesArray = [
-        { id: 0, background: AugBanner, highlight: AugBannerHighlight, imgText: "가상게임", color: "group-hover:bg-green-r7bd26a", btnText: "게임시작", class: "bg-opacity-25" }
+        { id: 0, background: AugBanner, highlight: AugBannerHighlight, imgText: "키론가상게임", color: "group-hover:bg-green-r7bd26a", btnText: "게임시작", class: "bg-opacity-25" }
     ];
 
     function GamesList({ items }) {
