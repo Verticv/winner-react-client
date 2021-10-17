@@ -1,13 +1,16 @@
 import React from 'react'
 import DateSearchBar from '../DateSearchBar'
+import EsportsBetHistoryTable from '../tables/EsportsBetHistoryTable'
 
 const ESportsBetHistory = () => {
     return (
         <div className="w-full">
+
             <DateSearchBar isLeagueSearch={false} />
 
-            <div className="my-60px flex w-full justify-center text-14px font-spoqaMedium text-gray-r454545">이 기간에 베팅이 이루어지지 않았습니다.</div>
-            
+            <div className="w-full h-full mt-20px">
+                <EsportsBetHistoryTable />  
+            </div>
         </div>
     )
 }

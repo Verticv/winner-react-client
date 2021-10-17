@@ -18,8 +18,8 @@ const HorizontalMenu = ({
                 className={`${
                     pathname === item.path
                     ? "bg-blue-r58baf7" 
-                    : "bg-white"
-                } overflow-hidden h-80px w-full rounded-lg flex justify-end border border-gray-dddddd hover:bg-blue-d3f3fe`} 
+                    : "bg-white hover:bg-blue-d3f3fe"
+                } overflow-hidden h-80px w-full rounded-lg flex justify-end border border-gray-dddddd`} 
                 onClick={() => {
                     history.push(item.path)
                     setSelectedTab(item.id)

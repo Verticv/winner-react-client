@@ -12,12 +12,12 @@ const Pagination = ({page, setPage}) => {
         <img src={LeftIcon} alt="arrow" />
     )
     const RightArrow = () => (
-        <img src={RightIcon} alt="arrow" />
+        <img src={RightIcon} className="hover:opacity-75" alt="arrow" />
     )
 
     return (
         <div className="relative flex w-297px h-32px mb-60px items-center justify-center">
-                <img className="absolute left-0 -ml-10px cursor-pointer h-32px object-none" src={DoubleLeftIcon} alt="" onClick={() => setPage(0)} />
+                <img className="absolute left-0 -ml-10px cursor-pointer h-32px object-none hover:opacity-75" src={DoubleLeftIcon} alt="" onClick={() => setPage(0)} />
                 <ReactPaginate
                     activeClassName={'item active font-roboto w-32px h-32px'}
                     breakClassName={'item'}
@@ -25,7 +25,7 @@ const Pagination = ({page, setPage}) => {
                     containerClassName={'pagination'}
                     disabledClassName={'disabled-page'}
                     marginPagesDisplayed={5}
-                    nextClassName={"item next "}
+                    nextClassName={"item next"}
                     nextLabel={<RightArrow />}
                     onPageChange={(selected) => {
                         var s = JSON.stringify(selected.selected);
@@ -39,9 +39,9 @@ const Pagination = ({page, setPage}) => {
                     previousLabel={<LeftArrow />}
                     initialPage={0}
                     forcePage={page}
-                    pageLinkClassName="p-10px"
+                    pageLinkClassName="hover:opacity-75"
                 />
-                <img className="absolute right-0 -mr-10px cursor-pointer h-32px object-none" src={DoubleRightIcon} alt="" onClick={() => setPage(4)} />
+                <img className="absolute right-0 -mr-10px cursor-pointer h-32px object-none hover:opacity-75" src={DoubleRightIcon} alt="" onClick={() => setPage(4)} />
             </div>
     )
 }

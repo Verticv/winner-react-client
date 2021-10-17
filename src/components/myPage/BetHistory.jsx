@@ -97,7 +97,10 @@ const BetHistory = () => {
                 </>
             </Route>
             <Route path="/mypage/bet-history/fishing-game">
-                <div className="mt-40px"/>
+                <>
+                    <SlotBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
+                    <Pagination page={page} setPage={setPage}/>   
+                </>
             </Route>
             <Route path="/mypage/bet-history/lottery-game">
                 <div className="mt-40px"/>

@@ -7,9 +7,11 @@ import SexyBg from '../../images/cardBg/sexy_bg.png'
 import BigBg from '../../images/cardBg/big_bg.png'
 import WinnerBg from '../../images/cardBg/winner_bg.png'
 import './GameBanners.css'
+import { useHistory } from 'react-router-dom'
 
 const LiveCasinoBanner = () => {
 
+    const history = useHistory()
     const cardClass = "group relative flex justify-end w-300px h-185px border border-gray-afafaf rounded-lg shadow-plain1 transition cursor-pointer border border-gray-afafaf overflow-hidden"
 
     const gamesArray = [
@@ -25,7 +27,11 @@ const LiveCasinoBanner = () => {
 
     function CardList({ items }) {
         return items.map(item => (
-            <div key={item.id} className={`${cardClass} ${item.id !==6 && item.id !==7 && "angled-gradient"}`} >
+            <div 
+                key={item.id} 
+                className={`${cardClass} ${item.id !==6 && item.id !==7 && "angled-gradient"}`} 
+                onClick={() => history.push('/live-casino')}
+            >
                 <img className="z-20 object-none" src={item.img} alt="background" />
                 <div className={`${item.id !== 6 && item.id !== 7 && "group-hover:shadow-plain3 "} absolute z-20 left-0 bottom-0 ml-19px mb-19px w-85px h-34px rounded-full flex items-center justify-center text-white font-spoqaBold text-14px pt-px ${item.color}`}>{item.btnText}</div>
             </div>

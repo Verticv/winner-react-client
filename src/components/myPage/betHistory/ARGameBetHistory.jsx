@@ -92,7 +92,7 @@ const ARGameBetHistory = ({isState, setState}) => {
             <div className="mt-40px h-36px w-full flex items-center justify-start space-x-2px">
                 <button 
                     style={{borderRadius:"4px"}}
-                    className="flex items-center justify-center w-90px h-36px rounded-md bg-gray-r171a1d"
+                    className="flex items-center justify-center w-90px h-36px rounded-md bg-gray-r171a1d hover:opacity-75"
                     onClick={() => allSelectButtonPressed()}
                 >
                     <div 
@@ -107,7 +107,7 @@ const ARGameBetHistory = ({isState, setState}) => {
                 </button>
                 <button 
                     style={{borderRadius:"4px"}}
-                    className="flex items-center justify-center w-90px h-36px rounded-md bg-red-cb4343"
+                    className="flex items-center justify-center w-90px h-36px rounded-md bg-red-cb4343 hover:opacity-75"
                 >
                     <div 
                         style={{

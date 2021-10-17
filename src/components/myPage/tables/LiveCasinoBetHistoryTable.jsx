@@ -9,7 +9,7 @@ const LiveCasinoBetHistoryTable = ({array, checkedState, setCheckedState, isPopu
         const detailButton = (
             <button 
                 style={{height:"29px", width: "73px", backgroundColor:"#e9441d"}} 
-                className="rounded-full text-white font-spoqaMedium text-14px tracking-tight pt-2px"
+                className="rounded-full text-white font-spoqaMedium text-14px tracking-tight pt-2px hover:opacity-75"
             >
                 상세보기
             </button>
