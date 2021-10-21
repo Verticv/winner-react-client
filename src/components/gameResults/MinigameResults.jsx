@@ -10,6 +10,9 @@ import Icon3 from '../../images/gameResults/minigame/3.png'
 import Icon4 from '../../images/gameResults/minigame/4.png'
 import PowerballResults from './PowerballResults';
 import PowerladderResults from './PowerladderResults';
+import PowerladderIcon from '../../images/gameResults/minigame/powerladder_icon.png'
+import Sub3 from '../../images/myPage/betHistory/minigame/sub3.png'
+import Sub4 from '../../images/myPage/betHistory/minigame/sub4.png'
 
 const MinigameResults = ({pageTitle = "미니게임"}) => {
 
@@ -37,7 +40,13 @@ const MinigameResults = ({pageTitle = "미니게임"}) => {
                 <PowerballResults />
             </Route>
             <Route path="/gameresults/minigame/powerladder">
-                <PowerladderResults />
+                <PowerladderResults icon={PowerladderIcon} />
+            </Route>
+            <Route path="/gameresults/minigame/speedkino">
+                <PowerladderResults title="스피드키노" icon={Sub3} />
+            </Route>
+            <Route path="/gameresults/minigame/kinoladder">
+                <PowerladderResults title="키노사다리" icon={Sub4} />
             </Route>
 
             <div className="flex w-full justify-center mt-60px">

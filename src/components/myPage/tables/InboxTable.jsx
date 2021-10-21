@@ -28,7 +28,7 @@ const InboxTable = ({
                     item.id % 2 === 0 
                     ? "bg-gray-fdfdfd" 
                     : "bg-gray-f8f9fb"
-                } font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px w-full border-b border-gray-dddddd`}
+                } font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px w-full border-b border-gray-dddddd hover:font-spoqaBold group`}
             >
                 <div className="flex items-center font-spoqaBold text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd px-54px">        
                     
@@ -59,7 +59,7 @@ const InboxTable = ({
                             ? <div className="w-53px h-25px rounded-full bg-yellow-ffab39 flex items-center justify-center text-white text-12px">이벤트</div> 
                             : <div></div>
                         }
-                        <p>{item.text}</p>
+                        <p className="group-hover:text-gray-r585858">{item.text}</p>
                         {item.isRead === false && (
                             <div className="w-17px h-17px bg-red-ff1237 rounded-full text-12px text-white flex items-center justify-center font-roboto">
                                 N
@@ -69,7 +69,7 @@ const InboxTable = ({
 
                     <div className={`${item.isRead === true ? "text-gray-r7b7b7b" : "text-gray-r454545"} w-158px flex font-spoqa justify-center text-center`}>{item.time}</div>
 
-                    <button className="w-70px flex items-center justify-center">
+                    <button className="w-70px flex items-center justify-center hover:opacity-75">
                         <div className={`${item.isRead === false  ? "bg-gray-r454545" : "bg-gray-a2a2a2" } w-49px h-29px flex justify-center rounded-full text-white font-spoqaMedium items-center pt-2px`}>
                             삭제
                         </div>

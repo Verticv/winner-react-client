@@ -29,19 +29,19 @@ const FreeBoardView = () => {
                 </div>
                 {isEdit === true ? (
                     <div className="flex space-x-4px my-20px justify-end">
-                        <button className="flex items-center justify-center w-90px h-36px rounded-4px bg-red-cb4343">
+                        <button className="flex items-center justify-center w-90px h-36px rounded-4px bg-red-cb4343 hover:opacity-75">
                             <div className="flex items-center justify-center h-34px w-88px rounded-4px border border-red-f36576 bg-gradient-to-b from-red-f03a50 via-red-e2314f to-red-cf254d cursor-pointer">
                                 <span className="font-spoqaMedium tracking-tight text-14px text-white">수정하기</span>
                             </div>
                         </button>
-                        <button className="flex items-center justify-center w-90px h-36px rounded-4px bg-gray-r171a1d" >
+                        <button className="flex items-center justify-center w-90px h-36px rounded-4px bg-gray-r171a1d hover:opacity-75" >
                             <div className="flex items-center justify-center h-34px w-88px rounded-4px border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r45484c to-gray-r303337 cursor-pointer">
                                 <span className="font-spoqaMedium tracking-tight text-14px text-white">삭제하기</span>
                             </div>
                         </button>
                     </div>
                 ) : (
-                    <button className="flex items-center justify-center h-36px w-90px rounded-4px bg-blue-r0070d9">
+                    <button className="flex items-center justify-center h-36px w-90px rounded-4px bg-blue-r0070d9 hover:opacity-75">
                         <div className="flex items-center justify-center h-34px w-88px bg-black rounded-4px border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
                             <span className="font-spoqaMedium tracking-tight text-14px text-white">답글달기</span>
                         </div>
@@ -134,12 +134,12 @@ const FreeBoardView = () => {
             </div>
 
             <div className="flex space-x-4px my-20px justify-end">
-                <button className="flex items-center justify-center w-90px h-36px rounded-4px bg-red-cb4343">
+                <button className="flex items-center justify-center w-90px h-36px rounded-4px bg-red-cb4343 hover:opacity-75">
                     <div className="flex items-center justify-center h-34px w-88px rounded-4px border border-red-f36576 bg-gradient-to-b from-red-f03a50 via-red-e2314f to-red-cf254d cursor-pointer">
                         <span className="font-spoqaMedium tracking-tight text-14px text-white">수정하기</span>
                     </div>
                 </button>
-                <button className="flex items-center justify-center w-90px h-36px rounded-4px bg-gray-r171a1d" >
+                <button className="flex items-center justify-center w-90px h-36px rounded-4px bg-gray-r171a1d hover:opacity-75" >
                     <div className="flex items-center justify-center h-34px w-88px rounded-4px border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r45484c to-gray-r303337 cursor-pointer">
                         <span className="font-spoqaMedium tracking-tight text-14px text-white">삭제하기</span>
                     </div>
@@ -160,7 +160,7 @@ const FreeBoardView = () => {
                         placeholder="욕설, 상대방 비방글, 타사이트 언급, 홍보 등은 경고없이 삭제되며 사이트 이용에 제한을 받을 수 있습니다."
                     />
 
-                    <button style={{borderRadius:"1em"}} className="right-0 absolute flex items-center justify-center h-93px w-120px bg-blue-r2068b2">
+                    <button style={{borderRadius:"1em"}} className="right-0 absolute flex items-center justify-center h-93px w-120px bg-blue-r2068b2 hover:opacity-75">
                         <div style={{width:"118px", borderRadius:"1em"}} className="flex items-center justify-center h-91px w-118px bg-black rounded-xl border border-blue-r3975ae bg-gradient-to-b from-blue-r125a9e via-blue-r0e508d to-blue-r0b447a cursor-pointer">
                             <span className="font-spoqaMedium tracking-tight text-14px text-white pt-px">댓글작성</span>
                         </div>
@@ -177,12 +177,12 @@ const FreeBoardView = () => {
                             <p className="text-15px font-spoqaMedium tracking-tight text-gray-r585858">신풍사우나</p>
                         </div>
                         <div className="flex space-x-4px my-20px justify-end">
-                            <button className="flex items-center justify-center w-90px h-36px rounded-4px bg-red-cb4343">
+                            <button className="flex items-center justify-center w-90px h-36px rounded-4px bg-red-cb4343 hover:opacity-75">
                                 <div className="flex items-center justify-center h-34px w-88px rounded-4px border border-red-f36576 bg-gradient-to-b from-red-f03a50 via-red-e2314f to-red-cf254d cursor-pointer">
                                     <span className="font-spoqaMedium tracking-tight text-14px text-white">수정하기</span>
                                 </div>
                             </button>
-                            <button className="flex items-center justify-center w-90px h-36px rounded-4px bg-gray-r171a1d" >
+                            <button className="flex items-center justify-center w-90px h-36px rounded-4px bg-gray-r171a1d hover:opacity-75" >
                                 <div className="flex items-center justify-center h-34px w-88px rounded-4px border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r45484c to-gray-r303337 cursor-pointer">
                                     <span className="font-spoqaMedium tracking-tight text-14px text-white">삭제하기</span>
                                 </div>
@@ -210,12 +210,12 @@ const FreeBoardView = () => {
                             <p className="text-15px font-spoqaMedium tracking-tight text-gray-r585858">신풍사우나</p>
                         </div>
                         <div className="flex space-x-4px my-20px justify-end">
-                            <button className="flex items-center justify-center w-90px h-36px rounded-4px bg-red-cb4343">
+                            <button className="flex items-center justify-center w-90px h-36px rounded-4px bg-red-cb4343 hover:opacity-75">
                                 <div className="flex items-center justify-center h-34px w-88px rounded-4px border border-red-f36576 bg-gradient-to-b from-red-f03a50 via-red-e2314f to-red-cf254d cursor-pointer">
                                     <span className="font-spoqaMedium tracking-tight text-14px text-white">수정하기</span>
                                 </div>
                             </button>
-                            <button className="flex items-center justify-center w-90px h-36px rounded-4px bg-gray-r171a1d" >
+                            <button className="flex items-center justify-center w-90px h-36px rounded-4px bg-gray-r171a1d hover:opacity-75" >
                                 <div className="flex items-center justify-center h-34px w-88px rounded-4px border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r45484c to-gray-r303337 cursor-pointer">
                                     <span className="font-spoqaMedium tracking-tight text-14px text-white">삭제하기</span>
                                 </div>
@@ -236,7 +236,7 @@ const FreeBoardView = () => {
                             placeholder="두개의 이벤트 모두 참여하였습니다."
                         />
 
-                        <button style={{borderRadius:"1em"}} className="right-0 absolute flex items-center justify-center h-93px w-120px bg-blue-r2068b2">
+                        <button style={{borderRadius:"1em"}} className="right-0 absolute flex items-center justify-center h-93px w-120px bg-blue-r2068b2 hover:opacity-75">
                             <div style={{width:"118px", borderRadius:"1em"}} className="flex items-center justify-center h-91px w-118px bg-black border border-blue-r3975ae bg-gradient-to-b from-blue-r125a9e via-blue-r0e508d to-blue-r0b447a cursor-pointer">
                                 <span className="font-spoqaMedium tracking-tight text-14px text-white pt-px">댓글수정</span>
                             </div>
@@ -252,7 +252,7 @@ const FreeBoardView = () => {
                             <img src={Rank2} alt="" />
                             <p className="text-15px font-spoqaMedium tracking-tight text-gray-r585858">신풍사우나</p>
                         </div>
-                        <button className="flex items-center justify-center h-36px w-90px rounded-4px bg-blue-r0070d9">
+                        <button className="flex items-center justify-center h-36px w-90px rounded-4px bg-blue-r0070d9 hover:opacity-75">
                             <div className="flex items-center justify-center h-34px w-88px bg-black rounded-4px border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
                                 <span className="font-spoqaMedium tracking-tight text-14px text-white">답글달기</span>
                             </div>
@@ -272,7 +272,7 @@ const FreeBoardView = () => {
                             placeholder="욕설, 상대방 비방글, 타사이트 언급, 홍보 등은 경고없이 삭제되며 사이트 이용에 제한을 받을 수 있습니다."
                         />
 
-                        <button style={{borderRadius:"1em"}} className="right-0 absolute flex items-center justify-center h-93px w-120px bg-blue-r2068b2">
+                        <button style={{borderRadius:"1em"}} className="right-0 absolute flex items-center justify-center h-93px w-120px bg-blue-r2068b2 hover:opacity-75">
                             <div style={{width:"118px", borderRadius:"1em"}} className="flex items-center justify-center h-91px w-118px bg-black border border-blue-r3975ae bg-gradient-to-b from-blue-r125a9e via-blue-r0e508d to-blue-r0b447a cursor-pointer">
                                 <span className="font-spoqaMedium tracking-tight text-14px text-white pt-px">답글작성</span>
                             </div>
@@ -283,7 +283,7 @@ const FreeBoardView = () => {
 
 
             <div className="mt-20px mb-60px flex items-start justify-between">
-                <button className="flex items-center justify-center h-36px w-90px rounded-4px bg-gray-r171a1d">
+                <button className="flex items-center justify-center h-36px w-90px rounded-4px bg-gray-r171a1d hover:opacity-75">
                     <div 
                         style={{
                             background: "linear-gradient(to bottom, #585b5e, #303337)",
@@ -295,7 +295,7 @@ const FreeBoardView = () => {
                 </button>
 
                 <button 
-                    className="flex items-center justify-center h-52px w-192px rounded-4px bg-gray-r171a1d"
+                    className="flex items-center justify-center h-52px w-192px rounded-4px bg-gray-r171a1d hover:opacity-75"
                     onClick={() => history.push('/freeboard')}
                 >
                     <div 
@@ -309,8 +309,8 @@ const FreeBoardView = () => {
                 </button>
 
                 <button 
-                className="flex items-center justify-center h-36px w-90px rounded-4px bg-gray-r171a1d"
-                onClick={() => history.push('/freeboard/view2')}
+                    className="flex items-center justify-center h-36px w-90px rounded-4px bg-gray-r171a1d hover:opacity-75"
+                    onClick={() => history.push('/freeboard/view2')}
                 >
                     <div 
                         style={{

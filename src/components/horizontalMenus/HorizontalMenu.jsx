@@ -48,8 +48,8 @@ const HorizontalMenu = ({
                         className={`${
                             pathname === item.path
                             ? "text-white"
-                            : "text-gray-r616161" }
-                            text-14px font-spoqaMedium tracking-tight -mt-4px`}
+                            : "text-gray-r616161" 
+                        } text-14px font-spoqaMedium tracking-tight -mt-4px`}
                     >{item.text}</span>
                 </div>
             </button>

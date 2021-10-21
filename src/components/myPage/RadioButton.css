@@ -30,12 +30,27 @@ input[type=radio] {
   background: white center center;
 }
 
-input[type=radio]:checked {
+input[type=radio]:checked  ~ .checkmark {
   background: white url(https://i.imgur.com/jcEenus.png) no-repeat center center
 
   /* box-shadow:inset 0 0 0px 2px white; */
 
 }
+
+input[type=checkbox]:hover input ~ .checkmark {
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  background-color: #a5a5a5;
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  background: #a5a5a5 center center;
+
+  /* box-shadow:inset 0 0 0px 2px white; */
+
+}
+
 
 
   

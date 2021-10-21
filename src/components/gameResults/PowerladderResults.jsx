@@ -1,8 +1,7 @@
 import React from 'react'
-import PowerladderIcon from '../../images/gameResults/minigame/powerladder_icon.png'
 import ClockIcon from '../../images/myPage/betHistory/clock.png'
 
-const PowerladderResults = () => {
+const PowerladderResults = ({title="파워사다리", icon}) => {
 
     const ExampleArray = [
         {id:0, team1: "홀 [211회]", team2: "[211회] 짝", bet:"left"},
@@ -106,8 +105,8 @@ const PowerladderResults = () => {
         <div className="flex flex-col shadow-subNavbar rounded-lg overflow-hidden">
             <div style={{backgroundColor:"#3591d5"}} className="h-56px flex items-center justify-between pr-20px">    
                 <div className="flex items-center">
-                    <img src={PowerladderIcon} alt="" className="ml-19px object-none" />
-                    <span className="text-white font-spoqaMedium text-20px ml-4px pt-3px">파워사다리</span>
+                    <img src={icon} alt="" className="ml-19px object-none" />
+                    <span className="text-white font-spoqaMedium text-20px ml-4px pt-3px">{title}</span>
                 </div>
                 
 

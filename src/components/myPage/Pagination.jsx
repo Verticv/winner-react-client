@@ -17,7 +17,7 @@ const Pagination = ({page, setPage}) => {
 
     return (
         <div className="relative flex w-297px h-32px mb-60px items-center justify-center">
-                <img className="absolute left-0 -ml-10px cursor-pointer h-32px object-none hover:opacity-75" src={DoubleLeftIcon} alt="" onClick={() => setPage(0)} />
+                <img className="absolute left-0 -ml-10px cursor-pointer h-32px object-none hover:bg-blend-darken" src={DoubleLeftIcon} alt="" onClick={() => setPage(0)} />
                 <ReactPaginate
                     activeClassName={'item active font-roboto w-32px h-32px'}
                     breakClassName={'item'}
@@ -39,9 +39,10 @@ const Pagination = ({page, setPage}) => {
                     previousLabel={<LeftArrow />}
                     initialPage={0}
                     forcePage={page}
-                    pageLinkClassName="hover:opacity-75"
+                    // pageLinkClassName="hover:opacity-75"
+                    // style={{filter: "brightness(50%);"}}
                 />
-                <img className="absolute right-0 -mr-10px cursor-pointer h-32px object-none hover:opacity-75" src={DoubleRightIcon} alt="" onClick={() => setPage(4)} />
+                <img className="absolute right-0 -mr-10px cursor-pointer h-32px object-none" src={DoubleRightIcon} alt="" onClick={() => setPage(4)} />
             </div>
     )
 }

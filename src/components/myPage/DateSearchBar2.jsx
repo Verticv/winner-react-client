@@ -32,7 +32,7 @@ const DateSearchBar2 = () => {
     const dropDownCellClass = "flex w-full h-30px py-2px bg-white items-center hover:bg-blue-lightGradLight px-10px"
 
     const gameResultButton = (
-        <div className="flex items-center justify-between bg-white placeholder-gray-r8c8c8c outline-none w-138px h-42px rounded-md border border-gray-dddddd px-10px font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c" >
+        <div className="flex items-center justify-between bg-white placeholder-gray-r8c8c8c outline-none w-138px h-42px rounded-md border border-gray-dddddd px-10px font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c hover:text-gray-r585858" >
             <p className="mt-px">{selectedCarrier}</p>
             <img src={ArrowDownGray} alt="" />
         </div>
@@ -85,7 +85,7 @@ const DateSearchBar2 = () => {
                         <img src={CalendarIcon} alt="" className="absolute top-0 right-0 mt-14px mr-10px" />
                     </div>
                     <div className="pt-px">{InboxSearch}</div>
-                    <div className="flex items-center justify-center h-42px w-75px rounded-4px bg-gray-r171a1d">
+                    <div className="flex items-center justify-center h-42px w-75px rounded-4px bg-gray-r171a1d hover:opacity-75">
                         <div className="flex items-center justify-center h-40px w-73px bg-black rounded-4px border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r45484c to-gray-r303337 cursor-pointer">
                             <span className="font-spoqaMedium tracking-tight text-14px text-white pt-px">검색</span>
                         </div>

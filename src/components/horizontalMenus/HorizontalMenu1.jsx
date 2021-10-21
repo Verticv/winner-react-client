@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const HorizontalMenu1 = ({
     itemsArray, 
@@ -6,6 +6,7 @@ const HorizontalMenu1 = ({
     setState
 }) => {
 
+    const [isHover, setHover] = useState(null)
 
     function TabsList({ items }) {
         return items.map(item => (
@@ -14,15 +15,19 @@ const HorizontalMenu1 = ({
                 className={`${
                     isState === item.id
                     ? "bg-blue-r58baf7" 
-                    : "bg-white"
+                    : "bg-white hover:bg-blue-d3f3fe"
                 } overflow-hidden h-103px w-full rounded-lg flex justify-end border border-gray-dddddd`} 
                 onClick={() => setState(item.id)}
+                onMouseOver={() => setHover(item.id)}
+                onMouseLeave={() => setHover(null)}
             >
                 <div 
                     style={{
                         height: "98px",
-                        background: isState === item.id 
+                        background: isState === item.id
                         ? "linear-gradient(to bottom, #2087f0, #1873cf)"
+                        : isHover === item.id
+                        ? "linear-gradient(to bottom, #b9dcff, #d2f6ff)"
                         : "linear-gradient(to bottom, #c4d6e6, #e8f3fd 26%, #ffffff)",
                         borderBottomLeftRadius:"6px",
                         borderBottomRightRadius:"6px",
