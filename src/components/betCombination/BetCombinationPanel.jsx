@@ -721,7 +721,7 @@ const BetCombinationPanel = ({
 
     const LeagueGroup = ({
         flag = NorwayIcon, 
-        title ="노르웨이 - Eliteserien",
+        title ="노르웨이 - UEFA Europa Conference League",
         array = FirstArray
     }) => (
         <div className="relative flex flex-col">
@@ -729,7 +729,7 @@ const BetCombinationPanel = ({
             <div className="h-50px w-full z-20 flex items-center">
                 <img className="mx-10px" src={FootballIcon} alt="" />
                 <img className="mr-10px" src={flag} alt="" />
-                <p className="text-20px font-spoqaMedium text-white mt-3px">{title}</p>
+                <p className="text-20px font-spoqaMedium text-white mt-3px truncate w-350px">{title}</p>
             </div>
             <div className="h-px w-full bg-gray-dddddd" />
             

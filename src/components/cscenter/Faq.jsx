@@ -53,7 +53,7 @@ const Faq = () => {
         <>
             <button 
                 style={{zIndex: 2}}
-                className="bg-white relative rounded-full shadow-subNavbar w-full h-56px flex items-center px-20px justify-between mb-10px border z-20 group" 
+                className="bg-white relative rounded-full shadow-subNavbar w-full h-56px flex items-center px-20px justify-between mb-10px border z-20 group hover:shadow-plain" 
                 onClick={() => {
                     if (openedCell === cellId) {
                         setOpenedCell(null) 

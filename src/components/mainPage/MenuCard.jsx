@@ -47,7 +47,7 @@ const MenuCard = ({
                             key={item.id} 
                             className={`${item.selectedCss} ${selectedTab === item.id ? selectedTabClass : tabClass}`}
                         >
-                            {selectedTab !== item.id && item.id !== 0 && (<div className="absolute top-0 left-0 h-px w-full bg-white"></div>)} 
+                            {selectedTab !== item.id && item.id !== 0 && (<div className="absolute top-0 left-0 h-px w-full bg-white group-hover:bg-blue-r009edf"></div>)} 
                             <div className="relative flex items-center justify-between">
                                 <div className="flex items-center space-x-10px">
                                     <div className={selectedTab === item.id ? "relative rounded-full shadow-plain" : "relative rounded-full"}>

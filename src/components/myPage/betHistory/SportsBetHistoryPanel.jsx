@@ -334,7 +334,7 @@ const SportsBetHistoryPanel = ({
                         {(isAttached === false && isPopup === false) && (
                             <div className="w-116px h-full flex items-center justify-center border-l border-gray-fafafa">베팅번호</div>
                         )}
-                        <div style={{width: noButtons === true ? "236px" : isAttached === true ? "212px" : isPopup === false ? "151px" : "178px"}} className="h-full flex items-center justify-center border-l border-gray-fafafa">베팅시간</div>
+                        <div style={{width: noButtons === true ? "236px" : isAttached === true ? "212px" : isPopup === false ? "151px" : "151px"}} className="h-full flex items-center justify-center border-l border-gray-fafafa">베팅시간</div>
                         <div style={{width: noButtons === true ? "236px" : isAttached === true ? "212px" : isPopup === false ? "131px" : "178px"}} className="h-full flex items-center justify-center border-l border-gray-fafafa">베팅금액</div>
                         <div style={{width: noButtons === true ? "236px" : isAttached === true ? "212px" : isPopup === false ? "78px" : "178px"}} className="h-full flex items-center justify-center border-l border-gray-fafafa">배당률</div>
                         <div style={{width: noButtons === true ? "236px" : isAttached === true ? "212px" : isPopup === false ? "131px" : "178px"}} className="h-full flex items-center justify-center border-l border-gray-fafafa">예상적중금액</div>
@@ -356,7 +356,7 @@ const SportsBetHistoryPanel = ({
                         {(isAttached === false && isPopup === false) && (
                             <div className="w-116px h-full flex items-center justify-center border-l border-gray-fafafa">{ticketNumber}</div>
                         )}
-                        <div style={{width: noButtons === true ? "236px" : isAttached === true ? "212px" : isPopup === false ? "151px" : "178px"}} className="h-full flex items-center justify-center border-l border-gray-fafafa">{time}</div>
+                        <div style={{width: noButtons === true ? "236px" : isAttached === true ? "212px" : isPopup === false ? "151px" : "151px"}} className="h-full flex items-center justify-center border-l border-gray-fafafa">{time}</div>
                         <div style={{width: noButtons === true ? "236px" : isAttached === true ? "212px" : isPopup === false ? "131px" : "178px"}} className="h-full flex items-center justify-end border-l border-gray-fafafa pr-5px">{amount}</div>
                         <div style={{width: noButtons === true ? "236px" : isAttached === true ? "212px" : isPopup === false ? "78px" : "178px"}} className="h-full flex items-center justify-center border-l border-gray-fafafa">{ratio}</div>
                         <div style={{width: noButtons === true ? "236px" : isAttached === true ? "212px" : isPopup === false ? "131px" : "178px"}} className="h-full flex items-center justify-end border-l border-gray-fafafa pr-5px">{predictedPrice}</div>

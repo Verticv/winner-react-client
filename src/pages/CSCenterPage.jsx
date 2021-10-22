@@ -49,12 +49,10 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
             path_8: "/cscenter/policy/sportsgame/e-sports", 
             sub1: "스포츠게임",
             sub2: "미니게임",
-            sub3: "키론가상게임",
             path2: "/cscenter/policy/minigame/powerball", 
             path2_1: "/cscenter/policy/minigame/powerladder", 
             path2_2: "/cscenter/policy/minigame/speedkino", 
             path2_3: "/cscenter/policy/minigame/kinoladder", 
-            path3: "/cscenter/policy/argame",
             mainPath: "/cscenter/policy"
         },
     ];
