@@ -92,7 +92,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         }
                                     }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
-                                    className="relative flex items-center justify-center cursor-pointer"
+                                    className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
                                     <img className="absolute object-none" src={state === `${titleNumber}-1` ? BlueButtonPressed : BlueButton} alt="" />
                                     <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">홀</p>
@@ -111,7 +111,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         }
                                     }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
-                                    className="relative flex items-center justify-center cursor-pointer"
+                                    className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
                                     <img className="absolute object-none" src={state === `${titleNumber}-2` ? RedButtonPressed : RedButton} alt="" />
                                     <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">짝</p>
@@ -132,7 +132,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         }
                                     }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
-                                    className="relative flex items-center justify-center cursor-pointer"
+                                    className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
                                     <img className="absolute object-none" src={state === `${titleNumber}-1` ? BlueButtonPressed : BlueButton} alt="" />
                                     <div className="flex flex-col items-center -space-y-6px">
@@ -155,7 +155,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         }
                                     }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
-                                    className="relative flex items-center justify-center cursor-pointer"
+                                    className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
                                     <img className="absolute object-none" src={state === `${titleNumber}-2` ? RedButtonPressed : RedButton} alt="" />
                                     <div className="flex flex-col items-center -space-y-6px">
@@ -181,7 +181,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         }
                                     }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
-                                    className="relative flex items-center justify-center cursor-pointer"
+                                    className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
                                     <img className="absolute object-none" src={state === `${titleNumber}-1` ? BlueButtonPressed : BlueButton} alt="" />
                                     <div className="flex flex-col items-center -space-y-6px">
@@ -204,7 +204,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         }
                                     }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
-                                    className="relative flex items-center justify-center cursor-pointer"
+                                    className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
                                     <img className="absolute object-none" src={state === `${titleNumber}-2` ? BlueButtonPressed : BlueButton} alt="" />
                                     <div className="flex flex-col items-center -space-y-6px">
@@ -227,7 +227,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         }
                                     }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
-                                    className="relative flex items-center justify-center cursor-pointer"
+                                    className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
                                     <img className="absolute object-none" src={state === `${titleNumber}-3` ? RedButtonPressed : RedButton} alt="" />
                                     <div className="flex flex-col items-center -space-y-6px">
@@ -250,7 +250,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         }
                                     }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
-                                    className="relative flex items-center justify-center cursor-pointer"
+                                    className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
                                     <img className="absolute object-none" src={state === `${titleNumber}-4` ? RedButtonPressed : RedButton} alt="" />
                                     <div className="flex flex-col items-center -space-y-6px">
@@ -272,7 +272,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         setSelectedOption([{type:"파워볼", name:"구간", selection:"A", buttonType:"yellow", subtitle: "(0~2)"}])
                                     }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
-                                    className="relative flex items-center justify-center cursor-pointer"
+                                    className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
                                     <img className="absolute object-none" src={state === `${titleNumber}-1` ? YellowButtonPressed : YellowButton} alt="" />
                                     <div className="flex flex-col items-center -space-y-6px -ml-px -mt-4px">
@@ -289,7 +289,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         setSelectedOption([{type:"파워볼", name:"구간", selection:"B", buttonType:"yellow", subtitle: "(3~4)"}])
                                     }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
-                                    className="relative flex items-center justify-center cursor-pointer"
+                                    className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
                                     <img className="absolute object-none" src={state === `${titleNumber}-2` ? YellowButtonPressed : YellowButton} alt="" />
                                     <div className="flex flex-col items-center -space-y-6px -ml-px -mt-4px">
@@ -306,7 +306,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         setSelectedOption([{type:"파워볼", name:"구간", selection:"C", buttonType:"yellow", subtitle: "(5~6)"}])
                                     }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
-                                    className="relative flex items-center justify-center cursor-pointer"
+                                    className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
                                     <img className="absolute object-none" src={state === `${titleNumber}-3` ? YellowButtonPressed : YellowButton} alt="" />
                                     <div className="flex flex-col items-center -space-y-6px -ml-px -mt-4px">
@@ -323,7 +323,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         setSelectedOption([{type:"파워볼", name:"구간", selection:"D", buttonType:"yellow", subtitle: "(7~8)"}])
                                     }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
-                                    className="relative flex items-center justify-center cursor-pointer"
+                                    className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
                                     <img className="absolute object-none" src={state === `${titleNumber}-4` ? YellowButtonPressed : YellowButton} alt="" />
                                     <div className="flex flex-col items-center -space-y-6px -ml-px -mt-4px">
@@ -343,7 +343,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         setSelectedOption([{type:"파워볼", name:"숫자", selection:"0", buttonType:"yellow"}])
                                     }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
-                                    className="relative flex items-center justify-center cursor-pointer"
+                                    className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
                                     <img className={`${state === `${titleNumber}-1` ? "z-20" : "z-10"} absolute object-none`} src={state === `${titleNumber}-1` ? YellowButtonPressed : YellowButton} alt="" />
                                     <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">0</p>
@@ -357,7 +357,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         setSelectedOption([{type:"파워볼", name:"숫자", selection:"1", buttonType:"yellow"}])
                                     }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
-                                    className="relative flex items-center justify-center cursor-pointer"
+                                    className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
                                     <img className={`${state === `${titleNumber}-2` ? "z-20" : "z-10"} absolute object-none`} src={state === `${titleNumber}-2` ? YellowButtonPressed : YellowButton} alt="" />
                                     <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">1</p>
@@ -372,7 +372,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         setSelectedOption([{type:"파워볼", name:"숫자", selection:"2", buttonType:"yellow"}])
                                     }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
-                                    className="relative flex items-center justify-center cursor-pointer"
+                                    className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
                                     <img className={`${state === `${titleNumber}-3` ? "z-20" : "z-10"} absolute object-none`} src={state === `${titleNumber}-3` ? YellowButtonPressed : YellowButton} alt="" />
                                     <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">2</p>
@@ -387,7 +387,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         setSelectedOption([{type:"파워볼", name:"숫자", selection:"3", buttonType:"yellow"}])
                                     }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
-                                    className="relative flex items-center justify-center cursor-pointer"
+                                    className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
                                     <img className={`${state === `${titleNumber}-4` && "z-20"} absolute object-none`} src={state === `${titleNumber}-4` ? YellowButtonPressed : YellowButton} alt="" />
                                     <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">3</p>
@@ -402,7 +402,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         setSelectedOption([{type:"파워볼", name:"숫자", selection:"4", buttonType:"yellow"}])
                                     }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
-                                    className="relative flex items-center justify-center cursor-pointer"
+                                    className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
                                     <img className={`${state === `${titleNumber}-5` && "z-20"} absolute object-none`} src={state === `${titleNumber}-5` ? YellowButtonPressed : YellowButton} alt="" />
                                     <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">4</p>
@@ -417,7 +417,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         setSelectedOption([{type:"파워볼", name:"숫자", selection:"5", buttonType:"yellow"}])
                                     }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
-                                    className="relative flex items-center justify-center cursor-pointer"
+                                    className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
                                     <img className={`${state === `${titleNumber}-6` && "z-20"} absolute object-none`} src={state === `${titleNumber}-6` ? YellowButtonPressed : YellowButton} alt="" />
                                     <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">5</p>
@@ -432,7 +432,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         setSelectedOption([{type:"파워볼", name:"숫자", selection:"6", buttonType:"yellow"}])
                                     }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
-                                    className="relative flex items-center justify-center cursor-pointer"
+                                    className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
                                     <img className={`${state === `${titleNumber}-7` && "z-20"} absolute object-none`} src={state === `${titleNumber}-7` ? YellowButtonPressed : YellowButton} alt="" />
                                     <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">6</p>
@@ -446,7 +446,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         setSelectedOption([{type:"파워볼", name:"숫자", selection:"7", buttonType:"yellow"}])
                                     }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
-                                    className="relative flex items-center justify-center cursor-pointer"
+                                    className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
                                     <img className={`${state === `${titleNumber}-8` && "z-20"} absolute object-none`} src={state === `${titleNumber}-8` ? YellowButtonPressed : YellowButton} alt="" />
                                     <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">7</p>
@@ -460,7 +460,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         setSelectedOption([{type:"파워볼", name:"숫자", selection:"8", buttonType:"yellow"}])
                                     }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
-                                    className="relative flex items-center justify-center cursor-pointer"
+                                    className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
                                     <img className={`${state === `${titleNumber}-9` && "z-20"} absolute object-none`} src={state === `${titleNumber}-9` ? YellowButtonPressed : YellowButton} alt="" />
                                     <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">8</p>
@@ -474,7 +474,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         setSelectedOption([{type:"파워볼", name:"숫자", selection:"9", buttonType:"yellow"}])
                                     }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
-                                    className="relative flex items-center justify-center cursor-pointer"
+                                    className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
                                     <img className={`${state === `${titleNumber}-10` && "z-20"} absolute object-none`} src={state === `${titleNumber}-10` ? YellowButtonPressed : YellowButton} alt="" />
                                     <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">9</p>
@@ -491,7 +491,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         setSelectedOption([{type:"일반볼", name:"구간", selection:"소", buttonType:"green", subtitle:"(15~64)"}])
                                     }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
-                                    className="relative flex items-center justify-center cursor-pointer"
+                                    className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
                                     <img className="absolute object-none" src={state === `${titleNumber}-1` ? GreenButtonPressed : GreenButton} alt="" />
                                     <div className="flex flex-col items-center -space-y-6px -ml-px -mt-4px">
@@ -508,7 +508,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         setSelectedOption([{type:"일반볼", name:"구간", selection:"중", buttonType:"green", subtitle:"(65~80)"}])
                                     }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
-                                    className="relative flex items-center justify-center cursor-pointer"
+                                    className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
                                     <img className="absolute object-none" src={state === `${titleNumber}-2` ? GreenButtonPressed : GreenButton} alt="" />
                                     <div className="flex flex-col items-center -space-y-6px -ml-px -mt-4px">
@@ -525,7 +525,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         setSelectedOption([{type:"일반볼", name:"구간", selection:"대", buttonType:"green", subtitle:"(81~130)"}])
                                     }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
-                                    className="relative flex items-center justify-center cursor-pointer"
+                                    className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
                                     <img className="absolute object-none" src={state === `${titleNumber}-3` ? GreenButtonPressed : GreenButton} alt="" />
                                     <div className="flex flex-col items-center -space-y-6px -ml-px -mt-4px">
@@ -545,7 +545,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         setSelectedOption([{type:"일반볼", name:"홀짝/소중대", selection:"홀소", buttonType:"green", subtitle:"(15~64)"}])
                                     }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
-                                    className="relative flex items-center justify-center cursor-pointer"
+                                    className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
                                     <img className="absolute object-none" src={state === `${titleNumber}-1` ? GreenButtonPressed : GreenButton} alt="" />
                                     <div className="flex flex-col items-center -space-y-6px -ml-px -mt-4px">
@@ -562,7 +562,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         setSelectedOption([{type:"일반볼", name:"홀짝/소중대", selection:"홀중", buttonType:"green", subtitle:"(65~80)"}])
                                     }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
-                                    className="relative flex items-center justify-center cursor-pointer"
+                                    className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
                                     <img className="absolute object-none" src={state === `${titleNumber}-2` ? GreenButtonPressed : GreenButton} alt="" />
                                     <div className="flex flex-col items-center -space-y-6px -ml-px -mt-4px">
@@ -579,7 +579,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         setSelectedOption([{type:"일반볼", name:"홀짝/소중대", selection:"홀대", buttonType:"green", subtitle:"(81~130)"}])
                                     }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
-                                    className="relative flex items-center justify-center cursor-pointer"
+                                    className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
                                     <img className="absolute object-none" src={state === `${titleNumber}-3` ? GreenButtonPressed : GreenButton} alt="" />
                                     <div className="flex flex-col items-center -space-y-6px -ml-px -mt-4px">
@@ -596,7 +596,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         setSelectedOption([{type:"일반볼", name:"홀짝/소중대", selection:"짝소", buttonType:"green", subtitle:"(15~64)"}])
                                     }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
-                                    className="relative flex items-center justify-center cursor-pointer"
+                                    className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
                                     <img className="absolute object-none" src={state === `${titleNumber}-4` ? GreenButtonPressed : GreenButton} alt="" />
                                     <div className="flex flex-col items-center -space-y-6px -ml-px -mt-4px">
@@ -613,7 +613,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         setSelectedOption([{type:"일반볼", name:"홀짝/소중대", selection:"짝중", buttonType:"green", subtitle:"(64~80)"}])
                                     }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
-                                    className="relative flex items-center justify-center cursor-pointer"
+                                    className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
                                     <img className="absolute object-none" src={state === `${titleNumber}-5` ? GreenButtonPressed : GreenButton} alt="" />
                                     <div className="flex flex-col items-center -space-y-6px -ml-px -mt-4px">
@@ -630,7 +630,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         setSelectedOption([{type:"일반볼", name:"홀짝/소중대", selection:"짝대", buttonType:"green", subtitle:"(81~130)"}])
                                     }} 
                                     style={{width:"68px", height:"59px", paddingTop: "3px"}} 
-                                    className="relative flex items-center justify-center cursor-pointer"
+                                    className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
                                     <img className="absolute object-none" src={state === `${titleNumber}-6` ? GreenButtonPressed : GreenButton} alt="" />
                                     <div className="flex flex-col items-center -space-y-6px -ml-px -mt-4px">

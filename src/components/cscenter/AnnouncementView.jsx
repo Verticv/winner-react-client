@@ -85,7 +85,7 @@ const AnnouncementView = () => {
             </div>
 
             <div className="mt-20px mb-60px flex items-start justify-between">
-                <button className="flex items-center justify-center h-36px w-90px rounded-4px bg-gray-r171a1d">
+                <button className="flex items-center justify-center h-36px w-90px rounded-4px bg-gray-r171a1d hover:opacity-75">
                     <div 
                         style={{
                             background: "linear-gradient(to bottom, #585b5e, #303337)",
@@ -97,7 +97,7 @@ const AnnouncementView = () => {
                 </button>
 
                 <button 
-                    className="flex items-center justify-center h-52px w-192px rounded-4px bg-gray-r171a1d"
+                    className="flex items-center justify-center h-52px w-192px rounded-4px bg-gray-r171a1d hover:opacity-75"
                     onClick={() => history.push('/cscenter/announcement')}
                 >
                     <div
@@ -110,7 +110,7 @@ const AnnouncementView = () => {
                     </div>
                 </button>
 
-                <button className="flex items-center justify-center h-36px w-90px rounded-4px bg-gray-r171a1d">
+                <button className="flex items-center justify-center h-36px w-90px rounded-4px bg-gray-r171a1d hover:opacity-75">
                     <div 
                         style={{
                             background: "linear-gradient(to bottom, #585b5e, #303337)",

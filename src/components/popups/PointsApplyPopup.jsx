@@ -13,7 +13,7 @@ const PointsApplyPopup = ({setPopupOpen}) => {
         <div className="h-518px w-610px flex flex-col rounded-lg overflow-hidden">
             <div className="relative h-71px bg-blue-r5d799c flex items-center justify-center flex-shrink-0">
                 <label className="font-spoqaBold text-white tracking-tight text-24px">포인트 전환 신청</label>
-                <button className="absolute right-0 mr-26px cursor-pointer z-20" onClick={()=> setPopupOpen(false)}>
+                <button className="absolute right-0 mr-26px cursor-pointer z-20 hover:opacity-75" onClick={()=> setPopupOpen(false)}>
                     <img src={CloseIcon} alt="close_icon" />
                 </button>
             </div>
@@ -53,7 +53,7 @@ const PointsApplyPopup = ({setPopupOpen}) => {
                 </div>
 
                 <div className="flex w-full mt-20px space-x-3px">
-                    <button className="flex items-center justify-center h-52px w-268px rounded-4px bg-blue-r0070d9">
+                    <button className="flex items-center justify-center h-52px w-268px rounded-4px bg-blue-r0070d9 hover:opacity-75">
                         <div 
                             style={{background:"linear-gradient(to bottom, #1491fc, #0675db)"}} 
                             className="flex items-center justify-center h-50px w-266px rounded-4px border border-blue-r3ba3fc cursor-pointer"
@@ -62,8 +62,8 @@ const PointsApplyPopup = ({setPopupOpen}) => {
                         </div>
                     </button>
                     <button 
-                    className="flex items-center justify-center h-52px w-268px rounded-4px bg-blue-r004b8a"
-                    onClick={() => history.push('/mypage/points/points-transaction-history')}
+                        className="flex items-center justify-center h-52px w-268px rounded-4px bg-blue-r004b8a hover:opacity-75"
+                        onClick={() => history.push('/mypage/points/points-transaction-history')}
                     >
                         <div 
                             style={{background:"linear-gradient(to bottom, #004b8a, #012d53)"}} 

@@ -28,7 +28,7 @@ const MinigamesRightPanel = ({
                 width:"110px", 
                 borderColor: "#b3bac1"
             }} 
-            className="flex items-center h-46px justify-center rounded-4px flex-shrink-0 border"
+            className="flex items-center h-46px justify-center rounded-4px flex-shrink-0 border hover:opacity-75"
             onClick={() => setInputValue(inputValue + amount)}
         >
             <div 
@@ -48,7 +48,7 @@ const MinigamesRightPanel = ({
                 width:"110px",
                 borderColor: "#171a1d",
             }} 
-            className="flex items-center justify-center h-46px rounded-4px flex-shrink-0 border"
+            className="flex items-center justify-center h-46px rounded-4px flex-shrink-0 border hover:opacity-75"
             onClick={() => setInputValue(amount)}
         >
             <div 
@@ -101,7 +101,7 @@ const MinigamesRightPanel = ({
                             <p>02:16</p>
                         </div>
                     </div>
-                    <img src={RefreshIcon} alt="" className="cursor-pointer" />
+                    <img src={RefreshIcon} alt="" className="cursor-pointer  hover:opacity-75" />
                 </div>
 
                 <div style={{height: "62px"}} className="relative w-full rounded-sm flex">
@@ -216,7 +216,7 @@ const MinigamesRightPanel = ({
 
                 
 
-                <button style={{width:"334px"}} className="mt-5px flex items-center justify-center h-46px rounded-4px bg-blue-r2068b2 flex-shrink-0">
+                <button style={{width:"334px"}} className="mt-5px flex items-center justify-center h-46px rounded-4px bg-blue-r2068b2 flex-shrink-0 hover:opacity-75">
                     <div style={{width:"332px", borderRadius:"3px"}} className="flex items-center justify-center h-44px rounded-4px border border-blue-r3975ae bg-gradient-to-b from-blue-r125a9e via-blue-r0e508d to-blue-r0b447a cursor-pointer">
                         <img src={BetIcon} alt="" />
                         <span className="ml-5px font-spoqaMedium tracking-tight text-16px text-white pt-px">베팅하기</span>

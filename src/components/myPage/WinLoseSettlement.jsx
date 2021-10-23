@@ -56,7 +56,7 @@ const WinLoseSettlement = () => {
                 <div className="flex space-x-2px">
                     <button 
                         style={{borderRadius:"4px"}}
-                        className="flex items-center justify-center w-90px h-36px rounded-4px bg-gray-r171a1d"
+                        className="flex items-center justify-center w-90px h-36px rounded-4px bg-gray-r171a1d hover:opacity-75"
                         onClick={() => AllSelectButtonPressed()}
                     >
                         <div 
@@ -71,7 +71,7 @@ const WinLoseSettlement = () => {
                     </button>
                     <button 
                         style={{borderRadius:"4px"}}
-                        className="flex items-center justify-center w-90px h-36px rounded-4px bg-red-cb4343"
+                        className="flex items-center justify-center w-90px h-36px rounded-4px bg-red-cb4343 hover:opacity-75"
                     >
                         <div 
                             style={{

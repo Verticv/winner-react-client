@@ -150,12 +150,12 @@ const Contact = () => {
     )
 
     const dropdownButton = (
-        <div className="flex w-120px h-42px bg-white rounded-md border border-gray-dddddd">
+        <div className="flex w-120px h-42px bg-white rounded-md border border-gray-dddddd group">
             <input  className="w-0 text-16px"/>
             <div
                 className="flex w-full text-gray-r393e41 font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight" 
             >
-                <label className="ml-14px cursor-pointer">{selectedCarrier}</label>
+                <label className="ml-14px cursor-pointer group-hover:text-black">{selectedCarrier}</label>
                 <img className="w-10px h-6px object-contain mr-10px" src={DownArrowIcon} alt="arrow" /> 
             </div>
         </div>
@@ -176,7 +176,7 @@ const Contact = () => {
                     className="pl-11px rounded-md placeholder-gray-r7c7c7c w-full text-gray-r393e41 font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight"
                     placeholder="검색어를 입력해 주세요"
                 />
-                <button className="flex items-center justify-center w-42px h-42px rounded-md bg-gradient-to-b from-gray-r555555 via-gray-r555555 to-gray-r333333 -mt-px -mr-px flex-shrink-0">
+                <button className="flex items-center justify-center w-42px h-42px rounded-md bg-gradient-to-b from-gray-r555555 via-gray-r555555 to-gray-r333333 -mt-px -mr-px flex-shrink-0 hover:opacity-75">
                     <img src={SearchIcon} alt=""/>
                 </button>
             </div>
@@ -197,13 +197,13 @@ const Contact = () => {
   
 
                 <div className="mt-20px h-36px w-full flex items-center justify-end space-x-2px">
-                    <button className="flex items-center justify-center w-90px h-36px  rounded-4px bg-red-cb4343">
+                    <button className="flex items-center justify-center w-90px h-36px  rounded-4px bg-red-cb4343 hover:opacity-75">
                         <div className="flex items-center justify-center h-34px w-88px rounded-4px border border-red-f36576 bg-gradient-to-b from-red-f03a50 via-red-e2314f to-red-cf254d cursor-pointer">
                             <span className="font-spoqaMedium tracking-tight text-14px text-white">계좌문의</span>
                         </div>
                     </button>
                     <button 
-                        className="flex items-center justify-center h-36px w-90px rounded-4px bg-blue-r0070d9"
+                        className="flex items-center justify-center h-36px w-90px rounded-4px bg-blue-r0070d9 hover:opacity-75"
                         onClick={() => history.push('/cscenter/contact/compose')}
                     >
                         <div className="flex items-center justify-center h-34px w-88px bg-black rounded-4px border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">

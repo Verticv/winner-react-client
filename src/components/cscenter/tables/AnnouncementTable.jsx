@@ -83,11 +83,11 @@ const AnnouncementTable = () => {
         return items.map(item => (
             <tr 
                 style={{backgroundColor: item.id % 2 === 0 ? "#fefefe" : "#f7f9fb"}} 
-                className="bg-gray-fefefe text-14px tracking-tight text-gray-r585858 h-56px w-full border-b border-gray-dddddd"
+                className="bg-gray-fefefe text-14px tracking-tight text-gray-r585858 h-56px w-full border-b border-gray-dddddd group"
             >
                 <td style={{width: "173px"}} className="h-56px text-center text-blue-r0056a6 ">{item.type}</td>
                 <td  style={{width: "698px"}} className="w-full h-56px flex items-center space-x-10px">
-                    <p>{item.title}</p>
+                    <p className="group-hover:text-black">{item.title}</p>
                     {item.isNew && (
                         <div className="w-17px h-17px bg-red-notification rounded-full text-12px text-white flex items-center justify-center font-roboto pr-px">
                             N

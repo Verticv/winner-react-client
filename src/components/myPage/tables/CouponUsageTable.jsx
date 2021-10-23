@@ -96,7 +96,7 @@ const CouponUsageTable = () => {
     ]
 
     const UseButton = () => (
-        <button className="w-73px h-29px bg-red-e9441d rounded-full flex justify-center items-center">
+        <button className="w-73px h-29px bg-red-e9441d rounded-full flex justify-center items-center hover:opacity-75">
             <span className="text-white text-14px font-spoqaMedium tracking-tight pt-2px">사용하기</span>
         </button>
     )

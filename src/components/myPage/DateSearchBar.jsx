@@ -185,7 +185,7 @@ const DateSearchBar = ({
                                 height:"42px",
                                 borderRadius: "4px",
                             }} 
-                            className="flex items-center justify-center rounded-4px bg-gray-r171a1d"
+                            className="flex items-center justify-center rounded-4px bg-gray-r171a1d hover:opacity-75"
                         >
                             <div 
                                 style={{

@@ -99,7 +99,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
                                         }
                                     }} 
                                     style={{width:"121px", height:"127px", marginTop:"14px"}} 
-                                    className="relative flex items-center justify-center cursor-pointer"
+                                    className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
                                     <img className={`absolute object-none ${state === `${titleNumber}-1` && "mb-3px"}`} src={state === `${titleNumber}-1` ? BlueButtonPressed : BlueButton} alt="" />
                                     <p 
@@ -125,7 +125,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
                                         }
                                     }} 
                                     style={{width:"121px", height:"127px", marginTop: "14px"}} 
-                                    className="relative flex items-center justify-center cursor-pointer"
+                                    className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
                                     <img className={`absolute object-none ${state === `${titleNumber}-2` && "mb-3px"}`} src={state === `${titleNumber}-2` ? RedButtonPressed : RedButton} alt="" />
                                     <p 
@@ -148,7 +148,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
                                             setSelectedOption([{type:"파워사다리", name:"좌우출발3/4줄", selection: "짝", buttonType: "red", tailSide:"left", tail:"3"}])
                                         }} 
                                         style={{width:"68px", height:"59px"}} 
-                                        className="relative flex items-center justify-center cursor-pointer"
+                                        className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                     >
                                         <img className="absolute object-none" src={state === `${titleNumber}-1` ? RedSMButtonPressed : RedSMButton} alt="" />
                                         <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">짝</p>
@@ -165,7 +165,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
                                             setSelectedOption([{type:"파워사다리", name:"좌우출발3/4줄", selection: "홀", buttonType: "blue", tailSide:"right", tail:"3"}])
                                         }} 
                                         style={{width:"68px", height:"59px"}} 
-                                        className="relative flex items-center justify-center cursor-pointer"
+                                        className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                     >
                                         <img className="absolute object-none" src={state === `${titleNumber}-2` ? BlueSMButtonPressed : BlueSMButton} alt="" />
                                         <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">홀</p>
@@ -184,7 +184,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
                                             setSelectedOption([{type:"파워사다리", name:"좌우출발3/4줄", selection: "홀", buttonType: "blue", tailSide:"left", tail:"4"}])
                                         }} 
                                         style={{width:"68px", height:"59px"}} 
-                                        className="relative flex items-center justify-center cursor-pointer"
+                                        className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                     >
                                         <img className="absolute object-none" src={state === `${titleNumber}-3` ? BlueSMButtonPressed : BlueSMButton} alt="" />
                                         <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">홀</p>
@@ -201,7 +201,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
                                             setSelectedOption([{type:"파워사다리", name:"좌우출발3/4줄", selection: "짝", buttonType: "red", tailSide:"right", tail:"4"}])
                                         }} 
                                         style={{width:"68px", height:"59px"}} 
-                                        className="relative flex items-center justify-center cursor-pointer"
+                                        className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                     >
                                         <img className="absolute object-none" src={state === `${titleNumber}-4` ? RedSMButtonPressed : RedSMButton} alt="" />
                                         <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">짝</p>

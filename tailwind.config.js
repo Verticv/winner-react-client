@@ -437,7 +437,8 @@ module.exports = {
         yellow: {
           e3ba3c: '#e3ba3c',
           ffcc00: '#ffcc00',
-          ffab39: '#ffab39'
+          ffab39: '#ffab39',
+          a65600: '#a65600'
         },
         green: {
           r7bd26a: '#7bd26a',
@@ -502,7 +503,11 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      linearGradients: ['hover', 'responsive'],
+    },
+    
+    
   },
   plugins: [],
 }

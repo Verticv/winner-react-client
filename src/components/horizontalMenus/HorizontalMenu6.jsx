@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const HorizontalMenu6 = ({
     itemsArray, 
     isState = 0, 
     setState
 }) => {
+    const [isHover, setHover] = useState(null)
 
     function TabsList({ items }) {
         return items.map(item => (
@@ -16,9 +17,11 @@ const HorizontalMenu6 = ({
                 className={`${
                     isState === item.id
                     ? "bg-blue-r58baf7" 
-                    : "bg-white"
+                    : "bg-white hover:bg-blue-d3f3fe"
                 } overflow-hidden w-full rounded-lg flex justify-end border border-gray-dddddd`} 
                 onClick={() => setState(item.id)}
+                onMouseOver={() => setHover(item.id)}
+                onMouseLeave={() => setHover(null)}
             >
                 <div 
                     style={{
@@ -26,12 +29,13 @@ const HorizontalMenu6 = ({
                         borderBottomLeftRadius:"6px",
                         borderBottomRightRadius:"6px",
                         borderColor: isState === item.id ? "#1a73ce" : "#d6dfe8",
+                        background: isState === item.id
+                        ? "linear-gradient(to bottom, #2087f0, #1873cf)"
+                        : isHover === item.id 
+                        ? "linear-gradient(to bottom, #b9dcff, #d2f6ff)"
+                        : "linear-gradient(to bottom, #c4d6e6, #f5feff 50%, #ffffff)",
                     }}
-                    className={`${
-                        isState === item.id 
-                        ? "bg-gradient-to-b from-blue-r2087f0 via-blue-r2087f0 to-blue-gradDark"
-                        : "bg-gradient-to-b from-blue-c4d6e6 via-gray-f5feff to-white border-blue-d6dfe8"
-                    } mt-3px w-full rounded-b-md rounded-t-lg flex flex-col items-center border-b border-l border-r`}
+                    className={`mt-3px w-full rounded-b-md rounded-t-lg flex flex-col items-center border-b border-l border-r`}
                 >
                     <img className={`${item.id === 0 || item.id === 1 || item.id === 4 || item.id === 5 ? "ml-4px" : "ml-3px"} mt-4px object-none`} src={item.icon} alt="" />
                     <div 

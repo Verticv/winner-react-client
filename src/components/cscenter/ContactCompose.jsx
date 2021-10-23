@@ -10,12 +10,12 @@ const ContactCompose = () => {
     const dropDownCellClass = "flex w-120px h-30px py-2px bg-white items-center hover:bg-blue-lightGradLight px-14px"
 
     const dropdownButton = (
-        <div className="flex w-120px h-35px bg-white rounded-md border border-gray-cccccc">
+        <div className="flex w-120px h-35px bg-white rounded-md border border-gray-cccccc group">
             <input  className="w-0 text-16px"/>
             <div
                 className="flex w-full text-gray-r393e41 font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight" 
             >
-                <label className="ml-14px cursor-pointer">{selectedCarrier}</label>
+                <label className="ml-14px cursor-pointer group-hover:text-black">{selectedCarrier}</label>
                 <img className="w-10px h-6px object-contain mr-10px" src={DownArrowIcon} alt="arrow" /> 
             </div>
         </div>
@@ -129,12 +129,12 @@ const ContactCompose = () => {
             </div>
 
             <div className="w-full mt-20px flex items-center justify-center space-x-5px mb-60px">
-                <button className="flex items-center justify-center h-52px w-192px rounded-4px bg-blue-r0070d9">
+                <button className="flex items-center justify-center h-52px w-192px rounded-4px bg-blue-r0070d9 hover:opacity-75">
                     <div className="flex items-center justify-center h-50px w-190px bg-black rounded-4px border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
                         <span className="font-spoqaMedium tracking-tight text-14px text-white">신청하기</span>
                     </div>
                 </button>
-                <button className="flex items-center justify-center w-192px h-52px rounded-md bg-gray-r171a1d" >
+                <button className="flex items-center justify-center w-192px h-52px rounded-md bg-gray-r171a1d hover:opacity-75" >
                     <div className="flex items-center justify-center h-50px w-190px rounded-4px border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r45484c to-gray-r303337 cursor-pointer">
                         <span className="font-spoqaMedium tracking-tight text-14px text-white">취소하기</span>
                     </div>

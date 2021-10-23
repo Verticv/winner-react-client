@@ -61,12 +61,14 @@ const ReauthenticatePopup = ({setPopupOpen, setSelectedTab}) => {
                 </div>
                 <div className="w-480px">
                     <button 
-                        className="w-full h-74px rounded-md bg-gradient-to-r from-blue-gradLight to-blue-gradDark text-xl text-27px font-spoqaMedium text-white"
+                        className="w-full h-74px rounded-md bg-gradient-to-r from-blue-gradLight to-blue-gradDark text-xl text-27px font-spoqaMedium text-white hover:opacity-75"
                         onClick={() => {
                             history.push("/mypage/edit-info")
                             setSelectedTab("/mypage/edit-info")
                         }}
-                    >확인</button>
+                    >
+                        확인
+                    </button>
                 </div>
             </div>
         </div>

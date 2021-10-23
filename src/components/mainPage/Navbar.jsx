@@ -85,7 +85,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
     )
 
     const CountryButton = (
-        <div className="-ml-4px flex items-center w-104px h-40px bg-gradient-to-br from-blue-gradLight to-blue-gradDark rounded-full space-x-10px shadow-inner p-4px shadow-plain2">
+        <div className="-ml-4px flex items-center w-104px h-40px bg-gradient-to-br from-blue-gradLight to-blue-gradDark rounded-full space-x-10px shadow-inner p-4px shadow-plain2 hover:opacity-75">
             <div className="h-32px w-32px bg-white rounded-full flex items-center justify-center">
                 <img className="" src={country === "KR" ? Koreaflag : UKflag} alt="flag"></img>
             </div>
@@ -109,7 +109,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
     )
     
     const profileButton = (
-        <div className="flex items-center justify-center space-x-10px">
+        <div className="flex items-center justify-center space-x-10px  hover:opacity-75">
             <div className="relative flex items-center justify-center h-40px w-40px rounded-full bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2">
                 <img className="mt-2px ml-2px" src={PersonIcon} alt="person" />
             </div>
@@ -118,15 +118,18 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
     )
 
     const LoginButton = (
-        <button className="flex items-center justify-center text-white w-104px h-40px rounded-full bg-gradient-to-br from-blue-gradLight to-blue-gradDark text-16px font-spoqaBold shadow-plain2 pt-px">로그인</button>
+        <button className="flex items-center justify-center text-white w-104px h-40px rounded-full bg-gradient-to-br from-blue-gradLight to-blue-gradDark text-16px font-spoqaBold shadow-plain2 pt-px hover:opacity-75">로그인</button>
     )
 
     const SignupButton = (
-        <button className="flex items-center justify-center text-white w-104px h-40px rounded-full bg-gradient-to-br from-blue-darkGradLight to-blue-darkGradDark text-16px font-spoqaBold shadow-plain2 pt-px">회원가입</button>
+        <button className="flex items-center justify-center text-white w-104px h-40px rounded-full bg-gradient-to-br from-blue-darkGradLight to-blue-darkGradDark text-16px font-spoqaBold shadow-plain2 pt-px hover:opacity-75">회원가입</button>
     )
 
     const InboxButton = (
-        <button onClick={() => history.push("/mypage/inbox")} className="relative flex items-center justify-center text-white h-40px w-40px rounded-full bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2">
+        <button 
+            onClick={() => history.push("/mypage/inbox")} 
+            className="relative flex items-center justify-center text-white h-40px w-40px rounded-full bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2 hover:opacity-75"
+        >
             <img className="ml-2px mt-2px" src={InboxIcon} alt="inbox_icon" />
             <div className="absolute flex items-center justify-center w-20px h-20px bg-red-notification top-0 right-0 -mr-6px -mt-3px rounded-full shadow-plain6">
                 <label className="text-12px font-roboto mt-2px ml-px">1</label>
@@ -135,7 +138,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
     )
 
     return (
-        <div className="limit:w-full w-1920 z-50">
+        <div className="w-full z-50">
             <header className="flex items-center justify-between h-60px px-10px shadow-plain bg-white">
                 <div className="flex items-center flex-shrink-0">
                     <img className="w-130px object-contain mb-2 mr-10px cursor-pointer" src={Logo} alt="logo" onClick={() => history.push('/')} />

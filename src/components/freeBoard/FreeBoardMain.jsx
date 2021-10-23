@@ -368,19 +368,11 @@ const FreeBoardMain = () => {
                             : <div></div>
                         }
                         <p
-                            style={{
-                                color: 
-                                item.type === "안내" 
-                                ? "#0056a6" 
-                                : item.type === "이벤트" 
-                                ? "#a65600" 
-                                : ""
-                            }}
                             className={`${
                                 item.type === "안내" 
-                                ? "" 
+                                ? "text-blue-r0056a6 group-hover:text-blue-700" 
                                 : item.type === "이벤트" 
-                                ? "" 
+                                ? "text-yellow-a65600 group-hover:text-yellow-600" 
                                 : "group-hover:text-black"
                             }`}
                         >

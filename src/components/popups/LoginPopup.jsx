@@ -14,7 +14,7 @@ const LoginPopup = ({setAuth, setPopupOpen}) => {
                 <SignupPopup setAuth={setAuth} setPopupOpen={setPopupOpen}/>
             ) : (
                 <div className="relative w-630px h-513px bg-white rounded-xl shadow-popup">
-                    <button className="absolute top-0 right-0 mt-21px mr-21px cursor-pointer z-20" onClick={()=> setPopupOpen(false)}>
+                    <button className="absolute top-0 right-0 mt-21px mr-21px cursor-pointer z-20 hover:opacity-75" onClick={()=> setPopupOpen(false)}>
                         <img src={CloseIcon} alt="close_icon" />
                     </button>
                     <div className="absolute w-630px -mt-79px flex justify-center">
@@ -57,13 +57,13 @@ const LoginPopup = ({setAuth, setPopupOpen}) => {
                         </div>
                         <div className="w-480px">
                             <button 
-                                className="w-full h-74px rounded-md bg-gradient-to-r from-blue-gradLight to-blue-gradDark text-xl text-27px font-spoqaMedium text-white"
+                                className="w-full h-74px rounded-md bg-gradient-to-r from-blue-gradLight to-blue-gradDark text-xl text-27px font-spoqaMedium text-white hover:opacity-75"
                                 onClick={() => setAuth(true)}
                             >로그인</button>
                         </div>
                         <div className="w-full space-x-2 text-center font-spoqaMedium text-20px tracking-minus05">
                             <span className="text-gray-600">아이디가 없으신가요?</span>
-                            <button className="text-blue-r1ca7ec" onClick={() => setToSignup(true)}>회원가입</button>
+                            <button className="text-blue-r1ca7ec hover:opacity-75" onClick={() => setToSignup(true)}>회원가입</button>
                         </div>
                     </div>
                 </div>

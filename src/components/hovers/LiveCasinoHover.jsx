@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import EvoBanner from '../../images/navbarHover/evo_banner.png'
 import EvoBannerHighlight from '../../images/navbarHover/evo_banner_highlight.png'
 import AsiaBanner from '../../images/navbarHover/asia_banner.png'
@@ -41,6 +41,7 @@ import { useHistory } from 'react-router'
 const LiveCasinoHover = ({selection}) => {
 
     const history = useHistory()
+    const [isHover, setHover] = useState(2)
 
     const gamesArray = [
         { id: 0, background: EvoBanner, highlight: EvoBannerHighlight, color: "group-hover:bg-teal-r4eb2ba", imgText: "에볼루션", btnText: "게임시작", class: "bg-opacity-25" },
@@ -68,6 +69,7 @@ const LiveCasinoHover = ({selection}) => {
                 key={item.id} 
                 className="group relative w-305px h-206px cursor-pointer" 
                 onClick={() => history.push('/live-casino')}
+                onMouseEnter={() => setHover(item.id)}
             >
                 <img className={`opacity-100 group-hover:opacity-0 w-305px h-206px object-none object-left`} src={item.background} alt="game_image" />
                 <img className={`opacity-0 group-hover:opacity-100 absolute top-0 w-305px h-206px object-none object-left`} src={item.highlight} alt="game_image" />
@@ -94,15 +96,18 @@ const LiveCasinoHover = ({selection}) => {
         <Expand 
             open={selection === 0} 
             duration={200} 
-            className="absolute w-1920 h-340px bg-white bg-opacity-80 shadow-inner border-b-2 border-gray-300 space-y-50px" 
+            className="absolute w-full h-full bg-white bg-opacity-80 shadow-inner border-b-2 border-gray-300 space-y-50px flex items-center justify-center" 
         >
-            <div style={{ width: '1920px', height: '340px'}} className="space-y-50px">
-                <div className="flex ml-80px -space-x-2 pt-6px">
+            <div style={{ width: '1920px',}}>
+                <div className="h-244px flex ml-80px -space-x-2 pt-6px">
                     <GamesList items={gamesArray} />
                 </div>
-                <div className="ml-60px -space-x-33px">
-                    <ItemsList items={itemsArray} />
-                </div>
+                {isHover === 0 && (
+                    <div style={{height:"96px"}} className="ml-60px -space-x-33px flex items-center">
+                        <ItemsList items={itemsArray} />
+                    </div>
+                )}
+                
             </div>
         </Expand>
        

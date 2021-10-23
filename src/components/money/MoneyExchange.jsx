@@ -85,7 +85,7 @@ const MoneyExchange = () => {
 
                 <div style={{marginLeft: "277px"}} className={`${inputClicked === 0 ? "mt-19px" : "mt-20px"} flex space-x-5px w-full justify-start pr-115px`}>
                     <button 
-                        className="flex items-center justify-center h-42px w-75px rounded-4px bg-blue-r004b8a"
+                        className="flex items-center justify-center h-42px w-75px rounded-4px bg-blue-r004b8a hover:opacity-75"
                         onClick={() => setInputValue(inputValue + 10000)}
                     >
                         <div className="flex items-center justify-center h-40px w-73px bg-black rounded-4px border border-blue-r2a699c bg-gradient-to-b from-blue-r004b8a via-blue-r003d70 to-blue-r012d53 cursor-pointer">
@@ -94,7 +94,7 @@ const MoneyExchange = () => {
                     </button>
 
                     <button 
-                        className="flex items-center justify-center h-42px w-75px rounded-4px bg-blue-r004b8a"
+                        className="flex items-center justify-center h-42px w-75px rounded-4px bg-blue-r004b8a hover:opacity-75"
                         onClick={() => setInputValue(inputValue + 30000)}
                     >
                         <div className="flex items-center justify-center h-40px w-73px bg-black rounded-4px border border-blue-r2a699c bg-gradient-to-b from-blue-r004b8a via-blue-r003d70 to-blue-r012d53 cursor-pointer">
@@ -103,7 +103,7 @@ const MoneyExchange = () => {
                     </button>
 
                     <button 
-                        className="flex items-center justify-center h-42px w-75px rounded-4px bg-blue-r004b8a"
+                        className="flex items-center justify-center h-42px w-75px rounded-4px bg-blue-r004b8a hover:opacity-75"
                         onClick={() => setInputValue(inputValue + 50000)}
                     >
                         <div className="flex items-center justify-center h-40px w-73px bg-black rounded-4px border border-blue-r2a699c bg-gradient-to-b from-blue-r004b8a via-blue-r003d70 to-blue-r012d53 cursor-pointer">
@@ -112,7 +112,7 @@ const MoneyExchange = () => {
                     </button>
 
                     <button 
-                        className="flex items-center justify-center h-42px w-75px rounded-4px bg-blue-r2068b2"
+                        className="flex items-center justify-center h-42px w-75px rounded-4px bg-blue-r2068b2 hover:opacity-75"
                         onClick={() => setInputValue(inputValue + 100000)}
                     >
                         <div className="flex items-center justify-center h-40px w-73px bg-black rounded-4px border border-blue-r3975ae bg-gradient-to-b from-blue-r125a9e via-blue-r0e508d to-blue-r0b447a cursor-pointer">
@@ -121,7 +121,7 @@ const MoneyExchange = () => {
                     </button>
 
                     <button 
-                        className="flex items-center justify-center h-42px w-75px rounded-4px bg-blue-r286fce"
+                        className="flex items-center justify-center h-42px w-75px rounded-4px bg-blue-r286fce hover:opacity-75"
                         onClick={() => setInputValue(inputValue + 300000)}
                     >
                         <div className="flex items-center justify-center h-40px w-73px bg-black rounded-4px border border-blue-r538dcf bg-gradient-to-b from-blue-r3176c5 via-blue-r286bb7 to-blue-r1c5ca5 cursor-pointer">
@@ -130,7 +130,7 @@ const MoneyExchange = () => {
                     </button>
 
                     <button 
-                        className="flex items-center justify-center h-42px w-75px rounded-4px bg-blue-r286fce"
+                        className="flex items-center justify-center h-42px w-75px rounded-4px bg-blue-r286fce hover:opacity-75"
                         onClick={() => setInputValue(inputValue + 500000)}
                     >
                         <div className="flex items-center justify-center h-40px w-73px bg-black rounded-4px border border-blue-r70a8f5 bg-gradient-to-b from-blue-r5497f4 via-blue-r4985d8 to-blue-r3d71b8 cursor-pointer">
@@ -139,7 +139,7 @@ const MoneyExchange = () => {
                     </button>
 
                     <button 
-                        className="flex items-center justify-center h-42px w-75px rounded-4px bg-blue-r177cce"
+                        className="flex items-center justify-center h-42px w-75px rounded-4px bg-blue-r177cce hover:opacity-75"
                         onClick={() => setInputValue(inputValue + 1000000)}
                     >
                         <div className="flex items-center justify-center h-40px w-73px rounded-4px border border-blue-r62b3f7 bg-gradient-to-b from-blue-r5497f4 via-blue-r3a93dd to-blue-r3d71b8 cursor-pointer">
@@ -148,7 +148,7 @@ const MoneyExchange = () => {
                     </button>
 
                     <button 
-                        className="flex items-center justify-center h-42px w-75px rounded-4px bg-gray-r171a1d"
+                        className="flex items-center justify-center h-42px w-75px rounded-4px bg-gray-r171a1d hover:opacity-75"
                         onClick={() => setInputValue(0)}
                     >
                         <div className="flex items-center justify-center h-40px w-73px bg-black rounded-4px border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r45484c to-gray-r303337 cursor-pointer">
@@ -177,7 +177,7 @@ const MoneyExchange = () => {
 
             </div>
 
-            <button style={{width: "228px"}} className={`mt-20px flex items-center justify-center h-52px rounded-4px bg-blue-r0070d9`}>
+            <button style={{width: "228px"}} className={`mt-20px flex items-center justify-center h-52px rounded-4px bg-blue-r0070d9 hover:opacity-75`}>
                 <div style={{width: "226px"}} className="flex items-center justify-center h-50px rounded-4px border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
                     <span className="font-spoqaMedium tracking-tight text-16px text-white">신청하기</span>
                 </div>

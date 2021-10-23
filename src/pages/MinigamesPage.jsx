@@ -35,7 +35,7 @@ const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
     return (
         <div className="relative flex flex-col justify-center limit:overflow-x-hidden">
 
-            <div className="fixed w-1920 top-0 z-50 flex flex-col items-start limit1920:items-center">
+            <div className="fixed w-full top-0 z-50 flex flex-col items-start limit1920:items-center">
                 <NoticeBanner />
                 <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
             </div>
@@ -54,12 +54,12 @@ const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
                         >
                             {
                                 selectedGame === "/minigame/powerball"
-                                ? <iframe src="http://ntry.com/scores/powerball/live.php" width="830" height="100%" scrolling="no" frameborder="0" title="powerball"></iframe>
+                                ? <iframe src="http://ntry.com/scores/powerball/live.php" width="860" height="640" scrolling="yes" frameborder="0" style={{WebkitTransform:"scale(0.795)", marginTop:"-66px"}} title="powerball"></iframe>
                                 : selectedGame === "/minigame/powerladder"
-                                ? <iframe src="http://ntry.com/scores/power_ladder/live.php" width="830" height="100%" scrolling="no" frameborder="0" title="powerladder"></iframe>
+                                ? <iframe src="http://ntry.com/scores/power_ladder/live.php" width="860" height="640" scrolling="yes" frameborder="0" style={{WebkitTransform:"scale(0.795)", marginTop:"-66px"}} title="powerladder"></iframe>
                                 : selectedGame === "/minigame/speedkino"
-                                ? <iframe src="http://ntry.com/scores/speedkeno/live.php" width="830" height="100%" scrolling="no" frameborder="0" title="speedkino"></iframe>
-                                : <iframe src="http://ntry.com/scores/keno_ladder/live.php" width="830" height="100%" scrolling="no" frameborder="0" title="kinoladder"></iframe>
+                                ? <iframe src="http://ntry.com/scores/speedkeno/live.php" width="860" height="640" scrolling="yes" frameborder="0" style={{WebkitTransform:"scale(0.795)", marginTop:"-66px"}} title="speedkino"></iframe>
+                                : <iframe src="http://ntry.com/scores/keno_ladder/live.php" width="860" height="640" scrolling="yes" frameborder="0" style={{WebkitTransform:"scale(0.795)", marginTop:"-66px"}} title="kinoladder"></iframe>
                             }
                         </div>
                         <MinigamesRightPanel selectedGame={selectedGame} selectedOption={selectedOption}/>

@@ -29,14 +29,14 @@ class Calendar extends React.Component {
 
     return (
         <div className="flex items-center w-full justify-center h-23px space-x-30px mt-10px mb-30px">
-            <img className={`cursor-pointer transform rotate-180`} onClick={this.prevMonth} src={Arrow} alt="" />
+            <img className={`cursor-pointer transform rotate-180 hover:opacity-75`} onClick={this.prevMonth} src={Arrow} alt="" />
             <div className="flex items-center h-23px text-blue-r0056a6">
                 <div className="flex items-center font-roboto text-32px h-23px">{format(this.state.currentMonth, dateFormat1)}</div>
                 <div className="flex items-center font-spoqaMedium text-25px h-23px pt-px -ml-4px">년</div>
                 <div className="flex items-center font-roboto text-32px h-23px ml-6px">{format(this.state.currentMonth, dateFormat2)}</div>
                 <div className="flex items-center font-spoqaMedium text-25px h-23px pt-px">월</div>
             </div>
-            <img className={`${this.state.currentMonth < this.state.today ? "opacity-100" : "opacity-20"} cursor-pointer`} onClick={this.nextMonth} src={Arrow} alt="" />
+            <img className={`${this.state.currentMonth < this.state.today ? "opacity-100 hover:opacity-75" : "opacity-20"} cursor-pointer`} onClick={this.nextMonth} src={Arrow} alt="" />
 
         </div>
     );
@@ -156,7 +156,7 @@ class Calendar extends React.Component {
             </div>
         </div>
         <button 
-          className="flex items-center justify-center h-52px w-192px rounded-4px bg-blue-r0070d9 mt-20px mb-63px"
+          className="flex items-center justify-center h-52px w-192px rounded-4px bg-blue-r0070d9 mt-20px mb-63px hover:opacity-75"
           onClick={this.checkAttendance}
         >
             <div className="flex items-center justify-center h-50px w-190px bg-black rounded-4px border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">

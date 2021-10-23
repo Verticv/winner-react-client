@@ -11,7 +11,6 @@ import PointExchangeIconHighlight from '../../images/wallet/point_exchange_highl
 
 const WalletDropDown = () => {
 
-    const [selectedTab, setSelectedTab] = useState(false)
     const [isPopupOpen, setPopupOpen] = useState(true)
     const history = useHistory();
 
@@ -21,27 +20,30 @@ const WalletDropDown = () => {
         { icon: PointExchangeIcon, iconHighlight: PointExchangeIconHighlight, text: "포인트 전환", id: 2, path: "/mypage/points/points-apply" }
     ];
 
-    const Cell = ({id, path,iconHighlight, icon, text}) => (
-        <button 
-            key={id} 
-            className={`${selectedTab === id ? "bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2" : "bg-white"} flex w-full items-center p-4px h-40px rounded-full`} 
-            onMouseOver={() => {setSelectedTab(id)}}
-            onMouseLeave={() => setSelectedTab(null)}
-            onPointerUp={() => {
-                if (id !== 2) {
-                    history.push(path)
-                    setSelectedTab(false)
-                }
-            }}
-        >
-            <div className={`${selectedTab === id && "shadow-plain3"} bg-white rounded-full flex items-center justify-center flex-shrink-0`} >
-                <img className="object-none" src={selectedTab === id ? iconHighlight : icon} alt="icon"></img>
-            </div>
-            <div className="w-full flex justify-center mr-3">                
-                <label className={`${selectedTab === id ? "text-white" : "text-gray-subNavbar"} font-spoqaBold text-14px cursor-pointer tracking-tight`}>{text}</label>
-            </div>
-        </button>
-    )
+    const Cell = ({id, path,iconHighlight, icon, text}) => {
+        const [selectedTab, setSelectedTab] = useState(null)
+        return (
+            <button 
+                key={id} 
+                className={`${selectedTab === id ? "bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2" : "bg-white"} flex w-full items-center p-4px h-40px rounded-full`} 
+                onMouseOver={() => {setSelectedTab(id)}}
+                onMouseLeave={() => setSelectedTab(null)}
+                onPointerUp={() => {
+                    if (id !== 2) {
+                        history.push(path)
+                        setSelectedTab(false)
+                    }
+                }}
+            >
+                <div className={`${selectedTab === id && "shadow-plain3"} bg-white rounded-full flex items-center justify-center flex-shrink-0`} >
+                    <img className="object-none" src={selectedTab === id ? iconHighlight : icon} alt="icon"></img>
+                </div>
+                <div className="w-full flex justify-center mr-3">                
+                    <label className={`${selectedTab === id ? "text-white" : "text-gray-subNavbar"} font-spoqaBold text-14px cursor-pointer tracking-tight`}>{text}</label>
+                </div>
+            </button>
+        ) 
+    }
 
     function MenuList({ items }) {
         return items.map(item => (

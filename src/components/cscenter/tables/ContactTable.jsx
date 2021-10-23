@@ -66,7 +66,7 @@ const ContactTable = ({
                         {item.time}
                     </div>
                     <div className="ml-33px w-70px flex items-center justify-center">
-                        <button className={`${item.isRead === false ? "bg-gray-r454545" : "bg-gray-a2a2a2" } w-49px h-29px flex justify-center rounded-full text-white font-spoqaMedium items-center pt-2px`}>
+                        <button className={`${item.isRead === false ? "bg-gray-r454545" : "bg-gray-a2a2a2" } w-49px h-29px flex justify-center rounded-full text-white font-spoqaMedium items-center pt-2px hover:opacity-75`}>
                             삭제
                         </button>
                     </div>

@@ -310,11 +310,11 @@ const BetCombinationPanel = ({
                 width: "159px",
                 height: "39px"
             }}
-            className="flex items-center justify-between bg-white placeholder-gray-r8c8c8c outline-none rounded-md border border-gray-cccccc px-12px font-spoqaMedium text-15px tracking-tight text-gray-r454545" 
+            className="flex items-center justify-between bg-white placeholder-gray-r8c8c8c outline-none rounded-md border border-gray-cccccc px-12px font-spoqaMedium text-15px tracking-tight text-gray-r454545 group" 
         >
             <div className="flex">
                 <img className="object-none" src={GlobeIcon} alt="" />
-                <p className="mt-px ml-6px text-14px">{selectedCarrier}</p>
+                <p className="mt-px ml-6px text-14px group-hover:text-black">{selectedCarrier}</p>
             </div>
             <img src={ArrowBlack} alt="" />
         </div>
@@ -357,7 +357,7 @@ const BetCombinationPanel = ({
                         backgroundColor: "#171a1d",
                         height:"35px"
                     }} 
-                    className="relative flex items-center justify-center rounded-4px"
+                    className="relative flex items-center justify-center rounded-4px hover:opacity-75"
                     onClick={() => setDropdownOpen(false)}
                 >
                     <div 
@@ -381,7 +381,7 @@ const BetCombinationPanel = ({
                         backgroundColor: "#cb4343",
                         height:"35px"
                     }} 
-                    className="relative flex items-center justify-center rounded-4px"
+                    className="relative flex items-center justify-center rounded-4px hover:opacity-75"
                     onClick={() => setCheckedState(filterArray.fill(false))}
                 >
                     <div 
@@ -681,7 +681,7 @@ const BetCombinationPanel = ({
                                 width:"71px",
                                 backgroundColor: isOpen[items.id] === true ? "#5b646e" : "#171a1d"
                             }} 
-                            className="relative flex items-center justify-center h-39px w-75px rounded-4px ml-4px"
+                            className="relative flex items-center justify-center h-39px w-75px rounded-4px ml-4px group"
                             onClick={() => handleOnChange(items.id)}
                             onMouseEnter={() => setHover2(items.id)}
                             onMouseLeave={() => setHover2(false)}
@@ -694,7 +694,7 @@ const BetCombinationPanel = ({
                                     ? "linear-gradient(to bottom, #8995a2, #757d87)"
                                     : "linear-gradient(to bottom, #585b5e, #303337)"
                                 }} 
-                                className="flex items-center justify-center h-37px w-73px rounded-4px border cursor-pointer"
+                                className="flex items-center justify-center h-37px w-73px rounded-4px border cursor-pointer group-hover:opacity-75"
                             >
                                 <span style={{textShadow: "1px 1px 1px #00000070"}} className="font-spoqaMedium tracking-tight text-14px text-white" >
                                     {isOpen[items.id] === true ? "접기" : "+더보기"}

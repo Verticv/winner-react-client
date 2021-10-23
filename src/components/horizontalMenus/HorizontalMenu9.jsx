@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useHistory } from 'react-router';
 
 const HorizontalMenu9 = ({
@@ -9,6 +9,7 @@ const HorizontalMenu9 = ({
 
     const history = useHistory();
     const pathname = window.location.pathname
+    const [isHover, setHover] = useState(null)
 
     console.log(pathname)
 
@@ -20,7 +21,7 @@ const HorizontalMenu9 = ({
                 className={`${
                     pathname === item.path
                     ? "bg-blue-r58baf7" 
-                    : "bg-white"
+                    : "bg-white hover:bg-blue-d3f3fe"
                 } overflow-hidden w-full rounded-lg flex justify-end border border-gray-dddddd`} 
                 onClick={() => {
                     history.push(item.path)
@@ -29,11 +30,15 @@ const HorizontalMenu9 = ({
                         setSelectedSubTab(0)
                     }
                 }}
+                onMouseOver={() => setHover(item.path)}
+                onMouseLeave={() => setHover(null)}
             >
                 <div 
                     style={{
                         background: pathname === item.path
                         ? "linear-gradient(to bottom, #2087f0, #1873cf)"
+                        : isHover === item.path 
+                        ? "linear-gradient(to bottom, #b9dcff, #d2f6ff)"
                         : "linear-gradient(to bottom, #c4d6e6, #e8f3fd 26%, #ffffff )",
                         height:"54px",
                         borderBottomLeftRadius:"6px",

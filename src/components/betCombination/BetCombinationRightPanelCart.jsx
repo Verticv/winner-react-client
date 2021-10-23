@@ -62,7 +62,7 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
                         {item.value === "right" ? "FC Blau Weiss Linz" : "스트룀스고세 IF"}
                     </p>
                     <p className="text-13px font-spoqaMedium tracking-tight text-gray-r454545 h-14px flex items-center mt-13px ml-8px">축구 - 승무패 (게임)</p>
-                    <img src={CancelIconGray} alt="" name={item.id} className="absolute top-8px right-8px cursor-pointer" onClick={handleRemoveItem} />
+                    <img src={CancelIconGray} alt="" name={item.id} className="absolute top-8px right-8px cursor-pointer hover:opacity-75" onClick={handleRemoveItem} />
                     <div className="flex absolute bottom-9px right-10px text-13px tracking-tight font-spoqaMedium h-13px items-center text-gray-r454545">
                         <p>{item.value === "right" ? "승 @" : "패 @"}</p> 
                         <p 
@@ -84,7 +84,7 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
                 borderColor: "#b3bac1",
                 height:"46px"
             }} 
-            className="flex items-center justify-center rounded-4px border"
+            className="flex items-center justify-center rounded-4px border hover:opacity-75"
             onClick={() => setInputValue(inputValue + amount)}
         >
             <div 
@@ -188,7 +188,7 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
                             borderColor: "#171a1d",
                             height:"46px"
                         }} 
-                        className="flex items-center justify-center rounded-4px border"
+                        className="flex items-center justify-center rounded-4px border hover:opacity-75"
                         onClick={() => setInputValue(inputValue/2)}
                     >
                         <div 
@@ -208,7 +208,7 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
                             borderColor: "#171a1d",
                             height:"46px"
                         }} 
-                        className="flex items-center justify-center rounded-4px border"
+                        className="flex items-center justify-center rounded-4px border hover:opacity-75"
                         onClick={() => setInputValue(3522170)}
                     >
                         <div 
@@ -228,7 +228,7 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
                             borderColor: "#171a1d",
                             height:"46px"
                         }} 
-                        className="flex items-center justify-center rounded-4px border"
+                        className="flex items-center justify-center rounded-4px border hover:opacity-75"
                         onClick={() => setInputValue(0)}
                     >
                         <div
@@ -246,7 +246,7 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
 
                 <button 
                     style={{width:"287px"}}
-                    className="mt-5px flex items-center justify-center h-46px rounded-4px bg-blue-r2068b2"
+                    className="mt-5px flex items-center justify-center h-46px rounded-4px bg-blue-r2068b2 hover:opacity-75"
                     onClick={() => {
                         setAddedCard([])
                         setShowConfirm(true)

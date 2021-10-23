@@ -89,7 +89,7 @@ const MinigamesPanel = ({
                 <div className="mt-20px h-36px w-full flex items-center justify-between">
                     <div className="flex space-x-2px">
                         <button 
-                            className="flex items-center justify-center w-90px h-36px rounded-md bg-gray-r171a1d"
+                            className="flex items-center justify-center w-90px h-36px rounded-md bg-gray-r171a1d hover:opacity-75"
                             onClick={() => {
                                 if (isAllSelected === true) {
                                     setCheckedState(Array(PowerballHistoryArray.length).fill(false))
@@ -103,14 +103,14 @@ const MinigamesPanel = ({
                                 <span className="font-spoqaMedium tracking-tight text-14px text-white">{isAllSelected ? "선택해제" : "전체선택"}</span>
                             </div>
                         </button>
-                        <button className="flex items-center justify-center w-90px h-36px rounded-md bg-red-cb4343">
+                        <button className="flex items-center justify-center w-90px h-36px rounded-md bg-red-cb4343 hover:opacity-75">
                             <div className="flex items-center justify-center h-34px w-88px rounded-4px border border-red-f36576 bg-gradient-to-b from-red-f03a50 via-red-e2314f to-red-cf254d cursor-pointer">
                                 <span className="font-spoqaMedium tracking-tight text-14px text-white">선택삭제</span>
                             </div>
                         </button>
                     </div>
                     <button 
-                        className="flex items-center justify-center h-36px w-114px rounded-4px bg-blue-r0070d9"
+                        className="flex items-center justify-center h-36px w-114px rounded-4px bg-blue-r0070d9 hover:opacity-75"
                         onClick={() => history.push('/mypage/bet-history/minigame')}
                     >
                         <div className="flex items-center justify-center h-34px w-112px bg-black rounded-4px border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">

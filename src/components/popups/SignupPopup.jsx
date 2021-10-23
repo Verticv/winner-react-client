@@ -11,7 +11,7 @@ import DownArrowIcon from '../../images/down_arrow_icon.png'
 const SignupPopup = ({setAuth, setPopupOpen}) => {
 
     const [selectedInput, setSelectedInput] = useState(null)
-    const [isSignedUp, setSignedUp] = useState()
+    const [isSignedUp, setSignedUp] = useState(false)
     const [toLogin, setToLogin] = useState()
     const [selectedCarrier, setSelectedCarrier] = useState("통신사선택")
     const [selectedBank, setSelectedBank] = useState("은행선택")
@@ -28,28 +28,28 @@ const SignupPopup = ({setAuth, setPopupOpen}) => {
     )
 
     const carrierButton = (
-        <div className="flex w-170px">
+        <div className="flex w-170px group cursor-pointer">
             <input  className="w-0 text-16px"/>
             <div
                 onFocus={() => setSelectedInput(4)}
                 onBlur={(e) => setSelectedInput(false)}
                 className="flex w-full text-gray-r393e41 font-spoqaMedium text-16px outline-none h-full justify-between items-center tracking-minus05" 
             >
-                <label className="ml-10px">{selectedCarrier}</label>
+                <label className="ml-10px group-hover:text-black cursor-pointer">{selectedCarrier}</label>
                 <img className="w-16px h-10px object-none mr-20px" src={DownArrowIcon} alt="arrow" /> 
             </div>
         </div>
     )
 
     const bankButton = (
-        <div className="flex w-170px">
+        <div className="flex w-170px group cursor-pointer">
             <input  className="w-0 text-16px"/>
             <div
                 onFocus={() => setSelectedInput(4)}
                 onBlur={(e) => setSelectedInput(false)}
                 className="flex w-full text-gray-r393e41 font-spoqaMedium text-16px outline-none h-full justify-between items-center tracking-minus05" 
             >
-                <label className="ml-10px">{selectedBank}</label>
+                <label className="ml-10px group-hover:text-black cursor-pointer">{selectedBank}</label>
                 <img className="w-16px h-10px object-none mr-20px" src={DownArrowIcon} alt="arrow" /> 
             </div>
         </div>
@@ -259,7 +259,7 @@ const SignupPopup = ({setAuth, setPopupOpen}) => {
                 <SignedUpPopup setToLogin={setToLogin} />
             ) : (
                 <div className="relative w-840px h-820px bg-white rounded-xl shadow-xl mt-79px shadow-popup">
-                    <button className="w-29 h-29 absolute top-0 right-0 mt-20px mr-19px cursor-pointer z-20" onClick={()=> setPopupOpen(false)}>
+                    <button className="w-29 h-29 absolute top-0 right-0 mt-20px mr-19px cursor-pointer z-20 hover:opacity-75" onClick={()=> setPopupOpen(false)}>
                         <img src={CloseIcon} alt="close_icon" />
                     </button>
                     <div className="absolute w-840px -mt-79px flex justify-center">
@@ -429,7 +429,12 @@ const SignupPopup = ({setAuth, setPopupOpen}) => {
                     {/* BREAK */}
                     <div className="w-full px-75px flex flex-col items-center">
                         <div className="h-84px flex items-center">
-                            <button className="w-275px h-64px rounded-xl bg-gradient-to-r from-blue-gradLight to-blue-gradDark text-20px font-spoqa pt-px text-white" onClick={() => setSignedUp(true)}>회원가입</button>
+                            <button 
+                                className="w-275px h-64px rounded-xl bg-gradient-to-r from-blue-gradLight to-blue-gradDark text-20px font-spoqa pt-px text-white hover:opacity-75" 
+                                onClick={() => setSignedUp(true)}
+                            >
+                                회원가입
+                            </button>
                         </div>
                         <div className="border-b w-full border-gray-bebebe" />
                         <div className="flex h-80px justify-center items-center">
