@@ -16,7 +16,7 @@ const MyPageTitle = ({
                 {couponCount && (
                     <>
                         <div className="ml-20px h-21px flex items-center space-x-20px">
-                            <div className="h-12px w-px bg-gray-r8c8c8c" />
+                            <div style={{backgroundColor:"#b1b1b1"}} className="h-12px w-px bg-gray-r8c8c8c" />
                             <div className="font-spoqaMedium tracking-tight text-gray-r8c8c8c space-x-2px">
                                 <span>{couponText}</span>
                                 <span style={{color: "#ed2f59"}} className="font-spoqaBold">{couponCount}</span>
@@ -27,7 +27,7 @@ const MyPageTitle = ({
                 )}
                 {pointsFor && (
                     <div className="ml-20px h-21px flex items-center space-x-20px">
-                        <div className="h-12px w-px bg-gray-r8c8c8c" />
+                        <div style={{backgroundColor:"#b1b1b1"}} className="h-12px w-px bg-gray-r8c8c8c" />
                         <div className="font-spoqaMedium tracking-tight text-gray-r8c8c8c space-x-2px">
                             <span className="font-spoqaBold text-blue-r0056a6">{pointsFor}</span>
                             <span className="님의 포인트전환 정보입니다.">{isTransaction ? "님의 포인트전환 정보입니다." : "님의 포인트적립 정보입니다."}</span>
@@ -36,7 +36,7 @@ const MyPageTitle = ({
                 )}
                 {inboxCount && (
                     <div className="ml-20px h-21px flex items-center space-x-20px">
-                        <div className="h-12px w-px bg-gray-r8c8c8c" />
+                        <div style={{backgroundColor:"#b1b1b1"}} className="h-12px w-px" />
                         <div className="font-spoqaMedium tracking-tight text-gray-r8c8c8c">
                             <span className="">전체 받은 쪽지</span>
                             <span className="font-spoqaBold text-red-ff1237 ml-3px">{inboxCount}</span>

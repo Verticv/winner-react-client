@@ -22,6 +22,7 @@ const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
     ]
 
     const [selectedGame, setSelectedGame] = useState(window.location.pathname)
+    const [selectedTab, setSelectedTab] = useState(0)
     const [selectedOption, setSelectedOption] = useState([
         {
             type: "",
@@ -44,7 +45,7 @@ const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
                 <div className="w-default">
 
 
-                    <HorizontalMenu3 itemsArray={GameTypeArray} selectedTab={selectedGame} setSelectedTab={setSelectedGame} setSelectedOption={setSelectedOption} />
+                    <HorizontalMenu3 itemsArray={GameTypeArray} selectedTab={selectedGame} setSelectedTab={setSelectedGame} setSelectedOption={setSelectedOption} setSelectedTab1={setSelectedTab} />
 
 
                     <div className="flex w-full mt-8px space-x-8px">
@@ -66,7 +67,7 @@ const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
                     </div>
 
                     <div className="mt-8px">
-                        <MinigamesPanel selectedGame={selectedGame} setSelectedGame={setSelectedGame} setSelectedOption={setSelectedOption} />
+                        <MinigamesPanel selectedGame={selectedGame} setSelectedGame={setSelectedGame} setSelectedOption={setSelectedOption} selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
                     </div>
 
 

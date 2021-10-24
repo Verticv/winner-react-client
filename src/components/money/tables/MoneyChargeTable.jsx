@@ -16,21 +16,21 @@ const MoneyChargeTable = () => {
                 <tr className="bg-gray-fefefe rounded-3xl font-spoqa text-14px tracking-tight text-gray-r585858 h-56px w-full border-b border-gray-dddddd">
                     <td style={{width: "245px"}} className="font-robotoRegular h-56px text-center flex-shrink-0">2021-06-29 15:45:41</td>
                     <td style={{width: "183px"}} className="h-56px text-right pr-50px font-robotoRegular">12,000</td>
-                    <td style={{width: "200px"}} className="h-56px text-right pr-50px font-robotoRegular">+1,000</td>
+                    <td style={{width: "200px", color:"#d52e2e"}} className="h-56px text-right pr-50px font-robotoRegular">+1,000</td>
                     <td style={{width: "204px"}} className="h-56px text-center font-robotoRegular">2021-06-29 15:45:41</td>
                     <td style={{width: "210px"}} className="h-56px text-center text-blue-r0056a6">완료</td>
                 </tr>
                 <tr className="bg-gray-fafafa rounded-3xl font-spoqa text-14px tracking-tight text-gray-r585858 h-56px w-full border-b border-gray-dddddd">
                     <td style={{width: "245px"}} className="font-robotoRegular h-56px text-center flex-shrink-0">2021-06-29 15:45:41</td>
                     <td style={{width: "183px"}} className="h-56px text-right pr-50px font-robotoRegular">100,000</td>
-                    <td style={{width: "200px"}} className="h-56px text-right pr-50px font-robotoRegular">+10,000</td>
+                    <td style={{width: "200px", color:"#d52e2e"}} className="h-56px text-right pr-50px font-robotoRegular">+10,000</td>
                     <td style={{width: "204px"}} className="h-56px text-center font-robotoRegular">2021-06-29 15:45:41</td>
                     <td style={{width: "210px"}} className="h-56px text-center">취소</td>
                 </tr>
                 <tr className="bg-gray-fefefe rounded-3xl font-spoqa text-14px tracking-tight text-gray-r585858 h-56px w-full border-b border-gray-dddddd">
                     <td style={{width: "245px"}} className="font-robotoRegular h-56px text-center flex-shrink-0">2021-06-29 15:45:41</td>
                     <td style={{width: "183px"}} className="h-56px text-right pr-50px font-robotoRegular">50,000</td>
-                    <td style={{width: "200px"}} className="h-56px text-right pr-50px font-robotoRegular">+5,000</td>
+                    <td style={{width: "200px", color:"#d52e2e"}} className="h-56px text-right pr-50px font-robotoRegular">+5,000</td>
                     <td style={{width: "204px"}} className="h-56px text-center font-robotoRegular">2021-06-29 15:45:41</td>
                     <td style={{width: "210px"}} className="h-56px text-center text-blue-r0056a6">완료</td>
                 </tr>

@@ -7,7 +7,8 @@ const HorizontalMenu3 = ({
     itemsArray, 
     selectedTab = "", 
     setSelectedTab,
-    setSelectedOption
+    setSelectedTab1,
+    setSelectedOption,
 }) => {
 
     const history = useHistory();
@@ -24,6 +25,7 @@ const HorizontalMenu3 = ({
                 } overflow-hidden h-59px w-full rounded-lg flex justify-end border border-gray-dddddd`} 
                 onClick={() => {
                     setSelectedTab(item.path)
+                    setSelectedTab1(0)
                     history.push(item.path)
                     setSelectedOption([
                         {

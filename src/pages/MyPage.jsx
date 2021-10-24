@@ -54,7 +54,7 @@ const MyPage = ({isAuthenticated, setAuthenticated}) => {
             mainPath: "/mypage/transaction"
         },
         { text: "총판페이지", icon: Icon3, iconHighlight: IconHighlight3, id: 2, path: "/distributor-page", mainPath:"/distributor-page" },
-        { text: "원루즈정산", icon: Icon4, iconHighlight: IconHighlight4, id: 3, path: "/mypage/win-lose-settlement", mainPath:"/mypage/win-lose-settlement" },
+        { text: "윈루즈정산", icon: Icon4, iconHighlight: IconHighlight4, id: 3, path: "/mypage/win-lose-settlement", mainPath:"/mypage/win-lose-settlement" },
         { 
             text: "쿠폰관리",
             icon: Icon5, 

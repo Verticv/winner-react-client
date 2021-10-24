@@ -31,23 +31,47 @@ const ProfileDropDown = ({setAuth}) => {
 
     function MenuList({ items }) {
         return items.map(item => (
-            <button 
-                key={item.id} 
-                className={`${selectedTab === item.id ? "bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2" : "bg-white"} flex w-full items-center p-4px h-40px rounded-full`} 
-                onMouseOver={() => {setSelectedTab(item.id)}}
-                onMouseLeave={() => setSelectedTab(null)}
-                onPointerUp={() => {
-                    if (item.id === 5) setAuth(false)
-                    history.push(item.path)
-                }}
-            >
-                <div className={`${selectedTab === item.id && "shadow-plain3"} h-32px w-32px bg-white rounded-full flex items-center justify-center flex-shrink-0`} >
-                    <img className="h-auto w-10 bg-white rounded-full flex items-center justify-center" src={selectedTab === item.id ? item.iconHighlight : item.icon} alt="icon"></img>
-                </div>
-                <div className="w-full flex justify-center mr-3">                
-                    <label className={`${selectedTab === item.id ? "text-white" : "text-gray-subNavbar"} font-spoqaBold text-14px cursor-pointer tracking-tight`}>{item.text}</label>
-                </div>
-            </button>
+            <>
+            {item.text === "총판페이지" 
+            ? (
+                <button 
+                    key={item.id} 
+                    className={`${selectedTab === item.id ? "bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2" : "bg-white"} flex w-full items-center p-4px h-40px rounded-full`} 
+                    onMouseOver={() => {setSelectedTab(item.id)}}
+                    onMouseLeave={() => setSelectedTab(null)}
+                    onPointerUp={() => {
+                        window.open('/distributor-page');
+                    }}
+                >
+                    <div className={`${selectedTab === item.id && "shadow-plain3"} h-32px w-32px bg-white rounded-full flex items-center justify-center flex-shrink-0`} >
+                        <img className="h-auto w-10 bg-white rounded-full flex items-center justify-center" src={selectedTab === item.id ? item.iconHighlight : item.icon} alt="icon"></img>
+                    </div>
+                    <div className="w-full flex justify-center mr-3">                
+                        <label className={`${selectedTab === item.id ? "text-white" : "text-gray-subNavbar"} font-spoqaBold text-14px cursor-pointer tracking-tight`}>{item.text}</label>
+                    </div>
+                </button>
+            ) : (
+                <button 
+                    key={item.id} 
+                    className={`${selectedTab === item.id ? "bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2" : "bg-white"} flex w-full items-center p-4px h-40px rounded-full`} 
+                    onMouseOver={() => {setSelectedTab(item.id)}}
+                    onMouseLeave={() => setSelectedTab(null)}
+                    onPointerUp={() => {
+                        if (item.id === 5) setAuth(false)
+                        history.push(item.path)
+                    }}
+                >
+                    <div className={`${selectedTab === item.id && "shadow-plain3"} h-32px w-32px bg-white rounded-full flex items-center justify-center flex-shrink-0`} >
+                        <img className="h-auto w-10 bg-white rounded-full flex items-center justify-center" src={selectedTab === item.id ? item.iconHighlight : item.icon} alt="icon"></img>
+                    </div>
+                    <div className="w-full flex justify-center mr-3">                
+                        <label className={`${selectedTab === item.id ? "text-white" : "text-gray-subNavbar"} font-spoqaBold text-14px cursor-pointer tracking-tight`}>{item.text}</label>
+                    </div>
+                </button>
+            )
+            }
+            
+            </>
         ));
     }
 

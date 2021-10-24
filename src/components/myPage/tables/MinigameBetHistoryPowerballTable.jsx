@@ -24,7 +24,7 @@ const MinigameBetHistoryPowerballTable = ({array, checkedState, setCheckedState,
 
         return items.map(item => (
             <div className="flex items-center bg-gray-fefefe font-spoqa text-14px tracking-tight text-gray-r585858 h-56px w-full border-b border-gray-dddddd">
-                <div style={{width: "58px"}} className="ml-20px text-center">
+                <div style={{width: "58px"}} className="ml-20px text-center pt-6px">
                     <input
                         type="checkbox"
                         checked={checkedState[item.id]}

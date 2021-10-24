@@ -58,7 +58,7 @@ const BetCombinationPage = ({isAuthenticated, setAuthenticated}) => {
     const cardsArray = []
 
     const [selectedTab, setSelectedTab] = useState(0)
-    const [isPanelFixed, setPanelFixed] = useState(false)
+    const [isPanelFixed, setPanelFixed] = useState(true)
     const [addedCard, setAddedCard] = useState(cardsArray)
     const [checkedState, setCheckedState] = useState(
         new Array(filterArray.length).fill(false)

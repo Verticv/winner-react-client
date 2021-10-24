@@ -9,7 +9,7 @@ import Sub4 from '../../../images/myPage/betHistory/minigame/sub4.png'
 
 const MinigameBetHistoryPanel = ({
     id = 0,
-    time = "2021-06-29 15:45",
+    time = "2021-06-29 15:45:05",
     amount = "5,000원",
     ratio = "4.34",
     predictedPrice = "21,715원",
@@ -194,7 +194,7 @@ const MinigameBetHistoryPanel = ({
     return (
         <div className="w-full shadow-subNavbar rounded-3xl bg-gray-fafafa pb-10px">
             <div className="flex h-54px w-full font-spoqaMedium text-14px tracking-tight text-gray-r454545">
-                <div style={{width: isAttached === true ? "162px" : "138px"}} className="h-full flex items-center justify-center">베팅구분</div>
+                <div style={{width: isAttached === true ? "162px" : "138px"}} className="h-full flex items-center justify-center">회차</div>
                 <div style={{width: isAttached === true ? "315px" : "274px"}} className="h-full flex items-center justify-center">승(홈)</div>
                 <div style={{width: isAttached === true ? "139px" : "98px"}} className="h-full flex items-center justify-center">VS</div>
                 <div style={{width: isAttached === true ? "317px" : "293px"}} className="h-full flex items-center justify-center">패(원정)</div>

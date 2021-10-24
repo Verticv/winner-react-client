@@ -11,10 +11,11 @@ const NavbarHover = ({selection, setHoveredTab, setSelectedTab}) => {
 
     return (
         <div 
-        onMouseLeave={() => {
-            setHoveredTab(null)
-            setSelectedTab(null)
-        }}>
+            onMouseLeave={() => {
+                setHoveredTab(null)
+                setSelectedTab(null)
+            }}
+        >
             <LiveCasinoHover selection={selection}/>
             <SlotGameHover selection={selection}/>
             <SportsHover selection={selection}/>

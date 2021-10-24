@@ -67,12 +67,12 @@ const LiveCasinoHover = ({selection}) => {
         return items.map(item => (
             <div 
                 key={item.id} 
-                className="group relative w-305px h-206px cursor-pointer" 
+                className="group relative limit1920:w-305px w-auto h-206px cursor-pointer" 
                 onClick={() => history.push('/live-casino')}
                 onMouseEnter={() => setHover(item.id)}
             >
-                <img className={`opacity-100 group-hover:opacity-0 w-305px h-206px object-none object-left`} src={item.background} alt="game_image" />
-                <img className={`opacity-0 group-hover:opacity-100 absolute top-0 w-305px h-206px object-none object-left`} src={item.highlight} alt="game_image" />
+                <img className={`opacity-100 group-hover:opacity-0 limit1920:w-305px w-auto h-206px object-contain object-left`} src={item.background} alt="game_image" />
+                <img className={`opacity-0 group-hover:opacity-100 absolute top-0 limit1920:w-305px w-auto h-206px object-contain object-left`} src={item.highlight} alt="game_image" />
                 <div className="absolute bottom-0 h-20px w-156px right-0 flex items-center justify-center -mb-2px"><span className="ml-10px group-hover:text-black font-spoqaBold tracking-tight text-12px text-gray-r616161">{item.imgText}</span></div>
                 <div className={`absolute bottom-0 font-spoqaBold text-12px w-80px h-25px ml-80px -mb-17px flex items-center justify-center rounded-full bg-white text-gray-r888889 group-hover:text-white shadow-plain4 ${item.color}`}>게임시작</div>
             </div>

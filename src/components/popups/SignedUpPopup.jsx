@@ -26,7 +26,7 @@ const SignedUpPopup = ({setToLogin}) => {
                 {/* BREAK */}
                 <div className="text-gray-r393e41 text-20px font-spoqaMedium flex flex-col items-center justify-center pt-26px tracking-tighter	">
                     <span>관리자 승인 후 로그인 하시면 정상적으로 서비스 이용이 가능합니다.</span>
-                    <span className="-mt-6px">깨끗하고 안전한 운영을 자랑합니다. </span>
+                    <span className="-mt-6px">당사 사이트는 깨끗하고 안전한 운영을 자랑합니다. </span>
                 </div>
                 {/* BREAK */}
                 <div className="relative flex h-138px w-614px mt-55px mb-59px">

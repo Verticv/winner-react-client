@@ -65,7 +65,8 @@ const SportsBetHistoryPanel = ({
                     style={{
                         width: isAttached ? "365px" : "285px",
                         textShadow: bet === "left" ? "1px 1px 1px #00000070" : "",
-                        backgroundColor: bet === "left" ? "#cb4343" : "#dddddd"
+                        backgroundColor: bet === "left" ? "#cb4343" : "#dddddd",
+                        
                     }} 
                     className="flex items-center justify-center h-36px rounded-lg"
                 >
@@ -132,7 +133,10 @@ const SportsBetHistoryPanel = ({
                     : result === "cancel" 
                     ? "text-blue-r0056a6" 
                     : "text-gray-r454545"} 
-                    w-73px`}
+                    ${
+                        isPopup ? "w-63px" : "w-73px"
+                    }
+                    `}
                 >{
                     result === "win" 
                     ? "승" 

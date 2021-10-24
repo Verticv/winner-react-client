@@ -26,7 +26,7 @@ const DateSearchBar2 = () => {
 
 
     const [startDate, setStartDate] = useState(new Date())
-    const [isDropdownOpen, setDropdownOpen] = useState()
+    const [isDropdownOpen, setDropdownOpen] = useState(true)
     const [selectedCarrier, setSelectedCarrier] = useState("전체회차")
 
     const dropDownCellClass = "flex w-full h-30px py-2px bg-white items-center hover:bg-blue-lightGradLight px-10px"

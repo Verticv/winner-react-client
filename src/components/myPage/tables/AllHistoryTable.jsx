@@ -24,7 +24,7 @@ const AllHistoryTable = ({array, checkedState, setCheckedState, isPopupOpen, set
 
         return items.map(item => (
             <tr className="bg-gray-fefefe font-spoqa text-14px tracking-tight text-gray-r585858 h-56px w-full border-b border-gray-dddddd">
-                <td style={{width: "92px"}} className="text-center">
+                <td style={{width: "92px"}} className="text-center pt-6px">
                     <input
                         type="checkbox"
                         checked={checkedState[item.id]}

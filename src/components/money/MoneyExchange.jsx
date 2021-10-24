@@ -61,7 +61,7 @@ const MoneyExchange = () => {
                         </div>
                     </div>
                     <div className="flex space-x-10px mt-50px">
-                        <Title text="충전금액 입력" />
+                        <Title text="환전금액 입력" />
                         <div className="space-y-5px w-full">
                             <form autoComplete="off">
                                 <input 

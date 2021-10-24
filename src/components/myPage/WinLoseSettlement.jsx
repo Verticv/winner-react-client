@@ -27,7 +27,7 @@ const WinLoseSettlement = () => {
     return (
         <div className="w-full">
             <MyPageTitle title="윈루즈정산" />
-            <DateSearchBar isLeagueSearch={false} />
+            <DateSearchBar isLeagueSearch={false} has3MonthSearch={true} />
 
             <div className="flex h-48px w-full mt-20px space-x-12px">
                 <div className="w-255px h-48px rounded-full border-2 border-gray-b4b4b4 bg-gray-r5a6067 flex items-center justify-center font-spoqaMedium text-16px tracking-tight">

@@ -30,6 +30,7 @@ import UKIcon from '../../images/betCombination/uk.png'
 import Bubble1 from '../../images/betCombination/bubble1.png'
 import Bubble2 from '../../images/betCombination/bubble2.png'
 import _uniqueId from 'lodash/uniqueId';
+import './BetCombination.css'
 
 const BetCombinationPanel = ({
     addedCard, 
@@ -747,12 +748,12 @@ const BetCombinationPanel = ({
                 <p style={{marginLeft: "62px"}}>구분</p>
                 <div style={{marginLeft: "136px"}} className="flex">
                     <p>승(홈)오버</p>
-                    <img className="object-none ml-5px" src={UpIcon} alt="" />
+                    <img className="blink object-none ml-5px" src={UpIcon} alt="" />
                 </div>
                 <p style={{marginLeft: "112px"}}>무/핸/합</p>
                 <div style={{marginLeft: "107px"}} className="flex">
                     <p>패(원정)언더</p>
-                    <img className="object-none ml-5px" src={DownIcon} alt="" />
+                    <img className="blink object-none ml-5px" src={DownIcon} alt="" />
                 </div>
                 <p style={{marginLeft: "118px"}}>정보</p>
             </div>

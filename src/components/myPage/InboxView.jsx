@@ -26,6 +26,7 @@ const InboxView = () => {
             <div className="w-full rounded-2xl overflow-hidden shadow-subNavbar border border-gray-dddddd mt-20px">
                 {/* TITLE */}
                 <div className="h-56px w-full bg-gray-fafafa flex items-center px-19px space-x-10px border-b border-gray-dddddd">
+                    <div className="w-45px h-24px rounded-full bg-blue-r00a1e9 flex items-center justify-center text-white text-12px font-spoqaMedium">안내</div>
                     <h1 className="font-spoqaMedium text-15px tracking-tight text-gray-r454545 ">
                         {TitleText}
                     </h1>

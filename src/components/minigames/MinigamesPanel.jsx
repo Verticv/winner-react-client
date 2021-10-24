@@ -14,10 +14,11 @@ import { useHistory } from 'react-router'
 const MinigamesPanel = ({
     selectedGame,
     setSelectedGame,
+    selectedTab,
+    setSelectedTab,
     setSelectedOption
 }) => {
 
-    const [selectedTab, setSelectedTab] = useState(0)
     const [checkedState, setCheckedState] = useState(
         new Array(PowerballHistoryArray.length).fill(false)
     );

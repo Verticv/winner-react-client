@@ -270,7 +270,7 @@ const SignupPopup = ({setAuth, setPopupOpen}) => {
                     {/* BREAK */}
                     <div className="flex flex-col w-full text-center pt-88px items-center">
                         <label className="text-gray-r393e41 text-xl text-24px font-spoqaMedium tracking-minus05">회원가입</label>
-                        <span className="text-gray-r393e41 w-400px mt-5px font-spoqaMedium tracking-minus05">회원가입 시 모든항목을 정확하게 기재하시기 바랍니다.</span>
+                        <span className="text-gray-r393e41 w-400px mt-5px font-spoqaMedium tracking-minus05">회원가입 시 모든 항목을 정확하게 기재하시기 바랍니다.</span>
                         <span className="text-gray-r393e41 w-400px font-spoqaMedium tracking-minus05">회원데이터는 안전한 서버에서 안전하게 보관됩니다. </span>
                     </div>
                     {/* BREAK */}

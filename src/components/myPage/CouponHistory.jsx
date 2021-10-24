@@ -20,7 +20,7 @@ const CouponHistory = () => {
 
     return (
         <div className="flex flex-col w-full items-center">
-            <MyPageTitle title="쿠폰내역"  couponCount={32}/>
+            <MyPageTitle title="쿠폰내역"/>
 
             <div className="relative w-full mt-20px">
                 <HorizontalMenu itemsArray={tabsArray} setSelectedTab={setSelectedTab} />

@@ -142,10 +142,10 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                                         style={{width:"68px", height:"59px"}} 
                                         className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                     >
-                                        <img className="absolute object-none" src={state === `${titleNumber}-1` ? RedSMButtonPressed : RedSMButton} alt="" />
+                                        <img className="absolute object-none" src={state === `${titleNumber}-1` ? BlueSMButtonPressed : BlueSMButton} alt="" />
                                         <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">홀언더</p>
                                     </div>
-                                    <div className="text-12px font-robotoRegular tracking-tight text-gray-r585858 h-12px flex items-center">3.80</div>
+                                    <div className="text-12px font-robotoRegular tracking-tight text-gray-r585858 h-12px flex items-center">3.75</div>
                                 </div>
                                 <div className="flex flex-col items-center">
                                     <div 
@@ -159,7 +159,7 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                                         <img className="absolute object-none" src={state === `${titleNumber}-2` ? BlueSMButtonPressed : BlueSMButton} alt="" />
                                         <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">홀오버</p>
                                     </div>
-                                    <div className="text-12px font-robotoRegular tracking-tight text-gray-r585858 h-12px flex items-center">3.80</div>
+                                    <div className="text-12px font-robotoRegular tracking-tight text-gray-r585858 h-12px flex items-center">3.75</div>
                                 </div>
                             </div>
                             <div className="flex space-x-18px mt-10px"> 
@@ -172,10 +172,10 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                                         style={{width:"68px", height:"59px"}} 
                                         className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                     >
-                                        <img className="absolute object-none" src={state === `${titleNumber}-3` ? BlueSMButtonPressed : BlueSMButton} alt="" />
+                                        <img className="absolute object-none" src={state === `${titleNumber}-3` ? RedSMButtonPressed : RedSMButton} alt="" />
                                         <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">짝언더</p>
                                     </div>
-                                    <div className="text-12px font-robotoRegular tracking-tight text-gray-r585858 h-12px flex items-center">3.80</div>
+                                    <div className="text-12px font-robotoRegular tracking-tight text-gray-r585858 h-12px flex items-center">3.75</div>
                                 </div>
                                 <div className="flex flex-col items-center">
                                     <div 
@@ -189,7 +189,7 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                                         <img className="absolute object-none" src={state === `${titleNumber}-4` ? RedSMButtonPressed : RedSMButton} alt="" />
                                         <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">짝오버</p>
                                     </div>
-                                    <div className="text-12px font-robotoRegular tracking-tight text-gray-r585858 h-12px flex items-center">3.80</div>
+                                    <div className="text-12px font-robotoRegular tracking-tight text-gray-r585858 h-12px flex items-center">3.75</div>
                                 </div>
                             </div>
                         </div>

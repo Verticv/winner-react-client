@@ -135,6 +135,8 @@ const DistributorPage = ({
 
     const [page, setPage] = useState(0)
     const [isArrowUp, setArrowUp] = useState(new Array(8).fill(false))
+    const [viewOnline, setViewOnline] = useState(false)
+
 
     const handleOnChange = (position) => {
         const updatedCheckedState = isArrowUp.map((item, index) =>
@@ -179,7 +181,8 @@ const DistributorPage = ({
                         <div className="w-full h-full flex flex-col items-center justify-center -space-y-4px"><span>YL</span><span>게이밍</span></div>
                         <div className="w-full h-full flex flex-col items-center justify-center -space-y-4px"><span>레드</span><span>타이거</span></div>
                         <div className="w-full h-full flex items-center justify-center">e-스포츠</div>
-                        <div className="w-full h-full flex items-center justify-center">키론가상게임</div>
+                        <div className="w-full h-full flex flex-col items-center justify-center -space-y-4px"><span>키론</span><span>가상게임</span></div>
+                        <div className="w-full h-full flex items-center justify-center pr-3px">관리</div>
                     </div>
                     <div className="flex h-56px w-full border-gray-dddddd items-center text-16px tracking-tight font-roboto text-gray-r585858 border-r-2 border-gray-dddddd bg-white">
                         <div className="w-full h-full flex items-center justify-center font-spoqaMedium text-white bg-gray-r5b6773">변경</div>
@@ -203,6 +206,21 @@ const DistributorPage = ({
                         <div className="w-full h-full flex items-center justify-center">0.00%</div>
                         <div className="w-full h-full flex items-center justify-center">0.00%</div>
                         <div className="w-full h-full flex items-center justify-center">0.00%</div>
+                        <div className="w-full h-full flex items-center justify-center">
+                        <button 
+                            style={{width: "65px"}}
+                            className={`bg-blue-r2068b2 flex items-center justify-center h-36px w-87px rounded-4px hover:opacity-75`}
+                        >
+                            <div 
+                                style={{width:"63px"}}
+                                className={`border-blue-r3975ad bg-gradient-to-b from-blue-r125a9e via-blue-r125a9e to-blue-r0b447a flex items-center justify-center h-34px w-85px rounded-4px border  cursor-pointer space-x-10px`}
+                            >
+                                <span className="font-spoqaMedium tracking-tight text-14px text-white ">
+                                    수정
+                                </span>
+                            </div>
+                        </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -478,7 +496,7 @@ const DistributorPage = ({
                         <div className=" w-full flex flex-col ">
                             {/* === Header === */}
                             <div className="h-67px w-full bg-gray-r687b8e border-b border-gray-dddddd flex items-center justify-evenly font-spoqaMedium text-16px text-white tracking-tight">
-                                <div className="w-full h-full flex items-center justify-center hover:opacity-75">번호</div>
+                                <div className="w-full h-full flex items-center justify-center">번호</div>
                                 <button 
                                     className="w-full h-full flex items-center justify-center space-x-5px hover:opacity-75"
                                     onClick={() => handleOnChange2(0)}
@@ -486,7 +504,7 @@ const DistributorPage = ({
                                     <p >아이디</p>
                                     <img src={WhiteArrow} className={`${subArrowClicked[0] === true ? "transform rotate-180" : ""}`} alt=""/>
                                 </button>
-                                <div className="w-full h-full flex items-center justify-center hover:opacity-75">별명</div>
+                                <div className="w-full h-full flex items-center justify-center">별명</div>
                                 <button 
                                     className="w-full h-full flex items-center justify-center space-x-5px"
                                     onClick={() => handleOnChange2(1)}
@@ -508,9 +526,9 @@ const DistributorPage = ({
                                     </div>
                                     <img src={WhiteArrow} className={`${subArrowClicked[2] === false ? "transform rotate-180" : ""}`} alt=""/>
                                 </button>
-                                <div className="w-full h-full flex items-center justify-center hover:opacity-75">요율보기</div>
-                                <div className="w-full h-full flex items-center justify-center hover:opacity-75">입금액</div>
-                                <div className="w-full h-full flex items-center justify-center hover:opacity-75">보너스</div>
+                                <div className="w-full h-full flex items-center justify-center">요율보기</div>
+                                <div className="w-full h-full flex items-center justify-center">입금액</div>
+                                <div className="w-full h-full flex items-center justify-center">보너스</div>
                                 <button 
                                     className="w-full h-full flex items-center justify-center space-x-5px hover:opacity-75"
                                     onClick={() => handleOnChange2(3)}
@@ -518,7 +536,7 @@ const DistributorPage = ({
                                     <p>출금액</p>
                                     <img src={WhiteArrow} className={`${subArrowClicked[3] === false ? "transform rotate-180" : ""}`} alt=""/>
                                 </button>
-                                <div className="w-full h-full flex items-center justify-center hover:opacity-75">입출금액</div>
+                                <div className="w-full h-full flex items-center justify-center">입출금액</div>
                                 <button 
                                     className="w-full h-full flex items-center justify-center space-x-5px hover:opacity-75"
                                     onClick={() => handleOnChange2(4)}
@@ -533,7 +551,7 @@ const DistributorPage = ({
                                     <p>윈루즈</p>
                                     <img src={WhiteArrow} className={`${subArrowClicked[5] === false ? "transform rotate-180" : ""}`} alt=""/>
                                 </button>
-                                <div className="w-full h-full flex items-center justify-center hover:opacity-75">상세내역</div>
+                                <div className="w-full h-full flex items-center justify-center">상세내역</div>
                                 <button 
                                     className="w-full h-full flex items-center justify-center space-x-5px hover:opacity-75"
                                     onClick={() => handleOnChange2(6)}
@@ -768,8 +786,8 @@ const DistributorPage = ({
                                     <td className="w-83px text-center flex flex-col pt-2px -space-y-4px"><span>YL</span><span>게이밍</span></td>
                                     <td className="w-83px text-center flex flex-col pt-2px -space-y-4px"><span>레드</span><span>타이거</span></td>
                                     <td className="w-83px text-center">e-스포츠</td>
-                                    <td className="w-83px text-center">키론가상게임</td>
-                                    <td className="w-83px text-center">합계</td>
+                                    <td className="w-90px text-center flex flex-col pt-2px -space-y-4px"><span>키론</span><span>가상게임</span></td>
+                                    <td style={{backgroundColor:"#808387"}} className="w-83px text-center h-full flex items-center justify-center">합계</td>
                                 </tr>
                             </thead>
                             <tbody className="w-full text-585858 text-14px tracking-tight font-spoqaMedium">
@@ -794,8 +812,8 @@ const DistributorPage = ({
                                     <td className="w-83px text-right">0</td>
                                     <td className="w-83px text-right">0</td>
                                     <td className="w-83px text-right">3.06M</td>
-                                    <td className="w-83px text-right">0</td>
-                                    <td className="w-83px text-right">7.14M</td>
+                                    <td className="w-90px text-right pr-7px">0</td>
+                                    <td style={{backgroundColor:"#f2f2f2"}} className="w-83px text-right pr-7px h-full flex items-center justify-end">7.14M</td>
                                 </tr>
                                 <tr className="flex items-center bg-gray-fefefe font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-54px w-full border-b border-gray-dddddd">
                                     <td className="w-83px bg-gray-r7a848f h-full flex items-center justify-center font-spoqaMedium text-16px text-white tracking-tight">승패</td>
@@ -818,8 +836,8 @@ const DistributorPage = ({
                                     <td className="w-83px text-right">0</td>
                                     <td className="w-83px text-right">0</td>
                                     <td className="w-83px text-right">0</td>
-                                    <td className="w-83px text-right">0</td>
-                                    <td className="w-83px text-right">0</td>
+                                    <td className="w-90px text-right pr-7px">0</td>
+                                    <td style={{backgroundColor:"#ebecee"}} className="w-83px text-right pr-7px h-full flex items-center justify-end">0</td>
                                 </tr>
                                 <tr className="flex items-center bg-gray-fefefe font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-54px w-full border-b border-gray-dddddd">
                                     <td className="w-83px bg-gray-r7a848f h-full flex items-center justify-center font-spoqaMedium text-16px text-white tracking-tight">정산금액</td>
@@ -842,8 +860,8 @@ const DistributorPage = ({
                                     <td className="w-83px text-right">0</td>
                                     <td className="w-83px text-right">0</td>
                                     <td className="w-83px text-right">0</td>
-                                    <td className="w-83px text-right">0</td>
-                                    <td className="w-83px text-right">0</td>
+                                    <td className="w-90px text-right pr-7px">0</td>
+                                    <td style={{backgroundColor:"#f2f2f2"}} className="w-83px text-right pr-7px h-full flex items-center justify-end">0</td>
                                 </tr>
                             </tbody>
                         </table>   
@@ -862,6 +880,7 @@ const DistributorPage = ({
                                 marginLeft: "14px"
                             }} 
                             className="flex items-center justify-center rounded-4px bg-gray-r171a1d hover:opacity-75"
+                            onClick={() => setViewOnline(!viewOnline)}
                         >
                             <div 
                                 style={{
@@ -872,15 +891,17 @@ const DistributorPage = ({
                                 }} 
                                 className="flex items-center justify-center bg-black rounded-4px border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r585b5e to-gray-r303337 cursor-pointer"
                             >
-                                <span className="font-spoqaMedium tracking-tight text-14px text-white">보기</span>
+                                <span className="font-spoqaMedium tracking-tight text-14px text-white">{viewOnline ? "닫기" : "보기"}</span>
                             </div>
                         </div>
                     </div>
 
-                    <div style={{height:"66px"}} className="flex bg-gray-f9f9f9 border border-gray-dddddd rounded-md mt-13px px-8px items-center space-x-10px">
-                        <UsersOnline />
-                        <UsersOnline name="tkskdl12" />
-                    </div>
+                    {viewOnline && (
+                        <div style={{height:"66px"}} className="flex bg-gray-f9f9f9 border border-gray-dddddd rounded-md mt-13px px-8px items-center space-x-10px">
+                            <UsersOnline />
+                            <UsersOnline name="tkskdl12" />
+                        </div>
+                    )}
 
                     <div className="mt-60px h-29px w-full flex items-end justify-between text-24px tracking-tight text-gray-r7b7b7b font-spoqaMedium">
                         <div className="flex items-center space-x-6px items-center h-27px flex">
@@ -901,7 +922,7 @@ const DistributorPage = ({
                     <div style={{filter: "drop-shadow(0px 2px 2px #00000020)"}} className="flex flex-col mt-21px w-full rounded-md border-t border-b border-gray-dddddd overflow-hidden">
                         {/* === Header === */}
                         <div className="h-67px w-full bg-gray-r8e9296 border-b border-r-2 border-l-2 border-gray-dddddd flex items-center justify-evenly font-spoqa text-16px text-white tracking-tight">
-                            <div className="w-114px text-center hover:opacity-75">번호</div>
+                            <div className="w-114px text-center">번호</div>
                             <button 
                                 className="flex w-114px text-center items-center space-x-5px justify-center hover:font-spoqaBold hover:opacity-75"
                                 onClick={() => handleOnChange(0)}
@@ -909,15 +930,15 @@ const DistributorPage = ({
                                 <p>아이디</p>
                                 <img src={WhiteArrow} className={`${isArrowUp[0] === true ? "transform rotate-180" : ""}`} alt=""/>
                             </button>
-                            <div className="w-114px text-center hover:opacity-75">이름</div>
-                            <div className="w-114px text-center hover:opacity-75">별명</div>
+                            <div className="w-114px text-center">이름</div>
+                            <div className="w-114px text-center">별명</div>
                             <button 
                                 className="w-114px text-center flex items-center justify-center space-x-5px hover:opacity-75"
                                 onClick={() => handleOnChange(1)}
                             >
                                 <div className="flex flex-col items-center justify-center space-y-3px ">
-                                    <div className="flex items-center h-16px hover:opacity-75">하부</div>
-                                    <div className="flex items-center h-16px hover:opacity-75">유저수</div>
+                                    <div className="flex items-center h-16px">하부</div>
+                                    <div className="flex items-center h-16px">유저수</div>
                                 </div>
                                 <img src={WhiteArrow} className={`${isArrowUp[1] === false ? "transform rotate-180" : ""}`} alt=""/>
                             </button>
@@ -932,9 +953,9 @@ const DistributorPage = ({
                                 </div>
                                 <img src={WhiteArrow} className={`${isArrowUp[2] === false ? "transform rotate-180" : ""}`} alt=""/>
                             </button>
-                            <div className="w-114px text-center hover:opacity-75">요율보기</div>
-                            <div className="w-114px text-center hover:opacity-75">입금액</div>
-                            <div className="w-114px text-center hover:opacity-75">보너스</div>
+                            <div className="w-114px text-center">요율보기</div>
+                            <div className="w-114px text-center">입금액</div>
+                            <div className="w-114px text-center">보너스</div>
                             <button 
                                 className="flex w-114px text-center items-center space-x-5px justify-center hover:opacity-75"
                                 onClick={() => handleOnChange(3)}
@@ -942,7 +963,7 @@ const DistributorPage = ({
                                 <p>출금액</p>
                                 <img src={WhiteArrow} className={`${isArrowUp[3] === false ? "transform rotate-180" : ""}`} alt=""/>
                             </button>
-                            <div className="w-114px text-center hover:opacity-75">입출금액</div>
+                            <div className="w-114px text-center">입출금액</div>
                             <button 
                                 className="flex w-114px text-center items-center space-x-5px justify-center hover:opacity-75"
                                 onClick={() => handleOnChange(4)}
@@ -957,7 +978,7 @@ const DistributorPage = ({
                                 <p>윈루즈</p>
                                 <img src={WhiteArrow} className={`${isArrowUp[5] === false ? "transform rotate-180" : ""}`} alt=""/>
                             </button>
-                            <div className="w-114px text-center hover:opacity-75">상세내역</div>
+                            <div className="w-114px text-center">상세내역</div>
                             <button 
                                 className="flex w-114px text-center items-center space-x-5px justify-center hover:opacity-75"
                                 onClick={() => handleOnChange(6)}

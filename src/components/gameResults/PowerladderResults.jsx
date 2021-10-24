@@ -31,14 +31,14 @@ const PowerladderResults = ({title="파워사다리", icon}) => {
             <div className="flex space-x-4px">
                 <button 
                     style={{
-                        width: "365px",
+                        width: "424px",
                         textShadow: bet === "left" ? "1px 1px 1px #00000070" : "",
                         backgroundColor: bet === "left" ? "#cb4343" : "#dddddd"
                     }} 
                     className="flex items-center justify-center h-36px rounded-lg"
                 >
                     <div 
-                    style={{width: "363px"}}
+                    style={{width: "422px"}}
                     className={`${
                         bet === "left" 
                         ? "text-white border-red-ff7982 from-red-ff535f via-red-ff535f to-red-ee4e5a" 
@@ -66,10 +66,10 @@ const PowerladderResults = ({title="파워사다리", icon}) => {
                     </div>
                 </button>
 
-                <button style={{width: "365px"}} className={`${bet === "right" ? "bg-red-cb4343" : "bg-gray-dddddd"} flex group items-center justify-center h-36px rounded-lg bg-gray-dddddd`}>
+                <button style={{width: "424px"}} className={`${bet === "right" ? "bg-red-cb4343" : "bg-gray-dddddd"} flex group items-center justify-center h-36px rounded-lg bg-gray-dddddd`}>
                     <div
                     style={{
-                        width: "363px",
+                        width: "422px",
                         textShadow: bet === "right" ? "1px 1px 1px #00000070" : "",
                         backgroundColor: bet === "right" ? "#cb4343" : "#dddddd"
                     }} 

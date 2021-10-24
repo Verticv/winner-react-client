@@ -1,7 +1,7 @@
 import React from 'react'
 import KinoLadderGame from './game/KinoLadderGame'
 import PowerballHistory from './history/PowerballHistory'
-import SpeedKinoResults from './results/SpeedKinoResults'
+import PowerLadderResults from './results/PowerLadderResults'
 
 const KinoLadderPanel = ({
     selectedTab, 
@@ -18,7 +18,7 @@ const KinoLadderPanel = ({
             {selectedTab === 0 ? (
                 <KinoLadderGame setSelectedOption={setSelectedOption} />
             ) : selectedTab === 1 ? (
-                <SpeedKinoResults array={resultsArray} />
+                <PowerLadderResults array={resultsArray} />
             ) : selectedTab === 2 ? (
                 <PowerballHistory array={historyArray} checkedState={checkedState} setCheckedState={setCheckedState} />   
             ) : <></>}
