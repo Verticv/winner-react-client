@@ -165,7 +165,7 @@ const DistributorPage = ({
                         <div className="w-full h-full flex items-center justify-center">스포츠</div>
                         <div className="w-full h-full flex items-center justify-center">미니게임</div>
                         <div className="w-full h-full flex items-center justify-center">에볼루션</div>
-                        <div className="w-full h-full flex flex-col items-center justify-center -space-y-4px"><span>아시안</span><span>게이밍</span></div>
+                        <div className="w-full h-full flex flex-col items-center justify-center -space-y-4px"><span>아시아</span><span>게이밍</span></div>
                         <div className="w-full h-full flex flex-col items-center justify-center -space-y-4px"><span>프레그메틱</span><span>카지노</span></div>
                         <div className="w-full h-full flex flex-col items-center justify-center -space-y-4px"><span>드림</span><span>게이밍</span></div>
                         <div className="w-full h-full flex flex-col items-center justify-center -space-y-4px"><span>섹시</span><span>게이밍</span></div>
@@ -264,7 +264,7 @@ const DistributorPage = ({
                         <div className="w-full h-full flex items-center justify-center">스포츠</div>
                         <div className="w-full h-full flex items-center justify-center">미니게임</div>
                         <div className="w-full h-full flex items-center justify-center">에볼루션</div>
-                        <div className="w-full h-full flex flex-col items-center justify-center -space-y-4px"><span>아시안</span><span>게이밍</span></div>
+                        <div className="w-full h-full flex flex-col items-center justify-center -space-y-4px"><span>아시아</span><span>게이밍</span></div>
                         <div className="w-full h-full flex flex-col items-center justify-center -space-y-4px"><span>프레그메틱</span><span>카지노</span></div>
                         <div className="w-full h-full flex flex-col items-center justify-center -space-y-4px"><span>드림</span><span>게이밍</span></div>
                         <div className="w-full h-full flex flex-col items-center justify-center -space-y-4px"><span>섹시</span><span>게이밍</span></div>
@@ -673,7 +673,7 @@ const DistributorPage = ({
                                     <td className="w-91px text-center">스포츠</td>
                                     <td className="w-91px text-center">미니게임</td>
                                     <td className="w-91px text-center">에볼루션</td>
-                                    <td className="w-91px text-center flex flex-col pt-2px -space-y-4px"><span>아시안</span><span>게이밍</span></td>
+                                    <td className="w-91px text-center flex flex-col pt-2px -space-y-4px"><span>아시아</span><span>게이밍</span></td>
                                     <td className="w-91px text-center flex flex-col pt-2px -space-y-4px"><span>프레그메틱</span><span>카지노</span></td>
                                     <td className="w-91px text-center flex flex-col pt-2px -space-y-4px"><span>드림</span><span>게이밍</span></td>
                                     <td className="w-91px text-center flex flex-col pt-2px -space-y-4px"><span>섹시</span><span>게이밍</span></td>
@@ -770,7 +770,7 @@ const DistributorPage = ({
                                     <td className="w-83px text-center">스포츠</td>
                                     <td className="w-83px text-center">미니게임</td>
                                     <td className="w-83px text-center">에볼루션</td>
-                                    <td className="w-83px text-center flex flex-col pt-2px -space-y-4px"><span>아시안</span><span>게이밍</span></td>
+                                    <td className="w-83px text-center flex flex-col pt-2px -space-y-4px"><span>아시아</span><span>게이밍</span></td>
                                     <td className="w-83px text-center flex flex-col pt-2px -space-y-4px"><span>프레그메틱</span><span>카지노</span></td>
                                     <td className="w-83px text-center flex flex-col pt-2px -space-y-4px"><span>드림</span><span>게이밍</span></td>
                                     <td className="w-83px text-center flex flex-col pt-2px -space-y-4px"><span>섹시</span><span>게이밍</span></td>
@@ -813,7 +813,7 @@ const DistributorPage = ({
                                     <td className="w-83px text-right">0</td>
                                     <td className="w-83px text-right">3.06M</td>
                                     <td className="w-90px text-right pr-7px">0</td>
-                                    <td style={{backgroundColor:"#f2f2f2"}} className="w-83px text-right pr-7px h-full flex items-center justify-end">7.14M</td>
+                                    <td style={{backgroundColor:"#f2f2f2", color:"#d52e2e"}} className="w-83px text-right pr-7px h-full flex items-center justify-end">7.14M</td>
                                 </tr>
                                 <tr className="flex items-center bg-gray-fefefe font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-54px w-full border-b border-gray-dddddd">
                                     <td className="w-83px bg-gray-r7a848f h-full flex items-center justify-center font-spoqaMedium text-16px text-white tracking-tight">승패</td>
@@ -837,7 +837,7 @@ const DistributorPage = ({
                                     <td className="w-83px text-right">0</td>
                                     <td className="w-83px text-right">0</td>
                                     <td className="w-90px text-right pr-7px">0</td>
-                                    <td style={{backgroundColor:"#ebecee"}} className="w-83px text-right pr-7px h-full flex items-center justify-end">0</td>
+                                    <td style={{backgroundColor:"#ebecee", color:"#d52e2e"}} className="w-83px text-right pr-7px h-full flex items-center justify-end">0</td>
                                 </tr>
                                 <tr className="flex items-center bg-gray-fefefe font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-54px w-full border-b border-gray-dddddd">
                                     <td className="w-83px bg-gray-r7a848f h-full flex items-center justify-center font-spoqaMedium text-16px text-white tracking-tight">정산금액</td>
@@ -861,7 +861,7 @@ const DistributorPage = ({
                                     <td className="w-83px text-right">0</td>
                                     <td className="w-83px text-right">0</td>
                                     <td className="w-90px text-right pr-7px">0</td>
-                                    <td style={{backgroundColor:"#f2f2f2"}} className="w-83px text-right pr-7px h-full flex items-center justify-end">0</td>
+                                    <td style={{backgroundColor:"#f2f2f2", color:"#d52e2e"}} className="w-83px text-right pr-7px h-full flex items-center justify-end">0</td>
                                 </tr>
                             </tbody>
                         </table>   
@@ -943,10 +943,10 @@ const DistributorPage = ({
                                 <img src={WhiteArrow} className={`${isArrowUp[1] === false ? "transform rotate-180" : ""}`} alt=""/>
                             </button>
                             <button 
-                                className="w-114px text-center flex items-center justify-center space-x-5px"
+                                className="w-114px text-center flex items-center justify-center space-x-5px hover:opacity-75 "
                                 onClick={() => handleOnChange(2)}
                             >
-                                <div className="flex flex-col items-center justify-center space-y-3px hover:opacity-75 ">
+                                <div className="flex flex-col items-center justify-center space-y-3px">
                                     <div className="flex items-center h-16px">추천일시</div>
                                     <div className="flex items-center h-16px">로그인일시</div>
                                     <div className="flex items-center h-16px">(미접속일수)</div>

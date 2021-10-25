@@ -36,7 +36,7 @@ const MyPageTitle = ({
                 )}
                 {inboxCount && (
                     <div className="ml-20px h-21px flex items-center space-x-20px">
-                        <div style={{backgroundColor:"#b1b1b1"}} className="h-12px w-px" />
+                        <div style={{backgroundColor:"#b1b1b1"}} className="h-12px w-px mb-px" />
                         <div className="font-spoqaMedium tracking-tight text-gray-r8c8c8c">
                             <span className="">전체 받은 쪽지</span>
                             <span className="font-spoqaBold text-red-ff1237 ml-3px">{inboxCount}</span>
