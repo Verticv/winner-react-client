@@ -123,9 +123,11 @@ const SportsBetHistoryPanel = ({
             </div>
 
             <div className="flex ml-10px font-spoqaMedium tracking-tight text-14px text-center">
-                <div className="font-roboto w-99px text-gray-r454545">{score}</div>
-                <div className="w-61px text-gray-r454545">{choice === "home" ? "홈팀 승" : "원정팀 승"}</div>
-                <div className={`${
+                <div style={{width: isAttached && "90px"}} className="font-roboto w-99px text-gray-r454545">{score}</div>
+                <div style={{width: isAttached && "59px"}} className="w-61px text-gray-r454545">{choice === "home" ? "홈팀 승" : "원정팀 승"}</div>
+                <div 
+                style={{marginRight:isAttached && "5px"}}
+                className={`${
                     result === "win" 
                     ? "text-red-500" 
                     : result === "lose" 

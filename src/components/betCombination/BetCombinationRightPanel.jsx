@@ -26,7 +26,7 @@ const BetCombinationRightPanel = ({
     ];
 
     const dateFormat = "yyyy-MM-dd (eee)"
-    const dateFormat1 = "aaaa hh:mm:ss"
+    const dateFormat1 = "H:mm:ss"
 
     const [time, setTime] = useState(Date.now());
 

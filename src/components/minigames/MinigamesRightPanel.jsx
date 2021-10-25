@@ -65,7 +65,7 @@ const MinigamesRightPanel = ({
     )
 
     const dateFormat = "MM월 dd일"
-    const dateFormat1 = "aaaa hh:mm:ss"
+    const dateFormat1 = "H:mm:ss"
 
     const [time, setTime] = useState(Date.now());
     

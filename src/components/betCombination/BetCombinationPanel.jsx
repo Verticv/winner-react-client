@@ -296,12 +296,14 @@ const BetCombinationPanel = ({
         
     ]
 
-    const [isDropdownOpen, setDropdownOpen] = useState(false)
+    const [isDropdownOpen, setDropdownOpen] = useState(true)
     const [selectedCarrier, setSelectedCarrier] = useState("국가선택")
     const [isHover1, setHover1] = useState(null)
     const [isOpen, setOpen] = useState(new Array(20).fill(false))
     const [isHover2, setHover2] = useState(false)
     const [isButtonClicked, setButtonClicked] = useState("")
+    const [isHover3, setHover3] = useState("")
+
 
     const dropDownCellClass = "flex w-full h-42px py-2px bg-white items-center hover:bg-blue-lightGradLight px-14px space-x-8px"
 
@@ -538,17 +540,20 @@ const BetCombinationPanel = ({
                     setButtonClicked(`${id}left`)
                     setAddedCard(prevArray => 
                     [...prevArray, {id: _uniqueId('prefix-'), value: "left"}])}}
+                onMouseEnter={() => setHover3(`${id}left`)}
+                onMouseLeave={() => setHover3(null)}
+
             >
                 <div 
                     style={{
                         width:"265px", 
                         height: "37px",
-                        borderColor: `${id}left` === isButtonClicked ? "#ff7982" : "#ffffff",
-                        background:  `${id}left` === isButtonClicked
+                        borderColor: (`${id}left` === isButtonClicked || `${id}left` === isHover3) ? "#ff7982" : "#ffffff",
+                        background:  (`${id}left` === isButtonClicked || `${id}left` === isHover3)
                         ? "linear-gradient(to bottom, #ff535f, #ee4e5a)"  
                         : "linear-gradient(to bottom, #f9f9f9, #e7ecf1)",
-                        color: `${id}left` === isButtonClicked ? "#ffffff" : "#454545",
-                        textShadow: `${id}left` === isButtonClicked ? "1px 1px 0px #00000070" : ""
+                        color: (`${id}left` === isButtonClicked || `${id}left` === isHover3) ? "#ffffff" : "#454545",
+                        textShadow: (`${id}left` === isButtonClicked || `${id}left` === isHover3) ? "1px 1px 0px #00000070" : ""
                     }}  
                     className="flex items-center justify-end rounded-lg border bg-gradient-to-b cursor-pointer px-10px pt-px"
                 >
@@ -561,7 +566,7 @@ const BetCombinationPanel = ({
                             <img src={UpIcon} alt="" />
                         )}
                     </div>
-                    <span style={{color: stat1Color === "red" && `${id}left` !== isButtonClicked ? "#d52e2e" : ""}} className="font-roboto tracking-tight text-14px">{stat1}</span>
+                    <span style={{color: stat1Color === "red" && `${id}left` !== isButtonClicked && `${id}left` !== isHover3 ? "#d52e2e" : ""}} className="font-roboto tracking-tight text-14px">{stat1}</span>
                 </div>
             </button>
 
@@ -569,28 +574,31 @@ const BetCombinationPanel = ({
                 style={{
                     width:"71px", 
                     height: "39px",
-                    backgroundColor: `${id}middle` === isButtonClicked ? "#cb4343" : "#b3b3b3" 
+                    backgroundColor: (`${id}middle` === isButtonClicked || `${id}middle` === isHover3) ? "#cb4343" : "#b3b3b3" 
                 }}  
                 className="flex items-center justify-center rounded-lg"
                 onClick={() => {
                     setButtonClicked(`${id}middle`)
                     setAddedCard(prevArray => 
                     [...prevArray, {id: _uniqueId('prefix-'), value: "middle"}])}}
+                onMouseEnter={() => setHover3(`${id}middle`)}
+                onMouseLeave={() => setHover3(null)}
+
             >
                 <div 
                     style={{
                         width:"69px", 
                         height: "37px",
-                        borderColor: `${id}middle` === isButtonClicked ? "#ff7982" : "#ffffff",
-                        background: `${id}middle` === isButtonClicked 
+                        borderColor: (`${id}middle` === isButtonClicked || `${id}middle` === isHover3) ? "#ff7982" : "#ffffff",
+                        background: (`${id}middle` === isButtonClicked || `${id}middle` === isHover3)
                         ? "linear-gradient(to bottom, #ff535f, #ee4e5a)"  
                         : "linear-gradient(to bottom, #f9f9f9, #e7ecf1)",
-                        color: `${id}middle` === isButtonClicked ? "#ffffff" : "#454545",
-                        textShadow: `${id}middle` === isButtonClicked ? "1px 1px 0px #00000070" : ""
+                        color: (`${id}middle` === isButtonClicked || `${id}middle` === isHover3) ? "#ffffff" : "#454545",
+                        textShadow: (`${id}middle` === isButtonClicked || `${id}middle` === isHover3) ? "1px 1px 0px #00000070" : ""
                     }}  
                     className="flex items-center justify-center rounded-lg border bg-gradient-to-b cursor-pointer px-10px pt-px"
                 >
-                    <span  style={{color: stat2Color === "blue" && `${id}middle` !== isButtonClicked ? "#0056a6" : ""}} className="font-roboto tracking-tight text-14px">{stat2}</span>
+                    <span  style={{color: stat2Color === "blue" && `${id}middle` !== isButtonClicked && `${id}middle` !== isHover3 ? "#0056a6" : ""}} className="font-roboto tracking-tight text-14px">{stat2}</span>
                 </div>
             </button>
 
@@ -598,24 +606,26 @@ const BetCombinationPanel = ({
                 style={{
                     width:"267px", 
                     height: "39px",
-                    backgroundColor: `${id}right` === isButtonClicked ? "#cb4343" : "#b3b3b3" 
+                    backgroundColor: (`${id}right` === isButtonClicked || `${id}right` === isHover3) ? "#cb4343" : "#b3b3b3" 
                 }}  
                 className="flex items-center justify-center rounded-lg"
                 onClick={() => {
                     setButtonClicked(`${id}right`)
                     setAddedCard(prevArray => 
                     [...prevArray, {id: _uniqueId('prefix-'), value: "right"}])}}
+                onMouseEnter={() => setHover3(`${id}right`)}
+                onMouseLeave={() => setHover3(null)}
             >
                 <div 
                     style={{
                         width:"265px", 
                         height: "37px",
-                        borderColor: `${id}right` === isButtonClicked ? "#ff7982" : "#ffffff",
-                        background: `${id}right` === isButtonClicked
+                        borderColor: (`${id}right` === isButtonClicked || `${id}right` === isHover3) ? "#ff7982" : "#ffffff",
+                        background: (`${id}right` === isButtonClicked || `${id}right` === isHover3)
                         ? "linear-gradient(to bottom, #ff535f, #ee4e5a)"  
                         : "linear-gradient(to bottom, #f9f9f9, #e7ecf1)",
-                        color: `${id}right` === isButtonClicked ? "#ffffff" : "#454545",
-                        textShadow: `${id}right` === isButtonClicked ? "1px 1px 0px #00000070" : ""
+                        color: (`${id}right` === isButtonClicked || `${id}right` === isHover3) ? "#ffffff" : "#454545",
+                        textShadow: (`${id}right` === isButtonClicked || `${id}right` === isHover3) ? "1px 1px 0px #00000070" : ""
                     }}  
                     className="flex items-center justify-start rounded-lg border bg-gradient-to-b cursor-pointer px-10px pt-px"
                 >
@@ -682,7 +692,7 @@ const BetCombinationPanel = ({
                                 width:"71px",
                                 backgroundColor: isOpen[items.id] === true ? "#5b646e" : "#171a1d"
                             }} 
-                            className="relative flex items-center justify-center h-39px w-75px rounded-4px ml-4px group"
+                            className="relative flex items-center justify-center h-39px w-75px rounded-4px ml-4px group hover:opacity-75"
                             onClick={() => handleOnChange(items.id)}
                             onMouseEnter={() => setHover2(items.id)}
                             onMouseLeave={() => setHover2(false)}
@@ -695,14 +705,14 @@ const BetCombinationPanel = ({
                                     ? "linear-gradient(to bottom, #8995a2, #757d87)"
                                     : "linear-gradient(to bottom, #585b5e, #303337)"
                                 }} 
-                                className="flex items-center justify-center h-37px w-73px rounded-4px border cursor-pointer group-hover:opacity-75"
+                                className="flex items-center justify-center h-37px w-73px rounded-4px border cursor-pointer"
                             >
                                 <span style={{textShadow: "1px 1px 1px #00000070"}} className="font-spoqaMedium tracking-tight text-14px text-white" >
                                     {isOpen[items.id] === true ? "접기" : "+더보기"}
                                 </span>
                             </div>
                             {isHover2 === items.id && (
-                                <div style={{width:"265px"}} className="absolute bottom-34px left-0">
+                                <div style={{width:"265px"}} className="absolute bottom-34px left-0 group-hover:opacity-100">
                                     <img className="object-none" src={Bubble2} alt="" />
                                     <div style={{color:"#858585"}} className="ml-36px absolute top-9px text-14px font-spoqaMedium tracking-tight">
                                         해당 경기에 등록된 모든베팅종류 제공

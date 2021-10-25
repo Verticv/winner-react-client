@@ -137,7 +137,7 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                                     <div 
                                         onClick={() => {
                                             setstate(`${titleNumber}-1`)
-                                            setSelectedOption([{type:"스피드키노", name:"홀짝/언오버", selection: "홀언더", buttonType: "red"}])
+                                            setSelectedOption([{type:"스피드키노", name:"홀짝/언오버", selection: "홀언더", buttonType: "blue"}])
                                         }} 
                                         style={{width:"68px", height:"59px"}} 
                                         className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
@@ -167,7 +167,7 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                                     <div 
                                         onClick={() => {
                                             setstate(`${titleNumber}-3`)
-                                            setSelectedOption([{type:"스피드키노", name:"홀짝/언오버", selection: "짝언더", buttonType: "blue"}])
+                                            setSelectedOption([{type:"스피드키노", name:"홀짝/언오버", selection: "짝언더", buttonType: "red"}])
                                         }} 
                                         style={{width:"68px", height:"59px"}} 
                                         className="relative flex items-center justify-center cursor-pointer hover:opacity-75"

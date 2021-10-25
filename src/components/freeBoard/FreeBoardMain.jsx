@@ -267,7 +267,7 @@ const FreeBoardMain = () => {
     const history = useHistory();
     const [page, setPage] = useState(0)
     const [selectedCarrier, setSelectedCarrier] = useState("제목")
-    const [isDropdownOpen, setDropdownOpen] = useState(false)
+    const [isDropdownOpen, setDropdownOpen] = useState(true)
 
     const dropDownCellClass = "flex w-120px h-40px py-2px bg-white items-center hover:bg-blue-lightGradLight px-14px"
 
