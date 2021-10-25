@@ -3,7 +3,8 @@ import React from 'react'
 const HorizontalMenu8 = ({
     itemsArray, 
     selectedTab,
-    setSelectedTab
+    setSelectedTab,
+    setSelectedSubTab
 }) => {
 
     function TabsList({ items }) {
@@ -17,6 +18,7 @@ const HorizontalMenu8 = ({
                 } overflow-hidden h-80px w-full rounded-lg flex justify-end border border-gray-dddddd`} 
                 onClick={() => {
                     setSelectedTab(item.id)
+                    setSelectedSubTab(0)
                 }}
             >
                 <div 

@@ -45,6 +45,10 @@ import Sub23 from '../../images/myPage/betHistory/ARGame/sub4.png'
 import Sub24 from '../../images/myPage/betHistory/ARGame/sub5.png'
 import Sub25 from '../../images/myPage/betHistory/ARGame/sub6.png'
 import Sub26 from '../../images/myPage/betHistory/ARGame/sub7.png'
+import LiveCasinoBetHistory from 'components/myPage/betHistory/LiveCasinoBetHistory'
+import SlotBetHistory from 'components/myPage/betHistory/SlotBetHistory'
+import MinigameBetHistory from 'components/myPage/betHistory/MinigameBetHistory'
+import ARGameBetHistory from 'components/myPage/betHistory/ARGameBetHistory'
 
 const BetHistoryPopup = ({setPopupOpen, setAttachedArray, attachedArray}) => {
 
@@ -107,7 +111,7 @@ const BetHistoryPopup = ({setPopupOpen, setAttachedArray, attachedArray}) => {
         { text: "양궁", icon: Sub26, id: 7 },
     ];
 
-    const [selectedTab, setSelectedTab] = useState(1)
+    const [selectedTab, setSelectedTab] = useState(10)
     const [selectedSubTab, setSelectedSubTab] = useState(0)
 
     return (
@@ -122,19 +126,19 @@ const BetHistoryPopup = ({setPopupOpen, setAttachedArray, attachedArray}) => {
             <div className="w-full h-full bg-white pt-30px pb-40px">
                 
                 <div className="px-36px relative">
-                    <HorizontalMenu8 itemsArray={tabsArray} selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
+                    <HorizontalMenu8 itemsArray={tabsArray} selectedTab={selectedTab} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
                     
-                    {(selectedTab !== 0 && selectedTab !== 3 && selectedTab !== 4 && selectedTab !== 7 && selectedTab !== 8) && (
+                    {(selectedTab !== 2 && selectedTab !== 3 && selectedTab !== 4 && selectedTab !== 7 && selectedTab !== 8) && (
                         <div style={{marginLeft: `${selectedTab * 130 + 56}px`}} className={`absolute top-80px w-20px -mb-10px overflow-hidden inline-block `}>
                             <div className="h-10px w-10px bg-gradient-to-br from-gray-d2dfea via-gray-eff3f6 to-gray-eff3f6 rotate-45 transform origin-bottom-left"></div>
                         </div>
                     )}
 
-                    {(selectedTab !== 0 && selectedTab !== 3 && selectedTab !== 7 && selectedTab !== 8) && (
+                    {(selectedTab !== 2 && selectedTab !== 3 && selectedTab !== 7 && selectedTab !== 8) && (
                         <div className="mt-10px w-full bg-gray-eff3f6 rounded-xl p-4px">
                             <SubHorizontalMenu 
                                 itemsArray={
-                                    selectedTab === 1
+                                    selectedTab === 0
                                     ? subTabsArray1
                                     : selectedTab === 2
                                     ? subTabsArray2
@@ -149,17 +153,51 @@ const BetHistoryPopup = ({setPopupOpen, setAttachedArray, attachedArray}) => {
                             />
                         </div>
                     )}
-                    
-                    
                 </div>
 
                 
 
-                <div className="w-full px-30px">
-                    <div style={{height: "648px"}} className="overflow-y-scroll mt-30px py-5px px-6px space-y-28px">
-                        <SportsBetHistory type={0} setPopupOpen={setPopupOpen} isPopup={true} id={0} attachedArray={attachedArray} setAttachedArray={setAttachedArray} />
-                        <SportsBetHistory type={1} setPopupOpen={setPopupOpen} winAmount="+900,000,000" isPopup={true} id={1}  attachedArray={attachedArray} setAttachedArray={setAttachedArray} />
-                        <SportsBetHistory type={2} setPopupOpen={setPopupOpen} isPopup={true} id={2} attachedArray={attachedArray} setAttachedArray={setAttachedArray} />
+                <div className="w-full px-30px -mt-10px">
+                    <div 
+                        style={{
+                            height: 
+                            (selectedTab === 2 || selectedTab === 3 || selectedTab === 7)
+                            ? "665px" 
+                            : (selectedTab === 0 || selectedTab === 4 || selectedTab === 5)
+                            ? "565px" 
+                            : "485px"
+                        }} 
+                        className="overflow-y-scroll mt-30px py-5px px-6px space-y-28px -pt-10px"
+                    >
+                        {selectedTab === 0 ? (
+                            <div className="-mt-20px">
+                                <LiveCasinoBetHistory isState={selectedSubTab} setState={setSelectedSubTab} showSub={false} />
+                            </div>
+                            
+                        ) : selectedTab === 1 ? (
+                            <div className="-mt-20px">
+                                <SlotBetHistory isState={selectedSubTab} setState={setSelectedSubTab} showSub={false} />
+                            </div>
+                        ) : selectedTab === 4 ? (
+                            <div className="-mt-20px">
+                                <MinigameBetHistory isState={selectedSubTab} setState={setSelectedSubTab} showSub={false} />
+                            </div>
+                        ) : selectedTab === 5 ? (
+                            <div className="-mt-20px">
+                                <ARGameBetHistory isState={selectedSubTab} setState={setSelectedSubTab} showSub={false} />
+                            </div>
+                        ) : selectedTab === 6 ? (
+                            <div className="-mt-20px">
+                                <SlotBetHistory isState={selectedSubTab} setState={setSelectedSubTab} showSub={false} />
+                            </div>
+                        ) : (
+                            <>
+                                <SportsBetHistory type={0} setPopupOpen={setPopupOpen} isPopup={true} id={0} attachedArray={attachedArray} setAttachedArray={setAttachedArray} />
+                                <SportsBetHistory type={1} setPopupOpen={setPopupOpen} winAmount="+900,000,000" isPopup={true} id={1}  attachedArray={attachedArray} setAttachedArray={setAttachedArray} />
+                                <SportsBetHistory type={2} setPopupOpen={setPopupOpen} isPopup={true} id={2} attachedArray={attachedArray} setAttachedArray={setAttachedArray} />
+                            </>
+                        )}
+                        
                     </div>
                 </div>
             </div>

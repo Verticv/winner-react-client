@@ -56,7 +56,7 @@ const tableArray = [
     },
 ];
 
-const ARGameBetHistory = ({isState, setState}) => {
+const ARGameBetHistory = ({isState, setState, showSub = true}) => {
 
     const [checkedState, setCheckedState] = useState(new Array(3).fill(false))
     const [isAllSelected, setAllSelected] = useState(false)
@@ -73,9 +73,12 @@ const ARGameBetHistory = ({isState, setState}) => {
 
     return (
         <div className="w-full">
-            <div className="mt-10px h-88px w-full bg-gray-eff3f6 rounded-xl p-4px">
-                <SubHorizontalMenu itemsArray={subTabsArray} isState={isState} setState={setState} />
-            </div>
+            {showSub === true && (
+                <div className="mt-10px h-88px w-full bg-gray-eff3f6 rounded-xl p-4px">
+                    <SubHorizontalMenu itemsArray={subTabsArray} isState={isState} setState={setState} />
+                </div>
+            )}
+            
 
             <DateSearchBar isGameResultsSearch={true} />
 

@@ -72,7 +72,7 @@ const tableArray = [
     },
 ];
 
-const SlotBetHistory = ({isState, setState}) => {
+const SlotBetHistory = ({isState, setState, showSub = true}) => {
 
     const [checkedState, setCheckedState] = useState(new Array(3).fill(false))
     const [isAllSelected, setAllSelected] = useState(false)
@@ -89,13 +89,15 @@ const SlotBetHistory = ({isState, setState}) => {
 
     return (
         <div className="w-full">
-            <div className="mt-10px w-full bg-gray-eff3f6 rounded-xl pt-4px px-4px pb-3px">
-                <SubHorizontalMenu itemsArray={subTabsArray} isState={isState} setState={setState} />
-            </div>
+            {showSub === true && (
+                <div className="mt-10px w-full bg-gray-eff3f6 rounded-xl pt-4px px-4px pb-3px">
+                    <SubHorizontalMenu itemsArray={subTabsArray} isState={isState} setState={setState} />
+                </div>
+            )}
 
             <DateSearchBar isLeagueSearch={false} />
 
-            <div className="w-full h-full mt-20px">
+            <div className={`w-full h-full mt-20px`}>
                 <LiveCasinoBetHistoryTable 
                     array={tableArray} 
                     checkedState={checkedState} 

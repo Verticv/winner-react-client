@@ -12,7 +12,7 @@ const FreeBoardCompose = () => {
     const AttachButton = (
         <button 
             style={{width: "115px", height: "35px", backgroundColor: "#41b06c"}}
-            className="flex items-center justify-center rounded-md text-white text-14px tracking-tight font-spoqaMedium"
+            className="flex items-center justify-center rounded-md text-white text-14px tracking-tight font-spoqaMedium pt-px"
         >
             베팅내역첨부
         </button>

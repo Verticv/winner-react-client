@@ -44,6 +44,7 @@ const MenuCard = ({
                 <PopupControls 
                     buttonChild={(
                         <button 
+                        style={{width: "280px"}}
                             key={item.id} 
                             className={`${item.selectedCss} ${selectedTab === item.id ? selectedTabClass : tabClass}`}
                         >
