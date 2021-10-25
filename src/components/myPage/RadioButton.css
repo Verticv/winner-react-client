@@ -11,13 +11,23 @@ input[type=checkbox] {
     background: white center center;
 }
   
-  input[type=checkbox]:checked {
-    background: transparent url(https://i.imgur.com/jcEenus.png) no-repeat center center
+input[type=checkbox]:checked {
+  background: transparent url(https://i.imgur.com/jcEenus.png) no-repeat center center
 
-    /* box-shadow:inset 0 0 0px 2px white; */
+  /* box-shadow:inset 0 0 0px 2px white; */
 
-  }
+}
 
+input[type=checkbox]:hover:checked {
+  background: transparent url(https://i.imgur.com/jcEenus.png) no-repeat center center
+
+  /* box-shadow:inset 0 0 0px 2px white; */
+
+}
+
+input[type="checkbox"]:hover  {
+  background: transparent url(https://i.imgur.com/O17y09P.png) no-repeat center center
+}
     
 input[type=radio] {
   border: 1px solid #dddddd;

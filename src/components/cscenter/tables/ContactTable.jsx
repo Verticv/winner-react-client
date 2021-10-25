@@ -40,7 +40,7 @@ const ContactTable = ({
                     </div>
 
                     <div 
-                        className={`${item.isRead === true ? "text-gray-r7b7b7b" : "text-gray-r454545"} font-spoqaMedium w-114px flex justify-center cursor-pointer h-full items-center`}
+                        className={`${item.isRead === true ? "text-gray-r7b7b7b" : "text-gray-r454545"} font-spoqaMedium w-114px flex justify-center cursor-pointer h-full items-center group-hover:text-black`}
                         onClick={() => history.push(item.path)}
                     >
                         {item.category}
