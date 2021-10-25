@@ -121,7 +121,7 @@ const Contact = () => {
     const [, setSelectedTab] = useState(0)
     const [page, setPage] = useState(0)
     const [selectedCarrier, setSelectedCarrier] = useState("제목")
-    const [isDropdownOpen, setDropdownOpen] = useState()
+    const [isDropdownOpen, setDropdownOpen] = useState(true)
     const history = useHistory();
 
     const dropDownCellClass = "flex w-120px h-40px py-2px bg-white items-center hover:bg-blue-lightGradLight px-14px"

@@ -16,7 +16,7 @@ const ContactTable = ({
                 className={`${
                     item.isRead === false ? "bg-gray-e8eff6" :
                     item.id % 2 === 0 ? "bg-gray-fdfdfd" : "bg-gray-f8f9fb"
-                } font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px w-full border-b border-gray-dddddd`}
+                } font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px w-full border-b border-gray-dddddd group`}
             >
                 <div className="flex items-center font-spoqaBold text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd px-54px">        
 
@@ -51,7 +51,7 @@ const ContactTable = ({
                         className={`${item.isRead === true ? "text-gray-r7b7b7b" : "text-gray-r454545"} font-spoqaMedium flex items-center space-x-10px cursor-pointer h-full items-center`}
                         onClick={() => history.push(item.path)}
                     >
-                        <p>{item.text}</p>
+                        <p className="group-hover:text-black">{item.text}</p>
                         {item.isRead === false && (
                             <div className={`w-17px h-17px bg-red-notification rounded-full text-12px text-white flex items-center justify-center font-roboto ${item.id === 6 && "pr-px"}`}>
                                 N
