@@ -1,6 +1,10 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom';
 import LevelOne from '../../images/profile/level_one.png'
+import LevelTwo from '../../images/profile/level_two.png'
+import LevelThree from '../../images/profile/level_three.png'
+import LevelFour from '../../images/profile/level_four.png'
+import LevelFive from '../../images/profile/level_five.png'
 import MyPageIcon from '../../images/profile/my_page_gradient.png'
 import LinkIcon from '../../images/profile/link_gradient.png'
 import AttendanceIcon from '../../images/profile/attendance_gradient.png'
@@ -14,7 +18,7 @@ import ContactIconHighlight from '../../images/profile/contact_highlight.png'
 import PolicyIconHighlight from '../../images/profile/policy_highlight.png'
 import LogoutIconHighlight from '../../images/profile/logout_highlight.png'
 
-const ProfileDropDown = ({setAuth}) => {
+const ProfileDropDown = ({setAuth, level = 3}) => {
     
     const history = useHistory();
 
@@ -81,8 +85,34 @@ const ProfileDropDown = ({setAuth}) => {
                 <div className="h-2 w-2 bg-white rotate-45 transform origin-bottom-left shadow"></div>
             </div>
             <div className="w-full h-128px bg-blue-e8f3fd rounded-3xl flex items-center flex-col pt-24px">
-                <img className="h-46px object-none ml-6px" src={LevelOne} alt="level_one"/>
-                <span className="text-gray-r393e41 text-12px font-roboto font-bold">LEVEL1</span>
+
+                {level === 1 ? (
+                    <>
+                        <img className="h-46px object-none ml-6px" src={LevelOne} alt="level_one"/>
+                        <span className="text-gray-r393e41 text-12px font-roboto font-bold">LEVEL1</span>
+                    </>
+                ) : level === 2 ? (
+                    <>
+                        <img className="h-46px object-none ml-6px" src={LevelTwo} alt="level_one"/>
+                        <span className="text-gray-r393e41 text-12px font-roboto font-bold">LEVEL2</span>
+                    </>
+                ) : level === 3 ? (
+                    <>
+                        <img className="h-46px object-none ml-6px" src={LevelThree} alt="level_one"/>
+                        <span className="text-gray-r393e41 text-12px font-roboto font-bold">LEVEL3</span>
+                    </>
+                ) : level === 4 ? (
+                    <>
+                        <img className="h-46px object-none ml-6px" src={LevelFour} alt="level_one"/>
+                        <span className="text-gray-r393e41 text-12px font-roboto font-bold">LEVEL4</span>
+                    </>
+                ) : (
+                    <>
+                        <img className="h-46px object-none ml-6px" src={LevelFive} alt="level_one"/>
+                        <span className="text-gray-r393e41 text-12px font-roboto font-bold">LEVEL5</span>
+                    </>
+                )}
+                
                 <div className="tracking-tight">
                     <span className="text-blue-r1ca7ec font-spoqaBold text-16px">마이마이프로틴화이팅</span>
                     <span className="text-gray-a4b1b4 font-spoqaBold text-16px">님</span>
