@@ -687,30 +687,34 @@ const BetCombinationPanel = ({
                         />
                     </div>
                     {isSubArray === false && (
-                        <button 
-                            style={{
-                                width:"71px",
-                                backgroundColor: isOpen[items.id] === true ? "#5b646e" : "#171a1d"
-                            }} 
-                            className="relative flex items-center justify-center h-39px w-75px rounded-4px ml-4px group hover:opacity-75"
-                            onClick={() => handleOnChange(items.id)}
-                            onMouseEnter={() => setHover2(items.id)}
-                            onMouseLeave={() => setHover2(false)}
-                        >
-                            <div 
+                        <div className="relative">
+                            <button 
                                 style={{
-                                    width:"69px",
-                                    borderColor: isOpen[items.id] === true ? "#8f97a0" : "#737579",
-                                    background: isOpen[items.id] === true
-                                    ? "linear-gradient(to bottom, #8995a2, #757d87)"
-                                    : "linear-gradient(to bottom, #585b5e, #303337)"
+                                    width:"71px",
+                                    backgroundColor: isOpen[items.id] === true ? "#5b646e" : "#171a1d"
                                 }} 
-                                className="flex items-center justify-center h-37px w-73px rounded-4px border cursor-pointer"
+                                className="relative flex items-center justify-center h-39px w-75px rounded-4px ml-4px group hover:opacity-75"
+                                onClick={() => handleOnChange(items.id)}
+                                onMouseEnter={() => setHover2(items.id)}
+                                onMouseLeave={() => setHover2(false)}
+                                data-tip="<p>HTML tooltip</p>"
+                                data-html={true}
                             >
-                                <span style={{textShadow: "1px 1px 1px #00000070"}} className="font-spoqaMedium tracking-tight text-14px text-white" >
-                                    {isOpen[items.id] === true ? "접기" : "+더보기"}
-                                </span>
-                            </div>
+                                <div 
+                                    style={{
+                                        width:"69px",
+                                        borderColor: isOpen[items.id] === true ? "#8f97a0" : "#737579",
+                                        background: isOpen[items.id] === true
+                                        ? "linear-gradient(to bottom, #8995a2, #757d87)"
+                                        : "linear-gradient(to bottom, #585b5e, #303337)"
+                                    }} 
+                                    className="flex items-center justify-center h-37px w-73px rounded-4px border cursor-pointer"
+                                >
+                                    <span style={{textShadow: "1px 1px 1px #00000070"}} className="font-spoqaMedium tracking-tight text-14px text-white" >
+                                        {isOpen[items.id] === true ? "접기" : "+더보기"}
+                                    </span>
+                                </div>
+                            </button>
                             {isHover2 === items.id && (
                                 <div style={{width:"265px"}} className="absolute bottom-34px left-0 group-hover:opacity-100">
                                     <img className="object-none" src={Bubble2} alt="" />
@@ -719,9 +723,10 @@ const BetCombinationPanel = ({
                                     </div>
                                 </div>
                             )}
-                        </button>
+                        </div>
                     )}
-                    
+                                                
+
                 </div>
                 {isOpen[items.id] === true && (
                     <LeagueCell array={items.subArray} isSubArray={true} isLastSubarray={items.isLast} />
@@ -730,25 +735,45 @@ const BetCombinationPanel = ({
         ))
     }
 
-    const LeagueGroup = ({
+    function LeagueGroup({
         flag = NorwayIcon, 
         title ="노르웨이 - UEFA Europa Conference League",
         array = FirstArray
-    }) => (
-        <div className="relative flex flex-col">
-            <img style={{filter: "drop-shadow(5px 5px 5px #00000020)"}} className="absolute z-10" src={NormalCell} alt="" />
-            <div className="h-50px w-full z-20 flex items-center">
-                <img className="mx-10px" src={FootballIcon} alt="" />
-                <img className="mr-10px" src={flag} alt="" />
-                <p className="text-20px font-spoqaMedium text-white mt-3px truncate w-350px">{title}</p>
+    }) {
+        const [isHover4, setHover4] = useState("")
+
+        return (
+            <div className="relative flex flex-col">
+                <img style={{filter: "drop-shadow(5px 5px 5px #00000020)"}} className="absolute z-10" src={NormalCell} alt="" />
+                <div className="h-50px w-full z-20 flex items-center relative">
+                    <img className="mx-10px" src={FootballIcon} alt="" />
+                    <img className="mr-10px" src={flag} alt="" />
+                    <p 
+                        className="text-20px font-spoqaMedium text-white mt-3px truncate w-350px" 
+                        onMouseEnter={() => setHover4(title)}
+                        onMouseLeave={() => setHover4("")}
+                    >
+                        {title}
+                    </p>
+                    {isHover4.length > 30 && (
+                        <div style={{}} className="absolute bottom-12px left-407px z-20 h-36px flex items-center">
+                            <div className={`bottom-0 w-20px overflow-hidden inline-block transform -rotate-90 mb-4px -mr-px`}>
+                                <div className="h-10px w-10px bg-gray-f9f9f9 rotate-45 transform origin-bottom-left"></div>
+                            </div>
+                            <div style={{color:"#858585", backgroundColor:"#f9f9f9"}} className="px-16px py-8px top-9px text-14px font-spoqaMedium tracking-tight -ml-5px rounded-4px border border-gray-400">
+                                <p className="mt-2px">{title}</p>
+                            </div>
+                        </div>
+                    )}
+                </div>
+                <div className="h-px w-full bg-gray-dddddd" />
+                
+                <div className="w-full bg-white z-20 flex flex-col shadow-subNavbar rounded-b-xl">
+                    <LeagueCell array={array} />
+                </div>
             </div>
-            <div className="h-px w-full bg-gray-dddddd" />
-            
-            <div className="w-full bg-white z-20 flex flex-col shadow-subNavbar rounded-b-xl">
-                <LeagueCell array={array} />
-            </div>
-        </div>
-    )
+        )
+    }    
 
     return (
         <div style={{borderRadius:"0.5rem"}} className="w-full shadow-subNavbar bg-gray-fafafa">
