@@ -555,9 +555,9 @@ const BetCombinationPanel = ({
                         color: (`${id}left` === isButtonClicked || `${id}left` === isHover3) ? "#ffffff" : "#454545",
                         textShadow: (`${id}left` === isButtonClicked || `${id}left` === isHover3) ? "1px 1px 0px #00000070" : ""
                     }}  
-                    className="flex items-center justify-end rounded-lg border bg-gradient-to-b cursor-pointer px-10px pt-px"
+                    className="flex items-center justify-end rounded-lg border bg-gradient-to-b cursor-pointer px-10px"
                 >
-                    <span className="truncate text-right font-spoqaMedium tracking-tight text-14px">{team1}</span>
+                    <span className="truncate text-right font-spoqaMedium tracking-tight text-14px pt-px">{team1}</span>
                     <div style={{width:"38px"}} className={`${hasUp ? "justify-end pr-5px" : "justify-center"} flex items-center `}>
                         {logo1 && (
                             <img src={logo1} alt="" />
@@ -566,7 +566,7 @@ const BetCombinationPanel = ({
                             <img src={UpIcon} alt="" />
                         )}
                     </div>
-                    <span style={{color: stat1Color === "red" && `${id}left` !== isButtonClicked && `${id}left` !== isHover3 ? "#d52e2e" : ""}} className="font-roboto tracking-tight text-14px">{stat1}</span>
+                    <span style={{color: stat1Color === "red" && `${id}left` !== isButtonClicked && `${id}left` !== isHover3 ? "#d52e2e" : ""}} className="font-roboto tracking-tight text-14px pt-px">{stat1}</span>
                 </div>
             </button>
 
@@ -598,7 +598,7 @@ const BetCombinationPanel = ({
                     }}  
                     className="flex items-center justify-center rounded-lg border bg-gradient-to-b cursor-pointer px-10px pt-px"
                 >
-                    <span  style={{color: stat2Color === "blue" && `${id}middle` !== isButtonClicked && `${id}middle` !== isHover3 ? "#0056a6" : ""}} className="font-roboto tracking-tight text-14px">{stat2}</span>
+                    <span  style={{color: stat2Color === "blue" && `${id}middle` !== isButtonClicked && `${id}middle` !== isHover3 ? "#0056a6" : ""}} className="font-roboto tracking-tight text-14px pt-px">{stat2}</span>
                 </div>
             </button>
 
@@ -629,7 +629,7 @@ const BetCombinationPanel = ({
                     }}  
                     className="flex items-center justify-start rounded-lg border bg-gradient-to-b cursor-pointer px-10px pt-px"
                 >
-                    <span className="font-roboto tracking-tight text-14px">{stat3}</span>
+                    <span className="font-roboto tracking-tight text-14px  pt-px">{stat3}</span>
                     <div style={{width:"38px"}} className={`${hasDown ? "justify-start pl-5px" : "justify-center"} flex items-center `}>
                         {logo2 && (
                             <img src={logo2} alt="" />
@@ -638,7 +638,7 @@ const BetCombinationPanel = ({
                             <img src={DownIcon} alt="" />
                         )}
                     </div>
-                    <span className="truncate font-spoqaMedium tracking-tight text-14px text-left">{team2}</span>
+                    <span className="truncate font-spoqaMedium tracking-tight text-14px text-left  pt-px">{team2}</span>
                 </div>
             </button>
         </div>
@@ -666,9 +666,9 @@ const BetCombinationPanel = ({
                     className={`${items.isLast && isOpen[items.id] === false && " rounded-b-xl"} ${items.isLastSubarray === true && "rounded-b-xl"} w-full h-59px border-b border-gray-dddddd flex items-center`}
                 >
                     <div style={{width: "129px"}} className="flex items-center justify-center h-full">
-                        <p style={{color: isSubArray === true ? "#585858" : "#454545"}} className="font-roboto text-14px tracking-tight">2021-06-29 15:45</p>
+                        <p style={{color: isSubArray === true ? "#585858" : "#454545"}} className="font-roboto text-14px tracking-tight  pt-px">2021-06-29 15:45</p>
                     </div>
-                    <div style={{width: "75px", color: isSubArray === true ? "#585858" : "#454545"}} className="flex flex-col items-center justify-center h-full -space-y-4px">
+                    <div style={{width: "75px", color: isSubArray === true ? "#585858" : "#454545"}} className="flex flex-col items-center justify-center h-full -space-y-4px  pt-px">
                         <p className="font-spoqaMedium text-14px tracking-tight">{items.type}</p>
                         <p className="font-spoqa text-12px tracking-tight">(연장미포함)</p>
                     </div>

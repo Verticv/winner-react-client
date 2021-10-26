@@ -1,6 +1,6 @@
 import React from 'react'
 
-const EsportsBetHistoryTable = ({array, checkedState, setCheckedState, isPopupOpen, setPopupOpen}) => {
+const EsportsBetHistoryTable = () => {
 
     return (
         <div style={{borderRadius: "1em"}} className="shadow-subNavbar overflow-hidden">

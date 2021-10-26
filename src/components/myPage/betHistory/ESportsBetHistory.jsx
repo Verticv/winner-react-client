@@ -2,11 +2,12 @@ import React from 'react'
 import DateSearchBar from '../DateSearchBar'
 import EsportsBetHistoryTable from '../tables/EsportsBetHistoryTable'
 
-const ESportsBetHistory = () => {
+const ESportsBetHistory = ({showSub = true}) => {
     return (
         <div className="w-full">
-
-            <DateSearchBar isLeagueSearch={false} />
+            {showSub === true && (
+                <DateSearchBar isLeagueSearch={false} />
+            )}
 
             <div className="w-full h-full mt-20px">
                 <EsportsBetHistoryTable />  

@@ -103,11 +103,19 @@ const LiveCasinoHover = ({selection}) => {
                 <div className="h-244px flex ml-80px -space-x-2 pt-6px">
                     <GamesList items={gamesArray} />
                 </div>
-                {isHover === 0 && (
+                <Expand
+                    open={isHover === 0}
+                    duration={200}
+                >
                     <div style={{height:"96px"}} className="ml-60px -space-x-33px flex items-center">
                         <ItemsList items={itemsArray} />
                     </div>
-                )}
+                </Expand>
+                {/* {isHover === 0 && (
+                    <div style={{height:"96px"}} className="ml-60px -space-x-33px flex items-center">
+                        <ItemsList items={itemsArray} />
+                    </div>
+                )} */}
                 
             </div>
         </Expand>

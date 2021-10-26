@@ -2,7 +2,7 @@ import React from 'react'
 
 const HorizontalMenu8 = ({
     itemsArray, 
-    selectedTab,
+    selectedTab = 0,
     setSelectedTab,
     setSelectedSubTab
 }) => {

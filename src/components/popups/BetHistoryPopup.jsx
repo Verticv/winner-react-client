@@ -8,7 +8,7 @@ import Icon6 from '../../images/myPage/betHistory/ico_6.png'
 import Icon7 from '../../images/myPage/betHistory/ico_7.png'
 import Icon8 from '../../images/myPage/betHistory/ico_8.png'
 import Icon9 from '../../images/myPage/betHistory/ico_9.png'
-import SportsBetHistory from 'components/myPage/betHistory/SportsBetHistoryPanel'
+import SportsBetHistory from 'components/myPage/betHistory/SportsBetHistory'
 import HorizontalMenu8 from 'components/horizontalMenus/HorizontalMenu8'
 import SubHorizontalMenu from 'components/myPage/betHistory/SubHorizontalMenu'
 import AllIcon from '../../images/myPage/betHistory/all.png'
@@ -49,6 +49,7 @@ import LiveCasinoBetHistory from 'components/myPage/betHistory/LiveCasinoBetHist
 import SlotBetHistory from 'components/myPage/betHistory/SlotBetHistory'
 import MinigameBetHistory from 'components/myPage/betHistory/MinigameBetHistory'
 import ARGameBetHistory from 'components/myPage/betHistory/ARGameBetHistory'
+import ESportsBetHistory from 'components/myPage/betHistory/ESportsBetHistory'
 
 const BetHistoryPopup = ({setPopupOpen, setAttachedArray, attachedArray}) => {
 
@@ -111,8 +112,12 @@ const BetHistoryPopup = ({setPopupOpen, setAttachedArray, attachedArray}) => {
         { text: "양궁", icon: Sub26, id: 7 },
     ];
 
-    const [selectedTab, setSelectedTab] = useState(10)
+    const [selectedTab, setSelectedTab] = useState(0)
     const [selectedSubTab, setSelectedSubTab] = useState(0)
+
+    const [checkedState, setCheckedState] = useState(
+        new Array(3).fill(false)
+    );
 
     return (
         <div style={{height:"900px", width: "1110px"}} className="flex flex-col rounded-lg overflow-hidden">
@@ -173,10 +178,17 @@ const BetHistoryPopup = ({setPopupOpen, setAttachedArray, attachedArray}) => {
                             <div className="-mt-20px">
                                 <LiveCasinoBetHistory isState={selectedSubTab} setState={setSelectedSubTab} showSub={false} />
                             </div>
-                            
                         ) : selectedTab === 1 ? (
                             <div className="-mt-20px">
                                 <SlotBetHistory isState={selectedSubTab} setState={setSelectedSubTab} showSub={false} />
+                            </div>
+                        ) : selectedTab === 2 ? (
+                            <div className="-mt-20px space-y-20px">
+                                <SportsBetHistory  checkedState={checkedState} setCheckedState={setCheckedState} showSub={false} />
+                            </div>
+                        ) : selectedTab === 3 ? (
+                            <div className="-mt-20px">
+                                <ESportsBetHistory />
                             </div>
                         ) : selectedTab === 4 ? (
                             <div className="-mt-20px">
@@ -192,9 +204,6 @@ const BetHistoryPopup = ({setPopupOpen, setAttachedArray, attachedArray}) => {
                             </div>
                         ) : (
                             <>
-                                <SportsBetHistory type={0} setPopupOpen={setPopupOpen} isPopup={true} id={0} attachedArray={attachedArray} setAttachedArray={setAttachedArray} />
-                                <SportsBetHistory type={1} setPopupOpen={setPopupOpen} winAmount="+900,000,000" isPopup={true} id={1}  attachedArray={attachedArray} setAttachedArray={setAttachedArray} />
-                                <SportsBetHistory type={2} setPopupOpen={setPopupOpen} isPopup={true} id={2} attachedArray={attachedArray} setAttachedArray={setAttachedArray} />
                             </>
                         )}
                         

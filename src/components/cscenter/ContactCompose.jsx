@@ -6,7 +6,7 @@ import DownArrowIcon from '../../images/down_arrow_icon.png'
 const ContactCompose = () => {
 
     const [selectedCarrier, setSelectedCarrier] = useState("선택")
-    const [isDropdownOpen, setDropdownOpen] = useState()
+    const [isDropdownOpen, setDropdownOpen] = useState(true)
     const dropDownCellClass = "flex w-120px h-30px py-2px bg-white items-center hover:bg-blue-lightGradLight px-14px"
 
     const dropdownButton = (

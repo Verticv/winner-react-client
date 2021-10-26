@@ -1,6 +1,6 @@
 .blink {
-  -webkit-animation: blink 1s infinite both;
-          animation: blink 1s infinite both;
+  -webkit-animation: blink 2s infinite both;
+          animation: blink 2s infinite both;
 }
 
 @-webkit-keyframes blink {

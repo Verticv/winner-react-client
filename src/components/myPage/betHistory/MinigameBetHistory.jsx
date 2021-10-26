@@ -107,6 +107,7 @@ const MinigameBetHistory = ({isState, setState, showSub = true}) => {
                             id={0} 
                             checkedState={checkedState} 
                             setCheckedState={setCheckedState}
+                            isPopup={!showSub}
                         />
                         <MinigameBetHistoryPanel 
                             id={1} 
@@ -117,6 +118,7 @@ const MinigameBetHistory = ({isState, setState, showSub = true}) => {
                             choice="odd"
                             result="win"
                             winAmount="+900,000,000"
+                            isPopup={!showSub}
                         />
                     </div>           
                 ) : isState === 3 ? (
@@ -126,6 +128,7 @@ const MinigameBetHistory = ({isState, setState, showSub = true}) => {
                             checkedState={checkedState} 
                             setCheckedState={setCheckedState}
                             game="스피드키노"
+                            isPopup={!showSub}
                         />
                         <MinigameBetHistoryPanel 
                             id={1} 
@@ -137,6 +140,7 @@ const MinigameBetHistory = ({isState, setState, showSub = true}) => {
                             result="win"
                             winAmount="+900,000,000"
                             game="스피드키노"
+                            isPopup={!showSub}
                         />
                     </div> 
                 ) : isState === 4 ? (
@@ -146,6 +150,7 @@ const MinigameBetHistory = ({isState, setState, showSub = true}) => {
                             checkedState={checkedState} 
                             setCheckedState={setCheckedState}
                             game="키노사다리"
+                            isPopup={!showSub}
                         />
                         <MinigameBetHistoryPanel 
                             id={1} 
@@ -157,6 +162,7 @@ const MinigameBetHistory = ({isState, setState, showSub = true}) => {
                             result="win"
                             winAmount="+900,000,000"
                             game="키노사다리"
+                            isPopup={!showSub}
                         />
                     </div>
                 ) : (

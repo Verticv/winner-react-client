@@ -71,13 +71,17 @@ const LiveCasinoBetHistory = ({isState, setState, showSub = true}) => {
     return (
         <div className="w-full">
             {showSub === true && (
-                <div className="mt-10px h-88px w-full bg-gray-eff3f6 rounded-xl p-4px">
-                    <SubHorizontalMenu itemsArray={subTabsArray} isState={isState} setState={setState} />
-                </div>
+                <>
+                    <div className="mt-10px h-88px w-full bg-gray-eff3f6 rounded-xl p-4px">
+                        <SubHorizontalMenu itemsArray={subTabsArray} isState={isState} setState={setState} />
+                    </div>
+
+                    <DateSearchBar isLeagueSearch={false} />
+                </>
+
             )}
             
 
-            <DateSearchBar isLeagueSearch={false} />
 
             <div className="w-full h-full mt-20px">
                 <LiveCasinoBetHistoryTable 
