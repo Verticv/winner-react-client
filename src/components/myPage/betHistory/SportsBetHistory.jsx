@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import DateSearchBar from '../DateSearchBar';
 import SportsBetHistoryPanel from './SportsBetHistoryPanel'
 
-const SportsBetHistory = ({checkedState, setCheckedState , showSub = true}) => {
+const SportsBetHistory = ({checkedState, setCheckedState , showSub = true, attachedArray, setAttachedArray, setPopupOpen}) => {
 
     const [isAllSelected, setAllSelected] = useState(false)
 
@@ -26,9 +26,9 @@ const SportsBetHistory = ({checkedState, setCheckedState , showSub = true}) => {
 
             <div className="w-full h-full mt-20px">
                 <div className="space-y-15px">
-                    <SportsBetHistoryPanel isPopup={!showSub} type={0} checkedState={checkedState} setCheckedState={setCheckedState}/>
-                    <SportsBetHistoryPanel isPopup={!showSub} type={1} winAmount="+900,000,000" checkedState={checkedState} setCheckedState={setCheckedState}/>
-                    <SportsBetHistoryPanel isPopup={!showSub} type={2} checkedState={checkedState} setCheckedState={setCheckedState} />
+                    <SportsBetHistoryPanel isPopup={!showSub} type={0} checkedState={checkedState} setCheckedState={setCheckedState} attachedArray={attachedArray} setAttachedArray={setAttachedArray} setPopupOpen={setPopupOpen}/>
+                    <SportsBetHistoryPanel isPopup={!showSub} type={1} winAmount="+900,000,000" checkedState={checkedState} setCheckedState={setCheckedState} attachedArray={attachedArray} setAttachedArray={setAttachedArray} setPopupOpen={setPopupOpen}/>
+                    <SportsBetHistoryPanel isPopup={!showSub} type={2} checkedState={checkedState} setCheckedState={setCheckedState} attachedArray={attachedArray} setAttachedArray={setAttachedArray} setPopupOpen={setPopupOpen}/>
                 </div>
                 <div className="mt-40px h-36px w-full flex items-center justify-between">
                     <div className="flex space-x-2px">

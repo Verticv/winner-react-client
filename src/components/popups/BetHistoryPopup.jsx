@@ -172,7 +172,7 @@ const BetHistoryPopup = ({setPopupOpen, setAttachedArray, attachedArray}) => {
                             ? "565px" 
                             : "485px"
                         }} 
-                        className="overflow-y-scroll mt-30px py-5px px-6px space-y-28px -pt-10px"
+                        className="overflow-y-auto mt-30px py-5px px-6px space-y-28px -pt-10px"
                     >
                         {selectedTab === 0 ? (
                             <div className="-mt-20px">
@@ -184,7 +184,7 @@ const BetHistoryPopup = ({setPopupOpen, setAttachedArray, attachedArray}) => {
                             </div>
                         ) : selectedTab === 2 ? (
                             <div className="-mt-20px space-y-20px">
-                                <SportsBetHistory  checkedState={checkedState} setCheckedState={setCheckedState} showSub={false} />
+                                <SportsBetHistory  checkedState={checkedState} setCheckedState={setCheckedState} showSub={false} attachedArray={attachedArray} setAttachedArray={setAttachedArray} setPopupOpen={setPopupOpen} />
                             </div>
                         ) : selectedTab === 3 ? (
                             <div className="-mt-20px">
@@ -192,7 +192,7 @@ const BetHistoryPopup = ({setPopupOpen, setAttachedArray, attachedArray}) => {
                             </div>
                         ) : selectedTab === 4 ? (
                             <div className="-mt-20px">
-                                <MinigameBetHistory isState={selectedSubTab} setState={setSelectedSubTab} showSub={false} />
+                                <MinigameBetHistory isState={selectedSubTab} setState={setSelectedSubTab} showSub={false}  attachedArray={attachedArray} setAttachedArray={setAttachedArray} setPopupOpen1={setPopupOpen}/>
                             </div>
                         ) : selectedTab === 5 ? (
                             <div className="-mt-20px">

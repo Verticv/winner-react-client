@@ -57,7 +57,7 @@ const tableArray = [
     },
 ];
 
-const MinigameBetHistory = ({isState, setState, showSub = true}) => {
+const MinigameBetHistory = ({isState, setState, showSub = true, attachedArray, setAttachedArray, setPopupOpen1}) => {
 
     const [checkedState, setCheckedState] = useState(new Array(3).fill(false))
     const [isAllSelected, setAllSelected] = useState(false)
@@ -108,6 +108,9 @@ const MinigameBetHistory = ({isState, setState, showSub = true}) => {
                             checkedState={checkedState} 
                             setCheckedState={setCheckedState}
                             isPopup={!showSub}
+                            attachedArray={attachedArray} 
+                            setAttachedArray={setAttachedArray}
+                            setPopupOpen={setPopupOpen1}
                         />
                         <MinigameBetHistoryPanel 
                             id={1} 
@@ -119,6 +122,9 @@ const MinigameBetHistory = ({isState, setState, showSub = true}) => {
                             result="win"
                             winAmount="+900,000,000"
                             isPopup={!showSub}
+                            attachedArray={attachedArray} 
+                            setAttachedArray={setAttachedArray}
+                            setPopupOpen={setPopupOpen1}
                         />
                     </div>           
                 ) : isState === 3 ? (
@@ -129,6 +135,9 @@ const MinigameBetHistory = ({isState, setState, showSub = true}) => {
                             setCheckedState={setCheckedState}
                             game="스피드키노"
                             isPopup={!showSub}
+                            attachedArray={attachedArray} 
+                            setAttachedArray={setAttachedArray}
+                            setPopupOpen={setPopupOpen1}
                         />
                         <MinigameBetHistoryPanel 
                             id={1} 
@@ -141,6 +150,9 @@ const MinigameBetHistory = ({isState, setState, showSub = true}) => {
                             winAmount="+900,000,000"
                             game="스피드키노"
                             isPopup={!showSub}
+                            attachedArray={attachedArray} 
+                            setAttachedArray={setAttachedArray}
+                            setPopupOpen={setPopupOpen1}
                         />
                     </div> 
                 ) : isState === 4 ? (
@@ -151,6 +163,9 @@ const MinigameBetHistory = ({isState, setState, showSub = true}) => {
                             setCheckedState={setCheckedState}
                             game="키노사다리"
                             isPopup={!showSub}
+                            attachedArray={attachedArray} 
+                            setAttachedArray={setAttachedArray}
+                            setPopupOpen={setPopupOpen1}
                         />
                         <MinigameBetHistoryPanel 
                             id={1} 
@@ -163,6 +178,9 @@ const MinigameBetHistory = ({isState, setState, showSub = true}) => {
                             winAmount="+900,000,000"
                             game="키노사다리"
                             isPopup={!showSub}
+                            attachedArray={attachedArray} 
+                            setAttachedArray={setAttachedArray}
+                            setPopupOpen={setPopupOpen1}
                         />
                     </div>
                 ) : (

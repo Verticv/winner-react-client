@@ -51,7 +51,7 @@ const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
                     <div className="flex w-full mt-8px space-x-8px">
                         <div 
                             style={{width: "905px", height: "509px", backgroundColor:"#e8e8e8"}}
-                            className="rounded-xl  flex justify-center border border-gray-dddddd pl-12px"
+                            className="rounded-xl  flex justify-center border border-gray-dddddd pl-24px"
                         >
                             {
                                 selectedGame === "/minigame/powerball"

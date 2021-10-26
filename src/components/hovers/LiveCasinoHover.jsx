@@ -96,7 +96,7 @@ const LiveCasinoHover = ({selection}) => {
         <Expand 
             open={selection === 0} 
             duration={200} 
-            className="absolute w-full h-full bg-white bg-opacity-80 shadow-inner border-b-2 border-gray-300 space-y-50px flex items-center justify-center" 
+            className="absolute w-1920 h-244px bg-white bg-opacity-80 shadow-inner border-b-2 border-gray-300 space-y-50px" 
             
         >
             <div style={{ width: '1920px',}} onMouseLeave={() => setHover(2)}>
