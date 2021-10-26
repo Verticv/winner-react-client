@@ -11,7 +11,7 @@ const SportsGamePolicyTable2 = ({array}) => {
                         <p>{item.title2}</p>
                     )}
                 </td>
-                <td style={{width: "792px"}} className="h-56px pl-20px -space-y-4px">
+                <td style={{width: "792px", WebkitTextStroke:"0.2px"}} className="h-56px pl-20px -space-y-4px">
                     <p>{item.text}</p>
                     <p>{item.text2}</p>
                 </td>

@@ -121,18 +121,18 @@ const WinLoseTable = ({
                 style={{backgroundColor: item.id % 2 === 0 ? "#fefefe" : "#f8f9fb"}} 
                 className="font-spoqa text-14px tracking-tight text-gray-r585858 h-56px w-full border-b border-gray-dddddd"
             >
-                <td className="w-100px font-robotoRegular h-56px text-center flex items-center justify-center pt-6px"><RadioButton id={item.id}/></td>
-                <td className="w-64px h-56px text-center font-robotoRegular">{item.number}</td>
-                <td className="w-176px h-56px text-center font-robotoRegular">{item.startDate}</td>
-                <td className="w-136px h-56px text-center font-robotoRegular">{item.endDate}</td>
-                <td className="w-265px h-56px text-center">{item.type}</td>
+                <td style={{WebkitTextStroke:"0.2px"}} className="w-100px font-robotoRegular h-56px text-center flex items-center justify-center pt-6px"><RadioButton id={item.id}/></td>
+                <td style={{WebkitTextStroke:"0.2px"}} className="w-64px h-56px text-center font-robotoRegular">{item.number}</td>
+                <td style={{WebkitTextStroke:"0.2px"}} className="w-176px h-56px text-center font-robotoRegular">{item.startDate}</td>
+                <td style={{WebkitTextStroke:"0.2px"}} className="w-136px h-56px text-center font-robotoRegular">{item.endDate}</td>
+                <td style={{WebkitTextStroke:"0.2px"}} className="w-265px h-56px text-center">{item.type}</td>
                 <td 
-                    style={{color: item.amount.includes("+") ? "#d52e2e" : item.amount.includes("-") ? "#0056a6" : "#585858"}}
+                    style={{color: item.amount.includes("+") ? "#d52e2e" : item.amount.includes("-") ? "#0056a6" : "#585858", WebkitTextStroke:"0.2px"}}
                     className="w-170px h-56px text-center font-robotoRegular"
                 >
                     {item.amount}
                 </td>
-                <td className="w-128px h-56px text-center">{item.status}</td>
+                <td style={{WebkitTextStroke:"0.2px"}} className="w-128px h-56px text-center">{item.status}</td>
             </tr>
         ));
     }

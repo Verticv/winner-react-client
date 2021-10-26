@@ -31,13 +31,13 @@ const LiveCasinoBetHistoryTable = ({array, checkedState, setCheckedState, isPopu
                         onChange={() => handleOnChange(item.id)}
                     />
                 </td>
-                <td style={{width: "74px"}} className="font-robotoRegular text-center">{item.number}</td>
-                <td style={{width: "183px"}} className="font-robotoRegular text-center">{item.time}</td>
-                <td style={{width: "146px"}} className="text-center">{item.type}</td>
-                <td style={{width: "115px"}} className="text-center">{item.name}</td>
-                <td style={{width: "119px"}} className="font-robotoRegular text-right">{item.amount}</td>
-                <td style={{width: "140px", color: item.profit.includes("+") ? "#d52e2e" : "#585858"}} className="font-robotoRegular text-right">{item.profit}</td>
-                <td style={{width: "87px", color: item.status === "승" ? "#d52e2e" : "#585858"}} className="text-center">{item.status}</td>
+                <td style={{width: "74px", WebkitTextStroke:"0.2px"}} className="font-robotoRegular text-center">{item.number}</td>
+                <td style={{width: "183px", WebkitTextStroke:"0.2px"}} className="font-robotoRegular text-center">{item.time}</td>
+                <td style={{width: "146px", WebkitTextStroke:"0.2px"}} className="text-center">{item.type}</td>
+                <td style={{width: "115px", WebkitTextStroke:"0.2px"}} className="text-center">{item.name}</td>
+                <td style={{width: "119px", WebkitTextStroke:"0.2px"}} className="font-robotoRegular text-right">{item.amount}</td>
+                <td style={{width: "140px", WebkitTextStroke:"0.2px", color: item.profit.includes("+") ? "#d52e2e" : "#585858"}} className="font-robotoRegular text-right">{item.profit}</td>
+                <td style={{width: "87px", WebkitTextStroke:"0.2px", color: item.status === "승" ? "#d52e2e" : "#585858"}} className="text-center">{item.status}</td>
                 <td style={{width: "90px"}} className="text-center pr-17px">
                     <PopupControls buttonChild={detailButton} isPopupOpen={isPopupOpen} setPopupOpen={setPopupOpen}>
                         <LiveCasinoHistoryDetailPopup setPopupOpen={setPopupOpen} />

@@ -31,15 +31,15 @@ const MinigameBetHistoryTable = ({array, checkedState, setCheckedState, isPopupO
                         onChange={() => handleOnChange(item.id)}
                     />
                 </div>
-                <div style={{width: "86px"}} className="font-robotoRegular text-center">{item.number}</div>
-                <div style={{width: "111px"}} className="font-robotoRegular text-center">{item.time}</div>
-                <div style={{width: "98px"}} className="text-center">{item.type}</div>
-                <div style={{width: "119px"}} className="text-center">{item.name}</div>
-                <div style={{width: "84px"}} className="text-center">{item.history}</div>
-                <div style={{width: "108px"}} className="font-robotoRegular text-right">{item.amount}</div>
-                <div style={{width: "79px"}} className="text-center">{item.percentage}</div>
-                <div style={{width: "123px", color: item.profit.includes("+") ? "#d52e2e" : "#585858"}} className="font-robotoRegular text-right">{item.profit}</div>
-                <div style={{width: "54px", color: item.status === "승" ? "#d52e2e" : "#585858"}} className="text-center">{item.status}</div>
+                <div style={{width: "86px", WebkitTextStroke:"0.2px"}} className="font-robotoRegular text-center">{item.number}</div>
+                <div style={{width: "111px", WebkitTextStroke:"0.2px"}} className="font-robotoRegular text-center">{item.time}</div>
+                <div style={{width: "98px", WebkitTextStroke:"0.2px"}} className="text-center">{item.type}</div>
+                <div style={{width: "119px", WebkitTextStroke:"0.2px"}} className="text-center">{item.name}</div>
+                <div style={{width: "84px", WebkitTextStroke:"0.2px"}} className="text-center">{item.history}</div>
+                <div style={{width: "108px", WebkitTextStroke:"0.2px"}} className="font-robotoRegular text-right">{item.amount}</div>
+                <div style={{width: "79px", WebkitTextStroke:"0.2px"}} className="text-center">{item.percentage}</div>
+                <div style={{width: "123px", WebkitTextStroke:"0.2px", color: item.profit.includes("+") ? "#d52e2e" : "#585858"}} className="font-robotoRegular text-right">{item.profit}</div>
+                <div style={{width: "54px", WebkitTextStroke:"0.2px", color: item.status === "승" ? "#d52e2e" : "#585858"}} className="text-center">{item.status}</div>
                 <div style={{width: "107px"}} className="text-center pr-17px">
                     <PopupControls buttonChild={detailButton} isPopupOpen={isPopupOpen} setPopupOpen={setPopupOpen}>
                         <LiveCasinoHistoryDetailPopup setPopupOpen={setPopupOpen} />

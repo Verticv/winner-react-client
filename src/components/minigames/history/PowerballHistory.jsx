@@ -22,25 +22,26 @@ const PowerballHistory = ({array, checkedState, setCheckedState}) => {
                         onChange={() => handleOnChange(item.id)}
                     />
                 </div>
-                <div style={{width: "117px"}} className="flex justify-center">{item.number}</div>
-                <div style={{width: "147px"}} className="flex justify-center">{item.eventCount}</div>
-                <div style={{width: "170px"}} className="flex justify-center">{item.betTime}</div>
-                <div style={{width: "164px"}} className="flex justify-center">{item.type}</div>
+                <div style={{width: "117px", WebkitTextStroke:"0.2px"}} className="flex justify-center">{item.number}</div>
+                <div style={{width: "147px", WebkitTextStroke:"0.2px"}} className="flex justify-center">{item.eventCount}</div>
+                <div style={{width: "170px", WebkitTextStroke:"0.2px"}} className="flex justify-center">{item.betTime}</div>
+                <div style={{width: "164px", WebkitTextStroke:"0.2px"}} className="flex justify-center">{item.type}</div>
                 <div style={{width: "95px"}} className="flex justify-center items-center">
                     <div 
-                    style={{
-                        backgroundColor: 
-                        item.historyType === 0 
-                        ? "#d52e2e" 
-                        : item.historyType === 1 
-                        ? "#00c051" 
-                        : item.historyType === 2 
-                        ? "#d52e2e" 
-                        : item.historyType === 3 
-                        ? "#2e6dd5"
-                        : ""
-                    }} 
-                    className="h-44px w-44px rounded-full bg-black text-white flex items-center justify-center text-14px font-spoqaMedium tracking-tight pt-2px">
+                        style={{
+                            backgroundColor: 
+                            item.historyType === 0 
+                            ? "#d52e2e" 
+                            : item.historyType === 1 
+                            ? "#00c051" 
+                            : item.historyType === 2 
+                            ? "#d52e2e" 
+                            : item.historyType === 3 
+                            ? "#2e6dd5"
+                            : ""
+                        }} 
+                        className="h-44px w-44px rounded-full bg-black text-white flex items-center justify-center text-14px font-spoqaMedium tracking-tight pt-2px"
+                    >
                         {
                         item.historyType === 0 
                         ? "짝" 
@@ -64,10 +65,10 @@ const PowerballHistory = ({array, checkedState, setCheckedState}) => {
                     }
                     </div>
                 </div> 
-                <div style={{width: "126px"}} className="flex justify-center">{item.percentage}</div>
-                <div style={{width: "112px"}} className="flex justify-end">{item.betAmount}</div>
-                <div style={{width: "121px", color: item.profit.includes("+") ? "#d52e2e" : "#585858"}} className="flex justify-end">{item.profit}</div>
-                <div style={{width: "107px", color: item.win ? "#d52e2e" : "#585858"}} className="flex justify-center">{item.win === true ? "승" : "패"}</div>
+                <div style={{width: "126px", WebkitTextStroke:"0.2px"}} className="flex justify-center">{item.percentage}</div>
+                <div style={{width: "112px", WebkitTextStroke:"0.2px"}} className="flex justify-end">{item.betAmount}</div>
+                <div style={{width: "121px", color: item.profit.includes("+") ? "#d52e2e" : "#585858", WebkitTextStroke:"0.2px"}} className="flex justify-end">{item.profit}</div>
+                <div style={{width: "107px", color: item.win ? "#d52e2e" : "#585858", WebkitTextStroke:"0.2px"}} className="flex justify-center">{item.win === true ? "승" : "패"}</div>
             </div>
         ));
     }

@@ -13,22 +13,22 @@ const MoneyExchangeTable = () => {
             </thead>
             <tbody className="w-full text-585858 text-14px tracking-tight font-spoqa">
                 <tr className="bg-gray-fefefe rounded-3xl font-spoqa text-14px tracking-tight text-gray-r585858 h-56px w-full border-b border-gray-dddddd">
-                    <td style={{width: "258px"}} className="font-robotoRegular h-56px text-center flex-shrink-0">2021-06-29 15:45:41</td>
-                    <td style={{width: "284px"}} className="h-56px text-right pr-100px font-robotoRegular">12,000</td>
-                    <td style={{width: "247px"}} className="h-56px text-center font-robotoRegular">2021-06-29 15:45:41</td>
-                    <td style={{width: "204px"}} className="h-56px text-center text-blue-r0056a6">완료</td>
+                    <td style={{width: "258px", WebkitTextStroke:"0.2px"}} className="font-robotoRegular h-56px text-center flex-shrink-0">2021-06-29 15:45:41</td>
+                    <td style={{width: "284px", WebkitTextStroke:"0.2px"}} className="h-56px text-right pr-100px font-robotoRegular">12,000</td>
+                    <td style={{width: "247px", WebkitTextStroke:"0.2px"}} className="h-56px text-center font-robotoRegular">2021-06-29 15:45:41</td>
+                    <td style={{width: "204px", WebkitTextStroke:"0.2px"}} className="h-56px text-center text-blue-r0056a6">완료</td>
                 </tr>
                 <tr className="bg-gray-fefefe rounded-3xl font-spoqa text-14px tracking-tight text-gray-r585858 h-56px w-full border-b border-gray-dddddd">
-                    <td style={{width: "258px"}} className="font-robotoRegular h-56px text-center flex-shrink-0">2021-06-29 15:45:41</td>
-                    <td style={{width: "284px"}} className="h-56px text-right pr-100px font-robotoRegular">100,000</td>
-                    <td style={{width: "247px"}} className="h-56px text-center font-robotoRegular">2021-06-29 15:45:41</td>
-                    <td style={{width: "204px"}} className="h-56px text-center">취소</td>
+                    <td style={{width: "258px", WebkitTextStroke:"0.2px"}} className="font-robotoRegular h-56px text-center flex-shrink-0">2021-06-29 15:45:41</td>
+                    <td style={{width: "284px", WebkitTextStroke:"0.2px"}} className="h-56px text-right pr-100px font-robotoRegular">100,000</td>
+                    <td style={{width: "247px", WebkitTextStroke:"0.2px"}} className="h-56px text-center font-robotoRegular">2021-06-29 15:45:41</td>
+                    <td style={{width: "204px", WebkitTextStroke:"0.2px"}} className="h-56px text-center">취소</td>
                 </tr>
                 <tr className="bg-gray-fefefe rounded-3xl font-spoqa text-14px tracking-tight text-gray-r585858 h-56px w-full border-b border-gray-dddddd">
-                    <td style={{width: "258px"}} className="font-robotoRegular h-56px text-center flex-shrink-0">2021-06-29 15:45:41</td>
-                    <td style={{width: "284px"}} className="h-56px text-right pr-100px font-robotoRegular">50,000</td>
-                    <td style={{width: "247px"}} className="h-56px text-center font-robotoRegular">2021-06-29 15:45:41</td>
-                    <td style={{width: "204px"}} className="h-56px text-center text-blue-r0056a6">완료</td>
+                    <td style={{width: "258px", WebkitTextStroke:"0.2px"}} className="font-robotoRegular h-56px text-center flex-shrink-0">2021-06-29 15:45:41</td>
+                    <td style={{width: "284px", WebkitTextStroke:"0.2px"}} className="h-56px text-right pr-100px font-robotoRegular">50,000</td>
+                    <td style={{width: "247px", WebkitTextStroke:"0.2px"}} className="h-56px text-center font-robotoRegular">2021-06-29 15:45:41</td>
+                    <td style={{width: "204px", WebkitTextStroke:"0.2px"}} className="h-56px text-center text-blue-r0056a6">완료</td>
                 </tr>
             
             </tbody>

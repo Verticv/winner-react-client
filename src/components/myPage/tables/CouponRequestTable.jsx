@@ -98,12 +98,12 @@ const CouponRequestTable = () => {
     function Cells({ items }) {
         return items.map(item => (
             <tr 
-                style={{backgroundColor: item.id % 2 === 0 ? "#fefefe" : "#f8f9fb"}} 
+                style={{backgroundColor: item.id % 2 === 0 ? "#fefefe" : "#f8f9fb", WebkitTextStroke:"0.2px"}} 
                 className="font-spoqa text-14px tracking-tight text-gray-r454545 h-56px w-full border-b border-gray-dddddd"
             >
-                <td className="w-292px text-center">{item.name}</td>
-                <td className="w-119px text-right text-red-e9441d font-robotoRegular pr-20px">{item.amount}</td>
-                <td className="w-140px text-center">{item.username}</td>
+                <td style={{WebkitTextStroke:"0.2px"}} className="w-292px text-center">{item.name}</td>
+                <td style={{WebkitTextStroke:"0.2px"}} className="w-119px text-right text-red-e9441d font-robotoRegular pr-20px">{item.amount}</td>
+                <td style={{WebkitTextStroke:"0.2px"}} className="w-140px text-center">{item.username}</td>
                 <td 
                     style={{
                         color: item.state === "사용가능" 
@@ -113,13 +113,14 @@ const CouponRequestTable = () => {
                         : item.state === "회수쿠폰"
                         ? "#279140"
                         : "#454545"
+                        , WebkitTextStroke:"0.2px"
                     }} 
                     className="w-141px text-center"
                 >
                     {item.state}
                 </td>
-                <td className="w-88px text-center font-robotoRegular">{item.date}</td>
-                <td className="w-124px text-center font-robotoRegular">{item.expireDate}</td>
+                <td style={{WebkitTextStroke:"0.2px"}} className="w-88px text-center font-robotoRegular">{item.date}</td>
+                <td style={{WebkitTextStroke:"0.2px"}} className="w-124px text-center font-robotoRegular">{item.expireDate}</td>
             </tr>
         ));
     }

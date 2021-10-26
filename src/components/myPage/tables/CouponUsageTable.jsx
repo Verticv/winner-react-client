@@ -107,12 +107,12 @@ const CouponUsageTable = () => {
                 style={{backgroundColor: item.id % 2 === 0 ? "#fefefe" : "#f8f9fb"}} 
                 className="font-spoqa text-14px tracking-tight text-gray-r454545 h-56px w-full border-b border-gray-dddddd"
             >
-                    <td className="w-313px text-center">{item.name}</td>
-                    <td className="w-172px text-right text-red-e9441d pr-20px font-robotoRegular">{item.amount}</td>
-                    <td className="w-111px text-center">{item.username}</td>
-                    <td style={{color: "#ff1237"}} className="w-108px text-center">{item.status}</td>
-                    <td className="w-122px text-center font-robotoRegular">{item.date}</td>
-                    <td className="w-111px text-center font-robotoRegular">{item.expireDate}</td>
+                    <td style={{WebkitTextStroke:"0.2px"}} className="w-313px text-center">{item.name}</td>
+                    <td style={{WebkitTextStroke:"0.2px"}} className="w-172px text-right text-red-e9441d pr-20px font-robotoRegular">{item.amount}</td>
+                    <td style={{WebkitTextStroke:"0.2px"}} className="w-111px text-center">{item.username}</td>
+                    <td style={{color: "#ff1237", WebkitTextStroke:"0.2px"}} className="w-108px text-center">{item.status}</td>
+                    <td style={{WebkitTextStroke:"0.2px"}} className="w-122px text-center font-robotoRegular">{item.date}</td>
+                    <td style={{WebkitTextStroke:"0.2px"}} className="w-111px text-center font-robotoRegular">{item.expireDate}</td>
                     <td className="w-103px pl-13px"><UseButton /></td>
                 </tr>
         ));
