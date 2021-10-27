@@ -11,7 +11,7 @@ import SubNavbar from '../components/mainPage/SubNavbar'
 const MainPage = ({isAuthenticated, setAuthenticated}) => {
 
     return (
-        <div className="relative flex flex-col justify-center limit:overflow-x-hidden">
+        <div className="relative flex flex-col justify-center limit:overflow-x-hidden w-full">
 
             <div className="fixed w-full top-0 z-50 flex flex-col items-start limit1920:items-center">
                 <NoticeBanner />
@@ -33,7 +33,7 @@ const MainPage = ({isAuthenticated, setAuthenticated}) => {
                     <Menus />
                 </div>
 
-                <div className="w-full">
+                <div>
                     <Footer2 />
                     <Footer />
                 </div>
