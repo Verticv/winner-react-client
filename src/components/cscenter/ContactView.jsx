@@ -45,7 +45,7 @@ const ContactView = () => {
                 </div>
 
                 <div className="w-full bg-white py-20px px-16px">
-                    <div style={{borderRadius:"1em"}} className="border border-gray-dddddd h-54px flex items-center px-21px font-spoqa text-14px tracking-tight text-gray-r585858">
+                    <div style={{borderRadius:"1em", WebkitTextStroke:"0.2px"}} className="border border-gray-dddddd h-54px flex items-center px-21px font-spoqa text-14px tracking-tight text-gray-r585858">
                         스포츠북 문의 입니다.
                     </div>
 

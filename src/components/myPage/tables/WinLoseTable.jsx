@@ -157,7 +157,7 @@ const WinLoseTable = ({
             </table>
             <div className="flex bg-gray-fefefe font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px">
                 <div className="w-full bg-gray-dee6ef h-56px flex items-center justify-center font-spoqaMedium text-16px tracking-tight border-r border-gray-dddddd">합계</div>
-                <div className="w-full h-56px text-center flex items-center justify-center font-roboto tracking-tight text-red-500">+120,718</div>
+                <div className="w-full h-56px text-center flex items-center justify-center font-roboto tracking-tight text-red-500 text-16px">+120,718</div>
             </div>
         </div>
     )

@@ -300,7 +300,6 @@ const BetCombinationPanel = ({
     const [selectedCarrier, setSelectedCarrier] = useState("국가선택")
     const [isHover1, setHover1] = useState(null)
     const [isOpen, setOpen] = useState(new Array(20).fill(false))
-    const [isHover2, setHover2] = useState(false)
     const [isButtonClicked, setButtonClicked] = useState("")
     const [isHover3, setHover3] = useState("")
 
@@ -650,7 +649,7 @@ const BetCombinationPanel = ({
         isLastSubarray = false
     }) {
 
-        
+        const [isHover2, setHover2] = useState(false)
 
         const handleOnChange = (position) => {
             const updatedCheckedState = isOpen.map((item, index) =>
@@ -735,11 +734,11 @@ const BetCombinationPanel = ({
         ))
     }
 
-    function LeagueGroup({
+    const LeagueGroup = ({
         flag = NorwayIcon, 
-        title ="노르웨이 - UEFA Europa Conference League",
+        title,
         array = FirstArray
-    }) {
+    }) => {
         const [isHover4, setHover4] = useState("")
 
         return (
@@ -756,9 +755,9 @@ const BetCombinationPanel = ({
                         {title}
                     </p>
                     {isHover4.length > 30 && (
-                        <div style={{}} className="absolute bottom-12px left-407px z-20 h-36px flex items-center">
-                            <div className={`bottom-0 w-20px overflow-hidden inline-block transform -rotate-90 mb-4px -mr-px`}>
-                                <div className="h-10px w-10px bg-gray-f9f9f9 rotate-45 transform origin-bottom-left"></div>
+                        <div style={{marginLeft:"15px"}} className="absolute bottom-12px left-407px z-20 h-36px flex items-center">
+                            <div className={`relative bottom-0 w-20px overflow-hidden inline-block transform -rotate-90 mb-4px -mr-px`}>
+                                <div className="h-10px w-10px bg-gray-f9f9f9 rotate-45 transform origin-bottom-left border border-gray-400"></div>
                             </div>
                             <div style={{color:"#858585", backgroundColor:"#f9f9f9"}} className="px-16px py-8px top-9px text-14px font-spoqaMedium tracking-tight -ml-5px rounded-4px border border-gray-400">
                                 <p className="mt-2px">{title}</p>
@@ -772,8 +771,8 @@ const BetCombinationPanel = ({
                     <LeagueCell array={array} />
                 </div>
             </div>
-        )
-    }    
+        ) 
+    }
 
     return (
         <div style={{borderRadius:"0.5rem"}} className="w-full shadow-subNavbar bg-gray-fafafa">
@@ -830,7 +829,7 @@ const BetCombinationPanel = ({
             </div>
 
             <div className="mt-10px px-10px pb-11px mb-60px space-y-11px">
-                <LeagueGroup />
+                <LeagueGroup title="노르웨이 - UEFA Europa Conference League" />
                 <LeagueGroup flag={AustriaIcon} title="오스트리아 - 컵" array={SecondArray}/>
                 <LeagueGroup flag={NetherlandIcon} title="네덜란드 - D2" array={ThirdArray}/>
                 <LeagueGroup flag={UKIcon} title="영국 - U23" array={FourthArray}/>

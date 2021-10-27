@@ -42,7 +42,7 @@ const SportsBetHistory = ({checkedState, setCheckedState , showSub = true, attac
                                     background: "linear-gradient(to bottom, #555555, #333333)",
                                     borderRadius: "3px"
                                 }}
-                                className="flex items-center justify-center h-34px w-88px rounded-4px border border-gray-r737579 cursor-pointer"
+                                className="flex items-center justify-center h-34px w-88px rounded-4px border border-gray-r737579 cursor-pointer pt-3px"
                             >
                                 <span className="font-spoqaMedium tracking-tight text-14px text-white">{isAllSelected ? "선택해제" : "전체선택"}</span>
                             </div>
@@ -56,14 +56,14 @@ const SportsBetHistory = ({checkedState, setCheckedState , showSub = true, attac
                                     background: "linear-gradient(to bottom, #f03a50, #cf254d)",
                                     borderRadius: "3px"
                                 }}
-                                className="flex items-center justify-center h-34px w-88px rounded-4px border border-red-f36576 cursor-pointer"
+                                className="flex items-center justify-center h-34px w-88px rounded-4px border border-red-f36576 cursor-pointer pt-3px"
                             >
                                 <span className="font-spoqaMedium tracking-tight text-14px text-white">선택삭제</span>
                             </div>
                         </button>
                     </div>
                     <button className="flex items-center justify-center w-159px h-36px rounded-4px bg-blue-r0070d9 hover:opacity-75">
-                        <div className="flex items-center justify-center h-34px w-157px rounded-4px border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
+                        <div className="flex items-center justify-center h-34px w-157px rounded-4px border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer pt-3px">
                             <span className="font-spoqaMedium tracking-tight text-14px text-white">게시판에 내역올리기</span>
                         </div>
                     </button>

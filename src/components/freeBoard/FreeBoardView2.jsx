@@ -86,7 +86,7 @@ const FreeBoardView2 = () => {
                     <SportsBetHistoryPanel type={3} id={0} isAttached={true} noButtons={true} attachedArray={[2]} /> */}
                 </div>
 
-                <div style={{height:"441px"}} className="p-20px bg-white text-14px font-spoqa tracking-tight text-gray-r585858">
+                <div style={{height:"441px", WebkitTextStroke:"0.2px"}} className="p-20px bg-white text-14px font-spoqa tracking-tight text-gray-r585858">
 
                     베팅기록 올려봅니다.
 
@@ -115,7 +115,7 @@ const FreeBoardView2 = () => {
                 <div style={{height:"93px", borderRadius:"1em"}} className="relative flex w-full bg-white border border-gray-dddddd overflow-hidden">
 
                     <textarea 
-                        style={{width: "1099px", resize: "none"}}
+                        style={{width: "1099px", resize: "none", WebkitTextStroke:"0.2px"}}
                         className="outline-none w-full px-19px py-19px text-14px font-spoqa tracking-tight placeholder-gray-r8f8f8f"
                         placeholder="욕설, 상대방 비방글, 타사이트 언급, 홍보 등은 경고없이 삭제되며 사이트 이용에 제한을 받을 수 있습니다."
                     />
@@ -150,7 +150,7 @@ const FreeBoardView2 = () => {
                         </div>
                     </div>
                     
-                    <div style={{borderRadius:"1em"}} className="h-54px w-full bg-white border border-gray-dddddd flex items-center px-20px justify-between">
+                    <div style={{borderRadius:"1em", WebkitTextStroke:"0.2px"}} className="h-54px w-full bg-white border border-gray-dddddd flex items-center px-20px justify-between">
                         <p className="text-15px font-spoqa text-gray-r585858">두개의 이벤트 모두 참여하였습니다</p>
                         <p className="text-gray-r7b7b7b text-13px tracking-tight font-spoqa">2021.06.28 15:36</p>
                     </div>
@@ -183,7 +183,7 @@ const FreeBoardView2 = () => {
                         </div>
                     </div>
                     
-                    <div style={{borderRadius:"1em"}} className="h-54px w-full bg-white border border-gray-dddddd flex items-center px-20px justify-between">
+                    <div style={{borderRadius:"1em", WebkitTextStroke:"0.2px"}} className="h-54px w-full bg-white border border-gray-dddddd flex items-center px-20px justify-between">
                         <p className="text-15px font-spoqa text-gray-r585858">두개의 이벤트 모두 참여하였습니다</p>
                         <p className="text-gray-r7b7b7b text-13px tracking-tight font-spoqa">2021.06.28 15:36</p>
                     </div>
@@ -191,7 +191,7 @@ const FreeBoardView2 = () => {
                 <div style={{height:"115px"}} className="px-20px py-11px">
                     <div style={{height:"93px", borderRadius:"1em"}} className="relative flex w-full bg-white border border-gray-dddddd overflow-hidden">
                         <textarea 
-                            style={{width: "1099px", resize: "none"}}
+                            style={{width: "1099px", resize: "none", WebkitTextStroke:"0.2px"}}
                             className="outline-none w-full px-19px py-19px text-14px font-spoqa tracking-tight placeholder-gray-r8f8f8f"
                             placeholder="두개의 이벤트 모두 참여하였습니다."
                         />
@@ -219,7 +219,7 @@ const FreeBoardView2 = () => {
                         </button>
                     </div>
                     
-                    <div style={{borderRadius:"1em"}} className="h-54px w-full bg-white border border-gray-dddddd flex items-center px-20px justify-between">
+                    <div style={{borderRadius:"1em", WebkitTextStroke:"0.2px"}} className="h-54px w-full bg-white border border-gray-dddddd flex items-center px-20px justify-between">
                         <p className="text-15px font-spoqa text-gray-r585858">두개의 이벤트 모두 참여하였습니다</p>
                         <p className="text-gray-r7b7b7b text-13px tracking-tight font-spoqa">2021.06.28 15:36</p>
                     </div>
@@ -227,7 +227,7 @@ const FreeBoardView2 = () => {
                 <div style={{height:"115px"}} className="px-20px py-11px">
                     <div style={{height:"93px", borderRadius:"1em"}} className="relative flex w-full bg-white border border-gray-dddddd overflow-hidden">
                         <textarea 
-                            style={{width: "1099px", resize: "none"}}
+                            style={{width: "1099px", resize: "none", WebkitTextStroke:"0.2px"}}
                             className="outline-none w-full px-19px py-19px text-14px font-spoqa tracking-tight placeholder-gray-r8f8f8f"
                             placeholder="욕설, 상대방 비방글, 타사이트 언급, 홍보 등은 경고없이 삭제되며 사이트 이용에 제한을 받을 수 있습니다."
                         />
