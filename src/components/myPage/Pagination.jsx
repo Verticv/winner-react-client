@@ -26,7 +26,7 @@ const Pagination = ({page, setPage}) => {
         </button>
     )
 
-    const [selectedPage, setSelectedPage] = useState(2)
+    const [selectedPage, setSelectedPage] = useState(1)
 
     return (
         <div className="relative flex h-32px mb-60px items-center justify-center space-x-6px">

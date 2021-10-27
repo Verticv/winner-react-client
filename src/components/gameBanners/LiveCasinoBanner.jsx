@@ -30,7 +30,7 @@ const LiveCasinoBanner = () => {
             <div 
                 key={item.id} 
                 className={`${cardClass} ${item.id !==6 && item.id !==7 && "angled-gradient"}`} 
-                onClick={() => history.push('/live-casino')}
+                onClick={() => item.id !==6 && item.id !==7 && history.push('/live-casino')}
             >
                 <img className="z-20 object-none" src={item.img} alt="background" />
                 <div className={`${item.id !== 6 && item.id !== 7 && "group-hover:shadow-plain3 "} absolute z-20 left-0 bottom-0 ml-19px mb-19px w-85px h-34px rounded-full flex items-center justify-center text-white font-spoqaBold text-14px pt-px ${item.color}`}>{item.btnText}</div>

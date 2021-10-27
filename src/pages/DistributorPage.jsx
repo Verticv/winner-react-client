@@ -233,7 +233,7 @@ const DistributorPage = ({
                 <div className="w-40px mt-10px flex justify-center items-start">
                     <img src={ReplyArrow} className="object-none" alt="" />
                 </div>
-                <div className="w-full flex flex-col border-r border-gray-dddddd  bg-white">
+                <div className="w-full flex flex-col border-r border-gray-dddddd  bg-white  border-b">
                     <div className="flex h-56px w-full border-b border-gray-dddddd items-center bg-gray-cfd7e0">
 
                         <div className="ml-10px w-231px h-34px rounded-full bg-gray-r5a6067 flex items-center justify-center font-spoqaMedium text-16px tracking-tight">
