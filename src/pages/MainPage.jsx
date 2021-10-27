@@ -18,7 +18,7 @@ const MainPage = ({isAuthenticated, setAuthenticated}) => {
                 <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
             </div>
 
-            <div className="flex justify-start limit:justify-center items-center pb-40px mt-92px">
+            <div className="flex justify-center limit:justify-center items-center pb-40px mt-92px">
                 <Carousel />
             </div>
 
@@ -33,7 +33,7 @@ const MainPage = ({isAuthenticated, setAuthenticated}) => {
                     <Menus />
                 </div>
 
-                <div>
+                <div className="w-full">
                     <Footer2 />
                     <Footer />
                 </div>

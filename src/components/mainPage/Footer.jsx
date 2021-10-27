@@ -41,7 +41,7 @@ const Footer = () => {
     }
 
     return (
-        <div className="flex flex-col items-start limit:items-center bg-gray-ececec w-screen h-190px">
+        <div className="flex flex-col items-start limit:items-center bg-gray-ececec limit:w-screen w-1300 h-190px">
             <div className="flex w-default h-138px mt-29px">
                 {/* BREAK */}
                 <div className="flex flex-col space-y-18px w-297px pr-24px flex-shrink-0">

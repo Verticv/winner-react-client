@@ -184,7 +184,7 @@ const DistributorPage = ({
                         <div className="w-full h-full flex flex-col items-center justify-center -space-y-4px"><span>키론</span><span>가상게임</span></div>
                         <div className="w-full h-full flex items-center justify-center pr-3px">관리</div>
                     </div>
-                    <div className="flex h-56px w-full border-gray-dddddd items-center text-16px tracking-tight font-roboto text-gray-r585858 border-r-2 border-gray-dddddd bg-white">
+                    <div className="flex h-56px w-full border-gray-dddddd items-center text-16px tracking-tight font-roboto text-gray-r585858 border-r-2 border-b border-gray-dddddd bg-white">
                         <div className="w-full h-full flex items-center justify-center font-spoqaMedium text-white bg-gray-r5b6773">변경</div>
                         <div className="w-full h-full flex items-center justify-center">0.00%</div>
                         <div className="w-full h-full flex items-center justify-center">0.00%</div>
@@ -482,14 +482,14 @@ const DistributorPage = ({
             <div 
                 style={{
                     borderTop: (isUserCountOpen[item.id] === true || isUserCountOpen[item.id+1] === true || isUserCountOpen[item.id+2] === true) && "2px solid #1390fa",
-                    borderBottom: (isUserCountOpen[item.id] === true || isUserCountOpen[item.id+1] === true || isUserCountOpen[item.id+2] === true) && "2px solid #dddddd",
+                    // borderBottom: (isUserCountOpen[item.id] === true || isUserCountOpen[item.id+1] === true || isUserCountOpen[item.id+2] === true) && "2px solid #dddddd",
                 }}
                 className={`flex flex-col`}
                 >
 
                 {(isUserCountOpen[item.id] === true && item.hasSubArray === true) && (
                     <>
-                    <div className="w-full flex">
+                    <div className="w-full flex" >
                         <div className="w-40px mt-10px flex justify-center items-start">
                             <img src={ReplyArrow} className="object-none" alt="" />
                         </div>
@@ -919,7 +919,7 @@ const DistributorPage = ({
                     </div>
 
                     {/* === 추천회원내역 표 === */}
-                    <div style={{filter: "drop-shadow(0px 2px 2px #00000020)"}} className="flex flex-col mt-21px w-full rounded-md border-t border-b border-gray-dddddd overflow-hidden">
+                    <div style={{filter: "drop-shadow(0px 0px 2px #00000050)"}} className="flex flex-col mt-21px w-full rounded-md border-t border-b border-gray-dddddd overflow-hidden">
                         {/* === Header === */}
                         <div className="h-67px w-full bg-gray-r8e9296 border-b border-r-2 border-l-2 border-gray-dddddd flex items-center justify-evenly font-spoqa text-16px text-white tracking-tight">
                             <div className="w-114px text-center">번호</div>
