@@ -157,7 +157,7 @@ const DistributorPage = ({
         <>
             <div className="w-full flex">
                 <div className="w-40px mt-10px flex justify-center items-start">
-                    <img src={ReplyArrow} className="object-none" alt="" />
+                    {/* <img src={ReplyArrow} className="object-none" alt="" /> */}
                 </div>
                 <div className="h-112px w-full flex flex-col">
                     <div className="flex h-56px w-full border-b border-gray-dddddd items-center text-white font-spoqaMedium text-16px tracking-tight bg-gray-r687b8e">
@@ -231,7 +231,7 @@ const DistributorPage = ({
         <>
             <div className="w-full flex">
                 <div className="w-40px mt-10px flex justify-center items-start">
-                    <img src={ReplyArrow} className="object-none" alt="" />
+                    {/* <img src={ReplyArrow} className="object-none" alt="" /> */}
                 </div>
                 <div className="w-full flex flex-col border-r border-gray-dddddd  bg-white  border-b">
                     <div className="flex h-56px w-full border-b border-gray-dddddd items-center bg-gray-cfd7e0">
@@ -484,14 +484,20 @@ const DistributorPage = ({
                     borderTop: (isUserCountOpen[item.id] === true || isUserCountOpen[item.id+1] === true || isUserCountOpen[item.id+2] === true) && "2px solid #1390fa",
                     // borderBottom: (isUserCountOpen[item.id] === true || isUserCountOpen[item.id+1] === true || isUserCountOpen[item.id+2] === true) && "2px solid #dddddd",
                 }}
-                className={`flex flex-col`}
-                >
+                className={`flex flex-col relative`}
+            >
+                {(isUserCountOpen[item.id] === true || isUserCountOpen[item.id + 1] === true || isUserCountOpen[item.id + 2] === true) &&
+                    <div className="absolute w-40px mt-10px flex justify-center items-start">
+                        <img src={ReplyArrow} className="object-none" alt="" />
+                    </div>
+                }
+
 
                 {(isUserCountOpen[item.id] === true && item.hasSubArray === true) && (
                     <>
                     <div className="w-full flex" >
                         <div className="w-40px mt-10px flex justify-center items-start">
-                            <img src={ReplyArrow} className="object-none" alt="" />
+                            {/* <img src={ReplyArrow} className="object-none" alt="" /> */}
                         </div>
                         <div className=" w-full flex flex-col ">
                             {/* === Header === */}
@@ -919,7 +925,7 @@ const DistributorPage = ({
                     </div>
 
                     {/* === 추천회원내역 표 === */}
-                    <div style={{filter: "drop-shadow(0px 0px 2px #00000050)"}} className="flex flex-col mt-21px w-full rounded-md border-t border-b border-gray-dddddd overflow-hidden">
+                    <div style={{filter: "drop-shadow(0px 0px 2px #00000050)"}} className="flex flex-col mt-21px w-full rounded-md border-t  border-gray-dddddd overflow-hidden">
                         {/* === Header === */}
                         <div className="h-67px w-full bg-gray-r8e9296 border-b border-r-2 border-l-2 border-gray-dddddd flex items-center justify-evenly font-spoqa text-16px text-white tracking-tight">
                             <div className="w-114px text-center">번호</div>
