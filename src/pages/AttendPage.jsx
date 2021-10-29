@@ -21,7 +21,7 @@ const AttendPage = ({isAuthenticated, setAuthenticated}) => {
             </div>
 
 
-            <div className="flex flex-col items-start limit:items-center mt-92px w-full h-full">
+            <div className="flex flex-col items-start limit:items-center limit:mt-92px mt-122px w-full h-full">
 
                 <Route path="/attendance">
                     <DirectoryComponent 
