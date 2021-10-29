@@ -43,10 +43,10 @@ const MinigamesHover = ({selection}) => {
         <Expand
             open={selection === 4} 
             duration={200} 
-            className="absolute w-1920 h-244px bg-white bg-opacity-80 shadow-inner border-b-2 border-gray-300 space-y-50px"
+            className="absolute w-full h-244px bg-white bg-opacity-80 shadow-inner border-b-2 border-gray-300 space-y-50px"
         >
-            <div style={{ width: '1920px', height: '244px'}}>
-                <div className="flex justify-center pt-6px">
+            <div>
+                <div className="flex ml-100px  justify-center pt-6px grid grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 2xl:flex 500px lg:500px xl:500px 2xl:h-244px h-500px">
                     <GamesList items={gamesArray} />
                 </div>
             </div>

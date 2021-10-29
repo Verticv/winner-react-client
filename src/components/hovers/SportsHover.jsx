@@ -70,9 +70,9 @@ const SportsHover = ({selection}) => {
         <Expand
             open={selection === 2} 
             duration={200} 
-            className="absolute w-1920 h-244px bg-white bg-opacity-80 shadow-inner border-b-2 border-gray-300 space-y-50px"
+            className="absolute w-full h-244px bg-white bg-opacity-80 shadow-inner border-b-2 border-gray-300 space-y-50px"
         >
-            <div style={{ width: '1920px', height: '244px'}}>
+            <div style={{height: '244px'}}>
                 <div className="flex justify-center pt-6px">
                     <GamesList items={gamesArray} />
                 </div>

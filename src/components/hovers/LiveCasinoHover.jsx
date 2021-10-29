@@ -82,7 +82,7 @@ const LiveCasinoHover = ({selection}) => {
     function ItemsList({ items }) {
         return items.map(item => (
             <button key={item.id} className="relative group :w-254px h-57px">
-                <div className="z-20 absolute h-57px flex items-center">
+                <div className="z-20 absolute h-57px flex items-center flex-shrink-0">
                     <img className={item.customCss} src={item.icon} alt="icon" />
                     <span className={`font-spoqaMedium ml-4px mt-px text-14px tracking-tight ${item.color}`}>{item.btnText}</span>
                 </div>
@@ -96,26 +96,21 @@ const LiveCasinoHover = ({selection}) => {
         <Expand 
             open={selection === 0} 
             duration={200} 
-            className="absolute w-1920 h-244px bg-white bg-opacity-80 shadow-inner border-b-2 border-gray-300 space-y-50px" 
+            className="absolute w-full h-244px bg-white bg-opacity-80 shadow-inner border-b-2 border-gray-300 space-y-50px" 
             
         >
-            <div style={{ width: '1920px',}} onMouseLeave={() => setHover(2)}>
-                <div className="h-244px flex ml-80px -space-x-2 pt-6px">
+            <div onMouseLeave={() => setHover(2)}>
+                <div className="grid grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 2xl:flex 500px lg:500px xl:500px 2xl:h-244px h-500px flex ml-80px -space-x-2 pt-6px">
                     <GamesList items={gamesArray} />
                 </div>
                 <Expand
                     open={isHover === 0}
                     duration={200}
                 >
-                    <div style={{height:"96px"}} className="ml-60px -space-x-33px flex items-center">
+                    <div className="grid grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 2xl:flex limit:ml-60px limit:-space-x-33px flex items-center h-200px lg:h-140px xl:h-140px 2xl:h-96ox -gap-y-10px limit:gap-y-0">
                         <ItemsList items={itemsArray} />
                     </div>
                 </Expand>
-                {/* {isHover === 0 && (
-                    <div style={{height:"96px"}} className="ml-60px -space-x-33px flex items-center">
-                        <ItemsList items={itemsArray} />
-                    </div>
-                )} */}
                 
             </div>
         </Expand>

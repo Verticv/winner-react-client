@@ -118,11 +118,11 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
     )
 
     const LoginButton = (
-        <button className="flex items-center justify-center text-white w-104px h-40px rounded-full bg-gradient-to-br from-blue-gradLight to-blue-gradDark text-16px font-spoqaBold shadow-plain2 pt-px hover:opacity-75">로그인</button>
+        <button className="flex items-center justify-center text-white w-104px limit:h-40px h-30px rounded-full bg-gradient-to-br from-blue-gradLight to-blue-gradDark text-16px font-spoqaBold shadow-plain2 pt-px hover:opacity-75">로그인</button>
     )
 
     const SignupButton = (
-        <button className="flex items-center justify-center text-white w-104px h-40px rounded-full bg-gradient-to-br from-blue-darkGradLight to-blue-darkGradDark text-16px font-spoqaBold shadow-plain2 pt-px hover:opacity-75">회원가입</button>
+        <button className="flex items-center justify-center text-white w-104px  limit:h-40px h-30px rounded-full bg-gradient-to-br from-blue-darkGradLight to-blue-darkGradDark text-16px font-spoqaBold shadow-plain2 pt-px hover:opacity-75">회원가입</button>
     )
 
     const InboxButton = (
@@ -165,7 +165,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
                     </div>
 
                 ) : (
-                    <div className="flex space-x-3 items-center flex-shrink-0">
+                    <div className="flex space-x-3 items-center flex-shrink-0 mt-5px">
                         <PopupControls buttonChild={LoginButton} isPopupOpen={isPopupOpen} setPopupOpen={setPopupOpen}>
                             <LoginPopup setAuth={setAuth} setPopupOpen={setPopupOpen}/>
                         </PopupControls>  
