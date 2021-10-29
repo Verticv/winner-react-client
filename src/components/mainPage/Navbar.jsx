@@ -165,7 +165,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
                     </div>
 
                 ) : (
-                    <div className="flex space-x-3 items-center flex-shrink-0 mt-5px">
+                    <div className="flex space-x-3 items-center flex-shrink-0 limit:mt-0 mt-5px">
                         <PopupControls buttonChild={LoginButton} isPopupOpen={isPopupOpen} setPopupOpen={setPopupOpen}>
                             <LoginPopup setAuth={setAuth} setPopupOpen={setPopupOpen}/>
                         </PopupControls>  
