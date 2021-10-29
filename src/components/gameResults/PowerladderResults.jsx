@@ -19,6 +19,19 @@ const PowerladderResults = ({title="파워사다리", icon}) => {
         {id:2, team1: "좌 [211회]", team2: "[211회] 우", bet:"left"},
     ]
 
+    const ExampleArray4 = [
+        {id:0, team1: "언더 [211회]", team2: "[211회] 오버", bet:"left"},
+        {id:1, team1: "홀 [211회]", team2: "[211회] 짝", bet:"right"},
+    ]
+    const ExampleArray5 = [
+        {id:0, team1: "언더 [211회]", team2: "[211회] 오버", bet:"right"},
+        {id:1, team1: "홀 [211회]", team2: "[211회] 짝", bet:"left"},
+    ]
+    const ExampleArray6 = [
+        {id:0, team1: "언더 [211회]", team2: "[211회] 오버", bet:"left"},
+        {id:1, team1: "홀 [211회]", team2: "[211회] 짝", bet:"left"},
+    ]
+
     const CardContent = ({
         bet, 
         team1, 
@@ -133,9 +146,9 @@ const PowerladderResults = ({title="파워사다리", icon}) => {
                 <div style={{marginLeft:"235px"}}>패(원정)</div>
             </div>
             <div className="px-10px space-y-10px pb-12px">
-                <Table array={ExampleArray} />
-                <Table array={ExampleArray2} />
-                <Table array={ExampleArray3} />
+                <Table array={title === "스피드키노" ? ExampleArray4 : ExampleArray} />
+                <Table array={title === "스피드키노" ? ExampleArray5 : ExampleArray2} />
+                <Table array={title === "스피드키노" ? ExampleArray6 : ExampleArray3} />
             </div>
         </div>
     )

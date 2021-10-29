@@ -19,8 +19,8 @@ const MinigameResults = ({pageTitle = "미니게임"}) => {
     const tabsArray = [
         { text: "파워볼", icon: Icon1, id: 0, path: "/gameresults/minigame/powerball" },
         { text: "파워사다리", icon: Icon2, id: 1, path: "/gameresults/minigame/powerladder" },
-        { text: "스피드키노", icon: Icon3, id: 2, path: "/gameresults/minigame/speedkino" },
-        { text: "키노사다리", icon: Icon4, id: 3, path: "/gameresults/minigame/kinoladder" },
+        { text: "스피드키노", icon: Icon4, id: 2, path: "/gameresults/minigame/speedkino" },
+        { text: "키노사다리", icon: Icon3, id: 3, path: "/gameresults/minigame/kinoladder" },
     ];
 
     const [page, setPage] = useState(0)

@@ -113,7 +113,7 @@ const FreeBoardMain = () => {
             replies: 20,
             time: "2021.06.28 15:36",
             type: "일반",
-            path: '/freeboard/view/2805',
+            path: '/freeboard/view2/2805',
             author: "필라델피아",
             level: 3
         },
@@ -125,7 +125,7 @@ const FreeBoardMain = () => {
             replies: 2,
             time: "2021.06.28 15:36",
             type: "일반",
-            path: '/freeboard/view/2804',
+            path: '/freeboard/view2/2804',
             author: "하이도1207",
             level: 1
         },
@@ -136,7 +136,7 @@ const FreeBoardMain = () => {
             isBetHistory: true,
             time: "2021.06.28 15:36",
             type: "일반",
-            path: '/freeboard/view/2803',
+            path: '/freeboard/view2/2803',
             author: "소유",
             level: 1
         },
@@ -147,7 +147,7 @@ const FreeBoardMain = () => {
             isBetHistory: true,
             time: "2021.06.28 15:36",
             type: "일반",
-            path: '/freeboard/view/2802',
+            path: '/freeboard/view2/2802',
             author: "보라매유아인",
             level: 1
         },
@@ -158,7 +158,7 @@ const FreeBoardMain = () => {
             isBetHistory: true,
             time: "2021.06.28 15:36",
             type: "일반",
-            path: '/freeboard/view/2801',
+            path: '/freeboard/view2/2801',
             author: "아기히뽀",
             level: 4
         },
@@ -169,7 +169,7 @@ const FreeBoardMain = () => {
             isBetHistory: true,
             time: "2021.06.28 15:36",
             type: "일반",
-            path: '/freeboard/view/2800',
+            path: '/freeboard/view2/2800',
             author: "소유",
             level: 5
         },
@@ -180,7 +180,7 @@ const FreeBoardMain = () => {
             isBetHistory: true,
             time: "2021.06.28 15:36",
             type: "일반",
-            path: '/freeboard/view/2799',
+            path: '/freeboard/view2/2799',
             author: "야리직",
             level: 1
         },
@@ -191,7 +191,7 @@ const FreeBoardMain = () => {
             isBetHistory: true,
             time: "2021.06.28 15:36",
             type: "일반",
-            path: '/freeboard/view/2798',
+            path: '/freeboard/view2/2798',
             author: "신풍사우나",
             level: 2
         },
@@ -202,7 +202,7 @@ const FreeBoardMain = () => {
             isBetHistory: true,
             time: "2021.06.28 15:36",
             type: "일반",
-            path: '/freeboard/view/2797',
+            path: '/freeboard/view2/2797',
             author: "필라델피아",
             level: 3
         },
@@ -213,7 +213,7 @@ const FreeBoardMain = () => {
             isBetHistory: true,
             time: "2021.06.28 15:36",
             type: "일반",
-            path: '/freeboard/view/2796',
+            path: '/freeboard/view2/2796',
             author: "하이도1207",
             level: 1
         },
@@ -224,7 +224,7 @@ const FreeBoardMain = () => {
             isBetHistory: true,
             time: "2021.06.28 15:36",
             type: "일반",
-            path: '/freeboard/view/2795',
+            path: '/freeboard/view2/2795',
             author: "소유",
             level: 1
         },
@@ -235,7 +235,7 @@ const FreeBoardMain = () => {
             isBetHistory: true,
             time: "2021.06.28 15:36",
             type: "일반",
-            path: '/freeboard/view/2794',
+            path: '/freeboard/view2/2794',
             author: "보라매유아인",
             level: 1
         },
@@ -246,7 +246,7 @@ const FreeBoardMain = () => {
             isBetHistory: true,
             time: "2021.06.28 15:36",
             type: "일반",
-            path: '/freeboard/view/2793',
+            path: '/freeboard/view2/2793',
             author: "아기히뽀",
             level: 4
         },
@@ -257,7 +257,7 @@ const FreeBoardMain = () => {
             isBetHistory: true,
             time: "2021.06.28 15:36",
             type: "일반",
-            path: '/freeboard/view/2792',
+            path: '/freeboard/view2/2792',
             author: "소유",
             level: 5
         },

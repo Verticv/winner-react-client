@@ -631,13 +631,14 @@ const DistributorPage = ({
     )
 
     return (
-        <div className="relative flex flex-col justify-center limit:overflow-x-hidden">
+        <div className="relative flex flex-col justify-center limit:justify-center limit:overflow-x-hidden">
              <div className="fixed w-full top-0 z-50 flex flex-col items-start limit1920:items-center">
                 <NoticeBanner />
                 <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
             </div>
-            
-            <div className="flex flex-col items-start limit:items-center mt-92px w-full h-full">
+            <div className="relative flex flex-col justify-start limit:justify-center limit:overflow-x-hidden">
+
+            <div className="flex flex-col items-center limit1920:items-center mt-92px w-full h-full">
                 <div className="relative w-default h-225px mt-20px">
                     <label style={{color:"#3a5f39"}} className="text-36px font-spoqaMedium absolute right-0 bottom-0 z-20 mb-86px mr-50px">총판페이지</label>
                     <img className="z-10" src={DistributorBanner} alt="" />
@@ -650,6 +651,7 @@ const DistributorPage = ({
                     <span className="font-spoqaMedium">
                         님의 총판 정보입니다.
                     </span>
+                
                 </div>
 
                 <div className="mt-42px w-1836px">
@@ -1018,6 +1020,7 @@ const DistributorPage = ({
                     <Footer2 />
                     <Footer />
                 </div>
+            </div>
             </div>
         </div>
     )

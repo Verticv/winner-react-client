@@ -10,6 +10,7 @@ import SpeedKino from '../images/minigames/speedkino.png'
 import KinoLadder from '../images/minigames/kinoladder.png'
 import MinigamesRightPanel from 'components/minigames/MinigamesRightPanel'
 import MinigamesPanel from 'components/minigames/MinigamesPanel'
+import { Route } from 'react-router'
 
 
 const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
@@ -44,8 +45,19 @@ const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
             <div className="w-full flex flex-col items-center mt-107px">
                 <div className="w-default">
 
-
-                    <HorizontalMenu3 itemsArray={GameTypeArray} selectedTab={selectedGame} setSelectedTab={setSelectedGame} setSelectedOption={setSelectedOption} setSelectedTab1={setSelectedTab} />
+                <Route path="/minigame/powerball">
+                <HorizontalMenu3 itemsArray={GameTypeArray} selectedTab={"/minigame/powerball"} setSelectedTab={setSelectedGame} setSelectedOption={setSelectedOption} setSelectedTab1={setSelectedTab} />
+                </Route>
+                <Route path="/minigame/powerladder">
+                <HorizontalMenu3 itemsArray={GameTypeArray} selectedTab={"/minigame/powerladder"} setSelectedTab={setSelectedGame} setSelectedOption={setSelectedOption} setSelectedTab1={setSelectedTab} />
+                </Route>
+                <Route path="/minigame/speedkino">
+                <HorizontalMenu3 itemsArray={GameTypeArray} selectedTab={"/minigame/speedkino"} setSelectedTab={setSelectedGame} setSelectedOption={setSelectedOption} setSelectedTab1={setSelectedTab} />
+                </Route>
+                <Route path="/minigame/kinoladder">
+                <HorizontalMenu3 itemsArray={GameTypeArray} selectedTab={"/minigame/kinoladder"} setSelectedTab={setSelectedGame} setSelectedOption={setSelectedOption} setSelectedTab1={setSelectedTab} />
+                </Route>
+                    {/* <HorizontalMenu3 itemsArray={GameTypeArray} selectedTab={selectedGame} setSelectedTab={setSelectedGame} setSelectedOption={setSelectedOption} setSelectedTab1={setSelectedTab} /> */}
 
 
                     <div className="flex w-full mt-8px space-x-8px">
@@ -53,15 +65,18 @@ const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
                             style={{width: "905px", height: "509px", backgroundColor:"#e8e8e8"}}
                             className="rounded-xl  flex justify-center border border-gray-dddddd pl-24px"
                         >
-                            {
-                                selectedGame === "/minigame/powerball"
-                                ? <iframe src="https://ntry.com/scores/powerball/live.php" width="860" height="640" scrolling="yes" frameborder="0" style={{WebkitTransform:"scale(0.795)", marginTop:"-66px"}} title="powerball"></iframe>
-                                : selectedGame === "/minigame/powerladder"
-                                ? <iframe src="https://ntry.com/scores/power_ladder/live.php" width="860" height="640" scrolling="yes" frameborder="0" style={{WebkitTransform:"scale(0.795)", marginTop:"-66px"}} title="powerladder"></iframe>
-                                : selectedGame === "/minigame/speedkino"
-                                ? <iframe src="https://ntry.com/scores/speedkeno/live.php" width="860" height="640" scrolling="yes" frameborder="0" style={{WebkitTransform:"scale(0.795)", marginTop:"-66px"}} title="speedkino"></iframe>
-                                : <iframe src="https://ntry.com/scores/keno_ladder/live.php" width="860" height="640" scrolling="yes" frameborder="0" style={{WebkitTransform:"scale(0.795)", marginTop:"-66px"}} title="kinoladder"></iframe>
-                            }
+                            <Route path="/minigame/powerball">
+                                <iframe src="https://ntry.com/scores/powerball/live.php" width="860" height="640" scrolling="yes" frameborder="0" style={{WebkitTransform:"scale(0.795)", marginTop:"-66px"}} title="powerball"></iframe>
+                            </Route>
+                            <Route path="/minigame/powerladder">
+                                <iframe src="https://ntry.com/scores/powerball/live.php" width="860" height="640" scrolling="yes" frameborder="0" style={{WebkitTransform:"scale(0.795)", marginTop:"-66px"}} title="powerball"></iframe>
+                            </Route>
+                            <Route path="/minigame/speedkino">
+                                <iframe src="https://ntry.com/scores/powerball/live.php" width="860" height="640" scrolling="yes" frameborder="0" style={{WebkitTransform:"scale(0.795)", marginTop:"-66px"}} title="powerball"></iframe>
+                            </Route>
+                            <Route path="/minigame/kinoladder">
+                                <iframe src="https://ntry.com/scores/keno_ladder/live.php" width="860" height="640" scrolling="yes" frameborder="0" style={{WebkitTransform:"scale(0.795)", marginTop:"-66px"}} title="kinoladder"></iframe>                            
+                            </Route>
                         </div>
                         <MinigamesRightPanel selectedGame={selectedGame} selectedOption={selectedOption}/>
                     </div>

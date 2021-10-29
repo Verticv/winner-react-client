@@ -94,9 +94,9 @@ const SlotBetHistory = ({isState, setState, showSub = true}) => {
                     <div className="mt-10px w-full bg-gray-eff3f6 rounded-xl pt-4px px-4px pb-3px">
                         <SubHorizontalMenu itemsArray={subTabsArray} isState={isState} setState={setState} />
                     </div>
-                    <DateSearchBar isLeagueSearch={false} />
                 </>
             )}
+            <DateSearchBar isLeagueSearch={false} />
 
 
             <div className={`w-full h-full mt-20px`}>

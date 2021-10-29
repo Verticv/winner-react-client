@@ -50,6 +50,7 @@ import SlotBetHistory from 'components/myPage/betHistory/SlotBetHistory'
 import MinigameBetHistory from 'components/myPage/betHistory/MinigameBetHistory'
 import ARGameBetHistory from 'components/myPage/betHistory/ARGameBetHistory'
 import ESportsBetHistory from 'components/myPage/betHistory/ESportsBetHistory'
+import Pagination from 'components/myPage/Pagination'
 
 const BetHistoryPopup = ({setPopupOpen, setAttachedArray, attachedArray}) => {
 
@@ -114,6 +115,7 @@ const BetHistoryPopup = ({setPopupOpen, setAttachedArray, attachedArray}) => {
 
     const [selectedTab, setSelectedTab] = useState(0)
     const [selectedSubTab, setSelectedSubTab] = useState(0)
+    const [page, setPage] = useState(0)
 
     const [checkedState, setCheckedState] = useState(
         new Array(3).fill(false)
@@ -177,14 +179,17 @@ const BetHistoryPopup = ({setPopupOpen, setAttachedArray, attachedArray}) => {
                         {selectedTab === 0 ? (
                             <div className="-mt-20px">
                                 <LiveCasinoBetHistory isState={selectedSubTab} setState={setSelectedSubTab} showSub={false} />
+                                <Pagination page={page} setPage={setPage}/>   
                             </div>
                         ) : selectedTab === 1 ? (
                             <div className="-mt-20px">
                                 <SlotBetHistory isState={selectedSubTab} setState={setSelectedSubTab} showSub={false} />
+                                <Pagination page={page} setPage={setPage}/>   
                             </div>
                         ) : selectedTab === 2 ? (
                             <div className="-mt-20px space-y-20px">
                                 <SportsBetHistory  checkedState={checkedState} setCheckedState={setCheckedState} showSub={false} attachedArray={attachedArray} setAttachedArray={setAttachedArray} setPopupOpen={setPopupOpen} />
+                                <Pagination page={page} setPage={setPage}/>   
                             </div>
                         ) : selectedTab === 3 ? (
                             <div className="-mt-20px">
@@ -193,14 +198,17 @@ const BetHistoryPopup = ({setPopupOpen, setAttachedArray, attachedArray}) => {
                         ) : selectedTab === 4 ? (
                             <div className="-mt-20px">
                                 <MinigameBetHistory isState={selectedSubTab} setState={setSelectedSubTab} showSub={false}  attachedArray={attachedArray} setAttachedArray={setAttachedArray} setPopupOpen1={setPopupOpen}/>
+                                <Pagination page={page} setPage={setPage}/>   
                             </div>
                         ) : selectedTab === 5 ? (
                             <div className="-mt-20px">
                                 <ARGameBetHistory isState={selectedSubTab} setState={setSelectedSubTab} showSub={false} />
+                                <Pagination page={page} setPage={setPage}/>   
                             </div>
                         ) : selectedTab === 6 ? (
                             <div className="-mt-20px">
                                 <SlotBetHistory isState={selectedSubTab} setState={setSelectedSubTab} showSub={false} />
+                                <Pagination page={page} setPage={setPage}/>   
                             </div>
                         ) : (
                             <>

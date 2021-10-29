@@ -9,7 +9,7 @@ import {
     PowerballResultsArray,
     PowerLadderResultsArray
 } from './arrays'
-import { useHistory } from 'react-router'
+import { Route, useHistory } from 'react-router'
 
 const MinigamesPanel = ({
     selectedGame,
@@ -39,8 +39,7 @@ const MinigamesPanel = ({
 
             <div className="px-2px w-full">
                 <div className="-mt-7px w-full bg-gray-fafafa z-20 flex relative rounded-xl shadow-subNavbar overflow-hidden">
-
-                    {selectedGame === "/minigame/powerball" ? (
+                    <Route path="/minigame/powerball">
                         <PowerballPanel  
                             selectedTab={selectedTab} 
                             setSelectedTab={setSelectedTab} 
@@ -49,8 +48,8 @@ const MinigamesPanel = ({
                             checkedState={checkedState}
                             setCheckedState={setCheckedState}
                             setSelectedOption={setSelectedOption}
-                        />
-                    ) : selectedGame === "/minigame/powerladder" ? (
+                        />                    </Route>
+                    <Route path="/minigame/powerladder">
                         <PowerLadderPanel 
                             selectedTab={selectedTab} 
                             setSelectedTab={setSelectedTab} 
@@ -60,7 +59,8 @@ const MinigamesPanel = ({
                             setCheckedState={setCheckedState}
                             setSelectedOption={setSelectedOption}
                         />
-                    ) : selectedGame === "/minigame/speedkino" ? (
+                    </Route>
+                    <Route path="/minigame/speedkino">
                         <SpeedKinoPanel
                             selectedTab={selectedTab} 
                             setSelectedTab={setSelectedTab} 
@@ -69,8 +69,9 @@ const MinigamesPanel = ({
                             checkedState={checkedState}
                             setCheckedState={setCheckedState}
                             setSelectedOption={setSelectedOption}
-                        />
-                    ) : selectedGame === "/minigame/kinoladder" ? (
+                        />                    
+                    </Route>
+                    <Route path="/minigame/kinoladder">
                         <KinoLadderPanel 
                             selectedTab={selectedTab} 
                             setSelectedTab={setSelectedTab} 
@@ -79,10 +80,8 @@ const MinigamesPanel = ({
                             checkedState={checkedState}
                             setCheckedState={setCheckedState}
                             setSelectedOption={setSelectedOption}
-                        />
-                    ) : <></>
-                    }
-
+                        />                   
+                    </Route>
                 </div>
             </div>
 

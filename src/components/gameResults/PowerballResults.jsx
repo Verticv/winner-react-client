@@ -6,7 +6,7 @@ const PowerballResults = () => {
     const ExampleArray = [
         {id:0, result:"파워볼 홀/짝 (홀)", percentage: "1.95"},
         {id:1, result:"파워볼 숫자 (2)", percentage: "9.00"},
-        {id:2, result:"파워볼 구간 A(0~2)", percentage: "3.15"},
+        {id:2, result:"파워볼 구간 A (0~2)", percentage: "3.15"},
         {id:3, result:"파워볼 언오버 (짝 언더)", percentage: "3.15"},
         {id:4, result:"일반볼 홀/짝 (짝)", percentage: "1.95"},
         {id:5, result:"일반볼 구간 (중)", percentage: "2.90"},
