@@ -58,7 +58,6 @@ const Carousel = () => {
             type="button"
             onClick={isLeft ? previousImage : nextImage}
             className={`${arrowStyle} ${isLeft ? 'left-10px' : 'right-10px'}`}
-            style={{ top: '218px' }}
         >
             {isLeft ? leftArrow : rightArrow}
         </button>
@@ -79,7 +78,7 @@ const Carousel = () => {
     const imagesDisplay = (
         <>
             {images.map((img, i) => (
-                 <img key={i} src={images[i]} className={`${currentImage === i ? "opacity-100" : "opacity-0"} w-full absolute object-contain transition duration-300`} alt={"banner_images"} />
+                 <img key={i} src={images[i]} className={`${currentImage === i ? "opacity-100" : "opacity-0"} ${img === visual2 && "absolute top-0"} w-full  object-contain transition duration-300`} alt={"banner_images"} />
                 // <button key={i} className="w-15px h-15px bg-gray-300 rounded-full p-2px" onClick={() => setCurrentImage(i)}>
                 //     {currentImage === i && (
                 //         <div className="w-full h-full rounded-full bg-blue-gradDark" />
@@ -106,10 +105,9 @@ const Carousel = () => {
     );
 
     return (
-        <div className="flex w-1920 flex-shrink-0">
-            <div className="relative w-full h-500px">
+        <div className="flex w-default limit1920:w-1920 limit:w-full flex-shrink-0">
+            <div className="relative w-full limit1920:h-500px h-full flex items-center">
                 {sliderControl(true)}
-                {/* <img src={images[currentImage]} className={`${currentImage} w-full object-contain`} alt={"banner_images"} /> */}
                 {imagesDisplay}
                 {sliderControl()}
                 {positionIndicator}
