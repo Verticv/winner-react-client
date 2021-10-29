@@ -16,7 +16,7 @@ const EsportsBetHistoryTable = () => {
                 <div style={{width: "90px"}} className="text-center pr-17px">보기</div>
             </div>
             <div className="w-full text-gray-r585858 text-14px tracking-tight font-spoqa h-56px items-center flex h-full justify-center">
-                <div className="flex items-center justify-center h-56px">베팅내역이 없습니다.</div>
+                <div style={{WebkitTextStroke:"0.2px"}} className="flex items-center justify-center h-56px">베팅내역이 없습니다.</div>
             </div>
         </div>      
     )

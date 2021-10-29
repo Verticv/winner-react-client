@@ -157,7 +157,7 @@ const DistributorPage = ({
         <>
             <div className="w-full flex">
                 <div className="w-40px mt-10px flex justify-center items-start">
-                    <img src={ReplyArrow} className="object-none" alt="" />
+                    {/* <img src={ReplyArrow} className="object-none" alt="" /> */}
                 </div>
                 <div className="h-112px w-full flex flex-col">
                     <div className="flex h-56px w-full border-b border-gray-dddddd items-center text-white font-spoqaMedium text-16px tracking-tight bg-gray-r687b8e">
@@ -231,9 +231,9 @@ const DistributorPage = ({
         <>
             <div className="w-full flex">
                 <div className="w-40px mt-10px flex justify-center items-start">
-                    <img src={ReplyArrow} className="object-none" alt="" />
+                    {/* <img src={ReplyArrow} className="object-none" alt="" /> */}
                 </div>
-                <div className="w-full flex flex-col border-r border-gray-dddddd  bg-white">
+                <div className="w-full flex flex-col border-r border-gray-dddddd  bg-white  border-b">
                     <div className="flex h-56px w-full border-b border-gray-dddddd items-center bg-gray-cfd7e0">
 
                         <div className="ml-10px w-231px h-34px rounded-full bg-gray-r5a6067 flex items-center justify-center font-spoqaMedium text-16px tracking-tight">
@@ -280,7 +280,7 @@ const DistributorPage = ({
                         <div className="w-full h-full flex flex-col items-center justify-center -space-y-4px"><span>YL</span><span>게이밍</span></div>
                         <div className="w-full h-full flex flex-col items-center justify-center -space-y-4px"><span>레드</span><span>타이거</span></div>
                         <div className="w-full h-full flex items-center justify-center">e-스포츠</div>
-                        <div className="w-full h-full flex items-center justify-center">키론가상게임</div>
+                        <div className="w-full h-full flex flex-col items-center justify-center -space-y-4px"><span>키론</span><span>가상게임</span></div>
                     </div>
                     <div className="flex h-56px w-full border-gray-dddddd items-center text-16px tracking-tight font-roboto text-gray-r585858 border-b">
                         <div className="w-full h-full flex items-center justify-center font-spoqaMedium text-white bg-gray-r5b6773">베팅금</div>
@@ -484,14 +484,20 @@ const DistributorPage = ({
                     borderTop: (isUserCountOpen[item.id] === true || isUserCountOpen[item.id+1] === true || isUserCountOpen[item.id+2] === true) && "2px solid #1390fa",
                     // borderBottom: (isUserCountOpen[item.id] === true || isUserCountOpen[item.id+1] === true || isUserCountOpen[item.id+2] === true) && "2px solid #dddddd",
                 }}
-                className={`flex flex-col`}
-                >
+                className={`flex flex-col relative`}
+            >
+                {(isUserCountOpen[item.id] === true || isUserCountOpen[item.id + 1] === true || isUserCountOpen[item.id + 2] === true) &&
+                    <div className="absolute w-40px mt-10px flex justify-center items-start">
+                        <img src={ReplyArrow} className="object-none" alt="" />
+                    </div>
+                }
+
 
                 {(isUserCountOpen[item.id] === true && item.hasSubArray === true) && (
                     <>
                     <div className="w-full flex" >
                         <div className="w-40px mt-10px flex justify-center items-start">
-                            <img src={ReplyArrow} className="object-none" alt="" />
+                            {/* <img src={ReplyArrow} className="object-none" alt="" /> */}
                         </div>
                         <div className=" w-full flex flex-col ">
                             {/* === Header === */}
@@ -689,7 +695,7 @@ const DistributorPage = ({
                                     <td className="w-91px text-center flex flex-col pt-2px -space-y-4px"><span>YL</span><span>게이밍</span></td>
                                     <td className="w-91px text-center flex flex-col pt-2px -space-y-4px"><span>레드</span><span>타이거</span></td>
                                     <td className="w-91px text-center">e-스포츠</td>
-                                    <td className="w-91px text-center">키론가상게임</td>
+                                    <td className="w-91px text-center flex flex-col pt-2px -space-y-4px"><span>키론</span><span>가상게임</span></td>
                                 </tr>
                             </thead>
                             <tbody className="w-full text-585858 text-14px tracking-tight font-spoqaMedium">
@@ -919,7 +925,7 @@ const DistributorPage = ({
                     </div>
 
                     {/* === 추천회원내역 표 === */}
-                    <div style={{filter: "drop-shadow(0px 0px 2px #00000050)"}} className="flex flex-col mt-21px w-full rounded-md border-t border-b border-gray-dddddd overflow-hidden">
+                    <div style={{filter: "drop-shadow(0px 0px 2px #00000050)"}} className="flex flex-col mt-21px w-full rounded-md border-t  border-gray-dddddd overflow-hidden">
                         {/* === Header === */}
                         <div className="h-67px w-full bg-gray-r8e9296 border-b border-r-2 border-l-2 border-gray-dddddd flex items-center justify-evenly font-spoqa text-16px text-white tracking-tight">
                             <div className="w-114px text-center">번호</div>

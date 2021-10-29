@@ -301,7 +301,6 @@ const BetCombinationPanel = ({
     const [isHover1, setHover1] = useState(null)
     const [isOpen, setOpen] = useState(new Array(20).fill(false))
     const [isButtonClicked, setButtonClicked] = useState("")
-    const [isHover3, setHover3] = useState("")
 
 
     const dropDownCellClass = "flex w-full h-42px py-2px bg-white items-center hover:bg-blue-lightGradLight px-14px space-x-8px"
@@ -526,122 +525,126 @@ const BetCombinationPanel = ({
         stat3 = "3.47",
         stat1Color = "none",
         stat2Color = "none"
-    }) => (
-        <div className="flex space-x-4px">
-            <button 
-                style={{
-                    width:"267px", 
-                    height: "39px",
-                    backgroundColor: `${id}left` === isButtonClicked ? "#cb4343" : "#b3b3b3" 
-                }}  
-                className="flex items-center justify-center rounded-lg"
-                onClick={() => {
-                    setButtonClicked(`${id}left`)
-                    setAddedCard(prevArray => 
-                    [...prevArray, {id: _uniqueId('prefix-'), value: "left"}])}}
-                onMouseEnter={() => setHover3(`${id}left`)}
-                onMouseLeave={() => setHover3(null)}
+    }) => {
+        const [isHover3, setHover3] = useState("")
 
-            >
-                <div 
+        return (
+            <div className="flex space-x-4px">
+                <button 
                     style={{
-                        width:"265px", 
-                        height: "37px",
-                        borderColor: (`${id}left` === isButtonClicked || `${id}left` === isHover3) ? "#ff7982" : "#ffffff",
-                        background:  (`${id}left` === isButtonClicked || `${id}left` === isHover3)
-                        ? "linear-gradient(to bottom, #ff535f, #ee4e5a)"  
-                        : "linear-gradient(to bottom, #f9f9f9, #e7ecf1)",
-                        color: (`${id}left` === isButtonClicked || `${id}left` === isHover3) ? "#ffffff" : "#454545",
-                        textShadow: (`${id}left` === isButtonClicked || `${id}left` === isHover3) ? "1px 1px 0px #00000070" : ""
+                        width:"267px", 
+                        height: "39px",
+                        backgroundColor: `${id}left` === isButtonClicked ? "#cb4343" : "#b3b3b3" 
                     }}  
-                    className="flex items-center justify-end rounded-lg border bg-gradient-to-b cursor-pointer px-10px"
+                    className="flex items-center justify-center rounded-lg"
+                    onClick={() => {
+                        setButtonClicked(`${id}left`)
+                        setAddedCard(prevArray => 
+                        [...prevArray, {id: _uniqueId('prefix-'), value: "left"}])}}
+                    onMouseEnter={() => setHover3(`${id}left`)}
+                    onMouseLeave={() => setHover3(null)}
+
                 >
-                    <span className="truncate text-right font-spoqaMedium tracking-tight text-14px pt-2px">{team1}</span>
-                    <div style={{width:"38px"}} className={`${hasUp ? "justify-end pr-5px" : "justify-center"} flex items-center `}>
-                        {logo1 && (
-                            <img src={logo1} alt="" />
-                        )}
-                        {hasUp === true && (
-                            <img src={UpIcon} alt="" />
-                        )}
+                    <div 
+                        style={{
+                            width:"265px", 
+                            height: "37px",
+                            borderColor: (`${id}left` === isButtonClicked || `${id}left` === isHover3) ? "#ff7982" : "#ffffff",
+                            background:  (`${id}left` === isButtonClicked || `${id}left` === isHover3)
+                            ? "linear-gradient(to bottom, #ff535f, #ee4e5a)"  
+                            : "linear-gradient(to bottom, #f9f9f9, #e7ecf1)",
+                            color: (`${id}left` === isButtonClicked || `${id}left` === isHover3) ? "#ffffff" : "#454545",
+                            textShadow: (`${id}left` === isButtonClicked || `${id}left` === isHover3) ? "1px 1px 0px #00000070" : ""
+                        }}  
+                        className="flex items-center justify-end rounded-lg border bg-gradient-to-b cursor-pointer px-10px"
+                    >
+                        <span className="truncate text-right font-spoqaMedium tracking-tight text-14px pt-2px">{team1}</span>
+                        <div style={{width:"38px"}} className={`${hasUp ? "justify-end pr-5px" : "justify-center"} flex items-center `}>
+                            {logo1 && (
+                                <img src={logo1} alt="" />
+                            )}
+                            {hasUp === true && (
+                                <img src={UpIcon} alt="" />
+                            )}
+                        </div>
+                        <span style={{color: stat1Color === "red" && `${id}left` !== isButtonClicked && `${id}left` !== isHover3 ? "#d52e2e" : ""}} className="font-roboto tracking-tight text-14px pt-2px">{stat1}</span>
                     </div>
-                    <span style={{color: stat1Color === "red" && `${id}left` !== isButtonClicked && `${id}left` !== isHover3 ? "#d52e2e" : ""}} className="font-roboto tracking-tight text-14px pt-2px">{stat1}</span>
-                </div>
-            </button>
+                </button>
 
-            <button 
-                style={{
-                    width:"71px", 
-                    height: "39px",
-                    backgroundColor: (`${id}middle` === isButtonClicked || `${id}middle` === isHover3) ? "#cb4343" : "#b3b3b3" 
-                }}  
-                className="flex items-center justify-center rounded-lg"
-                onClick={() => {
-                    setButtonClicked(`${id}middle`)
-                    setAddedCard(prevArray => 
-                    [...prevArray, {id: _uniqueId('prefix-'), value: "middle"}])}}
-                onMouseEnter={() => setHover3(`${id}middle`)}
-                onMouseLeave={() => setHover3(null)}
-
-            >
-                <div 
+                <button 
                     style={{
-                        width:"69px", 
-                        height: "37px",
-                        borderColor: (`${id}middle` === isButtonClicked || `${id}middle` === isHover3) ? "#ff7982" : "#ffffff",
-                        background: (`${id}middle` === isButtonClicked || `${id}middle` === isHover3)
-                        ? "linear-gradient(to bottom, #ff535f, #ee4e5a)"  
-                        : "linear-gradient(to bottom, #f9f9f9, #e7ecf1)",
-                        color: (`${id}middle` === isButtonClicked || `${id}middle` === isHover3) ? "#ffffff" : "#454545",
-                        textShadow: (`${id}middle` === isButtonClicked || `${id}middle` === isHover3) ? "1px 1px 0px #00000070" : ""
+                        width:"71px", 
+                        height: "39px",
+                        backgroundColor: (`${id}middle` === isButtonClicked || `${id}middle` === isHover3) ? "#cb4343" : "#b3b3b3" 
                     }}  
-                    className="flex items-center justify-center rounded-lg border bg-gradient-to-b cursor-pointer px-10px pt-2px"
-                >
-                    <span  style={{color: stat2Color === "blue" && `${id}middle` !== isButtonClicked && `${id}middle` !== isHover3 ? "#0056a6" : ""}} className="font-roboto tracking-tight text-14px pt-px">{stat2}</span>
-                </div>
-            </button>
+                    className="flex items-center justify-center rounded-lg"
+                    onClick={() => {
+                        setButtonClicked(`${id}middle`)
+                        setAddedCard(prevArray => 
+                        [...prevArray, {id: _uniqueId('prefix-'), value: "middle"}])}}
+                    onMouseEnter={() => setHover3(`${id}middle`)}
+                    onMouseLeave={() => setHover3(null)}
 
-            <button 
-                style={{
-                    width:"267px", 
-                    height: "39px",
-                    backgroundColor: (`${id}right` === isButtonClicked || `${id}right` === isHover3) ? "#cb4343" : "#b3b3b3" 
-                }}  
-                className="flex items-center justify-center rounded-lg"
-                onClick={() => {
-                    setButtonClicked(`${id}right`)
-                    setAddedCard(prevArray => 
-                    [...prevArray, {id: _uniqueId('prefix-'), value: "right"}])}}
-                onMouseEnter={() => setHover3(`${id}right`)}
-                onMouseLeave={() => setHover3(null)}
-            >
-                <div 
-                    style={{
-                        width:"265px", 
-                        height: "37px",
-                        borderColor: (`${id}right` === isButtonClicked || `${id}right` === isHover3) ? "#ff7982" : "#ffffff",
-                        background: (`${id}right` === isButtonClicked || `${id}right` === isHover3)
-                        ? "linear-gradient(to bottom, #ff535f, #ee4e5a)"  
-                        : "linear-gradient(to bottom, #f9f9f9, #e7ecf1)",
-                        color: (`${id}right` === isButtonClicked || `${id}right` === isHover3) ? "#ffffff" : "#454545",
-                        textShadow: (`${id}right` === isButtonClicked || `${id}right` === isHover3) ? "1px 1px 0px #00000070" : ""
-                    }}  
-                    className="flex items-center justify-start rounded-lg border bg-gradient-to-b cursor-pointer px-10px pt-px"
                 >
-                    <span className="font-roboto tracking-tight text-14px  pt-2px">{stat3}</span>
-                    <div style={{width:"38px"}} className={`${hasDown ? "justify-start pl-5px" : "justify-center"} flex items-center `}>
-                        {logo2 && (
-                            <img src={logo2} alt="" />
-                        )}
-                        {hasDown === true && (
-                            <img src={DownIcon} alt="" />
-                        )}
+                    <div 
+                        style={{
+                            width:"69px", 
+                            height: "37px",
+                            borderColor: (`${id}middle` === isButtonClicked || `${id}middle` === isHover3) ? "#ff7982" : "#ffffff",
+                            background: (`${id}middle` === isButtonClicked || `${id}middle` === isHover3)
+                            ? "linear-gradient(to bottom, #ff535f, #ee4e5a)"  
+                            : "linear-gradient(to bottom, #f9f9f9, #e7ecf1)",
+                            color: (`${id}middle` === isButtonClicked || `${id}middle` === isHover3) ? "#ffffff" : "#454545",
+                            textShadow: (`${id}middle` === isButtonClicked || `${id}middle` === isHover3) ? "1px 1px 0px #00000070" : ""
+                        }}  
+                        className="flex items-center justify-center rounded-lg border bg-gradient-to-b cursor-pointer px-10px pt-2px"
+                    >
+                        <span  style={{color: stat2Color === "blue" && `${id}middle` !== isButtonClicked && `${id}middle` !== isHover3 ? "#0056a6" : ""}} className="font-roboto tracking-tight text-14px pt-px">{stat2}</span>
                     </div>
-                    <span className="truncate font-spoqaMedium tracking-tight text-14px text-left  pt-2px">{team2}</span>
-                </div>
-            </button>
-        </div>
-    )
+                </button>
+
+                <button 
+                    style={{
+                        width:"267px", 
+                        height: "39px",
+                        backgroundColor: (`${id}right` === isButtonClicked || `${id}right` === isHover3) ? "#cb4343" : "#b3b3b3" 
+                    }}  
+                    className="flex items-center justify-center rounded-lg"
+                    onClick={() => {
+                        setButtonClicked(`${id}right`)
+                        setAddedCard(prevArray => 
+                        [...prevArray, {id: _uniqueId('prefix-'), value: "right"}])}}
+                    onMouseEnter={() => setHover3(`${id}right`)}
+                    onMouseLeave={() => setHover3(null)}
+                >
+                    <div 
+                        style={{
+                            width:"265px", 
+                            height: "37px",
+                            borderColor: (`${id}right` === isButtonClicked || `${id}right` === isHover3) ? "#ff7982" : "#ffffff",
+                            background: (`${id}right` === isButtonClicked || `${id}right` === isHover3)
+                            ? "linear-gradient(to bottom, #ff535f, #ee4e5a)"  
+                            : "linear-gradient(to bottom, #f9f9f9, #e7ecf1)",
+                            color: (`${id}right` === isButtonClicked || `${id}right` === isHover3) ? "#ffffff" : "#454545",
+                            textShadow: (`${id}right` === isButtonClicked || `${id}right` === isHover3) ? "1px 1px 0px #00000070" : ""
+                        }}  
+                        className="flex items-center justify-start rounded-lg border bg-gradient-to-b cursor-pointer px-10px pt-px"
+                    >
+                        <span className="font-roboto tracking-tight text-14px  pt-2px">{stat3}</span>
+                        <div style={{width:"38px"}} className={`${hasDown ? "justify-start pl-5px" : "justify-center"} flex items-center `}>
+                            {logo2 && (
+                                <img src={logo2} alt="" />
+                            )}
+                            {hasDown === true && (
+                                <img src={DownIcon} alt="" />
+                            )}
+                        </div>
+                        <span className="truncate font-spoqaMedium tracking-tight text-14px text-left  pt-2px">{team2}</span>
+                    </div>
+                </button>
+            </div>
+        )
+    }
 
     function LeagueCell({
         array, 
@@ -649,7 +652,7 @@ const BetCombinationPanel = ({
         isLastSubarray = false
     }) {
 
-        const [isHover2, setHover2] = useState(false)
+        const [isHover2, setHover2] = useState(null)
 
         const handleOnChange = (position) => {
             const updatedCheckedState = isOpen.map((item, index) =>
@@ -694,10 +697,8 @@ const BetCombinationPanel = ({
                                 }} 
                                 className="relative flex items-center justify-center h-39px w-75px rounded-4px ml-4px group hover:opacity-75"
                                 onClick={() => handleOnChange(items.id)}
-                                onMouseEnter={() => setHover2(items.id)}
-                                onMouseLeave={() => setHover2(false)}
-                                data-tip="<p>HTML tooltip</p>"
-                                data-html={true}
+                                onMouseOver={() => setHover2(items.id)}
+                                onMouseLeave={() => setHover2(null)}
                             >
                                 <div 
                                     style={{
@@ -715,7 +716,7 @@ const BetCombinationPanel = ({
                                 </div>
                             </button>
                             {isHover2 === items.id && (
-                                <div style={{width:"265px"}} className="absolute bottom-34px left-0 group-hover:opacity-100">
+                                <div style={{width:"265px"}} className="absolute bottom-34px left-4px group-hover:opacity-100">
                                     <img className="object-none" src={Bubble2} alt="" />
                                     <div style={{color:"#858585"}} className="ml-36px absolute top-9px text-14px font-spoqaMedium tracking-tight">
                                         해당 경기에 등록된 모든베팅종류 제공

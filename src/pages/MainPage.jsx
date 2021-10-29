@@ -19,6 +19,7 @@ const MainPage = ({isAuthenticated, setAuthenticated}) => {
             </div>
 
             <div className="flex justify-start limit:justify-center items-center pb-40px mt-92px">
+
                 <Carousel />
             </div>
 

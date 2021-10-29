@@ -79,6 +79,7 @@ const Carousel = () => {
         <>
             {images.map((img, i) => (
                  <img key={i} src={images[i]} className={`${currentImage === i ? "opacity-100" : "opacity-0"} ${img === visual2 && "absolute top-0"} w-full  object-contain transition duration-300`} alt={"banner_images"} />
+
                 // <button key={i} className="w-15px h-15px bg-gray-300 rounded-full p-2px" onClick={() => setCurrentImage(i)}>
                 //     {currentImage === i && (
                 //         <div className="w-full h-full rounded-full bg-blue-gradDark" />
