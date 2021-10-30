@@ -25,7 +25,7 @@ const EsportsHover = ({selection}) => {
         return items.map(item => (
             <div 
                 key={item.id} 
-                className="relative group w-305px h-206px cursor-pointer" 
+                className="relative group w-305px h-206px cursor-pointer limit:flex-shrink-1 flex-shrink-0" 
                 onClick={() => history.push(item.path)}
             >
                 <img className={`opacity-100 group-hover:opacity-0 w-305px h-206px object-none object-left`} src={item.background} alt="game_image" />
@@ -40,10 +40,10 @@ const EsportsHover = ({selection}) => {
         <Expand
             open={selection === 3} 
             duration={200} 
-            className="absolute w-full h-244px bg-white bg-opacity-80 shadow-inner border-b-2 border-gray-300 space-y-50px"
+            className="absolute w-full h-244px bg-white bg-opacity-80 shadow-inner border-b-2 border-gray-300 space-y-50px "
         >
             <div>
-                <div className="flex ml-100px justify-center pt-6px grid grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 2xl:flex 500px lg:500px xl:500px 2xl:h-244px h-500px">
+                <div className="flex limit:justify-center justify-start pt-6px h-244px">
                     <GamesList items={gamesArray} />
                 </div>
             </div>

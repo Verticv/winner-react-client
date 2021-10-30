@@ -85,8 +85,8 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
     )
 
     const CountryButton = (
-        <div className="-ml-4px flex items-center limit:w-104px limit:h-40px h-30px bg-gradient-to-br from-blue-gradLight to-blue-gradDark rounded-full space-x-10px shadow-inner p-4px shadow-plain2 hover:opacity-75 pr-2 limit:pr-0">
-            <div className="limit:h-32px limit:w-32px w-20px h-20px bg-white rounded-full flex items-center justify-center">
+        <div className="flex items-center limit1600:w-104px limit1600:h-40px h-30px bg-gradient-to-br from-blue-gradLight to-blue-gradDark rounded-full space-x-10px shadow-inner p-4px shadow-plain2 hover:opacity-75 pr-2 limit1600:pr-0">
+            <div className="limit1600:h-32px limit1600:w-32px w-20px h-20px bg-white rounded-full flex items-center justify-center">
                 <img className="" src={country === "KR" ? Koreaflag : UKflag} alt="flag"></img>
             </div>
             <label className="font-spoqaBold text-white cursor-pointer pt-px">{country}</label>
@@ -96,13 +96,13 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
 
     const WalletButton = (
         <div className="flex items-center space-x-10px h-40px flex-shrink-0">
-            <div className="flex limit:flex-col limit:-space-y-6px limit:space-x-0 space-x-4px items-end  group">
+            <div className="flex limit1600:flex-col limit1600:-space-y-6px limit1600:space-x-0 space-y-0 space-x-4px items-end  group">
                 <div className="">
                     <label className="text-blue-r2087f0 cursor-pointer font-spoqaMedium mr-3px group-hover:text-blue-700">₩</label>
                     <label className="text-blue-r2087f0 cursor-pointer font-roboto group-hover:text-blue-700">100,000</label>
                     <label className="text-blue-r2087f0 cursor-pointer font-spoqaMedium group-hover:text-blue-700">원</label>
                 </div>
-                <label className="text-orange-ff7e00 cursor-pointer font-roboto  group-hover:text-yellow-700">12,500 P</label>
+                <label className="text-orange-ff7e00 cursor-pointer font-roboto group-hover:text-yellow-700">12,500 P</label>
             </div>
             <DropdownArrow isOpen={isWalletOpen}/>
         </div>
@@ -110,27 +110,27 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
     
     const profileButton = (
         <div className="flex-shrink-0 flex items-center justify-center space-x-10px  hover:opacity-75">
-            <div className="relative flex items-center justify-center limit:h-40px limit:w-40px w-30px h-30px rounded-full bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2">
-                <img className="mt-2px ml-2px limit:object-none object-contain  limit:h-40px limit:w-40px w-20px h-20px" src={PersonIcon} alt="person" />
+            <div className="relative flex items-center justify-center limit1600:h-40px limit1600:w-40px w-30px h-30px rounded-full bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2">
+                <img className="mt-2px ml-2px limit1600:object-none object-contain  limit1600:h-40px limit1600:w-40px w-20px h-20px" src={PersonIcon} alt="person" />
             </div>
             <DropdownArrow isOpen={isProfileOpen}/>
         </div>  
     )
 
     const LoginButton = (
-        <button className="flex items-center justify-center text-white w-104px limit:h-40px h-30px rounded-full bg-gradient-to-br from-blue-gradLight to-blue-gradDark text-16px font-spoqaBold shadow-plain2 pt-px hover:opacity-75">로그인</button>
+        <button className="flex items-center justify-center text-white w-104px limit1600:h-40px h-30px rounded-full bg-gradient-to-br from-blue-gradLight to-blue-gradDark text-16px font-spoqaBold shadow-plain2 pt-px hover:opacity-75">로그인</button>
     )
 
     const SignupButton = (
-        <button className="flex items-center justify-center text-white w-104px  limit:h-40px h-30px rounded-full bg-gradient-to-br from-blue-darkGradLight to-blue-darkGradDark text-16px font-spoqaBold shadow-plain2 pt-px hover:opacity-75">회원가입</button>
+        <button className="flex items-center justify-center text-white w-104px limit1600:h-40px h-30px rounded-full bg-gradient-to-br from-blue-darkGradLight to-blue-darkGradDark text-16px font-spoqaBold shadow-plain2 pt-px hover:opacity-75">회원가입</button>
     )
 
     const InboxButton = (
         <button 
             onClick={() => history.push("/mypage/inbox")} 
-            className="flex-shrink-0 relative flex items-center justify-center text-white rounded-full bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2 hover:opacity-75 limit:h-40px limit:w-40px w-30px h-30px"
+            className="flex-shrink-0 relative flex items-center justify-center text-white rounded-full bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2 hover:opacity-75 limit1600:h-40px limit1600:w-40px w-30px h-30px"
         >
-            <img className="ml-2px mt-2px limit:object-none object-contain  limit:h-40px limit:w-40px w-20px h-20px" src={InboxIcon} alt="inbox_icon" />
+            <img className="ml-2px mt-2px limit1600:object-none object-contain  limit1600:h-40px limit1600:w-40px w-20px h-20px" src={InboxIcon} alt="inbox_icon" />
             <div className="absolute flex items-center justify-center w-20px h-20px bg-red-notification top-0 right-0 -mr-6px -mt-3px rounded-full shadow-plain6">
                 <label className="text-12px font-roboto mt-2px ml-px">1</label>
             </div>
@@ -139,15 +139,15 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
 
     return (
         <div className="w-full z-50">
-            <header className="flex limit:items-center items-start justify-between limit:h-60px h-90px px-10px shadow-plain bg-white limit:flex-row flex-col-reverse flex-shrink-0">
+            <header className="relative flex limit1600:items-center items-start justify-between limit1600:h-60px h-90px px-10px shadow-plain bg-white limit1600:flex-row flex-col-reverse flex-shrink-0">
                 <div className="flex items-center flex-shrink-0">
                     <img className="w-130px object-contain mb-2 mr-10px cursor-pointer" src={Logo} alt="logo" onClick={() => history.push('/')} />
                     <TabsList items={tabsArray} />
                 </div>
                 
-                <div className="-mb-10px limit:-mb-0 w-full flex justify-end">
+                <div className="-mb-10px absolute top-0 right-0 mr-10px limit1600:-mb-0 flex justify-end limit1600:h-60px limit1600:h-10px ">
                 {isAuthenticated ? (
-                    <div className="flex space-x-20px items-center flex-shrink-0">
+                    <div className="flex space-x-20px items-center flex-shrink-0 limit1600:mt-0 mt-8px">
                         {/* BREAK */} 
                         <DropDownControls buttonChild={profileButton} onClick={() => setProfileOpen(!isProfileOpen)} onClose={() => setProfileOpen(false)}>
                             <div className="mt-4"><ProfileDropDown setAuth={setAuth}/></div>
@@ -165,7 +165,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
                     </div>
 
                 ) : (
-                    <div className="flex space-x-3 items-center flex-shrink-0 limit:mt-0 mt-5px">
+                    <div className="flex space-x-10px items-center flex-shrink-0 limit1600:mt-0 mt-13px">
                         <PopupControls buttonChild={LoginButton} isPopupOpen={isPopupOpen} setPopupOpen={setPopupOpen}>
                             <LoginPopup setAuth={setAuth} setPopupOpen={setPopupOpen}/>
                         </PopupControls>  

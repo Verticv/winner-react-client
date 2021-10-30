@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import EvoBanner from '../../images/navbarHover/evo_banner.png'
 import EvoBannerHighlight from '../../images/navbarHover/evo_banner_highlight.png'
 import AsiaBanner from '../../images/navbarHover/asia_banner.png'
@@ -67,7 +67,7 @@ const LiveCasinoHover = ({selection}) => {
         return items.map(item => (
             <div 
                 key={item.id} 
-                className="group relative w-305px w-auto h-206px cursor-pointer" 
+                className="group relative w-305px w-auto h-206px cursor-pointer  limit:flex-shrink-1 flex-shrink-0 " 
                 onClick={() => history.push('/live-casino')}
                 onMouseEnter={() => setHover(item.id)}
             >
@@ -81,8 +81,8 @@ const LiveCasinoHover = ({selection}) => {
 
     function ItemsList({ items }) {
         return items.map(item => (
-            <button key={item.id} className="relative group :w-254px h-57px">
-                <div className="z-20 absolute h-57px flex items-center flex-shrink-0">
+            <button key={item.id} className="relative group :w-254px h-57px flex-shrink-0">
+                <div className="z-20 absolute h-57px flex items-center ">
                     <img className={item.customCss} src={item.icon} alt="icon" />
                     <span className={`font-spoqaMedium ml-4px mt-px text-14px tracking-tight ${item.color}`}>{item.btnText}</span>
                 </div>
@@ -91,7 +91,25 @@ const LiveCasinoHover = ({selection}) => {
             </button>
         ));
     }
+    const [isDesktop, setDesktop] = useState(false);
 
+    useEffect(() => {
+      if (window.innerWidth > 1600) {
+        setDesktop(true);
+      } else {
+        setDesktop(false);
+      }
+  
+      const updateMedia = () => {
+        if (window.innerWidth > 1600) {
+          setDesktop(true);
+        } else {
+          setDesktop(false);
+        }
+      };
+      window.addEventListener('resize', updateMedia);
+      return () => window.removeEventListener('resize', updateMedia);
+    }, []);
     return (
         <Expand 
             open={selection === 0} 
@@ -100,18 +118,29 @@ const LiveCasinoHover = ({selection}) => {
             
         >
             <div onMouseLeave={() => setHover(2)}>
-                <div className="grid grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 2xl:flex 500px lg:500px xl:500px 2xl:h-244px h-500px flex ml-80px -space-x-2 pt-6px">
+                {!isDesktop && (
+                    <Expand
+                        open={isHover === 0}
+                        duration={200}
+                    >
+                        <div className={`${isHover && "opacity-0"} grid grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 2xl:flex limit:ml-60px limit:-space-x-33px flex items-center h-200px lg:h-140px xl:h-140px 2xl:h-96ox -gap-y-10px limit:gap-y-0`}>
+                            <ItemsList items={itemsArray} />
+                        </div>
+                    </Expand>
+                )}
+                <div className="grid grid-cols-3 lg:grid-cols-4 limit:grid-cols-5 limit1600:flex limit1600:h-244px h-500px limit:justify-center justify-start -space-x-2 pt-6px ">
                     <GamesList items={gamesArray} />
                 </div>
-                <Expand
-                    open={isHover === 0}
-                    duration={200}
-                >
-                    <div className="grid grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 2xl:flex limit:ml-60px limit:-space-x-33px flex items-center h-200px lg:h-140px xl:h-140px 2xl:h-96ox -gap-y-10px limit:gap-y-0">
-                        <ItemsList items={itemsArray} />
-                    </div>
-                </Expand>
-                
+                {isDesktop && (
+                    <Expand
+                        open={isHover === 0}
+                        duration={200}
+                    >
+                        <div className={`${isHover && "opacity-0"} grid grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 2xl:flex limit:ml-60px limit:-space-x-33px flex items-center h-200px lg:h-140px xl:h-140px 2xl:h-96ox -gap-y-10px limit:gap-y-0`}>
+                            <ItemsList items={itemsArray} />
+                        </div>
+                    </Expand>
+                )}
             </div>
         </Expand>
        

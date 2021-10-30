@@ -80,8 +80,8 @@ const ProfileDropDown = ({setAuth, level = 3}) => {
     }
 
     return (
-        <div className="relative flex flex-col items-center bg-white shadow-plain rounded-3xl w-224px h-388px p-2px -mt-5px -mr-72px">
-            <div className="absolute top-0 -mt-2 ml-2 w-4 overflow-hidden inline-block">
+        <div className="relative flex flex-col items-center bg-white shadow-plain rounded-3xl w-224px h-388px p-2px -mt-5px limit1600:-mr-72px -mr-81px">
+            <div className="absolute top-0 -mt-2 limit1600:ml-2 w-4 overflow-hidden inline-block">
                 <div className="h-2 w-2 bg-white rotate-45 transform origin-bottom-left shadow"></div>
             </div>
             <div className="w-full h-128px bg-blue-e8f3fd rounded-3xl flex items-center flex-col pt-24px">
