@@ -4,7 +4,7 @@ const EsportsBetHistoryTable = () => {
 
     return (
         <div style={{borderRadius: "1em"}} className="shadow-subNavbar overflow-hidden">
-            <div style={{height:"57px"}} className="flex items-center bg-gray-fafafa font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd">
+            <div style={{height:"57px"}} className="flex items-center bg-gray-fafafa font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd pt-px">
                 <div style={{width: "92px"}} className="text-center">선택</div>
                 <div style={{width: "74px"}} className="text-center">베팅번호</div>
                 <div style={{width: "183px"}} className="text-center">베팅시간</div>

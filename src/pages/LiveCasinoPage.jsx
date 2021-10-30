@@ -15,7 +15,7 @@ const LiveCasinoPage = ({
                 <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
             </div>
 
-            <div className="w-full h-full bg-black flex justify-center pt-92px">
+            <div className="w-full h-full bg-black flex justify-center limit1600:mt-92px mt-122px">
                 <img className="h-full object-contain" src={PlaceholderImage} alt="" />
             </div>
 

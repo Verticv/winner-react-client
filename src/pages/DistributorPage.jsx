@@ -631,14 +631,14 @@ const DistributorPage = ({
     )
 
     return (
-        <div className="relative flex flex-col justify-center limit:justify-center limit:overflow-x-hidden">
+        <div className="relative flex flex-col justify-center">
              <div className="fixed w-full top-0 z-50 flex flex-col items-start limit1920:items-center">
                 <NoticeBanner />
                 <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
             </div>
-            <div className="relative flex flex-col justify-start limit:justify-center limit:overflow-x-hidden">
+            <div className="relative flex flex-col justify-start limit:justify-center">
 
-            <div className="flex flex-col items-center limit1920:items-center limit:mt-92px mt-122px w-full h-full">
+            <div className="flex flex-col items-center limit1920:items-center limit1600:mt-92px mt-122px w-full h-full">
                 <div className="relative w-default h-225px mt-20px">
                     <label style={{color:"#3a5f39"}} className="text-36px font-spoqaMedium absolute right-0 bottom-0 z-20 mb-86px mr-50px">총판페이지</label>
                     <img className="z-10" src={DistributorBanner} alt="" />

@@ -305,7 +305,7 @@ const SportsBetHistoryPanel = ({
 
 
     return (
-        <div className="w-full shadow-subNavbar rounded-3xl bg-gray-fafafa pb-10px">
+        <div style={{borderRadius:"1em"}} className="w-full shadow-subNavbar bg-gray-fafafa pb-10px">
             <div className="flex h-54px w-full font-spoqaMedium text-14px tracking-tight text-gray-r454545">
                 <div style={{width: isAttached === true ? "162px" : "138px"}} className="h-full flex items-center justify-center">베팅구분</div>
                 <div style={{width: isAttached === true ? "315px" : "274px"}} className="h-full flex items-center justify-center">승(홈)</div>

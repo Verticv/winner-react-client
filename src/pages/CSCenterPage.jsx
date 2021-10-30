@@ -70,7 +70,7 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
             </div>
 
 
-            <div className="flex flex-col items-start limit:items-center limit:mt-92px mt-122px w-full h-full">
+            <div className="flex flex-col items-start limit:items-center limit1600:mt-92px mt-122px w-full h-full">
 
                 <Route path="/cscenter/contact/all*">
                     <DirectoryComponent 

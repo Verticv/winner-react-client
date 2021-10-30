@@ -42,7 +42,7 @@ const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
                 <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
             </div>
 
-            <div className="w-full flex flex-col items-center mt-107px">
+            <div className="w-full flex flex-col items-center limit1600:mt-107px mt-137px">
                 <div className="w-default">
 
                 <Route path="/minigame/powerball">
@@ -69,10 +69,10 @@ const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
                                 <iframe src="https://ntry.com/scores/powerball/live.php" width="860" height="640" scrolling="yes" frameborder="0" style={{WebkitTransform:"scale(0.795)", marginTop:"-66px"}} title="powerball"></iframe>
                             </Route>
                             <Route path="/minigame/powerladder">
-                                <iframe src="https://ntry.com/scores/powerball/live.php" width="860" height="640" scrolling="yes" frameborder="0" style={{WebkitTransform:"scale(0.795)", marginTop:"-66px"}} title="powerball"></iframe>
+                                <iframe src="https://ntry.com/scores/power_ladder/live.php" width="860" height="640" scrolling="yes" frameborder="0" style={{WebkitTransform:"scale(0.795)", marginTop:"-66px"}} title="powerball"></iframe>
                             </Route>
                             <Route path="/minigame/speedkino">
-                                <iframe src="https://ntry.com/scores/powerball/live.php" width="860" height="640" scrolling="yes" frameborder="0" style={{WebkitTransform:"scale(0.795)", marginTop:"-66px"}} title="powerball"></iframe>
+                                <iframe src="https://ntry.com/scores/speedkeno/live.php" width="860" height="640" scrolling="yes" frameborder="0" style={{WebkitTransform:"scale(0.795)", marginTop:"-66px"}} title="powerball"></iframe>
                             </Route>
                             <Route path="/minigame/kinoladder">
                                 <iframe src="https://ntry.com/scores/keno_ladder/live.php" width="860" height="640" scrolling="yes" frameborder="0" style={{WebkitTransform:"scale(0.795)", marginTop:"-66px"}} title="kinoladder"></iframe>                            

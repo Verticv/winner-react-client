@@ -122,7 +122,7 @@ const GameDetails = () => {
     )
 
     return (
-        <div className="w-full bg-gray-fafafa rounded-3xl shadow-subNavbar">
+        <div style={{borderRadius:"1em"}} className="w-full bg-gray-fafafa shadow-subNavbar">
             <div className="h-53px w-full font-spoqaMedium text-14px tracking-tight text-gray-r454545 flex items-center">
 
                 <div style={{marginLeft: "66px"}} className="h-14px flex items-center">경기일시</div>

@@ -67,7 +67,7 @@ const LiveCasinoHover = ({selection}) => {
         return items.map(item => (
             <div 
                 key={item.id} 
-                className="group relative w-305px w-auto h-206px cursor-pointer  limit:flex-shrink-1 flex-shrink-0 " 
+                className="group relative w-305px h-206px cursor-pointer" 
                 onClick={() => history.push('/live-casino')}
                 onMouseEnter={() => setHover(item.id)}
             >
@@ -81,7 +81,7 @@ const LiveCasinoHover = ({selection}) => {
 
     function ItemsList({ items }) {
         return items.map(item => (
-            <button key={item.id} className="relative group :w-254px h-57px flex-shrink-0">
+            <button key={item.id} className="relative group h-57px flex-shrink-0">
                 <div className="z-20 absolute h-57px flex items-center ">
                     <img className={item.customCss} src={item.icon} alt="icon" />
                     <span className={`font-spoqaMedium ml-4px mt-px text-14px tracking-tight ${item.color}`}>{item.btnText}</span>
@@ -123,7 +123,7 @@ const LiveCasinoHover = ({selection}) => {
                         open={isHover === 0}
                         duration={200}
                     >
-                        <div className={`${isHover && "opacity-0"} grid grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 2xl:flex limit:ml-60px limit:-space-x-33px flex items-center h-200px lg:h-140px xl:h-140px 2xl:h-96ox -gap-y-10px limit:gap-y-0`}>
+                        <div className={`text-center content-center pt-10px -space-x-33px`}>
                             <ItemsList items={itemsArray} />
                         </div>
                     </Expand>
@@ -136,7 +136,7 @@ const LiveCasinoHover = ({selection}) => {
                         open={isHover === 0}
                         duration={200}
                     >
-                        <div className={`${isHover && "opacity-0"} grid grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 2xl:flex limit:ml-60px limit:-space-x-33px flex items-center h-200px lg:h-140px xl:h-140px 2xl:h-96ox -gap-y-10px limit:gap-y-0`}>
+                        <div className={`text-center content-center pt-10px -space-x-33px`}>
                             <ItemsList items={itemsArray} />
                         </div>
                     </Expand>
