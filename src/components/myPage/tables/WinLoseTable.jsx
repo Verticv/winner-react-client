@@ -121,18 +121,18 @@ const WinLoseTable = ({
                 style={{backgroundColor: item.id % 2 === 0 ? "#fefefe" : "#f8f9fb"}} 
                 className="font-spoqa text-14px tracking-tight text-gray-r585858 h-56px w-full border-b border-gray-dddddd"
             >
-                <td style={{WebkitTextStroke:"0.2px"}} className="w-100px font-robotoRegular h-56px text-center flex items-center justify-center pt-6px"><RadioButton id={item.id}/></td>
-                <td style={{WebkitTextStroke:"0.2px"}} className="w-64px h-56px text-center font-robotoRegular">{item.number}</td>
-                <td style={{WebkitTextStroke:"0.2px"}} className="w-176px h-56px text-center font-robotoRegular">{item.startDate}</td>
-                <td style={{WebkitTextStroke:"0.2px"}} className="w-136px h-56px text-center font-robotoRegular">{item.endDate}</td>
-                <td style={{WebkitTextStroke:"0.2px"}} className="w-265px h-56px text-center">{item.type}</td>
+                <td style={{WebkitTextStroke:"0.2px"}} className="w-100px font-robotoRegular h-56px text-center flex items-center justify-center pt-3px"><RadioButton id={item.id}/></td>
+                <td style={{WebkitTextStroke:"0.2px"}} className="w-64px h-56px text-center font-robotoRegular pt-2px">{item.number}</td>
+                <td style={{WebkitTextStroke:"0.2px"}} className="w-176px h-56px text-center font-robotoRegular pt-2px">{item.startDate}</td>
+                <td style={{WebkitTextStroke:"0.2px"}} className="w-136px h-56px text-center font-robotoRegular pt-2px">{item.endDate}</td>
+                <td style={{WebkitTextStroke:"0.2px"}} className="w-265px h-56px text-center pt-2px">{item.type}</td>
                 <td 
                     style={{color: item.amount.includes("+") ? "#d52e2e" : item.amount.includes("-") ? "#0056a6" : "#585858", WebkitTextStroke:"0.2px"}}
-                    className="w-170px h-56px text-center font-robotoRegular"
+                    className="w-170px h-56px text-center font-robotoRegular pt-2px"
                 >
                     {item.amount}
                 </td>
-                <td style={{WebkitTextStroke:"0.2px"}} className="w-128px h-56px text-center">{item.status}</td>
+                <td style={{WebkitTextStroke:"0.2px"}} className="w-128px h-56px text-center pt-2px">{item.status}</td>
             </tr>
         ));
     }
@@ -142,13 +142,13 @@ const WinLoseTable = ({
             <table >
                 <thead className="bg-gray-fafafa font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd">
                     <tr>
-                        <td className="w-100px text-center">선택</td>
-                        <td className="w-64px text-center">번호</td>
-                        <td className="w-176px text-center">정산시작일</td>
-                        <td className="w-136px text-center">정산종료일</td>
-                        <td className="w-265px text-center">분류</td>
-                        <td className="w-170px text-center">금액</td>
-                        <td className="w-128px text-center">처리상태</td>
+                        <td className="w-100px text-center pt-2px">선택</td>
+                        <td className="w-64px text-center pt-2px">번호</td>
+                        <td className="w-176px text-center pt-2px">정산시작일</td>
+                        <td className="w-136px text-center pt-2px">정산종료일</td>
+                        <td className="w-265px text-center pt-2px">분류</td>
+                        <td className="w-170px text-center pt-2px">금액</td>
+                        <td className="w-128px text-center pt-2px">처리상태</td>
                     </tr>
                 </thead>
                 <tbody className="w-full text-585858 text-14px tracking-tight font-spoqa">

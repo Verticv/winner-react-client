@@ -265,7 +265,8 @@ module.exports = {
       screens: {
         'limit': '1261px',
         'limit1920': '1905px',
-        'limit1600': '1600px'
+        'limit1600': '1600px',
+        'limit734': '734px'
       },
       colors: {
         blue: {

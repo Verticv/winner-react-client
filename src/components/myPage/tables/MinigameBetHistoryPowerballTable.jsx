@@ -24,7 +24,7 @@ const MinigameBetHistoryPowerballTable = ({array, checkedState, setCheckedState,
 
         return items.map(item => (
             <div className="flex items-center bg-gray-fefefe font-spoqa text-14px tracking-tight text-gray-r585858 h-56px w-full border-b border-gray-dddddd flex-shrink-0">
-                <div style={{width: "51px"}} className="ml-20px text-center pt-px h-full flex justify-center items-center">
+                <div style={{width: "51px"}} className="ml-20px text-center h-full flex justify-center items-center">
                     <input
                         type="checkbox"
                         checked={checkedState[item.id]}
@@ -50,7 +50,7 @@ const MinigameBetHistoryPowerballTable = ({array, checkedState, setCheckedState,
 
     return (
         <div style={{borderRadius: "1em"}} className="shadow-subNavbar overflow-hidden w-full">
-            <div style={{height:"56px"}} className="flex items-center bg-gray-fafafa font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd flex-shrink-0">
+            <div style={{height:"56px"}} className="flex items-center bg-gray-fafafa font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd flex-shrink-0 pt-px">
                 <div style={{width: "51px"}} className="ml-20px text-center">선택</div>
                 <div style={{width: "86px"}} className="text-center">베팅번호</div>
                 <div style={{width: "160px"}} className="text-center">베팅시간</div>

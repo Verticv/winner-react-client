@@ -133,6 +133,9 @@ const MinigameBetHistory = ({isState, setState, showSub = true, attachedArray, s
                             id={0} 
                             checkedState={checkedState} 
                             setCheckedState={setCheckedState}
+                            team1="우3홀 [200회]"
+                            team2="[200회] 좌3짝"
+                            choice="odd"
                             game="스피드키노"
                             isPopup={!showSub}
                             attachedArray={attachedArray} 
