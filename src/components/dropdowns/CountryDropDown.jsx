@@ -42,7 +42,7 @@ const CountryDropDown = ({setCountry, country}) => {
     }
 
     return (
-        <div className="relative flex flex-col items-center bg-white shadow-plain rounded-20px bg-white w-108px h-85px p-2px -mt-5px -mr-3px">
+        <div className="relative flex flex-col items-center bg-white shadow-plain rounded-20px bg-white w-108px h-85px p-2px -mr-3px limit1600:-mt-5px -mt-16px">
             <div class="absolute top-0 -mt-2 ml-2 w-4 overflow-hidden inline-block">
                 <div class="h-2 w-2 bg-white rotate-45 transform origin-bottom-left shadow"></div>
             </div>

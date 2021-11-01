@@ -16,7 +16,7 @@ import SpaLogo from '../../images/gray/spa_gray_logo.png'
 import TopLogo from '../../images/gray/top_gray_logo.png'
 import WmLogo from '../../images/gray/wm_gray_logo.png'
 
-const Footer2 = () => {
+const Footer2 = ({fullWidth = false}) => {
 
     const itemsClass = "flex items-center justify-center w-135px h-32px"
 
@@ -49,7 +49,7 @@ const Footer2 = () => {
     }
 
     return (
-        <div className="flex justify-start limit:justify-center limit:w-screen bg-gray-f9f9f9 h-114px">
+        <div className={`flex justify-center bg-gray-f9f9f9 h-114px ${fullWidth ? "w-1836px limit1836:w-screen" : "w-1300 limit:w-screen"} `}>
             <div className="flex flex-col w-default flex-shrink-0 items-center justify-center space-y-10px pl-20px">
                 <div className="flex justify-between w-default pr-20px"><LogosList items={logosArray1} /></div>
                 <div className="flex justify-between w-default pr-20px"><LogosList items={logosArray2} /></div>

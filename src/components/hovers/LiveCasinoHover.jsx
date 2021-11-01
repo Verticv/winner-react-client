@@ -71,8 +71,8 @@ const LiveCasinoHover = ({selection}) => {
                 onClick={() => history.push('/live-casino')}
                 onMouseEnter={() => setHover(item.id)}
             >
-                <img className={`opacity-100 group-hover:opacity-0 w-305px w-auto h-206px object-contain object-left`} src={item.background} alt="game_image" />
-                <img className={`opacity-0 group-hover:opacity-100 absolute top-0 w-305px w-auto h-206px object-contain object-left`} src={item.highlight} alt="game_image" />
+                <img className={` ${isHover === item.id && "opacity-0"} opacity-100 group-hover:opacity-0 w-305px w-auto h-206px object-contain object-left`} src={item.background} alt="game_image" />
+                <img className={`${isHover === item.id && "opacity-100"} opacity-0 group-hover:opacity-100 absolute top-0 w-305px w-auto h-206px object-contain object-left`} src={item.highlight} alt="game_image" />
                 <div className="absolute bottom-0 h-20px w-156px right-0 flex items-center justify-center -mb-2px"><span className="ml-10px group-hover:text-black font-spoqaBold tracking-tight text-12px text-gray-r616161">{item.imgText}</span></div>
                 <div className={`absolute bottom-0 font-spoqaBold text-12px w-80px h-25px ml-80px -mb-17px flex items-center justify-center rounded-full bg-white text-gray-r888889 group-hover:text-white shadow-plain4 ${item.color}`}>게임시작</div>
             </div>
@@ -81,7 +81,7 @@ const LiveCasinoHover = ({selection}) => {
 
     function ItemsList({ items }) {
         return items.map(item => (
-            <button key={item.id} className="relative group h-57px flex-shrink-0">
+            <button key={item.id} className="relative group h-57px flex-shrink-0" onMouseEnter={() => setHover(0)}>
                 <div className="z-20 absolute h-57px flex items-center ">
                     <img className={item.customCss} src={item.icon} alt="icon" />
                     <span className={`font-spoqaMedium ml-4px mt-px text-14px tracking-tight ${item.color}`}>{item.btnText}</span>

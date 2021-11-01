@@ -81,11 +81,13 @@ const BetCombinationPage = ({isAuthenticated, setAuthenticated}) => {
                     />
                 </Route>
 
-                <div className="flex w-default space-x-20px">
+                <div className="flex w-default space-x-20px -mt-px">
 
                     <div style={{width: "933px"}}>
-                        <HorizontalMenu6 itemsArray={tabsArray} isState={selectedTab} setState={setSelectedTab} />
+                        <div style={{width: "935px", marginLeft:"-1px"}}>
 
+                        <HorizontalMenu6 itemsArray={tabsArray} isState={selectedTab} setState={setSelectedTab} />
+                        </div>
                         <div className="mt-15px">
                             <BetCombinationPanel 
                                 addedCard={addedCard} 

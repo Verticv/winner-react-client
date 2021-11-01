@@ -15,6 +15,7 @@ const Carousel = () => {
 
     // We will start by storing the index of the current image in the state.
     const [currentImage, setCurrentImage] = useState(0);
+    const [isHover, setHover] = useState(false);
 
     // Some validation for checking the array length could be added if needed
     const totalImages = images.length;
@@ -78,7 +79,7 @@ const Carousel = () => {
     const imagesDisplay = (
         <>
             {images.map((img, i) => (
-                 <img key={i} src={images[i]} className={`${currentImage === i ? "opacity-100" : "opacity-0"} ${img === visual2 && "absolute top-0"} w-full  object-contain transition duration-300`} alt={"banner_images"} />
+                 <img onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} key={i} src={images[i]} className={`${currentImage === i ? "opacity-100" : "opacity-0"} ${img === visual2 && "absolute top-0"} w-full  object-contain transition duration-300`} alt={"banner_images"} />
 
                 // <button key={i} className="w-15px h-15px bg-gray-300 rounded-full p-2px" onClick={() => setCurrentImage(i)}>
                 //     {currentImage === i && (
@@ -92,17 +93,20 @@ const Carousel = () => {
     useEffect(
         () => {
             let timer1 = setTimeout(() => {
-                if (currentImage === 0) {
-                    setCurrentImage(1)
-                } else {
-                    setCurrentImage(0)
+                if (isHover === false) {
+                    if (currentImage === 0) {
+                        setCurrentImage(1)
+                    } else {
+                        setCurrentImage(0)
+                    }
                 }
+ 
             }, 5000);
             return () => {
                 clearTimeout(timer1);
             };
         },
-        [currentImage]
+        [currentImage, isHover]
     );
 
     return (

@@ -3,14 +3,14 @@ import Footer from 'components/mainPage/Footer'
 import Footer2 from 'components/mainPage/Footer2'
 import Navbar from 'components/mainPage/Navbar'
 import NoticeBanner from 'components/mainPage/NoticeBanner'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import PowerballIcon from '../images/minigames/powerball.png'
 import PowerLadder from '../images/minigames/powerladder.png'
 import SpeedKino from '../images/minigames/speedkino.png'
 import KinoLadder from '../images/minigames/kinoladder.png'
 import MinigamesRightPanel from 'components/minigames/MinigamesRightPanel'
 import MinigamesPanel from 'components/minigames/MinigamesPanel'
-import { Route } from 'react-router'
+import { Route, useLocation } from 'react-router'
 
 
 const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
@@ -34,6 +34,12 @@ const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
         }
     ])
 
+    const location = useLocation();
+
+    useEffect(() => {
+        setSelectedTab(0)
+    }, [location]);
+
     return (
         <div className="relative flex flex-col justify-center limit:overflow-x-hidden">
 
@@ -46,16 +52,16 @@ const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
                 <div className="w-default">
 
                 <Route path="/minigame/powerball">
-                <HorizontalMenu3 itemsArray={GameTypeArray} selectedTab={"/minigame/powerball"} setSelectedTab={setSelectedGame} setSelectedOption={setSelectedOption} setSelectedTab1={setSelectedTab} />
+                    <HorizontalMenu3 itemsArray={GameTypeArray} selectedTab={"/minigame/powerball"} setSelectedTab={setSelectedGame} setSelectedOption={setSelectedOption} setSelectedTab1={setSelectedTab} />
                 </Route>
                 <Route path="/minigame/powerladder">
-                <HorizontalMenu3 itemsArray={GameTypeArray} selectedTab={"/minigame/powerladder"} setSelectedTab={setSelectedGame} setSelectedOption={setSelectedOption} setSelectedTab1={setSelectedTab} />
+                    <HorizontalMenu3 itemsArray={GameTypeArray} selectedTab={"/minigame/powerladder"} setSelectedTab={setSelectedGame} setSelectedOption={setSelectedOption} setSelectedTab1={setSelectedTab} />
                 </Route>
                 <Route path="/minigame/speedkino">
-                <HorizontalMenu3 itemsArray={GameTypeArray} selectedTab={"/minigame/speedkino"} setSelectedTab={setSelectedGame} setSelectedOption={setSelectedOption} setSelectedTab1={setSelectedTab} />
+                    <HorizontalMenu3 itemsArray={GameTypeArray} selectedTab={"/minigame/speedkino"} setSelectedTab={setSelectedGame} setSelectedOption={setSelectedOption} setSelectedTab1={setSelectedTab} />
                 </Route>
                 <Route path="/minigame/kinoladder">
-                <HorizontalMenu3 itemsArray={GameTypeArray} selectedTab={"/minigame/kinoladder"} setSelectedTab={setSelectedGame} setSelectedOption={setSelectedOption} setSelectedTab1={setSelectedTab} />
+                    <HorizontalMenu3 itemsArray={GameTypeArray} selectedTab={"/minigame/kinoladder"} setSelectedTab={setSelectedGame} setSelectedOption={setSelectedOption} setSelectedTab1={setSelectedTab} />
                 </Route>
                     {/* <HorizontalMenu3 itemsArray={GameTypeArray} selectedTab={selectedGame} setSelectedTab={setSelectedGame} setSelectedOption={setSelectedOption} setSelectedTab1={setSelectedTab} /> */}
 

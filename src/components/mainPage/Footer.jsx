@@ -15,7 +15,7 @@ import Visa from '../../images/footer/visa.png'
 import { useHistory } from 'react-router'
 
 
-const Footer = () => {
+const Footer = ({fullWidth = false}) => {
 
     const history = useHistory();
 
@@ -41,7 +41,7 @@ const Footer = () => {
     }
 
     return (
-        <div className="flex flex-col items-start limit:items-center bg-gray-ececec limit:w-screen w-1300 h-190px">
+        <div className={`flex flex-col items-center bg-gray-ececec h-190px ${fullWidth ? "w-1836px limit1836:w-screen" : "w-1300 limit:w-screen"}`}>
             <div className="flex w-default h-138px mt-29px">
                 {/* BREAK */}
                 <div className="flex flex-col space-y-18px w-297px pr-24px flex-shrink-0">

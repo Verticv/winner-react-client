@@ -1021,14 +1021,14 @@ const DistributorPage = ({
 
                     </div>
     
-
-                    <div className="mt-60px">
+                    <div className="flex mt-60px justify-center w-full">
                         <Pagination page={page} setPage={setPage}/>   
                     </div>
 
-                    <div>
-                        <Footer2 />
-                        <Footer />
+
+                    <div className="w-full">
+                        <Footer2  fullWidth={true}/>
+                        <Footer fullWidth={true} />
                     </div>
                 </div>
             </div>
