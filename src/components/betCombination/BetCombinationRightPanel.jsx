@@ -42,7 +42,7 @@ const BetCombinationRightPanel = ({
     return (
         <div className="w-fill rounded-lg shadow-subNavbar">
 
-            <div className="relative bg-gradient-to-b from-gray-f8f9fb via-gray-efeff0 to-gray-e5e6e6 h-54px w-full shadow-plain5 z-20 rounded-t-lg flex items-center justify-between px-8px">
+            <div style={{boxShadow:"0 2px 2px 1px #00000040"}} className="relative bg-gradient-to-b from-gray-f8f9fb via-gray-efeff0 to-gray-e5e6e6 h-54px w-full z-20 rounded-t-lg flex items-center justify-between px-8px">
                 <div className="flex flex-col space-y-2px">
                     <div className="h-14px flex items-center text-14px font-spoqaMedium tracking-tight text-gray-r585858">{format(time, dateFormat, { locale : ko })}</div>
                     <div className="h-14px flex items-center text-14px font-spoqaMedium tracking-tight text-blue-r0056a6">{format(time, dateFormat1, { locale : ko })}</div>

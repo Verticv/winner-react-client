@@ -41,15 +41,15 @@ import { useHistory } from 'react-router'
 const LiveCasinoHover = ({selection}) => {
 
     const history = useHistory()
-    const [isHover, setHover] = useState(2)
+    const [isHover, setHover] = useState(null)
 
     const gamesArray = [
-        { id: 0, background: EvoBanner, highlight: EvoBannerHighlight, color: "group-hover:bg-teal-r4eb2ba", imgText: "에볼루션", btnText: "게임시작", class: "bg-opacity-25" },
-        { id: 1, background: AsiaBanner, highlight: AsiaBannerHighlight, color: "group-hover:bg-blue-r3384ca", imgText: "아시아게이밍", btnText: "게임시작", class: "bg-opacity-25" },
-        { id: 2, background: PragBanner, highlight: PragBannerHighlight, color: "group-hover:bg-purple-d03ab7", imgText: "프레그메틱플레이", btnText: "게임시작", class: "bg-opacity-25" },
-        { id: 3, background: DgBanner, highlight: DgBannerHighlight, color: "group-hover:bg-orange-e39e90", imgText: "드림게이밍", btnText: "게임시작", class: "bg-opacity-25" },
-        { id: 4, background: SexyBanner, highlight: SexyBannerHighlight, color: "group-hover:bg-red-db4a4a", imgText: "섹시게이밍", btnText: "게임시작", class: "bg-opacity-25" },
-        { id: 5, background: BigBanner, highlight: BigBannerHighlight, color: "group-hover:bg-yellow-e3ba3c", imgText: "빅게이밍", btnText: "게임시작", class: "bg-opacity-25" }
+        { id: 0, background: EvoBanner, highlight: EvoBannerHighlight, color: "bg-teal-r4eb2ba", imgText: "에볼루션", btnText: "게임시작", class: "bg-opacity-25" },
+        { id: 1, background: AsiaBanner, highlight: AsiaBannerHighlight, color: "bg-blue-r3384ca", imgText: "아시아게이밍", btnText: "게임시작", class: "bg-opacity-25" },
+        { id: 2, background: PragBanner, highlight: PragBannerHighlight, color: "bg-purple-d03ab7", imgText: "프레그메틱플레이", btnText: "게임시작", class: "bg-opacity-25" },
+        { id: 3, background: DgBanner, highlight: DgBannerHighlight, color: "bg-orange-e39e90", imgText: "드림게이밍", btnText: "게임시작", class: "bg-opacity-25" },
+        { id: 4, background: SexyBanner, highlight: SexyBannerHighlight, color: "bg-red-db4a4a", imgText: "섹시게이밍", btnText: "게임시작", class: "bg-opacity-25" },
+        { id: 5, background: BigBanner, highlight: BigBannerHighlight, color: "bg-yellow-e3ba3c", imgText: "빅게이밍", btnText: "게임시작", class: "bg-opacity-25" }
     ];
 
     const itemsArray = [
@@ -71,10 +71,10 @@ const LiveCasinoHover = ({selection}) => {
                 onClick={() => history.push('/live-casino')}
                 onMouseEnter={() => setHover(item.id)}
             >
-                <img className={` ${isHover === item.id && "opacity-0"} opacity-100 group-hover:opacity-0 w-305px w-auto h-206px object-contain object-left`} src={item.background} alt="game_image" />
-                <img className={`${isHover === item.id && "opacity-100"} opacity-0 group-hover:opacity-100 absolute top-0 w-305px w-auto h-206px object-contain object-left`} src={item.highlight} alt="game_image" />
-                <div className="absolute bottom-0 h-20px w-156px right-0 flex items-center justify-center -mb-2px"><span className="ml-10px group-hover:text-black font-spoqaBold tracking-tight text-12px text-gray-r616161">{item.imgText}</span></div>
-                <div className={`absolute bottom-0 font-spoqaBold text-12px w-80px h-25px ml-80px -mb-17px flex items-center justify-center rounded-full bg-white text-gray-r888889 group-hover:text-white shadow-plain4 ${item.color}`}>게임시작</div>
+                <img className={`${isHover === item.id ? "opacity-0" : "opacity-100"} w-305px w-auto h-206px object-contain object-left`} src={item.background} alt="game_image" />
+                <img className={`${isHover === item.id ? "opacity-100" : "opacity-0"} absolute top-0 w-305px w-auto h-206px object-contain object-left`} src={item.highlight} alt="game_image" />
+                <div className="absolute bottom-0 h-20px w-156px right-0 flex items-center justify-center -mb-2px"><span className={`${isHover === item.id ? "text-black" : " text-gray-r616161"} ml-10px font-spoqaBold tracking-tight text-12px`}>{item.imgText}</span></div>
+                <div className={`${isHover === item.id ? item.color + " text-white" : "text-gray-r888889"} bg-white absolute bottom-0 font-spoqaBold text-12px w-80px h-25px ml-80px -mb-17px flex items-center justify-center rounded-full  shadow-plain4`}>게임시작</div>
             </div>
         ));
     }
@@ -117,7 +117,7 @@ const LiveCasinoHover = ({selection}) => {
             className="absolute w-full h-244px bg-white bg-opacity-80 shadow-inner border-b-2 border-gray-300 space-y-50px" 
             
         >
-            <div onMouseLeave={() => setHover(2)}>
+            <div onMouseLeave={() => setHover(null)}>
                 {!isDesktop && (
                     <Expand
                         open={isHover === 0}

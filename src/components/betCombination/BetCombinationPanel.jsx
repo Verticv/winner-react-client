@@ -534,7 +534,7 @@ const BetCombinationPanel = ({
                     style={{
                         width:"267px", 
                         height: "39px",
-                        backgroundColor: `${id}left` === isButtonClicked ? "#cb4343" : "#b3b3b3" 
+                        backgroundColor: (`${id}left` === isButtonClicked || `${id}left` === isHover3) ? "#cb4343" : "#b3b3b3" 
                     }}  
                     className="flex items-center justify-center rounded-lg"
                     onClick={() => {
