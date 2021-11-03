@@ -49,7 +49,7 @@ const HorizontalMenu6 = ({
                             : isHover === item.id 
                             ? "linear-gradient(to bottom, #b9dcff, #d2f6ff)"
                             : "linear-gradient(to bottom, #c4d6e6, #f5feff 50%, #ffffff)",
-                            boxShadow:'inset 1px 1px 3px rgba(0, 0, 0, 0.05)'
+                            boxShadow:'inset 1px 1px 3px rgba(0, 0, 0, 0.15)'
                         }}
                         className={`mt-3px w-full rounded-b-md rounded-t-lg flex flex-col items-center`}
                     >
