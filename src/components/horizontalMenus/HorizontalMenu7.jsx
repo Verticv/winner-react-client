@@ -17,7 +17,12 @@ const HorizontalMenu7 = ({
                     pathname === item.path
                     ? "bg-blue-r58baf7" 
                     : "bg-white hover:bg-blue-d3f3fe"
-                } overflow-hidden h-80px w-full rounded-lg flex justify-end border border-gray-dddddd`} 
+                } overflow-hidden w-full rounded-lg flex items-end p-px`} 
+                style={{
+                    height:"80px",
+                    background: "linear-gradient(to bottom, #dddddd, #bcbcbc)",
+                    borderRadius:"7px",
+                }}
                 onClick={() => {
                     history.push(item.path)
                 }}
@@ -26,29 +31,43 @@ const HorizontalMenu7 = ({
             >
                 <div 
                     style={{
-                        background: pathname === item.path
-                        ? "linear-gradient(to bottom, #2087f0, #1873cf)"
-                        : isHover === item.path 
-                        ? "linear-gradient(to bottom, #b9dcff, #d2f6ff)"
-                        : "linear-gradient(to bottom, #c4d6e6, #e8f3fd 26%, #ffffff )",
-                        borderBottomLeftRadius:"6px",
-                        borderBottomRightRadius:"6px",
-                        borderColor: pathname === item.path ? "#1a73ce" : "#d6dfe8",
-                    }}
-                    className={`${
-                        pathname === item.path
-                        ? "bg-gradient-to-b from-blue-r2087f0 via-blue-r2087f0 to-blue-gradDark"
-                        : "bg-gradient-to-b from-blue-c4d6e6 via-gray-f5feff to-white  border-blue-d6dfe8"
-                    } mt-3px h-75px w-full rounded-b-md rounded-t-lg flex flex-col items-center justify-between border-b border-l border-r`}
+                        height:"78px", 
+                        width:"100%", 
+                        borderRadius:"6px",
+                    }} 
+                    className={`flex w-full justify-end items-end bg-white ${
+                        pathname === item.path 
+                        ? "bg-blue-r58baf7" 
+                        : "bg-white hover:bg-blue-d3f3fe"
+                    }`}
                 >
-                    <img className="mt-8px ml-2px object-none" src={item.icon} alt="" />
-                    <span 
+                    <div 
+                        style={{
+                            background: pathname === item.path
+                            ? "linear-gradient(to bottom, #2087f0, #1873cf)"
+                            : isHover === item.path 
+                            ? "linear-gradient(to bottom, #b9dcff, #d2f6ff)"
+                            : "linear-gradient(to bottom, #c4d6e6, #e8f3fd 26%, #ffffff )",
+                            borderBottomLeftRadius:"6px",
+                            borderBottomRightRadius:"6px",
+                            borderColor: pathname === item.path ? "#1a73ce" : "#d6dfe8",
+                            boxShadow:'rgb(0 0 0 / 30%) 7px 0px 2px -7px inset, rgb(0 0 0 / 30%) -7px 0px 2px -7px inset, rgb(0 0 0 / 30%) 0px -7px 2px -7px inset'
+                        }}
                         className={`${
                             pathname === item.path
-                            ? "text-white"
-                            : "text-gray-r616161" }
-                            text-14px font-spoqaMedium tracking-tight mb-9px flex items-center h-14px`}
-                    >{item.text}</span>
+                            ? "bg-gradient-to-b from-blue-r2087f0 via-blue-r2087f0 to-blue-gradDark"
+                            : "bg-gradient-to-b from-blue-c4d6e6 via-gray-f5feff to-white  border-blue-d6dfe8"
+                        } mt-3px h-75px w-full rounded-b-md rounded-t-lg flex flex-col items-center justify-between`}
+                    >
+                        <img className="mt-8px ml-2px object-none" src={item.icon} alt="" />
+                        <span 
+                            className={`${
+                                pathname === item.path
+                                ? "text-white"
+                                : "text-gray-r616161" }
+                                text-14px font-spoqaMedium tracking-tight mb-9px flex items-center h-14px`}
+                        >{item.text}</span>
+                    </div>
                 </div>
             </button>
         ));

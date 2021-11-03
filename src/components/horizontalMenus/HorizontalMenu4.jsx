@@ -31,7 +31,7 @@ const HorizontalMenu4 = ({
                         : "linear-gradient(to bottom, #f9f9f9, #f9f9f9, #d4d9de)",
                         borderBottomLeftRadius:"6px",
                         borderBottomRightRadius:"6px",
-                        borderColor: selectedTab === item.path ? "#1a73ce" : "#d6dfe8"
+                        borderColor: selectedTab === item.path ? "#1a73ce" : "#d6dfe8",
                     }}
                     className="mt-2px w-full rounded-b-md rounded-t-lg flex items-start justify-center pt-9px"
                 >

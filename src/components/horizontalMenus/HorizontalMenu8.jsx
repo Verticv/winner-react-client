@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const HorizontalMenu8 = ({
     itemsArray, 
@@ -7,43 +7,64 @@ const HorizontalMenu8 = ({
     setSelectedSubTab
 }) => {
 
+    const [isHover, setHover] = useState(null)
+
     function TabsList({ items }) {
         return items.map(item => (
             <button 
                 key={item.id} 
+                style={{
+                    height:"80px",
+                    background: "linear-gradient(to bottom, #dddddd, #bcbcbc)",
+                    borderRadius:"7px",
+                }}
                 className={`${
                     selectedTab === item.id
                     ? "bg-blue-r58baf7" 
                     : "bg-white"
-                } overflow-hidden h-80px w-full rounded-lg flex justify-end border border-gray-dddddd`} 
+                } overflow-hidden h-80px w-full rounded-lg flex items-end p-px`} 
                 onClick={() => {
                     setSelectedTab(item.id)
                     setSelectedSubTab(0)
                 }}
+                onMouseOver={() => setHover(item.id)}
+                onMouseLeave={() => setHover(null)}
             >
                 <div 
                     style={{
-                        background: selectedTab === item.id
-                        ? "linear-gradient(to bottom, #2087f0, #1873cf)"
-                        : "linear-gradient(to bottom, #c4d6e6, #e8f3fd 26%, #ffffff )",
-                        borderBottomLeftRadius:"6px",
-                        borderBottomRightRadius:"6px",
-                        borderColor: selectedTab === item.id ? "#1a73ce" : "#d6dfe8",
-                    }}
-                    className={`${
-                        selectedTab === item.id
-                        ? "bg-gradient-to-b from-blue-r2087f0 via-blue-r2087f0 to-blue-gradDark"
-                        : "bg-gradient-to-b from-blue-c4d6e6 via-gray-f5feff to-white  border-blue-d6dfe8"
-                    } mt-3px h-75px w-full rounded-b-md rounded-t-lg flex flex-col items-center border-b border-l border-r`}
+                        height:"78px", 
+                        width:"100%", 
+                        borderRadius:"6px",
+                    }} 
+                    className={`flex w-full justify-end items-end ${
+                        selectedTab === item.id 
+                        ? "bg-blue-r58baf7" 
+                        : "bg-white hover:bg-blue-d3f3fe"
+                    }`}
                 >
-                    <img className="mt-8px ml-2px object-none" src={item.icon} alt="" />
-                    <span 
-                        className={`${
-                            selectedTab === item.id
-                            ? "text-white"
-                            : "text-gray-r616161" }
-                            text-14px font-spoqaMedium tracking-tight -mt-4px`}
-                    >{item.text}</span>
+                    <div 
+                        style={{
+                            borderBottomLeftRadius:"6px",
+                            borderBottomRightRadius:"6px",
+                            borderColor: selectedTab === item.id ? "#1a73ce" : "#d6dfe8",
+                            background: selectedTab === item.id
+                            ? "linear-gradient(to bottom, #2087f0, #1873cf)"
+                            : isHover === item.id 
+                            ? "linear-gradient(to bottom, #b9dcff, #d2f6ff)"
+                            : "linear-gradient(to bottom, #c4d6e6, #f5feff 50%, #ffffff)",
+                            boxShadow:'rgb(0 0 0 / 30%) 7px 0px 2px -7px inset, rgb(0 0 0 / 30%) -7px 0px 2px -7px inset, rgb(0 0 0 / 30%) 0px -7px 2px -7px inset'
+                        }}
+                        className={`mt-3px h-75px w-full rounded-b-md rounded-t-lg flex flex-col items-center`}
+                    >
+                        <img className="mt-8px ml-2px object-none" src={item.icon} alt="" />
+                        <span 
+                            className={`${
+                                selectedTab === item.id
+                                ? "text-white"
+                                : "text-gray-r616161" }
+                                text-14px font-spoqaMedium tracking-tight -mt-4px`}
+                        >{item.text}</span>
+                    </div>
                 </div>
             </button>
         ));
