@@ -14,7 +14,7 @@ const HorizontalMenu6 = ({
                 style={{
                     height:"98px",
                     background: "linear-gradient(to bottom, #dddddd, #bcbcbc)",
-                    borderRadius:"7px",
+                    borderRadius:"12px",
                 }}
                 className={`${
                     isState === item.id
@@ -29,7 +29,7 @@ const HorizontalMenu6 = ({
                     style={{
                         height:"96px", 
                         width:"100%", 
-                        borderRadius:"6px",
+                        borderRadius:"12px",
                     }} 
                     className={`flex w-full justify-end items-end bg-white ${
                         isState === item.id
@@ -40,8 +40,10 @@ const HorizontalMenu6 = ({
                     <div 
                         style={{
                             height: "93px",
-                            borderBottomLeftRadius:"6px",
-                            borderBottomRightRadius:"6px",
+                            borderBottomLeftRadius:"12px",
+                            borderBottomRightRadius:"12px",
+                            borderTopLeftRadius:"10px",
+                            borderTopRightRadius: "10px",
                             borderColor: isState === item.id ? "#1a73ce" : "#d6dfe8",
                             borderImage: "linear-gradient(to bottom, #dddddd, #bcbcbc)",
                             background: isState === item.id

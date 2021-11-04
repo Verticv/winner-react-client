@@ -17,7 +17,7 @@ const HorizontalMenu = ({
                 key={item.id} 
                 style={{
                     background: "linear-gradient(to bottom, #dddddd, #bcbcbc)",
-                    borderRadius:"7px",
+                    borderRadius:"12px",
                 }}
                 className={`${
                     pathname === item.path
@@ -38,7 +38,7 @@ const HorizontalMenu = ({
                     style={{
                         height:"78px", 
                         width:"100%", 
-                        borderRadius:"6px",
+                        borderRadius:"12px",
                     }} 
                     className={`flex w-full justify-end items-end bg-white ${
                         pathname === item.path
@@ -53,8 +53,10 @@ const HorizontalMenu = ({
                             : isHover === item.id 
                             ? "linear-gradient(to bottom, #b9dcff, #d2f6ff)"
                             : "linear-gradient(to bottom, #c4d6e6, #e8f3fd 26%, #ffffff)",
-                            borderBottomLeftRadius:"6px",
-                            borderBottomRightRadius:"6px",
+                            borderBottomLeftRadius:"12px",
+                            borderBottomRightRadius:"12px",
+                            borderTopLeftRadius:"10px",
+                            borderTopRightRadius: "10px",
                             borderColor: pathname === item.path ? "#1a73ce" : "#d6dfe8",
                             boxShadow:'rgb(0 0 0 / 30%) 7px 0px 2px -7px inset, rgb(0 0 0 / 30%) -7px 0px 2px -7px inset, rgb(0 0 0 / 30%) 0px -7px 2px -7px inset'
                         }}

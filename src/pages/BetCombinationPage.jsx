@@ -64,7 +64,7 @@ const BetCombinationPage = ({isAuthenticated, setAuthenticated}) => {
         new Array(filterArray.length).fill(false)
     );
     return (
-        <div className="relative flex flex-col justify-center">
+        <div className="relative flex flex-col justify-center w-full overflow-x-hidden">
 
             <div className="fixed w-full top-0 z-50 flex flex-col items-start limit1920:items-center">
                 <NoticeBanner />
@@ -81,7 +81,7 @@ const BetCombinationPage = ({isAuthenticated, setAuthenticated}) => {
                     />
                 </Route>
 
-                <div className="flex w-default space-x-20px -mt-px">
+                <div className=" relative flex w-default space-x-20px -mt-px">
 
                     <div style={{width: "933px"}}>
                         <div style={{width: "935px", marginLeft:"-1px"}}>
@@ -99,7 +99,7 @@ const BetCombinationPage = ({isAuthenticated, setAuthenticated}) => {
                         </div>
                     </div>
                     
-                    <div style={{width: isPanelFixed ? "307px" : "307px", left:"0px", position:"sticky", top: "150px", height: isPanelFixed ? "100%" : ""}} className={`${isPanelFixed && "sticky bottom-0 flex"} mb-60px pt-px`}>
+                    <div style={{width: "307px", left:"0px", position:"-webkit-sticky", top: "150px", height: isPanelFixed ? "100%" : ""}} className={`${isPanelFixed && "sticky bottom-0 flex"} mb-60px pt-px `}>
                         <BetCombinationRightPanel 
                             addedCard={addedCard} 
                             setAddedCard={setAddedCard} 
