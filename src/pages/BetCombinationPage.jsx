@@ -64,7 +64,7 @@ const BetCombinationPage = ({isAuthenticated, setAuthenticated}) => {
         new Array(filterArray.length).fill(false)
     );
     return (
-        <div className="relative flex flex-col justify-center w-full overflow-x-hidden">
+        <div className="relative flex flex-col justify-center w-full">
 
             <div className="fixed w-full top-0 z-50 flex flex-col items-start limit1920:items-center">
                 <NoticeBanner />
