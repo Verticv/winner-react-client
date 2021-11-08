@@ -21,7 +21,7 @@ const HorizontalMenu3 = ({
                 style={{
                     height:"59px",
                     background: "linear-gradient(to bottom, #dddddd, #bcbcbc)",
-                    borderRadius:"12px",
+                    borderRadius:"10px",
                 }}
                 className={`${
                     selectedTab === item.path
@@ -49,7 +49,7 @@ const HorizontalMenu3 = ({
                     style={{
                         height:"57px", 
                         width:"100%", 
-                        borderRadius:"12px",
+                        borderRadius:"9px",
                     }} 
                     className={`flex w-full justify-end items-end bg-white ${
                         selectedTab === item.path 
@@ -65,10 +65,10 @@ const HorizontalMenu3 = ({
                             : isHover === item.path 
                             ? "linear-gradient(to bottom, #b9dcff, #d2f6ff)"
                             : "linear-gradient(to bottom, #c4d6e6, #e8f3fd 26%, #ffffff)",
-                            borderBottomLeftRadius:"12px",
-                            borderBottomRightRadius:"12px",
-                            borderTopLeftRadius:"10px",
-                            borderTopRightRadius: "10px",
+                            borderBottomLeftRadius:"9px",
+                            borderBottomRightRadius:"9px",
+                            borderTopLeftRadius:"8px",
+                            borderTopRightRadius: "8px",
                             borderColor: selectedTab === item.path ? "#1a73ce" : "#d6dfe8",
                             boxShadow:'rgb(0 0 0 / 30%) 7px 0px 2px -7px inset, rgb(0 0 0 / 30%) -7px 0px 2px -7px inset, rgb(0 0 0 / 30%) 0px -7px 2px -7px inset'
                         }}

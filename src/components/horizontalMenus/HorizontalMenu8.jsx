@@ -16,7 +16,7 @@ const HorizontalMenu8 = ({
                 style={{
                     height:"80px",
                     background: "linear-gradient(to bottom, #dddddd, #bcbcbc)",
-                    borderRadius:"12px",
+                    borderRadius:"10px",
                 }}
                 className={`${
                     selectedTab === item.id
@@ -34,7 +34,7 @@ const HorizontalMenu8 = ({
                     style={{
                         height:"78px", 
                         width:"100%", 
-                        borderRadius:"12px",
+                        borderRadius:"9px",
                     }} 
                     className={`flex w-full justify-end items-end ${
                         selectedTab === item.id 
@@ -44,10 +44,10 @@ const HorizontalMenu8 = ({
                 >
                     <div 
                         style={{
-                            borderBottomLeftRadius:"12px",
-                            borderBottomRightRadius:"12px",
-                            borderTopLeftRadius:"10px",
-                            borderTopRightRadius: "10px",
+                            borderBottomLeftRadius:"9px",
+                            borderBottomRightRadius:"9px",
+                            borderTopLeftRadius:"8px",
+                            borderTopRightRadius: "8px",
                             borderColor: selectedTab === item.id ? "#1a73ce" : "#d6dfe8",
                             background: selectedTab === item.id
                             ? "linear-gradient(to bottom, #2087f0, #1873cf)"
