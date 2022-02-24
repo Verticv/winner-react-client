@@ -3,10 +3,10 @@ import BlueButton from '../../../images/minigames/blue_sq.png'
 import RedButton from '../../../images/minigames/red_sq.png'
 import BlueSMButton from '../../../images/minigames/blue_sm.png'
 import RedSMButton from '../../../images/minigames/red_sm.png'
-import BlueButtonPressed from '../../../images/minigames/blue_sq_pressed.png'
-import RedButtonPressed from '../../../images/minigames/red_sq_pressed.png'
-import RedSMButtonPressed from '../../../images/minigames/red_pressed.png'
-import BlueSMButtonPressed from '../../../images/minigames/blue_pressed.png'
+import BlueButtonPressed from '../../../images/minigames/test/blue_rec_pressed.png'
+import RedButtonPressed from '../../../images/minigames/test/red_rec_pressed.png'
+import RedSMButtonPressed from '../../../images/minigames/test/red_pressed.png'
+import BlueSMButtonPressed from '../../../images/minigames/test/blue_pressed.png'
 
 const SpeedKinoGame = ({setSelectedOption}) => {
 
@@ -95,7 +95,7 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                                     style={{width:"121px", height:"127px", marginTop:"14px"}} 
                                     className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
-                                    <img className={`absolute object-none ${state === `${titleNumber}-1` && "mb-3px"}`} src={state === `${titleNumber}-1` ? BlueButtonPressed : BlueButton} alt="" />
+                                    <img className={`absolute  ${state === `${titleNumber}-1` ? "object-contain mb-3px" : "object-none"}`} src={state === `${titleNumber}-1` ? BlueButtonPressed : BlueButton} alt="" />
                                     <p 
                                         style={{textShadow: "2px 2px 2px #00000050", fontSize: "48px"}} 
                                         className="z-20 font-swagger text-white"
@@ -119,7 +119,7 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                                     style={{width:"121px", height:"127px", marginTop: "14px"}} 
                                     className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
-                                    <img className={`absolute object-none ${state === `${titleNumber}-2` && "mb-3px"}`} src={state === `${titleNumber}-2` ? RedButtonPressed : RedButton} alt="" />
+                                    <img className={`absolute  ${state === `${titleNumber}-2` ? "object-contain mb-3px" : "object-none"}`} src={state === `${titleNumber}-2` ? RedButtonPressed : RedButton} alt="" />
                                     <p 
                                         style={{textShadow: "2px 2px 2px #00000050", fontSize: "48px"}} 
                                         className="z-20 font-swagger text-white text-20px"
@@ -142,7 +142,7 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                                         style={{width:"68px", height:"59px"}} 
                                         className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                     >
-                                        <img className="absolute object-none" src={state === `${titleNumber}-1` ? BlueSMButtonPressed : BlueSMButton} alt="" />
+                                        <img className={`absolute  ${state === `${titleNumber}-1` ? "object-contain mb-3px" : "object-none"}`} src={state === `${titleNumber}-1` ? BlueSMButtonPressed : BlueSMButton} alt="" />
                                         <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">홀언더</p>
                                     </div>
                                     <div className="text-12px font-robotoRegular tracking-tight text-gray-r585858 h-12px flex items-center">3.75</div>
@@ -156,7 +156,7 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                                         style={{width:"68px", height:"59px"}} 
                                         className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                     >
-                                        <img className="absolute object-none" src={state === `${titleNumber}-2` ? BlueSMButtonPressed : BlueSMButton} alt="" />
+                                        <img className={`absolute  ${state === `${titleNumber}-2` ? "object-contain mb-3px" : "object-none"}`} src={state === `${titleNumber}-2` ? BlueSMButtonPressed : BlueSMButton} alt="" />
                                         <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">홀오버</p>
                                     </div>
                                     <div className="text-12px font-robotoRegular tracking-tight text-gray-r585858 h-12px flex items-center">3.75</div>
@@ -172,7 +172,7 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                                         style={{width:"68px", height:"59px"}} 
                                         className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                     >
-                                        <img className="absolute object-none" src={state === `${titleNumber}-3` ? RedSMButtonPressed : RedSMButton} alt="" />
+                                        <img className={`absolute  ${state === `${titleNumber}-3` ? "object-contain mb-3px" : "object-none"}`} src={state === `${titleNumber}-3` ? RedSMButtonPressed : RedSMButton} alt="" />
                                         <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">짝언더</p>
                                     </div>
                                     <div className="text-12px font-robotoRegular tracking-tight text-gray-r585858 h-12px flex items-center">3.75</div>
@@ -186,7 +186,7 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                                         style={{width:"68px", height:"59px"}} 
                                         className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                     >
-                                        <img className="absolute object-none" src={state === `${titleNumber}-4` ? RedSMButtonPressed : RedSMButton} alt="" />
+                                        <img className={`absolute  ${state === `${titleNumber}-4` ? "object-contain mb-3px" : "object-none"}`} src={state === `${titleNumber}-4` ? RedSMButtonPressed : RedSMButton} alt="" />
                                         <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">짝오버</p>
                                     </div>
                                     <div className="text-12px font-robotoRegular tracking-tight text-gray-r585858 h-12px flex items-center">3.75</div>

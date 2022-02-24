@@ -77,6 +77,8 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
         ));
     }
 
+    const [buttonClicked, setButtonClicked] = useState("")
+
     const BetAmountButton = ({amount, inputValue, setInputValue}) => (
         <button 
             style={{
@@ -84,12 +86,17 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
                 borderColor: "#b3bac1",
                 height:"46px"
             }} 
-            className="flex items-center justify-center rounded-4px border hover:opacity-75"
-            onClick={() => setInputValue(inputValue + amount)}
+            className="flex items-center justify-center rounded-4px border"
+            onPointerDown={() => setButtonClicked(amount)}
+            onPointerUp={() => {
+                setInputValue(inputValue + amount)
+                setButtonClicked(null)
+            }}
+            onPointerOut={() => setButtonClicked(null)}
         >
             <div 
                 style={{
-                    background: "linear-gradient(to bottom, #feffff, #cedeed)",
+                    background: buttonClicked === amount ? "linear-gradient(to bottom, #a8defd, #8dc6ee)" : "linear-gradient(to bottom, #feffff, #cedeed)",
                     borderRadius: "3px",
                 }}  
                 className="flex items-center justify-center border border-white cursor-pointer w-full h-full"

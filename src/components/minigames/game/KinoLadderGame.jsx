@@ -3,10 +3,10 @@ import BlueButton from '../../../images/minigames/blue_sq.png'
 import RedButton from '../../../images/minigames/red_sq.png'
 import BlueSMButton from '../../../images/minigames/blue_sm.png'
 import RedSMButton from '../../../images/minigames/red_sm.png'
-import BlueButtonPressed from '../../../images/minigames/blue_sq_pressed.png'
-import RedButtonPressed from '../../../images/minigames/red_sq_pressed.png'
-import RedSMButtonPressed from '../../../images/minigames/red_pressed.png'
-import BlueSMButtonPressed from '../../../images/minigames/blue_pressed.png'
+import BlueButtonPressed from '../../../images/minigames/test/blue_rec_pressed.png'
+import RedButtonPressed from '../../../images/minigames/test/red_rec_pressed.png'
+import RedSMButtonPressed from '../../../images/minigames/test/red_pressed.png'
+import BlueSMButtonPressed from '../../../images/minigames/test/blue_pressed.png'
 
 const KinoLadderGame = ({setSelectedOption}) => {
 
@@ -101,7 +101,7 @@ const KinoLadderGame = ({setSelectedOption}) => {
                                     style={{width:"121px", height:"127px", marginTop:"14px"}} 
                                     className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
-                                    <img className={`absolute object-none ${state === `${titleNumber}-1` && "mb-3px"}`} src={state === `${titleNumber}-1` ? BlueButtonPressed : BlueButton} alt="" />
+                                    <img className={`absolute  ${state === `${titleNumber}-1` ? "object-contain mb-3px" : "object-none"}`} src={state === `${titleNumber}-1` ? BlueButtonPressed : BlueButton} alt="" />
                                     <p 
                                         style={{textShadow: "2px 2px 2px #00000050", fontSize: "48px"}} 
                                         className="z-20 font-swagger text-white"
@@ -127,7 +127,7 @@ const KinoLadderGame = ({setSelectedOption}) => {
                                     style={{width:"121px", height:"127px", marginTop: "14px"}} 
                                     className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
-                                    <img className={`absolute object-none ${state === `${titleNumber}-2` && "mb-3px"}`} src={state === `${titleNumber}-2` ? RedButtonPressed : RedButton} alt="" />
+                                    <img className={`absolute  ${state === `${titleNumber}-2` ? "object-contain mb-3px" : "object-none"}`} src={state === `${titleNumber}-2` ? RedButtonPressed : RedButton} alt="" />
                                     <p 
                                         style={{textShadow: "2px 2px 2px #00000050", fontSize: "48px"}} 
                                         className="z-20 font-swagger text-white text-20px"
@@ -150,7 +150,7 @@ const KinoLadderGame = ({setSelectedOption}) => {
                                         style={{width:"68px", height:"59px"}} 
                                         className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                     >
-                                        <img className="absolute object-none" src={state === `${titleNumber}-1` ? RedSMButtonPressed : RedSMButton} alt="" />
+                                        <img className={`absolute  ${state === `${titleNumber}-1` ? "object-contain mb-3px" : "object-none"}`} src={state === `${titleNumber}-1` ? RedSMButtonPressed : RedSMButton} alt="" />
                                         <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">짝</p>
                                         <div className="absolute w-22px h-22px rounded-full bg-black z-20 left-6px top-0 flex items-center justify-center">
                                             <div className="text-white text-12px tracking-tight font-spoqaMedium">3</div>
@@ -167,7 +167,7 @@ const KinoLadderGame = ({setSelectedOption}) => {
                                         style={{width:"68px", height:"59px"}} 
                                         className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                     >
-                                        <img className="absolute object-none" src={state === `${titleNumber}-2` ? BlueSMButtonPressed : BlueSMButton} alt="" />
+                                        <img className={`absolute  ${state === `${titleNumber}-2` ? "object-contain mb-3px" : "object-none"}`} src={state === `${titleNumber}-2` ? BlueSMButtonPressed : BlueSMButton} alt="" />
                                         <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">홀</p>
                                         <div className="absolute w-22px h-22px rounded-full bg-black z-20 right-6px top-0 flex items-center justify-center">
                                             <div className="text-white text-12px tracking-tight font-spoqaMedium">3</div>
@@ -186,7 +186,7 @@ const KinoLadderGame = ({setSelectedOption}) => {
                                         style={{width:"68px", height:"59px"}} 
                                         className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                     >
-                                        <img className="absolute object-none" src={state === `${titleNumber}-3` ? BlueSMButtonPressed : BlueSMButton} alt="" />
+                                        <img className={`absolute  ${state === `${titleNumber}-3` ? "object-contain mb-3px" : "object-none"}`} src={state === `${titleNumber}-3` ? BlueSMButtonPressed : BlueSMButton} alt="" />
                                         <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">홀</p>
                                         <div className="absolute w-22px h-22px rounded-full bg-black z-20 left-6px top-0 flex items-center justify-center">
                                             <div className="text-white text-12px tracking-tight font-spoqaMedium">4</div>
@@ -203,7 +203,7 @@ const KinoLadderGame = ({setSelectedOption}) => {
                                         style={{width:"68px", height:"59px"}} 
                                         className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                     >
-                                        <img className="absolute object-none" src={state === `${titleNumber}-4` ? RedSMButtonPressed : RedSMButton} alt="" />
+                                        <img className={`absolute  ${state === `${titleNumber}-4` ? "object-contain mb-3px" : "object-none"}`} src={state === `${titleNumber}-4` ? RedSMButtonPressed : RedSMButton} alt="" />
                                         <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">짝</p>
                                         <div className="absolute w-22px h-22px rounded-full bg-black z-20 right-6px top-0 flex items-center justify-center">
                                             <div className="text-white text-12px tracking-tight font-spoqaMedium">4</div>

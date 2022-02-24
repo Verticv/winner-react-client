@@ -21,6 +21,7 @@ const MinigamesRightPanel = ({
 
     const [inputValue, setInputValue] = useState(null)
     var nf = new Intl.NumberFormat();
+    const [buttonClicked, setButtonClicked] = useState("")
 
     const BetAmountButton = ({amount}) => (
         <button 
@@ -28,14 +29,19 @@ const MinigamesRightPanel = ({
                 width:"110px", 
                 borderColor: "#b3bac1"
             }} 
-            className="flex items-center h-46px justify-center rounded-4px flex-shrink-0 border hover:opacity-75"
-            onClick={() => setInputValue(inputValue + amount)}
+            className="flex items-center h-46px justify-center rounded-4px flex-shrink-0 border"
+            onPointerDown={() => setButtonClicked(amount)}
+            onPointerUp={() => {
+                setInputValue(inputValue + amount)
+                setButtonClicked(null)
+            }}
+            onPointerOut={() => setButtonClicked(null)}
         >
             <div 
                 style={{
                     width:"108px", 
                     borderRadius:"3px",
-                    background: "linear-gradient(to bottom, #feffff, #cedeed)",
+                    background:  buttonClicked === amount ? "linear-gradient(to bottom, #a8defd, #8dc6ee)" : "linear-gradient(to bottom, #feffff, #cedeed)",
                 }} 
                 className="flex items-center justify-center h-44px border border-white cursor-pointer pt-px">
                 <span className="font-roboto tracking-tight text-16px text-gray-r585858 pt-px">{nf.format(amount)}</span>
